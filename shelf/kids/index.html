@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f3f1eb">
+<title>Kids Shelf / 700 — ASSEMBL LAB</title>
+<meta name="description" content="מדף קיר קומפקטי שבו המבנה, ההתקנה והגרפיקה נפתרו כאותה מערכת גאומטרית — מתכנון מדויק ועד למוצר המוגמר.">
+<style>
+:root{--paper:#f3f1eb;--ink:#111311;--muted:#686a66;--line:#c9c7c0;--signal:#d35a38}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+a{color:inherit}.top{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,4vw,58px);position:sticky;top:0;background:rgba(243,241,235,.95);backdrop-filter:blur(10px);z-index:20}
+.brand{font-weight:900;letter-spacing:.1em;text-decoration:none;font-size:13px}.back{font-size:10px;font-weight:800;letter-spacing:.12em;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:3px;direction:ltr}
+main{max-width:1500px;margin:auto}.hero{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);min-height:calc(100vh - 72px);border-bottom:1px solid var(--line)}
+.hero-copy{padding:clamp(42px,7vw,104px) clamp(18px,5vw,74px);display:flex;flex-direction:column;justify-content:center}
+.kicker{margin:0 0 18px;color:var(--signal);font-size:10px;font-weight:900;letter-spacing:.16em;direction:ltr;text-align:right}
+h1{font-size:clamp(48px,7vw,105px);line-height:.88;letter-spacing:-.055em;margin:0 0 28px}
+.lead{max-width:38ch;color:var(--muted);font-size:17px;line-height:1.7;margin:0}
+.hero-media{position:relative;background:#d8d5ce;overflow:hidden;min-height:560px}.hero-media img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-sprite{position:absolute;inset:0;background-repeat:no-repeat;background-size:100% 600%;background-position:center 100%}
+.specs{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);border-right:1px solid var(--line);margin-top:34px}
+.specs>div{padding:14px;border-left:1px solid var(--line);border-bottom:1px solid var(--line)}.specs small{display:block;color:var(--signal);font-size:8px;letter-spacing:.12em;direction:ltr;margin-bottom:5px}.specs b{font-size:13px}
+.story{padding:clamp(62px,8vw,120px) clamp(18px,5vw,74px);border-bottom:1px solid var(--line)}
+.story-head{display:grid;grid-template-columns:1fr .7fr;gap:30px;align-items:end;margin-bottom:34px}.story-head h2{font-size:clamp(40px,6vw,82px);line-height:.92;letter-spacing:-.045em;margin:0}.story-head p{margin:0;color:var(--muted);line-height:1.7}
+.gallery{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(310px,.72fr);border:1px solid var(--line);background:#e9e7e0;direction:ltr}
+.viewer{position:relative;aspect-ratio:4/3;overflow:hidden}.main-image{position:absolute;inset:0;background-repeat:no-repeat;background-size:100% 600%;background-position:center var(--pos,0%);transition:background-position .5s cubic-bezier(.22,.61,.36,1)}
+.badge,.progress{position:absolute;z-index:2;background:rgba(243,241,235,.94);border:1px solid var(--ink);font-size:9px;font-weight:900;letter-spacing:.12em;direction:ltr}.badge{top:18px;left:18px;padding:10px}.progress{bottom:18px;left:18px;padding:9px}
+.panel{background:var(--paper);border-left:1px solid var(--line);display:flex;flex-direction:column;direction:rtl}.copy{padding:32px 28px;border-bottom:1px solid var(--line)}.index{font-size:10px;color:var(--signal);font-weight:900;letter-spacing:.14em;direction:ltr;text-align:right}.copy h3{font-size:clamp(34px,4vw,58px);margin:10px 0 16px;letter-spacing:-.04em;line-height:.95}.copy p{color:var(--muted);font-size:14px;line-height:1.65;margin:0}
+.nav{display:grid;grid-template-columns:1fr;flex:1}.step{appearance:none;border:0;border-bottom:1px solid var(--line);background:transparent;padding:0;display:grid;grid-template-columns:88px 1fr;min-height:82px;text-align:right;cursor:pointer;color:inherit;font:inherit;position:relative}.step:last-child{border-bottom:0}.step:hover,.step.active{background:#fff}.step.active:after{content:"";position:absolute;right:0;top:0;bottom:0;width:4px;background:var(--signal)}
+.thumb{width:88px;align-self:stretch;background-repeat:no-repeat;background-size:100% 600%;background-position:center var(--pos,0%);filter:saturate(.8)}.step>span:last-child{display:flex;flex-direction:column;justify-content:center;padding:10px 14px;gap:4px}.step small{font-size:8px;color:var(--signal);letter-spacing:.11em;direction:ltr}.step b{font-size:13px}
+.original{padding:clamp(58px,8vw,110px) clamp(18px,5vw,74px);display:grid;grid-template-columns:.72fr 1.28fr;gap:38px;align-items:center;border-bottom:1px solid var(--line)}.original h2{font-size:clamp(36px,5vw,68px);line-height:.95;letter-spacing:-.04em;margin:10px 0 18px}.original p{color:var(--muted);line-height:1.7}.original img{width:100%;max-height:760px;object-fit:contain;background:#ddd9d0}
+.footer{padding:28px clamp(18px,5vw,74px);display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:9px;font-weight:800;letter-spacing:.12em;direction:ltr}.footer a{text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:3px}
+@media(max-width:900px){.hero{grid-template-columns:1fr;min-height:0}.hero-media{min-height:0;aspect-ratio:4/3}.gallery{grid-template-columns:1fr}.panel{border-left:0;border-top:1px solid var(--line)}.nav{display:flex;overflow-x:auto}.step{min-width:190px;grid-template-columns:72px 1fr;border-bottom:0;border-left:1px solid var(--line)}.thumb{width:72px}.story-head{grid-template-columns:1fr}.original{grid-template-columns:1fr}.hero-copy{padding-top:58px;padding-bottom:58px}}
+@media(max-width:560px){.top{height:64px}.hero-copy,.story,.original{padding-left:16px;padding-right:16px}.hero-media{aspect-ratio:1/1}.specs{grid-template-columns:1fr 1fr}.story{padding-top:64px;padding-bottom:64px}.copy{padding:24px 18px}.badge{top:12px;left:12px}.progress{bottom:12px;left:12px}.footer{padding-left:16px;padding-right:16px;align-items:flex-start;flex-direction:column}}
+.kids-sprite,.main-image,.thumb{background-image:url('kids_shelf_story_v2.jpg')}
+</style>
+</head>
+<body>
+<header class="top"><a class="brand" href="../../">ASSEMBL LAB</a><a class="back" href="../../">← BACK TO COLLECTION</a></header>
+<main>
+<section class="hero">
+  <div class="hero-copy"><p class="kicker">SYSTEM / 01 · KIDS SHELF</p><h1>Kids Shelf / 700</h1><p class="lead">מדף קיר קומפקטי שבו המבנה, ההתקנה והגרפיקה נפתרו כאותה מערכת גאומטרית — מתכנון מדויק ועד למוצר המוגמר.</p><div class="specs"><div><small>SIZE</small><b>700 × 220 mm</b></div><div><small>MATERIAL</small><b>6 mm</b></div><div><small>MOUNTING</small><b>4 × Keyhole</b></div><div><small>SYSTEM</small><b>Rocket + Stars</b></div></div></div>
+  <div class="hero-media"><div class="hero-sprite kids-sprite" role="img" aria-label="Kids Shelf / 700"></div></div>
+</section>
+<section class="story">
+  <div class="story-head"><div><p class="kicker">BUILD STORY / CASE STUDY</p><h2>מהתכנון<br>לאובייקט.</h2></div><p>המעבר בין השלבים חושף את ההנדסה שמאחורי המוצר — גאומטריה, חיתוך, חיבור והרכבה.</p></div>
+  <div class="gallery" tabindex="0">
+    <div class="viewer"><div class="main-image kids-sprite" style="--pos:0%"></div><div class="badge">01 / PLAN</div><div class="progress"><span>01</span> / 06</div></div>
+    <div class="panel"><div class="copy"><div class="index">01 / PLAN</div><h3>תכנון</h3><p>הגאומטריה, החיבורים והחלקים מוגדרים לפני הייצור.</p></div><div class="nav"><button class="step active" type="button" data-pos="0%" data-code="PLAN" data-title="תכנון" data-desc="הגאומטריה, החיבורים והחלקים מוגדרים לפני הייצור." aria-pressed="true">
+      <span class="thumb" style="--pos:0%" aria-hidden="true"></span>
+      <span><small>01 / PLAN</small><b>תכנון</b></span>
+    </button>
+<button class="step" type="button" data-pos="20%" data-code="LASER CUT" data-title="חיתוך בלייזר" data-desc="פאות הצד והפרטים הגרפיים נחתכים ישירות מקובצי הייצור." aria-pressed="false">
+      <span class="thumb" style="--pos:20%" aria-hidden="true"></span>
+      <span><small>02 / LASER CUT</small><b>חיתוך בלייזר</b></span>
+    </button>
+<button class="step" type="button" data-pos="40%" data-code="COMPONENTS" data-title="חלקים" data-desc="החלקים יוצאים שטוחים מהמכונה ומוכנים לעבור ממערכת דו־ממדית למבנה." aria-pressed="false">
+      <span class="thumb" style="--pos:40%" aria-hidden="true"></span>
+      <span><small>03 / COMPONENTS</small><b>חלקים</b></span>
+    </button>
+<button class="step" type="button" data-pos="60%" data-code="ASSEMBLE" data-title="הרכבה" data-desc="חיבורי האצבע, הקורות ופאות הצד מתחברים למבנה אחד ומיושרים לפני הסגירה." aria-pressed="false">
+      <span class="thumb" style="--pos:60%" aria-hidden="true"></span>
+      <span><small>04 / ASSEMBLE</small><b>הרכבה</b></span>
+    </button>
+<button class="step" type="button" data-pos="80%" data-code="FINISH" data-title="גימור" data-desc="המדף כבר שלם בסדנה — לאחר יישור, הידוק ובדיקת המבנה." aria-pressed="false">
+      <span class="thumb" style="--pos:80%" aria-hidden="true"></span>
+      <span><small>05 / FINISH</small><b>גימור</b></span>
+    </button>
+<button class="step" type="button" data-pos="100%" data-code="OBJECT" data-title="המוצר הסופי" data-desc="המדף המוגמר עובר מסביבת הייצור לחלל הביתי כאובייקט שימושי לילדים." aria-pressed="false">
+      <span class="thumb" style="--pos:100%" aria-hidden="true"></span>
+      <span><small>06 / OBJECT</small><b>המוצר הסופי</b></span>
+    </button></div></div>
+  </div>
+</section>
+
+</main>
+<footer class="footer"><span>ASSEMBL LAB / DESIGN · ENGINEERING · FABRICATION</span><a href="../../">BACK TO HOME ↑</a></footer>
+<script>
+const g=document.querySelector('.gallery'),steps=[...document.querySelectorAll('.step')],main=document.querySelector('.main-image'),badge=document.querySelector('.badge'),current=document.querySelector('.progress span'),index=document.querySelector('.index'),title=document.querySelector('.copy h3'),desc=document.querySelector('.copy p');
+function show(i){const n=(i+steps.length)%steps.length,s=steps[n],no=String(n+1).padStart(2,'0');steps.forEach((x,j)=>{x.classList.toggle('active',j===n);x.setAttribute('aria-pressed',j===n?'true':'false')});main.style.setProperty('--pos',s.dataset.pos);badge.textContent=no+' / '+s.dataset.code;current.textContent=no;index.textContent=no+' / '+s.dataset.code;title.textContent=s.dataset.title;desc.textContent=s.dataset.desc}
+steps.forEach((s,i)=>s.addEventListener('click',()=>show(i)));g.addEventListener('keydown',e=>{const a=steps.findIndex(x=>x.classList.contains('active'));if(e.key==='ArrowLeft')show(a-1);if(e.key==='ArrowRight')show(a+1)});
+</script>
+</body></html>
