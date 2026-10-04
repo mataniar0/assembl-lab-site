@@ -331,6 +331,28 @@ button,a{-webkit-tap-highlight-color:transparent}
   .build-step,.kids-story-step,.driller-story-step,.drill-story-step{min-width:164px}
 }
 
+
+/* V1.12 — Unified build-gallery presentation for shelf + driller */
+.sprite-build-gallery{--sprite-scale:600%;--sprite-image:url('shelf/kids/kids_shelf_story_v2.jpg')}
+.driller-sprite-gallery{--sprite-scale:400%;--sprite-image:url('driller_stand/driller_story.jpg')}
+.sprite-main-image,.sprite-thumb,.sprite-transition-image{
+  background-image:var(--sprite-image);
+  background-repeat:no-repeat;
+  background-size:100% var(--sprite-scale);
+  background-position:center var(--sprite-pos,0%)
+}
+.sprite-main-image{
+  position:absolute;inset:0;width:100%;height:100%;
+  transition:background-position .55s cubic-bezier(.22,.61,.36,1)
+}
+.build-step .sprite-thumb{
+  width:88px;height:100%;min-height:92px;align-self:stretch;
+  filter:saturate(.85);transition:filter .2s ease
+}
+.build-step:hover .sprite-thumb,.build-step.active .sprite-thumb{filter:saturate(1)}
+.sprite-transition-image{position:absolute;inset:0;width:100%;height:100%}
+@media(max-width:900px){.build-step .sprite-thumb{width:72px}}
+@media(prefers-reduced-motion:reduce){.sprite-main-image,.sprite-transition-image{transition:none!important}}
 </style></head><body>
 <header class="header" id="top"><a class="logo" href="#top"><span class="logo-mark">A/L</span><span class="logo-copy"><b>ASSEMBL LAB</b><small>ENGINEERED FURNITURE / V1.11</small></span></a><nav class="desktop-nav"><a href="#collection">COLLECTION</a><a href="#engineering">ENGINEERING</a><a href="#process">PROCESS</a><a href="#about">ABOUT</a></nav><a class="header-cta" href="#contact">פרטים והזמנה</a><button class="menu-button" aria-label="פתיחת תפריט"><span></span><span></span></button></header>
 <div class="mobile-menu" aria-hidden="true"><a href="#collection">COLLECTION</a><a href="#engineering">ENGINEERING</a><a href="#process">PROCESS</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></div>
@@ -495,83 +517,85 @@ button,a{-webkit-tap-highlight-color:transparent}
 </section>
 
 
-<section class="section kids-story" id="kids-shelf-build">
+<section class="section build-story" id="kids-shelf-build">
   <div class="section-head">
     <div><p class="kicker">KIDS SHELF / BUILD STORY</p><h2>מהשרטוט<br>למדף המוגמר.</h2></div>
-    <p>תיעוד אמיתי של התהליך — תכנון, חיתוך, חלקים, הרכבה וגימור.</p>
+    <p>לחצו על השלבים כדי לעבור בתוך תהליך הבנייה האמיתי של מדף הילדים.</p>
   </div>
-  <div class="kids-story-shell" tabindex="0">
-    <div class="kids-story-viewer">
-      <div class="kids-story-image" style="--stage-pos:0%" role="img" aria-label="תכנון גאומטרי של מדף הילדים"></div>
-      <div class="kids-story-stage"><span class="kids-story-badge">01 / PLAN</span></div>
-      <div class="kids-story-progress"><span class="kids-story-current">01</span> / 06</div>
+  <div class="build-gallery sprite-build-gallery kids-sprite-gallery" data-sprite-build-gallery tabindex="0">
+    <div class="build-viewer">
+      <div class="sprite-main-image" style="--sprite-pos:0%" role="img" aria-label="תכנון גאומטרי של מדף הילדים"></div>
+      <div class="build-stage-badge"><span class="build-badge-text">01 / PLAN</span></div>
+      <div class="build-progress"><span class="build-current">01</span> / 06</div>
+      <div class="build-arrows">
+        <button class="build-arrow build-prev" type="button" aria-label="השלב הקודם">←</button>
+        <button class="build-arrow build-next" type="button" aria-label="השלב הבא">→</button>
+      </div>
     </div>
-    <div class="kids-story-panel">
-      <div class="kids-story-copy" aria-live="polite">
-        <div class="kids-story-index">01 / PLAN</div>
+    <div class="build-controls">
+      <div class="build-copy" aria-live="polite">
+        <div class="build-index">01 / PLAN</div>
         <h3>תכנון</h3>
         <p>הגאומטריה, החיבורים והחלקים מוגדרים לפני הייצור.</p>
       </div>
-      <div class="kids-story-nav">
-      <button class="kids-story-step active" type="button" data-index="0" data-code="PLAN" data-title="תכנון" data-desc="הגאומטריה, החיבורים והחלקים מוגדרים לפני הייצור." data-alt="תכנון גאומטרי של מדף הילדים" style="--stage-pos:0%" aria-pressed="true">
-        <span class="kids-story-thumb" aria-hidden="true"></span>
-        <span><small>01 / PLAN</small><b>תכנון</b></span>
-      </button>
-      <button class="kids-story-step" type="button" data-index="1" data-code="LASER CUT" data-title="חיתוך בלייזר" data-desc="פאות הצד והפרטים הגרפיים נחתכים ישירות מקובצי הייצור." data-alt="חיתוך בלייזר של פאת הצד עם הרקטה" style="--stage-pos:20%" aria-pressed="false">
-        <span class="kids-story-thumb" aria-hidden="true"></span>
-        <span><small>02 / LASER CUT</small><b>חיתוך בלייזר</b></span>
-      </button>
-      <button class="kids-story-step" type="button" data-index="2" data-code="COMPONENTS" data-title="חלקים" data-desc="החלקים יוצאים שטוחים מהמכונה ומוכנים לעבור ממערכת דו־ממדית למבנה." data-alt="חלקי מדף הילדים לאחר החיתוך" style="--stage-pos:40%" aria-pressed="false">
-        <span class="kids-story-thumb" aria-hidden="true"></span>
-        <span><small>03 / COMPONENTS</small><b>חלקים</b></span>
-      </button>
-      <button class="kids-story-step" type="button" data-index="3" data-code="ASSEMBLE" data-title="הרכבה" data-desc="חיבורי האצבע, הקורות ופאות הצד מתחברים למבנה אחד ומיושרים לפני הסגירה." data-alt="הרכבת מדף הילדים בסדנה" style="--stage-pos:60%" aria-pressed="false">
-        <span class="kids-story-thumb" aria-hidden="true"></span>
-        <span><small>04 / ASSEMBLE</small><b>הרכבה</b></span>
-      </button>
-      <button class="kids-story-step" type="button" data-index="4" data-code="FINISH" data-title="גימור" data-desc="המדף כבר שלם בסדנה — לאחר יישור, הידוק ובדיקת המבנה." data-alt="מדף הילדים לאחר ההרכבה בסדנה" style="--stage-pos:80%" aria-pressed="false">
-        <span class="kids-story-thumb" aria-hidden="true"></span>
-        <span><small>05 / FINISH</small><b>גימור</b></span>
-      </button>
-      <button class="kids-story-step" type="button" data-index="5" data-code="OBJECT" data-title="המוצר הסופי" data-desc="המדף המוגמר עובר מסביבת הייצור לחלל הביתי כאובייקט שימושי לילדים." data-alt="מדף הילדים המוגמר בסביבה ביתית" style="--stage-pos:100%" aria-pressed="false">
-        <span class="kids-story-thumb" aria-hidden="true"></span>
-        <span><small>06 / OBJECT</small><b>המוצר הסופי</b></span>
-      </button>
+      <div class="build-nav">
+        <button class="build-step active" type="button" data-index="0" data-pos="0%" data-code="PLAN" data-title="תכנון" data-desc="הגאומטריה, החיבורים והחלקים מוגדרים לפני הייצור." data-alt="תכנון גאומטרי של מדף הילדים" aria-label="01 תכנון" aria-pressed="true">
+          <div class="sprite-thumb" style="--sprite-pos:0%" aria-hidden="true"></div><span><small>01 / PLAN</small><b>תכנון</b></span>
+        </button>
+        <button class="build-step" type="button" data-index="1" data-pos="20%" data-code="LASER CUT" data-title="חיתוך בלייזר" data-desc="פאות הצד והפרטים הגרפיים נחתכים ישירות מקובצי הייצור." data-alt="חיתוך בלייזר של פאת הצד עם הרקטה" aria-label="02 חיתוך בלייזר" aria-pressed="false">
+          <div class="sprite-thumb" style="--sprite-pos:20%" aria-hidden="true"></div><span><small>02 / LASER CUT</small><b>חיתוך בלייזר</b></span>
+        </button>
+        <button class="build-step" type="button" data-index="2" data-pos="40%" data-code="COMPONENTS" data-title="חלקים" data-desc="החלקים יוצאים שטוחים מהמכונה ומוכנים לעבור ממערכת דו־ממדית למבנה." data-alt="חלקי מדף הילדים לאחר החיתוך" aria-label="03 חלקים" aria-pressed="false">
+          <div class="sprite-thumb" style="--sprite-pos:40%" aria-hidden="true"></div><span><small>03 / COMPONENTS</small><b>חלקים</b></span>
+        </button>
+        <button class="build-step" type="button" data-index="3" data-pos="60%" data-code="ASSEMBLE" data-title="הרכבה" data-desc="חיבורי האצבע, הקורות ופאות הצד מתחברים למבנה אחד ומיושרים לפני הסגירה." data-alt="הרכבת מדף הילדים בסדנה" aria-label="04 הרכבה" aria-pressed="false">
+          <div class="sprite-thumb" style="--sprite-pos:60%" aria-hidden="true"></div><span><small>04 / ASSEMBLE</small><b>הרכבה</b></span>
+        </button>
+        <button class="build-step" type="button" data-index="4" data-pos="80%" data-code="FINISH" data-title="גימור" data-desc="המדף כבר שלם בסדנה — לאחר יישור, הידוק ובדיקת המבנה." data-alt="מדף הילדים לאחר ההרכבה בסדנה" aria-label="05 גימור" aria-pressed="false">
+          <div class="sprite-thumb" style="--sprite-pos:80%" aria-hidden="true"></div><span><small>05 / FINISH</small><b>גימור</b></span>
+        </button>
+        <button class="build-step" type="button" data-index="5" data-pos="100%" data-code="OBJECT" data-title="המוצר הסופי" data-desc="המדף המוגמר עובר מסביבת הייצור לחלל הביתי כאובייקט שימושי לילדים." data-alt="מדף הילדים המוגמר בסביבה ביתית" aria-label="06 המוצר הסופי" aria-pressed="false">
+          <div class="sprite-thumb" style="--sprite-pos:100%" aria-hidden="true"></div><span><small>06 / OBJECT</small><b>המוצר הסופי</b></span>
+        </button>
       </div>
     </div>
   </div>
 </section>
 
 
-<section class="section kids-story driller-story" id="driller-stand-build">
+<section class="section build-story" id="driller-stand-build">
   <div class="section-head">
     <div><p class="kicker">DRILLER STAND V364 / WORKSHOP STORY</p><h2>מהחלקים<br>למעמד עובד.</h2></div>
-    <div><p>תיעוד אמיתי של השלבים שכבר צולמו — חלקים, הרכבה, גימור והמוצר בשימוש.</p><p class="driller-story-note">PLAN / LASER CUT — TO BE ADDED WITH THE NEXT PHOTO UPDATE</p></div>
+    <div><p>לחצו על השלבים כדי לעבור בתוך תהליך הבנייה שכבר תועד — חלקים, הרכבה, גימור והמוצר בשימוש.</p><p class="driller-story-note">PLAN / LASER CUT — TO BE ADDED WITH THE NEXT PHOTO UPDATE</p></div>
   </div>
-  <div class="kids-story-shell" tabindex="0">
-    <div class="kids-story-viewer">
-      <div class="kids-story-image" style="--stage-pos:0%" role="img" aria-label="חלקי מעמד המקדחה לפני ההרכבה"></div>
-      <div class="kids-story-stage"><span class="kids-story-badge">01 / COMPONENTS</span></div>
-      <div class="kids-story-progress"><span class="kids-story-current">01</span> / 04</div>
+  <div class="build-gallery sprite-build-gallery driller-sprite-gallery" data-sprite-build-gallery tabindex="0">
+    <div class="build-viewer">
+      <div class="sprite-main-image" style="--sprite-pos:0%" role="img" aria-label="חלקי מעמד המקדחה לפני ההרכבה"></div>
+      <div class="build-stage-badge"><span class="build-badge-text">01 / COMPONENTS</span></div>
+      <div class="build-progress"><span class="build-current">01</span> / 04</div>
+      <div class="build-arrows">
+        <button class="build-arrow build-prev" type="button" aria-label="השלב הקודם">←</button>
+        <button class="build-arrow build-next" type="button" aria-label="השלב הבא">→</button>
+      </div>
     </div>
-    <div class="kids-story-panel">
-      <div class="kids-story-copy" aria-live="polite">
-        <div class="kids-story-index">01 / COMPONENTS</div>
+    <div class="build-controls">
+      <div class="build-copy" aria-live="polite">
+        <div class="build-index">01 / COMPONENTS</div>
         <h3>חלקים</h3>
         <p>חלקי השלד הארוכים יוצאים שטוחים ומדויקים, עם מערכת החיבורים כבר מובנית בגאומטריה.</p>
       </div>
-      <div class="kids-story-nav">
-        <button class="kids-story-step active" type="button" data-index="0" data-pos="0%" data-code="COMPONENTS" data-title="חלקים" data-desc="חלקי השלד הארוכים יוצאים שטוחים ומדויקים, עם מערכת החיבורים כבר מובנית בגאומטריה." data-alt="חלקי מעמד המקדחה לפני ההרכבה" style="--stage-pos:0%" aria-pressed="true">
-          <span class="kids-story-thumb" aria-hidden="true"></span><span><small>01 / COMPONENTS</small><b>חלקים</b></span>
+      <div class="build-nav">
+        <button class="build-step active" type="button" data-index="0" data-pos="0%" data-code="COMPONENTS" data-title="חלקים" data-desc="חלקי השלד הארוכים יוצאים שטוחים ומדויקים, עם מערכת החיבורים כבר מובנית בגאומטריה." data-alt="חלקי מעמד המקדחה לפני ההרכבה" aria-label="01 חלקים" aria-pressed="true">
+          <div class="sprite-thumb" style="--sprite-pos:0%" aria-hidden="true"></div><span><small>01 / COMPONENTS</small><b>חלקים</b></span>
         </button>
-        <button class="kids-story-step" type="button" data-index="1" data-pos="33.333%" data-code="ASSEMBLE" data-title="הרכבה" data-desc="הרגליים, הקורות ומסגרות המדפים מתחברות לשלד אחד; הקליבות שומרות על היישור בזמן הסגירה." data-alt="שלד מעמד המקדחה בזמן ההרכבה עם קליבות" style="--stage-pos:33.333%" aria-pressed="false">
-          <span class="kids-story-thumb" aria-hidden="true"></span><span><small>02 / ASSEMBLE</small><b>הרכבה</b></span>
+        <button class="build-step" type="button" data-index="1" data-pos="33.333%" data-code="ASSEMBLE" data-title="הרכבה" data-desc="הרגליים, הקורות ומסגרות המדפים מתחברות לשלד אחד; הקליבות שומרות על היישור בזמן הסגירה." data-alt="שלד מעמד המקדחה בזמן ההרכבה עם קליבות" aria-label="02 הרכבה" aria-pressed="false">
+          <div class="sprite-thumb" style="--sprite-pos:33.333%" aria-hidden="true"></div><span><small>02 / ASSEMBLE</small><b>הרכבה</b></span>
         </button>
-        <button class="kids-story-step" type="button" data-index="2" data-pos="66.667%" data-code="FINISH" data-title="גימור" data-desc="המבנה עומד כיחידה מלאה עם שני מדפי רפפות והמשטח העליון, מוכן לבדיקת שימוש." data-alt="מעמד המקדחה לאחר השלמת המבנה" style="--stage-pos:66.667%" aria-pressed="false">
-          <span class="kids-story-thumb" aria-hidden="true"></span><span><small>03 / FINISH</small><b>גימור</b></span>
+        <button class="build-step" type="button" data-index="2" data-pos="66.667%" data-code="FINISH" data-title="גימור" data-desc="המבנה עומד כיחידה מלאה עם שני מדפי רפפות והמשטח העליון, מוכן לבדיקת שימוש." data-alt="מעמד המקדחה לאחר השלמת המבנה" aria-label="03 גימור" aria-pressed="false">
+          <div class="sprite-thumb" style="--sprite-pos:66.667%" aria-hidden="true"></div><span><small>03 / FINISH</small><b>גימור</b></span>
         </button>
-        <button class="kids-story-step" type="button" data-index="3" data-pos="100%" data-code="OBJECT" data-title="המוצר בשימוש" data-desc="מקדחת העמוד מותקנת על המשטח העליון והמדפים הופכים את המבנה לעמדת עבודה ואחסון אחת." data-alt="מעמד המקדחה המוגמר עם מקדחת עמוד" style="--stage-pos:100%" aria-pressed="false">
-          <span class="kids-story-thumb" aria-hidden="true"></span><span><small>04 / OBJECT</small><b>המוצר בשימוש</b></span>
+        <button class="build-step" type="button" data-index="3" data-pos="100%" data-code="OBJECT" data-title="המוצר בשימוש" data-desc="מקדחת העמוד מותקנת על המשטח העליון והמדפים הופכים את המבנה לעמדת עבודה ואחסון אחת." data-alt="מעמד המקדחה המוגמר עם מקדחת עמוד" aria-label="04 המוצר בשימוש" aria-pressed="false">
+          <div class="sprite-thumb" style="--sprite-pos:100%" aria-hidden="true"></div><span><small>04 / OBJECT</small><b>המוצר בשימוש</b></span>
         </button>
       </div>
     </div>
@@ -715,4 +739,86 @@ document.querySelectorAll('.kids-story').forEach(story=>{
 
 
 
+
+<script>
+/* V1.12 sprite galleries use the same controls and interaction model as the table */
+document.querySelectorAll('[data-sprite-build-gallery]').forEach(gallery=>{
+  const steps=[...gallery.querySelectorAll('.build-step')];
+  const viewer=gallery.querySelector('.build-viewer');
+  const main=gallery.querySelector('.sprite-main-image');
+  const copy=gallery.querySelector('.build-copy');
+  const controls=gallery.querySelector('.build-controls');
+  const index=gallery.querySelector('.build-index');
+  const title=gallery.querySelector('.build-copy h3');
+  const desc=gallery.querySelector('.build-copy p');
+  const badge=gallery.querySelector('.build-badge-text');
+  const current=gallery.querySelector('.build-current');
+
+  const meter=document.createElement('div');
+  meter.className='build-meter';
+  meter.setAttribute('aria-hidden','true');
+  meter.innerHTML='<span></span>';
+  controls.prepend(meter);
+  const meterFill=meter.querySelector('span');
+  meterFill.style.width=(100/steps.length)+'%';
+
+  let active=0;
+  let transitionToken=0;
+
+  function updateMeta(step,next){
+    const no=String(next+1).padStart(2,'0');
+    index.textContent=no+' / '+step.dataset.code;
+    badge.textContent=no+' / '+step.dataset.code;
+    current.textContent=no;
+    title.textContent=step.dataset.title;
+    desc.textContent=step.dataset.desc;
+  }
+
+  function show(i){
+    const next=(i+steps.length)%steps.length;
+    if(next===active) return;
+
+    const previous=active;
+    active=next;
+    const token=++transitionToken;
+    const step=steps[next];
+
+    gallery.querySelectorAll('.sprite-transition-image').forEach(el=>el.remove());
+    steps.forEach((s,n)=>{
+      const selected=n===next;
+      s.classList.toggle('active',selected);
+      s.setAttribute('aria-pressed',selected?'true':'false');
+    });
+
+    const incoming=document.createElement('div');
+    incoming.className='build-transition-image sprite-transition-image'+(previous===0&&next===1?' build-transition-image--origin':'');
+    incoming.style.setProperty('--sprite-pos',step.dataset.pos);
+    incoming.setAttribute('role','img');
+    incoming.setAttribute('aria-label',step.dataset.alt);
+    viewer.insertBefore(incoming,viewer.querySelector('.build-stage-badge'));
+
+    copy.classList.add('is-changing');
+    meterFill.style.width=(((next+1)/steps.length)*100)+'%';
+    requestAnimationFrame(()=>requestAnimationFrame(()=>incoming.classList.add('is-visible')));
+
+    setTimeout(()=>{
+      if(token!==transitionToken){incoming.remove();return;}
+      main.style.setProperty('--sprite-pos',step.dataset.pos);
+      main.setAttribute('aria-label',step.dataset.alt);
+      updateMeta(step,next);
+      copy.classList.remove('is-changing');
+      incoming.classList.remove('is-visible');
+      setTimeout(()=>incoming.remove(),320);
+    },previous===0&&next===1?330:250);
+  }
+
+  steps.forEach((step,i)=>step.addEventListener('click',()=>show(i)));
+  gallery.querySelector('.build-prev').addEventListener('click',()=>show(active-1));
+  gallery.querySelector('.build-next').addEventListener('click',()=>show(active+1));
+  gallery.addEventListener('keydown',e=>{
+    if(e.key==='ArrowLeft'){e.preventDefault();show(active-1)}
+    if(e.key==='ArrowRight'){e.preventDefault();show(active+1)}
+  });
+});
+</script>
 </body></html>
