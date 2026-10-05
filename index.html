@@ -541,6 +541,20 @@ button,a{-webkit-tap-highlight-color:transparent}
   .collection-v15 .collection-showcase{grid-template-columns:1fr;gap:28px}
   .collection-v15 .collection-head>p{font-size:14px}
 }
+
+/* Hero image — preserve full frame */
+.hero-media{
+  min-height:0!important;
+  aspect-ratio:1672 / 941!important;
+  width:100%;
+}
+.hero-media>img{
+  width:100%;
+  height:100%;
+  min-height:0!important;
+  object-fit:contain!important;
+  object-position:center center;
+}
 </style></head><body>
 <header class="header" id="top"><a class="logo" href="#top"><span class="logo-mark">A/L</span><span class="logo-copy"><b>ASSEMBL LAB</b><small>ENGINEERED FURNITURE / V1.22</small></span></a><nav class="desktop-nav"><a href="#geometric-build">BUILD STORY</a><a href="#engineering">ENGINEERING</a><a href="#process">PROCESS</a><a href="#about">ABOUT</a></nav><a class="header-cta" href="#contact">פרטים והזמנה</a><button class="menu-button" aria-label="פתיחת תפריט"><span></span><span></span></button></header>
 <div class="mobile-menu" aria-hidden="true"><a href="#geometric-build">BUILD STORY</a><a href="#engineering">ENGINEERING</a><a href="#process">PROCESS</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></div>
