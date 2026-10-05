@@ -33,6 +33,21 @@ h1{font-size:clamp(48px,7vw,105px);line-height:.88;letter-spacing:-.055em;margin
 @media(max-width:900px){.hero{grid-template-columns:1fr;min-height:0}.hero-media{min-height:0;aspect-ratio:4/3}.gallery{grid-template-columns:1fr}.panel{border-left:0;border-top:1px solid var(--line)}.nav{display:flex;overflow-x:auto}.step{min-width:190px;grid-template-columns:72px 1fr;border-bottom:0;border-left:1px solid var(--line)}.thumb{width:72px}.story-head{grid-template-columns:1fr}.original{grid-template-columns:1fr}.hero-copy{padding-top:58px;padding-bottom:58px}}
 @media(max-width:560px){.top{height:64px}.hero-copy,.story,.original{padding-left:16px;padding-right:16px}.hero-media{aspect-ratio:1/1}.specs{grid-template-columns:1fr 1fr}.story{padding-top:64px;padding-bottom:64px}.copy{padding:24px 18px}.badge{top:12px;left:12px}.progress{bottom:12px;left:12px}.footer{padding-left:16px;padding-right:16px;align-items:flex-start;flex-direction:column}}
 .kids-sprite,.main-image,.thumb{background-image:url('kids_shelf_story_v2.jpg')}
+
+/* Image quality pass — keep the real build, improve crop and contrast */
+.hero-sprite,.main-image{filter:saturate(.96) contrast(1.04);transform-origin:center}
+.main-image{transition:background-position .5s cubic-bezier(.22,.61,.36,1),transform .45s ease,filter .35s ease}
+.main-image[data-stage="PLAN"]{filter:saturate(.88) contrast(1.08)}
+.main-image[data-stage="COMPONENTS"]{transform:scale(1.085);filter:saturate(.96) contrast(1.06)}
+.main-image[data-stage="ASSEMBLE"]{transform:scale(1.055);filter:saturate(.96) contrast(1.055)}
+.main-image[data-stage="FINISH"]{transform:scale(1.07);filter:saturate(.96) contrast(1.055)}
+.main-image[data-stage="OBJECT"]{transform:scale(1.02);filter:saturate(1) contrast(1.025)}
+.thumb{filter:saturate(.9) contrast(1.035)}
+.step:hover .thumb,.step.active .thumb{filter:saturate(1) contrast(1.045)}
+@media(max-width:560px){
+ .main-image[data-stage="COMPONENTS"],.main-image[data-stage="ASSEMBLE"],.main-image[data-stage="FINISH"]{transform:scale(1.035)}
+}
+
 </style>
 </head>
 <body>
@@ -77,7 +92,7 @@ h1{font-size:clamp(48px,7vw,105px);line-height:.88;letter-spacing:-.055em;margin
 <footer class="footer"><span>ASSEMBL LAB / DESIGN · ENGINEERING · FABRICATION</span><a href="../../">BACK TO HOME ↑</a></footer>
 <script>
 const g=document.querySelector('.gallery'),steps=[...document.querySelectorAll('.step')],main=document.querySelector('.main-image'),badge=document.querySelector('.badge'),current=document.querySelector('.progress span'),index=document.querySelector('.index'),title=document.querySelector('.copy h3'),desc=document.querySelector('.copy p');
-function show(i){const n=(i+steps.length)%steps.length,s=steps[n],no=String(n+1).padStart(2,'0');steps.forEach((x,j)=>{x.classList.toggle('active',j===n);x.setAttribute('aria-pressed',j===n?'true':'false')});main.style.setProperty('--pos',s.dataset.pos);badge.textContent=no+' / '+s.dataset.code;current.textContent=no;index.textContent=no+' / '+s.dataset.code;title.textContent=s.dataset.title;desc.textContent=s.dataset.desc}
+function show(i){const n=(i+steps.length)%steps.length,s=steps[n],no=String(n+1).padStart(2,'0');steps.forEach((x,j)=>{x.classList.toggle('active',j===n);x.setAttribute('aria-pressed',j===n?'true':'false')});main.style.setProperty('--pos',s.dataset.pos);main.dataset.stage=s.dataset.code;badge.textContent=no+' / '+s.dataset.code;current.textContent=no;index.textContent=no+' / '+s.dataset.code;title.textContent=s.dataset.title;desc.textContent=s.dataset.desc}
 steps.forEach((s,i)=>s.addEventListener('click',()=>show(i)));g.addEventListener('keydown',e=>{const a=steps.findIndex(x=>x.classList.contains('active'));if(e.key==='ArrowLeft')show(a-1);if(e.key==='ArrowRight')show(a+1)});
 </script>
 </body></html>
