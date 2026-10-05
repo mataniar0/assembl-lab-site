@@ -33,6 +33,28 @@ h1{font-size:clamp(48px,7vw,105px);line-height:.88;letter-spacing:-.055em;margin
 @media(max-width:900px){.hero{grid-template-columns:1fr;min-height:0}.hero-media{min-height:0;aspect-ratio:4/3}.gallery{grid-template-columns:1fr}.panel{border-left:0;border-top:1px solid var(--line)}.nav{display:flex;overflow-x:auto}.step{min-width:190px;grid-template-columns:72px 1fr;border-bottom:0;border-left:1px solid var(--line)}.thumb{width:72px}.story-head{grid-template-columns:1fr}.original{grid-template-columns:1fr}.hero-copy{padding-top:58px;padding-bottom:58px}}
 @media(max-width:560px){.top{height:64px}.hero-copy,.story,.original{padding-left:16px;padding-right:16px}.hero-media{aspect-ratio:1/1}.specs{grid-template-columns:1fr 1fr}.story{padding-top:64px;padding-bottom:64px}.copy{padding:24px 18px}.badge{top:12px;left:12px}.progress{bottom:12px;left:12px}.footer{padding-left:16px;padding-right:16px;align-items:flex-start;flex-direction:column}}
 .driller-sprite,.main-image,.thumb{background-image:url('driller_story_v2.jpg')}
+
+/* Image quality pass — tighter real-workshop presentation */
+.driller-final-stage{
+  width:100%;height:100%;min-height:100%;
+  background-image:url('driller_story_v2.jpg');
+  background-repeat:no-repeat;background-size:100% 400%;background-position:center 100%;
+  filter:saturate(.94) contrast(1.055) brightness(1.015);
+}
+.original-photo{aspect-ratio:4/3;min-height:420px;background-color:#ddd9d0}
+.main-image{transform-origin:center;filter:saturate(.95) contrast(1.04);transition:background-position .5s cubic-bezier(.22,.61,.36,1),transform .45s ease,filter .35s ease}
+.main-image[data-stage="COMPONENTS"]{transform:scale(1.01)}
+.main-image[data-stage="ASSEMBLE"]{transform:scale(1.075);filter:saturate(.96) contrast(1.055)}
+.main-image[data-stage="FINISH"]{transform:scale(1.06);filter:saturate(.96) contrast(1.055)}
+.main-image[data-stage="OBJECT"]{transform:scale(1.035);filter:saturate(.98) contrast(1.04)}
+.thumb{filter:saturate(.9) contrast(1.035)}
+.step:hover .thumb,.step.active .thumb{filter:saturate(1) contrast(1.045)}
+@media(max-width:900px){.original-photo{min-height:0;aspect-ratio:4/3}}
+@media(max-width:560px){
+ .driller-final-stage{background-size:100% 400%;background-position:center 100%}
+ .main-image[data-stage="ASSEMBLE"],.main-image[data-stage="FINISH"]{transform:scale(1.04)}
+}
+
 </style>
 </head>
 <body>
@@ -40,12 +62,12 @@ h1{font-size:clamp(48px,7vw,105px);line-height:.88;letter-spacing:-.055em;margin
 <main>
 <section class="hero">
   <div class="hero-copy"><p class="kicker">SYSTEM / 02 · PRODUCTION BASELINE</p><h1>Driller Stand / V364</h1><p class="lead">מעמד גבוה ומודולרי שמרכז Rails, Shelf Supports, Slats, Top Perimeter וחיבורי puzzle למערכת ייצור אחת.</p><div class="specs"><div><small>SIZE</small><b>370 × 370 × 850</b></div><div><small>MATERIAL</small><b>4 mm</b></div><div><small>SHEETS</small><b>3 × 900 × 440</b></div><div><small>STATUS</small><b>V3.6.4 verified</b></div></div></div>
-  <div class="hero-media"><img src="driller_final_original.jpg" alt="Driller Stand / V364" loading="eager"></div>
+  <div class="hero-media"><div class="driller-final-stage" role="img" aria-label="Driller Stand / V364"></div></div>
 </section>
 <section class="story">
   <div class="story-head"><div><p class="kicker">BUILD STORY / CASE STUDY</p><h2>מהתכנון<br>לאובייקט.</h2></div><p>המעבר בין השלבים חושף את ההנדסה שמאחורי המוצר — גאומטריה, חיתוך, חיבור והרכבה.</p></div>
   <div class="gallery" tabindex="0">
-    <div class="viewer"><div class="main-image driller-sprite" style="--pos:0%"></div><div class="badge">01 / COMPONENTS</div><div class="progress"><span>01</span> / 04</div></div>
+    <div class="viewer"><div class="main-image driller-sprite" data-stage="COMPONENTS" style="--pos:0%"></div><div class="badge">01 / COMPONENTS</div><div class="progress"><span>01</span> / 04</div></div>
     <div class="panel"><div class="copy"><div class="index">01 / COMPONENTS</div><h3>חלקים</h3><p>פריסת החלקים מציגה את מערכת השלד, המדפים והחיבורים לפני ההרכבה — כולם נגזרים מאותה גאומטריית ייצור.</p></div><div class="nav"><button class="step active" type="button" data-pos="0%" data-code="COMPONENTS" data-title="חלקים" data-desc="פריסת החלקים מציגה את מערכת השלד, המדפים והחיבורים לפני ההרכבה — כולם נגזרים מאותה גאומטריית ייצור." aria-pressed="true">
       <span class="thumb" style="--pos:0%" aria-hidden="true"></span>
       <span><small>01 / COMPONENTS</small><b>חלקים</b></span>
@@ -64,12 +86,12 @@ h1{font-size:clamp(48px,7vw,105px);line-height:.88;letter-spacing:-.055em;margin
     </button></div></div>
   </div>
 </section>
-<section class="original"><div><p class="kicker">ORIGINAL WORKSHOP PHOTO</p><h2>המוצר<br>כפי שנבנה.</h2><p>צילום הסדנה המקורי נשמר לצד תיעוד ה־Build Story כדי להראות את התוצאה בפועל, ללא הפרדה בין תכנון למימוש.</p></div><img src="driller_final_original.jpg" alt="מעמד המקדחה המקורי עם מקדחת העמוד מותקנת" loading="lazy"></section>
+<section class="original"><div><p class="kicker">ORIGINAL WORKSHOP PHOTO</p><h2>המוצר<br>כפי שנבנה.</h2><p>צילום הסדנה המקורי נשמר לצד תיעוד ה־Build Story כדי להראות את התוצאה בפועל, ללא הפרדה בין תכנון למימוש.</p></div><div class="original-photo driller-final-stage" role="img" aria-label="מעמד המקדחה המקורי עם מקדחת העמוד מותקנת"></div></section>
 </main>
 <footer class="footer"><span>ASSEMBL LAB / DESIGN · ENGINEERING · FABRICATION</span><a href="../">BACK TO HOME ↑</a></footer>
 <script>
 const g=document.querySelector('.gallery'),steps=[...document.querySelectorAll('.step')],main=document.querySelector('.main-image'),badge=document.querySelector('.badge'),current=document.querySelector('.progress span'),index=document.querySelector('.index'),title=document.querySelector('.copy h3'),desc=document.querySelector('.copy p');
-function show(i){const n=(i+steps.length)%steps.length,s=steps[n],no=String(n+1).padStart(2,'0');steps.forEach((x,j)=>{x.classList.toggle('active',j===n);x.setAttribute('aria-pressed',j===n?'true':'false')});main.style.setProperty('--pos',s.dataset.pos);badge.textContent=no+' / '+s.dataset.code;current.textContent=no;index.textContent=no+' / '+s.dataset.code;title.textContent=s.dataset.title;desc.textContent=s.dataset.desc}
+function show(i){const n=(i+steps.length)%steps.length,s=steps[n],no=String(n+1).padStart(2,'0');steps.forEach((x,j)=>{x.classList.toggle('active',j===n);x.setAttribute('aria-pressed',j===n?'true':'false')});main.style.setProperty('--pos',s.dataset.pos);main.dataset.stage=s.dataset.code;badge.textContent=no+' / '+s.dataset.code;current.textContent=no;index.textContent=no+' / '+s.dataset.code;title.textContent=s.dataset.title;desc.textContent=s.dataset.desc}
 steps.forEach((s,i)=>s.addEventListener('click',()=>show(i)));g.addEventListener('keydown',e=>{const a=steps.findIndex(x=>x.classList.contains('active'));if(e.key==='ArrowLeft')show(a-1);if(e.key==='ArrowRight')show(a+1)});
 </script>
 </body></html>
