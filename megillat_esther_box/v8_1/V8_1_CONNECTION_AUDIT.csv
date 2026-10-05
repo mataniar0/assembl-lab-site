@@ -1,0 +1,16 @@
+Check,Status,Details
+Lid opening 0–110°,PASS,max END/LID_END intersection=0.00000000 mm²
+Opening margin through 120°,PASS,collision-free
+Pin Ø14 ↔ ring hole Ø14.6,PASS,nominal radial clearance=0.300 mm
+Lock cap retention,PASS,radial overlap=3.700 mm
+BODY_RING wall,PASS,annular wall=6.700 mm
+BODY_RING foot ↔ END,PASS,glue overlap=144.0 mm²
+Reinforced LID_END support ↔ END closed clearance,PASS,intersection=0.00000000 mm²
+Reinforced neck effective width,PASS,approx. local material width=13.00 mm
+FRONT/REAR ↔ END_A/B,PASS,same complementary 6 mm corner finger pattern
+BOTTOM ↔ walls,PASS,same V8 tab/slot geometry
+LID_END ↔ beams,PASS,6×6 mm end tenons and slots
+LID_CENTER_RIB ↔ beams,PASS,two open 6×10 mm notches
+4mm skin ↔ LID_END slot 1,PASS,contained ratio=1.000000
+4mm skin ↔ LID_END slot 2,PASS,contained ratio=1.000000
+4mm skin ↔ LID_END slot 3,PASS,contained ratio=1.000000
