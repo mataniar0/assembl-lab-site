@@ -1,27 +1,29 @@
 # Etrog Box — V6.2 Final Validated
 
-Production-ready laser-cut design for the wooden etrog box.
+Production source package for the V6.2 wooden etrog box.
 
 ## Status
 - Digital validation: **PASS**
 - Connection interfaces: **30/30 PASS**
 - Lid rotation: **0°–110°**, no detected collision
-- Corner laminations: **96 slices** total
-- Production sheets fit within **900×600 mm**
+- Corner laminations: **96 pieces** total
 - Material design basis: **6 mm**
 
-## Production archive
-`etrog_box_v6_2_ALL_DXF_REPORTS.tar.xz` contains the complete V6.2 DXF and validation set, including:
-- Individual DXFs for all parts
-- `00_fit_coupon_slots_5p8_to_6p2.dxf`
-- `20_production_sheet_A_900x600.dxf`
-- `21_production_sheet_B_corners_900x600.dxf`
-- V6, V6.1 and V6.2 validation reports/data
+## Source package
+The reconstructed source archive contains all 16 individual DXF source files, including the fit coupon, panels, corner slices, lid, hinge parts, and cradle parts, plus:
+- V6.2 final validation report
+- individual DXF audit
+- package README
 
-The PNG previews are intentionally excluded from this compact Git archive; the laser-cut geometry and verification files are complete.
+The compact source archive does **not** include the two pre-arranged 900×600 production-sheet DXFs or PNG previews. All individual source geometry is included.
+
+Because the connector transfer layer is text-oriented, the archive is stored as verified binary chunks. Reconstruct it with:
+
+```sh
+cat source_archive_parts/etrog_box_v6_2_SOURCE_DXF_REPORTS.tar.xz.part* > etrog_box_v6_2_SOURCE_DXF_REPORTS.tar.xz
+sha256sum -c SHA256SUMS
+tar -xJf etrog_box_v6_2_SOURCE_DXF_REPORTS.tar.xz
+```
 
 ## Before full cutting
-Cut `dxf/00_fit_coupon_slots_5p8_to_6p2.dxf` first and select the final slot size according to the actual plywood thickness and laser kerf before cutting the full sheets.
-
-## Integrity
-Verify the archive against `SHA256SUMS`.
+Cut `dxf/00_fit_coupon_slots_5p8_to_6p2.dxf` first and select the final slot size according to the actual plywood thickness and laser kerf before cutting the full project.
