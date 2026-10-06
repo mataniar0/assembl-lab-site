@@ -1,0 +1,90 @@
+{
+  "overall_pass": true,
+  "parts": [
+    {
+      "file": "Flow_CROSS_BEAM_C_x2_t6_V3.dxf",
+      "bbox_mm": [480.0, 70.0],
+      "polyline_count": 2,
+      "all_closed": true,
+      "closed_polylines_valid": true
+    },
+    {
+      "file": "Flow_LEG_A_x4_t6_V3_TRIBASE.dxf",
+      "bbox_mm": [156.0, 386.0],
+      "polyline_count": 2,
+      "all_closed": true,
+      "closed_polylines_valid": true
+    },
+    {
+      "file": "Flow_LEG_B_x4_t6_V3_TRIBASE.dxf",
+      "bbox_mm": [156.0, 386.0],
+      "polyline_count": 2,
+      "all_closed": true,
+      "closed_polylines_valid": true
+    },
+    {
+      "file": "Flow_LENGTH_CENTER_LC_x1_t6_V3.dxf",
+      "bbox_mm": [860.0, 70.0],
+      "polyline_count": 3,
+      "all_closed": true,
+      "closed_polylines_valid": true
+    },
+    {
+      "file": "Flow_LENGTH_OUTER_L_x2_t6_V3.dxf",
+      "bbox_mm": [860.0, 70.0],
+      "polyline_count": 5,
+      "all_closed": true,
+      "closed_polylines_valid": true
+    },
+    {
+      "file": "Flow_TRI_BASE_ROUNDED_x4_t6_V3.dxf",
+      "bbox_mm": [21.5, 21.5],
+      "polyline_count": 1,
+      "all_closed": true,
+      "closed_polylines_valid": true
+    },
+    {
+      "file": "Flow_WIDTH_OUTER_W_x2_t6_V3.dxf",
+      "bbox_mm": [480.0, 70.0],
+      "polyline_count": 3,
+      "all_closed": true,
+      "closed_polylines_valid": true
+    }
+  ],
+  "checks": [
+    {"category":"שימור גאומטריה","connection":"Flow_LENGTH_OUTER_L_x2_t6_V3.dxf","expected":"זהה ל-Flow V2","measured":"זהה","status":"PASS","notes":"כל החריצים והפינגר-ג׳וינטים של המסגרת נשמרו."},
+    {"category":"שימור גאומטריה","connection":"Flow_WIDTH_OUTER_W_x2_t6_V3.dxf","expected":"זהה ל-Flow V2","measured":"זהה","status":"PASS","notes":"כל החריצים והפינגר-ג׳וינטים של המסגרת נשמרו."},
+    {"category":"שימור גאומטריה","connection":"Flow_LENGTH_CENTER_LC_x1_t6_V3.dxf","expected":"זהה ל-Flow V2","measured":"זהה","status":"PASS","notes":"כל החריצים והפינגר-ג׳וינטים של המסגרת נשמרו."},
+    {"category":"שימור גאומטריה","connection":"Flow_CROSS_BEAM_C_x2_t6_V3.dxf","expected":"זהה ל-Flow V2","measured":"זהה","status":"PASS","notes":"כל החריצים והפינגר-ג׳וינטים של המסגרת נשמרו."},
+    {"category":"רגל","connection":"LEG_A — פתח פנימי","expected":"ללא שינוי מגרסת Flow המאושרת","measured":"זהה","status":"PASS","notes":""},
+    {"category":"רגל","connection":"LEG_A — אזור עליון/חיבור למסגרת","expected":"ללא שינוי","measured":"זהה","status":"PASS","notes":""},
+    {"category":"רגל","connection":"LEG_B — פתח פנימי","expected":"ללא שינוי מגרסת Flow המאושרת","measured":"זהה","status":"PASS","notes":""},
+    {"category":"רגל","connection":"LEG_B — אזור עליון/חיבור למסגרת","expected":"ללא שינוי","measured":"זהה","status":"PASS","notes":""},
+    {"category":"Tri-base","connection":"LEG_A ↔ TRI_BASE — רוחב לשונית/חריץ","expected":"6.000 mm","measured":"6.000 mm","status":"PASS","notes":""},
+    {"category":"Tri-base","connection":"LEG_A ↔ TRI_BASE — עומק/גובה החריץ","expected":"6.000 mm","measured":"6.000 mm","status":"PASS","notes":"מתאים לעובי חומר 6 מ״מ; החריץ פתוח לקו הרצפה."},
+    {"category":"Tri-base","connection":"LEG_B ↔ TRI_BASE — רוחב לשונית/חריץ","expected":"6.000 mm","measured":"6.000 mm","status":"PASS","notes":""},
+    {"category":"Tri-base","connection":"LEG_B ↔ TRI_BASE — עומק/גובה החריץ","expected":"6.000 mm","measured":"6.000 mm","status":"PASS","notes":"מתאים לעובי חומר 6 מ״מ; החריץ פתוח לקו הרצפה."},
+    {"category":"Tri-base","connection":"לשונית X ↔ LEG_A","expected":"6×6 mm","measured":"6.000×6.000 mm","status":"PASS","notes":""},
+    {"category":"Tri-base","connection":"לשונית Y ↔ LEG_B","expected":"6×6 mm","measured":"6.000×6.000 mm","status":"PASS","notes":""},
+    {"category":"Tri-base","connection":"אי-בליטה מעבר למעטפת הרגל","expected":"≤ 18.000 mm מהפאה הפנימית","measured":"15.500 mm; מרווח 2.500 mm","status":"PASS","notes":"הלשוניות חודרות רק דרך עובי 6 מ״מ של הפאנל ומסתיימות בקו הפאה החיצונית."},
+    {"category":"Tri-base","connection":"מגע עם הרצפה","expected":"פאה תחתונה בגובה 0 ביחס לרצפה","measured":"הבסיס מתוכנן אופקית על הרצפה; החריצים ברגל בגובה 0–6 mm","status":"PASS","notes":""},
+    {"category":"רגל-רגל","connection":"LEG_A ↔ LEG_B — פינגר-ג׳וינט אנכי","expected":"פרופילים משלימים בעומק 6 mm","measured":"19 מקטעי דגימה; xA+xB=26.000 mm בכל המקטעים","status":"PASS","notes":"השינוי ל-tri-base אינו נוגע בקצה הפינגר-ג׳וינט."},
+    {"category":"רגל-מסגרת","connection":"LEG ↔ LENGTH_OUTER — קצה שמאל","expected":"4 לשוניות ×20 mm, עומק 6 mm","measured":"התאמה מלאה; offset X=-6 mm","status":"PASS","notes":""},
+    {"category":"רגל-מסגרת","connection":"LEG ↔ LENGTH_OUTER — קצה ימין","expected":"4 לשוניות ×20 mm, עומק 6 mm","measured":"התאמה מלאה; offset X=+704 mm","status":"PASS","notes":""},
+    {"category":"רגל-מסגרת","connection":"LEG ↔ WIDTH_OUTER — קצה שמאל","expected":"4 לשוניות ×20 mm, עומק 6 mm","measured":"התאמה מלאה; offset X=-6 mm","status":"PASS","notes":""},
+    {"category":"רגל-מסגרת","connection":"LEG ↔ WIDTH_OUTER — קצה ימין","expected":"4 לשוניות ×20 mm, עומק 6 mm","measured":"התאמה מלאה; offset X=+324 mm","status":"PASS","notes":""},
+    {"category":"מסגרת חיצונית","connection":"LENGTH_OUTER ↔ WIDTH_OUTER — פינות","expected":"פינגרים משלימים, עומק 6 mm","measured":"L=[10.0,16.0,10.0,16.0,10.0,16.0,10.0]; W=[16.0,10.0,16.0,10.0,16.0,10.0,16.0]","status":"PASS","notes":""},
+    {"category":"קורות רוחב","connection":"CROSS_BEAM_C ×2 ↔ LENGTH_OUTER ×2","expected":"4 חריצים 6×18 mm בכל קורת LENGTH_OUTER","measured":"4 חריצים בקובץ LENGTH_OUTER, כל אחד 6×18 mm","status":"PASS","notes":"שני CROSS_BEAM, כל אחד מתחבר בשני קצוות; סה״כ 4 חיבורי קצה בהרכבה."},
+    {"category":"קורות רוחב","connection":"קצה CROSS_BEAM_C","expected":"2 לשוניות 6×18 mm בכל קצה","measured":"6×18 mm לפי פרופיל הקצה","status":"PASS","notes":""},
+    {"category":"קורה מרכזית","connection":"LENGTH_CENTER_LC ↔ WIDTH_OUTER ×2","expected":"2 חריצים 6×18 mm בכל קורת WIDTH_OUTER","measured":"2 חריצים 6×18 mm","status":"PASS","notes":"הקורה המרכזית מתחברת בשני קצותיה, זוג לשוניות בכל קצה."},
+    {"category":"קורה מרכזית","connection":"קצה LENGTH_CENTER_LC","expected":"2 לשוניות 6×18 mm בכל קצה","measured":"6×18 mm לפי פרופיל הקצה","status":"PASS","notes":""},
+    {"category":"חצי-חריץ","connection":"LENGTH_CENTER_LC ↔ CROSS_BEAM_C ×2","expected":"רוחב 6 mm; עומק 35+35=70 mm","measured":"LC: 2×(6×35); C: 1×(6×35)","status":"PASS","notes":""},
+    {"category":"מכונה","connection":"Flow_CROSS_BEAM_C_x2_t6_V3.dxf","expected":"בתוך 900×600 mm","measured":"480.0×70.0 mm","status":"PASS","notes":""},
+    {"category":"מכונה","connection":"Flow_LEG_A_x4_t6_V3_TRIBASE.dxf","expected":"בתוך 900×600 mm","measured":"156.0×386.0 mm","status":"PASS","notes":""},
+    {"category":"מכונה","connection":"Flow_LEG_B_x4_t6_V3_TRIBASE.dxf","expected":"בתוך 900×600 mm","measured":"156.0×386.0 mm","status":"PASS","notes":""},
+    {"category":"מכונה","connection":"Flow_LENGTH_CENTER_LC_x1_t6_V3.dxf","expected":"בתוך 900×600 mm","measured":"860.0×70.0 mm","status":"PASS","notes":""},
+    {"category":"מכונה","connection":"Flow_LENGTH_OUTER_L_x2_t6_V3.dxf","expected":"בתוך 900×600 mm","measured":"860.0×70.0 mm","status":"PASS","notes":""},
+    {"category":"מכונה","connection":"Flow_TRI_BASE_ROUNDED_x4_t6_V3.dxf","expected":"בתוך 900×600 mm","measured":"21.5×21.5 mm","status":"PASS","notes":""},
+    {"category":"מכונה","connection":"Flow_WIDTH_OUTER_W_x2_t6_V3.dxf","expected":"בתוך 900×600 mm","measured":"480.0×70.0 mm","status":"PASS","notes":""}
+  ]
+}
