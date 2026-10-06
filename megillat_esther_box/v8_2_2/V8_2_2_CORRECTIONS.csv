@@ -1,0 +1,5 @@
+<PARSED TEXT FOR SHEET: 1 / 1 TABS
+TAB NAME: V8_2_2_CORRECTIONS.csv>index,Correction #,Area,Problem found,Correction
+0,1,BODY_RING mounting foot,Actual glue overlap was 72 mm² because the top corner finger notch removed half the assumed mounting area.,Foot extended inward; actual overlap now 192.0 mm².
+1,2,LID_CENTER_RIB ↔ beams,Center rib had full-depth clearance notches and could slide along both beams.,Changed to 5+5 mm half-laps at x=158..164 mm.
+2,3,LID_SKIN living-hinge layout,Right hinge cuts reached the skin edge and the solid center strip was shifted away from the center rib.,Recentered a 14 mm solid band at x=161 and added 12 mm solid margins at both ends.
