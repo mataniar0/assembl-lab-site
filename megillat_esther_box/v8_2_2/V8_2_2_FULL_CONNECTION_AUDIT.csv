@@ -1,0 +1,58 @@
+<PARSED TEXT FOR SHEET: 1 / 1 TABS
+TAB NAME: V8_2_2_FULL_CONNECTION_AUDIT.csv>index,Category,Part A,Part B,Connection / check,Expected,Actual,Status,Notes
+0,BOM,FRONT_6mm,—,part present,"qty 1, 6 mm","qty 1, 6 mm",PASS,
+1,BOM,REAR_6mm,—,part present,"qty 1, 6 mm","qty 1, 6 mm",PASS,
+2,BOM,END_A_6mm,—,part present,"qty 1, 6 mm","qty 1, 6 mm",PASS,
+3,BOM,END_B_6mm,—,part present,"qty 1, 6 mm","qty 1, 6 mm",PASS,
+4,BOM,BOTTOM_6mm,—,part present,"qty 1, 6 mm","qty 1, 6 mm",PASS,
+5,BOM,LID_END_A_6mm_REINFORCED,—,part present,"qty 1, 6 mm","qty 1, 6 mm",PASS,
+6,BOM,LID_END_B_6mm_REINFORCED,—,part present,"qty 1, 6 mm","qty 1, 6 mm",PASS,
+7,BOM,LID_CENTER_RIB_6mm,—,part present,"qty 1, 6 mm","qty 1, 6 mm",PASS,
+8,BOM,LID_FRONT_BEAM_6mm,—,part present,"qty 1, 6 mm","qty 1, 6 mm",PASS,
+9,BOM,LID_REAR_BEAM_6mm,—,part present,"qty 1, 6 mm","qty 1, 6 mm",PASS,
+10,BOM,BODY_RING_6mm,—,part present,"qty 2, 6 mm","qty 2, 6 mm",PASS,
+11,BOM,PIN_DISC_14mm_6mm,—,part present,"qty 2, 6 mm","qty 2, 6 mm",PASS,
+12,BOM,LOCK_CAP_22mm_6mm,—,part present,"qty 2, 6 mm","qty 2, 6 mm",PASS,
+13,BOM,LID_SKIN_4mm,—,part present,"qty 1, 4 mm","qty 1, 4 mm",PASS,
+14,Dimensions,Body cavity,—,clear length,310.00 mm,310.00 mm,PASS,
+15,Dimensions,Body cavity,—,clear width,65.00 mm,65.00 mm,PASS,
+16,Dimensions,Body cavity,—,clear body height,65.00 mm,65.00 mm,PASS,
+17,Body joints,FRONT/REAR,END_A/B,corner finger complement,alternating complementary 5-pitch joint,"pitch=14.200; long teeth 0,2,4 / end teeth 1,3",PASS,
+18,Bottom joints,BOTTOM,FRONT/REAR,long tab/slot 1,30.0×6 at 22.0..52.0,22.0..52.0,PASS,
+19,Bottom joints,BOTTOM,FRONT/REAR,long tab/slot 2,30.0×6 at 84.0..114.0,84.0..114.0,PASS,
+20,Bottom joints,BOTTOM,FRONT/REAR,long tab/slot 3,30.0×6 at 146.0..176.0,146.0..176.0,PASS,
+21,Bottom joints,BOTTOM,FRONT/REAR,long tab/slot 4,30.0×6 at 208.0..238.0,208.0..238.0,PASS,
+22,Bottom joints,BOTTOM,FRONT/REAR,long tab/slot 5,30.0×6 at 270.0..300.0,270.0..300.0,PASS,
+23,Bottom joints,BOTTOM,END_A/B,short tab/slot 1,16.0×6 at 14.0..30.0,14.0..30.0,PASS,
+24,Bottom joints,BOTTOM,END_A/B,short tab/slot 2,16.0×6 at 47.0..63.0,47.0..63.0,PASS,
+25,Lid joints,LID_END_A/B,LID_FRONT/REAR_BEAM,end beam slot 1,6.00×6.00 mm,6.00×6.00 mm,PASS,
+26,Lid joints,LID_END_A/B,LID_FRONT/REAR_BEAM,end beam slot 2,6.00×6.00 mm,6.00×6.00 mm,PASS,
+27,Lid joints,LID_FRONT/REAR_BEAM,LID_END_A/B,beam end tenons,6.00×6.00 mm,6.00×6.00 mm,PASS,
+28,Lid joints,LID_CENTER_RIB,LID_REAR_BEAM,center half-lap,6 mm wide; 5+5 mm depth,rib 6×5.0; beam 6×5.0; x=158.0..164.0,PASS,Locks center rib longitudinally.
+29,Lid joints,LID_CENTER_RIB,LID_FRONT_BEAM,center half-lap,6 mm wide; 5+5 mm depth,rib 6×5.0; beam 6×5.0; x=158.0..164.0,PASS,Locks center rib longitudinally.
+30,Lid alignment,LID_CENTER_RIB,LID_SKIN,center location,rib fully inside centered solid band,rib 158.0..164.0; band 154.0..168.0,PASS,4.0 mm margin each side
+31,Lid skin,LID_SKIN,LID_END_A/B,curved finger/slot 1,finger 12×4; slot 12.20 tangential ×4.10 radial; 30% arc,center s=28.439; contained=1.000000,PASS,Nominal fit; kerf calibration still required.
+32,Lid skin,LID_SKIN,LID_END_A/B,curved finger/slot 2,finger 12×4; slot 12.20 tangential ×4.10 radial; 50% arc,center s=47.398; contained=1.000000,PASS,Nominal fit; kerf calibration still required.
+33,Lid skin,LID_SKIN,LID_END_A/B,curved finger/slot 3,finger 12×4; slot 12.20 tangential ×4.10 radial; 70% arc,center s=66.358; contained=1.000000,PASS,Nominal fit; kerf calibration still required.
+34,Lid skin,skin slots,beam slots,minimum material bridge,≥5.00 mm,5.780 mm,PASS,
+35,Lid end,LID_END_A/B,—,independent cut openings,5 = 2 beam + 3 skin,5,PASS,
+36,Living hinge,LID_SKIN,—,all hinge cuts inside main skin,no edge-opening cuts,190 lines; inside=True,PASS,
+37,Living hinge,LID_SKIN,—,left/right end margins,12.00 mm each,left=12.00; right=12.00,PASS,
+38,Living hinge,LID_SKIN,LID_CENTER_RIB,center solid band,14.00 mm centered x=161,154.0..168.0; cuts clear=True,PASS,
+39,Hinge,PIN_DISC,BODY_RING,radial running clearance,>0; target 0.30 mm,0.300 mm,PASS,
+40,Hinge,BODY_RING,—,annular wall,≥6 mm,6.700 mm,PASS,
+41,Hinge,LOCK_CAP,BODY_RING,radial retention overlap,≥3 mm,3.700 mm,PASS,
+42,Hinge,BODY_RING,END_A/B,actual face-glue overlap,≥120 mm² actual remaining wood,192.0 mm²,PASS,Corrected for top corner finger notch.
+43,Hinge,PIN_DISC,LID_END support ear,pin glue footprint,Ø14 inside Ø22 ear,radial margin=4.0 mm,PASS,
+44,Hinge,LID_END support ear,LID_END body,neck width,≥10 mm,13.00 mm,PASS,
+45,Hinge,LOCK_CAP,PIN_DISC/BODY_RING,axial running setup,temporary ~0.3 mm shim during bonding,assembly-controlled 0.3 mm gap,PASS,No extra cut part required; use shim while cap adhesive cures.
+46,Motion,LID_END,END_A/B,opening sweep 0–120°,zero collision,max intersection=0.00000000 mm²,PASS,
+47,Hinge,BODY_RING,—,ring + foot connectivity,single connected polygon,Polygon,PASS,
+48,Nesting,6 mm production,900×440 bed,bed envelope,within bed,"x=14.0..836.0, y=20.0..368.0",PASS,
+49,Nesting,6 mm production,—,part overlap,0 overlaps,0,PASS,
+50,BOM,6 mm production,BODY_RING,production quantity,2,2,PASS,
+51,BOM,6 mm production,PIN_DISC,production quantity,2,2,PASS,
+52,BOM,6 mm production,LOCK_CAP,production quantity,2,2,PASS,
+53,Nesting,4 mm production,900×440 bed,bed envelope,within bed,"x=10.0..332.0, y=10.0..104.8",PASS,
+54,Files,per_part folder,BOM,file completeness,"14 unique part definitions, no missing",14 files; missing=[]; extra=[],PASS,
+55,Files,DXF package,—,DXF parser validation,all DXFs parse,all parsed,PASS,
