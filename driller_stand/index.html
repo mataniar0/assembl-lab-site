@@ -76,6 +76,14 @@ h1{font-size:clamp(48px,7vw,105px);line-height:.88;letter-spacing:-.055em;margin
   .progress{bottom:12px;left:12px}
 }
 
+
+/* Responsive image QA — preserve full 4:3 sprite frames on every viewport */
+.hero-media{aspect-ratio:4/3!important;min-height:0!important;align-self:center}
+.main-image{transform:none!important}
+.main-image{background-size:100% 400%!important}
+.original-photo{display:block;width:100%;height:auto;max-height:760px;object-fit:contain;background:#ddd9d0}
+@media(max-width:560px){.hero-media{aspect-ratio:4/3!important}}
+
 </style>
 </head>
 <body>
@@ -107,7 +115,7 @@ h1{font-size:clamp(48px,7vw,105px);line-height:.88;letter-spacing:-.055em;margin
     </button></div></div>
   </div>
 </section>
-<section class="original"><div><p class="kicker">ORIGINAL WORKSHOP PHOTO</p><h2>המוצר<br>כפי שנבנה.</h2><p>צילום הסדנה המקורי נשמר לצד תיעוד ה־Build Story כדי להראות את התוצאה בפועל, ללא הפרדה בין תכנון למימוש.</p></div><div class="original-photo driller-final-stage" role="img" aria-label="מעמד המקדחה המקורי עם מקדחת העמוד מותקנת"></div></section>
+<section class="original"><div><p class="kicker">ORIGINAL WORKSHOP PHOTO</p><h2>המוצר<br>כפי שנבנה.</h2><p>צילום הסדנה המקורי נשמר לצד תיעוד ה־Build Story כדי להראות את התוצאה בפועל, ללא הפרדה בין תכנון למימוש.</p></div><img class="original-photo" src="driller_final_original.jpg" alt="מעמד המקדחה המקורי עם מקדחת העמוד מותקנת"></section>
 </main>
 <footer class="footer"><span>ASSEMBL LAB / DESIGN · ENGINEERING · FABRICATION</span><a href="../">BACK TO HOME ↑</a></footer>
 <script>

@@ -69,6 +69,13 @@ h1{font-size:clamp(48px,7vw,105px);line-height:.88;letter-spacing:-.055em;margin
   .progress{bottom:12px;left:12px}
 }
 
+
+/* Responsive image QA — preserve full 4:3 sprite frames on every viewport */
+.hero-media{aspect-ratio:4/3!important;min-height:0!important;align-self:center}
+.hero-sprite,.main-image{transform:none!important}
+.main-image{background-size:100% 600%!important}
+@media(max-width:560px){.hero-media{aspect-ratio:4/3!important}}
+
 </style>
 </head>
 <body>
