@@ -48,6 +48,27 @@ h1{font-size:clamp(48px,7vw,105px);line-height:.88;letter-spacing:-.055em;margin
  .main-image[data-stage="COMPONENTS"],.main-image[data-stage="ASSEMBLE"],.main-image[data-stage="FINISH"]{transform:scale(1.035)}
 }
 
+
+/* Mobile carousel controls — all build-story images reachable by buttons */
+.viewer{touch-action:pan-y}
+.carousel-arrows{
+  position:absolute;right:18px;bottom:18px;z-index:4;
+  display:flex;gap:8px;direction:ltr
+}
+.carousel-arrow{
+  width:44px;height:44px;border:1px solid var(--ink);
+  background:rgba(243,241,235,.96);color:var(--ink);
+  display:grid;place-items:center;padding:0;
+  font:700 20px/1 Arial,Helvetica,sans-serif;
+  cursor:pointer;touch-action:manipulation
+}
+.carousel-arrow:active{background:var(--ink);color:var(--paper)}
+@media(max-width:560px){
+  .carousel-arrows{right:12px;bottom:12px}
+  .carousel-arrow{width:46px;height:46px}
+  .progress{bottom:12px;left:12px}
+}
+
 </style>
 </head>
 <body>
@@ -60,7 +81,7 @@ h1{font-size:clamp(48px,7vw,105px);line-height:.88;letter-spacing:-.055em;margin
 <section class="story">
   <div class="story-head"><div><p class="kicker">BUILD STORY / CASE STUDY</p><h2>מהתכנון<br>לאובייקט.</h2></div><p>המעבר בין השלבים חושף את ההנדסה שמאחורי המוצר — גאומטריה, חיתוך, חיבור והרכבה.</p></div>
   <div class="gallery" tabindex="0">
-    <div class="viewer"><div class="main-image kids-sprite" style="--pos:0%"></div><div class="badge">01 / PLAN</div><div class="progress"><span>01</span> / 06</div></div>
+    <div class="viewer"><div class="main-image kids-sprite" style="--pos:0%"></div><div class="badge">01 / PLAN</div><div class="progress"><span>01</span> / 06</div><div class="carousel-arrows"><button class="carousel-arrow carousel-prev" type="button" aria-label="התמונה הקודמת">←</button><button class="carousel-arrow carousel-next" type="button" aria-label="התמונה הבאה">→</button></div></div>
     <div class="panel"><div class="copy"><div class="index">01 / PLAN</div><h3>תכנון</h3><p>הגאומטריה, החיבורים והחלקים מוגדרים לפני הייצור.</p></div><div class="nav"><button class="step active" type="button" data-pos="0%" data-code="PLAN" data-title="תכנון" data-desc="הגאומטריה, החיבורים והחלקים מוגדרים לפני הייצור." aria-pressed="true">
       <span class="thumb" style="--pos:0%" aria-hidden="true"></span>
       <span><small>01 / PLAN</small><b>תכנון</b></span>
@@ -91,8 +112,69 @@ h1{font-size:clamp(48px,7vw,105px);line-height:.88;letter-spacing:-.055em;margin
 </main>
 <footer class="footer"><span>ASSEMBL LAB / DESIGN · ENGINEERING · FABRICATION</span><a href="../../">BACK TO HOME ↑</a></footer>
 <script>
-const g=document.querySelector('.gallery'),steps=[...document.querySelectorAll('.step')],main=document.querySelector('.main-image'),badge=document.querySelector('.badge'),current=document.querySelector('.progress span'),index=document.querySelector('.index'),title=document.querySelector('.copy h3'),desc=document.querySelector('.copy p');
-function show(i){const n=(i+steps.length)%steps.length,s=steps[n],no=String(n+1).padStart(2,'0');steps.forEach((x,j)=>{x.classList.toggle('active',j===n);x.setAttribute('aria-pressed',j===n?'true':'false')});main.style.setProperty('--pos',s.dataset.pos);main.dataset.stage=s.dataset.code;badge.textContent=no+' / '+s.dataset.code;current.textContent=no;index.textContent=no+' / '+s.dataset.code;title.textContent=s.dataset.title;desc.textContent=s.dataset.desc}
-steps.forEach((s,i)=>s.addEventListener('click',()=>show(i)));g.addEventListener('keydown',e=>{const a=steps.findIndex(x=>x.classList.contains('active'));if(e.key==='ArrowLeft')show(a-1);if(e.key==='ArrowRight')show(a+1)});
+const g=document.querySelector('.gallery'),
+      viewer=g.querySelector('.viewer'),
+      nav=g.querySelector('.nav'),
+      steps=[...g.querySelectorAll('.step')],
+      main=g.querySelector('.main-image'),
+      badge=g.querySelector('.badge'),
+      current=g.querySelector('.progress span'),
+      index=g.querySelector('.index'),
+      title=g.querySelector('.copy h3'),
+      desc=g.querySelector('.copy p'),
+      prev=g.querySelector('.carousel-prev'),
+      next=g.querySelector('.carousel-next');
+
+let active=Math.max(0,steps.findIndex(x=>x.classList.contains('active')));
+
+function keepActiveVisible(step){
+  if(window.matchMedia('(max-width:900px)').matches){
+    step.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  }
+}
+
+function show(i){
+  const n=(i+steps.length)%steps.length,
+        s=steps[n],
+        no=String(n+1).padStart(2,'0');
+  active=n;
+  steps.forEach((x,j)=>{
+    const on=j===n;
+    x.classList.toggle('active',on);
+    x.setAttribute('aria-pressed',on?'true':'false');
+  });
+  main.style.setProperty('--pos',s.dataset.pos);
+  main.dataset.stage=s.dataset.code;
+  badge.textContent=no+' / '+s.dataset.code;
+  current.textContent=no;
+  index.textContent=no+' / '+s.dataset.code;
+  title.textContent=s.dataset.title;
+  desc.textContent=s.dataset.desc;
+  keepActiveVisible(s);
+}
+
+steps.forEach((s,i)=>s.addEventListener('click',()=>show(i)));
+prev.addEventListener('click',()=>show(active-1));
+next.addEventListener('click',()=>show(active+1));
+
+g.addEventListener('keydown',e=>{
+  if(e.key==='ArrowLeft'){e.preventDefault();show(active-1)}
+  if(e.key==='ArrowRight'){e.preventDefault();show(active+1)}
+});
+
+let touchX=0,touchY=0;
+viewer.addEventListener('touchstart',e=>{
+  if(!e.changedTouches.length)return;
+  touchX=e.changedTouches[0].clientX;
+  touchY=e.changedTouches[0].clientY;
+},{passive:true});
+viewer.addEventListener('touchend',e=>{
+  if(!e.changedTouches.length)return;
+  const dx=e.changedTouches[0].clientX-touchX;
+  const dy=e.changedTouches[0].clientY-touchY;
+  if(Math.abs(dx)>=45 && Math.abs(dx)>Math.abs(dy)*1.15){
+    show(active+(dx<0?1:-1));
+  }
+},{passive:true});
 </script>
 </body></html>
