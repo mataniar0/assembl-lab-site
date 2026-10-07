@@ -12,7 +12,6 @@ from http.server import ThreadingHTTPServer
 import json
 import os
 from pathlib import Path
-import re
 from threading import Thread
 from urllib.parse import urlsplit
 
@@ -135,7 +134,7 @@ CONTRAST_CHECK = """e => {
 def check_contrast(page):
     checked = 0
     labels = page.locator(
-        ".header nav a,.hero-actions a,.hero h1,.hero h1 span,"
+        ".header nav a,.language-switch button,.hero-actions a,.hero h1,.hero h1 span,"
         ".hero-copy,.hero-note,.kicker,.hero-photo figcaption,.product-no,.view,.footer span"
     )
     for label in labels.all():
@@ -143,7 +142,7 @@ def check_contrast(page):
             measured = label.evaluate(CONTRAST_CHECK)
             assert measured["ratio"] >= measured["minimum"], measured
             checked += 1
-    for link in page.locator(".header nav a,.hero-actions a").all():
+    for link in page.locator(".header nav a,.language-switch button,.hero-actions a").all():
         if link.is_visible():
             link.hover()
             measured = link.evaluate(CONTRAST_CHECK)
@@ -153,9 +152,10 @@ def check_contrast(page):
     return checked
 
 
-def check_contrast_page(browser, base_url, viewport):
+def check_contrast_page(browser, base_url, viewport, language="he"):
     page = browser.new_page(viewport={"width": viewport[0], "height": viewport[1]}, has_touch=True)
     try:
+        page.add_init_script(f"localStorage.setItem('assemble-language', '{language}')")
         response = page.goto(base_url, wait_until="networkidle")
         assert response and response.status == 200
         return {"viewport": list(viewport), "contrast_checks": check_contrast(page),
@@ -216,7 +216,7 @@ def assert_anchor(page, fragment):
     assert position["section"] >= position["header"] - .5, position
 
 
-def check_page(browser, base_url, viewport):
+def check_page(browser, base_url, viewport, language="he"):
     width, height = viewport
     page = browser.new_page(viewport={"width": width, "height": height}, has_touch=True)
     page.set_default_timeout(8000)
@@ -225,16 +225,19 @@ def check_page(browser, base_url, viewport):
     page.on("response", lambda response: bad_responses.append(response.url)
             if response.status >= 400 else None)
     try:
+        page.add_init_script(f"localStorage.setItem('assemble-language', '{language}')")
         response = page.goto(base_url, wait_until="networkidle")
         assert response and response.status == 200
         page.locator("img").evaluate_all("es=>es.forEach(e=>e.loading='eager')")
         page.wait_for_function("[...document.images].every(i=>i.complete)")
-        navigation = page.get_by_role("navigation", name="Main navigation")
+        assert page.locator("html").get_attribute("lang") == language
+        assert page.locator("html").get_attribute("dir") == ("rtl" if language == "he" else "ltr")
+        navigation = page.get_by_role("navigation", name="ניווט ראשי" if language == "he" else "Main navigation")
         assert navigation.count() == 1
-        assert navigation.get_by_role("link", name="PRODUCTS", exact=True).is_visible()
-        assert navigation.get_by_role("link", name="CUSTOM SIZE", exact=True).is_visible()
-        assert page.locator(".hero-actions").get_by_role("link", name=re.compile(r"^VIEW PRODUCTS(?:\s*→)?$")).count() == 1
-        assert page.locator(".hero-actions").get_by_role("link", name=re.compile(r"^CUSTOM SIZE(?:\s*→)?$")).count() == 1
+        assert navigation.get_by_role("link", name="מוצרים" if language == "he" else "Products", exact=True).is_visible()
+        assert navigation.get_by_role("link", name="התאמה אישית" if language == "he" else "Custom size", exact=True).is_visible()
+        assert page.locator(".hero-actions").get_by_role("link", name="לצפייה במוצרים ←" if language == "he" else "VIEW PRODUCTS →", exact=True).count() == 1
+        assert page.locator(".hero-actions").get_by_role("link", name="התאמה אישית ←" if language == "he" else "CUSTOM SIZE →", exact=True).count() == 1
         hero_photo = page.locator(".hero-photo img")
         assert hero_photo.count() == 1 and hero_photo.is_visible(), "Missing visible product photo in Hero"
         assert hero_photo.get_attribute("alt"), "Hero photo has no accessible description"

@@ -12,6 +12,8 @@
   const email = document.querySelector("#email-request");
   const planningNotice = document.querySelector("#planning-notice");
   const customerName = form.elements.namedItem("name");
+  const i18n = window.ASSEMBLE_I18N;
+  const t = (key, variables) => i18n.t(key, variables);
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/u;
   const phonePattern = /^\+?[0-9() .-]+$/u;
   const whatsappNumber = String(config.whatsapp || "").replace(/[^0-9]/gu, "");
@@ -19,14 +21,57 @@
   const hasEmail = emailPattern.test(String(config.email || ""));
   const hasEndpoint = /^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/u.test(String(config.formEndpoint || ""));
   let submitting = false;
+  let currentStatus = { key: "", state: "", variables: {} };
+  const validityKeys = new Map();
 
-  const setStatus = (message, state = "") => {
-    status.textContent = message;
-    status.dataset.state = state;
+  const renderStatus = () => {
+    status.textContent = currentStatus.key ? t(currentStatus.key, currentStatus.variables) : "";
+    status.dataset.state = currentStatus.state;
   };
-  form.addEventListener("input", () => {
+  const setStatus = (key, state = "", variables = {}) => {
+    currentStatus = { key, state, variables };
+    renderStatus();
+  };
+  const setValidity = (control, key) => {
+    if (key) validityKeys.set(control, key);
+    else validityKeys.delete(control);
+    control.setCustomValidity(key ? t(key) : "");
+  };
+  form.addEventListener("invalid", event => {
+    const control = event.target;
+    if (!validityKeys.has(control)) {
+      if (control === product) setValidity(control, "inquiry.validation.product");
+      else if (control === customerName) setValidity(control, "inquiry.validation.name");
+      else if (control === contact) setValidity(control, "inquiry.validation.contact");
+      else if (control === form.elements.quantity) setValidity(control, "inquiry.validation.quantity");
+      else if (["width", "depth", "height"].includes(control.name)) setValidity(control, "inquiry.validation.dimension");
+    }
+    setStatus("inquiry.status.invalid", "error");
+  }, true);
+  form.addEventListener("input", event => {
+    if (typeof event.target.setCustomValidity === "function") setValidity(event.target, "");
     if (!submitting) setStatus("");
   });
+  form.addEventListener("change", event => {
+    if (typeof event.target.setCustomValidity === "function") setValidity(event.target, "");
+  });
+  const fallbackChannel = () => {
+    const channels = [hasWhatsApp && t("inquiry.channel.whatsapp"), hasEmail && t("inquiry.channel.email")].filter(Boolean);
+    return channels.join(t("inquiry.channel.or"));
+  };
+  const renderDynamicText = () => {
+    const channel = fallbackChannel();
+    document.querySelector(".delivery-note").textContent = channel ? t("inquiry.delivery", { channel }) : "";
+    send.textContent = t(submitting ? "inquiry.sending" : "inquiry.send");
+    validityKeys.forEach((key, control) => control.setCustomValidity(t(key)));
+    // Rebuild channel names so a language change never leaves mixed copy.
+    if (currentStatus.key === "inquiry.status.fallback") currentStatus.variables = { channel };
+    if (currentStatus.key === "inquiry.status.failed") {
+      currentStatus.variables = { alternative: channel ? t("inquiry.alternative", { channel }) : "" };
+    }
+    renderStatus();
+  };
+  document.addEventListener("assemble:languagechange", renderDynamicText);
   const showPlanning = () => {
     planningNotice.hidden = product.selectedOptions[0]?.dataset.planning !== "true";
   };
@@ -43,9 +88,7 @@
     email.href = `mailto:${config.email}`;
     email.hidden = false;
   }
-  const availableChannels = [hasWhatsApp && "ב־WhatsApp", hasEmail && "באפליקציית המייל"].filter(Boolean);
-  const fallbackChannel = availableChannels.join(" או ");
-  document.querySelector(".delivery-note").textContent = fallbackChannel ? `${fallbackChannel} ההודעה נפתחת עם הפרטים שמילאתם. השליחה מתבצעת באפליקציה.` : "";
+  renderDynamicText();
   if (hasEndpoint) {
     form.action = config.formEndpoint;
     send.hidden = false;
@@ -56,43 +99,42 @@
     const digits = value.replace(/[^0-9]/gu, "");
     return emailPattern.test(value) || (phonePattern.test(value) && digits.length >= 7 && digits.length <= 15);
   };
-  contact.addEventListener("input", () => contact.setCustomValidity(""));
-  customerName.addEventListener("input", () => customerName.setCustomValidity(""));
   const validate = () => {
-    customerName.setCustomValidity(customerName.value.trim() ? "" : "הזינו שם כדי שנוכל לפנות אליכם.");
-    contact.setCustomValidity(validContact() ? "" : "הזינו מספר טלפון או כתובת מייל תקינים.");
+    setValidity(customerName, customerName.value.trim() ? "" : "inquiry.validation.name");
+    setValidity(contact, validContact() ? "" : "inquiry.validation.contact");
     if (!form.reportValidity()) {
-      setStatus("בדקו את השדות המסומנים לפני שליחת הבקשה.", "error");
+      setStatus("inquiry.status.invalid", "error");
       return false;
     }
     return true;
   };
   const message = () => {
-    const lines = ["שלום ASSEMBLE LAB,", "אשמח לבירור ולהצעת מחיר.", "", `מוצר: ${product.selectedOptions[0].textContent}`, `שם: ${form.elements.name.value.trim()}`, `פרטי קשר: ${contact.value.trim()}`, `כמות: ${form.elements.quantity.value}`];
-    for (const [field, label] of [["width", "רוחב"], ["depth", "עומק"], ["height", "גובה"]]) {
-      if (form.elements[field].value) lines.push(`${label}: ${form.elements[field].value} מ״מ`);
+    const lines = [t("inquiry.message.greeting"), t("inquiry.message.intro"), "", t("inquiry.message.product", { value: product.selectedOptions[0].textContent }), t("inquiry.message.name", { value: customerName.value.trim() }), t("inquiry.message.contact", { value: contact.value.trim() }), t("inquiry.message.quantity", { value: form.elements.quantity.value })];
+    for (const field of ["width", "depth", "height"]) {
+      if (form.elements[field].value) lines.push(t(`inquiry.message.${field}`, { value: form.elements[field].value }));
     }
-    if (form.elements.note.value.trim()) lines.push("", `הערה: ${form.elements.note.value.trim()}`);
-    if (!planningNotice.hidden) lines.push("", "המוצר בפיתוח — בקשה לבירור אפשרות ייצור והתאמה.");
+    if (form.elements.note.value.trim()) lines.push("", t("inquiry.message.note", { value: form.elements.note.value.trim() }));
+    if (!planningNotice.hidden) lines.push("", t("inquiry.message.planning"));
     return lines.join("\n");
   };
   whatsapp.addEventListener("click", event => {
     if (submitting || !hasWhatsApp || !validate()) return event.preventDefault();
     whatsapp.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message())}`;
-    setStatus("WhatsApp ייפתח עם פרטי הבקשה. יש לשלוח את ההודעה באפליקציה.");
+    setStatus("inquiry.status.whatsapp");
   });
   email.addEventListener("click", event => {
     if (submitting || !hasEmail || !validate()) return event.preventDefault();
-    const subject = `בקשת הצעת מחיר — ${product.selectedOptions[0].textContent} — ASSEMBLE LAB`;
+    const subject = t("inquiry.message.subject", { product: product.selectedOptions[0].textContent });
     email.href = `mailto:${config.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message())}`;
-    setStatus("אפליקציית המייל תיפתח עם פרטי הבקשה. יש לשלוח את ההודעה באפליקציה.");
+    setStatus("inquiry.status.email");
   });
 
   form.addEventListener("submit", async event => {
     event.preventDefault();
     if (submitting || !validate()) return;
     if (!hasEndpoint) {
-      setStatus(fallbackChannel ? `אפשר לפתוח את הבקשה ${fallbackChannel}.` : "לא ניתן לשלוח את הבקשה כרגע. נסו שוב מאוחר יותר.");
+      const channel = fallbackChannel();
+      setStatus(channel ? "inquiry.status.fallback" : "inquiry.status.unavailable", "", { channel });
       return;
     }
     if (form.elements._gotcha.value) return;
@@ -109,8 +151,8 @@
     [whatsapp, email].forEach(link => link.setAttribute("aria-disabled", "true"));
     controls.forEach(control => { control.disabled = true; });
     form.setAttribute("aria-busy", "true");
-    send.textContent = "שולח…";
-    setStatus("שולחים את הבקשה…");
+    send.textContent = t("inquiry.sending");
+    setStatus("inquiry.status.sending");
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 12000);
     try {
@@ -118,16 +160,17 @@
       const result = await response.json();
       const acknowledged = result && (typeof result.next === "string" || result.ok === true);
       if (!response.ok || !acknowledged || result.error || result.errors?.length) throw new Error("Submission was not acknowledged");
-      setStatus("הבקשה נשלחה. נחזור אליכם בפרטי הקשר שמילאתם.", "success");
+      setStatus("inquiry.status.sent", "success");
     } catch (error) {
-      const alternative = fallbackChannel ? ` או לפתוח את הבקשה ${fallbackChannel}` : "";
-      setStatus(`לא התקבל אישור לשליחה. הפרטים נשמרו בטופס; אפשר לנסות שוב${alternative}.`, "error");
+      const channel = fallbackChannel();
+      const alternative = channel ? t("inquiry.alternative", { channel }) : "";
+      setStatus("inquiry.status.failed", "error", { alternative });
     } finally {
       clearTimeout(timeout);
       controls.forEach((control, index) => { control.disabled = disabled[index]; });
       [whatsapp, email].forEach(link => link.removeAttribute("aria-disabled"));
       form.removeAttribute("aria-busy");
-      send.textContent = "שליחת בקשה";
+      send.textContent = t("inquiry.send");
       submitting = false;
     }
   });
