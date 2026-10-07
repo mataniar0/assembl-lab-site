@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f3f1eb">
+<meta name="description" content="שולחן עבודה בתכנון של ASSEMBL LAB — הדמיה, מידות בתכנון, חיזוקים מוצלבים ופרטי חיבור של מבנה מלוחות עץ.">
+<meta property="og:title" content="WORKBENCH — ASSEMBL LAB">
+<meta property="og:description" content="שולחן עבודה בפיתוח — תכנון המבנה, פרטי החיבורים ופריסת החלקים.">
+<meta property="og:image" content="https://mataniar0.github.io/assembl-lab-site/workbench/workbench-planning.png">
+<title>WORKBENCH / שולחן עבודה — ASSEMBL LAB</title>
+<style>
+:root{--paper:#f3f1eb;--ink:#111311;--muted:#64685f;--line:rgba(17,19,17,.18);--signal:#b5391b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}a:focus-visible{outline:3px solid var(--ink);outline-offset:4px}a:hover{text-decoration:underline;text-underline-offset:4px}
+.header{position:sticky;top:0;z-index:20;min-height:72px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(243,241,235,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);direction:ltr}.logo{display:flex;align-items:center;gap:11px;min-height:44px}.mark{width:38px;height:38px;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-weight:800;font-size:12px}.logo b{font-size:12px;letter-spacing:.12em}.back{display:inline-flex;align-items:center;min-height:44px;font-size:10px;letter-spacing:.1em;font-weight:800;text-decoration:underline;text-underline-offset:4px}
+main{max-width:1800px;margin:auto}.hero{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);border-bottom:1px solid var(--line);align-items:center}.hero-copy{padding:clamp(44px,6vw,88px) clamp(20px,4vw,64px);min-width:0}.kicker{direction:ltr;font-size:10px;font-weight:800;letter-spacing:.14em;color:var(--signal);margin:0 0 18px}.status{display:inline-flex;align-items:center;direction:ltr;border:1px solid var(--ink);padding:8px 10px;font-size:10px;font-weight:800;letter-spacing:.08em;margin:0 0 22px;max-width:100%}.hero h1{direction:ltr;font-size:clamp(48px,6vw,92px);line-height:.88;letter-spacing:-.055em;margin:0 0 18px}.product-name{font-size:22px;font-weight:700;margin:0 0 14px}.lead{font-size:17px;line-height:1.7;color:var(--muted);max-width:44ch;margin:0}.specs-title{font-size:14px;margin:28px 0 10px}.specs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:0;border-top:1px solid var(--line);border-right:1px solid var(--line)}.specs>div{padding:14px;border-left:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0}.specs dt{color:var(--signal);font-size:11px;margin-bottom:5px}.specs dd{font-size:15px;font-weight:700;margin:0;direction:ltr;text-align:right}.planning-note{font-size:13px;line-height:1.65;color:var(--muted);margin:12px 0 0}
+.hero-media{margin:0;padding:clamp(16px,3vw,42px);background:#e7e5df;min-width:0}.hero-media img{width:100%;height:auto;aspect-ratio:1536/1024;object-fit:contain;object-position:center;background:#fff;border:1px solid var(--line)}.hero-media figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-top:14px}.image-label{direction:ltr;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.08em}.image-open{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;min-width:44px;border:1px solid var(--ink);padding:10px 14px;font-size:13px;font-weight:700;background:var(--paper)}.image-open svg{width:14px;height:14px;flex:none}.image-open:hover{background:#fff}
+.story{padding:clamp(54px,7vw,104px) clamp(18px,5vw,72px);border-bottom:1px solid var(--line)}.story-head{display:grid;grid-template-columns:1fr .8fr;gap:32px;align-items:end;margin-bottom:30px}.story-head h2{font-size:clamp(38px,5vw,72px);line-height:1;letter-spacing:-.04em;margin:0}.story-head p{margin:0;color:var(--muted);line-height:1.7;max-width:58ch}.details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-right:1px solid var(--line)}.detail{padding:26px;border-left:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0}.detail small{display:block;direction:ltr;font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--signal);margin-bottom:16px}.detail h3{font-size:23px;line-height:1.2;margin:0 0 12px}.detail p{font-size:15px;color:var(--muted);line-height:1.7;margin:0}
+.custom-size{padding:clamp(40px,5vw,72px) clamp(18px,5vw,72px);display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}.custom-size h2{font-size:clamp(28px,4vw,46px);line-height:1.1;margin:0 0 12px}.custom-size p{color:var(--muted);font-size:16px;line-height:1.7;max-width:64ch;margin:0}.adapt-link{direction:ltr;display:inline-flex;align-items:center;justify-content:center;min-height:48px;min-width:44px;background:var(--ink);color:var(--paper);padding:14px 18px;font-size:11px;font-weight:800;letter-spacing:.08em}.adapt-link:hover{background:var(--signal);color:#fff}.footer{border-top:1px solid var(--line);padding:24px clamp(18px,5vw,72px);display:flex;justify-content:space-between;gap:20px;align-items:center;direction:ltr;font-size:10px;letter-spacing:.08em;color:var(--muted)}.footer a{display:inline-flex;align-items:center;min-width:44px;min-height:44px;text-decoration:underline;text-underline-offset:4px;font-weight:800}
+@media(max-width:1000px){.hero{grid-template-columns:1fr}.hero-copy{padding:48px clamp(18px,5vw,48px)}.hero h1{font-size:clamp(48px,10vw,84px)}.hero-media{padding:clamp(12px,3vw,28px)}.hero-media img{max-width:1536px;margin:auto}.story-head{grid-template-columns:1fr}.details{grid-template-columns:1fr}.detail{padding:24px}.custom-size{grid-template-columns:1fr}.adapt-link{justify-self:start}}
+@media(max-width:640px){.header{min-height:64px;padding:0 16px;gap:12px}.logo{gap:8px}.logo b{font-size:10px;letter-spacing:.08em}.mark{width:32px;height:32px}.back{font-size:10px;letter-spacing:.02em}.hero-copy{padding:38px 16px}.hero h1{font-size:clamp(48px,16vw,76px)}.lead{font-size:15px}.status{font-size:10px;letter-spacing:.04em}.specs>div{padding:12px}.hero-media{padding:10px}.hero-media figcaption{gap:10px;margin-top:10px}.story{padding:52px 16px}.story-head h2{font-size:40px}.detail{padding:22px 18px}.custom-size{padding:44px 16px}.custom-size p{font-size:15px}.footer{padding:20px 16px;align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="header"><a class="logo" href="../" aria-label="ASSEMBL LAB — דף הבית"><span class="mark" aria-hidden="true">A/L</span><b>ASSEMBL LAB</b></a><a class="back" href="../#products" aria-label="חזרה לכל המוצרים">← ALL PRODUCTS</a></header>
+<main>
+<section class="hero" aria-labelledby="product-title">
+<div class="hero-copy">
+<p class="kicker">OBJECT 05 / WORKSPACE</p>
+<p class="status">IN DEVELOPMENT / PLANNING</p>
+<h1 id="product-title">WORK<br>BENCH</h1>
+<p class="product-name">שולחן עבודה</p>
+<p class="lead">שולחן עבודה בתכנון, הבנוי מלוחות עץ עם שלד מחוזק באלכסונים מוצלבים. ההדמיה מציגה את המבנה, פרטי החיבורים ופריסת החלקים לקראת הבנייה.</p>
+<h2 class="specs-title">מידות בתכנון</h2>
+<dl class="specs">
+<div><dt>רוחב</dt><dd><bdi>1400 mm</bdi></dd></div>
+<div><dt>עומק המשטח העליון</dt><dd><bdi>800 mm</bdi></dd></div>
+<div><dt>גובה</dt><dd><bdi>900 mm</bdi></dd></div>
+<div><dt>עומק השלד</dt><dd><bdi>700 mm</bdi></dd></div>
+</dl>
+<p class="planning-note">המידות מבוססות על דף התכנון המצורף. המוצר עדיין בבנייה; התמונה היא הדמיה, ותמונות המוצר המוגמר יתווספו בהמשך.</p>
+</div>
+<figure class="hero-media">
+<img src="workbench-planning.png" width="1536" height="1024" fetchpriority="high" alt="דף תכנון והדמיה של שולחן עבודה מעץ: מבט כללי, מבטי חזית, צד ואחור, חיזוקים מוצלבים, פרטי חיבורים ופריסת חלקים. רוחב 1400 מ״מ, עומק משטח 800 מ״מ, גובה 900 מ״מ ועומק שלד 700 מ״מ.">
+<figcaption><span class="image-label">01 / PLANNING &amp; RENDERING</span><a class="image-open" href="workbench-planning.png" target="_blank" rel="noopener" aria-label="פתיחת תמונת התכנון של שולחן העבודה בגודל מלא בלשונית חדשה">פתיחת התכנון בגודל מלא <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></figcaption>
+</figure>
+</section>
+<section class="story" aria-labelledby="planning-title">
+<div class="story-head"><div><p class="kicker">BUILD STORY / PLANNING</p><h2 id="planning-title">המבנה מתחיל<br>בתכנון.</h2></div><p>דף התכנון מרכז את ההדמיה ואת פרטי המבנה לפני ההרכבה. כל מבט חושף חלק אחר במערכת: הקורות, העמודים, האלכסונים והחיבורים ביניהם.</p></div>
+<div class="details">
+<article class="detail"><small>01 / STRUCTURE</small><h3>שלד וחיזוקים</h3><p>קורות עליונות ותחתונות מתחברות לעמודים. אלכסונים מוצלבים מופיעים במבטים השונים כחלק מתכנון חיזוק השלד.</p></article>
+<article class="detail"><small>02 / CONNECTIONS</small><h3>פרטי החיבורים</h3><p>התקריבים מציגים חיבור של קורה אופקית לעמוד, חיבור אלכסון לקורה ועמוד מרכזי אחורי, לצד חתך של קורה הנדסית.</p></article>
+<article class="detail"><small>03 / COMPONENTS</small><h3>מחלקים למבנה</h3><p>הפריסה מציגה בנפרד עמודים, קורות, אלכסונים וחלקי חיבור וחיזוק, יחד עם דוגמאות לסידור החלקים על לוחות לחיתוך.</p></article>
+</div>
+</section>
+<section class="custom-size" aria-labelledby="custom-title"><div><p class="kicker">CUSTOM DIMENSIONS</p><h2 id="custom-title">לתכנן לפי החלל.</h2><p>רוצים לבדוק התאמת מידות לשולחן העבודה? אפשר לפנות עם המידות והשימוש הרצוי ולדון בהתאמת המבנה והחיבורים במסגרת התכנון.</p></div><a class="adapt-link" href="../#contact" aria-label="פנייה בנושא התאמת מידות לשולחן העבודה">ADAPT THIS DESIGN →</a></section>
+</main>
+<footer class="footer"><span>ASSEMBL LAB / DESIGN · ENGINEERING · FABRICATION</span><a href="../#products" aria-label="חזרה למוצרים בדף הבית">BACK TO PRODUCTS ↑</a></footer>
+</body>
+</html>
