@@ -14,7 +14,7 @@ from playwright.sync_api import sync_playwright
 from carousel_mobile_smoke import ROOT, QuietHandler
 
 
-PAGES = ("", "geometric/", "driller_stand/", "shelf/kids/", "shoe_rack/", "workbench/")
+PAGES = ("", "geometric/", "driller_stand/", "shelf/kids/", "shoe_rack/", "workbench/", "crib/")
 VIEWPORTS = (
     (320, 568), (360, 640), (390, 844), (414, 896), (560, 800),
     (640, 900), (900, 1100), (901, 430), (568, 320), (844, 390),
