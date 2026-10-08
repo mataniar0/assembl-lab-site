@@ -1,0 +1,5 @@
+.venv-qa/
+.qa-browsers/
+.qa-reports/
+__pycache__/
+*.pyc

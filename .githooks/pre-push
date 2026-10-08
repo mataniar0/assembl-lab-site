@@ -1,0 +1,16 @@
+#!/bin/sh
+set -eu
+qa_root=$(git rev-parse --show-toplevel)
+if [ -x "$qa_root/.venv-qa/bin/python" ]; then
+    qa_python="$qa_root/.venv-qa/bin/python"
+elif [ -f "$qa_root/.venv-qa/Scripts/python.exe" ]; then
+    qa_python="$qa_root/.venv-qa/Scripts/python.exe"
+elif command -v python3 >/dev/null 2>&1; then
+    qa_python=python3
+elif command -v python >/dev/null 2>&1; then
+    qa_python=python
+else
+    echo 'Python is required for the site checks. Run scripts/setup_checks.py before pushing.' >&2
+    exit 1
+fi
+exec "$qa_python" "$qa_root/scripts/pre_push.py"
