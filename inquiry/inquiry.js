@@ -39,6 +39,8 @@
   };
   form.addEventListener("invalid", event => {
     const control = event.target;
+    const disclosure = control.closest("details");
+    if (disclosure) disclosure.open = true;
     if (!validityKeys.has(control)) {
       if (control === product) setValidity(control, "inquiry.validation.product");
       else if (control === customerName) setValidity(control, "inquiry.validation.name");

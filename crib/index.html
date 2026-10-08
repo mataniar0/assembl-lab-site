@@ -222,6 +222,34 @@
   "image.plan.explanation": {
     "he": "פריסת החיתוך מציגה שלוש דפנות ומייצב. מזהי החלקים והגליונות נשמרו בשרטוט. זהו אב־טיפוס בתכנון; התאמת המזרן ודרישות הבטיחות לשימוש תינוקות עדיין דורשות אימות.",
     "en": "The cutting layout shows three sides and a stabilizer. Part and sheet identifiers remain on the drawing. This is a prototype in development; mattress fit and infant-use safety requirements still need validation."
+  },
+  "batch.specs": {
+    "he": "מידות ומפרט",
+    "en": "Dimensions and specifications"
+  },
+  "batch.build": {
+    "he": "תכנון והרכבה",
+    "en": "Design and assembly"
+  },
+  "batch.more": {
+    "he": "פרטים והתאמת מידות",
+    "en": "Details and custom dimensions"
+  },
+  "batch.process": {
+    "he": "איך מתקדמים להזמנה?",
+    "en": "How does ordering work?"
+  },
+  "batch.optional": {
+    "he": "מידות והערה — אופציונלי",
+    "en": "Dimensions and note — optional"
+  },
+  "batch.intro": {
+    "he": "מיטת תינוק מעץ מעוטר — אב־טיפוס בתכנון.",
+    "en": "A decorative wooden crib — a prototype in design."
+  },
+  "batch.name": {
+    "he": "מיטת תינוק",
+    "en": "Baby crib"
   }
 }
 </script>
@@ -248,37 +276,36 @@ html[lang="he"] .specs dd{text-align:start}
 @media(max-width:640px){html[lang="he"] .hero h1{font-size:clamp(44px,13vw,72px)}}
 </style>
 <link rel="stylesheet" href="../assets/language.css">
+<link rel="stylesheet" href="../assets/product-light.css">
 </head>
 <body>
 <header class="header"><a class="logo" href="../" aria-label="ASSEMBLE LAB — דף הבית" data-i18n-aria-label="nav.home"><span class="mark" aria-hidden="true">A/L</span><b>ASSEMBLE LAB</b></a><a class="back" href="../#products" aria-label="חזרה לכל המוצרים" data-i18n="nav.back" data-i18n-aria-label="navigation.back.aria">← לכל המוצרים</a></header>
 <main>
 <section class="hero" aria-labelledby="product-title">
-<div class="hero-copy">
+<div class="product-opening-copy"><h1 id="product-title" data-i18n="batch.name">מיטת תינוק</h1><p class="opening-intro" data-i18n="batch.intro">מיטת תינוק מעץ מעוטר — אב־טיפוס בתכנון.</p><p class="status" data-i18n="status.rendering">בפיתוח / הדמיה</p>
+<a data-i18n="cta.inquiry" class="adapt-link" href="../inquiry/?product=crib" aria-label="בירור והצעת מחיר עבור מיטת התינוק" data-i18n-aria-label="accessibility.4">בירור והצעת מחיר</a></div><div class="hero-copy">
 <p class="kicker" data-i18n="object.category">אובייקט 06 / מנוחה</p>
-<p class="status" data-i18n="status.rendering">בפיתוח / הדמיה</p>
-<h1 id="product-title" data-i18n="product.heading" data-i18n-html="">מיטת<br>תינוק</h1>
-<p class="product-name" data-i18n="product.name">מיטת תינוק בפיתוח</p>
-<p class="lead" data-i18n="product.lead">מיטת תינוק מעץ בתכנון לצד מיטת ההורים. ההדמיה משלבת לוחות מעוטרים בירח, כוכבים ועלים עם קורות, שלבים וחיבורים גלויים.</p>
-<h2 class="specs-title" data-i18n="specs.heading">הפרויקט בתכנון</h2>
+<p class="planning-note" data-i18n="planning.note">התמונות מציגות הדמיות של הפרויקט. פרטי המבנה והמידות עדיין בתכנון; תמונות הבנייה והמוצר המוגמר יתווספו בהמשך.</p>
+</div>
+<figure class="hero-media">
+<img src="crib-hero.png" width="1448" height="1086" fetchpriority="high" alt="הדמיה של מיטת תינוק מעץ לצד מיטת הורים בחדר מואר, עם שלבים אנכיים, חיבורים גלויים ולוח מעוטר בירח, כוכבים ועלים." data-i18n-alt="image.1.alt">
+<figcaption class="media-caption"><span class="image-label" data-i18n="image.hero.caption">01 / הדמיית המוצר</span><a class="image-open" href="crib-hero.png" target="_blank" rel="noopener" aria-label="פתיחת הדמיית מיטת התינוק בגודל מלא בלשונית חדשה" data-i18n-aria-label="accessibility.1"><span data-i18n="image.hero.open">פתיחת ההדמיה בגודל מלא</span> <svg viewbox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"></path></svg></a></figcaption>
+</figure>
+<p class="planning-note safety-note" data-i18n-html="image.plan.explanation">פריסת החיתוך מציגה שלוש דפנות ומייצב. מזהי החלקים והגליונות נשמרו בשרטוט. זהו אב־טיפוס בתכנון; התאמת המזרן ודרישות הבטיחות לשימוש תינוקות עדיין דורשות אימות.</p></section>
+<details class="product-details"><summary data-i18n="batch.specs">מידות ומפרט</summary><h2 class="specs-title" data-i18n="specs.heading">הפרויקט בתכנון</h2>
 <dl class="specs">
 <div><dt data-i18n="specs.stage">שלב</dt><dd data-i18n="specs.stage.value">בפיתוח</dd></div>
 <div><dt data-i18n="specs.display">תצוגה</dt><dd data-i18n="specs.display.value">הדמיות ותכנון</dd></div>
 <div><dt data-i18n="specs.structure">מבנה</dt><dd data-i18n="specs.structure.value">לוחות עץ וחיבורים</dd></div>
 <div><dt data-i18n="specs.design">עיצוב</dt><dd data-i18n="specs.design.value">ירח, כוכבים ועלים</dd></div>
 </dl>
-<p class="planning-note" data-i18n="planning.note">התמונות מציגות הדמיות של הפרויקט. פרטי המבנה והמידות עדיין בתכנון; תמונות הבנייה והמוצר המוגמר יתווספו בהמשך.</p>
-</div>
-<figure class="hero-media">
-<img src="crib-hero.png" width="1448" height="1086" fetchpriority="high" alt="הדמיה של מיטת תינוק מעץ לצד מיטת הורים בחדר מואר, עם שלבים אנכיים, חיבורים גלויים ולוח מעוטר בירח, כוכבים ועלים." data-i18n-alt="image.1.alt">
-<figcaption class="media-caption"><span class="image-label" data-i18n="image.hero.caption">01 / הדמיית המוצר</span><a class="image-open" href="crib-hero.png" target="_blank" rel="noopener" aria-label="פתיחת הדמיית מיטת התינוק בגודל מלא בלשונית חדשה" data-i18n-aria-label="accessibility.1"><span data-i18n="image.hero.open">פתיחת ההדמיה בגודל מלא</span> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></figcaption>
-</figure>
-</section>
-<section class="story" aria-labelledby="structure-title">
+</details><details class="product-details"><summary data-i18n="batch.more">פרטים והתאמת מידות</summary><p class="lead" data-i18n="product.lead">מיטת תינוק מעץ בתכנון לצד מיטת ההורים. ההדמיה משלבת לוחות מעוטרים בירח, כוכבים ועלים עם קורות, שלבים וחיבורים גלויים.</p>
+</details><details class="product-details"><summary data-i18n="batch.build">תכנון והרכבה</summary><section class="story" aria-labelledby="structure-title">
 <div class="story-head"><div><p class="kicker" data-i18n="story.category">תהליך הבנייה / מבנה</p><h2 id="structure-title" data-i18n="story.heading" data-i18n-html="">פרטים שיוצרים<br>את המבנה.</h2></div><p data-i18n="story.lead">לצד ההדמיה הכללית, המבט על הדופן מציג את הקשרים בין העמודים, הקורות והשלבים. המבט המפורק מפריד את החלקים כדי להציג את רעיון ההרכבה.</p></div>
 <div class="engineering-layout">
 <figure class="engineering-media">
 <img src="crib-side-detail.png" width="1448" height="1086" loading="lazy" alt="הדמיית דופן מיטת התינוק: עמודי עץ, קורות עליונה ותחתונה ושלבים אנכיים, לצד מבט מפורק של חלקי הדופן והחיבורים." data-i18n-alt="image.2.alt">
-<figcaption class="media-caption"><span class="image-label" data-i18n="image.side.caption">02 / דופן וחלקים</span><a class="image-open" href="crib-side-detail.png" target="_blank" rel="noopener" aria-label="פתיחת הדמיית הדופן והחלקים של מיטת התינוק בגודל מלא בלשונית חדשה" data-i18n-aria-label="accessibility.2"><span data-i18n="image.side.open">פתיחת הפרט בגודל מלא</span> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></figcaption>
+<figcaption class="media-caption"><span class="image-label" data-i18n="image.side.caption">02 / דופן וחלקים</span><a class="image-open" href="crib-side-detail.png" target="_blank" rel="noopener" aria-label="פתיחת הדמיית הדופן והחלקים של מיטת התינוק בגודל מלא בלשונית חדשה" data-i18n-aria-label="accessibility.2"><span data-i18n="image.side.open">פתיחת הפרט בגודל מלא</span> <svg viewbox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"></path></svg></a></figcaption>
 </figure>
 <div class="details">
 <article class="detail"><small data-i18n="detail.frame.label">01 / שלד</small><h3 data-i18n="detail.frame.heading">קורות ועמודים</h3><p data-i18n="detail.frame.copy">מסגרת העץ מורכבת מעמודים וקורות. פרטי החיבור נשארים גלויים בהדמיה כחלק מהשפה של המוצר.</p></article>
@@ -287,12 +314,13 @@ html[lang="he"] .specs dd{text-align:start}
 </div>
 </div>
 </section>
-<section class="cut-plan" aria-labelledby="cut-plan-title">
-<div class="plan-copy"><p class="kicker" data-i18n="plan.category">03 / תכנון החיתוך העדכני</p><h2 id="cut-plan-title" data-i18n="plan.heading" data-i18n-html="">מהמבנה<br>אל החלקים.</h2><p data-i18n="plan.copy">גליון התכנון מציג את פריסת חלקי הפרויקט על לוחות לקראת חיתוך. לצפייה בפרטי הפריסה, פתחו את הגליון בגודל מלא.</p><a class="image-open" href="crib-cut-plan-clean.png" target="_blank" rel="noopener" aria-label="פתיחת גליון תכנון החלקים של מיטת התינוק בגודל מלא בלשונית חדשה" data-i18n-aria-label="accessibility.3"><span data-i18n="plan.open">פתיחת גליון התכנון בגודל מלא</span> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></div>
+</details><details class="product-details"><summary data-i18n="batch.build">תכנון והרכבה</summary><section class="cut-plan" aria-labelledby="cut-plan-title">
+<div class="plan-copy"><p class="kicker" data-i18n="plan.category">03 / תכנון החיתוך העדכני</p><h2 id="cut-plan-title" data-i18n="plan.heading" data-i18n-html="">מהמבנה<br>אל החלקים.</h2><p data-i18n="plan.copy">גליון התכנון מציג את פריסת חלקי הפרויקט על לוחות לקראת חיתוך. לצפייה בפרטי הפריסה, פתחו את הגליון בגודל מלא.</p><a class="image-open" href="crib-cut-plan-clean.png" target="_blank" rel="noopener" aria-label="פתיחת גליון תכנון החלקים של מיטת התינוק בגודל מלא בלשונית חדשה" data-i18n-aria-label="accessibility.3"><span data-i18n="plan.open">פתיחת גליון התכנון בגודל מלא</span> <svg viewbox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"></path></svg></a></div>
 <figure class="plan-media"><img src="crib-cut-plan-clean.png" width="698" height="3222" loading="lazy" alt="גליון התכנון העדכני של מיטת התינוק, המציג ברצף אנכי את פריסת חלקי העץ על לוחות לחיתוך." data-i18n-alt="image.3.alt"><figcaption data-i18n="plan.caption">גליון תכנון החלקים — מוצג בשלמותו.</figcaption><p class="image-explanation" data-i18n-html="image.plan.explanation">פריסת החיתוך מציגה שלוש דפנות ומייצב. מזהי החלקים והגליונות נשמרו בשרטוט. זהו אב־טיפוס בתכנון; התאמת המזרן ודרישות הבטיחות לשימוש תינוקות עדיין דורשות אימות.</p></figure>
 </section>
-<section class="custom-size" aria-labelledby="custom-title"><div><p class="kicker" data-i18n="custom.category">התאמת מידות</p><h2 id="custom-title" data-i18n="custom.heading">מתכננים את הפרטים.</h2><p data-i18n="custom.copy">רוצים לשוחח על הפרויקט או לבדוק התאמה לחלל? אפשר לפנות עם המידות והרעיון הרצוי ולדון באפשרויות במסגרת התכנון.</p></div><a data-i18n="cta.inquiry" class="adapt-link" href="../inquiry/?product=crib" aria-label="בירור והצעת מחיר עבור מיטת התינוק" data-i18n-aria-label="accessibility.4">בירור והצעת מחיר</a></section>
-</main>
+</details><details class="product-details"><summary data-i18n="batch.more">פרטים והתאמת מידות</summary><section class="custom-size" aria-labelledby="custom-title"><div><p class="kicker" data-i18n="custom.category">התאמת מידות</p><h2 id="custom-title" data-i18n="custom.heading">מתכננים את הפרטים.</h2><p data-i18n="custom.copy">רוצים לשוחח על הפרויקט או לבדוק התאמה לחלל? אפשר לפנות עם המידות והרעיון הרצוי ולדון באפשרויות במסגרת התכנון.</p></div></section>
+</details></main>
+
 <footer class="footer"><span data-language-fixed>ASSEMBLE LAB / <span data-i18n="footer.discipline">עיצוב · הנדסה · ייצור</span></span><a data-i18n="footer.back" href="../#products" aria-label="חזרה למוצרים בדף הבית" data-i18n-aria-label="navigation.back.aria">חזרה למוצרים ↑</a></footer>
 </body>
 </html>

@@ -158,6 +158,34 @@
   "image.overview.explanation": {
     "he": "הגליון מציג הדמיה כללית, מבטי חזית, צד ואחור, תקריבים של חיבורי הקורות והעמודים, חתך העמוד ופריסת חלקים לחיתוך.",
     "en": "The sheet combines a product rendering, front, side and rear views, close-ups of beam and post joints, the post cross-section, and component cutting layouts."
+  },
+  "batch.specs": {
+    "he": "מידות ומפרט",
+    "en": "Dimensions and specifications"
+  },
+  "batch.build": {
+    "he": "תכנון והרכבה",
+    "en": "Design and assembly"
+  },
+  "batch.more": {
+    "he": "פרטים והתאמת מידות",
+    "en": "Details and custom dimensions"
+  },
+  "batch.process": {
+    "he": "איך מתקדמים להזמנה?",
+    "en": "How does ordering work?"
+  },
+  "batch.optional": {
+    "he": "מידות והערה — אופציונלי",
+    "en": "Dimensions and note — optional"
+  },
+  "batch.intro": {
+    "he": "שולחן עבודה עם חיזוקים אלכסוניים — בתכנון ופיתוח.",
+    "en": "A workbench with diagonal braces — in development."
+  },
+  "batch.name": {
+    "he": "שולחן עבודה",
+    "en": "Workbench"
   }
 }
 </script>
@@ -183,32 +211,31 @@ html[lang="he"] .specs dd{text-align:start}
 @media(max-width:640px){html[lang="he"] .hero h1{font-size:clamp(44px,13vw,72px)}}
 </style>
 <link rel="stylesheet" href="../assets/language.css">
+<link rel="stylesheet" href="../assets/product-light.css">
 </head>
 <body>
 <header class="header"><a class="logo" href="../" aria-label="ASSEMBLE LAB — דף הבית" data-i18n-aria-label="nav.home"><span class="mark" aria-hidden="true">A/L</span><b>ASSEMBLE LAB</b></a><a class="back" href="../#products" aria-label="חזרה לכל המוצרים" data-i18n="nav.back" data-i18n-aria-label="navigation.back.aria">← לכל המוצרים</a></header>
 <main>
 <section class="hero" aria-labelledby="product-title">
-<div class="hero-copy">
+<div class="product-opening-copy"><h1 id="product-title" data-i18n="batch.name">שולחן עבודה</h1><p class="opening-intro" data-i18n="batch.intro">שולחן עבודה עם חיזוקים אלכסוניים — בתכנון ופיתוח.</p><p class="status" data-i18n="status.planning">בתכנון ופיתוח</p>
+<a data-i18n="cta.inquiry" class="adapt-link" href="../inquiry/?product=workbench" aria-label="בירור והצעת מחיר עבור שולחן העבודה" data-i18n-aria-label="accessibility.2">בירור והצעת מחיר</a></div><div class="hero-copy">
 <p class="kicker" data-i18n="object.category">אובייקט 05 / סביבת עבודה</p>
-<p class="status" data-i18n="status.planning">בתכנון ופיתוח</p>
-<h1 id="product-title" data-i18n="product.heading" data-i18n-html="">שולחן<br>עבודה</h1>
-<p class="product-name" data-i18n="product.name">שולחן עבודה</p>
-<p class="lead" data-i18n="product.lead">שולחן עבודה בתכנון, הבנוי מלוחות עץ עם שלד מחוזק באלכסונים מוצלבים. ההדמיה מציגה את המבנה, פרטי החיבורים ופריסת החלקים לקראת הבנייה.</p>
-<h2 class="specs-title" data-i18n="specs.heading">מידות בתכנון</h2>
+<p class="planning-note" data-i18n="planning.note">המידות מבוססות על דף התכנון המצורף. המוצר עדיין בבנייה; התמונה היא הדמיה, ותמונות המוצר המוגמר יתווספו בהמשך.</p>
+</div>
+<figure class="hero-media">
+<img src="workbench-planning-clean.webp" width="1536" height="1024" fetchpriority="high" alt="דף תכנון והדמיה של שולחן עבודה מעץ: מבט כללי, מבטי חזית, צד ואחור, חיזוקים מוצלבים, פרטי חיבורים ופריסת חלקים. רוחב 1400 מ״מ, עומק משטח 800 מ״מ, גובה 900 מ״מ ועומק שלד 700 מ״מ." data-i18n-alt="image.1.alt">
+<figcaption><span class="image-label" data-i18n="image.hero.caption">01 / תכנון והדמיה</span><a class="image-open" href="workbench-planning-clean.webp" target="_blank" rel="noopener" aria-label="פתיחת תמונת התכנון של שולחן העבודה בגודל מלא בלשונית חדשה" data-i18n-aria-label="accessibility.1"><span data-i18n="image.hero.open">פתיחת התכנון בגודל מלא</span> <svg viewbox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"></path></svg></a></figcaption>
+<p class="image-explanation" data-i18n-html="image.overview.explanation">הגליון מציג הדמיה כללית, מבטי חזית, צד ואחור, תקריבים של חיבורי הקורות והעמודים, חתך העמוד ופריסת חלקים לחיתוך.</p></figure>
+</section>
+<details class="product-details"><summary data-i18n="batch.specs">מידות ומפרט</summary><h2 class="specs-title" data-i18n="specs.heading">מידות בתכנון</h2>
 <dl class="specs">
 <div><dt data-i18n="specs.width">רוחב</dt><dd><bdi>1400 mm</bdi></dd></div>
 <div><dt data-i18n="specs.topDepth">עומק המשטח העליון</dt><dd><bdi>800 mm</bdi></dd></div>
 <div><dt data-i18n="specs.height">גובה</dt><dd><bdi>900 mm</bdi></dd></div>
 <div><dt data-i18n="specs.frameDepth">עומק השלד</dt><dd><bdi>700 mm</bdi></dd></div>
 </dl>
-<p class="planning-note" data-i18n="planning.note">המידות מבוססות על דף התכנון המצורף. המוצר עדיין בבנייה; התמונה היא הדמיה, ותמונות המוצר המוגמר יתווספו בהמשך.</p>
-</div>
-<figure class="hero-media">
-<img src="workbench-planning-clean.webp" width="1536" height="1024" fetchpriority="high" alt="דף תכנון והדמיה של שולחן עבודה מעץ: מבט כללי, מבטי חזית, צד ואחור, חיזוקים מוצלבים, פרטי חיבורים ופריסת חלקים. רוחב 1400 מ״מ, עומק משטח 800 מ״מ, גובה 900 מ״מ ועומק שלד 700 מ״מ." data-i18n-alt="image.1.alt">
-<figcaption><span class="image-label" data-i18n="image.hero.caption">01 / תכנון והדמיה</span><a class="image-open" href="workbench-planning-clean.webp" target="_blank" rel="noopener" aria-label="פתיחת תמונת התכנון של שולחן העבודה בגודל מלא בלשונית חדשה" data-i18n-aria-label="accessibility.1"><span data-i18n="image.hero.open">פתיחת התכנון בגודל מלא</span> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a></figcaption>
-<p class="image-explanation" data-i18n-html="image.overview.explanation">הגליון מציג הדמיה כללית, מבטי חזית, צד ואחור, תקריבים של חיבורי הקורות והעמודים, חתך העמוד ופריסת חלקים לחיתוך.</p></figure>
-</section>
-<section class="story" aria-labelledby="planning-title">
+</details><details class="product-details"><summary data-i18n="batch.more">פרטים והתאמת מידות</summary><p class="lead" data-i18n="product.lead">שולחן עבודה בתכנון, הבנוי מלוחות עץ עם שלד מחוזק באלכסונים מוצלבים. ההדמיה מציגה את המבנה, פרטי החיבורים ופריסת החלקים לקראת הבנייה.</p>
+</details><details class="product-details"><summary data-i18n="batch.build">תכנון והרכבה</summary><section class="story" aria-labelledby="planning-title">
 <div class="story-head"><div><p class="kicker" data-i18n="story.category">תהליך הבנייה / תכנון</p><h2 id="planning-title" data-i18n="story.heading" data-i18n-html="">המבנה מתחיל<br>בתכנון.</h2></div><p data-i18n="story.lead">דף התכנון מרכז את ההדמיה ואת פרטי המבנה לפני ההרכבה. כל מבט חושף חלק אחר במערכת: הקורות, העמודים, האלכסונים והחיבורים ביניהם.</p></div>
 <div class="details">
 <article class="detail"><small data-i18n="detail.structure.label">01 / מבנה</small><h3 data-i18n="detail.structure.heading">שלד וחיזוקים</h3><p data-i18n="detail.structure.copy">קורות עליונות ותחתונות מתחברות לעמודים. אלכסונים מוצלבים מופיעים במבטים השונים כחלק מתכנון חיזוק השלד.</p></article>
@@ -216,8 +243,9 @@ html[lang="he"] .specs dd{text-align:start}
 <article class="detail"><small data-i18n="detail.components.label">03 / חלקים</small><h3 data-i18n="detail.components.heading">מחלקים למבנה</h3><p data-i18n="detail.components.copy">הפריסה מציגה בנפרד עמודים, קורות, אלכסונים וחלקי חיבור וחיזוק, יחד עם דוגמאות לסידור החלקים על לוחות לחיתוך.</p></article>
 </div>
 </section>
-<section class="custom-size" aria-labelledby="custom-title"><div><p class="kicker" data-i18n="custom.category">התאמת מידות</p><h2 id="custom-title" data-i18n="custom.heading">לתכנן לפי החלל.</h2><p data-i18n="custom.copy">רוצים לבדוק התאמת מידות לשולחן העבודה? אפשר לפנות עם המידות והשימוש הרצוי ולדון בהתאמת המבנה והחיבורים במסגרת התכנון.</p></div><a data-i18n="cta.inquiry" class="adapt-link" href="../inquiry/?product=workbench" aria-label="בירור והצעת מחיר עבור שולחן העבודה" data-i18n-aria-label="accessibility.2">בירור והצעת מחיר</a></section>
-</main>
+</details><details class="product-details"><summary data-i18n="batch.more">פרטים והתאמת מידות</summary><section class="custom-size" aria-labelledby="custom-title"><div><p class="kicker" data-i18n="custom.category">התאמת מידות</p><h2 id="custom-title" data-i18n="custom.heading">לתכנן לפי החלל.</h2><p data-i18n="custom.copy">רוצים לבדוק התאמת מידות לשולחן העבודה? אפשר לפנות עם המידות והשימוש הרצוי ולדון בהתאמת המבנה והחיבורים במסגרת התכנון.</p></div></section>
+</details></main>
+
 <footer class="footer"><span data-language-fixed>ASSEMBLE LAB / <span data-i18n="footer.discipline">עיצוב · הנדסה · ייצור</span></span><a data-i18n="footer.back" href="../#products" aria-label="חזרה למוצרים בדף הבית" data-i18n-aria-label="navigation.back.aria">חזרה למוצרים ↑</a></footer>
 </body>
 </html>

@@ -224,6 +224,7 @@ def cached_pageshow_and_tabs(browser, base):
     try:
         ready(first, base + "inquiry/?product=crib")
         first.locator("#customer-name").fill("Preserved draft")
+        first.locator("#optional-details > summary").click()
         first.locator("#note").fill("Keep these dimensions")
         first.evaluate("localStorage.setItem('assemble-language','en');dispatchEvent(new PageTransitionEvent('pageshow',{persisted:true}))")
         check(document_language(first) == "en", "Cached pageshow did not reconcile saved English")
@@ -398,6 +399,7 @@ def inquiry(browser, base, locale):
         page.locator("#customer-name").fill("QA Customer")
         page.locator("#customer-contact").fill("customer@example.invalid")
         page.locator("#quantity").fill("2")
+        page.locator("#optional-details > summary").click()
         page.locator("#width").fill("310")
         page.locator("#note").fill("QA sample only <literal text>")
         before = page.locator("#inquiry-form").evaluate("f=>Object.fromEntries(new FormData(f))")

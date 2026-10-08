@@ -34,12 +34,12 @@
     "en": "INQUIRY / CUSTOM DIMENSIONS"
   },
   "inquiry.title": {
-    "he": "בקשה<br>להצעת מחיר.",
-    "en": "Request<br>a quote."
+    "he": "הצעת מחיר",
+    "en": "Request a quote"
   },
   "inquiry.intro": {
-    "he": "בחרו מוצר וספרו לנו מה אתם צריכים. נבדוק את אפשרויות הייצור וההתאמה ונחזור אליכם עם מחיר וזמן אספקה.",
-    "en": "Choose a product and tell us what you need. We will review fabrication and adaptation options, then get back to you with a price and lead time."
+    "he": "בחרו מוצר והשאירו פרטי קשר — נבדוק אפשרויות ייצור והתאמה.",
+    "en": "Choose a product and leave your contact details — we’ll review fabrication and custom dimensions."
   },
   "inquiry.step.choose": {
     "he": "<strong>בוחרים מוצר וכמות.</strong> אפשר לציין מידות רצויות או להשאיר אותן לשיחה.",
@@ -292,16 +292,36 @@
   "inquiry.product.flow": {
     "he": "Flow — שולחן קפה",
     "en": "Flow — coffee table"
+  },
+  "batch.specs": {
+    "he": "מידות ומפרט",
+    "en": "Dimensions and specifications"
+  },
+  "batch.build": {
+    "he": "תכנון והרכבה",
+    "en": "Design and assembly"
+  },
+  "batch.more": {
+    "he": "פרטים והתאמת מידות",
+    "en": "Details and custom dimensions"
+  },
+  "batch.process": {
+    "he": "איך מתקדמים להזמנה?",
+    "en": "How does ordering work?"
+  },
+  "batch.optional": {
+    "he": "מידות והערה — אופציונלי",
+    "en": "Dimensions and note — optional"
   }
 }</script>
 <script src="../assets/language.js"></script>
 <script src="contact-config.js" defer></script>
 <script src="inquiry.js" defer></script>
-</head>
+<link rel="stylesheet" href="../assets/product-light.css"></head>
 <body>
 <header class="header"><a class="logo" href="../" aria-label="ASSEMBLE LAB — דף הבית" data-i18n-aria-label="inquiry.brand.home"><span class="mark" aria-hidden="true">A/L</span><span>ASSEMBLE LAB</span></a><a class="back" href="../#products" data-i18n="nav.back">← לכל המוצרים</a></header>
 <main class="inquiry-layout">
-<section class="intro" aria-labelledby="inquiry-title"><p class="kicker" data-i18n="inquiry.kicker">INQUIRY / CUSTOM DIMENSIONS</p><h1 id="inquiry-title" data-i18n-html="inquiry.title">בקשה<br>להצעת מחיר.</h1><p data-i18n="inquiry.intro">בחרו מוצר וספרו לנו מה אתם צריכים. נבדוק את אפשרויות הייצור וההתאמה ונחזור אליכם עם מחיר וזמן אספקה.</p><ol><li data-i18n-html="inquiry.step.choose"><strong>בוחרים מוצר וכמות.</strong> אפשר לציין מידות רצויות או להשאיר אותן לשיחה.</li><li data-i18n-html="inquiry.step.quote"><strong>מקבלים הצעת מחיר.</strong> ההצעה תכלול אפשרויות ייצור, זמן אספקה ומשלוח או איסוף.</li><li data-i18n-html="inquiry.step.confirm"><strong>מאשרים את הפרטים.</strong> לאחר ההסכמה מתאמים תשלום וייצור.</li></ol></section>
+<section class="intro" aria-labelledby="inquiry-title"><p class="kicker" data-i18n="inquiry.kicker">INQUIRY / CUSTOM DIMENSIONS</p><h1 id="inquiry-title" data-i18n-html="inquiry.title">בקשה<br>להצעת מחיר.</h1><p data-i18n="inquiry.intro">בחרו מוצר וספרו לנו מה אתם צריכים. נבדוק את אפשרויות הייצור וההתאמה ונחזור אליכם עם מחיר וזמן אספקה.</p><details class="product-details"><summary data-i18n="batch.process">איך מתקדמים להזמנה?</summary><ol><li data-i18n-html="inquiry.step.choose"><strong>בוחרים מוצר וכמות.</strong> אפשר לציין מידות רצויות או להשאיר אותן לשיחה.</li><li data-i18n-html="inquiry.step.quote"><strong>מקבלים הצעת מחיר.</strong> ההצעה תכלול אפשרויות ייצור, זמן אספקה ומשלוח או איסוף.</li><li data-i18n-html="inquiry.step.confirm"><strong>מאשרים את הפרטים.</strong> לאחר ההסכמה מתאמים תשלום וייצור.</li></ol></details></section>
 <form id="inquiry-form" class="quote-form" action="https://formspree.io/f/xwlvlbno" method="post">
 <p class="required-note" data-i18n="inquiry.required">השדות המסומנים בכוכבית נדרשים. מידות והערה הן לבחירתכם.</p>
 <div class="form-fields">
@@ -309,9 +329,9 @@
 <p id="planning-notice" class="planning-note" hidden data-i18n="inquiry.planning">המוצר הזה בפיתוח. הפנייה היא לבירור אפשרות ייצור והתאמה ולקבלת הצעת מחיר.</p>
 <div class="field"><label for="customer-name" data-i18n="inquiry.label.customer-name">שם *</label><input id="customer-name" name="name" autocomplete="name" maxlength="80" required></div>
 <div class="pair"><div class="field"><label for="customer-contact" data-i18n="inquiry.label.customer-contact">טלפון או מייל *</label><input id="customer-contact" name="contact" autocomplete="off" dir="ltr" maxlength="254" required aria-describedby="contact-help"><p id="contact-help" class="field-help" data-i18n="inquiry.contact-help">פרט קשר אחד מספיק כדי שנוכל לחזור אליכם.</p></div><div class="field"><label for="quantity" data-i18n="inquiry.label.quantity">כמות *</label><input id="quantity" name="quantity" type="number" inputmode="numeric" min="1" max="1000" step="1" value="1" required></div></div>
-<fieldset class="dimensions"><legend data-i18n="inquiry.dimensions">מידות רצויות במ״מ — אופציונלי</legend><div class="dimensions-grid"><div class="field"><label for="width" data-i18n="inquiry.label.width">רוחב</label><input id="width" name="width" type="number" inputmode="decimal" min="1" max="10000" step="any" dir="ltr"></div><div class="field"><label for="depth" data-i18n="inquiry.label.depth">עומק</label><input id="depth" name="depth" type="number" inputmode="decimal" min="1" max="10000" step="any" dir="ltr"></div><div class="field"><label for="height" data-i18n="inquiry.label.height">גובה</label><input id="height" name="height" type="number" inputmode="decimal" min="1" max="10000" step="any" dir="ltr"></div></div></fieldset>
+<details class="product-details" id="optional-details"><summary data-i18n="batch.optional">מידות והערה — אופציונלי</summary><fieldset class="dimensions"><legend data-i18n="inquiry.dimensions">מידות רצויות במ״מ — אופציונלי</legend><div class="dimensions-grid"><div class="field"><label for="width" data-i18n="inquiry.label.width">רוחב</label><input id="width" name="width" type="number" inputmode="decimal" min="1" max="10000" step="any" dir="ltr"></div><div class="field"><label for="depth" data-i18n="inquiry.label.depth">עומק</label><input id="depth" name="depth" type="number" inputmode="decimal" min="1" max="10000" step="any" dir="ltr"></div><div class="field"><label for="height" data-i18n="inquiry.label.height">גובה</label><input id="height" name="height" type="number" inputmode="decimal" min="1" max="10000" step="any" dir="ltr"></div></div></fieldset>
 <div class="field"><label for="note" data-i18n="inquiry.label.note">הערה — אופציונלי</label><textarea id="note" name="note" maxlength="1000" rows="4" placeholder="שימוש מתוכנן, התאמה לחלל או שאלה על המוצר" data-i18n-placeholder="inquiry.placeholder.note"></textarea></div>
-<div class="honey" aria-hidden="true"><label for="extra-field" data-i18n="inquiry.label.extra-field">השאירו שדה זה ריק</label><input id="extra-field" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+</details><div class="honey" aria-hidden="true"><label for="extra-field" data-i18n="inquiry.label.extra-field">השאירו שדה זה ריק</label><input id="extra-field" name="_gotcha" tabindex="-1" autocomplete="off"></div>
 </div>
 <div class="actions"><button id="send-request" class="action action-primary" type="submit" hidden data-i18n="inquiry.send">שליחת בקשה</button><a id="whatsapp-request" class="action" href="#" target="_blank" rel="noopener" hidden data-i18n="inquiry.whatsapp">פתיחת בקשה ב־WhatsApp</a><a id="email-request" class="action" href="mailto:labassemble@gmail.com" data-i18n="inquiry.email">פתיחת בקשה באפליקציית המייל</a></div>
 <p id="inquiry-status" class="status" role="status" aria-live="polite" tabindex="-1"></p>
@@ -319,6 +339,7 @@
 <noscript><style>.quote-form .form-fields,.quote-form .required-note,.quote-form button{display:none}</style><p class="noscript-note" data-i18n="inquiry.noscript">אפשר לפנות דרך קישור המייל ולציין את המוצר והמידות הרצויות.</p></noscript>
 </form>
 </main>
+
 <footer class="footer"><span>ASSEMBLE LAB / </span><span data-i18n="footer.discipline">עיצוב · הנדסה · ייצור</span></footer>
 </body>
 </html>

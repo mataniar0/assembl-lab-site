@@ -37,26 +37,193 @@ html[lang="en"] .adapt-link{direction:ltr}
 #carousel-note{font-size:13px;line-height:1.6;margin:12px 0 0}
 @media(max-width:640px){html[lang="he"] .hero h1{font-size:clamp(38px,11vw,60px)}}
 </style>
-<script type="application/json" id="page-translations">{"shoe.meta.description":{"he":"מעמד נעליים / גרסה A — מעמד נעליים מתוכנן הנדסית של ASSEMBLE LAB.","en":"Shoe Rack / Version A — an engineered shoe rack by ASSEMBLE LAB."},"shoe.meta.title":{"he":"מעמד נעליים / גרסה A — ASSEMBLE LAB","en":"SHOE RACK / VERSION A — ASSEMBLE LAB"},"shoe.meta.social":{"he":"תכנון, מבנה והרכבה של חלקים חתוכים בלייזר.","en":"Planning, structure and laser-cut assembly."},"shoe.hero.kicker":{"he":"מוצר 04 / אחסון נעליים","en":"OBJECT 04 / SHOE STORAGE"},"shoe.hero.title":{"he":"מעמד נעליים<br>/ גרסה A","en":"SHOE RACK<br>/ VERSION A"},"shoe.hero.copy":{"he":"מעמד נעליים נמוך עם שלושה מדפי רפפות, פאות צד מחוררות ומושב עליון כפול. המוצר מתוכנן כחלקי דיקט חתוכים בלייזר שמתחברים למבנה אחד.","en":"A low shoe rack with three slatted shelves, perforated side panels and a double-layer top seat. Laser-cut plywood parts come together as a single structure."},"shoe.spec.width":{"he":"רוחב בסיס","en":"BASE WIDTH"},"shoe.spec.depth":{"he":"עומק בסיס","en":"BASE DEPTH"},"shoe.spec.height":{"he":"גובה בסיס","en":"BASE HEIGHT"},"shoe.spec.material":{"he":"חומר","en":"MATERIAL"},"shoe.spec.plywood":{"he":"דיקט 6 מ״מ","en":"6 mm plywood"},"shoe.size.label":{"he":"התאמה אישית / מידות לפי הצורך","en":"MADE TO SIZE / CUSTOM DIMENSIONS"},"shoe.size.copy":{"he":"המידות המוצגות הן גרסת הבסיס. ניתן להתאים את מידות הדגם לחלל ולשימוש, תוך תכנון מחדש של המבנה והחיבורים ובהתאם לחומר ולאילוצי הייצור.","en":"The dimensions shown are the base version. The design can be adapted to your space and use by revising the structure and joints, subject to the material and fabrication constraints."},"shoe.quote.label":{"he":"בקשת הצעת מחיר עבור מעמד הנעליים","en":"Request a quote for the Shoe Rack"},"shoe.hero.alt":{"he":"מעמד נעליים גרסה A — תכנון מלא","en":"Shoe Rack, Version A — complete planning sheet"},"shoe.story.kicker":{"he":"תהליך הבנייה / 01","en":"BUILD STORY / 01"},"shoe.story.title":{"he":"מתחילים<br>בתכנון.","en":"Starting<br>with a plan."},"shoe.story.copy":{"he":"בשלב הראשון מוצגת תמונת התכנון המלאה: המוצר המורכב, מבט מפורק, מידות, פאת הצד ופריסת חלקי המבנה. תמונות החיתוך, ההרכבה והגימור יתווספו לקרוסלה בהמשך.","en":"The first stage shows the complete planning sheet: the assembled product, an exploded view, dimensions, the side panel and component layout. Cutting, assembly and finishing images will be added to the carousel later."},"shoe.story.alt":{"he":"שלב 01 — תכנון מעמד הנעליים","en":"Stage 01 — Shoe Rack planning"},"shoe.story.planning":{"he":"01 / תכנון","en":"01 / PLANNING"},"shoe.carousel.label":{"he":"ניווט קרוסלה","en":"Carousel navigation"},"shoe.carousel.previous":{"he":"התמונה הקודמת","en":"Previous image"},"shoe.carousel.next":{"he":"התמונה הבאה","en":"Next image"},"shoe.story.stage":{"he":"תכנון","en":"Planning"},"shoe.story.detail":{"he":"הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון מוגדרים לפני המעבר לקובצי החיתוך ולייצור.","en":"The geometry, dimensions, three shelves, perforated sides, braces and top seat are defined before creating the cutting files and starting fabrication."},"shoe.stage.current":{"he":"01 / השלב הנוכחי","en":"01 / CURRENT STAGE"},"shoe.stage.pending":{"he":"תמונת התכנון זמינה · תמונות התהליך יתווספו בהמשך","en":"Planning image added · process photos pending"},"shoe.stage.note":{"he":"כרגע מוצגת תמונת תכנון אחת בלבד, ולכן חצי הניווט אינם פעילים.","en":"Only one planning image is currently available, so the navigation arrows are inactive."},"shoe.future.title":{"he":"השלב הבא:<br>ייצור.","en":"Next:<br>fabrication."},"shoe.future.copy":{"he":"העמוד מוכן להתרחב. כשיעלו תמונות נוספות של החיתוך, החלקים, ההרכבה והמוצר הסופי, הן ייכנסו לאותה קרוסלה ויציגו את תהליך הבנייה המלא.","en":"This page will grow with the project. As images of cutting, components, assembly and the finished product become available, they will join the carousel to tell the complete build story."},"shoe.footer":{"he":"ASSEMBLE LAB / עיצוב · הנדסה · ייצור","en":"ASSEMBLE LAB / DESIGN · ENGINEERING · FABRICATION"},"shoe.footer.back":{"he":"בחזרה למוצרים ↑","en":"BACK TO PRODUCTS ↑"}}</script>
+<script type="application/json" id="page-translations">
+{
+  "shoe.meta.description": {
+    "he": "מעמד נעליים / גרסה A — מעמד נעליים מתוכנן הנדסית של ASSEMBLE LAB.",
+    "en": "Shoe Rack / Version A — an engineered shoe rack by ASSEMBLE LAB."
+  },
+  "shoe.meta.title": {
+    "he": "מעמד נעליים / גרסה A — ASSEMBLE LAB",
+    "en": "SHOE RACK / VERSION A — ASSEMBLE LAB"
+  },
+  "shoe.meta.social": {
+    "he": "תכנון, מבנה והרכבה של חלקים חתוכים בלייזר.",
+    "en": "Planning, structure and laser-cut assembly."
+  },
+  "shoe.hero.kicker": {
+    "he": "מוצר 04 / אחסון נעליים",
+    "en": "OBJECT 04 / SHOE STORAGE"
+  },
+  "shoe.hero.title": {
+    "he": "מעמד נעליים<br>/ גרסה A",
+    "en": "SHOE RACK<br>/ VERSION A"
+  },
+  "shoe.hero.copy": {
+    "he": "מעמד נעליים נמוך עם שלושה מדפי רפפות, פאות צד מחוררות ומושב עליון כפול. המוצר מתוכנן כחלקי דיקט חתוכים בלייזר שמתחברים למבנה אחד.",
+    "en": "A low shoe rack with three slatted shelves, perforated side panels and a double-layer top seat. Laser-cut plywood parts come together as a single structure."
+  },
+  "shoe.spec.width": {
+    "he": "רוחב בסיס",
+    "en": "BASE WIDTH"
+  },
+  "shoe.spec.depth": {
+    "he": "עומק בסיס",
+    "en": "BASE DEPTH"
+  },
+  "shoe.spec.height": {
+    "he": "גובה בסיס",
+    "en": "BASE HEIGHT"
+  },
+  "shoe.spec.material": {
+    "he": "חומר",
+    "en": "MATERIAL"
+  },
+  "shoe.spec.plywood": {
+    "he": "דיקט 6 מ״מ",
+    "en": "6 mm plywood"
+  },
+  "shoe.size.label": {
+    "he": "התאמה אישית / מידות לפי הצורך",
+    "en": "MADE TO SIZE / CUSTOM DIMENSIONS"
+  },
+  "shoe.size.copy": {
+    "he": "המידות המוצגות הן גרסת הבסיס. ניתן להתאים את מידות הדגם לחלל ולשימוש, תוך תכנון מחדש של המבנה והחיבורים ובהתאם לחומר ולאילוצי הייצור.",
+    "en": "The dimensions shown are the base version. The design can be adapted to your space and use by revising the structure and joints, subject to the material and fabrication constraints."
+  },
+  "shoe.quote.label": {
+    "he": "בקשת הצעת מחיר עבור מעמד הנעליים",
+    "en": "Request a quote for the Shoe Rack"
+  },
+  "shoe.hero.alt": {
+    "he": "מעמד נעליים גרסה A — תכנון מלא",
+    "en": "Shoe Rack, Version A — complete planning sheet"
+  },
+  "shoe.story.kicker": {
+    "he": "תהליך הבנייה / 01",
+    "en": "BUILD STORY / 01"
+  },
+  "shoe.story.title": {
+    "he": "מתחילים<br>בתכנון.",
+    "en": "Starting<br>with a plan."
+  },
+  "shoe.story.copy": {
+    "he": "בשלב הראשון מוצגת תמונת התכנון המלאה: המוצר המורכב, מבט מפורק, מידות, פאת הצד ופריסת חלקי המבנה. תמונות החיתוך, ההרכבה והגימור יתווספו לקרוסלה בהמשך.",
+    "en": "The first stage shows the complete planning sheet: the assembled product, an exploded view, dimensions, the side panel and component layout. Cutting, assembly and finishing images will be added to the carousel later."
+  },
+  "shoe.story.alt": {
+    "he": "שלב 01 — תכנון מעמד הנעליים",
+    "en": "Stage 01 — Shoe Rack planning"
+  },
+  "shoe.story.planning": {
+    "he": "01 / תכנון",
+    "en": "01 / PLANNING"
+  },
+  "shoe.carousel.label": {
+    "he": "ניווט קרוסלה",
+    "en": "Carousel navigation"
+  },
+  "shoe.carousel.previous": {
+    "he": "התמונה הקודמת",
+    "en": "Previous image"
+  },
+  "shoe.carousel.next": {
+    "he": "התמונה הבאה",
+    "en": "Next image"
+  },
+  "shoe.story.stage": {
+    "he": "תכנון",
+    "en": "Planning"
+  },
+  "shoe.story.detail": {
+    "he": "הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון מוגדרים לפני המעבר לקובצי החיתוך ולייצור.",
+    "en": "The geometry, dimensions, three shelves, perforated sides, braces and top seat are defined before creating the cutting files and starting fabrication."
+  },
+  "shoe.stage.current": {
+    "he": "01 / השלב הנוכחי",
+    "en": "01 / CURRENT STAGE"
+  },
+  "shoe.stage.pending": {
+    "he": "תמונת התכנון זמינה · תמונות התהליך יתווספו בהמשך",
+    "en": "Planning image added · process photos pending"
+  },
+  "shoe.stage.note": {
+    "he": "כרגע מוצגת תמונת תכנון אחת בלבד, ולכן חצי הניווט אינם פעילים.",
+    "en": "Only one planning image is currently available, so the navigation arrows are inactive."
+  },
+  "shoe.future.title": {
+    "he": "השלב הבא:<br>ייצור.",
+    "en": "Next:<br>fabrication."
+  },
+  "shoe.future.copy": {
+    "he": "העמוד מוכן להתרחב. כשיעלו תמונות נוספות של החיתוך, החלקים, ההרכבה והמוצר הסופי, הן ייכנסו לאותה קרוסלה ויציגו את תהליך הבנייה המלא.",
+    "en": "This page will grow with the project. As images of cutting, components, assembly and the finished product become available, they will join the carousel to tell the complete build story."
+  },
+  "shoe.footer": {
+    "he": "ASSEMBLE LAB / עיצוב · הנדסה · ייצור",
+    "en": "ASSEMBLE LAB / DESIGN · ENGINEERING · FABRICATION"
+  },
+  "shoe.footer.back": {
+    "he": "בחזרה למוצרים ↑",
+    "en": "BACK TO PRODUCTS ↑"
+  },
+  "batch.specs": {
+    "he": "מידות ומפרט",
+    "en": "Dimensions and specifications"
+  },
+  "batch.build": {
+    "he": "תכנון והרכבה",
+    "en": "Design and assembly"
+  },
+  "batch.more": {
+    "he": "פרטים והתאמת מידות",
+    "en": "Details and custom dimensions"
+  },
+  "batch.process": {
+    "he": "איך מתקדמים להזמנה?",
+    "en": "How does ordering work?"
+  },
+  "batch.optional": {
+    "he": "מידות והערה — אופציונלי",
+    "en": "Dimensions and note — optional"
+  },
+  "batch.intro": {
+    "he": "שלושה מדפים ומושב עליון — הדמיה לקראת ייצור.",
+    "en": "Three shelves and a top seat — a rendering ahead of fabrication."
+  },
+  "batch.name": {
+    "he": "מעמד נעליים",
+    "en": "Shoe rack"
+  }
+}
+</script>
 <link rel="stylesheet" href="../assets/language.css">
 <script src="../assets/language.js"></script>
+<link rel="stylesheet" href="../assets/product-light.css">
 </head>
 <body>
 <header class="header"><a class="logo" href="../" aria-label="ASSEMBLE LAB — דף הבית" data-i18n-aria-label="nav.home"><span class="mark" data-language-fixed>A/L</span><b data-language-fixed>ASSEMBLE LAB</b></a><a class="back" href="../" data-i18n="nav.back">← לכל המוצרים</a></header>
 <main>
 <section class="hero">
-<div class="hero-copy"><p class="kicker" data-i18n="shoe.hero.kicker">מוצר 04 / אחסון נעליים</p><h1 data-i18n="shoe.hero.title" data-i18n-html>מעמד נעליים<br>/ גרסה A</h1><p class="lead" data-i18n="shoe.hero.copy">מעמד נעליים נמוך עם שלושה מדפי רפפות, פאות צד מחוררות ומושב עליון כפול. המוצר מתוכנן כחלקי דיקט חתוכים בלייזר שמתחברים למבנה אחד.</p><div class="specs"><div><small data-i18n="shoe.spec.width">רוחב בסיס</small><b data-language-fixed>800 mm</b></div><div><small data-i18n="shoe.spec.depth">עומק בסיס</small><b data-language-fixed>320 mm</b></div><div><small data-i18n="shoe.spec.height">גובה בסיס</small><b data-language-fixed>520 mm</b></div><div><small data-i18n="shoe.spec.material">חומר</small><b data-i18n="shoe.spec.plywood">דיקט 6 מ״מ</b></div></div><div class="custom-size"><div class="custom-size-copy"><div class="custom-size-label" data-i18n="shoe.size.label">התאמה אישית / מידות לפי הצורך</div><p data-i18n="shoe.size.copy">המידות המוצגות הן גרסת הבסיס. ניתן להתאים את מידות הדגם לחלל ולשימוש, תוך תכנון מחדש של המבנה והחיבורים ובהתאם לחומר ולאילוצי הייצור.</p></div><a class="adapt-link" href="../inquiry/?product=shoe-rack" aria-label="בקשת הצעת מחיר עבור מעמד הנעליים" data-i18n-aria-label="shoe.quote.label" data-i18n="cta.quote">בקשת הצעת מחיר</a></div></div>
-<div class="hero-media"><img src="shoe-rack-planning-clean.webp" alt="מעמד נעליים גרסה A — תכנון מלא" data-i18n-alt="shoe.hero.alt"></div>
+<div class="product-opening-copy"><h1 data-i18n="batch.name">מעמד נעליים</h1><p class="opening-intro" data-i18n="batch.intro">שלושה מדפים ומושב עליון — הדמיה לקראת ייצור.</p><p class="status" data-i18n="status.planning">בתכנון ופיתוח</p><a class="adapt-link" href="../inquiry/?product=shoe-rack" aria-label="בקשת הצעת מחיר עבור מעמד הנעליים" data-i18n-aria-label="shoe.quote.label" data-i18n="cta.quote">בקשת הצעת מחיר</a></div><div class="hero-copy"><p class="kicker" data-i18n="shoe.hero.kicker">מוצר 04 / אחסון נעליים</p></div>
+<div class="hero-media"><a class="product-open-image" href="shoe-rack-planning-clean.webp" target="_blank" rel="noopener" aria-label="פתיחת התמונה בגודל מלא" data-i18n-aria-label="image.open"><img src="shoe-rack-planning-clean.webp" alt="מעמד נעליים גרסה A — תכנון מלא" data-i18n-alt="shoe.hero.alt"></a></div>
 </section>
-<section class="story">
-<div class="story-head"><div><p class="kicker" data-i18n="shoe.story.kicker">תהליך הבנייה / 01</p><h2 data-i18n="shoe.story.title" data-i18n-html>מתחילים<br>בתכנון.</h2></div><p data-i18n="shoe.story.copy">בשלב הראשון מוצגת תמונת התכנון המלאה: המוצר המורכב, מבט מפורק, מידות, פאת הצד ופריסת חלקי המבנה. תמונות החיתוך, ההרכבה והגימור יתווספו לקרוסלה בהמשך.</p></div>
-<div class="gallery">
+<details class="product-details"><summary data-i18n="batch.specs">מידות ומפרט</summary><div class="specs"><div><small data-i18n="shoe.spec.width">רוחב בסיס</small><b data-language-fixed>800 mm</b></div><div><small data-i18n="shoe.spec.depth">עומק בסיס</small><b data-language-fixed>320 mm</b></div><div><small data-i18n="shoe.spec.height">גובה בסיס</small><b data-language-fixed>520 mm</b></div><div><small data-i18n="shoe.spec.material">חומר</small><b data-i18n="shoe.spec.plywood">דיקט 6 מ״מ</b></div></div><p data-i18n-html="shoe.hero.title">מעמד נעליים/ גרסה A</p></details><details class="product-details"><summary data-i18n="batch.more">פרטים והתאמת מידות</summary><p class="lead" data-i18n="shoe.hero.copy">מעמד נעליים נמוך עם שלושה מדפי רפפות, פאות צד מחוררות ומושב עליון כפול. המוצר מתוכנן כחלקי דיקט חתוכים בלייזר שמתחברים למבנה אחד.</p><div class="custom-size-copy"><div class="custom-size-label" data-i18n="shoe.size.label">התאמה אישית / מידות לפי הצורך</div><p data-i18n="shoe.size.copy">המידות המוצגות הן גרסת הבסיס. ניתן להתאים את מידות הדגם לחלל ולשימוש, תוך תכנון מחדש של המבנה והחיבורים ובהתאם לחומר ולאילוצי הייצור.</p></div></details><section class="story">
+<details class="product-details"><summary data-i18n="batch.build">תכנון והרכבה</summary><div class="story-head"><div><p class="kicker" data-i18n="shoe.story.kicker">תהליך הבנייה / 01</p><h2 data-i18n="shoe.story.title" data-i18n-html>מתחילים<br>בתכנון.</h2></div><p data-i18n="shoe.story.copy">בשלב הראשון מוצגת תמונת התכנון המלאה: המוצר המורכב, מבט מפורק, מידות, פאת הצד ופריסת חלקי המבנה. תמונות החיתוך, ההרכבה והגימור יתווספו לקרוסלה בהמשך.</p></div>
+</details><div class="gallery">
 <div class="viewer"><img src="shoe-rack-planning-clean.webp" alt="שלב 01 — תכנון מעמד הנעליים" data-i18n-alt="shoe.story.alt"><div class="badge" data-i18n="shoe.story.planning">01 / תכנון</div><div class="progress" data-language-fixed>01 / 01</div><div class="carousel-arrows" aria-label="ניווט קרוסלה" data-i18n-aria-label="shoe.carousel.label"><button class="arrow" type="button" aria-label="התמונה הקודמת" data-i18n-aria-label="shoe.carousel.previous" aria-disabled="true" disabled aria-describedby="carousel-note">←</button><button class="arrow" type="button" aria-label="התמונה הבאה" data-i18n-aria-label="shoe.carousel.next" aria-disabled="true" disabled aria-describedby="carousel-note">→</button></div></div>
 <div class="panel"><div class="copy"><div class="index" data-i18n="shoe.story.planning">01 / תכנון</div><h3 data-i18n="shoe.story.stage">תכנון</h3><p data-i18n="shoe.story.detail">הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון מוגדרים לפני המעבר לקובצי החיתוך ולייצור.</p></div><div class="stage"><small data-i18n="shoe.stage.current">01 / השלב הנוכחי</small><b data-i18n="shoe.stage.pending">תמונת התכנון זמינה · תמונות התהליך יתווספו בהמשך</b><p id="carousel-note" data-i18n="shoe.stage.note">כרגע מוצגת תמונת תכנון אחת בלבד, ולכן חצי הניווט אינם פעילים.</p></div></div>
 </div>
 </section>
-<section class="future"><h2 data-i18n="shoe.future.title" data-i18n-html>השלב הבא:<br>ייצור.</h2><p data-i18n="shoe.future.copy">העמוד מוכן להתרחב. כשיעלו תמונות נוספות של החיתוך, החלקים, ההרכבה והמוצר הסופי, הן ייכנסו לאותה קרוסלה ויציגו את תהליך הבנייה המלא.</p></section>
-</main>
+<details class="product-details"><summary data-i18n="batch.more">פרטים והתאמת מידות</summary><section class="future"><h2 data-i18n="shoe.future.title" data-i18n-html>השלב הבא:<br>ייצור.</h2><p data-i18n="shoe.future.copy">העמוד מוכן להתרחב. כשיעלו תמונות נוספות של החיתוך, החלקים, ההרכבה והמוצר הסופי, הן ייכנסו לאותה קרוסלה ויציגו את תהליך הבנייה המלא.</p></section>
+</details></main>
+
+
+
+
+
+
+
 <footer class="footer"><span data-i18n="shoe.footer">ASSEMBLE LAB / עיצוב · הנדסה · ייצור</span><a href="../" data-i18n="shoe.footer.back">בחזרה למוצרים ↑</a></footer>
 </body>
 </html>
