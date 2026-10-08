@@ -7,17 +7,26 @@ from language_site_smoke import new_context, ready, select_language, check_focus
 from mobile_site_smoke import LAYOUT_CHECK, IMAGE_CHECK
 
 PRODUCTS=('geometric/','shelf/kids/','driller_stand/','shoe_rack/','workbench/','crib/','etrog_box/','megillat_esther_box/','table/flow/')
-parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,default=Path('/tmp/product-review'));out=parser.parse_args().output;out.mkdir(parents=True,exist_ok=True);results=[]
+parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,default=Path('/tmp/product-review'));parser.add_argument('--all-widths',action='store_true');args=parser.parse_args();out=args.output;out.mkdir(parents=True,exist_ok=True);results=[]
 with site_url(None) as base,sync_playwright() as p:
  browser=p.chromium.launch(executable_path='/usr/bin/chromium',args=['--no-sandbox'])
  try:
   for lang in ('he','en'):
-   for viewport in ((390,844),(1440,900)):
+   for viewport in (((320,568),(390,844),(844,390),(1440,900)) if args.all_widths else ((390,844),(1440,900))):
     for path in (*PRODUCTS,'inquiry/'):
      context=new_context(browser,lang,viewport);page=context.new_page()
      try:
       ready(page,base+path)
       assert page.locator('h1').count()==1
+      if path!='inquiry/':
+       titles=page.locator('details > summary').all_text_contents()
+       assert len(titles)==len(set(titles)),titles
+      if path=='table/flow/':
+       assert page.locator('h1').evaluate('e=>parseFloat(getComputedStyle(e).fontSize)') <= 58
+       assert page.locator('.placeholder').is_visible()
+      if path=='geometric/':
+       link=page.locator('a[data-i18n="model.other"]')
+       assert link.is_visible() and link.evaluate('e=>!e.closest("details")')
       assert page.evaluate("[...document.querySelectorAll('[aria-labelledby],[aria-describedby]')].every(e=>['aria-labelledby','aria-describedby'].every(a=>(e.getAttribute(a)||'').split(/\\s+/).filter(Boolean).every(id=>document.getElementById(id))))")
       assert not page.evaluate(LAYOUT_CHECK)
       for summary in page.locator('details > summary').all():
@@ -38,7 +47,7 @@ with site_url(None) as base,sync_playwright() as p:
        if path=='shelf/kids/':assert page.locator('.step').count()==5 and page.locator('.step').last.get_attribute('data-pos')=='80%'
        if path=='crib/':assert page.locator('.safety-note').is_visible() and page.locator('.safety-note').inner_text()
        for detail in page.locator('details').all():detail.evaluate('e=>e.open=false')
-      if path in ('geometric/','shelf/kids/','crib/','inquiry/'):
+      if path in ('geometric/','shelf/kids/','crib/','table/flow/','inquiry/'):
        page.evaluate('document.activeElement.blur();scrollTo(0,0)');page.screenshot(path=str(out/f'{path.strip("/").replace("/","-")}-{lang}-{viewport[0]}.png'),full_page=True)
       results.append({'page':path,'language':lang,'viewport':viewport,'passed':True});print('PASS',path,lang,viewport,flush=True)
      finally:context.close()
