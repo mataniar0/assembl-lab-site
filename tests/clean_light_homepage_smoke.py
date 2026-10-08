@@ -23,7 +23,8 @@ with site_url(None) as base,sync_playwright() as p:
      e.focus();page.keyboard.press('Shift');assert e.evaluate('e=>parseFloat(getComputedStyle(e).outlineWidth)>=2 && e.matches(":focus-visible")')
     for e in page.locator('.product-media').all():
      assert e.evaluate('e=>{const r=e.getBoundingClientRect();return Math.abs(r.width/r.height-4/3)<0.02}')
-    assert page.locator('.kids').evaluate('e=>getComputedStyle(e).backgroundPositionY') == '100%'
+    # The sixth physical sprite panel was rejected; use the approved fifth.
+    assert page.locator('.kids').evaluate('e=>getComputedStyle(e).backgroundPositionY') == '80%'
     for e in page.locator('.product-focus,.sprite').all():
      url=e.evaluate('e=>getComputedStyle(e).backgroundImage.slice(5,-2)');response=page.request.get(url);assert response.ok
     if w in (390,1440):

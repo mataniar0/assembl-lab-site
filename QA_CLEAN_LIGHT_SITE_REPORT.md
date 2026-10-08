@@ -10,7 +10,7 @@ Branch: `clean-light-site`. Prepared for review only; no push to main or live de
 - Products immediately follow the hero. Custom dimensions section follows the collection and links directly to the custom inquiry form.
 - Eight equal cards in the existing order, four columns above 1100px, two at 641–1100px, one up to 640px. The first card remains the Tables family link for Geometric/Flow.
 - Uniform 4:3 media frames; no duplicate numbers, versions, repeated custom-size badges or redundant opening links. Development labels sit below images.
-- Focused CSS viewports of existing render panels for shoe rack, workbench, etrog box and scroll case; final assembled shelf photo selected. Sources, geometry, engravings and product-page drawings unchanged. Renderings remain explicitly labeled in both languages.
+- Focused CSS viewports of existing render panels for shoe rack, workbench, etrog box and scroll case; approved fifth shelf panel selected. Sources, geometry, engravings and product-page drawings unchanged. Renderings remain explicitly labeled in both languages.
 - Grid test expectations updated. Existing accessibility, image, contrast, navigation and inquiry assertions retained. Added a repeatable bilingual review test covering all requested widths, card order, development labels, media aspect ratios, keyboard focus and image availability.
 
 ## Validation
@@ -29,9 +29,10 @@ All commands ran from `/workspace/assembl-lab-site` with Chromium and local HTTP
 
 Screenshots and JSON results: `/workspace/review-clean-light-site/`. Full-page screenshots: `home-he-390.png`, `home-en-390.png`, `home-he-1440.png`, `home-en-1440.png`. Visually inspected Hebrew desktop and mobile and English mobile; screenshots regenerated after final refinements without transient focus outlines.
 
-## Correction rounds: 2
+## Correction rounds: 3 (two implementation rounds and one independent-review correction)
 
 1. Automated tests found that the generic header link display rule overrode hiding About on mobile. Fixed CSS specificity, stopped the initial homepage run, then reran the full suite successfully.
 2. Visual review found the shelf card selected a workshop stage instead of the final assembled shelf. Selected the final panel and tightened rendering viewports to exclude neighboring planning panels. Revalidated the requested bilingual widths and regenerated screenshots.
+3. Independent review found that the final physical sprite panel was the sixth image previously rejected by the user. Restored the approved fifth panel at 80% and corrected the new homepage test to require that selection. The product carousel remains five stages and already ends at 80%.
 
 The existing remote backup tag `baseline-before-language-switch-2026-10-07` remains at tag object `72d280b6292c03d7db80729907dc8997e1848dfe`; no tag writes were performed. No external inquiries were sent and no live site publication was performed.
