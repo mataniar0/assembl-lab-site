@@ -21,12 +21,12 @@ from mobile_site_smoke import IMAGE_CHECK, LAYOUT_CHECK
 
 
 PAGES = (
-    "", "geometric/", "driller_stand/", "shelf/kids/", "shoe_rack/",
+    "", "table/", "table/flow/", "geometric/", "driller_stand/", "shelf/kids/", "shoe_rack/",
     "workbench/", "crib/", "etrog_box/", "megillat_esther_box/", "inquiry/",
 )
 VIEWPORTS = ((320, 568), (390, 844), (844, 390), (1440, 900))
 PRODUCTS = {
-    "geometric/": "geometric", "driller_stand/": "driller-stand",
+    "table/flow/": "flow", "geometric/": "geometric", "driller_stand/": "driller-stand",
     "shelf/kids/": "kids-shelf", "shoe_rack/": "shoe-rack",
     "workbench/": "workbench", "crib/": "crib", "etrog_box/": "etrog-box",
     "megillat_esther_box/": "megillah-case",
@@ -177,9 +177,12 @@ def persistence(browser, base):
         check(document_language(page) == "he", "Default must be Hebrew even in an English browser")
         select_language(page, "en")
         check(page.evaluate("localStorage.getItem('assemble-language')") == "en", "English preference was not saved")
-        page.locator('a[href="geometric/"]').first.click()
+        page.locator('a[href="table/"]').first.click()
         page.wait_for_load_state("load")
-        check(document_language(page) == "en", "Language lost when entering product")
+        check(document_language(page) == "en", "Language lost when entering family")
+        page.locator('a[href="../geometric/"]').click()
+        page.wait_for_load_state("load")
+        check(document_language(page) == "en", "Language lost when entering model")
         page.locator('.adapt-link').click()
         page.wait_for_load_state("load")
         check(document_language(page) == "en", "Language lost when entering inquiry")
@@ -189,7 +192,7 @@ def persistence(browser, base):
         select_language(page, "he")
         page.reload(wait_until="load")
         check(document_language(page) == "he", "Hebrew preference lost on reload")
-        return {"navigation_steps": 2, "reloads": 2, "default_hebrew_in_english_browser": True}
+        return {"navigation_steps": 3, "reloads": 2, "default_hebrew_in_english_browser": True}
     finally:
         context.close()
 
@@ -254,7 +257,7 @@ def bfcache_history(playwright, base, executable):
     try:
         ready(page, base)
         with page.expect_navigation(wait_until="load"):
-            page.locator('a[href="geometric/"]').first.click()
+            page.locator('a[href="table/"]').first.click()
         select_language(page, "en")
         page.evaluate("history.back()")
         page.wait_for_function("url=>location.href===url", arg=base)
@@ -262,7 +265,7 @@ def bfcache_history(playwright, base, executable):
         check(page.evaluate("window.qaPageShowPersisted") is True, "Browser did not exercise BFCache restore")
         check(document_language(page) == "en", "Back restored stale Hebrew despite stored English")
         page.evaluate("history.forward()")
-        page.wait_for_function("url=>location.href===url", arg=base + "geometric/")
+        page.wait_for_function("url=>location.href===url", arg=base + "table/")
         page.wait_for_timeout(150)
         check(document_language(page) == "en", "Forward lost English preference")
         check(page.evaluate("window.qaPageShowPersisted") is True, "Forward did not exercise BFCache restore")
