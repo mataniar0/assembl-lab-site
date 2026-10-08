@@ -35,3 +35,13 @@ Uncommitted changes do not affect this check: a repaired working file cannot hid
 The hook's code is tracked in Git; enabling it is a local setting that must be repeated in each new checkout or agent environment. Local hooks can be bypassed, so this is not a GitHub branch protection rule. GitHub Actions and mandatory PR checks can run the same command when that remote guard is added.
 
 These are basic functioning checks. Visual review and the existing comprehensive language/mobile suites remain useful for changes to design or behavior. Intentional design changes do not require updating this generic smoke suite's visual expectations.
+
+## Verify the hook itself
+
+For changes to the QA tooling, run the separate integration proof after committing the changes:
+
+```sh
+python tests/pre_push_integration.py
+```
+
+This uses a temporary clone and a local bare Git remote. It proves that a good commit can be pushed, a broken committed image blocks a push even when the working file is repaired, and committing the repair permits the next push. It also checks duplicate commit refs and deletion-only pushes. It takes about two minutes, writes `.qa-reports/pre-push-integration.json`, and never pushes to GitHub. This proof is not part of the minimal check on every push.
