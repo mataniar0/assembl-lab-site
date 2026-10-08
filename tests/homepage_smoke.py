@@ -91,7 +91,7 @@ GRID_CHECK = """() => {
     return {
         grid:rect(document.querySelector('.products')),
         featured:[...document.querySelectorAll('.products > .featured')].map(rect),
-        cards:[...document.querySelectorAll('.products > .product:not(.featured)')].map(rect)
+        cards:[...document.querySelectorAll('.products > .product')].map(rect)
     };
 }"""
 
@@ -135,7 +135,7 @@ def check_contrast(page):
     checked = 0
     labels = page.locator(
         ".header nav a,.language-switch button,.hero-actions a,.hero h1,.hero h1 span,"
-        ".hero-copy,.hero-note,.kicker,.hero-photo figcaption,.product-no,.view,.footer span"
+        ".hero-copy,.image-explanation,.kicker,.product h3,.product p,.development,.adapt-link,.contact h2,.contact p,.footer span"
     )
     for label in labels.all():
         if label.is_visible():
@@ -167,11 +167,7 @@ def check_contrast_page(browser, base_url, viewport, language="he"):
 def check_grid(page, width):
     measured = page.evaluate(GRID_CHECK)
     grid, featured, cards = measured["grid"], measured["featured"], measured["cards"]
-    assert len(featured) == 1 and len(cards) == 7, measured
-    featured = featured[0]
-    assert abs(featured["left"] - grid["left"]) <= 1, measured
-    assert abs(featured["right"] - grid["right"]) <= 1, measured
-    assert all(card["top"] > featured["bottom"] for card in cards), measured
+    assert not featured and len(cards) == 8, measured
     rows = []
     for card in cards:
         row = next((row for row in rows if abs(row[0]["top"] - card["top"]) <= 1), None)
@@ -179,7 +175,7 @@ def check_grid(page, width):
             rows.append([card])
         else:
             row.append(card)
-    expected = [1, 1, 1, 1, 1, 1, 1] if width <= 640 else [2, 2, 2, 1] if width <= 1100 else [3, 2, 2]
+    expected = [1] * 8 if width <= 640 else [2] * 4 if width <= 1100 else [4, 4]
     assert [len(row) for row in rows] == expected, {"expected_rows": expected, **measured}
     for row in rows:
         ordered = sorted(row, key=lambda card: card["left"])

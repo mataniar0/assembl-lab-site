@@ -9,65 +9,15 @@
 <meta property="og:image" content="https://mataniar0.github.io/assembl-lab-site/assets/geometric-hero.webp">
 <title data-i18n="home.meta.title">ASSEMBLE LAB — גלריית מוצרים</title>
 <style>
-:root{--paper:#f3f1eb;--ink:#111311;--muted:#64685f;--line:rgba(17,19,17,.18);--signal:#ff5a36;--signal-text:#b5391b;--dark:#111311}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
-.header{position:sticky;top:0;z-index:30;height:72px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(243,241,235,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);direction:ltr}
-.logo{display:flex;align-items:center;gap:11px;flex:none}.logo-mark{width:38px;height:38px;flex:none;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-weight:800;font-size:12px}
-.logo-copy{display:grid;gap:1px}.logo-copy b{font-size:12px;letter-spacing:.1em}.logo-copy small{font-size:10px;letter-spacing:.08em;color:var(--muted)}
-.nav{display:flex;align-items:center;gap:24px;font-size:11px;font-weight:800;letter-spacing:.06em;white-space:nowrap}.nav a:hover{color:var(--signal-text)}
-.nav-custom{padding:0 12px;border:1px solid var(--ink)}
-a:focus-visible{outline:3px solid var(--ink);outline-offset:4px}.contact a:focus-visible,.footer a:focus-visible{outline-color:var(--paper)}
-.hero{padding:clamp(40px,5vw,76px) 4vw;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:center;border-bottom:1px solid var(--line);direction:ltr}
-.hero-content{min-width:0;direction:rtl}.kicker{direction:ltr;font-size:11px;letter-spacing:.1em;color:var(--muted);margin:0 0 18px}
-.hero h1{direction:ltr;font-size:clamp(54px,7.3vw,108px);line-height:.92;letter-spacing:-.055em;margin:0 0 28px}.hero h1 span{color:#d94a29}
-.hero-copy{font-size:18px;line-height:1.65;margin:0 0 14px;max-width:42ch}.hero-note{font-size:15px;color:var(--muted);margin:0 0 24px}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;direction:ltr}.hero-actions a{display:inline-flex;justify-content:center;align-items:center;min-height:48px;padding:12px 18px;font-size:11px;font-weight:800;letter-spacing:.06em;border:1px solid var(--ink)}
-.cta-primary{background:var(--ink);color:var(--paper)}.cta-primary:hover{background:var(--signal);color:var(--ink)}.cta-secondary:hover{background:#e7e4dc}
-.hero-photo{margin:0;min-width:0}.hero-media{aspect-ratio:1536/1024;background:#d7d4cd;border:1px solid var(--line)}.hero-media img{width:100%;height:100%;object-fit:contain}
-.hero-photo figcaption{padding-top:12px;font-size:11px;font-weight:800;letter-spacing:.08em;direction:ltr}
-.collection{padding:70px 4vw 110px}.collection-head{display:grid;grid-template-columns:1fr .7fr;gap:6vw;align-items:end;max-width:1672px;margin:0 auto 34px}.collection-head h2{font-size:clamp(38px,5.8vw,84px);line-height:.92;margin:0}.collection-head p{margin:0;color:var(--muted);font-size:16px;line-height:1.7}
-.products{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:24px;max-width:1672px;margin-inline:auto}.product{display:flex;flex-direction:column;grid-column:span 2;border:1px solid var(--line);background:#e9e6df;min-width:0;transition:transform .25s ease,box-shadow .25s ease}.product:nth-last-child(-n+4){grid-column:span 3}
-.product:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(17,19,17,.08)}.product-media{position:relative;aspect-ratio:4/3;overflow:hidden;background:#d7d4cd;flex:none}.product-media img{width:100%;height:100%;object-fit:contain;object-position:center;transition:transform .45s ease}
-.sprite{position:absolute;inset:0;background-repeat:no-repeat;background-position:center 100%;transition:transform .45s ease}.kids{background-image:url('shelf/kids/kids_shelf_story_clean.webp');background-size:100% 600%;background-position:center 80%}.driller{background-image:url('driller_stand/driller_story_v2.jpg');background-size:100% 400%}
-.product-badges{position:absolute;top:10px;left:10px;right:10px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;direction:ltr}
-.tag,.size-tag{padding:8px;direction:ltr;font-size:10px;font-weight:800;letter-spacing:.04em;white-space:nowrap}
-.tag{background:rgba(243,241,235,.94);border:1px solid var(--ink)}.size-tag{margin-left:auto;background:var(--ink);color:var(--paper);border:1px solid var(--ink);font-weight:900}
-.product--planning .product-media{aspect-ratio:auto}.product--planning .product-media img{height:auto;aspect-ratio:auto}.product--planning .product-badges{position:static;padding:10px;background:var(--paper)}
-.open{position:absolute;right:10px;bottom:10px;width:46px;height:46px;background:var(--signal);color:#fff;display:grid;place-items:center;font-size:18px;font-weight:800}
-.open svg{width:20px;height:20px}
-.product-copy{background:var(--paper);padding:22px;display:flex;flex-direction:column;align-items:flex-start;gap:16px;border-top:1px solid var(--line);flex:1}.product-copy>div{width:100%;min-width:0}
-.product-no{direction:ltr;font-size:10px;letter-spacing:.08em;color:var(--signal-text);font-weight:800}.product h3{direction:ltr;text-align:left;font-size:clamp(26px,2.2vw,36px);line-height:1.05;margin:10px 0 12px}.product p{font-size:15px;line-height:1.6;margin:0;color:var(--muted);max-width:560px}
-.view{direction:ltr;display:inline-flex;align-items:center;min-height:44px;font-size:11px;letter-spacing:.06em;font-weight:800;white-space:nowrap;text-decoration:underline;text-underline-offset:5px;margin-top:auto}
-.product.featured{grid-column:1/-1}.featured .product-media{aspect-ratio:16/9}.featured h3{font-size:clamp(34px,4vw,56px)}.featured .product-copy{padding-top:25px;padding-bottom:27px}
-.made-to-size{padding:62px 4vw;border-bottom:1px solid var(--line);display:grid;grid-template-columns:.8fr 1.2fr;gap:7vw;align-items:end;background:#ebe8e1}.made-to-size h2{direction:ltr;font-size:clamp(36px,5.2vw,74px);line-height:.92;letter-spacing:-.04em;margin:0}.made-to-size p:last-child{margin:0;color:var(--muted);font-size:17px;line-height:1.7;max-width:760px}.made-to-size strong{color:var(--ink)}.manifesto{padding:80px 4vw;border-top:1px solid var(--line);display:grid;grid-template-columns:.7fr 1.3fr;gap:7vw}.manifesto h2{direction:ltr;font-size:clamp(38px,5.8vw,82px);line-height:.88;letter-spacing:-.04em;margin:0}.manifesto p{font-size:20px;line-height:1.7;max-width:800px;margin:0}.manifesto strong{color:var(--signal)}
-.contact{background:var(--ink);color:var(--paper);padding:66px 4vw;display:grid;grid-template-columns:1fr .7fr;gap:6vw;align-items:end}.contact h2{font-size:clamp(38px,5.5vw,80px);line-height:.92;margin:0}.contact p{color:#bbb;max-width:500px;margin:0}.footer{padding:25px 4vw;display:flex;justify-content:space-between;gap:20px;border-top:1px solid #2b2d2b;background:var(--ink);color:#aaa;direction:ltr;font-size:10px;letter-spacing:.08em}
-@media(max-width:1100px){.products{grid-template-columns:repeat(2,minmax(0,1fr))}.product,.product:nth-last-child(-n+4){grid-column:auto}.product:last-child{grid-column:1/-1}.hero h1{font-size:clamp(54px,7vw,80px)}}
-@media(max-width:900px){.hero{grid-template-columns:1fr;gap:32px}.hero-content{max-width:640px}.hero h1{font-size:clamp(64px,10vw,90px)}.collection-head,.made-to-size,.manifesto,.contact{grid-template-columns:1fr}.nav{gap:14px}.collection-head{align-items:start}}
-@media(max-width:640px){
- .header{height:64px;padding:0 16px;gap:12px}.logo-mark{width:32px;height:32px}.logo{gap:8px}.logo-copy small{display:none}.logo-copy b{font-size:10px;letter-spacing:.04em}
- .nav{gap:8px;font-size:10px;letter-spacing:.02em}.header .nav-about{display:none}.nav-custom{padding:0 8px}
- .hero{padding:32px 16px;gap:24px}.hero h1{font-size:clamp(48px,14.5vw,66px);margin-bottom:20px}.hero-copy{font-size:16px}.hero-note{font-size:14px;margin-bottom:18px}.hero-actions{gap:10px}.hero-actions a{padding:12px 14px;flex:1;white-space:nowrap}
- .collection{padding:52px 16px 72px}.collection-head{margin-bottom:24px}.collection-head h2{font-size:42px}.collection-head p{font-size:14px}.products{grid-template-columns:1fr;gap:20px}.product,.product:nth-last-child(-n+4){grid-column:auto}.featured .product-media{aspect-ratio:4/3}
- .product-copy{padding:18px 16px 20px}.product h3{font-size:32px}.made-to-size{padding:50px 16px}.made-to-size p:last-child{font-size:15px}.manifesto{padding:58px 16px}.manifesto p{font-size:16px}.contact{padding:56px 16px}.footer{padding:22px 16px;flex-direction:column}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.product,.product-media img,.sprite{transition:none}.product:hover{transform:none}}
-
-/* Keep navigation links easy to activate on touch screens. */
-.header a,.top a,.footer a,.adapt-link{display:inline-flex;align-items:center;min-width:44px;min-height:44px}
-.header .back,.top .back,.footer a{border-bottom:0;text-decoration:underline;text-underline-offset:4px}
-section[id]{scroll-margin-top:88px}
-.contact-quote{display:inline-flex;align-items:center;justify-content:center;min-height:48px;min-width:44px;margin-top:22px;padding:12px 18px;border:1px solid var(--paper);background:var(--paper);color:var(--ink);font-size:16px;font-weight:700}.contact-quote:hover{background:#fff}
-
-/* Text follows the selected language; product images and identifiers retain their geometry. */
-.manifesto strong{color:var(--signal-text)}
-html[lang="he"] .hero-content,html[lang="he"] .hero h1,html[lang="he"] .made-to-size h2,html[lang="he"] .manifesto h2,html[lang="he"] .kicker,html[lang="he"] .hero-photo figcaption,html[lang="he"] .product h3,html[lang="he"] .tag,html[lang="he"] .size-tag,html[lang="he"] .view{direction:rtl;text-align:start;letter-spacing:0}
-html[lang="en"] .hero-content{direction:ltr}
-html[lang="he"] .hero-actions{direction:rtl}
-html[lang="he"] .hero h1{font-size:clamp(54px,6.8vw,100px);line-height:1.06}
-html[lang="he"] .made-to-size h2,html[lang="he"] .manifesto h2,html[lang="he"] .collection-head h2,html[lang="he"] .contact h2{line-height:1.12}
-html[lang="he"] .product h3{line-height:1.2}
-html[lang="he"] .contact h2{direction:rtl}
-@media(max-width:640px){html[lang="he"] .hero h1{font-size:clamp(42px,13vw,60px)}html[lang="he"] .made-to-size h2{font-size:clamp(32px,9vw,48px)}html[lang="he"] .product h3{font-size:30px}}
+:root{--paper:#fcfaf7;--ink:#20231f;--muted:#5b6057;--signal:#ba482d;--line:#dfdfd8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}a:focus-visible{outline:3px solid var(--ink);outline-offset:5px}.header{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;height:72px;padding:0 4vw;background:var(--paper);direction:ltr}.logo{display:flex;align-items:center;gap:10px;flex:none}.logo-mark{font-size:13px;font-weight:900;color:var(--signal)}.logo-copy{display:grid}.logo-copy b{font-size:12px;letter-spacing:.08em}.logo-copy small{font-size:10px;color:var(--muted)}.nav{display:flex;align-items:center;gap:20px;font-size:12px;font-weight:700;white-space:nowrap}.nav a:hover{text-decoration:underline;text-underline-offset:5px}.header a,.footer a,.adapt-link{display:inline-flex;align-items:center;min-width:44px;min-height:44px}.hero{max-width:1600px;margin:auto;padding:32px 4vw 28px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:center;direction:ltr}.hero-content{min-width:0}.kicker{font-size:11px;color:var(--muted);margin:0 0 14px}.hero h1{font-size:clamp(44px,5.4vw,76px);line-height:1.05;letter-spacing:-.04em;margin:0 0 20px}.hero h1 span{color:var(--ink)}.hero-copy{font-size:17px;max-width:43ch;margin:0 0 22px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}.hero-actions a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:48px;padding:12px 16px;font-size:12px;font-weight:700}.cta-primary,.contact-quote{background:var(--ink);color:var(--paper);border-radius:3px}.cta-primary:hover,.contact-quote:hover{background:#383f34}.cta-secondary:hover{text-decoration:underline;text-underline-offset:5px}.hero-photo{margin:0;min-width:0}.hero-media{aspect-ratio:3/2}.hero-media img{width:100%;height:100%;object-fit:contain}.image-explanation{font-size:12px;color:var(--muted);margin:10px 0 0;text-align:start}.collection{padding:28px 4vw 48px;max-width:1600px;margin:auto}.collection-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:24px}.collection-head h2{font-size:32px;line-height:1.2;margin:0}.collection-head p{font-size:14px;color:var(--muted);margin:0}.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px 24px}.product{display:flex;flex-direction:column;min-width:0}.product-media{position:relative;aspect-ratio:4/3;overflow:hidden}.product-media img{width:100%;height:100%;object-fit:contain}.sprite,.product-focus{position:absolute;inset:0;background-repeat:no-repeat}
+/* Viewport crops select existing rendered panels; sources and product geometry stay unchanged. */
+.kids{background-image:url('shelf/kids/kids_shelf_story_clean.webp');background-size:100% 600%;background-position:center bottom}.driller{background-image:url('driller_stand/driller_story_v2.jpg');background-size:100% 400%;background-position:center bottom}
+.focus-shoe{inset:12% 0;background-image:url('shoe_rack/shoe-rack-planning-clean.webp');background-size:174% auto;background-position:0 13%}.focus-workbench{inset:10.4% 0;background-image:url('workbench/workbench-planning-clean.webp');background-size:205% auto;background-position:0 0}.focus-etrog{inset:10.5% 0;background-image:url('etrog_box/media/planning-decorated-clean.webp');background-size:230% auto;background-position:0 11.3%}.focus-megillah{inset:15.6% 0;background-image:url('megillat_esther_box/media/product-render-clean.webp');background-size:160% auto;background-position:0 0}
+.product-copy{padding:16px 0 0;display:flex;flex-direction:column;align-items:start;gap:8px}.product-copy>div{width:100%;min-width:0}.product h3{font-size:22px;line-height:1.25;margin:0 0 8px}.product p{font-size:14px;line-height:1.55;color:var(--muted);margin:0}.development{font-size:11px;font-weight:700;color:var(--muted)}.product:hover h3{text-decoration:underline;text-underline-offset:5px}.made-to-size,.manifesto,.contact{max-width:1600px;margin:auto;padding:36px 4vw;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}.made-to-size h2,.manifesto h2,.contact h2{font-size:30px;line-height:1.2;margin:0 0 12px}.made-to-size p,.manifesto p,.contact p{font-size:16px;color:var(--muted);margin:0;max-width:62ch}.made-to-size .adapt-link{justify-self:start;color:var(--signal);font-weight:700;text-decoration:underline;text-underline-offset:5px}.manifesto strong{color:var(--ink)}.contact-quote{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:48px;padding:12px 18px;margin-top:18px;font-size:14px;font-weight:700}.footer{display:flex;justify-content:space-between;gap:20px;padding:24px 4vw;color:var(--muted);font-size:11px;direction:ltr}.footer span:last-child{display:none}
+@media(max-width:1100px){.products{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:900px){.hero{grid-template-columns:1fr;gap:24px}.hero-content{max-width:680px}.hero-media{max-width:680px}.made-to-size,.manifesto,.contact{grid-template-columns:1fr;gap:16px}.collection-head{align-items:start;flex-direction:column;gap:8px}}
+@media(max-width:640px){.header{height:64px;padding:0 16px}.logo-copy small{display:none}.logo-copy b{font-size:10px;letter-spacing:.03em}.nav{gap:8px;font-size:10px}.header .nav-about{display:none}.logo{gap:8px}.hero{padding:24px 16px 20px;gap:20px}.hero h1{font-size:42px;margin-bottom:16px}.hero-copy{font-size:16px;margin-bottom:16px}.hero-actions{gap:4px}.hero-actions a{padding:10px 12px}.kicker{margin-bottom:10px}.image-explanation{font-size:11px;line-height:1.5}.collection{padding:20px 16px 32px}.collection-head h2{font-size:28px}.collection-head{margin-bottom:20px}.products{grid-template-columns:1fr;gap:28px}.product h3{font-size:24px}.made-to-size,.manifesto,.contact{padding:28px 16px}.made-to-size h2,.manifesto h2,.contact h2{font-size:28px}.footer{padding:24px 16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 <script type="application/json" id="page-translations">
 {
@@ -84,8 +34,8 @@ html[lang="he"] .contact h2{direction:rtl}
     "en": "Engineered objects. CAD designed. Laser cut. Built through structure."
   },
   "home.gallery.version": {
-    "he": "גלריית מוצרים / V2.40",
-    "en": "PRODUCT GALLERY / V2.40"
+    "he": "עיצוב · הנדסה · ייצור",
+    "en": "Design · Engineering · Fabrication"
   },
   "home.nav.label": {
     "he": "ניווט ראשי",
@@ -100,8 +50,8 @@ html[lang="he"] .contact h2{direction:rtl}
     "en": "Objects.<br><span>Engineered.</span>"
   },
   "home.hero.copy": {
-    "he": "מוצרים ורהיטים שבהם תכנון הנדסי, חומר וחיבורים הופכים לחלק מהעיצוב.",
-    "en": "Objects and furniture shaped by engineering, materials and the joints that hold them together."
+    "he": "רהיטים ואובייקטים מתוכננים הנדסית, עם אפשרות להתאמת מידות לחלל שלכם.",
+    "en": "Engineered furniture and objects, with dimensions tailored to your space."
   },
   "home.hero.note": {
     "he": "אפשר להתאים את המידות לחלל ולשימוש.",
@@ -120,32 +70,32 @@ html[lang="he"] .contact h2{direction:rtl}
     "en": "Four stages of Geometric: a leg rendering, laser cutting, the cut legs, and the assembled table frame without its top"
   },
   "home.hero.caption": {
-    "he": "GEOMETRIC / מהתכנון להרכבה",
-    "en": "GEOMETRIC / FROM DESIGN TO ASSEMBLY"
+    "he": "Geometric — ארבעה שלבים",
+    "en": "Geometric — four stages"
   },
   "home.size.kicker": {
     "he": "התאמה אישית / מידות לפי הצורך",
     "en": "MADE TO SIZE / CUSTOM DIMENSIONS"
   },
   "home.size.title": {
-    "he": "מתוכנן להתאים.<br>הנדסה שמאפשרת שינוי.",
-    "en": "Designed to fit.<br>Engineered to adapt."
+    "he": "מתאים לחלל שלכם",
+    "en": "Made for your space"
   },
   "home.size.copy": {
-    "he": "<strong>כל דגם יכול להתחיל ממידות הבסיס ולהיות מותאם לחלל ולשימוש.</strong> ההתאמה נעשית דרך התכנון עצמו — מידות, מבנה וחיבורים — בהתאם לחומר ולאילוצי הייצור.",
-    "en": "<strong>Each design starts with base dimensions and can be adapted to your space and use.</strong> We adjust the design itself — dimensions, structure and joints — according to the material and fabrication constraints."
+    "he": "רוצים מידות אחרות? ספרו לנו מה אתם צריכים ונבדוק התאמה למבנה ולחומר.",
+    "en": "Need different dimensions? Tell us what you need and we’ll review the structure and material."
   },
   "home.collection.kicker": {
     "he": "מוצרים / הקולקציה",
     "en": "PRODUCTS / COLLECTION"
   },
   "home.collection.title": {
-    "he": "בחרו אובייקט.<br>היכנסו לתהליך.",
-    "en": "Choose an object.<br>Explore its process."
+    "he": "המוצרים שלנו",
+    "en": "Our products"
   },
   "home.collection.copy": {
-    "he": "כל מוצר מקבל עמוד משלו — עם תמונות, תכנון, חיתוך והרכבה. דף הבית נשאר חלון ראווה נקי; הסיפור המלא נמצא בפנים.",
-    "en": "Each product has its own page, with images of the design, cutting and assembly. Browse the collection here, then explore the full story inside."
+    "he": "בחרו מוצר וגלו את התכנון והבנייה שלו.",
+    "en": "Choose a product to explore its design and build."
   },
   "home.geometric.link": {
     "he": "בחירת דגם שולחן",
@@ -160,8 +110,8 @@ html[lang="he"] .contact h2{direction:rtl}
     "en": "Tables"
   },
   "home.geometric.copy": {
-    "he": "שני דגמים, שתי שפות עיצוב — הכירו את Geometric ואת Flow ובחרו את השולחן שלכם.",
-    "en": "Two models, two design languages — explore Geometric and Flow and choose your table."
+    "he": "שולחנות קפה Geometric ו־Flow.",
+    "en": "Geometric and Flow coffee tables."
   },
   "home.kids.link": {
     "he": "פתיחת עמוד Kids Shelf",
@@ -172,12 +122,12 @@ html[lang="he"] .contact h2{direction:rtl}
     "en": "OBJECT 02 / WALL SYSTEM"
   },
   "home.kids.title": {
-    "he": "מדף לילדים / 700",
-    "en": "KIDS SHELF / 700"
+    "he": "מדף לילדים",
+    "en": "Kids shelf"
   },
   "home.kids.copy": {
-    "he": "מדף קיר קומפקטי שבו המבנה, ההתקנה והגרפיקה נפתרו כמערכת אחת.",
-    "en": "A compact wall shelf that brings structure, mounting and graphics together in one system."
+    "he": "מדף קיר קומפקטי עם איורים וחיבורים גלויים.",
+    "en": "A compact wall shelf with illustrations and exposed joints."
   },
   "home.driller.link": {
     "he": "פתיחת עמוד Driller Stand",
@@ -188,28 +138,28 @@ html[lang="he"] .contact h2{direction:rtl}
     "en": "OBJECT 03 / WORKSHOP"
   },
   "home.driller.title": {
-    "he": "מעמד למקדחה / V364",
-    "en": "DRILLER STAND / V364"
+    "he": "מעמד למקדחה",
+    "en": "Drill stand"
   },
   "home.driller.copy": {
-    "he": "מעמד מודולרי עם קורות, מדפים וחיבורים גלויים — מתכנון הייצור ועד לשימוש בפועל.",
-    "en": "A modular stand with rails, shelves and exposed joints — from fabrication planning to everyday use."
+    "he": "מעמד מודולרי לסדנה, עם קורות ומדפים.",
+    "en": "A modular workshop stand with beams and shelves."
   },
   "home.shoe.link": {
-    "he": "פתיחת עמוד מעמד נעליים Version A",
-    "en": "View the Shoe Rack, Version A project"
+    "he": "פתיחת עמוד מעמד נעליים",
+    "en": "View the shoe rack"
   },
   "home.shoe.tag": {
     "he": "מוצר 04 / אחסון נעליים",
     "en": "OBJECT 04 / SHOE STORAGE"
   },
   "home.shoe.title": {
-    "he": "מעמד נעליים / גרסה A",
-    "en": "SHOE RACK / VERSION A"
+    "he": "מעמד נעליים",
+    "en": "Shoe rack"
   },
   "home.shoe.copy": {
-    "he": "מעמד נעליים עם שלושה מדפים, מושב עליון וחיזוקים פנימיים — מתוכנן כמערכת חיתוך והרכבה מדויקת.",
-    "en": "A shoe rack with three shelves, a top seat and internal braces, designed for precise cutting and assembly."
+    "he": "שלושה מדפים ומושב — הדמיית הדגם.",
+    "en": "Three shelves and a seat — model rendering."
   },
   "home.workbench.link": {
     "he": "פתיחת עמוד שולחן העבודה — מוצר בפיתוח",
@@ -220,8 +170,8 @@ html[lang="he"] .contact h2{direction:rtl}
     "en": "WORKBENCH"
   },
   "home.workbench.copy": {
-    "he": "שולחן עבודה בפיתוח, עם חיזוקים אלכסוניים וחיבורים גלויים. גליון התכנון מציג את המבנה, המידות ופרטי ההרכבה.",
-    "en": "A workbench in development, with diagonal bracing and exposed joints. The planning sheet shows the structure, dimensions and assembly details."
+    "he": "הדמיית שולחן עבודה עם חיזוקים אלכסוניים.",
+    "en": "Workbench rendering with diagonal braces."
   },
   "home.crib.link": {
     "he": "פתיחת עמוד מיטת התינוק — מוצר בפיתוח",
@@ -232,8 +182,8 @@ html[lang="he"] .contact h2{direction:rtl}
     "en": "BEDSIDE CRIB"
   },
   "home.crib.copy": {
-    "he": "מיטת תינוק בפיתוח, עם לוחות עץ מעוטרים וחיבורים גלויים. ההדמיות מציגות את הרעיון ואת פרטי המבנה.",
-    "en": "A crib in development, with decorative wooden panels and exposed joints. The renderings show the concept and structural details."
+    "he": "הדמיית מיטת תינוק עם לוחות עץ מעוטרים.",
+    "en": "Rendering of a crib with decorative wooden panels."
   },
   "home.etrog.link": {
     "he": "פתיחת עמוד קופסה מהודרת לאתרוג — מוצר בפיתוח",
@@ -244,8 +194,8 @@ html[lang="he"] .contact h2{direction:rtl}
     "en": "ETROG BOX"
   },
   "home.etrog.copy": {
-    "he": "קופסה מהודרת לאתרוג בפיתוח, עם מכסה מעוטר ופינות מעוגלות. התכנון מציג את המבנה, החיבורים ופריסת חלקי העץ.",
-    "en": "An ornate etrog box in development, with a decorative lid and rounded corners. The planning images show the structure, joints and wooden components."
+    "he": "הדמיית קופסה לאתרוג עם מכסה חרוט.",
+    "en": "Rendering of an etrog box with an engraved lid."
   },
   "home.megillah.link": {
     "he": "פתיחת עמוד כיסוי מהודר למגילת אסתר — מוצר בפיתוח",
@@ -256,8 +206,8 @@ html[lang="he"] .contact h2{direction:rtl}
     "en": "MEGILLAH CASE"
   },
   "home.megillah.copy": {
-    "he": "כיסוי מהודר למגילת אסתר בפיתוח, עם גוף עץ מעוטר ומכסה מעוגל. ההדמיה והשרטוטים מציגים את העיצוב, המבנה והחיבורים.",
-    "en": "An ornate Esther scroll case in development, with a decorative wooden body and curved lid. The rendering and drawings show the design, structure and joints."
+    "he": "הדמיית כיסוי למגילה עם גוף עץ ומכסה מעוגל.",
+    "en": "Rendering of a scroll case with a wooden body and curved lid."
   },
   "home.geometric.alt": {
     "he": "שולחן הקפה Geometric",
@@ -272,24 +222,24 @@ html[lang="he"] .contact h2{direction:rtl}
     "en": "Driller Stand finished product"
   },
   "home.shoe.alt": {
-    "he": "מעמד נעליים גרסה A — תמונת תכנון",
-    "en": "Shoe Rack, Version A — planning image"
+    "he": "הדמיה של מעמד נעליים עם שלושה מדפים ומושב",
+    "en": "Rendering of a shoe rack with three shelves and a seat"
   },
   "home.workbench.alt": {
-    "he": "גליון תכנון והדמיה של שולחן עבודה: מבטים, מידות, חיבורים ופריסת חלקים",
-    "en": "Workbench planning and rendering sheet: views, dimensions, joints and a component layout"
+    "he": "הדמיית שולחן עבודה עם חיזוקים אלכסוניים",
+    "en": "Rendering of a workbench with diagonal braces"
   },
   "home.crib.alt": {
     "he": "הדמיה של מיטת תינוק מעץ לצד מיטת ההורים, עם עיטורי ירח וצמחים",
     "en": "Rendering of a wooden bedside crib with moon and plant decorations"
   },
   "home.etrog.alt": {
-    "he": "תכנון והדמיה של קופסה מהודרת לאתרוג: מכסה מעוטר, פינות מעוגלות, מבטים ופרטי חיבור",
-    "en": "Planning and rendering of an ornate etrog box: a decorative lid, rounded corners, views and joint details"
+    "he": "הדמיית קופסה לאתרוג עם החריטה המקורית על המכסה",
+    "en": "Rendering of an etrog box with its original lid engraving"
   },
   "home.megillah.alt": {
-    "he": "הדמיה של כיסוי מהודר למגילת אסתר מעץ מעוטר, במצב פתוח וסגור, עם פרטי המכסה וצירי העץ",
-    "en": "Rendering of an ornate wooden Esther scroll case, open and closed, with lid and wooden hinge details"
+    "he": "הדמיית כיסוי סגור למגילת אסתר עם החריטות המקוריות",
+    "en": "Rendering of a closed Esther scroll case with its original engravings"
   },
   "home.badge.size": {
     "he": "בהתאמה אישית",
@@ -316,24 +266,28 @@ html[lang="he"] .contact h2{direction:rtl}
     "en": "Engineering is built into the design from the start. <strong>It is how the product takes shape.</strong> Every line, slot and joint is checked in the model before becoming a physical part."
   },
   "home.contact.title": {
-    "he": "התאימו.<br>תכננו.<br>הרכיבו.",
-    "en": "Adapt it.<br>Design it.<br>Assemble it."
+    "he": "בואו נדבר על המוצר שלכם",
+    "en": "Let’s talk about your product"
   },
   "home.contact.copy": {
-    "he": "רוצים לברר על מוצר או להתאים אותו למידות שלכם? בחרו דגם, כמות ומידות רצויות, ונבדוק את אפשרויות הייצור וההתאמה לקראת הצעת מחיר.",
-    "en": "Interested in a product or need custom dimensions? Choose a design, quantity and desired dimensions, and we will review production and customization options for a quote."
+    "he": "בחרו דגם, מידות וכמות — ונבדוק יחד אפשרויות ייצור והצעת מחיר.",
+    "en": "Share your model, dimensions and quantity — we’ll review fabrication options and a quote."
   },
   "home.footer": {
     "he": "ASSEMBLE LAB / עיצוב · הנדסה · ייצור",
     "en": "ASSEMBLE LAB / DESIGN · ENGINEERING · FABRICATION"
   },
   "home.hero.stages": {
-    "he": "<bdi dir=\"ltr\">01</bdi> הדמיה · <bdi dir=\"ltr\">02</bdi> חיתוך בלייזר · <bdi dir=\"ltr\">03</bdi> רגליים · <bdi dir=\"ltr\">04</bdi> שלדה מורכבת",
-    "en": "01 Rendering · 02 Laser cutting · 03 Legs · 04 Assembled frame"
+    "he": "הדמיה · חיתוך בלייזר · רגליים · שלדה ללא פלטה",
+    "en": "Rendering · laser cutting · legs · frame without tabletop"
   },
   "home.tables.view": {
     "he": "לבחירת דגם ←",
     "en": "CHOOSE A MODEL →"
+  },
+  "home.size.cta": {
+    "he": "פנייה להתאמה אישית",
+    "en": "Ask about custom dimensions"
   }
 }
 </script>
@@ -341,32 +295,32 @@ html[lang="he"] .contact h2{direction:rtl}
 <script src="assets/language.js"></script>
 </head>
 <body>
-<header class="header"><a class="logo" href="#top" aria-label="ASSEMBLE LAB — דף הבית" data-i18n-aria-label="nav.home"><span class="logo-mark" data-language-fixed>A/L</span><span class="logo-copy"><b data-language-fixed>ASSEMBLE LAB</b><small data-i18n="home.gallery.version">גלריית מוצרים / V2.40</small></span></a><nav class="nav" aria-label="ניווט ראשי" data-i18n-aria-label="home.nav.label"><a href="#products" data-i18n="nav.products">מוצרים</a><a class="nav-about" href="#about" data-i18n="nav.about">אודות</a><a class="nav-custom" href="#contact" data-i18n="nav.custom">התאמה אישית</a></nav></header>
+<header class="header"><a class="logo" href="#top" aria-label="ASSEMBLE LAB — דף הבית" data-i18n-aria-label="nav.home"><span class="logo-mark" data-language-fixed>A/L</span><span class="logo-copy"><b data-language-fixed>ASSEMBLE LAB</b><small data-i18n="home.gallery.version">עיצוב · הנדסה · ייצור</small></span></a><nav class="nav" aria-label="ניווט ראשי" data-i18n-aria-label="home.nav.label"><a href="#products" data-i18n="nav.products">מוצרים</a><a class="nav-about" href="#about" data-i18n="nav.about">אודות</a><a class="nav-custom" href="#contact" data-i18n="nav.custom">התאמה אישית</a></nav></header>
 <main id="top">
 <section class="hero" aria-labelledby="hero-title">
  <div class="hero-content">
   <p class="kicker" data-i18n="home.hero.kicker">ASSEMBLE LAB / עיצוב הנדסי</p>
   <h1 id="hero-title" data-i18n="home.hero.title" data-i18n-html>אובייקטים.<br><span>מתוכננים.</span></h1>
-  <p class="hero-copy" data-i18n="home.hero.copy">מוצרים ורהיטים שבהם תכנון הנדסי, חומר וחיבורים הופכים לחלק מהעיצוב.</p>
-  <p class="hero-note" data-i18n="home.hero.note">אפשר להתאים את המידות לחלל ולשימוש.</p>
+  <p class="hero-copy" data-i18n="home.hero.copy">רהיטים ואובייקטים מתוכננים הנדסית, עם אפשרות להתאמת מידות לחלל שלכם.</p>
   <div class="hero-actions"><a class="cta-primary" href="#products" data-i18n="home.hero.products">לצפייה במוצרים ←</a><a class="cta-secondary" href="#contact" data-i18n="home.hero.custom">התאמה אישית ←</a></div>
  </div>
- <figure class="hero-photo"><div class="hero-media"><img src="assets/geometric-process-preview-clean.webp" width="1536" height="1024" fetchpriority="high" alt="ארבעה שלבים בתהליך Geometric: הדמיית הרגליים, חיתוך בלייזר, הרגליים לאחר החיתוך ושלדת השולחן מורכבת ללא הפלטה העליונה" data-i18n-alt="home.hero.alt"></div><figcaption data-i18n="home.hero.caption">GEOMETRIC / מהתכנון להרכבה</figcaption><p class="image-explanation" data-i18n-html="home.hero.stages"><bdi dir="ltr">01</bdi> הדמיה · <bdi dir="ltr">02</bdi> חיתוך בלייזר · <bdi dir="ltr">03</bdi> רגליים · <bdi dir="ltr">04</bdi> שלדה מורכבת</p></figure>
+ <figure class="hero-photo"><div class="hero-media"><img src="assets/geometric-process-preview-clean.webp" width="1536" height="1024" fetchpriority="high" alt="ארבעה שלבים בתהליך Geometric: הדמיית הרגליים, חיתוך בלייזר, הרגליים לאחר החיתוך ושלדת השולחן מורכבת ללא הפלטה העליונה" data-i18n-alt="home.hero.alt"></div><p class="image-explanation" data-i18n-html="home.hero.stages"><bdi dir="ltr">01</bdi> הדמיה · <bdi dir="ltr">02</bdi> חיתוך בלייזר · <bdi dir="ltr">03</bdi> רגליים · <bdi dir="ltr">04</bdi> שלדה מורכבת</p></figure>
 </section>
-<section class="made-to-size" id="made-to-size"><div><p class="kicker" data-i18n="home.size.kicker">התאמה אישית / מידות לפי הצורך</p><h2 data-i18n="home.size.title" data-i18n-html>מתוכנן להתאים.<br>הנדסה שמאפשרת שינוי.</h2></div><p data-i18n="home.size.copy" data-i18n-html><strong>כל דגם יכול להתחיל ממידות הבסיס ולהיות מותאם לחלל ולשימוש.</strong> ההתאמה נעשית דרך התכנון עצמו — מידות, מבנה וחיבורים — בהתאם לחומר ולאילוצי הייצור.</p></section>
-<section class="collection" id="products"><div class="collection-head"><div><p class="kicker" data-i18n="home.collection.kicker">מוצרים / הקולקציה</p><h2 data-i18n="home.collection.title" data-i18n-html>בחרו אובייקט.<br>היכנסו לתהליך.</h2></div><p data-i18n="home.collection.copy">כל מוצר מקבל עמוד משלו — עם תמונות, תכנון, חיתוך והרכבה. דף הבית נשאר חלון ראווה נקי; הסיפור המלא נמצא בפנים.</p></div>
+
+<section class="collection" id="products"><div class="collection-head"><div><h2 data-i18n="home.collection.title" data-i18n-html>המוצרים שלנו</h2></div><p data-i18n="home.collection.copy">בחרו מוצר וגלו את התכנון והבנייה שלו.</p></div>
 <div class="products">
-<a class="product featured" href="table/" aria-label="בחירת דגם שולחן" data-i18n-aria-label="home.geometric.link"><div class="product-media"><img src="assets/geometric-hero.webp" alt="שולחן הקפה Geometric" data-i18n-alt="home.geometric.alt"><div class="product-badges"><span class="tag" data-i18n="home.geometric.tag">מוצר 01 / שולחן</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div><span class="open" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" focusable="false"><path d="M5 15 15 5M5 5h10v10"/></svg></span></div><div class="product-copy"><div><div class="product-no" data-language-fixed>01 / TABLES</div><h3 data-i18n="home.geometric.title">שולחנות</h3><p data-i18n="home.geometric.copy">שני דגמים, שתי שפות עיצוב — הכירו את Geometric ואת Flow ובחרו את השולחן שלכם.</p></div><span class="view" data-i18n="home.tables.view">לבחירת דגם ←</span></div></a>
-<a class="product" href="shelf/kids/" aria-label="פתיחת עמוד Kids Shelf" data-i18n-aria-label="home.kids.link"><div class="product-media"><div class="sprite kids" role="img" aria-label="מדף לילדים לאחר גימור" data-i18n-aria-label="home.kids.alt"></div><div class="product-badges"><span class="tag" data-i18n="home.kids.tag">מוצר 02 / מדף קיר</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div><span class="open" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" focusable="false"><path d="M5 15 15 5M5 5h10v10"/></svg></span></div><div class="product-copy"><div><div class="product-no" data-language-fixed>02 / KIDS SHELF</div><h3 data-i18n="home.kids.title">מדף לילדים / 700</h3><p data-i18n="home.kids.copy">מדף קיר קומפקטי שבו המבנה, ההתקנה והגרפיקה נפתרו כמערכת אחת.</p></div><span class="view" data-i18n="home.card.project">לסיפור המוצר ←</span></div></a>
-<a class="product" href="driller_stand/" aria-label="פתיחת עמוד Driller Stand" data-i18n-aria-label="home.driller.link"><div class="product-media"><div class="sprite driller" role="img" aria-label="מעמד למקדחה לאחר גימור" data-i18n-aria-label="home.driller.alt"></div><div class="product-badges"><span class="tag" data-i18n="home.driller.tag">מוצר 03 / סדנה</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div><span class="open" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" focusable="false"><path d="M5 15 15 5M5 5h10v10"/></svg></span></div><div class="product-copy"><div><div class="product-no" data-language-fixed>03 / DRILLER STAND</div><h3 data-i18n="home.driller.title">מעמד למקדחה / V364</h3><p data-i18n="home.driller.copy">מעמד מודולרי עם קורות, מדפים וחיבורים גלויים — מתכנון הייצור ועד לשימוש בפועל.</p></div><span class="view" data-i18n="home.card.project">לסיפור המוצר ←</span></div></a>
-<a class="product" href="shoe_rack/" aria-label="פתיחת עמוד מעמד נעליים Version A" data-i18n-aria-label="home.shoe.link"><div class="product-media"><img src="shoe_rack/shoe-rack-planning-clean.webp" alt="מעמד נעליים גרסה A — תמונת תכנון" data-i18n-alt="home.shoe.alt"><div class="product-badges"><span class="tag" data-i18n="home.shoe.tag">מוצר 04 / אחסון נעליים</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div><span class="open" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" focusable="false"><path d="M5 15 15 5M5 5h10v10"/></svg></span></div><div class="product-copy"><div><div class="product-no" data-language-fixed>04 / SHOE RACK</div><h3 data-i18n="home.shoe.title">מעמד נעליים / גרסה A</h3><p data-i18n="home.shoe.copy">מעמד נעליים עם שלושה מדפים, מושב עליון וחיזוקים פנימיים — מתוכנן כמערכת חיתוך והרכבה מדויקת.</p></div><span class="view" data-i18n="home.card.project">לסיפור המוצר ←</span></div></a>
-<a class="product product--planning" href="workbench/" aria-label="פתיחת עמוד שולחן העבודה — מוצר בפיתוח" data-i18n-aria-label="home.workbench.link"><div class="product-media"><img src="workbench/workbench-planning-clean.webp" width="1536" height="1024" loading="lazy" alt="גליון תכנון והדמיה של שולחן עבודה: מבטים, מידות, חיבורים ופריסת חלקים" data-i18n-alt="home.workbench.alt"><div class="product-badges"><span class="tag" data-i18n="home.badge.development">בפיתוח</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div></div><div class="product-copy"><div><div class="product-no" data-language-fixed>05 / WORKBENCH</div><h3 data-i18n="home.workbench.title">שולחן עבודה</h3><p data-i18n="home.workbench.copy">שולחן עבודה בפיתוח, עם חיזוקים אלכסוניים וחיבורים גלויים. גליון התכנון מציג את המבנה, המידות ופרטי ההרכבה.</p></div><span class="view" data-i18n="home.card.planning">לצפייה בתכנון ←</span></div></a>
-<a class="product" href="crib/" aria-label="פתיחת עמוד מיטת התינוק — מוצר בפיתוח" data-i18n-aria-label="home.crib.link"><div class="product-media"><img src="crib/crib-hero.png" width="1448" height="1086" loading="lazy" alt="הדמיה של מיטת תינוק מעץ לצד מיטת ההורים, עם עיטורי ירח וצמחים" data-i18n-alt="home.crib.alt"><div class="product-badges"><span class="tag" data-i18n="home.badge.development">בפיתוח</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div><span class="open" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" focusable="false"><path d="M5 15 15 5M5 5h10v10"/></svg></span></div><div class="product-copy"><div><div class="product-no" data-language-fixed>06 / BEDSIDE CRIB</div><h3 data-i18n="home.crib.title">מיטת תינוק</h3><p data-i18n="home.crib.copy">מיטת תינוק בפיתוח, עם לוחות עץ מעוטרים וחיבורים גלויים. ההדמיות מציגות את הרעיון ואת פרטי המבנה.</p></div><span class="view" data-i18n="home.card.planning">לצפייה בתכנון ←</span></div></a>
-<a class="product product--planning" href="etrog_box/" aria-label="פתיחת עמוד קופסה מהודרת לאתרוג — מוצר בפיתוח" data-i18n-aria-label="home.etrog.link"><div class="product-media"><img src="etrog_box/media/planning-decorated-clean.webp" width="1448" height="1086" loading="lazy" alt="תכנון והדמיה של קופסה מהודרת לאתרוג: מכסה מעוטר, פינות מעוגלות, מבטים ופרטי חיבור" data-i18n-alt="home.etrog.alt"><div class="product-badges"><span class="tag" data-i18n="home.badge.development">בפיתוח</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div></div><div class="product-copy"><div><div class="product-no" data-language-fixed>07 / ETROG BOX</div><h3 data-i18n="home.etrog.title">קופסה מהודרת לאתרוג</h3><p data-i18n="home.etrog.copy">קופסה מהודרת לאתרוג בפיתוח, עם מכסה מעוטר ופינות מעוגלות. התכנון מציג את המבנה, החיבורים ופריסת חלקי העץ.</p></div><span class="view" data-i18n="home.card.planning">לצפייה בתכנון ←</span></div></a>
-<a class="product product--planning" href="megillat_esther_box/" aria-label="פתיחת עמוד כיסוי מהודר למגילת אסתר — מוצר בפיתוח" data-i18n-aria-label="home.megillah.link"><div class="product-media"><img src="megillat_esther_box/media/product-render-clean.webp" width="1536" height="1024" loading="lazy" alt="הדמיה של כיסוי מהודר למגילת אסתר מעץ מעוטר, במצב פתוח וסגור, עם פרטי המכסה וצירי העץ" data-i18n-alt="home.megillah.alt"><div class="product-badges"><span class="tag" data-i18n="home.badge.development">בפיתוח</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div></div><div class="product-copy"><div><div class="product-no" data-language-fixed>08 / MEGILLAH CASE</div><h3 data-i18n="home.megillah.title">כיסוי למגילת אסתר</h3><p data-i18n="home.megillah.copy">כיסוי מהודר למגילת אסתר בפיתוח, עם גוף עץ מעוטר ומכסה מעוגל. ההדמיה והשרטוטים מציגים את העיצוב, המבנה והחיבורים.</p></div><span class="view" data-i18n="home.card.planning">לצפייה בתכנון ←</span></div></a>
+<a class="product" href="table/" aria-label="בחירת דגם שולחן" data-i18n-aria-label="home.geometric.link"><div class="product-media"><img src="assets/geometric-hero.webp" alt="שולחן הקפה Geometric" data-i18n-alt="home.geometric.alt"></div><div class="product-copy"><div><h3 data-i18n="home.geometric.title">שולחנות</h3><p data-i18n="home.geometric.copy">שולחנות קפה Geometric ו־Flow.</p></div></div></a>
+<a class="product" href="shelf/kids/" aria-label="פתיחת עמוד Kids Shelf" data-i18n-aria-label="home.kids.link"><div class="product-media"><div class="sprite kids" role="img" aria-label="מדף לילדים לאחר גימור" data-i18n-aria-label="home.kids.alt"></div></div><div class="product-copy"><div><h3 data-i18n="home.kids.title">מדף לילדים</h3><p data-i18n="home.kids.copy">מדף קיר קומפקטי עם איורים וחיבורים גלויים.</p></div></div></a>
+<a class="product" href="driller_stand/" aria-label="פתיחת עמוד Driller Stand" data-i18n-aria-label="home.driller.link"><div class="product-media"><div class="sprite driller" role="img" aria-label="מעמד למקדחה לאחר גימור" data-i18n-aria-label="home.driller.alt"></div></div><div class="product-copy"><div><h3 data-i18n="home.driller.title">מעמד למקדחה</h3><p data-i18n="home.driller.copy">מעמד מודולרי לסדנה, עם קורות ומדפים.</p></div></div></a>
+<a class="product" href="shoe_rack/" aria-label="פתיחת עמוד מעמד נעליים Version A" data-i18n-aria-label="home.shoe.link"><div class="product-media"><div class="product-focus focus-shoe" role="img" aria-label="הדמיה של מעמד נעליים עם שלושה מדפים ומושב" data-i18n-aria-label="home.shoe.alt"></div></div><div class="product-copy"><div><h3 data-i18n="home.shoe.title">מעמד נעליים</h3><p data-i18n="home.shoe.copy">שלושה מדפים ומושב — הדמיית הדגם.</p></div></div></a>
+<a class="product product--planning" href="workbench/" aria-label="פתיחת עמוד שולחן העבודה — מוצר בפיתוח" data-i18n-aria-label="home.workbench.link"><div class="product-media"><div class="product-focus focus-workbench" role="img" aria-label="הדמיית שולחן עבודה עם חיזוקים אלכסוניים" data-i18n-aria-label="home.workbench.alt"></div></div><div class="product-copy"><span class="development" data-i18n="home.badge.development">בפיתוח</span><div><h3 data-i18n="home.workbench.title">שולחן עבודה</h3><p data-i18n="home.workbench.copy">הדמיית שולחן עבודה עם חיזוקים אלכסוניים.</p></div></div></a>
+<a class="product" href="crib/" aria-label="פתיחת עמוד מיטת התינוק — מוצר בפיתוח" data-i18n-aria-label="home.crib.link"><div class="product-media"><img src="crib/crib-hero.png" width="1448" height="1086" loading="lazy" alt="הדמיה של מיטת תינוק מעץ לצד מיטת ההורים, עם עיטורי ירח וצמחים" data-i18n-alt="home.crib.alt"></div><div class="product-copy"><span class="development" data-i18n="home.badge.development">בפיתוח</span><div><h3 data-i18n="home.crib.title">מיטת תינוק</h3><p data-i18n="home.crib.copy">הדמיית מיטת תינוק עם לוחות עץ מעוטרים.</p></div></div></a>
+<a class="product product--planning" href="etrog_box/" aria-label="פתיחת עמוד קופסה מהודרת לאתרוג — מוצר בפיתוח" data-i18n-aria-label="home.etrog.link"><div class="product-media"><div class="product-focus focus-etrog" role="img" aria-label="הדמיית קופסה לאתרוג עם החריטה המקורית על המכסה" data-i18n-aria-label="home.etrog.alt"></div></div><div class="product-copy"><span class="development" data-i18n="home.badge.development">בפיתוח</span><div><h3 data-i18n="home.etrog.title">קופסה מהודרת לאתרוג</h3><p data-i18n="home.etrog.copy">הדמיית קופסה לאתרוג עם מכסה חרוט.</p></div></div></a>
+<a class="product product--planning" href="megillat_esther_box/" aria-label="פתיחת עמוד כיסוי מהודר למגילת אסתר — מוצר בפיתוח" data-i18n-aria-label="home.megillah.link"><div class="product-media"><div class="product-focus focus-megillah" role="img" aria-label="הדמיית כיסוי סגור למגילת אסתר עם החריטות המקוריות" data-i18n-aria-label="home.megillah.alt"></div></div><div class="product-copy"><span class="development" data-i18n="home.badge.development">בפיתוח</span><div><h3 data-i18n="home.megillah.title">כיסוי למגילת אסתר</h3><p data-i18n="home.megillah.copy">הדמיית כיסוי למגילה עם גוף עץ ומכסה מעוגל.</p></div></div></a>
 </div></section>
+<section class="made-to-size" id="made-to-size"><div><h2 data-i18n="home.size.title">מתאים לחלל שלכם</h2><p data-i18n="home.size.copy">רוצים מידות אחרות? ספרו לנו מה אתם צריכים ונבדוק התאמה למבנה ולחומר.</p></div><a class="adapt-link" href="inquiry/?product=custom" data-i18n="home.size.cta">פנייה להתאמה אישית</a></section>
 <section class="manifesto" id="about"><h2 data-i18n="home.about.title" data-i18n-html>הרכבה<br>כדרך עיצוב.</h2><p data-i18n="home.about.copy" data-i18n-html>אנחנו לא מוסיפים הנדסה אחרי שהמוצר כבר עוצב. <strong>ההנדסה היא הדרך שבה המוצר מקבל צורה.</strong> כל קו, חריץ וחיבור נבדקים במודל לפני שהם הופכים לחלק פיזי.</p></section>
-<section class="contact" id="contact"><h2 data-i18n="home.contact.title" data-i18n-html>התאימו.<br>תכננו.<br>הרכיבו.</h2><div><p data-i18n="home.contact.copy">רוצים לברר על מוצר או להתאים אותו למידות שלכם? בחרו דגם, כמות ומידות רצויות, ונבדוק את אפשרויות הייצור וההתאמה לקראת הצעת מחיר.</p><a class="contact-quote" href="inquiry/" data-i18n="cta.inquiry">בירור והצעת מחיר</a></div></section>
+<section class="contact" id="contact"><h2 data-i18n="home.contact.title" data-i18n-html>בואו נדבר על המוצר שלכם</h2><div><p data-i18n="home.contact.copy">בחרו דגם, מידות וכמות — ונבדוק יחד אפשרויות ייצור והצעת מחיר.</p><a class="contact-quote" href="inquiry/" data-i18n="cta.inquiry">בירור והצעת מחיר</a></div></section>
 </main>
-<footer class="footer"><span data-i18n="home.footer">ASSEMBLE LAB / עיצוב · הנדסה · ייצור</span><span data-i18n="home.gallery.version">גלריית מוצרים / V2.40</span></footer>
+<footer class="footer"><span data-i18n="home.footer">ASSEMBLE LAB / עיצוב · הנדסה · ייצור</span><span data-i18n="home.gallery.version">עיצוב · הנדסה · ייצור</span></footer>
 </body></html>
