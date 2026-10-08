@@ -28,7 +28,7 @@ a:focus-visible{outline:3px solid var(--ink);outline-offset:4px}.contact a:focus
 .collection{padding:70px 4vw 110px}.collection-head{display:grid;grid-template-columns:1fr .7fr;gap:6vw;align-items:end;max-width:1672px;margin:0 auto 34px}.collection-head h2{font-size:clamp(38px,5.8vw,84px);line-height:.92;margin:0}.collection-head p{margin:0;color:var(--muted);font-size:16px;line-height:1.7}
 .products{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:24px;max-width:1672px;margin-inline:auto}.product{display:flex;flex-direction:column;grid-column:span 2;border:1px solid var(--line);background:#e9e6df;min-width:0;transition:transform .25s ease,box-shadow .25s ease}.product:nth-last-child(-n+4){grid-column:span 3}
 .product:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(17,19,17,.08)}.product-media{position:relative;aspect-ratio:4/3;overflow:hidden;background:#d7d4cd;flex:none}.product-media img{width:100%;height:100%;object-fit:contain;object-position:center;transition:transform .45s ease}
-.sprite{position:absolute;inset:0;background-repeat:no-repeat;background-position:center 100%;transition:transform .45s ease}.kids{background-image:url('shelf/kids/kids_shelf_story_v2.jpg');background-size:100% 600%;background-position:center 80%}.driller{background-image:url('driller_stand/driller_story_v2.jpg');background-size:100% 400%}
+.sprite{position:absolute;inset:0;background-repeat:no-repeat;background-position:center 100%;transition:transform .45s ease}.kids{background-image:url('shelf/kids/kids_shelf_story_clean.webp');background-size:100% 600%;background-position:center 80%}.driller{background-image:url('driller_stand/driller_story_v2.jpg');background-size:100% 400%}
 .product-badges{position:absolute;top:10px;left:10px;right:10px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;direction:ltr}
 .tag,.size-tag{padding:8px;direction:ltr;font-size:10px;font-weight:800;letter-spacing:.04em;white-space:nowrap}
 .tag{background:rgba(243,241,235,.94);border:1px solid var(--ink)}.size-tag{margin-left:auto;background:var(--ink);color:var(--paper);border:1px solid var(--ink);font-weight:900}
@@ -69,7 +69,270 @@ html[lang="he"] .product h3{line-height:1.2}
 html[lang="he"] .contact h2{direction:rtl}
 @media(max-width:640px){html[lang="he"] .hero h1{font-size:clamp(42px,13vw,60px)}html[lang="he"] .made-to-size h2{font-size:clamp(32px,9vw,48px)}html[lang="he"] .product h3{font-size:30px}}
 </style>
-<script type="application/json" id="page-translations">{"home.meta.description":{"he":"ASSEMBLE LAB — מוצרים ורהיטים מתוכננים הנדסית, בחיתוך לייזר ובחיבורים שהופכים לחלק מהעיצוב.","en":"ASSEMBLE LAB — Engineered objects and furniture, designed for laser cutting, with joints that become part of the design."},"home.meta.title":{"he":"ASSEMBLE LAB — גלריית מוצרים","en":"ASSEMBLE LAB — Product Gallery"},"home.meta.social":{"he":"אובייקטים מתוכננים הנדסית. תכנון CAD, חיתוך בלייזר והרכבה מתוך המבנה.","en":"Engineered objects. CAD designed. Laser cut. Built through structure."},"home.gallery.version":{"he":"גלריית מוצרים / V2.40","en":"PRODUCT GALLERY / V2.40"},"home.nav.label":{"he":"ניווט ראשי","en":"Main navigation"},"home.hero.kicker":{"he":"ASSEMBLE LAB / עיצוב הנדסי","en":"ASSEMBLE LAB / DESIGN ENGINEERING"},"home.hero.title":{"he":"אובייקטים.<br><span>מתוכננים.<\/span>","en":"Objects.<br><span>Engineered.<\/span>"},"home.hero.copy":{"he":"מוצרים ורהיטים שבהם תכנון הנדסי, חומר וחיבורים הופכים לחלק מהעיצוב.","en":"Objects and furniture shaped by engineering, materials and the joints that hold them together."},"home.hero.note":{"he":"אפשר להתאים את המידות לחלל ולשימוש.","en":"Dimensions can be adapted to your space and how you use it."},"home.hero.products":{"he":"לצפייה במוצרים ←","en":"VIEW PRODUCTS →"},"home.hero.custom":{"he":"התאמה אישית ←","en":"CUSTOM SIZE →"},"home.hero.alt":{"he":"ארבעה שלבים בתהליך Geometric: הדמיית הרגליים, חיתוך בלייזר, הרגליים לאחר החיתוך ושלדת השולחן מורכבת ללא הפלטה העליונה","en":"Four stages of Geometric: a leg rendering, laser cutting, the cut legs, and the assembled table frame without its top"},"home.hero.caption":{"he":"GEOMETRIC / מהתכנון להרכבה","en":"GEOMETRIC / FROM DESIGN TO ASSEMBLY"},"home.size.kicker":{"he":"התאמה אישית / מידות לפי הצורך","en":"MADE TO SIZE / CUSTOM DIMENSIONS"},"home.size.title":{"he":"מתוכנן להתאים.<br>הנדסה שמאפשרת שינוי.","en":"Designed to fit.<br>Engineered to adapt."},"home.size.copy":{"he":"<strong>כל דגם יכול להתחיל ממידות הבסיס ולהיות מותאם לחלל ולשימוש.<\/strong> ההתאמה נעשית דרך התכנון עצמו — מידות, מבנה וחיבורים — בהתאם לחומר ולאילוצי הייצור.","en":"<strong>Each design starts with base dimensions and can be adapted to your space and use.<\/strong> We adjust the design itself — dimensions, structure and joints — according to the material and fabrication constraints."},"home.collection.kicker":{"he":"מוצרים / הקולקציה","en":"PRODUCTS / COLLECTION"},"home.collection.title":{"he":"בחרו אובייקט.<br>היכנסו לתהליך.","en":"Choose an object.<br>Explore its process."},"home.collection.copy":{"he":"כל מוצר מקבל עמוד משלו — עם תמונות, תכנון, חיתוך והרכבה. דף הבית נשאר חלון ראווה נקי; הסיפור המלא נמצא בפנים.","en":"Each product has its own page, with images of the design, cutting and assembly. Browse the collection here, then explore the full story inside."},"home.geometric.link":{"he":"פתיחת עמוד Geometric","en":"View the Geometric project"},"home.geometric.tag":{"he":"מוצר 01 / שולחן","en":"OBJECT 01 / TABLE"},"home.geometric.title":{"he":"GEOMETRIC","en":"GEOMETRIC"},"home.geometric.copy":{"he":"שולחן קפה שבו הצורה, המבנה וההרכבה מתוכננים כמערכת גאומטרית אחת.","en":"A coffee table whose form, structure and assembly are designed as one geometric system."},"home.kids.link":{"he":"פתיחת עמוד Kids Shelf","en":"View the Kids Shelf project"},"home.kids.tag":{"he":"מוצר 02 / מדף קיר","en":"OBJECT 02 / WALL SYSTEM"},"home.kids.title":{"he":"מדף לילדים / 700","en":"KIDS SHELF / 700"},"home.kids.copy":{"he":"מדף קיר קומפקטי שבו המבנה, ההתקנה והגרפיקה נפתרו כמערכת אחת.","en":"A compact wall shelf that brings structure, mounting and graphics together in one system."},"home.driller.link":{"he":"פתיחת עמוד Driller Stand","en":"View the Driller Stand project"},"home.driller.tag":{"he":"מוצר 03 / סדנה","en":"OBJECT 03 / WORKSHOP"},"home.driller.title":{"he":"מעמד למקדחה / V364","en":"DRILLER STAND / V364"},"home.driller.copy":{"he":"מעמד מודולרי עם קורות, מדפים וחיבורים גלויים — מתכנון הייצור ועד לשימוש בפועל.","en":"A modular stand with rails, shelves and exposed joints — from fabrication planning to everyday use."},"home.shoe.link":{"he":"פתיחת עמוד מעמד נעליים Version A","en":"View the Shoe Rack, Version A project"},"home.shoe.tag":{"he":"מוצר 04 / אחסון נעליים","en":"OBJECT 04 / SHOE STORAGE"},"home.shoe.title":{"he":"מעמד נעליים / גרסה A","en":"SHOE RACK / VERSION A"},"home.shoe.copy":{"he":"מעמד נעליים עם שלושה מדפים, מושב עליון וחיזוקים פנימיים — מתוכנן כמערכת חיתוך והרכבה מדויקת.","en":"A shoe rack with three shelves, a top seat and internal braces, designed for precise cutting and assembly."},"home.workbench.link":{"he":"פתיחת עמוד שולחן העבודה — מוצר בפיתוח","en":"View the Workbench project — in development"},"home.workbench.title":{"he":"שולחן עבודה","en":"WORKBENCH"},"home.workbench.copy":{"he":"שולחן עבודה בפיתוח, עם חיזוקים אלכסוניים וחיבורים גלויים. גליון התכנון מציג את המבנה, המידות ופרטי ההרכבה.","en":"A workbench in development, with diagonal bracing and exposed joints. The planning sheet shows the structure, dimensions and assembly details."},"home.crib.link":{"he":"פתיחת עמוד מיטת התינוק — מוצר בפיתוח","en":"View the Bedside Crib project — in development"},"home.crib.title":{"he":"מיטת תינוק","en":"BEDSIDE CRIB"},"home.crib.copy":{"he":"מיטת תינוק בפיתוח, עם לוחות עץ מעוטרים וחיבורים גלויים. ההדמיות מציגות את הרעיון ואת פרטי המבנה.","en":"A crib in development, with decorative wooden panels and exposed joints. The renderings show the concept and structural details."},"home.etrog.link":{"he":"פתיחת עמוד קופסה מהודרת לאתרוג — מוצר בפיתוח","en":"View the Etrog Box project — in development"},"home.etrog.title":{"he":"קופסה מהודרת לאתרוג","en":"ETROG BOX"},"home.etrog.copy":{"he":"קופסה מהודרת לאתרוג בפיתוח, עם מכסה מעוטר ופינות מעוגלות. התכנון מציג את המבנה, החיבורים ופריסת חלקי העץ.","en":"An ornate etrog box in development, with a decorative lid and rounded corners. The planning images show the structure, joints and wooden components."},"home.megillah.link":{"he":"פתיחת עמוד כיסוי מהודר למגילת אסתר — מוצר בפיתוח","en":"View the Megillah Case project — in development"},"home.megillah.title":{"he":"כיסוי למגילת אסתר","en":"MEGILLAH CASE"},"home.megillah.copy":{"he":"כיסוי מהודר למגילת אסתר בפיתוח, עם גוף עץ מעוטר ומכסה מעוגל. ההדמיה והשרטוטים מציגים את העיצוב, המבנה והחיבורים.","en":"An ornate Esther scroll case in development, with a decorative wooden body and curved lid. The rendering and drawings show the design, structure and joints."},"home.geometric.alt":{"he":"שולחן הקפה Geometric","en":"Geometric coffee table"},"home.kids.alt":{"he":"מדף לילדים לאחר גימור","en":"Kids Shelf finished product"},"home.driller.alt":{"he":"מעמד למקדחה לאחר גימור","en":"Driller Stand finished product"},"home.shoe.alt":{"he":"מעמד נעליים גרסה A — תמונת תכנון","en":"Shoe Rack, Version A — planning image"},"home.workbench.alt":{"he":"גליון תכנון והדמיה של שולחן עבודה: מבטים, מידות, חיבורים ופריסת חלקים","en":"Workbench planning and rendering sheet: views, dimensions, joints and a component layout"},"home.crib.alt":{"he":"הדמיה של מיטת תינוק מעץ לצד מיטת ההורים, עם עיטורי ירח וצמחים","en":"Rendering of a wooden bedside crib with moon and plant decorations"},"home.etrog.alt":{"he":"תכנון והדמיה של קופסה מהודרת לאתרוג: מכסה מעוטר, פינות מעוגלות, מבטים ופרטי חיבור","en":"Planning and rendering of an ornate etrog box: a decorative lid, rounded corners, views and joint details"},"home.megillah.alt":{"he":"הדמיה של כיסוי מהודר למגילת אסתר מעץ מעוטר, במצב פתוח וסגור, עם פרטי המכסה וצירי העץ","en":"Rendering of an ornate wooden Esther scroll case, open and closed, with lid and wooden hinge details"},"home.badge.size":{"he":"בהתאמה אישית","en":"MADE TO SIZE"},"home.badge.development":{"he":"בפיתוח","en":"IN DEVELOPMENT"},"home.card.project":{"he":"לסיפור המוצר ←","en":"VIEW PROJECT →"},"home.card.planning":{"he":"לצפייה בתכנון ←","en":"VIEW PLANNING →"},"home.about.title":{"he":"הרכבה<br>כדרך עיצוב.","en":"Assembly<br>as design."},"home.about.copy":{"he":"אנחנו לא מוסיפים הנדסה אחרי שהמוצר כבר עוצב. <strong>ההנדסה היא הדרך שבה המוצר מקבל צורה.<\/strong> כל קו, חריץ וחיבור נבדקים במודל לפני שהם הופכים לחלק פיזי.","en":"Engineering is built into the design from the start. <strong>It is how the product takes shape.<\/strong> Every line, slot and joint is checked in the model before becoming a physical part."},"home.contact.title":{"he":"התאימו.<br>תכננו.<br>הרכיבו.","en":"Adapt it.<br>Design it.<br>Assemble it."},"home.contact.copy":{"he":"רוצים לברר על מוצר או להתאים אותו למידות שלכם? בחרו דגם, כמות ומידות רצויות, ונבדוק את אפשרויות הייצור וההתאמה לקראת הצעת מחיר.","en":"Interested in a product or need custom dimensions? Choose a design, quantity and desired dimensions, and we will review production and customization options for a quote."},"home.footer":{"he":"ASSEMBLE LAB / עיצוב · הנדסה · ייצור","en":"ASSEMBLE LAB / DESIGN · ENGINEERING · FABRICATION"}}</script>
+<script type="application/json" id="page-translations">
+{
+  "home.meta.description": {
+    "he": "ASSEMBLE LAB — מוצרים ורהיטים מתוכננים הנדסית, בחיתוך לייזר ובחיבורים שהופכים לחלק מהעיצוב.",
+    "en": "ASSEMBLE LAB — Engineered objects and furniture, designed for laser cutting, with joints that become part of the design."
+  },
+  "home.meta.title": {
+    "he": "ASSEMBLE LAB — גלריית מוצרים",
+    "en": "ASSEMBLE LAB — Product Gallery"
+  },
+  "home.meta.social": {
+    "he": "אובייקטים מתוכננים הנדסית. תכנון CAD, חיתוך בלייזר והרכבה מתוך המבנה.",
+    "en": "Engineered objects. CAD designed. Laser cut. Built through structure."
+  },
+  "home.gallery.version": {
+    "he": "גלריית מוצרים / V2.40",
+    "en": "PRODUCT GALLERY / V2.40"
+  },
+  "home.nav.label": {
+    "he": "ניווט ראשי",
+    "en": "Main navigation"
+  },
+  "home.hero.kicker": {
+    "he": "ASSEMBLE LAB / עיצוב הנדסי",
+    "en": "ASSEMBLE LAB / DESIGN ENGINEERING"
+  },
+  "home.hero.title": {
+    "he": "אובייקטים.<br><span>מתוכננים.</span>",
+    "en": "Objects.<br><span>Engineered.</span>"
+  },
+  "home.hero.copy": {
+    "he": "מוצרים ורהיטים שבהם תכנון הנדסי, חומר וחיבורים הופכים לחלק מהעיצוב.",
+    "en": "Objects and furniture shaped by engineering, materials and the joints that hold them together."
+  },
+  "home.hero.note": {
+    "he": "אפשר להתאים את המידות לחלל ולשימוש.",
+    "en": "Dimensions can be adapted to your space and how you use it."
+  },
+  "home.hero.products": {
+    "he": "לצפייה במוצרים ←",
+    "en": "VIEW PRODUCTS →"
+  },
+  "home.hero.custom": {
+    "he": "התאמה אישית ←",
+    "en": "CUSTOM SIZE →"
+  },
+  "home.hero.alt": {
+    "he": "ארבעה שלבים בתהליך Geometric: הדמיית הרגליים, חיתוך בלייזר, הרגליים לאחר החיתוך ושלדת השולחן מורכבת ללא הפלטה העליונה",
+    "en": "Four stages of Geometric: a leg rendering, laser cutting, the cut legs, and the assembled table frame without its top"
+  },
+  "home.hero.caption": {
+    "he": "GEOMETRIC / מהתכנון להרכבה",
+    "en": "GEOMETRIC / FROM DESIGN TO ASSEMBLY"
+  },
+  "home.size.kicker": {
+    "he": "התאמה אישית / מידות לפי הצורך",
+    "en": "MADE TO SIZE / CUSTOM DIMENSIONS"
+  },
+  "home.size.title": {
+    "he": "מתוכנן להתאים.<br>הנדסה שמאפשרת שינוי.",
+    "en": "Designed to fit.<br>Engineered to adapt."
+  },
+  "home.size.copy": {
+    "he": "<strong>כל דגם יכול להתחיל ממידות הבסיס ולהיות מותאם לחלל ולשימוש.</strong> ההתאמה נעשית דרך התכנון עצמו — מידות, מבנה וחיבורים — בהתאם לחומר ולאילוצי הייצור.",
+    "en": "<strong>Each design starts with base dimensions and can be adapted to your space and use.</strong> We adjust the design itself — dimensions, structure and joints — according to the material and fabrication constraints."
+  },
+  "home.collection.kicker": {
+    "he": "מוצרים / הקולקציה",
+    "en": "PRODUCTS / COLLECTION"
+  },
+  "home.collection.title": {
+    "he": "בחרו אובייקט.<br>היכנסו לתהליך.",
+    "en": "Choose an object.<br>Explore its process."
+  },
+  "home.collection.copy": {
+    "he": "כל מוצר מקבל עמוד משלו — עם תמונות, תכנון, חיתוך והרכבה. דף הבית נשאר חלון ראווה נקי; הסיפור המלא נמצא בפנים.",
+    "en": "Each product has its own page, with images of the design, cutting and assembly. Browse the collection here, then explore the full story inside."
+  },
+  "home.geometric.link": {
+    "he": "פתיחת עמוד Geometric",
+    "en": "View the Geometric project"
+  },
+  "home.geometric.tag": {
+    "he": "מוצר 01 / שולחן",
+    "en": "OBJECT 01 / TABLE"
+  },
+  "home.geometric.title": {
+    "he": "GEOMETRIC",
+    "en": "GEOMETRIC"
+  },
+  "home.geometric.copy": {
+    "he": "שולחן קפה שבו הצורה, המבנה וההרכבה מתוכננים כמערכת גאומטרית אחת.",
+    "en": "A coffee table whose form, structure and assembly are designed as one geometric system."
+  },
+  "home.kids.link": {
+    "he": "פתיחת עמוד Kids Shelf",
+    "en": "View the Kids Shelf project"
+  },
+  "home.kids.tag": {
+    "he": "מוצר 02 / מדף קיר",
+    "en": "OBJECT 02 / WALL SYSTEM"
+  },
+  "home.kids.title": {
+    "he": "מדף לילדים / 700",
+    "en": "KIDS SHELF / 700"
+  },
+  "home.kids.copy": {
+    "he": "מדף קיר קומפקטי שבו המבנה, ההתקנה והגרפיקה נפתרו כמערכת אחת.",
+    "en": "A compact wall shelf that brings structure, mounting and graphics together in one system."
+  },
+  "home.driller.link": {
+    "he": "פתיחת עמוד Driller Stand",
+    "en": "View the Driller Stand project"
+  },
+  "home.driller.tag": {
+    "he": "מוצר 03 / סדנה",
+    "en": "OBJECT 03 / WORKSHOP"
+  },
+  "home.driller.title": {
+    "he": "מעמד למקדחה / V364",
+    "en": "DRILLER STAND / V364"
+  },
+  "home.driller.copy": {
+    "he": "מעמד מודולרי עם קורות, מדפים וחיבורים גלויים — מתכנון הייצור ועד לשימוש בפועל.",
+    "en": "A modular stand with rails, shelves and exposed joints — from fabrication planning to everyday use."
+  },
+  "home.shoe.link": {
+    "he": "פתיחת עמוד מעמד נעליים Version A",
+    "en": "View the Shoe Rack, Version A project"
+  },
+  "home.shoe.tag": {
+    "he": "מוצר 04 / אחסון נעליים",
+    "en": "OBJECT 04 / SHOE STORAGE"
+  },
+  "home.shoe.title": {
+    "he": "מעמד נעליים / גרסה A",
+    "en": "SHOE RACK / VERSION A"
+  },
+  "home.shoe.copy": {
+    "he": "מעמד נעליים עם שלושה מדפים, מושב עליון וחיזוקים פנימיים — מתוכנן כמערכת חיתוך והרכבה מדויקת.",
+    "en": "A shoe rack with three shelves, a top seat and internal braces, designed for precise cutting and assembly."
+  },
+  "home.workbench.link": {
+    "he": "פתיחת עמוד שולחן העבודה — מוצר בפיתוח",
+    "en": "View the Workbench project — in development"
+  },
+  "home.workbench.title": {
+    "he": "שולחן עבודה",
+    "en": "WORKBENCH"
+  },
+  "home.workbench.copy": {
+    "he": "שולחן עבודה בפיתוח, עם חיזוקים אלכסוניים וחיבורים גלויים. גליון התכנון מציג את המבנה, המידות ופרטי ההרכבה.",
+    "en": "A workbench in development, with diagonal bracing and exposed joints. The planning sheet shows the structure, dimensions and assembly details."
+  },
+  "home.crib.link": {
+    "he": "פתיחת עמוד מיטת התינוק — מוצר בפיתוח",
+    "en": "View the Bedside Crib project — in development"
+  },
+  "home.crib.title": {
+    "he": "מיטת תינוק",
+    "en": "BEDSIDE CRIB"
+  },
+  "home.crib.copy": {
+    "he": "מיטת תינוק בפיתוח, עם לוחות עץ מעוטרים וחיבורים גלויים. ההדמיות מציגות את הרעיון ואת פרטי המבנה.",
+    "en": "A crib in development, with decorative wooden panels and exposed joints. The renderings show the concept and structural details."
+  },
+  "home.etrog.link": {
+    "he": "פתיחת עמוד קופסה מהודרת לאתרוג — מוצר בפיתוח",
+    "en": "View the Etrog Box project — in development"
+  },
+  "home.etrog.title": {
+    "he": "קופסה מהודרת לאתרוג",
+    "en": "ETROG BOX"
+  },
+  "home.etrog.copy": {
+    "he": "קופסה מהודרת לאתרוג בפיתוח, עם מכסה מעוטר ופינות מעוגלות. התכנון מציג את המבנה, החיבורים ופריסת חלקי העץ.",
+    "en": "An ornate etrog box in development, with a decorative lid and rounded corners. The planning images show the structure, joints and wooden components."
+  },
+  "home.megillah.link": {
+    "he": "פתיחת עמוד כיסוי מהודר למגילת אסתר — מוצר בפיתוח",
+    "en": "View the Megillah Case project — in development"
+  },
+  "home.megillah.title": {
+    "he": "כיסוי למגילת אסתר",
+    "en": "MEGILLAH CASE"
+  },
+  "home.megillah.copy": {
+    "he": "כיסוי מהודר למגילת אסתר בפיתוח, עם גוף עץ מעוטר ומכסה מעוגל. ההדמיה והשרטוטים מציגים את העיצוב, המבנה והחיבורים.",
+    "en": "An ornate Esther scroll case in development, with a decorative wooden body and curved lid. The rendering and drawings show the design, structure and joints."
+  },
+  "home.geometric.alt": {
+    "he": "שולחן הקפה Geometric",
+    "en": "Geometric coffee table"
+  },
+  "home.kids.alt": {
+    "he": "מדף לילדים לאחר גימור",
+    "en": "Kids Shelf finished product"
+  },
+  "home.driller.alt": {
+    "he": "מעמד למקדחה לאחר גימור",
+    "en": "Driller Stand finished product"
+  },
+  "home.shoe.alt": {
+    "he": "מעמד נעליים גרסה A — תמונת תכנון",
+    "en": "Shoe Rack, Version A — planning image"
+  },
+  "home.workbench.alt": {
+    "he": "גליון תכנון והדמיה של שולחן עבודה: מבטים, מידות, חיבורים ופריסת חלקים",
+    "en": "Workbench planning and rendering sheet: views, dimensions, joints and a component layout"
+  },
+  "home.crib.alt": {
+    "he": "הדמיה של מיטת תינוק מעץ לצד מיטת ההורים, עם עיטורי ירח וצמחים",
+    "en": "Rendering of a wooden bedside crib with moon and plant decorations"
+  },
+  "home.etrog.alt": {
+    "he": "תכנון והדמיה של קופסה מהודרת לאתרוג: מכסה מעוטר, פינות מעוגלות, מבטים ופרטי חיבור",
+    "en": "Planning and rendering of an ornate etrog box: a decorative lid, rounded corners, views and joint details"
+  },
+  "home.megillah.alt": {
+    "he": "הדמיה של כיסוי מהודר למגילת אסתר מעץ מעוטר, במצב פתוח וסגור, עם פרטי המכסה וצירי העץ",
+    "en": "Rendering of an ornate wooden Esther scroll case, open and closed, with lid and wooden hinge details"
+  },
+  "home.badge.size": {
+    "he": "בהתאמה אישית",
+    "en": "MADE TO SIZE"
+  },
+  "home.badge.development": {
+    "he": "בפיתוח",
+    "en": "IN DEVELOPMENT"
+  },
+  "home.card.project": {
+    "he": "לסיפור המוצר ←",
+    "en": "VIEW PROJECT →"
+  },
+  "home.card.planning": {
+    "he": "לצפייה בתכנון ←",
+    "en": "VIEW PLANNING →"
+  },
+  "home.about.title": {
+    "he": "הרכבה<br>כדרך עיצוב.",
+    "en": "Assembly<br>as design."
+  },
+  "home.about.copy": {
+    "he": "אנחנו לא מוסיפים הנדסה אחרי שהמוצר כבר עוצב. <strong>ההנדסה היא הדרך שבה המוצר מקבל צורה.</strong> כל קו, חריץ וחיבור נבדקים במודל לפני שהם הופכים לחלק פיזי.",
+    "en": "Engineering is built into the design from the start. <strong>It is how the product takes shape.</strong> Every line, slot and joint is checked in the model before becoming a physical part."
+  },
+  "home.contact.title": {
+    "he": "התאימו.<br>תכננו.<br>הרכיבו.",
+    "en": "Adapt it.<br>Design it.<br>Assemble it."
+  },
+  "home.contact.copy": {
+    "he": "רוצים לברר על מוצר או להתאים אותו למידות שלכם? בחרו דגם, כמות ומידות רצויות, ונבדוק את אפשרויות הייצור וההתאמה לקראת הצעת מחיר.",
+    "en": "Interested in a product or need custom dimensions? Choose a design, quantity and desired dimensions, and we will review production and customization options for a quote."
+  },
+  "home.footer": {
+    "he": "ASSEMBLE LAB / עיצוב · הנדסה · ייצור",
+    "en": "ASSEMBLE LAB / DESIGN · ENGINEERING · FABRICATION"
+  },
+  "home.hero.stages": {
+    "he": "<bdi dir=\"ltr\">01</bdi> הדמיה · <bdi dir=\"ltr\">02</bdi> חיתוך בלייזר · <bdi dir=\"ltr\">03</bdi> רגליים · <bdi dir=\"ltr\">04</bdi> שלדה מורכבת",
+    "en": "01 Rendering · 02 Laser cutting · 03 Legs · 04 Assembled frame"
+  }
+}
+</script>
 <link rel="stylesheet" href="assets/language.css">
 <script src="assets/language.js"></script>
 </head>
@@ -84,7 +347,7 @@ html[lang="he"] .contact h2{direction:rtl}
   <p class="hero-note" data-i18n="home.hero.note">אפשר להתאים את המידות לחלל ולשימוש.</p>
   <div class="hero-actions"><a class="cta-primary" href="#products" data-i18n="home.hero.products">לצפייה במוצרים ←</a><a class="cta-secondary" href="#contact" data-i18n="home.hero.custom">התאמה אישית ←</a></div>
  </div>
- <figure class="hero-photo"><div class="hero-media"><img src="assets/geometric-process-preview-v2.png" width="1536" height="1024" fetchpriority="high" alt="ארבעה שלבים בתהליך Geometric: הדמיית הרגליים, חיתוך בלייזר, הרגליים לאחר החיתוך ושלדת השולחן מורכבת ללא הפלטה העליונה" data-i18n-alt="home.hero.alt"></div><figcaption data-i18n="home.hero.caption">GEOMETRIC / מהתכנון להרכבה</figcaption></figure>
+ <figure class="hero-photo"><div class="hero-media"><img src="assets/geometric-process-preview-clean.webp" width="1536" height="1024" fetchpriority="high" alt="ארבעה שלבים בתהליך Geometric: הדמיית הרגליים, חיתוך בלייזר, הרגליים לאחר החיתוך ושלדת השולחן מורכבת ללא הפלטה העליונה" data-i18n-alt="home.hero.alt"></div><figcaption data-i18n="home.hero.caption">GEOMETRIC / מהתכנון להרכבה</figcaption><p class="image-explanation" data-i18n-html="home.hero.stages"><bdi dir="ltr">01</bdi> הדמיה · <bdi dir="ltr">02</bdi> חיתוך בלייזר · <bdi dir="ltr">03</bdi> רגליים · <bdi dir="ltr">04</bdi> שלדה מורכבת</p></figure>
 </section>
 <section class="made-to-size" id="made-to-size"><div><p class="kicker" data-i18n="home.size.kicker">התאמה אישית / מידות לפי הצורך</p><h2 data-i18n="home.size.title" data-i18n-html>מתוכנן להתאים.<br>הנדסה שמאפשרת שינוי.</h2></div><p data-i18n="home.size.copy" data-i18n-html><strong>כל דגם יכול להתחיל ממידות הבסיס ולהיות מותאם לחלל ולשימוש.</strong> ההתאמה נעשית דרך התכנון עצמו — מידות, מבנה וחיבורים — בהתאם לחומר ולאילוצי הייצור.</p></section>
 <section class="collection" id="products"><div class="collection-head"><div><p class="kicker" data-i18n="home.collection.kicker">מוצרים / הקולקציה</p><h2 data-i18n="home.collection.title" data-i18n-html>בחרו אובייקט.<br>היכנסו לתהליך.</h2></div><p data-i18n="home.collection.copy">כל מוצר מקבל עמוד משלו — עם תמונות, תכנון, חיתוך והרכבה. דף הבית נשאר חלון ראווה נקי; הסיפור המלא נמצא בפנים.</p></div>
@@ -92,11 +355,11 @@ html[lang="he"] .contact h2{direction:rtl}
 <a class="product featured" href="geometric/" aria-label="פתיחת עמוד Geometric" data-i18n-aria-label="home.geometric.link"><div class="product-media"><img src="assets/geometric-hero.webp" alt="שולחן הקפה Geometric" data-i18n-alt="home.geometric.alt"><div class="product-badges"><span class="tag" data-i18n="home.geometric.tag">מוצר 01 / שולחן</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div><span class="open" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" focusable="false"><path d="M5 15 15 5M5 5h10v10"/></svg></span></div><div class="product-copy"><div><div class="product-no" data-language-fixed>01 / GEOMETRIC</div><h3 data-i18n="home.geometric.title" data-language-fixed>GEOMETRIC</h3><p data-i18n="home.geometric.copy">שולחן קפה שבו הצורה, המבנה וההרכבה מתוכננים כמערכת גאומטרית אחת.</p></div><span class="view" data-i18n="home.card.project">לסיפור המוצר ←</span></div></a>
 <a class="product" href="shelf/kids/" aria-label="פתיחת עמוד Kids Shelf" data-i18n-aria-label="home.kids.link"><div class="product-media"><div class="sprite kids" role="img" aria-label="מדף לילדים לאחר גימור" data-i18n-aria-label="home.kids.alt"></div><div class="product-badges"><span class="tag" data-i18n="home.kids.tag">מוצר 02 / מדף קיר</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div><span class="open" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" focusable="false"><path d="M5 15 15 5M5 5h10v10"/></svg></span></div><div class="product-copy"><div><div class="product-no" data-language-fixed>02 / KIDS SHELF</div><h3 data-i18n="home.kids.title">מדף לילדים / 700</h3><p data-i18n="home.kids.copy">מדף קיר קומפקטי שבו המבנה, ההתקנה והגרפיקה נפתרו כמערכת אחת.</p></div><span class="view" data-i18n="home.card.project">לסיפור המוצר ←</span></div></a>
 <a class="product" href="driller_stand/" aria-label="פתיחת עמוד Driller Stand" data-i18n-aria-label="home.driller.link"><div class="product-media"><div class="sprite driller" role="img" aria-label="מעמד למקדחה לאחר גימור" data-i18n-aria-label="home.driller.alt"></div><div class="product-badges"><span class="tag" data-i18n="home.driller.tag">מוצר 03 / סדנה</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div><span class="open" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" focusable="false"><path d="M5 15 15 5M5 5h10v10"/></svg></span></div><div class="product-copy"><div><div class="product-no" data-language-fixed>03 / DRILLER STAND</div><h3 data-i18n="home.driller.title">מעמד למקדחה / V364</h3><p data-i18n="home.driller.copy">מעמד מודולרי עם קורות, מדפים וחיבורים גלויים — מתכנון הייצור ועד לשימוש בפועל.</p></div><span class="view" data-i18n="home.card.project">לסיפור המוצר ←</span></div></a>
-<a class="product" href="shoe_rack/" aria-label="פתיחת עמוד מעמד נעליים Version A" data-i18n-aria-label="home.shoe.link"><div class="product-media"><img src="shoe_rack/shoe_rack_planning.webp" alt="מעמד נעליים גרסה A — תמונת תכנון" data-i18n-alt="home.shoe.alt"><div class="product-badges"><span class="tag" data-i18n="home.shoe.tag">מוצר 04 / אחסון נעליים</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div><span class="open" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" focusable="false"><path d="M5 15 15 5M5 5h10v10"/></svg></span></div><div class="product-copy"><div><div class="product-no" data-language-fixed>04 / SHOE RACK</div><h3 data-i18n="home.shoe.title">מעמד נעליים / גרסה A</h3><p data-i18n="home.shoe.copy">מעמד נעליים עם שלושה מדפים, מושב עליון וחיזוקים פנימיים — מתוכנן כמערכת חיתוך והרכבה מדויקת.</p></div><span class="view" data-i18n="home.card.project">לסיפור המוצר ←</span></div></a>
-<a class="product product--planning" href="workbench/" aria-label="פתיחת עמוד שולחן העבודה — מוצר בפיתוח" data-i18n-aria-label="home.workbench.link"><div class="product-media"><img src="workbench/workbench-planning.png" width="1536" height="1024" loading="lazy" alt="גליון תכנון והדמיה של שולחן עבודה: מבטים, מידות, חיבורים ופריסת חלקים" data-i18n-alt="home.workbench.alt"><div class="product-badges"><span class="tag" data-i18n="home.badge.development">בפיתוח</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div></div><div class="product-copy"><div><div class="product-no" data-language-fixed>05 / WORKBENCH</div><h3 data-i18n="home.workbench.title">שולחן עבודה</h3><p data-i18n="home.workbench.copy">שולחן עבודה בפיתוח, עם חיזוקים אלכסוניים וחיבורים גלויים. גליון התכנון מציג את המבנה, המידות ופרטי ההרכבה.</p></div><span class="view" data-i18n="home.card.planning">לצפייה בתכנון ←</span></div></a>
+<a class="product" href="shoe_rack/" aria-label="פתיחת עמוד מעמד נעליים Version A" data-i18n-aria-label="home.shoe.link"><div class="product-media"><img src="shoe_rack/shoe-rack-planning-clean.webp" alt="מעמד נעליים גרסה A — תמונת תכנון" data-i18n-alt="home.shoe.alt"><div class="product-badges"><span class="tag" data-i18n="home.shoe.tag">מוצר 04 / אחסון נעליים</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div><span class="open" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" focusable="false"><path d="M5 15 15 5M5 5h10v10"/></svg></span></div><div class="product-copy"><div><div class="product-no" data-language-fixed>04 / SHOE RACK</div><h3 data-i18n="home.shoe.title">מעמד נעליים / גרסה A</h3><p data-i18n="home.shoe.copy">מעמד נעליים עם שלושה מדפים, מושב עליון וחיזוקים פנימיים — מתוכנן כמערכת חיתוך והרכבה מדויקת.</p></div><span class="view" data-i18n="home.card.project">לסיפור המוצר ←</span></div></a>
+<a class="product product--planning" href="workbench/" aria-label="פתיחת עמוד שולחן העבודה — מוצר בפיתוח" data-i18n-aria-label="home.workbench.link"><div class="product-media"><img src="workbench/workbench-planning-clean.webp" width="1536" height="1024" loading="lazy" alt="גליון תכנון והדמיה של שולחן עבודה: מבטים, מידות, חיבורים ופריסת חלקים" data-i18n-alt="home.workbench.alt"><div class="product-badges"><span class="tag" data-i18n="home.badge.development">בפיתוח</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div></div><div class="product-copy"><div><div class="product-no" data-language-fixed>05 / WORKBENCH</div><h3 data-i18n="home.workbench.title">שולחן עבודה</h3><p data-i18n="home.workbench.copy">שולחן עבודה בפיתוח, עם חיזוקים אלכסוניים וחיבורים גלויים. גליון התכנון מציג את המבנה, המידות ופרטי ההרכבה.</p></div><span class="view" data-i18n="home.card.planning">לצפייה בתכנון ←</span></div></a>
 <a class="product" href="crib/" aria-label="פתיחת עמוד מיטת התינוק — מוצר בפיתוח" data-i18n-aria-label="home.crib.link"><div class="product-media"><img src="crib/crib-hero.png" width="1448" height="1086" loading="lazy" alt="הדמיה של מיטת תינוק מעץ לצד מיטת ההורים, עם עיטורי ירח וצמחים" data-i18n-alt="home.crib.alt"><div class="product-badges"><span class="tag" data-i18n="home.badge.development">בפיתוח</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div><span class="open" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" focusable="false"><path d="M5 15 15 5M5 5h10v10"/></svg></span></div><div class="product-copy"><div><div class="product-no" data-language-fixed>06 / BEDSIDE CRIB</div><h3 data-i18n="home.crib.title">מיטת תינוק</h3><p data-i18n="home.crib.copy">מיטת תינוק בפיתוח, עם לוחות עץ מעוטרים וחיבורים גלויים. ההדמיות מציגות את הרעיון ואת פרטי המבנה.</p></div><span class="view" data-i18n="home.card.planning">לצפייה בתכנון ←</span></div></a>
-<a class="product product--planning" href="etrog_box/" aria-label="פתיחת עמוד קופסה מהודרת לאתרוג — מוצר בפיתוח" data-i18n-aria-label="home.etrog.link"><div class="product-media"><img src="etrog_box/media/planning-decorated.png" width="1448" height="1086" loading="lazy" alt="תכנון והדמיה של קופסה מהודרת לאתרוג: מכסה מעוטר, פינות מעוגלות, מבטים ופרטי חיבור" data-i18n-alt="home.etrog.alt"><div class="product-badges"><span class="tag" data-i18n="home.badge.development">בפיתוח</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div></div><div class="product-copy"><div><div class="product-no" data-language-fixed>07 / ETROG BOX</div><h3 data-i18n="home.etrog.title">קופסה מהודרת לאתרוג</h3><p data-i18n="home.etrog.copy">קופסה מהודרת לאתרוג בפיתוח, עם מכסה מעוטר ופינות מעוגלות. התכנון מציג את המבנה, החיבורים ופריסת חלקי העץ.</p></div><span class="view" data-i18n="home.card.planning">לצפייה בתכנון ←</span></div></a>
-<a class="product product--planning" href="megillat_esther_box/" aria-label="פתיחת עמוד כיסוי מהודר למגילת אסתר — מוצר בפיתוח" data-i18n-aria-label="home.megillah.link"><div class="product-media"><img src="megillat_esther_box/media/product-render.png" width="1536" height="1024" loading="lazy" alt="הדמיה של כיסוי מהודר למגילת אסתר מעץ מעוטר, במצב פתוח וסגור, עם פרטי המכסה וצירי העץ" data-i18n-alt="home.megillah.alt"><div class="product-badges"><span class="tag" data-i18n="home.badge.development">בפיתוח</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div></div><div class="product-copy"><div><div class="product-no" data-language-fixed>08 / MEGILLAH CASE</div><h3 data-i18n="home.megillah.title">כיסוי למגילת אסתר</h3><p data-i18n="home.megillah.copy">כיסוי מהודר למגילת אסתר בפיתוח, עם גוף עץ מעוטר ומכסה מעוגל. ההדמיה והשרטוטים מציגים את העיצוב, המבנה והחיבורים.</p></div><span class="view" data-i18n="home.card.planning">לצפייה בתכנון ←</span></div></a>
+<a class="product product--planning" href="etrog_box/" aria-label="פתיחת עמוד קופסה מהודרת לאתרוג — מוצר בפיתוח" data-i18n-aria-label="home.etrog.link"><div class="product-media"><img src="etrog_box/media/planning-decorated-clean.webp" width="1448" height="1086" loading="lazy" alt="תכנון והדמיה של קופסה מהודרת לאתרוג: מכסה מעוטר, פינות מעוגלות, מבטים ופרטי חיבור" data-i18n-alt="home.etrog.alt"><div class="product-badges"><span class="tag" data-i18n="home.badge.development">בפיתוח</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div></div><div class="product-copy"><div><div class="product-no" data-language-fixed>07 / ETROG BOX</div><h3 data-i18n="home.etrog.title">קופסה מהודרת לאתרוג</h3><p data-i18n="home.etrog.copy">קופסה מהודרת לאתרוג בפיתוח, עם מכסה מעוטר ופינות מעוגלות. התכנון מציג את המבנה, החיבורים ופריסת חלקי העץ.</p></div><span class="view" data-i18n="home.card.planning">לצפייה בתכנון ←</span></div></a>
+<a class="product product--planning" href="megillat_esther_box/" aria-label="פתיחת עמוד כיסוי מהודר למגילת אסתר — מוצר בפיתוח" data-i18n-aria-label="home.megillah.link"><div class="product-media"><img src="megillat_esther_box/media/product-render-clean.webp" width="1536" height="1024" loading="lazy" alt="הדמיה של כיסוי מהודר למגילת אסתר מעץ מעוטר, במצב פתוח וסגור, עם פרטי המכסה וצירי העץ" data-i18n-alt="home.megillah.alt"><div class="product-badges"><span class="tag" data-i18n="home.badge.development">בפיתוח</span><span class="size-tag" data-i18n="home.badge.size">בהתאמה אישית</span></div></div><div class="product-copy"><div><div class="product-no" data-language-fixed>08 / MEGILLAH CASE</div><h3 data-i18n="home.megillah.title">כיסוי למגילת אסתר</h3><p data-i18n="home.megillah.copy">כיסוי מהודר למגילת אסתר בפיתוח, עם גוף עץ מעוטר ומכסה מעוגל. ההדמיה והשרטוטים מציגים את העיצוב, המבנה והחיבורים.</p></div><span class="view" data-i18n="home.card.planning">לצפייה בתכנון ←</span></div></a>
 </div></section>
 <section class="manifesto" id="about"><h2 data-i18n="home.about.title" data-i18n-html>הרכבה<br>כדרך עיצוב.</h2><p data-i18n="home.about.copy" data-i18n-html>אנחנו לא מוסיפים הנדסה אחרי שהמוצר כבר עוצב. <strong>ההנדסה היא הדרך שבה המוצר מקבל צורה.</strong> כל קו, חריץ וחיבור נבדקים במודל לפני שהם הופכים לחלק פיזי.</p></section>
 <section class="contact" id="contact"><h2 data-i18n="home.contact.title" data-i18n-html>התאימו.<br>תכננו.<br>הרכיבו.</h2><div><p data-i18n="home.contact.copy">רוצים לברר על מוצר או להתאים אותו למידות שלכם? בחרו דגם, כמות ומידות רצויות, ונבדוק את אפשרויות הייצור וההתאמה לקראת הצעת מחיר.</p><a class="contact-quote" href="inquiry/" data-i18n="cta.inquiry">בירור והצעת מחיר</a></div></section>

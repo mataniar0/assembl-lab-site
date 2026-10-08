@@ -14,6 +14,8 @@ html[lang="en"] :is([data-i18n],[data-i18n-html]):not([data-language-fixed]){dir
 html[lang="he"] :is(.hero-content,.copy,.panel,.custom-size-copy){direction:rtl;text-align:start}
 html[lang="en"] :is(.hero-content,.copy,.panel,.custom-size-copy,.adapt-link){direction:ltr;text-align:start}
 [data-language-fixed]{direction:ltr;unicode-bidi:isolate}
+.image-explanation{margin:10px 0 0;font-size:13px;font-weight:400;line-height:1.7;letter-spacing:normal;color:var(--muted,#64685f);text-align:start}
+figcaption .image-explanation{flex-basis:100%;width:100%}
 @media(max-width:780px){
  header.header,header.top{height:auto;min-height:64px;padding-block:8px;flex-wrap:wrap;gap:8px 12px}
  header.header>.language-switch,header.top>.language-switch{flex-basis:100%;width:100%;justify-content:flex-end;border:0;background:transparent}
