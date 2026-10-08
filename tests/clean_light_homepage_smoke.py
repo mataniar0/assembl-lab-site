@@ -1,5 +1,5 @@
 """Run all four requested widths in Hebrew/English, including accessibility and navigation."""
-import argparse,json
+import argparse,json,hashlib
 from pathlib import Path
 from homepage_smoke import site_url,check_page
 from playwright.sync_api import sync_playwright
@@ -24,7 +24,16 @@ with site_url(None) as base,sync_playwright() as p:
     for e in page.locator('.product-media').all():
      assert e.evaluate('e=>{const r=e.getBoundingClientRect();return Math.abs(r.width/r.height-4/3)<0.02}')
     # The sixth physical sprite panel was rejected; use the approved fifth.
-    assert page.locator('.kids').evaluate('e=>getComputedStyle(e).backgroundPositionY') == '80%'
+    # Approved content pins: derivatives select source pixels (0,3000)-(1000,3750), the fifth panel.
+    root=Path(__file__).resolve().parents[1]
+    assert hashlib.sha256((root/'shelf/kids/kids_shelf_story_clean.webp').read_bytes()).hexdigest() == '5aca9863aed4aa7e72d4ee65f19b4cec3fd019d9b2a1444d7d93d3825d226773'
+    for width, digest in {'480': 'b893d983d28ad3b2bb4b1e9294b098cbfa1031de6f38509a65c6c269c0f498a1', '960': 'b391e4d04e0250e9931aabc14b832c3cfdd7ba10924f70c93d8cf1f087cd3a8d'}.items():
+     assert hashlib.sha256((root/f'assets/cards/kids-{width}.webp').read_bytes()).hexdigest() == digest
+    assert page.locator('.product[href="shelf/kids/"] img').get_attribute('src') == 'assets/cards/kids-480.webp'
+    # The product carousel must still expose exactly the approved five stages.
+    shelf=page.request.get(base+'shelf/kids/').text()
+    assert shelf.count('data-pos="') == 5 and 'data-pos="80%"' in shelf and 'data-pos="100%"' not in shelf
+    assert page.locator('.product-media img').count() == 8
     for e in page.locator('.product-focus,.sprite').all():
      url=e.evaluate('e=>getComputedStyle(e).backgroundImage.slice(5,-2)');response=page.request.get(url);assert response.ok
     if w in (390,1440):

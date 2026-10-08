@@ -48,7 +48,7 @@ class Document(HTMLParser):
             self.ids.add(attrs["id"])
         if tag == "a" and attrs.get("name"):
             self.ids.add(attrs["name"])
-        for key in ("src", "href", "poster"):
+        for key in ("src", "href", "poster", "data-src"):
             if attrs.get(key):
                 self.refs.append(attrs[key])
         if tag == "a" and attrs.get("href"):
@@ -181,7 +181,10 @@ class Session:
         require(response and response.status == 200, f"Page did not return HTTP 200: {route or '/'}")
         self.page.wait_for_function("Boolean(window.ASSEMBLE_I18N)")
         self.page.evaluate("""async () => {
-            document.querySelectorAll('img').forEach(image => image.loading = 'eager');
+            document.querySelectorAll('img').forEach(image => {
+                if (image.dataset.src) {image.src = image.dataset.src; delete image.dataset.src;}
+                image.loading = 'eager';
+            });
             await Promise.all([...document.images].map(image => image.decode().catch(() => {})));
         }""")
 
