@@ -1,5 +1,6 @@
 /* Shared language controls. Technical drawings and carousel images keep their
    source orientation; translated text follows the chosen reading direction. */
+html[data-language-pending] body{visibility:hidden}
 header.header,header.top{gap:16px;direction:ltr}
 header.header>nav{margin-inline-start:auto}
 .language-switch{display:flex;flex:none;gap:0;direction:ltr;align-items:center;border:1px solid var(--ink,#141713);background:var(--paper,#f3f1eb)}
@@ -17,6 +18,7 @@ html[lang="en"] :is(.hero-content,.copy,.panel,.custom-size-copy,.adapt-link){di
 .image-explanation{margin:10px 0 0;font-size:13px;font-weight:400;line-height:1.7;letter-spacing:normal;color:var(--muted,#64685f);text-align:start}
 figcaption .image-explanation{flex-basis:100%;width:100%}
 @media(max-width:780px){
+ :root{--site-header-height:112px}
  header.header,header.top{height:auto;min-height:64px;padding-block:8px;flex-wrap:wrap;gap:8px 12px}
  header.header>.language-switch,header.top>.language-switch{flex-basis:100%;width:100%;justify-content:flex-end;border:0;background:transparent}
  .language-switch button{border:1px solid var(--ink,#141713)}

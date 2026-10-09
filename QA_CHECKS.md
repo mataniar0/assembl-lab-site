@@ -36,6 +36,18 @@ The hook's code is tracked in Git; enabling it is a local setting that must be r
 
 These are basic functioning checks. Visual review and the existing comprehensive language/mobile suites remain useful for changes to design or behavior. Intentional design changes do not require updating this generic smoke suite's visual expectations.
 
+## Language loading and layout stability
+
+For changes to language initialization or header layout, also run:
+
+```sh
+python tests/language_stability_smoke.py --report .qa-reports/language-stability.json
+```
+
+This separate regression suite deliberately delays `DOMContentLoaded` so the body paints before the remaining initialization. It checks reserved language controls, translation of the saved language before initialization, stable header/content boundaries and accessible language switching on all 12 pages at 320, 390, 780, 781, 844 and 1440px. Additional cases pause body parsing to check the saved-English first-paint guard, delay the language script and exercise scrolling, anchor visibility, carousel/open-section state and inquiry drafts. Every non-read request is intercepted; no real inquiry is sent.
+
+This is separate from the small automatic pre-push gate. `--base-url`, `--widths`, `--paths`, `--languages` and `--loading-only` allow focused diagnosis without weakening assertions. Saved-language text is translated at the end of each document, before delayed readiness; the regular readiness handler still connects the controls and synchronizes other components.
+
 ## Verify the hook itself
 
 For changes to the QA tooling, run the separate integration proof after committing the changes:

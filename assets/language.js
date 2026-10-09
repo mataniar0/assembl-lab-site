@@ -51,6 +51,9 @@
     document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
   }
   applyDocumentLanguage();
+  // Saved English is revealed once the parsed body has been translated.
+  // Hebrew and browsing without JavaScript keep their normal first paint.
+  if (lang === 'en') document.documentElement.setAttribute('data-language-pending', '');
   function updateHeaderHeight() {
     const header = document.querySelector('header.header,header.top');
     if (header) document.documentElement.style.setProperty(
@@ -75,6 +78,7 @@
       });
     }
     updateHeaderHeight();
+    document.documentElement.removeAttribute('data-language-pending');
   }
   function setLanguage(next) {
     if (next !== 'he' && next !== 'en') return;
@@ -110,11 +114,16 @@
         button.lang = value;
         button.dir = value === 'he' ? 'rtl' : 'ltr';
         button.textContent = label;
-        button.addEventListener('click', () => setLanguage(value));
         toolbar.append(button);
       }
       header.append(toolbar);
     }
+    // Controls are present in the HTML so the header reserves their space on
+    // first paint. Bind the same controls for static pages and the fallback.
+    if (header) header.querySelectorAll('.language-switch button[data-language]').forEach(button => {
+      button.addEventListener('click', () => setLanguage(button.dataset.language));
+      button.disabled = false;
+    });
     translate();
     // Inline carousel code executes before DOMContentLoaded and can use t().
     // Notify listeners after static text has been translated as well.
