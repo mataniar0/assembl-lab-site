@@ -35,11 +35,11 @@ html[lang="en"] .adapt-link{direction:ltr}
 .copy{direction:inherit}.gallery .panel{direction:rtl}html[lang="en"] .gallery .panel{direction:ltr}
 .story-head h2,.future h2,.copy h3{line-height:1.1}
 #carousel-note{font-size:13px;line-height:1.6;margin:12px 0 0}
-.viewer{padding:0;touch-action:pan-y}.slide{position:absolute;inset:0;display:none;place-items:center;padding:18px}.slide.active{display:grid}.slide.cutting{padding-bottom:66px}.slide img{min-width:0;min-height:0}.viewer.layout-cutting{aspect-ratio:auto;height:clamp(360px,70vh,620px)}
+.viewer{padding:0;touch-action:pan-y}.slide{position:absolute;inset:0;display:none;place-items:center;padding:18px}.slide.active{display:grid}.slide.cutting{position:relative;inset:auto;width:100%;padding:54px 18px 66px}.slide img{min-width:0;min-height:0}.viewer.layout-cutting{aspect-ratio:auto;height:auto;align-self:start}
 .arrow{opacity:1;cursor:pointer;touch-action:manipulation}.arrow:disabled{opacity:.45;cursor:default}.arrow:active{background:var(--ink);color:var(--paper)}
 .nav{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);direction:inherit}.step{font:inherit;min-width:0;min-height:64px;border:0;background:transparent;padding:12px;cursor:pointer;text-align:start}.step+ .step{border-inline-start:1px solid var(--line)}.step small{display:block;font-size:11px;color:var(--muted)}.step b{display:block;font-size:14px}.step.active{background:#fff;box-shadow:inset 0 -3px var(--signal)}.step:focus-visible{outline:3px solid var(--ink);outline-offset:-3px}
-.gallery-image-open{display:inline-flex;align-items:center;min-width:44px;min-height:44px;font-size:13px;text-decoration:underline;text-underline-offset:4px;margin-top:10px}.no-script-photo{margin:24px 0}.no-script-photo img{width:100%;max-height:620px;object-fit:contain}.no-script-photo figcaption{margin-top:12px}
-@media(max-width:640px){.slide{padding:8px}.slide.cutting{padding:8px 8px 66px}}
+.gallery-image-open{display:inline-flex;align-items:center;min-width:44px;min-height:44px;font-size:13px;text-decoration:underline;text-underline-offset:4px;margin-top:10px}.no-script-photo{margin:24px 0}.landscape-frame{position:relative;width:100%;aspect-ratio:16/9}.landscape-frame img{position:absolute;top:50%;left:50%;width:56.25%;height:177.7778%;min-width:0;min-height:0;max-width:none;max-height:none;object-fit:contain;transform:translate(-50%,-50%) rotate(-90deg)}.no-script-photo figcaption{margin-top:12px}
+@media(max-width:640px){.slide{padding:8px}.slide.cutting{padding:54px 8px 66px}}
 @media(max-width:640px){html[lang="he"] .hero h1{font-size:clamp(38px,11vw,60px)}}
 </style>
 <script type="application/json" id="page-translations">{
@@ -241,7 +241,7 @@ html[lang="en"] .adapt-link{direction:ltr}
 </details><div class="gallery" tabindex="0" role="region" aria-label="שלבי התכנון והבנייה" data-i18n-aria-label="carousel.label">
 <div class="viewer">
   <div class="slide active" aria-hidden="false"><img src="shoe-rack-planning-clean.webp" alt="שלב 01 — תכנון מעמד הנעליים" data-i18n-alt="shoe.story.alt" width="1200" height="900" loading="lazy" decoding="async"></div>
-  <div class="slide cutting" aria-hidden="true"><img data-src="media/shoe-rack-cutting-1080.webp" data-srcset="media/shoe-rack-cutting-540.webp 540w, media/shoe-rack-cutting-1080.webp 1080w" sizes="350px" alt="שלב 02 — המכונה חותכת חלקים למעמד הנעליים בלוח דיקט" data-i18n-alt="shoe.cutting.alt" width="1080" height="1920" loading="lazy" decoding="async"></div>
+  <div class="slide cutting" aria-hidden="true"><div class="landscape-frame"><img data-src="media/shoe-rack-cutting-1080.webp" data-srcset="media/shoe-rack-cutting-540.webp 540w, media/shoe-rack-cutting-1080.webp 1080w" sizes="(max-width:640px) calc(56.25vw - 28px), (max-width:900px) calc(50.625vw - 21px), (max-width:1440px) calc(36.71vw - 21px), 540px" alt="שלב 02 — המכונה חותכת חלקים למעמד הנעליים בלוח דיקט" data-i18n-alt="shoe.cutting.alt" width="1080" height="1920" loading="lazy" decoding="async"></div></div>
   <div class="badge">01 / תכנון</div><div class="progress"><span>01</span> / 02</div>
   <div class="carousel-arrows" aria-label="ניווט קרוסלה" data-i18n-aria-label="shoe.carousel.label"><button class="arrow prev" type="button" aria-label="התמונה הקודמת" data-i18n-aria-label="shoe.carousel.previous" disabled>←</button><button class="arrow next" type="button" aria-label="התמונה הבאה" data-i18n-aria-label="shoe.carousel.next" disabled>→</button></div>
 </div>
@@ -251,7 +251,7 @@ html[lang="en"] .adapt-link{direction:ltr}
   <button class="step" type="button" data-title-key="shoe.cutting.title" data-label-key="shoe.story.cutting" data-desc-key="shoe.cutting.detail" data-full-size="media/shoe-rack-cutting-original.jpeg" aria-pressed="false" disabled><small data-language-fixed>02</small><b data-i18n="shoe.cutting.title">חיתוך</b></button>
 </div><div class="stage"><small data-i18n="shoe.stage.current">השלב הנבחר</small><b data-i18n="shoe.stage.pending">תכנון וחיתוך מתועדים · הרכבה וגימור בהמשך</b></div></div>
 </div>
-<noscript><figure class="no-script-photo"><img src="media/shoe-rack-cutting-1080.webp" alt="שלב 02 — המכונה חותכת חלקים למעמד הנעליים בלוח דיקט" width="1080" height="1920" loading="lazy"><figcaption>02 / חיתוך — צילום מהסדנה. <a class="gallery-image-open" href="media/shoe-rack-cutting-original.jpeg" target="_blank" rel="noopener">פתיחת התמונה בגודל מלא</a></figcaption></figure></noscript>
+<noscript><figure class="no-script-photo"><div class="landscape-frame"><img src="media/shoe-rack-cutting-1080.webp" alt="שלב 02 — המכונה חותכת חלקים למעמד הנעליים בלוח דיקט" width="1080" height="1920" loading="lazy"></div><figcaption>02 / חיתוך — צילום מהסדנה. <a class="gallery-image-open" href="media/shoe-rack-cutting-original.jpeg" target="_blank" rel="noopener">פתיחת התמונה בגודל מלא</a></figcaption></figure></noscript>
 </section>
 <details class="product-details"><summary data-i18n="disclosure.future">המשך תהליך הייצור</summary><section class="future"><h2 data-i18n="shoe.future.title" data-i18n-html>השלב הבא:<br>הרכבה.</h2><p data-i18n="shoe.future.copy">לאחר תכנון וחיתוך החלקים, התהליך ממשיך להרכבה ולגימור. תמונות של השלבים הבאים ושל המוצר המורכב יתווספו כאן כשיהיו זמינות.</p></section>
 </details></main>
@@ -283,7 +283,7 @@ html[lang="en"] .adapt-link{direction:ltr}
     const image=slides[active].querySelector('img');
     if(image.dataset.srcset){image.srcset=image.dataset.srcset;delete image.dataset.srcset;}
     window.ASSEMBLE_MEDIA.load(slides[active]);
-    // Reserve the complete portrait frame before the image arrives.
+    // Reserve the landscape frame before the source image arrives.
     viewer.classList.toggle('layout-cutting',active===1);
     const step=steps[active], label=window.ASSEMBLE_I18N.t(step.dataset.labelKey);
     gallery.querySelector('.badge').textContent=label;

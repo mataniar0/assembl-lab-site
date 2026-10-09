@@ -63,21 +63,54 @@ IMAGE_CHECK = """async () => {
         if (!img.complete || !img.naturalWidth || !img.naturalHeight) {
             failures.push('Broken image: ' + label); continue;
         }
-        const ratioError = Math.abs(r.width / r.height / (img.naturalWidth / img.naturalHeight) - 1);
+        // getBoundingClientRect swaps axes after a quarter-turn. Object-fit
+        // operates in the original content box, before the CSS transform.
+        const matrix = new DOMMatrix(s.transform === 'none' ? undefined : s.transform);
+        const quarterTurn = Math.abs(matrix.a) < 1e-6 && Math.abs(matrix.d) < 1e-6 &&
+            Math.abs(matrix.b) > 0 && Math.abs(matrix.c) > 0;
+        const axisAligned = Math.abs(matrix.b) < 1e-6 && Math.abs(matrix.c) < 1e-6;
+        if (!matrix.is2D || (!quarterTurn && !axisAligned)) {
+            failures.push('Unsupported image transform: ' + label); continue;
+        }
+        let contentWidth=r.width, contentHeight=r.height, transformScale=1;
+        if (quarterTurn) {
+            const horizontal=parseFloat(s.paddingLeft)+parseFloat(s.paddingRight)+
+                parseFloat(s.borderLeftWidth)+parseFloat(s.borderRightWidth);
+            const vertical=parseFloat(s.paddingTop)+parseFloat(s.paddingBottom)+
+                parseFloat(s.borderTopWidth)+parseFloat(s.borderBottomWidth);
+            const cssWidth=parseFloat(s.width), cssHeight=parseFloat(s.height);
+            contentWidth=cssWidth-(s.boxSizing==='border-box' ? horizontal : 0);
+            contentHeight=cssHeight-(s.boxSizing==='border-box' ? vertical : 0);
+            const borderWidth=cssWidth+(s.boxSizing==='border-box' ? 0 : horizontal);
+            const borderHeight=cssHeight+(s.boxSizing==='border-box' ? 0 : vertical);
+            if (Math.abs(r.width-borderHeight*Math.abs(matrix.c))>1 ||
+                Math.abs(r.height-borderWidth*Math.abs(matrix.b))>1)
+                failures.push('Unsupported ancestor image transform: ' + label);
+            if (s.objectPosition!=='50% 50%' ||
+                s.paddingLeft!==s.paddingRight || s.paddingTop!==s.paddingBottom ||
+                s.borderLeftWidth!==s.borderRightWidth || s.borderTopWidth!==s.borderBottomWidth)
+                failures.push('Unsupported rotated image alignment: ' + label);
+            const sx=Math.hypot(matrix.a,matrix.b), sy=Math.hypot(matrix.c,matrix.d);
+            if (Math.abs(sx/sy-1)>.02) failures.push('Image transform stretches pixels: ' + label);
+            transformScale=Math.max(sx,sy);
+        }
+        const ratioError = Math.abs(contentWidth / contentHeight / (img.naturalWidth / img.naturalHeight) - 1);
         if (ratioError > .02 && s.objectFit !== 'contain')
             failures.push('Image stretched or cropped: ' + label);
         const scale = s.objectFit === 'contain'
-            ? Math.min(r.width/img.naturalWidth, r.height/img.naturalHeight)
-            : Math.max(r.width/img.naturalWidth, r.height/img.naturalHeight);
-        if (scale > 1.01) failures.push('Image exceeds source resolution: ' + label);
+            ? Math.min(contentWidth/img.naturalWidth, contentHeight/img.naturalHeight)
+            : Math.max(contentWidth/img.naturalWidth, contentHeight/img.naturalHeight);
+        if (scale*transformScale > 1.01) failures.push('Image exceeds source resolution: ' + label);
         // object-fit can be correct while an implicit grid row makes the IMG
         // taller than its clipped viewer. Check the actual centered content.
-        const drawnWidth=img.naturalWidth*scale, drawnHeight=img.naturalHeight*scale;
+        const rawWidth=img.naturalWidth*scale, rawHeight=img.naturalHeight*scale;
+        const drawnWidth=quarterTurn ? Math.abs(matrix.a)*rawWidth+Math.abs(matrix.c)*rawHeight : rawWidth;
+        const drawnHeight=quarterTurn ? Math.abs(matrix.b)*rawWidth+Math.abs(matrix.d)*rawHeight : rawHeight;
         const drawn={
             left:r.left+(r.width-drawnWidth)/2, right:r.left+(r.width+drawnWidth)/2,
             top:r.top+(r.height-drawnHeight)/2, bottom:r.top+(r.height+drawnHeight)/2
         };
-        const frame=img.closest('.slide,.viewer,.hero-media,.product-media');
+        const frame=img.closest('.landscape-frame,.slide,.viewer,.hero-media,.product-media');
         if (frame) {
             const f=frame.getBoundingClientRect();
             if (drawn.left < f.left-1 || drawn.right > f.right+1 ||
