@@ -9,3 +9,9 @@ During editing, run `python scripts/check_site.py` for the generic functioning c
 Keep the generic smoke checks independent of colors, titles, grid columns and intentional image crops. Add or update a meaningful check when functionality changes. Design review and the existing comprehensive suites are separate from the minimal gate.
 
 Form tests must intercept requests and must never send a real inquiry or email.
+
+# Delegated work and agent review
+
+For delegated implementation tasks, push a work branch and hand off the exact commit, validation results, limitations and correction counts to the coordinating reviewer. The reviewer checks that commit independently before merging to `main` and verifies the published site. Follow the user's explicit instructions if they assign a different publication workflow.
+
+Include an evidence-based agent score and actionable improvement feedback in completed reviews, using [AGENT_REVIEW.md](AGENT_REVIEW.md). Record reviews in [AGENT_REVIEWS.md](AGENT_REVIEWS.md). Keep first-submission and agent-revised scores separate; do not credit reviewer-authored repairs to the implementation agent. Environment blockers and unchecked work are not implementation failures and must not receive invented numerical scores.
