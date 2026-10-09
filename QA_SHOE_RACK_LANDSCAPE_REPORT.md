@@ -75,8 +75,20 @@ The implementation agent personally viewed the Hebrew 390×844, English 1440×90
 
 - Self-review application correction rounds: **0**.
 - Root preflight correction rounds: **0**.
-- Revisions after formal review: **0**.
+- Revisions after formal review: **1** (no-JS DPR2 density cap, described below).
 - Root-authored code repairs: **0**.
 - Test-harness corrections in this task: **0**.
 
-The two corrections recorded for the earlier photograph-addition task are not counted again. All checks above ran against the final landscape implementation before the first ready handoff. Tests used Chromium rather than a physical mobile device. The full-size original intentionally retains its original file orientation; only website display orientation changed.
+The two corrections recorded for the earlier photograph-addition task are not counted again. All original checks above ran against the first-ready landscape implementation before handoff; the targeted formal-revision validation is recorded below. Tests used Chromium rather than a physical mobile device. The full-size original intentionally retains its original file orientation; only website display orientation changed.
+
+## Formal revision 1 — no-JS DPR2 source density
+
+First-ready commit: `7b5fde839d4fbabb072aa865ab4120e28ee4cf0a`. The independent reviewer found that the uncapped no-JS fallback at 1440px rendered a 1296×729 frame. At DPR2 this requires 2592×1458 displayed pixels from a preserved 1920×1080 rotated source, about 35% enlargement. The normal JavaScript gallery and all other review cases passed.
+
+The only application repair caps `.no-script-photo .landscape-frame` at **960px**, centered with automatic inline margins. Mobile width remains 100%, rotation and full-frame containment are unchanged, and all three image files remain untouched. The 960×540 fallback now requires exactly the available 1920×1080 source pixels at DPR2.
+
+Targeted no-JS validation: **9 passed, 0 failed**, covering Hebrew-default 320×568, 390×844, 844×390 and 1440×900 at DPR1 and DPR2, plus an expected-negative regression proof. Each positive case checks actual transformed image bounds, 16:9 geometry, CCW90 orientation, centering, full-size link, disabled inactive controls, strict clipping/layout assertions and physical pixels against available source pixels. The negative case removes the cap only in browser memory and confirms that the same physical-pixel assertion rejects the old 1296×729 DPR2 fallback. No production code or asset was altered by that probe.
+
+Evidence: `/tmp/shoe-rack-landscape-implementation-qa/nojs-density-revision/report.json`, matching `nojs-he-{width}x{height}-dpr{1|2}.png` screenshots and `/tmp/shoe-landscape-nojs-density-revision.log`. The implementation agent visually checked the final 1440px no-JS screenshot. **0 real submissions.**
+
+New-task totals: self-review 0, root preflight 0, **formal revision 1**, root-authored code repairs 0, test-harness corrections 0. The previous photograph-addition task's correction counts remain separate. The unchanged JavaScript gallery/common helper did not require a full 140-case rerun; normal revised-commit push supplies the mandatory exact-commit 61-case gate, with SHA/outcome in the revised handoff. Root owns first-ready/revised scores and review metadata.
