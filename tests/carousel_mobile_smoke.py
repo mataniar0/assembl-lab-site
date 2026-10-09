@@ -74,16 +74,10 @@ def check_page(browser, base_url, path, viewport):
         for arrow in (previous, following):
             assert_arrow_reachable(page, arrow)
 
-        if path == "shoe_rack/":
-            for arrow in (previous, following):
-                assert arrow.is_disabled(), "Single-image navigation must be disabled"
-                description = arrow.get_attribute("aria-describedby")
-                assert description and page.locator("#" + description).inner_text().strip()
-            return 0
-
         steps = page.locator(".step")
         count = steps.count()
-        assert count > 1
+        assert count == {"geometric/": 6, "driller_stand/": 5, "shelf/kids/": 5, "shoe_rack/": 2}[path]
+        assert previous.is_enabled() and following.is_enabled()
         active = 0
 
         def assert_stage(expected):
@@ -126,7 +120,24 @@ def check_page(browser, base_url, path, viewport):
             page.keyboard.press(key)
             active = (active + delta) % count
             assert_stage(active)
-        return count * 2 + 4
+        swipes = 0
+        if path == "shoe_rack/":
+            # Exercise the native touch handlers as well as real arrow taps.
+            def swipe(dx, dy):
+                page.locator('.viewer').evaluate("""(element, delta) => {
+                    for (const [type,x,y] of [['touchstart',200,100], ['touchend',200+delta[0],100+delta[1]]]) {
+                        const touch=new Touch({identifier:1,target:element,clientX:x,clientY:y});
+                        element.dispatchEvent(new TouchEvent(type,{changedTouches:[touch],bubbles:true}));
+                    }
+                }""", [dx, dy])
+            for dx, delta in ((-100, 1), (100, -1)):
+                swipe(dx, 2)
+                active = (active + delta) % count
+                assert_stage(active)
+                swipes += 1
+            swipe(2, 100)
+            assert_stage(active)
+        return count * 2 + 4 + swipes
     finally:
         page.close()
         assert not errors, errors
@@ -157,7 +168,7 @@ def main():
         finally:
             server.shutdown()
     print(f"PASS: {len(VIEWPORTS) * len(PAGES)} page/viewport checks; "
-          f"{transitions} tap/keyboard transitions; single-image arrows correctly disabled.")
+          f"{transitions} tap/keyboard transitions; all carousel arrows active.")
 
 
 if __name__ == "__main__":

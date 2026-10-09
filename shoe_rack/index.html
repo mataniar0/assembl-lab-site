@@ -35,6 +35,11 @@ html[lang="en"] .adapt-link{direction:ltr}
 .copy{direction:inherit}.gallery .panel{direction:rtl}html[lang="en"] .gallery .panel{direction:ltr}
 .story-head h2,.future h2,.copy h3{line-height:1.1}
 #carousel-note{font-size:13px;line-height:1.6;margin:12px 0 0}
+.viewer{padding:0;touch-action:pan-y}.slide{position:absolute;inset:0;display:none;place-items:center;padding:18px}.slide.active{display:grid}.slide.cutting{padding-bottom:66px}.slide img{min-width:0;min-height:0}.viewer.layout-cutting{aspect-ratio:auto;height:clamp(360px,70vh,620px)}
+.arrow{opacity:1;cursor:pointer;touch-action:manipulation}.arrow:disabled{opacity:.45;cursor:default}.arrow:active{background:var(--ink);color:var(--paper)}
+.nav{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);direction:inherit}.step{font:inherit;min-width:0;min-height:64px;border:0;background:transparent;padding:12px;cursor:pointer;text-align:start}.step+ .step{border-inline-start:1px solid var(--line)}.step small{display:block;font-size:11px;color:var(--muted)}.step b{display:block;font-size:14px}.step.active{background:#fff;box-shadow:inset 0 -3px var(--signal)}.step:focus-visible{outline:3px solid var(--ink);outline-offset:-3px}
+.gallery-image-open{display:inline-flex;align-items:center;min-width:44px;min-height:44px;font-size:13px;text-decoration:underline;text-underline-offset:4px;margin-top:10px}.no-script-photo{margin:24px 0}.no-script-photo img{width:100%;max-height:620px;object-fit:contain}.no-script-photo figcaption{margin-top:12px}
+@media(max-width:640px){.slide{padding:8px}.slide.cutting{padding:8px 8px 66px}}
 @media(max-width:640px){html[lang="he"] .hero h1{font-size:clamp(38px,11vw,60px)}}
 </style>
 <script type="application/json" id="page-translations">{
@@ -99,16 +104,16 @@ html[lang="en"] .adapt-link{direction:ltr}
     "en": "Shoe Rack, Version A — complete planning sheet"
   },
   "shoe.story.kicker": {
-    "he": "תהליך הבנייה / 01",
-    "en": "BUILD STORY / 01"
+    "he": "תהליך הבנייה / תכנון וחיתוך",
+    "en": "BUILD STORY / PLANNING AND CUTTING"
   },
   "shoe.story.title": {
-    "he": "מתחילים<br>בתכנון.",
-    "en": "Starting<br>with a plan."
+    "he": "מהתכנון<br>לחיתוך.",
+    "en": "From planning<br>to cutting."
   },
   "shoe.story.copy": {
-    "he": "בשלב הראשון מוצגת תמונת התכנון המלאה: המוצר המורכב, מבט מפורק, מידות, פאת הצד ופריסת חלקי המבנה. תמונות החיתוך, ההרכבה והגימור יתווספו לקרוסלה בהמשך.",
-    "en": "The first stage shows the complete planning sheet: the assembled product, an exploded view, dimensions, the side panel and component layout. Cutting, assembly and finishing images will be added to the carousel later."
+    "he": "תמונת התכנון מגדירה את המבנה והמידות. לצידה מופיע צילום מהסדנה של המכונה החותכת את חלקי מעמד הנעליים — שלב נוסף בדרך להרכבה.",
+    "en": "The planning sheet defines the structure and dimensions. Alongside it, a workshop photograph shows the machine cutting the Shoe Rack parts — another step toward assembly."
   },
   "shoe.story.alt": {
     "he": "שלב 01 — תכנון מעמד הנעליים",
@@ -139,24 +144,20 @@ html[lang="en"] .adapt-link{direction:ltr}
     "en": "The geometry, dimensions, three shelves, perforated sides, braces and top seat are defined before creating the cutting files and starting fabrication."
   },
   "shoe.stage.current": {
-    "he": "01 / השלב הנוכחי",
-    "en": "01 / CURRENT STAGE"
+    "he": "השלב הנבחר",
+    "en": "SELECTED STAGE"
   },
   "shoe.stage.pending": {
-    "he": "תמונת התכנון זמינה · תמונות התהליך יתווספו בהמשך",
-    "en": "Planning image added · process photos pending"
-  },
-  "shoe.stage.note": {
-    "he": "כרגע מוצגת תמונת תכנון אחת בלבד, ולכן חצי הניווט אינם פעילים.",
-    "en": "Only one planning image is currently available, so the navigation arrows are inactive."
+    "he": "תכנון וחיתוך מתועדים · הרכבה וגימור בהמשך",
+    "en": "Planning and cutting documented · assembly and finishing to come"
   },
   "shoe.future.title": {
-    "he": "השלב הבא:<br>ייצור.",
-    "en": "Next:<br>fabrication."
+    "he": "השלב הבא:<br>הרכבה.",
+    "en": "Next:<br>assembly."
   },
   "shoe.future.copy": {
-    "he": "העמוד מוכן להתרחב. כשיעלו תמונות נוספות של החיתוך, החלקים, ההרכבה והמוצר הסופי, הן ייכנסו לאותה קרוסלה ויציגו את תהליך הבנייה המלא.",
-    "en": "This page will grow with the project. As images of cutting, components, assembly and the finished product become available, they will join the carousel to tell the complete build story."
+    "he": "לאחר תכנון וחיתוך החלקים, התהליך ממשיך להרכבה ולגימור. תמונות של השלבים הבאים ושל המוצר המורכב יתווספו כאן כשיהיו זמינות.",
+    "en": "After planning and cutting the parts, the process continues with assembly and finishing. Photographs of the next stages and assembled product will be added here as they become available."
   },
   "shoe.footer": {
     "he": "ASSEMBLE LAB / עיצוב · הנדסה · ייצור",
@@ -187,8 +188,8 @@ html[lang="en"] .adapt-link{direction:ltr}
     "en": "Dimensions and note — optional"
   },
   "batch.intro": {
-    "he": "שלושה מדפים ומושב עליון — הדמיה לקראת ייצור.",
-    "en": "Three shelves and a top seat — a rendering ahead of fabrication."
+    "he": "שלושה מדפים ומושב עליון — מהתכנון לחיתוך החלקים.",
+    "en": "Three shelves and a top seat — from planning to cutting the parts."
   },
   "batch.name": {
     "he": "מעמד נעליים",
@@ -205,6 +206,22 @@ html[lang="en"] .adapt-link{direction:ltr}
   "disclosure.future": {
     "he": "המשך תהליך הייצור",
     "en": "Next fabrication stages"
+  },
+  "shoe.story.cutting": {
+    "he": "02 / חיתוך",
+    "en": "02 / CUTTING"
+  },
+  "shoe.cutting.title": {
+    "he": "חיתוך",
+    "en": "Cutting"
+  },
+  "shoe.cutting.detail": {
+    "he": "צילום אמיתי מהסדנה: המכונה חותכת את חלקי מעמד הנעליים בלוח הדיקט, בהתאם לפריסה שהוכנה בתכנון. ההרכבה והגימור עדיין בהמשך.",
+    "en": "A real workshop photograph: the machine cuts the Shoe Rack parts from a plywood sheet using the planned component layout. Assembly and finishing are still to come."
+  },
+  "shoe.cutting.alt": {
+    "he": "שלב 02 — המכונה חותכת חלקים למעמד הנעליים בלוח דיקט",
+    "en": "Stage 02 — the machine cutting Shoe Rack parts from a plywood sheet"
   }
 }</script>
 <link rel="stylesheet" href="../assets/language.css">
@@ -216,17 +233,27 @@ html[lang="en"] .adapt-link{direction:ltr}
 <header class="header"><a class="logo" href="../" aria-label="ASSEMBLE LAB — דף הבית" data-i18n-aria-label="nav.home"><span class="mark" data-language-fixed>A/L</span><b data-language-fixed>ASSEMBLE LAB</b></a><a class="back" href="../" data-i18n="nav.back">← לכל המוצרים</a><div class="language-switch" role="group" aria-label="בחירת שפה"><button type="button" data-language="he" lang="he" dir="rtl" aria-pressed="true" disabled>עברית</button><button type="button" data-language="en" lang="en" dir="ltr" aria-pressed="false" disabled>English</button></div></header>
 <main>
 <section class="hero">
-<div class="product-opening-copy"><h1 data-i18n="batch.name">מעמד נעליים</h1><p class="opening-intro" data-i18n="batch.intro">שלושה מדפים ומושב עליון — הדמיה לקראת ייצור.</p><p class="status" data-i18n="status.planning">בתכנון ופיתוח</p><a class="adapt-link" href="../inquiry/?product=shoe-rack" aria-label="בקשת הצעת מחיר עבור מעמד הנעליים" data-i18n-aria-label="shoe.quote.label" data-i18n="cta.quote">בקשת הצעת מחיר</a></div><div class="hero-copy"><p class="kicker" data-i18n="shoe.hero.kicker">מוצר 04 / אחסון נעליים</p></div>
+<div class="product-opening-copy"><h1 data-i18n="batch.name">מעמד נעליים</h1><p class="opening-intro" data-i18n="batch.intro">שלושה מדפים ומושב עליון — מהתכנון לחיתוך החלקים.</p><p class="status" data-i18n="status.planning">בתכנון ופיתוח</p><a class="adapt-link" href="../inquiry/?product=shoe-rack" aria-label="בקשת הצעת מחיר עבור מעמד הנעליים" data-i18n-aria-label="shoe.quote.label" data-i18n="cta.quote">בקשת הצעת מחיר</a></div><div class="hero-copy"><p class="kicker" data-i18n="shoe.hero.kicker">מוצר 04 / אחסון נעליים</p></div>
 <div class="hero-media"><a class="product-open-image" href="shoe-rack-planning-clean.webp" target="_blank" rel="noopener" aria-label="פתיחת התמונה בגודל מלא" data-i18n-aria-label="image.open"><img src="shoe-rack-planning-clean.webp" alt="מעמד נעליים גרסה A — תכנון מלא" data-i18n-alt="shoe.hero.alt" width="1200" height="900" loading="eager" decoding="async" fetchpriority="high"></a></div>
 </section>
 <details class="product-details"><summary data-i18n="batch.specs">מידות ומפרט</summary><div class="specs"><div><small data-i18n="shoe.spec.width">רוחב בסיס</small><b data-language-fixed>800 mm</b></div><div><small data-i18n="shoe.spec.depth">עומק בסיס</small><b data-language-fixed>320 mm</b></div><div><small data-i18n="shoe.spec.height">גובה בסיס</small><b data-language-fixed>520 mm</b></div><div><small data-i18n="shoe.spec.material">חומר</small><b data-i18n="shoe.spec.plywood">דיקט 6 מ״מ</b></div></div><p data-i18n-html="shoe.hero.title">מעמד נעליים/ גרסה A</p></details><details class="product-details"><summary data-i18n="disclosure.productCustom">על הדגם והתאמת מידות</summary><p class="lead" data-i18n="shoe.hero.copy">מעמד נעליים נמוך עם שלושה מדפי רפפות, פאות צד מחוררות ומושב עליון כפול. המוצר מתוכנן כחלקי דיקט חתוכים בלייזר שמתחברים למבנה אחד.</p><div class="custom-size-copy"><div class="custom-size-label" data-i18n="shoe.size.label">התאמה אישית / מידות לפי הצורך</div><p data-i18n="shoe.size.copy">המידות המוצגות הן גרסת הבסיס. ניתן להתאים את מידות הדגם לחלל ולשימוש, תוך תכנון מחדש של המבנה והחיבורים ובהתאם לחומר ולאילוצי הייצור.</p></div></details><section class="story">
-<details class="product-details"><summary data-i18n="disclosure.stages">שלבי התכנון והבנייה</summary><div class="story-head"><div><p class="kicker" data-i18n="shoe.story.kicker">תהליך הבנייה / 01</p><h2 data-i18n="shoe.story.title" data-i18n-html>מתחילים<br>בתכנון.</h2></div><p data-i18n="shoe.story.copy">בשלב הראשון מוצגת תמונת התכנון המלאה: המוצר המורכב, מבט מפורק, מידות, פאת הצד ופריסת חלקי המבנה. תמונות החיתוך, ההרכבה והגימור יתווספו לקרוסלה בהמשך.</p></div>
-</details><div class="gallery">
-<div class="viewer"><img src="shoe-rack-planning-clean.webp" alt="שלב 01 — תכנון מעמד הנעליים" data-i18n-alt="shoe.story.alt" width="1200" height="900" loading="lazy" decoding="async"><div class="badge" data-i18n="shoe.story.planning">01 / תכנון</div><div class="progress" data-language-fixed>01 / 01</div><div class="carousel-arrows" aria-label="ניווט קרוסלה" data-i18n-aria-label="shoe.carousel.label"><button class="arrow" type="button" aria-label="התמונה הקודמת" data-i18n-aria-label="shoe.carousel.previous" aria-disabled="true" disabled aria-describedby="carousel-note">←</button><button class="arrow" type="button" aria-label="התמונה הבאה" data-i18n-aria-label="shoe.carousel.next" aria-disabled="true" disabled aria-describedby="carousel-note">→</button></div></div>
-<div class="panel"><div class="copy"><div class="index" data-i18n="shoe.story.planning">01 / תכנון</div><h3 data-i18n="shoe.story.stage">תכנון</h3><p data-i18n="shoe.story.detail">הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון מוגדרים לפני המעבר לקובצי החיתוך ולייצור.</p></div><div class="stage"><small data-i18n="shoe.stage.current">01 / השלב הנוכחי</small><b data-i18n="shoe.stage.pending">תמונת התכנון זמינה · תמונות התהליך יתווספו בהמשך</b><p id="carousel-note" data-i18n="shoe.stage.note">כרגע מוצגת תמונת תכנון אחת בלבד, ולכן חצי הניווט אינם פעילים.</p></div></div>
+<details class="product-details"><summary data-i18n="disclosure.stages">שלבי התכנון והבנייה</summary><div class="story-head"><div><p class="kicker" data-i18n="shoe.story.kicker">תהליך הבנייה / תכנון וחיתוך</p><h2 data-i18n="shoe.story.title" data-i18n-html>מהתכנון<br>לחיתוך.</h2></div><p data-i18n="shoe.story.copy">תמונת התכנון מגדירה את המבנה והמידות. לצידה מופיע צילום מהסדנה של המכונה החותכת את חלקי מעמד הנעליים — שלב נוסף בדרך להרכבה.</p></div>
+</details><div class="gallery" tabindex="0" role="region" aria-label="שלבי התכנון והבנייה" data-i18n-aria-label="carousel.label">
+<div class="viewer">
+  <div class="slide active" aria-hidden="false"><img src="shoe-rack-planning-clean.webp" alt="שלב 01 — תכנון מעמד הנעליים" data-i18n-alt="shoe.story.alt" width="1200" height="900" loading="lazy" decoding="async"></div>
+  <div class="slide cutting" aria-hidden="true"><img data-src="media/shoe-rack-cutting-1080.webp" data-srcset="media/shoe-rack-cutting-540.webp 540w, media/shoe-rack-cutting-1080.webp 1080w" sizes="350px" alt="שלב 02 — המכונה חותכת חלקים למעמד הנעליים בלוח דיקט" data-i18n-alt="shoe.cutting.alt" width="1080" height="1920" loading="lazy" decoding="async"></div>
+  <div class="badge">01 / תכנון</div><div class="progress"><span>01</span> / 02</div>
+  <div class="carousel-arrows" aria-label="ניווט קרוסלה" data-i18n-aria-label="shoe.carousel.label"><button class="arrow prev" type="button" aria-label="התמונה הקודמת" data-i18n-aria-label="shoe.carousel.previous" disabled>←</button><button class="arrow next" type="button" aria-label="התמונה הבאה" data-i18n-aria-label="shoe.carousel.next" disabled>→</button></div>
 </div>
+<div class="panel"><div class="copy" aria-live="polite" aria-atomic="true"><div class="index">01 / תכנון</div><h3>תכנון</h3><p>הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון מוגדרים לפני המעבר לקובצי החיתוך ולייצור.</p><a class="gallery-image-open" href="shoe-rack-planning-clean.webp" target="_blank" rel="noopener" data-i18n="image.open">פתיחת התמונה בגודל מלא</a></div>
+<div class="nav" role="group" aria-label="שלבי התכנון והבנייה" data-i18n-aria-label="carousel.label">
+  <button class="step active" type="button" data-title-key="shoe.story.stage" data-label-key="shoe.story.planning" data-desc-key="shoe.story.detail" data-full-size="shoe-rack-planning-clean.webp" aria-pressed="true" disabled><small data-language-fixed>01</small><b data-i18n="shoe.story.stage">תכנון</b></button>
+  <button class="step" type="button" data-title-key="shoe.cutting.title" data-label-key="shoe.story.cutting" data-desc-key="shoe.cutting.detail" data-full-size="media/shoe-rack-cutting-original.jpeg" aria-pressed="false" disabled><small data-language-fixed>02</small><b data-i18n="shoe.cutting.title">חיתוך</b></button>
+</div><div class="stage"><small data-i18n="shoe.stage.current">השלב הנבחר</small><b data-i18n="shoe.stage.pending">תכנון וחיתוך מתועדים · הרכבה וגימור בהמשך</b></div></div>
+</div>
+<noscript><figure class="no-script-photo"><img src="media/shoe-rack-cutting-1080.webp" alt="שלב 02 — המכונה חותכת חלקים למעמד הנעליים בלוח דיקט" width="1080" height="1920" loading="lazy"><figcaption>02 / חיתוך — צילום מהסדנה. <a class="gallery-image-open" href="media/shoe-rack-cutting-original.jpeg" target="_blank" rel="noopener">פתיחת התמונה בגודל מלא</a></figcaption></figure></noscript>
 </section>
-<details class="product-details"><summary data-i18n="disclosure.future">המשך תהליך הייצור</summary><section class="future"><h2 data-i18n="shoe.future.title" data-i18n-html>השלב הבא:<br>ייצור.</h2><p data-i18n="shoe.future.copy">העמוד מוכן להתרחב. כשיעלו תמונות נוספות של החיתוך, החלקים, ההרכבה והמוצר הסופי, הן ייכנסו לאותה קרוסלה ויציגו את תהליך הבנייה המלא.</p></section>
+<details class="product-details"><summary data-i18n="disclosure.future">המשך תהליך הייצור</summary><section class="future"><h2 data-i18n="shoe.future.title" data-i18n-html>השלב הבא:<br>הרכבה.</h2><p data-i18n="shoe.future.copy">לאחר תכנון וחיתוך החלקים, התהליך ממשיך להרכבה ולגימור. תמונות של השלבים הבאים ושל המוצר המורכב יתווספו כאן כשיהיו זמינות.</p></section>
 </details></main>
 
 
@@ -236,5 +263,57 @@ html[lang="en"] .adapt-link{direction:ltr}
 
 
 <footer class="footer"><span data-i18n="shoe.footer">ASSEMBLE LAB / עיצוב · הנדסה · ייצור</span><a href="../" data-i18n="shoe.footer.back">בחזרה למוצרים ↑</a></footer>
+<script>
+(() => {
+  const gallery=document.querySelector('.gallery'), viewer=gallery.querySelector('.viewer'),
+        slides=[...gallery.querySelectorAll('.slide')], steps=[...gallery.querySelectorAll('.step')],
+        previous=gallery.querySelector('.prev'), next=gallery.querySelector('.next');
+  let active=0;
+  function show(index) {
+    active=(index+steps.length)%steps.length;
+    slides.forEach((slide,i)=>{
+      slide.classList.toggle('active',i===active);
+      slide.setAttribute('aria-hidden',String(i!==active));
+    });
+    steps.forEach((step,i)=>{
+      step.classList.toggle('active',i===active);
+      step.setAttribute('aria-pressed',String(i===active));
+      step.disabled=false;
+    });
+    const image=slides[active].querySelector('img');
+    if(image.dataset.srcset){image.srcset=image.dataset.srcset;delete image.dataset.srcset;}
+    window.ASSEMBLE_MEDIA.load(slides[active]);
+    // Reserve the complete portrait frame before the image arrives.
+    viewer.classList.toggle('layout-cutting',active===1);
+    const step=steps[active], label=window.ASSEMBLE_I18N.t(step.dataset.labelKey);
+    gallery.querySelector('.badge').textContent=label;
+    gallery.querySelector('.index').textContent=label;
+    gallery.querySelector('.progress span').textContent=String(active+1).padStart(2,'0');
+    gallery.querySelector('.copy h3').textContent=window.ASSEMBLE_I18N.t(step.dataset.titleKey);
+    gallery.querySelector('.copy p').textContent=window.ASSEMBLE_I18N.t(step.dataset.descKey);
+    gallery.querySelector('.gallery-image-open').href=step.dataset.fullSize;
+    previous.disabled=false; next.disabled=false;
+  }
+  steps.forEach((step,i)=>step.addEventListener('click',()=>show(i)));
+  previous.addEventListener('click',()=>show(active-1));
+  next.addEventListener('click',()=>show(active+1));
+  gallery.addEventListener('keydown',event=>{
+    if(event.key==='ArrowLeft'){event.preventDefault();show(active-1);}
+    if(event.key==='ArrowRight'){event.preventDefault();show(active+1);}
+  });
+  let touchX=0,touchY=0;
+  viewer.addEventListener('touchstart',event=>{
+    if(!event.changedTouches.length)return;
+    touchX=event.changedTouches[0].clientX; touchY=event.changedTouches[0].clientY;
+  },{passive:true});
+  viewer.addEventListener('touchend',event=>{
+    if(!event.changedTouches.length)return;
+    const dx=event.changedTouches[0].clientX-touchX,dy=event.changedTouches[0].clientY-touchY;
+    if(Math.abs(dx)>=45&&Math.abs(dx)>Math.abs(dy)*1.15)show(active+(dx<0?1:-1));
+  },{passive:true});
+  document.addEventListener('assemble:languagechange',()=>show(active));
+  show(active);
+})();
+</script>
 <script>window.ASSEMBLE_I18N.translate();</script></body>
 </html>

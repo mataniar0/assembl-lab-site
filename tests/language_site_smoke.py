@@ -316,21 +316,22 @@ def carousel(browser, base, path, locale, viewport):
         following = arrows.nth(1)
         for arrow in (previous, following):
             assert_arrow_reachable(page, arrow)
-        if path == "shoe_rack/":
-            for arrow in (previous, following):
-                check(arrow.is_disabled(), "Single-image arrows must stay disabled")
-                note = arrow.get_attribute("aria-describedby")
-                check(note and page.locator("#" + note).inner_text().strip(), "Disabled arrow lacks explanation")
-            return {"stages": 1, "transitions": 0, "single_image_explanation": True}
         steps = page.locator(".step")
         count = steps.count()
-        check(count == (6 if path == "geometric/" else 5), "Stage count changed")
+        check(count == {"geometric/": 6, "driller_stand/": 5, "shelf/kids/": 5, "shoe_rack/": 2}[path], "Stage count changed")
+        check(previous.is_enabled() and following.is_enabled(), "Carousel arrows must be active")
         active = 0
         transitions = 0
 
         def stage(expected):
             check(steps.nth(expected).get_attribute("aria-pressed") == "true", "Wrong active step")
             check(page.locator('.step[aria-pressed="true"]').count() == 1, "More than one selected step")
+            if path == "shoe_rack/":
+                check(page.locator('.slide.active').count() == 1, "Expected one visible Shoe Rack image")
+                check(page.locator('.slide').nth(expected).get_attribute('aria-hidden') == 'false', "Wrong visible Shoe Rack image")
+                full_size = ("shoe-rack-planning-clean.webp", "media/shoe-rack-cutting-original.jpeg")[expected]
+                check(page.locator('.gallery-image-open').get_attribute('href').endswith(full_size), "Full-size link does not match the selected stage")
+                check(page.locator('.progress').inner_text().replace('\n', '') == f"0{expected+1} / 02", "Shoe Rack progress does not match the selected stage")
             failures = page.evaluate(LOCALE_CHECK, document_language(page))
             check(not failures, failures)
 
@@ -343,6 +344,10 @@ def carousel(browser, base, path, locale, viewport):
                 stage(active)
                 for control in (previous, following):
                     assert_arrow_reachable(page, control)
+                if path == "shoe_rack/":
+                    # Stage 02 loads only when selected; wait for its real pixels
+                    # before preserving the strict image geometry assertions.
+                    page.locator('.slide.active img').evaluate("image => image.decode()")
                 for script in (LAYOUT_CHECK, IMAGE_CHECK):
                     failures = page.evaluate(script)
                     check(not failures, failures)

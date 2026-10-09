@@ -190,6 +190,12 @@ def early_body_case(browser, base, path, language):
         expect(len(held) == 1, 'Final document parsing was not held')
         visible = page.evaluate("getComputedStyle(document.body).visibility === 'visible'")
         expect(visible == (language == 'he'), 'Untranslated English fallback was painted, or Hebrew was hidden')
+        # A child with explicit visibility:visible can paint through a hidden
+        # body. Check actual active gallery images as well as the ancestor.
+        carousel_image_visibility = page.locator('.slide.active img').evaluate_all(
+            "images => images.map(image => getComputedStyle(image).visibility === 'visible')")
+        expect(all(value == (language == 'he') for value in carousel_image_visibility),
+               'Active carousel image bypassed the saved-English first-paint guard')
         held[0].fulfill(body='/* QA parser gate released */', content_type='text/javascript')
         page.wait_for_load_state('load')
         expect(page.evaluate("getComputedStyle(document.body).visibility === 'visible' && !document.documentElement.hasAttribute('data-language-pending')"),
@@ -198,6 +204,7 @@ def early_body_case(browser, base, path, language):
         expect(not writes, writes)
         return {'page': path or '/', 'language': language, 'width': 390,
                 'initial_body_visible': visible, 'translated_body_visible': True,
+                'initial_carousel_image_visibility': carousel_image_visibility,
                 'real_submissions': 0}
     finally:
         context.close()
