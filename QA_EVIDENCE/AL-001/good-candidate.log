@@ -1,0 +1,64 @@
+Checking outgoing commit 80ffdda9983194ce9994e3276d76249ae71805f8
+PASS local files and internal link targets
+PASS page crib/ he 390x844
+PASS page driller_stand/ he 390x844
+PASS page etrog_box/ he 390x844
+PASS page geometric/ he 390x844
+PASS page / he 390x844
+PASS page inquiry/ he 390x844
+PASS page megillat_esther_box/ he 390x844
+PASS page shelf/kids/ he 390x844
+PASS page shoe_rack/ he 390x844
+PASS page table/flow/ he 390x844
+PASS page table/ he 390x844
+PASS page workbench/ he 390x844
+PASS page crib/ he 1440x900
+PASS page driller_stand/ he 1440x900
+PASS page etrog_box/ he 1440x900
+PASS page geometric/ he 1440x900
+PASS page / he 1440x900
+PASS page inquiry/ he 1440x900
+PASS page megillat_esther_box/ he 1440x900
+PASS page shelf/kids/ he 1440x900
+PASS page shoe_rack/ he 1440x900
+PASS page table/flow/ he 1440x900
+PASS page table/ he 1440x900
+PASS page workbench/ he 1440x900
+PASS page crib/ en 390x844
+PASS page driller_stand/ en 390x844
+PASS page etrog_box/ en 390x844
+PASS page geometric/ en 390x844
+PASS page / en 390x844
+PASS page inquiry/ en 390x844
+PASS page megillat_esther_box/ en 390x844
+PASS page shelf/kids/ en 390x844
+PASS page shoe_rack/ en 390x844
+PASS page table/flow/ en 390x844
+PASS page table/ en 390x844
+PASS page workbench/ en 390x844
+PASS page crib/ en 1440x900
+PASS page driller_stand/ en 1440x900
+PASS page etrog_box/ en 1440x900
+PASS page geometric/ en 1440x900
+PASS page / en 1440x900
+PASS page inquiry/ en 1440x900
+PASS page megillat_esther_box/ en 1440x900
+PASS page shelf/kids/ en 1440x900
+PASS page shoe_rack/ en 1440x900
+PASS page table/flow/ en 1440x900
+PASS page table/ en 1440x900
+PASS page workbench/ en 1440x900
+PASS navigation and inquiry prefill: crib
+PASS navigation and inquiry prefill: driller-stand
+PASS navigation and inquiry prefill: etrog-box
+PASS navigation and inquiry prefill: geometric
+PASS navigation and inquiry prefill: custom
+PASS navigation and inquiry prefill: megillah-case
+PASS navigation and inquiry prefill: kids-shelf
+PASS navigation and inquiry prefill: shoe-rack
+PASS navigation and inquiry prefill: flow
+PASS navigation and inquiry prefill: workbench
+PASS required fields and mocked form success: he
+PASS required fields and mocked form success: en
+Smoke: 61 passed, 0 failed in 67.66s; no real submissions.
+Report: /workspace/assembl-lab-site/.qa-reports/al-001/good-candidate.json

@@ -1,0 +1,21 @@
+{
+  "yaml_parsed": true,
+  "shell_syntax_checks": [
+    {
+      "step": "Record the checked revision",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "step": "Install the pinned QA tools and Chromium",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "step": "Check the exact candidate commit",
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ],
+  "actions_pinned": true
+}
