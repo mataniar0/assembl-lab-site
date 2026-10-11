@@ -1,0 +1,12 @@
+{
+  "command": "/tmp/al001-actionlint/actionlint -color .github/workflows/site-checks.yml",
+  "version": "1.7.7",
+  "exit_code": 0,
+  "archive_sha256": "023070a287cd8cccd71515fedc843f1985bf96c436b7effaecce67290e7e0757",
+  "archive_url": "https://github.com/rhysd/actionlint/releases/download/v1.7.7/actionlint_1.7.7_linux_amd64.tar.gz",
+  "checksum_url": "https://github.com/rhysd/actionlint/releases/download/v1.7.7/actionlint_1.7.7_checksums.txt",
+  "verification": "SHA256 matched authoritative checksum; both downloaded with TLS verification",
+  "stdout": "",
+  "stderr": "",
+  "remote_execution_claimed": false
+}

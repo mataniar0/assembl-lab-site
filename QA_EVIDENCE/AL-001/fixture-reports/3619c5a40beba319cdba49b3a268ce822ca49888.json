@@ -1,0 +1,800 @@
+{
+  "passed": 46,
+  "failed": 15,
+  "seconds": 40.92,
+  "real_posts": 0,
+  "results": [
+    {
+      "name": "local files and internal link targets",
+      "status": "failed",
+      "error": "Missing local file: index.html → assets/pre-push-integration-missing.webp",
+      "seconds": 0.019
+    },
+    {
+      "name": "page crib/ he 390x844",
+      "status": "passed",
+      "details": {
+        "page": "crib/",
+        "language": "he",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.576
+    },
+    {
+      "name": "page driller_stand/ he 390x844",
+      "status": "passed",
+      "details": {
+        "page": "driller_stand/",
+        "language": "he",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 1,
+        "transitions": 4,
+        "disabled_single_image": 0
+      },
+      "seconds": 0.904
+    },
+    {
+      "name": "page etrog_box/ he 390x844",
+      "status": "passed",
+      "details": {
+        "page": "etrog_box/",
+        "language": "he",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.488
+    },
+    {
+      "name": "page geometric/ he 390x844",
+      "status": "passed",
+      "details": {
+        "page": "geometric/",
+        "language": "he",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 1,
+        "transitions": 4,
+        "disabled_single_image": 0
+      },
+      "seconds": 0.857
+    },
+    {
+      "name": "page / he 390x844",
+      "status": "failed",
+      "error": "Image failed to load: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp",
+      "seconds": 0.435
+    },
+    {
+      "name": "page inquiry/ he 390x844",
+      "status": "passed",
+      "details": {
+        "page": "inquiry/",
+        "language": "he",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.406
+    },
+    {
+      "name": "page megillat_esther_box/ he 390x844",
+      "status": "passed",
+      "details": {
+        "page": "megillat_esther_box/",
+        "language": "he",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.529
+    },
+    {
+      "name": "page shelf/kids/ he 390x844",
+      "status": "passed",
+      "details": {
+        "page": "shelf/kids/",
+        "language": "he",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 1,
+        "transitions": 4,
+        "disabled_single_image": 0
+      },
+      "seconds": 1.001
+    },
+    {
+      "name": "page shoe_rack/ he 390x844",
+      "status": "passed",
+      "details": {
+        "page": "shoe_rack/",
+        "language": "he",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 1,
+        "transitions": 4,
+        "disabled_single_image": 0
+      },
+      "seconds": 0.816
+    },
+    {
+      "name": "page table/flow/ he 390x844",
+      "status": "passed",
+      "details": {
+        "page": "table/flow/",
+        "language": "he",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.432
+    },
+    {
+      "name": "page table/ he 390x844",
+      "status": "passed",
+      "details": {
+        "page": "table/",
+        "language": "he",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.446
+    },
+    {
+      "name": "page workbench/ he 390x844",
+      "status": "passed",
+      "details": {
+        "page": "workbench/",
+        "language": "he",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.45
+    },
+    {
+      "name": "page crib/ he 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "crib/",
+        "language": "he",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.502
+    },
+    {
+      "name": "page driller_stand/ he 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "driller_stand/",
+        "language": "he",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 1,
+        "transitions": 4,
+        "disabled_single_image": 0
+      },
+      "seconds": 0.958
+    },
+    {
+      "name": "page etrog_box/ he 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "etrog_box/",
+        "language": "he",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.484
+    },
+    {
+      "name": "page geometric/ he 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "geometric/",
+        "language": "he",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 1,
+        "transitions": 4,
+        "disabled_single_image": 0
+      },
+      "seconds": 0.91
+    },
+    {
+      "name": "page / he 1440x900",
+      "status": "failed",
+      "error": "Image failed to load: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp",
+      "seconds": 0.585
+    },
+    {
+      "name": "page inquiry/ he 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "inquiry/",
+        "language": "he",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.459
+    },
+    {
+      "name": "page megillat_esther_box/ he 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "megillat_esther_box/",
+        "language": "he",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.539
+    },
+    {
+      "name": "page shelf/kids/ he 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "shelf/kids/",
+        "language": "he",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 1,
+        "transitions": 4,
+        "disabled_single_image": 0
+      },
+      "seconds": 0.955
+    },
+    {
+      "name": "page shoe_rack/ he 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "shoe_rack/",
+        "language": "he",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 1,
+        "transitions": 4,
+        "disabled_single_image": 0
+      },
+      "seconds": 0.827
+    },
+    {
+      "name": "page table/flow/ he 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "table/flow/",
+        "language": "he",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.416
+    },
+    {
+      "name": "page table/ he 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "table/",
+        "language": "he",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.496
+    },
+    {
+      "name": "page workbench/ he 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "workbench/",
+        "language": "he",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.475
+    },
+    {
+      "name": "page crib/ en 390x844",
+      "status": "passed",
+      "details": {
+        "page": "crib/",
+        "language": "en",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.465
+    },
+    {
+      "name": "page driller_stand/ en 390x844",
+      "status": "passed",
+      "details": {
+        "page": "driller_stand/",
+        "language": "en",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 1,
+        "transitions": 4,
+        "disabled_single_image": 0
+      },
+      "seconds": 0.834
+    },
+    {
+      "name": "page etrog_box/ en 390x844",
+      "status": "passed",
+      "details": {
+        "page": "etrog_box/",
+        "language": "en",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.446
+    },
+    {
+      "name": "page geometric/ en 390x844",
+      "status": "passed",
+      "details": {
+        "page": "geometric/",
+        "language": "en",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 1,
+        "transitions": 4,
+        "disabled_single_image": 0
+      },
+      "seconds": 0.865
+    },
+    {
+      "name": "page / en 390x844",
+      "status": "failed",
+      "error": "Image failed to load: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp",
+      "seconds": 0.461
+    },
+    {
+      "name": "page inquiry/ en 390x844",
+      "status": "passed",
+      "details": {
+        "page": "inquiry/",
+        "language": "en",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.372
+    },
+    {
+      "name": "page megillat_esther_box/ en 390x844",
+      "status": "passed",
+      "details": {
+        "page": "megillat_esther_box/",
+        "language": "en",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.45
+    },
+    {
+      "name": "page shelf/kids/ en 390x844",
+      "status": "passed",
+      "details": {
+        "page": "shelf/kids/",
+        "language": "en",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 1,
+        "transitions": 4,
+        "disabled_single_image": 0
+      },
+      "seconds": 0.939
+    },
+    {
+      "name": "page shoe_rack/ en 390x844",
+      "status": "passed",
+      "details": {
+        "page": "shoe_rack/",
+        "language": "en",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 1,
+        "transitions": 4,
+        "disabled_single_image": 0
+      },
+      "seconds": 0.809
+    },
+    {
+      "name": "page table/flow/ en 390x844",
+      "status": "passed",
+      "details": {
+        "page": "table/flow/",
+        "language": "en",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.382
+    },
+    {
+      "name": "page table/ en 390x844",
+      "status": "passed",
+      "details": {
+        "page": "table/",
+        "language": "en",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.451
+    },
+    {
+      "name": "page workbench/ en 390x844",
+      "status": "passed",
+      "details": {
+        "page": "workbench/",
+        "language": "en",
+        "viewport": [
+          390,
+          844
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.439
+    },
+    {
+      "name": "page crib/ en 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "crib/",
+        "language": "en",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.451
+    },
+    {
+      "name": "page driller_stand/ en 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "driller_stand/",
+        "language": "en",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 1,
+        "transitions": 4,
+        "disabled_single_image": 0
+      },
+      "seconds": 0.898
+    },
+    {
+      "name": "page etrog_box/ en 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "etrog_box/",
+        "language": "en",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.507
+    },
+    {
+      "name": "page geometric/ en 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "geometric/",
+        "language": "en",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 1,
+        "transitions": 4,
+        "disabled_single_image": 0
+      },
+      "seconds": 0.94
+    },
+    {
+      "name": "page / en 1440x900",
+      "status": "failed",
+      "error": "Image failed to load: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp",
+      "seconds": 0.478
+    },
+    {
+      "name": "page inquiry/ en 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "inquiry/",
+        "language": "en",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.391
+    },
+    {
+      "name": "page megillat_esther_box/ en 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "megillat_esther_box/",
+        "language": "en",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.506
+    },
+    {
+      "name": "page shelf/kids/ en 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "shelf/kids/",
+        "language": "en",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 1,
+        "transitions": 4,
+        "disabled_single_image": 0
+      },
+      "seconds": 0.945
+    },
+    {
+      "name": "page shoe_rack/ en 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "shoe_rack/",
+        "language": "en",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 1,
+        "transitions": 4,
+        "disabled_single_image": 0
+      },
+      "seconds": 0.779
+    },
+    {
+      "name": "page table/flow/ en 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "table/flow/",
+        "language": "en",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.362
+    },
+    {
+      "name": "page table/ en 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "table/",
+        "language": "en",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.47
+    },
+    {
+      "name": "page workbench/ en 1440x900",
+      "status": "passed",
+      "details": {
+        "page": "workbench/",
+        "language": "en",
+        "viewport": [
+          1440,
+          900
+        ],
+        "carousels": 0,
+        "transitions": 0
+      },
+      "seconds": 0.432
+    },
+    {
+      "name": "navigation and inquiry prefill: crib",
+      "status": "failed",
+      "error": "HTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)\nHTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)",
+      "seconds": 0.95
+    },
+    {
+      "name": "navigation and inquiry prefill: driller-stand",
+      "status": "failed",
+      "error": "HTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)\nHTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)",
+      "seconds": 0.925
+    },
+    {
+      "name": "navigation and inquiry prefill: etrog-box",
+      "status": "failed",
+      "error": "HTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)\nHTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)",
+      "seconds": 0.933
+    },
+    {
+      "name": "navigation and inquiry prefill: geometric",
+      "status": "failed",
+      "error": "HTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)\nHTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)",
+      "seconds": 1.052
+    },
+    {
+      "name": "navigation and inquiry prefill: custom",
+      "status": "failed",
+      "error": "HTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)\nHTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)",
+      "seconds": 0.804
+    },
+    {
+      "name": "navigation and inquiry prefill: megillah-case",
+      "status": "failed",
+      "error": "HTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)\nHTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)",
+      "seconds": 0.944
+    },
+    {
+      "name": "navigation and inquiry prefill: kids-shelf",
+      "status": "failed",
+      "error": "HTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)\nHTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)",
+      "seconds": 1.045
+    },
+    {
+      "name": "navigation and inquiry prefill: shoe-rack",
+      "status": "failed",
+      "error": "HTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)\nHTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)",
+      "seconds": 0.858
+    },
+    {
+      "name": "navigation and inquiry prefill: flow",
+      "status": "failed",
+      "error": "HTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)\nHTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)",
+      "seconds": 0.985
+    },
+    {
+      "name": "navigation and inquiry prefill: workbench",
+      "status": "failed",
+      "error": "HTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)\nHTTP 404: http://127.0.0.1:36785/assets/pre-push-integration-missing.webp\nConsole error: Failed to load resource: the server responded with a status of 404 (File not found)",
+      "seconds": 0.948
+    },
+    {
+      "name": "required fields and mocked form success: he",
+      "status": "passed",
+      "details": {
+        "language": "he",
+        "required_validation": true,
+        "draft_preserved": true,
+        "mocked_posts": 1,
+        "real_posts": 0
+      },
+      "seconds": 0.639
+    },
+    {
+      "name": "required fields and mocked form success: en",
+      "status": "passed",
+      "details": {
+        "language": "en",
+        "required_validation": true,
+        "draft_preserved": true,
+        "mocked_posts": 1,
+        "real_posts": 0
+      },
+      "seconds": 0.6
+    }
+  ],
+  "checked_commit": "3619c5a40beba319cdba49b3a268ce822ca49888",
+  "checked_working_files": false
+}

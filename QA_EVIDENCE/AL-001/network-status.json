@@ -1,0 +1,17 @@
+{
+  "github_native_git_read": "passed",
+  "issue_html_read": "passed (full issue body; 0 comments)",
+  "github_api": "blocked: Tunnel connection failed: 403 Forbidden (api.github.com), also reproduced via gh with elevated execution",
+  "bundled_chromium_download": "blocked: 403 Domain forbidden (cdn.playwright.dev)",
+  "local_browser": "Chromium 151.0.7922.173 at /usr/bin/chromium",
+  "github_pr_created": false,
+  "github_actions_runs_executed": false,
+  "required_environment_domain_additions": [
+    "api.github.com"
+  ],
+  "optional_for_matching_local_bundled_browser": [
+    "cdn.playwright.dev"
+  ],
+  "existing_domain_configuration_replaced": false,
+  "credentials_or_environment_values_recorded": false
+}
