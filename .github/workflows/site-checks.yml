@@ -1,0 +1,88 @@
+name: Site checks
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  site-smoke:
+    name: Site smoke
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      PYTHONUNBUFFERED: "1"
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.qa-browsers
+    steps:
+      - name: Check out the candidate
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - name: Record the checked revision
+        shell: bash
+        env:
+          CI_PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          mkdir -p .qa-reports/ci
+          python3 - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+          revision = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+          context = {
+              "checked_checkout_commit": revision,
+              "pull_request_head_commit": os.environ.get("CI_PR_HEAD_SHA", ""),
+              "event": os.environ["GITHUB_EVENT_NAME"],
+              "run_id": os.environ["GITHUB_RUN_ID"],
+              "run_attempt": os.environ["GITHUB_RUN_ATTEMPT"],
+              "run_url": (os.environ["GITHUB_SERVER_URL"] + "/" + os.environ["GITHUB_REPOSITORY"]
+                          + "/actions/runs/" + os.environ["GITHUB_RUN_ID"]),
+          }
+          Path(".qa-reports/ci/context.json").write_text(json.dumps(context, indent=2) + "\n")
+          PY
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+
+      - name: Install the pinned QA tools and Chromium
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m venv .venv-qa
+          .venv-qa/bin/python -m pip install -r tests/requirements.txt 2>&1 | tee .qa-reports/ci/dependencies.log
+          .venv-qa/bin/python -m playwright install --with-deps chromium 2>&1 | tee .qa-reports/ci/browser-install.log
+          ci_browser_path="$(.venv-qa/bin/python - <<'PY'
+          from playwright.sync_api import sync_playwright
+          with sync_playwright() as playwright:
+              print(playwright.chromium.executable_path)
+          PY
+          )"
+          test -x "$ci_browser_path"
+          printf 'ASSEMBLE_BROWSER=%s\n' "$ci_browser_path" >> "$GITHUB_ENV"
+
+      - name: Check the exact candidate commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/check_site.py --commit HEAD --browser "$ASSEMBLE_BROWSER" --report .qa-reports/ci/site-smoke.json 2>&1 | tee .qa-reports/ci/site-smoke.log
+
+      - name: Retain QA evidence even after failure
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: site-smoke-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .qa-reports/ci/
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 14
