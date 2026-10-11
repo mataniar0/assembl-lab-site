@@ -75,7 +75,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python scripts/check_site.py --commit HEAD --browser "$ASSEMBLE_BROWSER" --report .qa-reports/ci/site-smoke.json 2>&1 | tee .qa-reports/ci/site-smoke.log
+          .venv-qa/bin/python scripts/al001_missing_image_proof.py --browser "$ASSEMBLE_BROWSER" --report-dir .qa-reports/ci 2>&1 | tee .qa-reports/ci/site-smoke.log
 
       - name: Retain QA evidence even after failure
         if: always()
