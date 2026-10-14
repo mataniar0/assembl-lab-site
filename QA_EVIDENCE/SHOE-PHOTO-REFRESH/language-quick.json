@@ -1,0 +1,681 @@
+{
+  "base_url": "http://127.0.0.1:36803/",
+  "passed": [
+    {
+      "case": "layout:/:he:320",
+      "page": "/",
+      "locale": "he",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:table/:he:320",
+      "page": "table/",
+      "locale": "he",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:table/flow/:he:320",
+      "page": "table/flow/",
+      "locale": "he",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:geometric/:he:320",
+      "page": "geometric/",
+      "locale": "he",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:driller_stand/:he:320",
+      "page": "driller_stand/",
+      "locale": "he",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:shelf/kids/:he:320",
+      "page": "shelf/kids/",
+      "locale": "he",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:shoe_rack/:he:320",
+      "page": "shoe_rack/",
+      "locale": "he",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:workbench/:he:320",
+      "page": "workbench/",
+      "locale": "he",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:crib/:he:320",
+      "page": "crib/",
+      "locale": "he",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:etrog_box/:he:320",
+      "page": "etrog_box/",
+      "locale": "he",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:megillat_esther_box/:he:320",
+      "page": "megillat_esther_box/",
+      "locale": "he",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:inquiry/:he:320",
+      "page": "inquiry/",
+      "locale": "he",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:/:en:320",
+      "page": "/",
+      "locale": "en",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:table/:en:320",
+      "page": "table/",
+      "locale": "en",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:table/flow/:en:320",
+      "page": "table/flow/",
+      "locale": "en",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:geometric/:en:320",
+      "page": "geometric/",
+      "locale": "en",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:driller_stand/:en:320",
+      "page": "driller_stand/",
+      "locale": "en",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:shelf/kids/:en:320",
+      "page": "shelf/kids/",
+      "locale": "en",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:shoe_rack/:en:320",
+      "page": "shoe_rack/",
+      "locale": "en",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:workbench/:en:320",
+      "page": "workbench/",
+      "locale": "en",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:crib/:en:320",
+      "page": "crib/",
+      "locale": "en",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:etrog_box/:en:320",
+      "page": "etrog_box/",
+      "locale": "en",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:megillat_esther_box/:en:320",
+      "page": "megillat_esther_box/",
+      "locale": "en",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:inquiry/:en:320",
+      "page": "inquiry/",
+      "locale": "en",
+      "viewport": [
+        320,
+        568
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:/:he:1440",
+      "page": "/",
+      "locale": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:table/:he:1440",
+      "page": "table/",
+      "locale": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:table/flow/:he:1440",
+      "page": "table/flow/",
+      "locale": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:geometric/:he:1440",
+      "page": "geometric/",
+      "locale": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:driller_stand/:he:1440",
+      "page": "driller_stand/",
+      "locale": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:shelf/kids/:he:1440",
+      "page": "shelf/kids/",
+      "locale": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:shoe_rack/:he:1440",
+      "page": "shoe_rack/",
+      "locale": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:workbench/:he:1440",
+      "page": "workbench/",
+      "locale": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:crib/:he:1440",
+      "page": "crib/",
+      "locale": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:etrog_box/:he:1440",
+      "page": "etrog_box/",
+      "locale": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:megillat_esther_box/:he:1440",
+      "page": "megillat_esther_box/",
+      "locale": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:inquiry/:he:1440",
+      "page": "inquiry/",
+      "locale": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:/:en:1440",
+      "page": "/",
+      "locale": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:table/:en:1440",
+      "page": "table/",
+      "locale": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:table/flow/:en:1440",
+      "page": "table/flow/",
+      "locale": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:geometric/:en:1440",
+      "page": "geometric/",
+      "locale": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:driller_stand/:en:1440",
+      "page": "driller_stand/",
+      "locale": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:shelf/kids/:en:1440",
+      "page": "shelf/kids/",
+      "locale": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:shoe_rack/:en:1440",
+      "page": "shoe_rack/",
+      "locale": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:workbench/:en:1440",
+      "page": "workbench/",
+      "locale": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:crib/:en:1440",
+      "page": "crib/",
+      "locale": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:etrog_box/:en:1440",
+      "page": "etrog_box/",
+      "locale": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:megillat_esther_box/:en:1440",
+      "page": "megillat_esther_box/",
+      "locale": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "layout:inquiry/:en:1440",
+      "page": "inquiry/",
+      "locale": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "toolbar_controls": 2
+    },
+    {
+      "case": "persistence",
+      "navigation_steps": 3,
+      "reloads": 2,
+      "default_hebrew_in_english_browser": true
+    },
+    {
+      "case": "storage-fallback",
+      "blocked_read_write": true,
+      "language_changes": 2
+    },
+    {
+      "case": "cached-pageshow-and-tabs",
+      "cached_pageshow": true,
+      "cross_tab_changes": 2,
+      "draft_and_slide_preserved": true
+    },
+    {
+      "case": "bfcache-history",
+      "bfcache_restores": 2,
+      "back_forward_language_persistence": true
+    },
+    {
+      "case": "homepage-navigation:he:320",
+      "balanced_grid_rows": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "sticky_header_anchor_targets": 2,
+      "keyboard_language_changes": 2
+    },
+    {
+      "case": "homepage-navigation:he:1440",
+      "balanced_grid_rows": [
+        4,
+        4
+      ],
+      "sticky_header_anchor_targets": 3,
+      "keyboard_language_changes": 2
+    },
+    {
+      "case": "homepage-navigation:en:320",
+      "balanced_grid_rows": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "sticky_header_anchor_targets": 2,
+      "keyboard_language_changes": 2
+    },
+    {
+      "case": "homepage-navigation:en:1440",
+      "balanced_grid_rows": [
+        4,
+        4
+      ],
+      "sticky_header_anchor_targets": 3,
+      "keyboard_language_changes": 2
+    },
+    {
+      "case": "carousel:geometric/:he:320",
+      "stages": 6,
+      "transitions": 17,
+      "active_preserved_on_locale_change": true
+    },
+    {
+      "case": "carousel:driller_stand/:he:320",
+      "stages": 5,
+      "transitions": 15,
+      "active_preserved_on_locale_change": true
+    },
+    {
+      "case": "carousel:shelf/kids/:he:320",
+      "stages": 5,
+      "transitions": 15,
+      "active_preserved_on_locale_change": true
+    },
+    {
+      "case": "carousel:shoe_rack/:he:320",
+      "stages": 7,
+      "transitions": 19,
+      "active_preserved_on_locale_change": true
+    },
+    {
+      "case": "carousel:geometric/:en:320",
+      "stages": 6,
+      "transitions": 17,
+      "active_preserved_on_locale_change": true
+    },
+    {
+      "case": "carousel:driller_stand/:en:320",
+      "stages": 5,
+      "transitions": 15,
+      "active_preserved_on_locale_change": true
+    },
+    {
+      "case": "carousel:shelf/kids/:en:320",
+      "stages": 5,
+      "transitions": 15,
+      "active_preserved_on_locale_change": true
+    },
+    {
+      "case": "carousel:shoe_rack/:en:320",
+      "stages": 7,
+      "transitions": 19,
+      "active_preserved_on_locale_change": true
+    },
+    {
+      "case": "carousel:geometric/:he:1440",
+      "stages": 6,
+      "transitions": 17,
+      "active_preserved_on_locale_change": true
+    },
+    {
+      "case": "carousel:driller_stand/:he:1440",
+      "stages": 5,
+      "transitions": 15,
+      "active_preserved_on_locale_change": true
+    },
+    {
+      "case": "carousel:shelf/kids/:he:1440",
+      "stages": 5,
+      "transitions": 15,
+      "active_preserved_on_locale_change": true
+    },
+    {
+      "case": "carousel:shoe_rack/:he:1440",
+      "stages": 7,
+      "transitions": 19,
+      "active_preserved_on_locale_change": true
+    },
+    {
+      "case": "carousel:geometric/:en:1440",
+      "stages": 6,
+      "transitions": 17,
+      "active_preserved_on_locale_change": true
+    },
+    {
+      "case": "carousel:driller_stand/:en:1440",
+      "stages": 5,
+      "transitions": 15,
+      "active_preserved_on_locale_change": true
+    },
+    {
+      "case": "carousel:shelf/kids/:en:1440",
+      "stages": 5,
+      "transitions": 15,
+      "active_preserved_on_locale_change": true
+    },
+    {
+      "case": "carousel:shoe_rack/:en:1440",
+      "stages": 7,
+      "transitions": 19,
+      "active_preserved_on_locale_change": true
+    },
+    {
+      "case": "inquiry:he",
+      "prefill": true,
+      "input_preserved": true,
+      "email_draft": true,
+      "busy_and_success_translated": true,
+      "intercepted_posts": 1,
+      "real_posts": 0
+    },
+    {
+      "case": "inquiry:en",
+      "prefill": true,
+      "input_preserved": true,
+      "email_draft": true,
+      "busy_and_success_translated": true,
+      "intercepted_posts": 1,
+      "real_posts": 0
+    },
+    {
+      "case": "product-entrypoints:he",
+      "product_links": 9,
+      "locale": "he"
+    },
+    {
+      "case": "product-entrypoints:en",
+      "product_links": 9,
+      "locale": "en"
+    }
+  ],
+  "failed": [],
+  "real_posts": 0
+}

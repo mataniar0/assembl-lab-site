@@ -1,0 +1,552 @@
+{
+  "case": {
+    "viewport": [
+      1440,
+      900
+    ],
+    "language": "en",
+    "passed": false,
+    "transitions": 27,
+    "stages": [
+      {
+        "index": 0,
+        "title": "In use at home",
+        "label": "01 / IN USE · BEFORE FINISHING",
+        "description": "A real photograph of the rack at a home entrance, with shoes and a cushion. The raw-plywood structure is assembled and has not been painted or finished.",
+        "full_size": "media/production/06-interior-in-use-full.webp",
+        "image": {
+          "src": "http://127.0.0.1:42079/shoe_rack/media/production/06-interior-in-use-full.webp",
+          "alt": "Raw-plywood shoe rack at a home entrance, with shoes and a cushion, before finishing",
+          "naturalWidth": 909,
+          "naturalHeight": 987,
+          "width": 820,
+          "height": 571.59375,
+          "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+          "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+          "complete": true,
+          "deferred": false
+        }
+      },
+      {
+        "index": 1,
+        "title": "Assembled — angled view",
+        "label": "02 / ASSEMBLED · REAL PHOTO",
+        "description": "The assembled rack on the workbench, showing the depth of the shelves and the perforated side panel. The plywood and cut edges are visible, before painting or finishing.",
+        "full_size": "media/production/04-assembled-angled-full.webp",
+        "image": {
+          "src": "http://127.0.0.1:42079/shoe_rack/media/production/04-assembled-angled-960.webp",
+          "alt": "Assembled raw-plywood shoe rack on the workbench, viewed at an angle before finishing",
+          "naturalWidth": 909,
+          "naturalHeight": 729,
+          "width": 910.140625,
+          "height": 571.59375,
+          "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+          "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+          "complete": true,
+          "deferred": false
+        }
+      },
+      {
+        "index": 2,
+        "title": "Assembled — front view",
+        "label": "03 / FRONT VIEW · REAL PHOTO",
+        "description": "A front photograph of the assembled rack, showing the three slatted shelves and top seat together. This is the raw-plywood product before painting or finishing.",
+        "full_size": "media/production/05-front-view-full.webp",
+        "image": {
+          "src": "http://127.0.0.1:42079/shoe_rack/media/production/05-front-view-960.webp",
+          "alt": "Front photograph of the assembled shoe rack, with three slatted shelves and a top seat, before finishing",
+          "naturalWidth": 909,
+          "naturalHeight": 664,
+          "width": 910.140625,
+          "height": 571.59375,
+          "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+          "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+          "complete": true,
+          "deferred": false
+        }
+      },
+      {
+        "index": 3,
+        "title": "During assembly",
+        "label": "04 / ASSEMBLY · REAL PHOTO",
+        "description": "A workshop photograph during assembly: a side panel and the upper structure are beginning to come together. The parts are shown in raw plywood, before finishing.",
+        "full_size": "media/production/03-mid-assembly-full.webp",
+        "image": {
+          "src": "http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-960.webp",
+          "alt": "Shoe Rack side panel and upper structure during assembly in the workshop",
+          "naturalWidth": 909,
+          "naturalHeight": 691,
+          "width": 910.140625,
+          "height": 571.59375,
+          "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+          "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+          "complete": true,
+          "deferred": false
+        }
+      },
+      {
+        "index": 4,
+        "title": "Parts before assembly",
+        "label": "05 / PARTS · REAL PHOTO",
+        "description": "The cut plywood parts laid out on the workbench before assembly. The layout shows the actual fabricated structure and shelf components.",
+        "full_size": "media/production/02-parts-layout-full.webp",
+        "image": {
+          "src": "http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-960.webp",
+          "alt": "Shoe Rack plywood parts cut and laid out on the workbench before assembly",
+          "naturalWidth": 909,
+          "naturalHeight": 753,
+          "width": 910.140625,
+          "height": 571.59375,
+          "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+          "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+          "complete": true,
+          "deferred": false
+        }
+      },
+      {
+        "index": 5,
+        "title": "Laser cutting",
+        "label": "06 / CUTTING · REAL PHOTO",
+        "description": "A real photograph of the laser machine cutting the rack parts from a plywood sheet, using the layout prepared during planning.",
+        "full_size": "media/production/01-laser-cutting-full.webp",
+        "image": {
+          "src": "http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-960.webp",
+          "alt": "Laser machine cutting Shoe Rack parts from a plywood sheet in the workshop",
+          "naturalWidth": 909,
+          "naturalHeight": 1247,
+          "width": 910.140625,
+          "height": 571.59375,
+          "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+          "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+          "complete": true,
+          "deferred": false
+        }
+      },
+      {
+        "index": 6,
+        "title": "Planning and render",
+        "label": "07 / PLANNING AND RENDER",
+        "description": "A planning and render image — not a photograph of the product. It defines the geometry, dimensions, three shelves, perforated sides, braces and top seat before cutting and assembly.",
+        "full_size": "shoe-rack-planning-clean.webp",
+        "image": {
+          "src": "http://127.0.0.1:42079/shoe_rack/shoe-rack-planning-clean.webp",
+          "alt": "Shoe Rack planning and render sheet — structure, components and dimensions; not a product photograph",
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "width": 910.140625,
+          "height": 571.59375,
+          "srcset": null,
+          "sizes": null,
+          "complete": true,
+          "deferred": false
+        }
+      }
+    ],
+    "initial_lazy_sources": 6,
+    "initial_requested_images": [
+      "http://127.0.0.1:42079/shoe_rack/media/production/06-interior-in-use-full.webp"
+    ],
+    "hero": {
+      "src": "http://127.0.0.1:42079/shoe_rack/media/production/06-interior-in-use-full.webp",
+      "alt": "The raw-plywood shoe rack at a home entrance, with shoes and a cushion, before painting or finishing",
+      "naturalWidth": 603,
+      "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+      "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+    },
+    "error": "AssertionError: Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/06-interior-in-use-480.webp\nFailed local request: http://127.0.0.1:42079/shoe_rack/media/production/04-assembled-angled-480.webp\nFailed local request: http://127.0.0.1:42079/shoe_rack/media/production/05-front-view-480.webp\nFailed local request: http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-480.webp\nFailed local request: http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-480.webp\nFailed local request: http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-480.webp\nFailed local request: http://127.0.0.1:42079/shoe_rack/media/production/06-interior-in-use-480.webp\nFailed local request: http://127.0.0.1:42079/shoe_rack/media/production/04-assembled-angled-480.webp\nFailed local request: http://127.0.0.1:42079/shoe_rack/media/production/05-front-view-480.webp\nFailed local request: http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-480.webp\nFailed local request: http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-480.webp\nFailed local request: http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-480.webp",
+    "console_errors": [
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/06-interior-in-use-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/04-assembled-angled-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/05-front-view-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/06-interior-in-use-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/04-assembled-angled-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/05-front-view-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/05-front-view-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/05-front-view-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-480.webp",
+      "Failed local request: http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-480.webp"
+    ],
+    "blocked_writes": [],
+    "duration_seconds": 6.61
+  },
+  "failures": [
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/06-interior-in-use-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 5.896,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/04-assembled-angled-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 5.896,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/05-front-view-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 5.897,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 5.897,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 5.897,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 5.897,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/06-interior-in-use-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 6.147,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/04-assembled-angled-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 6.148,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/05-front-view-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 6.148,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 6.149,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 6.149,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 6.149,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/05-front-view-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 6.4,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 6.4,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 6.4,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 6.4,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/05-front-view-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 6.66,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 6.66,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 6.66,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 6.66,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 6.882,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 6.882,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-480.webp",
+      "failure": "net::ERR_ABORTED",
+      "elapsed": 6.882,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    }
+  ],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/",
+      "elapsed": 0.717,
+      "page_url": "about:blank"
+    },
+    {
+      "url": "http://127.0.0.1:42079/assets/language.css",
+      "elapsed": 0.762,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/assets/language.js",
+      "elapsed": 0.763,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/assets/product-light.css",
+      "elapsed": 0.763,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/assets/media-loading.js",
+      "elapsed": 0.765,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/06-interior-in-use-full.webp",
+      "elapsed": 0.768,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/04-assembled-angled-960.webp",
+      "elapsed": 1.527,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/05-front-view-960.webp",
+      "elapsed": 1.71,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-960.webp",
+      "elapsed": 1.878,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-960.webp",
+      "elapsed": 2.025,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-960.webp",
+      "elapsed": 2.176,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/shoe-rack-planning-clean.webp",
+      "elapsed": 2.344,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/06-interior-in-use-480.webp",
+      "elapsed": 5.882,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/04-assembled-angled-480.webp",
+      "elapsed": 5.884,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/05-front-view-480.webp",
+      "elapsed": 5.885,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-480.webp",
+      "elapsed": 5.886,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-480.webp",
+      "elapsed": 5.886,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-480.webp",
+      "elapsed": 5.887,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/06-interior-in-use-480.webp",
+      "elapsed": 6.137,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/04-assembled-angled-480.webp",
+      "elapsed": 6.138,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/05-front-view-480.webp",
+      "elapsed": 6.139,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-480.webp",
+      "elapsed": 6.139,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-480.webp",
+      "elapsed": 6.14,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-480.webp",
+      "elapsed": 6.142,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/06-interior-in-use-480.webp",
+      "elapsed": 6.386,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/04-assembled-angled-480.webp",
+      "elapsed": 6.387,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/05-front-view-480.webp",
+      "elapsed": 6.388,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-480.webp",
+      "elapsed": 6.389,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-480.webp",
+      "elapsed": 6.391,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-480.webp",
+      "elapsed": 6.393,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/05-front-view-480.webp",
+      "elapsed": 6.654,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-480.webp",
+      "elapsed": 6.654,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-480.webp",
+      "elapsed": 6.655,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-480.webp",
+      "elapsed": 6.655,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/05-front-view-480.webp",
+      "elapsed": 6.868,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/03-mid-assembly-480.webp",
+      "elapsed": 6.869,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/02-parts-layout-480.webp",
+      "elapsed": 6.87,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/shoe_rack/media/production/01-laser-cutting-480.webp",
+      "elapsed": 6.87,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/inquiry/?product=shoe-rack",
+      "elapsed": 7.105,
+      "page_url": "http://127.0.0.1:42079/shoe_rack/"
+    },
+    {
+      "url": "http://127.0.0.1:42079/assets/language.css",
+      "elapsed": 7.134,
+      "page_url": "http://127.0.0.1:42079/inquiry/?product=shoe-rack"
+    },
+    {
+      "url": "http://127.0.0.1:42079/assets/language.js",
+      "elapsed": 7.135,
+      "page_url": "http://127.0.0.1:42079/inquiry/?product=shoe-rack"
+    },
+    {
+      "url": "http://127.0.0.1:42079/assets/product-light.css",
+      "elapsed": 7.135,
+      "page_url": "http://127.0.0.1:42079/inquiry/?product=shoe-rack"
+    },
+    {
+      "url": "http://127.0.0.1:42079/assets/media-loading.js",
+      "elapsed": 7.138,
+      "page_url": "http://127.0.0.1:42079/inquiry/?product=shoe-rack"
+    },
+    {
+      "url": "http://127.0.0.1:42079/inquiry/contact-config.js",
+      "elapsed": 7.153,
+      "page_url": "http://127.0.0.1:42079/inquiry/?product=shoe-rack"
+    },
+    {
+      "url": "http://127.0.0.1:42079/inquiry/inquiry.js",
+      "elapsed": 7.155,
+      "page_url": "http://127.0.0.1:42079/inquiry/?product=shoe-rack"
+    }
+  ]
+}

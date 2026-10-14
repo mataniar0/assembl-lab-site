@@ -1,0 +1,313 @@
+{
+  "input_package": "shoe_rack_site_photo_task.zip",
+  "gallery_order": [
+    "06-interior-in-use",
+    "04-assembled-angled",
+    "05-front-view",
+    "03-mid-assembly",
+    "02-parts-layout",
+    "01-laser-cutting"
+  ],
+  "photographic_editing": "Deterministic ImageMagick only; no synthesis, repainting, object/background removal or perspective warping. Originals preserved byte-for-byte. Crops and mild tone corrections retain actual raw/pre-finish plywood product geometry.",
+  "optimization": "Proportional downscale only; 480 and960 variants where native crop permits; full max1280width; WebP quality84 for480/960,86 full,method6; EXIF metadata stripped. No upscaling.",
+  "images": [
+    {
+      "source": "sources/01_laser_cutting.jpg",
+      "source_sha256": "9e400414fb0d7f441c8bc71307e56d8b6cbed57e98c17ef0c796e54fa1bd70d4",
+      "source_bytes": 272917,
+      "slug": "01-laser-cutting",
+      "crop_geometry": "1400x1920+50+40",
+      "native_crop_width": 1400,
+      "native_crop_height": 1920,
+      "brightness_contrast": "3x2",
+      "color_matrix": null,
+      "edit_recipe": [
+        "-auto-orient",
+        "-crop",
+        "1400x1920+50+40",
+        "+repage",
+        "-brightness-contrast",
+        "3x2",
+        "-strip"
+      ],
+      "exports": [
+        {
+          "path": "01-laser-cutting-480.webp",
+          "width": 480,
+          "height": 658,
+          "bytes": 29608,
+          "sha256": "5b0699247b271ee2379af8d6a3be8a9327897beaa51420566b3b6040c45d2039",
+          "quality": 84
+        },
+        {
+          "path": "01-laser-cutting-960.webp",
+          "width": 960,
+          "height": 1317,
+          "bytes": 90066,
+          "sha256": "9400f810f18f0a084ed2305ce8409400b630fa98b53305c686f92ff8e237ab92",
+          "quality": 84
+        },
+        {
+          "path": "01-laser-cutting-full.webp",
+          "width": 1280,
+          "height": 1755,
+          "bytes": 166170,
+          "sha256": "058493ddd341ca3c5c99e8d90379b685751343980e184cd45969172aa7e9a79e",
+          "quality": 86
+        }
+      ]
+    },
+    {
+      "source": "sources/02_parts_layout.jpg",
+      "source_sha256": "56a69f6c784baab217463e19ef84b4c10d96136654bc4aaf7471c99da01bed40",
+      "source_bytes": 183338,
+      "slug": "02-parts-layout",
+      "crop_geometry": "1400x1160+150+0",
+      "native_crop_width": 1400,
+      "native_crop_height": 1160,
+      "brightness_contrast": "3x2",
+      "color_matrix": null,
+      "edit_recipe": [
+        "-auto-orient",
+        "-crop",
+        "1400x1160+150+0",
+        "+repage",
+        "-brightness-contrast",
+        "3x2",
+        "-strip"
+      ],
+      "exports": [
+        {
+          "path": "02-parts-layout-480.webp",
+          "width": 480,
+          "height": 398,
+          "bytes": 23852,
+          "sha256": "f77e319bbf9455d6e2c03bf8616b4a1d66d9efa15a65ede9906d6fed2c2a100c",
+          "quality": 84
+        },
+        {
+          "path": "02-parts-layout-960.webp",
+          "width": 960,
+          "height": 795,
+          "bytes": 67172,
+          "sha256": "7b31af381840b57b5301cd3575ad98e6fd33cacd5b8b07dcb688fdab2af5d4ed",
+          "quality": 84
+        },
+        {
+          "path": "02-parts-layout-full.webp",
+          "width": 1280,
+          "height": 1061,
+          "bytes": 111158,
+          "sha256": "50838f04ca4bcf052690e70fa7221667689760cece0d1a8eb17bb8890bbd171a",
+          "quality": 86
+        }
+      ]
+    },
+    {
+      "source": "sources/03_mid_assembly.jpg",
+      "source_sha256": "5d343b8b6b785d0611dbfdc8dee05b2a59dc85bd98692bbdb6340335cfcf07b4",
+      "source_bytes": 180027,
+      "slug": "03-mid-assembly",
+      "crop_geometry": "1380x1050+200+130",
+      "native_crop_width": 1380,
+      "native_crop_height": 1050,
+      "brightness_contrast": "3x2",
+      "color_matrix": null,
+      "edit_recipe": [
+        "-auto-orient",
+        "-crop",
+        "1380x1050+200+130",
+        "+repage",
+        "-brightness-contrast",
+        "3x2",
+        "-strip"
+      ],
+      "exports": [
+        {
+          "path": "03-mid-assembly-480.webp",
+          "width": 480,
+          "height": 365,
+          "bytes": 26492,
+          "sha256": "b9db715a799171fbf63f40e26a95ee1903be86d4b089ff8c34587e80f9f033a7",
+          "quality": 84
+        },
+        {
+          "path": "03-mid-assembly-960.webp",
+          "width": 960,
+          "height": 730,
+          "bytes": 73522,
+          "sha256": "437b0a85a212f8182796ddb3515a63db30f1a90c65cd1bd5dc2882814add83f1",
+          "quality": 84
+        },
+        {
+          "path": "03-mid-assembly-full.webp",
+          "width": 1280,
+          "height": 974,
+          "bytes": 124434,
+          "sha256": "c9a75ebe3fec7777aa2f47cd06cfce60d499614e88258623259b3f83ac125396",
+          "quality": 86
+        }
+      ]
+    },
+    {
+      "source": "sources/04_assembled_angled.jpg",
+      "source_sha256": "52e13c2038dc83fa4b1e167bfff50fcb16faf4737c3be4816ab0c635e15795c3",
+      "source_bytes": 211156,
+      "slug": "04-assembled-angled",
+      "crop_geometry": "1110x890+460+150",
+      "native_crop_width": 1110,
+      "native_crop_height": 890,
+      "brightness_contrast": "2x1",
+      "color_matrix": null,
+      "edit_recipe": [
+        "-auto-orient",
+        "-crop",
+        "1110x890+460+150",
+        "+repage",
+        "-brightness-contrast",
+        "2x1",
+        "-strip"
+      ],
+      "exports": [
+        {
+          "path": "04-assembled-angled-480.webp",
+          "width": 480,
+          "height": 385,
+          "bytes": 32096,
+          "sha256": "fb08004e1c3e06c664ab29185cb7adc28bbaa18fc2eefc5def197d84e8956979",
+          "quality": 84
+        },
+        {
+          "path": "04-assembled-angled-960.webp",
+          "width": 960,
+          "height": 770,
+          "bytes": 89882,
+          "sha256": "5224c51a30cb865512afb6c798779f94715f0f30162400fc17f99934f915aa29",
+          "quality": 84
+        },
+        {
+          "path": "04-assembled-angled-full.webp",
+          "width": 1110,
+          "height": 890,
+          "bytes": 127758,
+          "sha256": "4fd925b2330272f14be94a04c99a952472c87d1ba53ef24db8be664cf7925821",
+          "quality": 86
+        }
+      ]
+    },
+    {
+      "source": "sources/05_front_view.jpg",
+      "source_sha256": "896dda7939e3d8cbe46fe415860079a908a961a83409dccbb82abfcb09616d0b",
+      "source_bytes": 211643,
+      "slug": "05-front-view",
+      "crop_geometry": "1110x810+360+180",
+      "native_crop_width": 1110,
+      "native_crop_height": 810,
+      "brightness_contrast": "2x1",
+      "color_matrix": null,
+      "edit_recipe": [
+        "-auto-orient",
+        "-crop",
+        "1110x810+360+180",
+        "+repage",
+        "-brightness-contrast",
+        "2x1",
+        "-strip"
+      ],
+      "exports": [
+        {
+          "path": "05-front-view-480.webp",
+          "width": 480,
+          "height": 350,
+          "bytes": 23852,
+          "sha256": "172eef7c89d003a5cf37152bb4e62e8ff4c40b6b4c2aa54176d3d65248ededf0",
+          "quality": 84
+        },
+        {
+          "path": "05-front-view-960.webp",
+          "width": 960,
+          "height": 701,
+          "bytes": 67612,
+          "sha256": "1319c7343e3b9ba75d8c452caf1e54c8f9838e57a956c20575ea8cafbd35e935",
+          "quality": 84
+        },
+        {
+          "path": "05-front-view-full.webp",
+          "width": 1110,
+          "height": 810,
+          "bytes": 94834,
+          "sha256": "dd7470511a95bac1bba3be43a57980a72eeff744a0a2b15c491832b552530a8a",
+          "quality": 86
+        }
+      ]
+    },
+    {
+      "source": "sources/06_interior_in_use.jpg",
+      "source_sha256": "92e7f9ec745c1f17175ef878bcd4002d4cc103c0775bd574254c67dd9854210e",
+      "source_bytes": 175470,
+      "slug": "06-interior-in-use",
+      "crop_geometry": "820x890+280+590",
+      "native_crop_width": 820,
+      "native_crop_height": 890,
+      "brightness_contrast": "7x3",
+      "color_matrix": "0.995 0 0 0 1 0 0 0 1.025",
+      "edit_recipe": [
+        "-auto-orient",
+        "-crop",
+        "820x890+280+590",
+        "+repage",
+        "-brightness-contrast",
+        "7x3",
+        "-color-matrix",
+        "0.995 0 0 0 1 0 0 0 1.025",
+        "-strip"
+      ],
+      "exports": [
+        {
+          "path": "06-interior-in-use-480.webp",
+          "width": 480,
+          "height": 521,
+          "bytes": 25478,
+          "sha256": "3ff7ee54f4450146a92bdc04451b5a1a0c463c63bb424d73ea37e9863b933a7d",
+          "quality": 84
+        },
+        {
+          "path": "06-interior-in-use-full.webp",
+          "width": 820,
+          "height": 890,
+          "bytes": 70214,
+          "sha256": "5a9e4d560ea84180e016b175ad1b2efd60821d57520faeb0832292f7c588f2d8",
+          "quality": 86
+        }
+      ]
+    }
+  ],
+  "total_source_bytes": 1234551,
+  "total_export_bytes": 1244200,
+  "rejected_trials": [
+    {
+      "source": "06_interior_in_use.jpg",
+      "method": "image_gen",
+      "reason": "Synthesized cushion/wood texture, shelf/joint and scene details changed; rejected. Never used on site."
+    },
+    {
+      "source": "04_assembled_angled.jpg",
+      "method": "image_gen",
+      "reason": "Synthesized grain, join/slot details and slat layout; rejected. Never used on site."
+    }
+  ],
+  "accepted_edit_rounds": 1,
+  "variant_total_bytes": {
+    "480": 161378,
+    "960": 388254,
+    "full": 694568
+  },
+  "source_readme_sha256": "2577311b95f3d49c6885476dfda6a236f848852278ecc6059578e58767b71e5c",
+  "image_magick_version": "Version: ImageMagick 7.1.1-43 Q16 x86_64 22550 https://imagemagick.org",
+  "recipe_reproduction_proof": {
+    "checked_exports": 17,
+    "passed": 17,
+    "failed": 0,
+    "method": "Repeat all exact ImageMagick source/crop/tone/proportional resize/encoding recipes into separate temporary outputs; compare SHA256."
+  }
+}

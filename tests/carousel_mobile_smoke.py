@@ -76,7 +76,7 @@ def check_page(browser, base_url, path, viewport):
 
         steps = page.locator(".step")
         count = steps.count()
-        assert count == {"geometric/": 6, "driller_stand/": 5, "shelf/kids/": 5, "shoe_rack/": 2}[path]
+        assert count == {"geometric/": 6, "driller_stand/": 5, "shelf/kids/": 5, "shoe_rack/": 7}[path]
         assert previous.is_enabled() and following.is_enabled()
         active = 0
 

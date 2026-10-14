@@ -1,0 +1,202 @@
+{
+  "capture_contexts": [
+    {
+      "language": "he",
+      "viewport": [
+        390,
+        844
+      ],
+      "screenshots": [
+        {
+          "path": "/tmp/shoe-photo-qa-third-submission/after/shoe-he-390.png",
+          "language": "he",
+          "viewport": [
+            390,
+            844
+          ],
+          "stage": 1,
+          "disclosures_open": 0,
+          "method": "raw Playwright full_page"
+        },
+        {
+          "path": "/tmp/shoe-photo-qa-third-submission/shoe-he-390-stage-01.png",
+          "language": "he",
+          "viewport": [
+            390,
+            844
+          ],
+          "stage": 1,
+          "disclosures_open": 4,
+          "method": "raw Playwright full_page clip"
+        },
+        {
+          "path": "/tmp/shoe-photo-qa-third-submission/shoe-he-390-stage-02.png",
+          "language": "he",
+          "viewport": [
+            390,
+            844
+          ],
+          "stage": 2,
+          "disclosures_open": 4,
+          "method": "raw Playwright full_page clip"
+        },
+        {
+          "path": "/tmp/shoe-photo-qa-third-submission/shoe-he-390-stage-04.png",
+          "language": "he",
+          "viewport": [
+            390,
+            844
+          ],
+          "stage": 4,
+          "disclosures_open": 4,
+          "method": "raw Playwright full_page clip"
+        },
+        {
+          "path": "/tmp/shoe-photo-qa-third-submission/shoe-he-390-stage-06.png",
+          "language": "he",
+          "viewport": [
+            390,
+            844
+          ],
+          "stage": 6,
+          "disclosures_open": 4,
+          "method": "raw Playwright full_page clip"
+        },
+        {
+          "path": "/tmp/shoe-photo-qa-third-submission/shoe-he-390-stage-07.png",
+          "language": "he",
+          "viewport": [
+            390,
+            844
+          ],
+          "stage": 7,
+          "disclosures_open": 4,
+          "method": "raw Playwright full_page clip"
+        },
+        {
+          "path": "/tmp/shoe-photo-qa-third-submission/shoe-he-390-inquiry.png",
+          "language": "he",
+          "viewport": [
+            390,
+            844
+          ],
+          "stage": null,
+          "disclosures_open": 0,
+          "method": "raw Playwright full_page"
+        }
+      ],
+      "screenshot_request_cancellations": [],
+      "unclassified_errors": [],
+      "console_errors": [],
+      "http_errors": [],
+      "real_posts": 0,
+      "note": "Expected screenshot viewport candidate cancellations retained; functional browser checks are in separate strict contexts."
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "screenshots": [
+        {
+          "path": "/tmp/shoe-photo-qa-third-submission/after/shoe-en-1440.png",
+          "language": "en",
+          "viewport": [
+            1440,
+            900
+          ],
+          "stage": 1,
+          "disclosures_open": 0,
+          "method": "raw Playwright full_page"
+        },
+        {
+          "path": "/tmp/shoe-photo-qa-third-submission/shoe-en-1440-stage-01.png",
+          "language": "en",
+          "viewport": [
+            1440,
+            900
+          ],
+          "stage": 1,
+          "disclosures_open": 4,
+          "method": "raw Playwright full_page clip"
+        },
+        {
+          "path": "/tmp/shoe-photo-qa-third-submission/shoe-en-1440-stage-02.png",
+          "language": "en",
+          "viewport": [
+            1440,
+            900
+          ],
+          "stage": 2,
+          "disclosures_open": 4,
+          "method": "raw Playwright full_page clip"
+        },
+        {
+          "path": "/tmp/shoe-photo-qa-third-submission/shoe-en-1440-stage-04.png",
+          "language": "en",
+          "viewport": [
+            1440,
+            900
+          ],
+          "stage": 4,
+          "disclosures_open": 4,
+          "method": "raw Playwright full_page clip"
+        },
+        {
+          "path": "/tmp/shoe-photo-qa-third-submission/shoe-en-1440-stage-06.png",
+          "language": "en",
+          "viewport": [
+            1440,
+            900
+          ],
+          "stage": 6,
+          "disclosures_open": 4,
+          "method": "raw Playwright full_page clip"
+        },
+        {
+          "path": "/tmp/shoe-photo-qa-third-submission/shoe-en-1440-stage-07.png",
+          "language": "en",
+          "viewport": [
+            1440,
+            900
+          ],
+          "stage": 7,
+          "disclosures_open": 4,
+          "method": "raw Playwright full_page clip"
+        },
+        {
+          "path": "/tmp/shoe-photo-qa-third-submission/shoe-en-1440-inquiry.png",
+          "language": "en",
+          "viewport": [
+            1440,
+            900
+          ],
+          "stage": null,
+          "disclosures_open": 0,
+          "method": "raw Playwright full_page"
+        }
+      ],
+      "screenshot_request_cancellations": [
+        {
+          "url": "http://127.0.0.1:33881/shoe_rack/media/production/06-interior-in-use-480.webp",
+          "failure": "net::ERR_ABORTED",
+          "phase": "screenshot:shoe-en-1440-stage-02.png",
+          "elapsed_seconds": 1.608
+        },
+        {
+          "url": "http://127.0.0.1:33881/shoe_rack/media/production/04-assembled-angled-480.webp",
+          "failure": "net::ERR_ABORTED",
+          "phase": "screenshot:shoe-en-1440-stage-02.png",
+          "elapsed_seconds": 1.608
+        }
+      ],
+      "unclassified_errors": [],
+      "console_errors": [],
+      "http_errors": [],
+      "real_posts": 0,
+      "note": "Expected screenshot viewport candidate cancellations retained; functional browser checks are in separate strict contexts."
+    }
+  ],
+  "real_posts": 0
+}

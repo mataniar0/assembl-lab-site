@@ -1,0 +1,118 @@
+{
+  "passed": 14,
+  "failed": 0,
+  "results": [
+    {
+      "language": "he",
+      "width": 390,
+      "stage": 1,
+      "image": "media/production/06-interior-in-use-full.webp",
+      "current_src": "http://127.0.0.1:39327/shoe_rack/media/production/06-interior-in-use-480.webp",
+      "full_size": "media/production/06-interior-in-use-full.webp"
+    },
+    {
+      "language": "he",
+      "width": 390,
+      "stage": 2,
+      "image": "media/production/04-assembled-angled-960.webp",
+      "current_src": "http://127.0.0.1:39327/shoe_rack/media/production/04-assembled-angled-480.webp",
+      "full_size": "media/production/04-assembled-angled-full.webp"
+    },
+    {
+      "language": "he",
+      "width": 390,
+      "stage": 3,
+      "image": "media/production/05-front-view-960.webp",
+      "current_src": "http://127.0.0.1:39327/shoe_rack/media/production/05-front-view-480.webp",
+      "full_size": "media/production/05-front-view-full.webp"
+    },
+    {
+      "language": "he",
+      "width": 390,
+      "stage": 4,
+      "image": "media/production/03-mid-assembly-960.webp",
+      "current_src": "http://127.0.0.1:39327/shoe_rack/media/production/03-mid-assembly-480.webp",
+      "full_size": "media/production/03-mid-assembly-full.webp"
+    },
+    {
+      "language": "he",
+      "width": 390,
+      "stage": 5,
+      "image": "media/production/02-parts-layout-960.webp",
+      "current_src": "http://127.0.0.1:39327/shoe_rack/media/production/02-parts-layout-480.webp",
+      "full_size": "media/production/02-parts-layout-full.webp"
+    },
+    {
+      "language": "he",
+      "width": 390,
+      "stage": 6,
+      "image": "media/production/01-laser-cutting-960.webp",
+      "current_src": "http://127.0.0.1:39327/shoe_rack/media/production/01-laser-cutting-480.webp",
+      "full_size": "media/production/01-laser-cutting-full.webp"
+    },
+    {
+      "language": "he",
+      "width": 390,
+      "stage": 7,
+      "image": "shoe-rack-planning-clean.webp",
+      "current_src": "http://127.0.0.1:39327/shoe_rack/shoe-rack-planning-clean.webp",
+      "full_size": "shoe-rack-planning-clean.webp"
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "stage": 1,
+      "image": "media/production/06-interior-in-use-full.webp",
+      "current_src": "http://127.0.0.1:39327/shoe_rack/media/production/06-interior-in-use-full.webp",
+      "full_size": "media/production/06-interior-in-use-full.webp"
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "stage": 2,
+      "image": "media/production/04-assembled-angled-960.webp",
+      "current_src": "http://127.0.0.1:39327/shoe_rack/media/production/04-assembled-angled-960.webp",
+      "full_size": "media/production/04-assembled-angled-full.webp"
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "stage": 3,
+      "image": "media/production/05-front-view-960.webp",
+      "current_src": "http://127.0.0.1:39327/shoe_rack/media/production/05-front-view-960.webp",
+      "full_size": "media/production/05-front-view-full.webp"
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "stage": 4,
+      "image": "media/production/03-mid-assembly-960.webp",
+      "current_src": "http://127.0.0.1:39327/shoe_rack/media/production/03-mid-assembly-960.webp",
+      "full_size": "media/production/03-mid-assembly-full.webp"
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "stage": 5,
+      "image": "media/production/02-parts-layout-960.webp",
+      "current_src": "http://127.0.0.1:39327/shoe_rack/media/production/02-parts-layout-960.webp",
+      "full_size": "media/production/02-parts-layout-full.webp"
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "stage": 6,
+      "image": "media/production/01-laser-cutting-960.webp",
+      "current_src": "http://127.0.0.1:39327/shoe_rack/media/production/01-laser-cutting-960.webp",
+      "full_size": "media/production/01-laser-cutting-full.webp"
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "stage": 7,
+      "image": "shoe-rack-planning-clean.webp",
+      "current_src": "http://127.0.0.1:39327/shoe_rack/shoe-rack-planning-clean.webp",
+      "full_size": "shoe-rack-planning-clean.webp"
+    }
+  ]
+}

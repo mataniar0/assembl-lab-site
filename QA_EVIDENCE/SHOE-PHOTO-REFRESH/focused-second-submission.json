@@ -1,0 +1,3409 @@
+{
+  "started_epoch": 1791980533.7107406,
+  "passed": 20,
+  "failed": 4,
+  "transitions": 567,
+  "real_posts": 0,
+  "results": [
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "language": "he",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "בשימוש בבית",
+          "label": "01 / בשימוש · לפני גימור",
+          "description": "צילום אמיתי של המעמד בכניסה לבית, עם נעליים וכרית. המבנה מורכב מדיקט טבעי ונמצא לפני צבע או גימור.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp",
+            "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני גימור",
+            "naturalWidth": 257,
+            "naturalHeight": 280,
+            "width": 258,
+            "height": 249.328125,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "מורכב — מבט בזווית",
+          "label": "02 / מורכב · צילום אמיתי",
+          "description": "המעמד המורכב על שולחן העבודה, במבט שמציג את עומק המדפים ואת הפאה המחוררת. הדיקט וקצוות החיתוך גלויים, לפני צבע או גימור.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-480.webp",
+            "alt": "מעמד הנעליים המורכב מדיקט טבעי על שולחן העבודה, במבט בזווית, לפני גימור",
+            "naturalWidth": 257,
+            "naturalHeight": 206,
+            "width": 258,
+            "height": 249.328125,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "מורכב — מבט חזית",
+          "label": "03 / חזית · צילום אמיתי",
+          "description": "צילום חזית של המעמד המורכב: שלושת מדפי הרפפות והמושב העליון נראים יחד. זהו המוצר בדיקט טבעי, לפני צבע או גימור.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-480.webp",
+            "alt": "צילום חזית של מעמד הנעליים המורכב, עם שלושה מדפי רפפות ומושב עליון, לפני גימור",
+            "naturalWidth": 257,
+            "naturalHeight": 188,
+            "width": 258,
+            "height": 249.328125,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "במהלך ההרכבה",
+          "label": "04 / הרכבה · צילום אמיתי",
+          "description": "צילום מהסדנה במהלך ההרכבה: פאת צד והמבנה העליון מתחילים להתחבר. החלקים מוצגים בדיקט טבעי, לפני הגימור.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-480.webp",
+            "alt": "פאת צד והמבנה העליון של מעמד הנעליים במהלך ההרכבה בסדנה",
+            "naturalWidth": 257,
+            "naturalHeight": 196,
+            "width": 258,
+            "height": 249.328125,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "החלקים לפני הרכבה",
+          "label": "05 / חלקים · צילום אמיתי",
+          "description": "חלקי הדיקט החתוכים פרוסים על שולחן העבודה לפני ההרכבה. הפריסה מציגה את רכיבי המבנה והמדפים כפי שיוצרו.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-480.webp",
+            "alt": "חלקי מעמד הנעליים חתוכים מדיקט ופרוסים על שולחן העבודה לפני ההרכבה",
+            "naturalWidth": 257,
+            "naturalHeight": 213,
+            "width": 258,
+            "height": 249.328125,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "חיתוך בלייזר",
+          "label": "06 / חיתוך · צילום אמיתי",
+          "description": "צילום אמיתי של מכונת הלייזר החותכת את חלקי המעמד בלוח הדיקט, בהתאם לפריסה שהוכנה בתכנון.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-480.webp",
+            "alt": "מכונת הלייזר חותכת את חלקי מעמד הנעליים בלוח דיקט בסדנה",
+            "naturalWidth": 257,
+            "naturalHeight": 353,
+            "width": 258,
+            "height": 249.328125,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "תכנון והדמיה",
+          "label": "07 / תכנון והדמיה",
+          "description": "תמונת תכנון והדמיה — אינה צילום של המוצר. היא מגדירה את הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון לפני החיתוך וההרכבה.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "תכנון והדמיה של מעמד הנעליים — מבנה, חלקים ומידות; לא צילום מוצר",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 258,
+            "height": 249.328125,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp",
+        "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני צבע או גימור",
+        "naturalWidth": 268,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 4.65
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "language": "en",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "In use at home",
+          "label": "01 / IN USE · BEFORE FINISHING",
+          "description": "A real photograph of the rack at a home entrance, with shoes and a cushion. The raw-plywood structure is assembled and has not been painted or finished.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp",
+            "alt": "Raw-plywood shoe rack at a home entrance, with shoes and a cushion, before finishing",
+            "naturalWidth": 257,
+            "naturalHeight": 280,
+            "width": 258,
+            "height": 249.328125,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "Assembled — angled view",
+          "label": "02 / ASSEMBLED · REAL PHOTO",
+          "description": "The assembled rack on the workbench, showing the depth of the shelves and the perforated side panel. The plywood and cut edges are visible, before painting or finishing.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-480.webp",
+            "alt": "Assembled raw-plywood shoe rack on the workbench, viewed at an angle before finishing",
+            "naturalWidth": 257,
+            "naturalHeight": 206,
+            "width": 258,
+            "height": 249.328125,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "Assembled — front view",
+          "label": "03 / FRONT VIEW · REAL PHOTO",
+          "description": "A front photograph of the assembled rack, showing the three slatted shelves and top seat together. This is the raw-plywood product before painting or finishing.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-480.webp",
+            "alt": "Front photograph of the assembled shoe rack, with three slatted shelves and a top seat, before finishing",
+            "naturalWidth": 257,
+            "naturalHeight": 188,
+            "width": 258,
+            "height": 249.328125,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "During assembly",
+          "label": "04 / ASSEMBLY · REAL PHOTO",
+          "description": "A workshop photograph during assembly: a side panel and the upper structure are beginning to come together. The parts are shown in raw plywood, before finishing.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-480.webp",
+            "alt": "Shoe Rack side panel and upper structure during assembly in the workshop",
+            "naturalWidth": 257,
+            "naturalHeight": 196,
+            "width": 258,
+            "height": 249.328125,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "Parts before assembly",
+          "label": "05 / PARTS · REAL PHOTO",
+          "description": "The cut plywood parts laid out on the workbench before assembly. The layout shows the actual fabricated structure and shelf components.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-480.webp",
+            "alt": "Shoe Rack plywood parts cut and laid out on the workbench before assembly",
+            "naturalWidth": 257,
+            "naturalHeight": 213,
+            "width": 258,
+            "height": 249.328125,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "Laser cutting",
+          "label": "06 / CUTTING · REAL PHOTO",
+          "description": "A real photograph of the laser machine cutting the rack parts from a plywood sheet, using the layout prepared during planning.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-480.webp",
+            "alt": "Laser machine cutting Shoe Rack parts from a plywood sheet in the workshop",
+            "naturalWidth": 257,
+            "naturalHeight": 353,
+            "width": 258,
+            "height": 249.328125,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "Planning and render",
+          "label": "07 / PLANNING AND RENDER",
+          "description": "A planning and render image — not a photograph of the product. It defines the geometry, dimensions, three shelves, perforated sides, braces and top seat before cutting and assembly.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "Shoe Rack planning and render sheet — structure, components and dimensions; not a product photograph",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 258,
+            "height": 249.328125,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp",
+        "alt": "The raw-plywood shoe rack at a home entrance, with shoes and a cushion, before painting or finishing",
+        "naturalWidth": 268,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 4.45
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "language": "he",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "בשימוש בבית",
+          "label": "01 / בשימוש · לפני גימור",
+          "description": "צילום אמיתי של המעמד בכניסה לבית, עם נעליים וכרית. המבנה מורכב מדיקט טבעי ונמצא לפני צבע או גימור.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp",
+            "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני גימור",
+            "naturalWidth": 328,
+            "naturalHeight": 356,
+            "width": 328,
+            "height": 342.65625,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "מורכב — מבט בזווית",
+          "label": "02 / מורכב · צילום אמיתי",
+          "description": "המעמד המורכב על שולחן העבודה, במבט שמציג את עומק המדפים ואת הפאה המחוררת. הדיקט וקצוות החיתוך גלויים, לפני צבע או גימור.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-480.webp",
+            "alt": "מעמד הנעליים המורכב מדיקט טבעי על שולחן העבודה, במבט בזווית, לפני גימור",
+            "naturalWidth": 328,
+            "naturalHeight": 263,
+            "width": 328,
+            "height": 342.65625,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "מורכב — מבט חזית",
+          "label": "03 / חזית · צילום אמיתי",
+          "description": "צילום חזית של המעמד המורכב: שלושת מדפי הרפפות והמושב העליון נראים יחד. זהו המוצר בדיקט טבעי, לפני צבע או גימור.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-480.webp",
+            "alt": "צילום חזית של מעמד הנעליים המורכב, עם שלושה מדפי רפפות ומושב עליון, לפני גימור",
+            "naturalWidth": 328,
+            "naturalHeight": 239,
+            "width": 328,
+            "height": 342.65625,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "במהלך ההרכבה",
+          "label": "04 / הרכבה · צילום אמיתי",
+          "description": "צילום מהסדנה במהלך ההרכבה: פאת צד והמבנה העליון מתחילים להתחבר. החלקים מוצגים בדיקט טבעי, לפני הגימור.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-480.webp",
+            "alt": "פאת צד והמבנה העליון של מעמד הנעליים במהלך ההרכבה בסדנה",
+            "naturalWidth": 328,
+            "naturalHeight": 249,
+            "width": 328,
+            "height": 342.65625,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "החלקים לפני הרכבה",
+          "label": "05 / חלקים · צילום אמיתי",
+          "description": "חלקי הדיקט החתוכים פרוסים על שולחן העבודה לפני ההרכבה. הפריסה מציגה את רכיבי המבנה והמדפים כפי שיוצרו.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-480.webp",
+            "alt": "חלקי מעמד הנעליים חתוכים מדיקט ופרוסים על שולחן העבודה לפני ההרכבה",
+            "naturalWidth": 328,
+            "naturalHeight": 271,
+            "width": 328,
+            "height": 342.65625,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "חיתוך בלייזר",
+          "label": "06 / חיתוך · צילום אמיתי",
+          "description": "צילום אמיתי של מכונת הלייזר החותכת את חלקי המעמד בלוח הדיקט, בהתאם לפריסה שהוכנה בתכנון.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-480.webp",
+            "alt": "מכונת הלייזר חותכת את חלקי מעמד הנעליים בלוח דיקט בסדנה",
+            "naturalWidth": 328,
+            "naturalHeight": 449,
+            "width": 328,
+            "height": 342.65625,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "תכנון והדמיה",
+          "label": "07 / תכנון והדמיה",
+          "description": "תמונת תכנון והדמיה — אינה צילום של המוצר. היא מגדירה את הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון לפני החיתוך וההרכבה.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "תכנון והדמיה של מעמד הנעליים — מבנה, חלקים ומידות; לא צילום מוצר",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 328,
+            "height": 342.65625,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp",
+        "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני צבע או גימור",
+        "naturalWidth": 338,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 6.59
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "language": "en",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "In use at home",
+          "label": "01 / IN USE · BEFORE FINISHING",
+          "description": "A real photograph of the rack at a home entrance, with shoes and a cushion. The raw-plywood structure is assembled and has not been painted or finished.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp",
+            "alt": "Raw-plywood shoe rack at a home entrance, with shoes and a cushion, before finishing",
+            "naturalWidth": 328,
+            "naturalHeight": 356,
+            "width": 328,
+            "height": 342.65625,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "Assembled — angled view",
+          "label": "02 / ASSEMBLED · REAL PHOTO",
+          "description": "The assembled rack on the workbench, showing the depth of the shelves and the perforated side panel. The plywood and cut edges are visible, before painting or finishing.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-480.webp",
+            "alt": "Assembled raw-plywood shoe rack on the workbench, viewed at an angle before finishing",
+            "naturalWidth": 328,
+            "naturalHeight": 263,
+            "width": 328,
+            "height": 342.65625,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "Assembled — front view",
+          "label": "03 / FRONT VIEW · REAL PHOTO",
+          "description": "A front photograph of the assembled rack, showing the three slatted shelves and top seat together. This is the raw-plywood product before painting or finishing.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-480.webp",
+            "alt": "Front photograph of the assembled shoe rack, with three slatted shelves and a top seat, before finishing",
+            "naturalWidth": 328,
+            "naturalHeight": 239,
+            "width": 328,
+            "height": 342.65625,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "During assembly",
+          "label": "04 / ASSEMBLY · REAL PHOTO",
+          "description": "A workshop photograph during assembly: a side panel and the upper structure are beginning to come together. The parts are shown in raw plywood, before finishing.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-480.webp",
+            "alt": "Shoe Rack side panel and upper structure during assembly in the workshop",
+            "naturalWidth": 328,
+            "naturalHeight": 249,
+            "width": 328,
+            "height": 342.65625,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "Parts before assembly",
+          "label": "05 / PARTS · REAL PHOTO",
+          "description": "The cut plywood parts laid out on the workbench before assembly. The layout shows the actual fabricated structure and shelf components.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-480.webp",
+            "alt": "Shoe Rack plywood parts cut and laid out on the workbench before assembly",
+            "naturalWidth": 328,
+            "naturalHeight": 271,
+            "width": 328,
+            "height": 342.65625,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "Laser cutting",
+          "label": "06 / CUTTING · REAL PHOTO",
+          "description": "A real photograph of the laser machine cutting the rack parts from a plywood sheet, using the layout prepared during planning.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-480.webp",
+            "alt": "Laser machine cutting Shoe Rack parts from a plywood sheet in the workshop",
+            "naturalWidth": 328,
+            "naturalHeight": 449,
+            "width": 328,
+            "height": 342.65625,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "Planning and render",
+          "label": "07 / PLANNING AND RENDER",
+          "description": "A planning and render image — not a photograph of the product. It defines the geometry, dimensions, three shelves, perforated sides, braces and top seat before cutting and assembly.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "Shoe Rack planning and render sheet — structure, components and dimensions; not a product photograph",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 328,
+            "height": 342.65625,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp",
+        "alt": "The raw-plywood shoe rack at a home entrance, with shoes and a cushion, before painting or finishing",
+        "naturalWidth": 338,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 4.49
+    },
+    {
+      "viewport": [
+        640,
+        900
+      ],
+      "language": "he",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "בשימוש בבית",
+          "label": "01 / בשימוש · לפני גימור",
+          "description": "צילום אמיתי של המעמד בכניסה לבית, עם נעליים וכרית. המבנה מורכב מדיקט טבעי ונמצא לפני צבע או גימור.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+            "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני גימור",
+            "naturalWidth": 578,
+            "naturalHeight": 627,
+            "width": 578,
+            "height": 676,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "מורכב — מבט בזווית",
+          "label": "02 / מורכב · צילום אמיתי",
+          "description": "המעמד המורכב על שולחן העבודה, במבט שמציג את עומק המדפים ואת הפאה המחוררת. הדיקט וקצוות החיתוך גלויים, לפני צבע או גימור.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-960.webp",
+            "alt": "מעמד הנעליים המורכב מדיקט טבעי על שולחן העבודה, במבט בזווית, לפני גימור",
+            "naturalWidth": 578,
+            "naturalHeight": 463,
+            "width": 578,
+            "height": 676,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "מורכב — מבט חזית",
+          "label": "03 / חזית · צילום אמיתי",
+          "description": "צילום חזית של המעמד המורכב: שלושת מדפי הרפפות והמושב העליון נראים יחד. זהו המוצר בדיקט טבעי, לפני צבע או גימור.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-960.webp",
+            "alt": "צילום חזית של מעמד הנעליים המורכב, עם שלושה מדפי רפפות ומושב עליון, לפני גימור",
+            "naturalWidth": 578,
+            "naturalHeight": 422,
+            "width": 578,
+            "height": 676,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "במהלך ההרכבה",
+          "label": "04 / הרכבה · צילום אמיתי",
+          "description": "צילום מהסדנה במהלך ההרכבה: פאת צד והמבנה העליון מתחילים להתחבר. החלקים מוצגים בדיקט טבעי, לפני הגימור.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-960.webp",
+            "alt": "פאת צד והמבנה העליון של מעמד הנעליים במהלך ההרכבה בסדנה",
+            "naturalWidth": 578,
+            "naturalHeight": 439,
+            "width": 578,
+            "height": 676,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "החלקים לפני הרכבה",
+          "label": "05 / חלקים · צילום אמיתי",
+          "description": "חלקי הדיקט החתוכים פרוסים על שולחן העבודה לפני ההרכבה. הפריסה מציגה את רכיבי המבנה והמדפים כפי שיוצרו.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-960.webp",
+            "alt": "חלקי מעמד הנעליים חתוכים מדיקט ופרוסים על שולחן העבודה לפני ההרכבה",
+            "naturalWidth": 578,
+            "naturalHeight": 478,
+            "width": 578,
+            "height": 676,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "חיתוך בלייזר",
+          "label": "06 / חיתוך · צילום אמיתי",
+          "description": "צילום אמיתי של מכונת הלייזר החותכת את חלקי המעמד בלוח הדיקט, בהתאם לפריסה שהוכנה בתכנון.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-960.webp",
+            "alt": "מכונת הלייזר חותכת את חלקי מעמד הנעליים בלוח דיקט בסדנה",
+            "naturalWidth": 578,
+            "naturalHeight": 792,
+            "width": 578,
+            "height": 676,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "תכנון והדמיה",
+          "label": "07 / תכנון והדמיה",
+          "description": "תמונת תכנון והדמיה — אינה צילום של המוצר. היא מגדירה את הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון לפני החיתוך וההרכבה.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "תכנון והדמיה של מעמד הנעליים — מבנה, חלקים ומידות; לא צילום מוצר",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 578,
+            "height": 676,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני צבע או גימור",
+        "naturalWidth": 588,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 4.46
+    },
+    {
+      "viewport": [
+        640,
+        900
+      ],
+      "language": "en",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "In use at home",
+          "label": "01 / IN USE · BEFORE FINISHING",
+          "description": "A real photograph of the rack at a home entrance, with shoes and a cushion. The raw-plywood structure is assembled and has not been painted or finished.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+            "alt": "Raw-plywood shoe rack at a home entrance, with shoes and a cushion, before finishing",
+            "naturalWidth": 578,
+            "naturalHeight": 627,
+            "width": 578,
+            "height": 676,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "Assembled — angled view",
+          "label": "02 / ASSEMBLED · REAL PHOTO",
+          "description": "The assembled rack on the workbench, showing the depth of the shelves and the perforated side panel. The plywood and cut edges are visible, before painting or finishing.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-960.webp",
+            "alt": "Assembled raw-plywood shoe rack on the workbench, viewed at an angle before finishing",
+            "naturalWidth": 578,
+            "naturalHeight": 463,
+            "width": 578,
+            "height": 676,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "Assembled — front view",
+          "label": "03 / FRONT VIEW · REAL PHOTO",
+          "description": "A front photograph of the assembled rack, showing the three slatted shelves and top seat together. This is the raw-plywood product before painting or finishing.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-960.webp",
+            "alt": "Front photograph of the assembled shoe rack, with three slatted shelves and a top seat, before finishing",
+            "naturalWidth": 578,
+            "naturalHeight": 422,
+            "width": 578,
+            "height": 676,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "During assembly",
+          "label": "04 / ASSEMBLY · REAL PHOTO",
+          "description": "A workshop photograph during assembly: a side panel and the upper structure are beginning to come together. The parts are shown in raw plywood, before finishing.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-960.webp",
+            "alt": "Shoe Rack side panel and upper structure during assembly in the workshop",
+            "naturalWidth": 578,
+            "naturalHeight": 439,
+            "width": 578,
+            "height": 676,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "Parts before assembly",
+          "label": "05 / PARTS · REAL PHOTO",
+          "description": "The cut plywood parts laid out on the workbench before assembly. The layout shows the actual fabricated structure and shelf components.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-960.webp",
+            "alt": "Shoe Rack plywood parts cut and laid out on the workbench before assembly",
+            "naturalWidth": 578,
+            "naturalHeight": 478,
+            "width": 578,
+            "height": 676,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "Laser cutting",
+          "label": "06 / CUTTING · REAL PHOTO",
+          "description": "A real photograph of the laser machine cutting the rack parts from a plywood sheet, using the layout prepared during planning.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-960.webp",
+            "alt": "Laser machine cutting Shoe Rack parts from a plywood sheet in the workshop",
+            "naturalWidth": 578,
+            "naturalHeight": 792,
+            "width": 578,
+            "height": 676,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "Planning and render",
+          "label": "07 / PLANNING AND RENDER",
+          "description": "A planning and render image — not a photograph of the product. It defines the geometry, dimensions, three shelves, perforated sides, braces and top seat before cutting and assembly.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "Shoe Rack planning and render sheet — structure, components and dimensions; not a product photograph",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 578,
+            "height": 676,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "alt": "The raw-plywood shoe rack at a home entrance, with shoes and a cushion, before painting or finishing",
+        "naturalWidth": 588,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 4.37
+    },
+    {
+      "viewport": [
+        844,
+        900
+      ],
+      "language": "he",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "בשימוש בבית",
+          "label": "01 / בשימוש · לפני גימור",
+          "description": "צילום אמיתי של המעמד בכניסה לבית, עם נעליים וכרית. המבנה מורכב מדיקט טבעי ונמצא לפני צבע או גימור.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+            "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני גימור",
+            "naturalWidth": 729,
+            "naturalHeight": 791,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "מורכב — מבט בזווית",
+          "label": "02 / מורכב · צילום אמיתי",
+          "description": "המעמד המורכב על שולחן העבודה, במבט שמציג את עומק המדפים ואת הפאה המחוררת. הדיקט וקצוות החיתוך גלויים, לפני צבע או גימור.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-960.webp",
+            "alt": "מעמד הנעליים המורכב מדיקט טבעי על שולחן העבודה, במבט בזווית, לפני גימור",
+            "naturalWidth": 729,
+            "naturalHeight": 585,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "מורכב — מבט חזית",
+          "label": "03 / חזית · צילום אמיתי",
+          "description": "צילום חזית של המעמד המורכב: שלושת מדפי הרפפות והמושב העליון נראים יחד. זהו המוצר בדיקט טבעי, לפני צבע או גימור.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-960.webp",
+            "alt": "צילום חזית של מעמד הנעליים המורכב, עם שלושה מדפי רפפות ומושב עליון, לפני גימור",
+            "naturalWidth": 729,
+            "naturalHeight": 532,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "במהלך ההרכבה",
+          "label": "04 / הרכבה · צילום אמיתי",
+          "description": "צילום מהסדנה במהלך ההרכבה: פאת צד והמבנה העליון מתחילים להתחבר. החלקים מוצגים בדיקט טבעי, לפני הגימור.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-960.webp",
+            "alt": "פאת צד והמבנה העליון של מעמד הנעליים במהלך ההרכבה בסדנה",
+            "naturalWidth": 729,
+            "naturalHeight": 554,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "החלקים לפני הרכבה",
+          "label": "05 / חלקים · צילום אמיתי",
+          "description": "חלקי הדיקט החתוכים פרוסים על שולחן העבודה לפני ההרכבה. הפריסה מציגה את רכיבי המבנה והמדפים כפי שיוצרו.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-960.webp",
+            "alt": "חלקי מעמד הנעליים חתוכים מדיקט ופרוסים על שולחן העבודה לפני ההרכבה",
+            "naturalWidth": 729,
+            "naturalHeight": 604,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "חיתוך בלייזר",
+          "label": "06 / חיתוך · צילום אמיתי",
+          "description": "צילום אמיתי של מכונת הלייזר החותכת את חלקי המעמד בלוח הדיקט, בהתאם לפריסה שהוכנה בתכנון.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-960.webp",
+            "alt": "מכונת הלייזר חותכת את חלקי מעמד הנעליים בלוח דיקט בסדנה",
+            "naturalWidth": 729,
+            "naturalHeight": 1000,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "תכנון והדמיה",
+          "label": "07 / תכנון והדמיה",
+          "description": "תמונת תכנון והדמיה — אינה צילום של המוצר. היא מגדירה את הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון לפני החיתוך וההרכבה.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "תכנון והדמיה של מעמד הנעליים — מבנה, חלקים ומידות; לא צילום מוצר",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני צבע או גימור",
+        "naturalWidth": 740,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 4.28
+    },
+    {
+      "viewport": [
+        844,
+        900
+      ],
+      "language": "en",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "In use at home",
+          "label": "01 / IN USE · BEFORE FINISHING",
+          "description": "A real photograph of the rack at a home entrance, with shoes and a cushion. The raw-plywood structure is assembled and has not been painted or finished.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+            "alt": "Raw-plywood shoe rack at a home entrance, with shoes and a cushion, before finishing",
+            "naturalWidth": 729,
+            "naturalHeight": 791,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "Assembled — angled view",
+          "label": "02 / ASSEMBLED · REAL PHOTO",
+          "description": "The assembled rack on the workbench, showing the depth of the shelves and the perforated side panel. The plywood and cut edges are visible, before painting or finishing.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-960.webp",
+            "alt": "Assembled raw-plywood shoe rack on the workbench, viewed at an angle before finishing",
+            "naturalWidth": 729,
+            "naturalHeight": 585,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "Assembled — front view",
+          "label": "03 / FRONT VIEW · REAL PHOTO",
+          "description": "A front photograph of the assembled rack, showing the three slatted shelves and top seat together. This is the raw-plywood product before painting or finishing.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-960.webp",
+            "alt": "Front photograph of the assembled shoe rack, with three slatted shelves and a top seat, before finishing",
+            "naturalWidth": 729,
+            "naturalHeight": 532,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "During assembly",
+          "label": "04 / ASSEMBLY · REAL PHOTO",
+          "description": "A workshop photograph during assembly: a side panel and the upper structure are beginning to come together. The parts are shown in raw plywood, before finishing.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-960.webp",
+            "alt": "Shoe Rack side panel and upper structure during assembly in the workshop",
+            "naturalWidth": 729,
+            "naturalHeight": 554,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "Parts before assembly",
+          "label": "05 / PARTS · REAL PHOTO",
+          "description": "The cut plywood parts laid out on the workbench before assembly. The layout shows the actual fabricated structure and shelf components.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-960.webp",
+            "alt": "Shoe Rack plywood parts cut and laid out on the workbench before assembly",
+            "naturalWidth": 729,
+            "naturalHeight": 604,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "Laser cutting",
+          "label": "06 / CUTTING · REAL PHOTO",
+          "description": "A real photograph of the laser machine cutting the rack parts from a plywood sheet, using the layout prepared during planning.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-960.webp",
+            "alt": "Laser machine cutting Shoe Rack parts from a plywood sheet in the workshop",
+            "naturalWidth": 729,
+            "naturalHeight": 1000,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "Planning and render",
+          "label": "07 / PLANNING AND RENDER",
+          "description": "A planning and render image — not a photograph of the product. It defines the geometry, dimensions, three shelves, perforated sides, braces and top seat before cutting and assembly.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "Shoe Rack planning and render sheet — structure, components and dimensions; not a product photograph",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "alt": "The raw-plywood shoe rack at a home entrance, with shoes and a cushion, before painting or finishing",
+        "naturalWidth": 740,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 4.45
+    },
+    {
+      "viewport": [
+        900,
+        1100
+      ],
+      "language": "he",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "בשימוש בבית",
+          "label": "01 / בשימוש · לפני גימור",
+          "description": "צילום אמיתי של המעמד בכניסה לבית, עם נעליים וכרית. המבנה מורכב מדיקט טבעי ונמצא לפני צבע או גימור.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+            "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני גימור",
+            "naturalWidth": 780,
+            "naturalHeight": 846,
+            "width": 780,
+            "height": 474,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "מורכב — מבט בזווית",
+          "label": "02 / מורכב · צילום אמיתי",
+          "description": "המעמד המורכב על שולחן העבודה, במבט שמציג את עומק המדפים ואת הפאה המחוררת. הדיקט וקצוות החיתוך גלויים, לפני צבע או גימור.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-960.webp",
+            "alt": "מעמד הנעליים המורכב מדיקט טבעי על שולחן העבודה, במבט בזווית, לפני גימור",
+            "naturalWidth": 779,
+            "naturalHeight": 625,
+            "width": 780,
+            "height": 474,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "מורכב — מבט חזית",
+          "label": "03 / חזית · צילום אמיתי",
+          "description": "צילום חזית של המעמד המורכב: שלושת מדפי הרפפות והמושב העליון נראים יחד. זהו המוצר בדיקט טבעי, לפני צבע או גימור.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-960.webp",
+            "alt": "צילום חזית של מעמד הנעליים המורכב, עם שלושה מדפי רפפות ומושב עליון, לפני גימור",
+            "naturalWidth": 779,
+            "naturalHeight": 569,
+            "width": 780,
+            "height": 474,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "במהלך ההרכבה",
+          "label": "04 / הרכבה · צילום אמיתי",
+          "description": "צילום מהסדנה במהלך ההרכבה: פאת צד והמבנה העליון מתחילים להתחבר. החלקים מוצגים בדיקט טבעי, לפני הגימור.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-960.webp",
+            "alt": "פאת צד והמבנה העליון של מעמד הנעליים במהלך ההרכבה בסדנה",
+            "naturalWidth": 779,
+            "naturalHeight": 593,
+            "width": 780,
+            "height": 474,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "החלקים לפני הרכבה",
+          "label": "05 / חלקים · צילום אמיתי",
+          "description": "חלקי הדיקט החתוכים פרוסים על שולחן העבודה לפני ההרכבה. הפריסה מציגה את רכיבי המבנה והמדפים כפי שיוצרו.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-960.webp",
+            "alt": "חלקי מעמד הנעליים חתוכים מדיקט ופרוסים על שולחן העבודה לפני ההרכבה",
+            "naturalWidth": 779,
+            "naturalHeight": 645,
+            "width": 780,
+            "height": 474,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "חיתוך בלייזר",
+          "label": "06 / חיתוך · צילום אמיתי",
+          "description": "צילום אמיתי של מכונת הלייזר החותכת את חלקי המעמד בלוח הדיקט, בהתאם לפריסה שהוכנה בתכנון.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-960.webp",
+            "alt": "מכונת הלייזר חותכת את חלקי מעמד הנעליים בלוח דיקט בסדנה",
+            "naturalWidth": 779,
+            "naturalHeight": 1070,
+            "width": 780,
+            "height": 474,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "תכנון והדמיה",
+          "label": "07 / תכנון והדמיה",
+          "description": "תמונת תכנון והדמיה — אינה צילום של המוצר. היא מגדירה את הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון לפני החיתוך וההרכבה.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "תכנון והדמיה של מעמד הנעליים — מבנה, חלקים ומידות; לא צילום מוצר",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 780,
+            "height": 474,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני צבע או גימור",
+        "naturalWidth": 792,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 4.17
+    },
+    {
+      "viewport": [
+        900,
+        1100
+      ],
+      "language": "en",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "In use at home",
+          "label": "01 / IN USE · BEFORE FINISHING",
+          "description": "A real photograph of the rack at a home entrance, with shoes and a cushion. The raw-plywood structure is assembled and has not been painted or finished.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+            "alt": "Raw-plywood shoe rack at a home entrance, with shoes and a cushion, before finishing",
+            "naturalWidth": 780,
+            "naturalHeight": 846,
+            "width": 780,
+            "height": 474,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "Assembled — angled view",
+          "label": "02 / ASSEMBLED · REAL PHOTO",
+          "description": "The assembled rack on the workbench, showing the depth of the shelves and the perforated side panel. The plywood and cut edges are visible, before painting or finishing.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-960.webp",
+            "alt": "Assembled raw-plywood shoe rack on the workbench, viewed at an angle before finishing",
+            "naturalWidth": 779,
+            "naturalHeight": 625,
+            "width": 780,
+            "height": 474,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "Assembled — front view",
+          "label": "03 / FRONT VIEW · REAL PHOTO",
+          "description": "A front photograph of the assembled rack, showing the three slatted shelves and top seat together. This is the raw-plywood product before painting or finishing.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-960.webp",
+            "alt": "Front photograph of the assembled shoe rack, with three slatted shelves and a top seat, before finishing",
+            "naturalWidth": 779,
+            "naturalHeight": 569,
+            "width": 780,
+            "height": 474,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "During assembly",
+          "label": "04 / ASSEMBLY · REAL PHOTO",
+          "description": "A workshop photograph during assembly: a side panel and the upper structure are beginning to come together. The parts are shown in raw plywood, before finishing.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-960.webp",
+            "alt": "Shoe Rack side panel and upper structure during assembly in the workshop",
+            "naturalWidth": 779,
+            "naturalHeight": 593,
+            "width": 780,
+            "height": 474,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "Parts before assembly",
+          "label": "05 / PARTS · REAL PHOTO",
+          "description": "The cut plywood parts laid out on the workbench before assembly. The layout shows the actual fabricated structure and shelf components.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-960.webp",
+            "alt": "Shoe Rack plywood parts cut and laid out on the workbench before assembly",
+            "naturalWidth": 779,
+            "naturalHeight": 645,
+            "width": 780,
+            "height": 474,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "Laser cutting",
+          "label": "06 / CUTTING · REAL PHOTO",
+          "description": "A real photograph of the laser machine cutting the rack parts from a plywood sheet, using the layout prepared during planning.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-960.webp",
+            "alt": "Laser machine cutting Shoe Rack parts from a plywood sheet in the workshop",
+            "naturalWidth": 779,
+            "naturalHeight": 1070,
+            "width": 780,
+            "height": 474,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "Planning and render",
+          "label": "07 / PLANNING AND RENDER",
+          "description": "A planning and render image — not a photograph of the product. It defines the geometry, dimensions, three shelves, perforated sides, braces and top seat before cutting and assembly.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "Shoe Rack planning and render sheet — structure, components and dimensions; not a product photograph",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 780,
+            "height": 474,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "alt": "The raw-plywood shoe rack at a home entrance, with shoes and a cushion, before painting or finishing",
+        "naturalWidth": 792,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 4.36
+    },
+    {
+      "viewport": [
+        901,
+        1100
+      ],
+      "language": "he",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "בשימוש בבית",
+          "label": "01 / בשימוש · לפני גימור",
+          "description": "צילום אמיתי של המעמד בכניסה לבית, עם נעליים וכרית. המבנה מורכב מדיקט טבעי ונמצא לפני צבע או גימור.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+            "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני גימור",
+            "naturalWidth": 557,
+            "naturalHeight": 605,
+            "width": 480.90625,
+            "height": 249.671875,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "מורכב — מבט בזווית",
+          "label": "02 / מורכב · צילום אמיתי",
+          "description": "המעמד המורכב על שולחן העבודה, במבט שמציג את עומק המדפים ואת הפאה המחוררת. הדיקט וקצוות החיתוך גלויים, לפני צבע או גימור.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-960.webp",
+            "alt": "מעמד הנעליים המורכב מדיקט טבעי על שולחן העבודה, במבט בזווית, לפני גימור",
+            "naturalWidth": 557,
+            "naturalHeight": 447,
+            "width": 480.90625,
+            "height": 249.671875,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "מורכב — מבט חזית",
+          "label": "03 / חזית · צילום אמיתי",
+          "description": "צילום חזית של המעמד המורכב: שלושת מדפי הרפפות והמושב העליון נראים יחד. זהו המוצר בדיקט טבעי, לפני צבע או גימור.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-960.webp",
+            "alt": "צילום חזית של מעמד הנעליים המורכב, עם שלושה מדפי רפפות ומושב עליון, לפני גימור",
+            "naturalWidth": 557,
+            "naturalHeight": 407,
+            "width": 480.90625,
+            "height": 249.671875,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "במהלך ההרכבה",
+          "label": "04 / הרכבה · צילום אמיתי",
+          "description": "צילום מהסדנה במהלך ההרכבה: פאת צד והמבנה העליון מתחילים להתחבר. החלקים מוצגים בדיקט טבעי, לפני הגימור.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-960.webp",
+            "alt": "פאת צד והמבנה העליון של מעמד הנעליים במהלך ההרכבה בסדנה",
+            "naturalWidth": 557,
+            "naturalHeight": 424,
+            "width": 480.90625,
+            "height": 249.671875,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "החלקים לפני הרכבה",
+          "label": "05 / חלקים · צילום אמיתי",
+          "description": "חלקי הדיקט החתוכים פרוסים על שולחן העבודה לפני ההרכבה. הפריסה מציגה את רכיבי המבנה והמדפים כפי שיוצרו.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-960.webp",
+            "alt": "חלקי מעמד הנעליים חתוכים מדיקט ופרוסים על שולחן העבודה לפני ההרכבה",
+            "naturalWidth": 557,
+            "naturalHeight": 462,
+            "width": 480.90625,
+            "height": 249.671875,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "חיתוך בלייזר",
+          "label": "06 / חיתוך · צילום אמיתי",
+          "description": "צילום אמיתי של מכונת הלייזר החותכת את חלקי המעמד בלוח הדיקט, בהתאם לפריסה שהוכנה בתכנון.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-960.webp",
+            "alt": "מכונת הלייזר חותכת את חלקי מעמד הנעליים בלוח דיקט בסדנה",
+            "naturalWidth": 557,
+            "naturalHeight": 765,
+            "width": 480.90625,
+            "height": 249.671875,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "תכנון והדמיה",
+          "label": "07 / תכנון והדמיה",
+          "description": "תמונת תכנון והדמיה — אינה צילום של המוצר. היא מגדירה את הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון לפני החיתוך וההרכבה.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "תכנון והדמיה של מעמד הנעליים — מבנה, חלקים ומידות; לא צילום מוצר",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 480.90625,
+            "height": 249.671875,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp",
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp",
+        "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני צבע או גימור",
+        "naturalWidth": 368,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 4.36
+    },
+    {
+      "viewport": [
+        901,
+        1100
+      ],
+      "language": "en",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "In use at home",
+          "label": "01 / IN USE · BEFORE FINISHING",
+          "description": "A real photograph of the rack at a home entrance, with shoes and a cushion. The raw-plywood structure is assembled and has not been painted or finished.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+            "alt": "Raw-plywood shoe rack at a home entrance, with shoes and a cushion, before finishing",
+            "naturalWidth": 557,
+            "naturalHeight": 605,
+            "width": 480.90625,
+            "height": 249.671875,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "Assembled — angled view",
+          "label": "02 / ASSEMBLED · REAL PHOTO",
+          "description": "The assembled rack on the workbench, showing the depth of the shelves and the perforated side panel. The plywood and cut edges are visible, before painting or finishing.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-960.webp",
+            "alt": "Assembled raw-plywood shoe rack on the workbench, viewed at an angle before finishing",
+            "naturalWidth": 557,
+            "naturalHeight": 447,
+            "width": 480.90625,
+            "height": 249.671875,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "Assembled — front view",
+          "label": "03 / FRONT VIEW · REAL PHOTO",
+          "description": "A front photograph of the assembled rack, showing the three slatted shelves and top seat together. This is the raw-plywood product before painting or finishing.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-960.webp",
+            "alt": "Front photograph of the assembled shoe rack, with three slatted shelves and a top seat, before finishing",
+            "naturalWidth": 557,
+            "naturalHeight": 407,
+            "width": 480.90625,
+            "height": 249.671875,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "During assembly",
+          "label": "04 / ASSEMBLY · REAL PHOTO",
+          "description": "A workshop photograph during assembly: a side panel and the upper structure are beginning to come together. The parts are shown in raw plywood, before finishing.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-960.webp",
+            "alt": "Shoe Rack side panel and upper structure during assembly in the workshop",
+            "naturalWidth": 557,
+            "naturalHeight": 424,
+            "width": 480.90625,
+            "height": 249.671875,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "Parts before assembly",
+          "label": "05 / PARTS · REAL PHOTO",
+          "description": "The cut plywood parts laid out on the workbench before assembly. The layout shows the actual fabricated structure and shelf components.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-960.webp",
+            "alt": "Shoe Rack plywood parts cut and laid out on the workbench before assembly",
+            "naturalWidth": 557,
+            "naturalHeight": 462,
+            "width": 480.90625,
+            "height": 249.671875,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "Laser cutting",
+          "label": "06 / CUTTING · REAL PHOTO",
+          "description": "A real photograph of the laser machine cutting the rack parts from a plywood sheet, using the layout prepared during planning.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-960.webp",
+            "alt": "Laser machine cutting Shoe Rack parts from a plywood sheet in the workshop",
+            "naturalWidth": 557,
+            "naturalHeight": 765,
+            "width": 480.90625,
+            "height": 249.671875,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "Planning and render",
+          "label": "07 / PLANNING AND RENDER",
+          "description": "A planning and render image — not a photograph of the product. It defines the geometry, dimensions, three shelves, perforated sides, braces and top seat before cutting and assembly.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "Shoe Rack planning and render sheet — structure, components and dimensions; not a product photograph",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 480.90625,
+            "height": 249.671875,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp",
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp",
+        "alt": "The raw-plywood shoe rack at a home entrance, with shoes and a cushion, before painting or finishing",
+        "naturalWidth": 368,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 4.26
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "language": "he",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "בשימוש בבית",
+          "label": "01 / בשימוש · לפני גימור",
+          "description": "צילום אמיתי של המעמד בכניסה לבית, עם נעליים וכרית. המבנה מורכב מדיקט טבעי ונמצא לפני צבע או גימור.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+            "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני גימור",
+            "naturalWidth": 909,
+            "naturalHeight": 987,
+            "width": 820,
+            "height": 571.59375,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "מורכב — מבט בזווית",
+          "label": "02 / מורכב · צילום אמיתי",
+          "description": "המעמד המורכב על שולחן העבודה, במבט שמציג את עומק המדפים ואת הפאה המחוררת. הדיקט וקצוות החיתוך גלויים, לפני צבע או גימור.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-960.webp",
+            "alt": "מעמד הנעליים המורכב מדיקט טבעי על שולחן העבודה, במבט בזווית, לפני גימור",
+            "naturalWidth": 909,
+            "naturalHeight": 729,
+            "width": 910.140625,
+            "height": 571.59375,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "מורכב — מבט חזית",
+          "label": "03 / חזית · צילום אמיתי",
+          "description": "צילום חזית של המעמד המורכב: שלושת מדפי הרפפות והמושב העליון נראים יחד. זהו המוצר בדיקט טבעי, לפני צבע או גימור.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-960.webp",
+            "alt": "צילום חזית של מעמד הנעליים המורכב, עם שלושה מדפי רפפות ומושב עליון, לפני גימור",
+            "naturalWidth": 909,
+            "naturalHeight": 664,
+            "width": 910.140625,
+            "height": 571.59375,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "במהלך ההרכבה",
+          "label": "04 / הרכבה · צילום אמיתי",
+          "description": "צילום מהסדנה במהלך ההרכבה: פאת צד והמבנה העליון מתחילים להתחבר. החלקים מוצגים בדיקט טבעי, לפני הגימור.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-960.webp",
+            "alt": "פאת צד והמבנה העליון של מעמד הנעליים במהלך ההרכבה בסדנה",
+            "naturalWidth": 909,
+            "naturalHeight": 691,
+            "width": 910.140625,
+            "height": 571.59375,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "החלקים לפני הרכבה",
+          "label": "05 / חלקים · צילום אמיתי",
+          "description": "חלקי הדיקט החתוכים פרוסים על שולחן העבודה לפני ההרכבה. הפריסה מציגה את רכיבי המבנה והמדפים כפי שיוצרו.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-960.webp",
+            "alt": "חלקי מעמד הנעליים חתוכים מדיקט ופרוסים על שולחן העבודה לפני ההרכבה",
+            "naturalWidth": 909,
+            "naturalHeight": 753,
+            "width": 910.140625,
+            "height": 571.59375,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "חיתוך בלייזר",
+          "label": "06 / חיתוך · צילום אמיתי",
+          "description": "צילום אמיתי של מכונת הלייזר החותכת את חלקי המעמד בלוח הדיקט, בהתאם לפריסה שהוכנה בתכנון.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-960.webp",
+            "alt": "מכונת הלייזר חותכת את חלקי מעמד הנעליים בלוח דיקט בסדנה",
+            "naturalWidth": 909,
+            "naturalHeight": 1247,
+            "width": 910.140625,
+            "height": 571.59375,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "תכנון והדמיה",
+          "label": "07 / תכנון והדמיה",
+          "description": "תמונת תכנון והדמיה — אינה צילום של המוצר. היא מגדירה את הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון לפני החיתוך וההרכבה.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "תכנון והדמיה של מעמד הנעליים — מבנה, חלקים ומידות; לא צילום מוצר",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 910.140625,
+            "height": 571.59375,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני צבע או גימור",
+        "naturalWidth": 603,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 4.31
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "language": "en",
+      "passed": false,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "In use at home",
+          "label": "01 / IN USE · BEFORE FINISHING",
+          "description": "A real photograph of the rack at a home entrance, with shoes and a cushion. The raw-plywood structure is assembled and has not been painted or finished.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+            "alt": "Raw-plywood shoe rack at a home entrance, with shoes and a cushion, before finishing",
+            "naturalWidth": 909,
+            "naturalHeight": 987,
+            "width": 820,
+            "height": 571.59375,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "Assembled — angled view",
+          "label": "02 / ASSEMBLED · REAL PHOTO",
+          "description": "The assembled rack on the workbench, showing the depth of the shelves and the perforated side panel. The plywood and cut edges are visible, before painting or finishing.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-960.webp",
+            "alt": "Assembled raw-plywood shoe rack on the workbench, viewed at an angle before finishing",
+            "naturalWidth": 909,
+            "naturalHeight": 729,
+            "width": 910.140625,
+            "height": 571.59375,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "Assembled — front view",
+          "label": "03 / FRONT VIEW · REAL PHOTO",
+          "description": "A front photograph of the assembled rack, showing the three slatted shelves and top seat together. This is the raw-plywood product before painting or finishing.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-960.webp",
+            "alt": "Front photograph of the assembled shoe rack, with three slatted shelves and a top seat, before finishing",
+            "naturalWidth": 909,
+            "naturalHeight": 664,
+            "width": 910.140625,
+            "height": 571.59375,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "During assembly",
+          "label": "04 / ASSEMBLY · REAL PHOTO",
+          "description": "A workshop photograph during assembly: a side panel and the upper structure are beginning to come together. The parts are shown in raw plywood, before finishing.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-960.webp",
+            "alt": "Shoe Rack side panel and upper structure during assembly in the workshop",
+            "naturalWidth": 909,
+            "naturalHeight": 691,
+            "width": 910.140625,
+            "height": 571.59375,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "Parts before assembly",
+          "label": "05 / PARTS · REAL PHOTO",
+          "description": "The cut plywood parts laid out on the workbench before assembly. The layout shows the actual fabricated structure and shelf components.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-960.webp",
+            "alt": "Shoe Rack plywood parts cut and laid out on the workbench before assembly",
+            "naturalWidth": 909,
+            "naturalHeight": 753,
+            "width": 910.140625,
+            "height": 571.59375,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "Laser cutting",
+          "label": "06 / CUTTING · REAL PHOTO",
+          "description": "A real photograph of the laser machine cutting the rack parts from a plywood sheet, using the layout prepared during planning.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-960.webp",
+            "alt": "Laser machine cutting Shoe Rack parts from a plywood sheet in the workshop",
+            "naturalWidth": 909,
+            "naturalHeight": 1247,
+            "width": 910.140625,
+            "height": 571.59375,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "Planning and render",
+          "label": "07 / PLANNING AND RENDER",
+          "description": "A planning and render image — not a photograph of the product. It defines the geometry, dimensions, three shelves, perforated sides, braces and top seat before cutting and assembly.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "Shoe Rack planning and render sheet — structure, components and dimensions; not a product photograph",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 910.140625,
+            "height": 571.59375,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "alt": "The raw-plywood shoe rack at a home entrance, with shoes and a cushion, before painting or finishing",
+        "naturalWidth": 603,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "error": "AssertionError: Failed local request: http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-480.webp\nFailed local request: http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-480.webp",
+      "console_errors": [
+        "Failed local request: http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-480.webp",
+        "Failed local request: http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-480.webp"
+      ],
+      "blocked_writes": [],
+      "duration_seconds": 6.31
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "language": "he",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "בשימוש בבית",
+          "label": "01 / בשימוש · לפני גימור",
+          "description": "צילום אמיתי של המעמד בכניסה לבית, עם נעליים וכרית. המבנה מורכב מדיקט טבעי ונמצא לפני צבע או גימור.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+            "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני גימור",
+            "naturalWidth": 729,
+            "naturalHeight": 791,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "מורכב — מבט בזווית",
+          "label": "02 / מורכב · צילום אמיתי",
+          "description": "המעמד המורכב על שולחן העבודה, במבט שמציג את עומק המדפים ואת הפאה המחוררת. הדיקט וקצוות החיתוך גלויים, לפני צבע או גימור.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-960.webp",
+            "alt": "מעמד הנעליים המורכב מדיקט טבעי על שולחן העבודה, במבט בזווית, לפני גימור",
+            "naturalWidth": 729,
+            "naturalHeight": 585,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "מורכב — מבט חזית",
+          "label": "03 / חזית · צילום אמיתי",
+          "description": "צילום חזית של המעמד המורכב: שלושת מדפי הרפפות והמושב העליון נראים יחד. זהו המוצר בדיקט טבעי, לפני צבע או גימור.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-960.webp",
+            "alt": "צילום חזית של מעמד הנעליים המורכב, עם שלושה מדפי רפפות ומושב עליון, לפני גימור",
+            "naturalWidth": 729,
+            "naturalHeight": 532,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "במהלך ההרכבה",
+          "label": "04 / הרכבה · צילום אמיתי",
+          "description": "צילום מהסדנה במהלך ההרכבה: פאת צד והמבנה העליון מתחילים להתחבר. החלקים מוצגים בדיקט טבעי, לפני הגימור.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-960.webp",
+            "alt": "פאת צד והמבנה העליון של מעמד הנעליים במהלך ההרכבה בסדנה",
+            "naturalWidth": 729,
+            "naturalHeight": 554,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "החלקים לפני הרכבה",
+          "label": "05 / חלקים · צילום אמיתי",
+          "description": "חלקי הדיקט החתוכים פרוסים על שולחן העבודה לפני ההרכבה. הפריסה מציגה את רכיבי המבנה והמדפים כפי שיוצרו.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-960.webp",
+            "alt": "חלקי מעמד הנעליים חתוכים מדיקט ופרוסים על שולחן העבודה לפני ההרכבה",
+            "naturalWidth": 729,
+            "naturalHeight": 604,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "חיתוך בלייזר",
+          "label": "06 / חיתוך · צילום אמיתי",
+          "description": "צילום אמיתי של מכונת הלייזר החותכת את חלקי המעמד בלוח הדיקט, בהתאם לפריסה שהוכנה בתכנון.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-960.webp",
+            "alt": "מכונת הלייזר חותכת את חלקי מעמד הנעליים בלוח דיקט בסדנה",
+            "naturalWidth": 729,
+            "naturalHeight": 1000,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "תכנון והדמיה",
+          "label": "07 / תכנון והדמיה",
+          "description": "תמונת תכנון והדמיה — אינה צילום של המוצר. היא מגדירה את הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון לפני החיתוך וההרכבה.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "תכנון והדמיה של מעמד הנעליים — מבנה, חלקים ומידות; לא צילום מוצר",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני צבע או גימור",
+        "naturalWidth": 740,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 4.41
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "language": "en",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "In use at home",
+          "label": "01 / IN USE · BEFORE FINISHING",
+          "description": "A real photograph of the rack at a home entrance, with shoes and a cushion. The raw-plywood structure is assembled and has not been painted or finished.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+            "alt": "Raw-plywood shoe rack at a home entrance, with shoes and a cushion, before finishing",
+            "naturalWidth": 729,
+            "naturalHeight": 791,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "Assembled — angled view",
+          "label": "02 / ASSEMBLED · REAL PHOTO",
+          "description": "The assembled rack on the workbench, showing the depth of the shelves and the perforated side panel. The plywood and cut edges are visible, before painting or finishing.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-960.webp",
+            "alt": "Assembled raw-plywood shoe rack on the workbench, viewed at an angle before finishing",
+            "naturalWidth": 729,
+            "naturalHeight": 585,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "Assembled — front view",
+          "label": "03 / FRONT VIEW · REAL PHOTO",
+          "description": "A front photograph of the assembled rack, showing the three slatted shelves and top seat together. This is the raw-plywood product before painting or finishing.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-960.webp",
+            "alt": "Front photograph of the assembled shoe rack, with three slatted shelves and a top seat, before finishing",
+            "naturalWidth": 729,
+            "naturalHeight": 532,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "During assembly",
+          "label": "04 / ASSEMBLY · REAL PHOTO",
+          "description": "A workshop photograph during assembly: a side panel and the upper structure are beginning to come together. The parts are shown in raw plywood, before finishing.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-960.webp",
+            "alt": "Shoe Rack side panel and upper structure during assembly in the workshop",
+            "naturalWidth": 729,
+            "naturalHeight": 554,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "Parts before assembly",
+          "label": "05 / PARTS · REAL PHOTO",
+          "description": "The cut plywood parts laid out on the workbench before assembly. The layout shows the actual fabricated structure and shelf components.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-960.webp",
+            "alt": "Shoe Rack plywood parts cut and laid out on the workbench before assembly",
+            "naturalWidth": 729,
+            "naturalHeight": 604,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "Laser cutting",
+          "label": "06 / CUTTING · REAL PHOTO",
+          "description": "A real photograph of the laser machine cutting the rack parts from a plywood sheet, using the layout prepared during planning.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-960.webp",
+            "alt": "Laser machine cutting Shoe Rack parts from a plywood sheet in the workshop",
+            "naturalWidth": 729,
+            "naturalHeight": 1000,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "Planning and render",
+          "label": "07 / PLANNING AND RENDER",
+          "description": "A planning and render image — not a photograph of the product. It defines the geometry, dimensions, three shelves, perforated sides, braces and top seat before cutting and assembly.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "Shoe Rack planning and render sheet — structure, components and dimensions; not a product photograph",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 729.625,
+            "height": 436.21875,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "alt": "The raw-plywood shoe rack at a home entrance, with shoes and a cushion, before painting or finishing",
+        "naturalWidth": 740,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 4.32
+    },
+    {
+      "viewport": [
+        1100,
+        900
+      ],
+      "language": "he",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "בשימוש בבית",
+          "label": "01 / בשימוש · לפני גימור",
+          "description": "צילום אמיתי של המעמד בכניסה לבית, עם נעליים וכרית. המבנה מורכב מדיקט טבעי ונמצא לפני צבע או גימור.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+            "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני גימור",
+            "naturalWidth": 687,
+            "naturalHeight": 746,
+            "width": 660,
+            "height": 384,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "מורכב — מבט בזווית",
+          "label": "02 / מורכב · צילום אמיתי",
+          "description": "המעמד המורכב על שולחן העבודה, במבט שמציג את עומק המדפים ואת הפאה המחוררת. הדיקט וקצוות החיתוך גלויים, לפני צבע או גימור.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-960.webp",
+            "alt": "מעמד הנעליים המורכב מדיקט טבעי על שולחן העבודה, במבט בזווית, לפני גימור",
+            "naturalWidth": 687,
+            "naturalHeight": 551,
+            "width": 660,
+            "height": 384,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "מורכב — מבט חזית",
+          "label": "03 / חזית · צילום אמיתי",
+          "description": "צילום חזית של המעמד המורכב: שלושת מדפי הרפפות והמושב העליון נראים יחד. זהו המוצר בדיקט טבעי, לפני צבע או גימור.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-960.webp",
+            "alt": "צילום חזית של מעמד הנעליים המורכב, עם שלושה מדפי רפפות ומושב עליון, לפני גימור",
+            "naturalWidth": 687,
+            "naturalHeight": 502,
+            "width": 660,
+            "height": 384,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "במהלך ההרכבה",
+          "label": "04 / הרכבה · צילום אמיתי",
+          "description": "צילום מהסדנה במהלך ההרכבה: פאת צד והמבנה העליון מתחילים להתחבר. החלקים מוצגים בדיקט טבעי, לפני הגימור.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-960.webp",
+            "alt": "פאת צד והמבנה העליון של מעמד הנעליים במהלך ההרכבה בסדנה",
+            "naturalWidth": 687,
+            "naturalHeight": 522,
+            "width": 660,
+            "height": 384,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "החלקים לפני הרכבה",
+          "label": "05 / חלקים · צילום אמיתי",
+          "description": "חלקי הדיקט החתוכים פרוסים על שולחן העבודה לפני ההרכבה. הפריסה מציגה את רכיבי המבנה והמדפים כפי שיוצרו.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-960.webp",
+            "alt": "חלקי מעמד הנעליים חתוכים מדיקט ופרוסים על שולחן העבודה לפני ההרכבה",
+            "naturalWidth": 687,
+            "naturalHeight": 569,
+            "width": 660,
+            "height": 384,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "חיתוך בלייזר",
+          "label": "06 / חיתוך · צילום אמיתי",
+          "description": "צילום אמיתי של מכונת הלייזר החותכת את חלקי המעמד בלוח הדיקט, בהתאם לפריסה שהוכנה בתכנון.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-960.webp",
+            "alt": "מכונת הלייזר חותכת את חלקי מעמד הנעליים בלוח דיקט בסדנה",
+            "naturalWidth": 687,
+            "naturalHeight": 943,
+            "width": 660,
+            "height": 384,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "תכנון והדמיה",
+          "label": "07 / תכנון והדמיה",
+          "description": "תמונת תכנון והדמיה — אינה צילום של המוצר. היא מגדירה את הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון לפני החיתוך וההרכבה.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "תכנון והדמיה של מעמד הנעליים — מבנה, חלקים ומידות; לא צילום מוצר",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 660,
+            "height": 384,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp",
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp",
+        "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני צבע או גימור",
+        "naturalWidth": 454,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 4.33
+    },
+    {
+      "viewport": [
+        1100,
+        900
+      ],
+      "language": "en",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "In use at home",
+          "label": "01 / IN USE · BEFORE FINISHING",
+          "description": "A real photograph of the rack at a home entrance, with shoes and a cushion. The raw-plywood structure is assembled and has not been painted or finished.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+            "alt": "Raw-plywood shoe rack at a home entrance, with shoes and a cushion, before finishing",
+            "naturalWidth": 687,
+            "naturalHeight": 746,
+            "width": 660,
+            "height": 384,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "Assembled — angled view",
+          "label": "02 / ASSEMBLED · REAL PHOTO",
+          "description": "The assembled rack on the workbench, showing the depth of the shelves and the perforated side panel. The plywood and cut edges are visible, before painting or finishing.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-960.webp",
+            "alt": "Assembled raw-plywood shoe rack on the workbench, viewed at an angle before finishing",
+            "naturalWidth": 687,
+            "naturalHeight": 551,
+            "width": 660,
+            "height": 384,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "Assembled — front view",
+          "label": "03 / FRONT VIEW · REAL PHOTO",
+          "description": "A front photograph of the assembled rack, showing the three slatted shelves and top seat together. This is the raw-plywood product before painting or finishing.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-960.webp",
+            "alt": "Front photograph of the assembled shoe rack, with three slatted shelves and a top seat, before finishing",
+            "naturalWidth": 687,
+            "naturalHeight": 502,
+            "width": 660,
+            "height": 384,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "During assembly",
+          "label": "04 / ASSEMBLY · REAL PHOTO",
+          "description": "A workshop photograph during assembly: a side panel and the upper structure are beginning to come together. The parts are shown in raw plywood, before finishing.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-960.webp",
+            "alt": "Shoe Rack side panel and upper structure during assembly in the workshop",
+            "naturalWidth": 687,
+            "naturalHeight": 522,
+            "width": 660,
+            "height": 384,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "Parts before assembly",
+          "label": "05 / PARTS · REAL PHOTO",
+          "description": "The cut plywood parts laid out on the workbench before assembly. The layout shows the actual fabricated structure and shelf components.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-960.webp",
+            "alt": "Shoe Rack plywood parts cut and laid out on the workbench before assembly",
+            "naturalWidth": 687,
+            "naturalHeight": 569,
+            "width": 660,
+            "height": 384,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "Laser cutting",
+          "label": "06 / CUTTING · REAL PHOTO",
+          "description": "A real photograph of the laser machine cutting the rack parts from a plywood sheet, using the layout prepared during planning.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-960.webp",
+            "alt": "Laser machine cutting Shoe Rack parts from a plywood sheet in the workshop",
+            "naturalWidth": 687,
+            "naturalHeight": 943,
+            "width": 660,
+            "height": 384,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "Planning and render",
+          "label": "07 / PLANNING AND RENDER",
+          "description": "A planning and render image — not a photograph of the product. It defines the geometry, dimensions, three shelves, perforated sides, braces and top seat before cutting and assembly.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "Shoe Rack planning and render sheet — structure, components and dimensions; not a product photograph",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 660,
+            "height": 384,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp",
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-480.webp",
+        "alt": "The raw-plywood shoe rack at a home entrance, with shoes and a cushion, before painting or finishing",
+        "naturalWidth": 454,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 5.2
+    },
+    {
+      "viewport": [
+        1200,
+        900
+      ],
+      "language": "he",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "בשימוש בבית",
+          "label": "01 / בשימוש · לפני גימור",
+          "description": "צילום אמיתי של המעמד בכניסה לבית, עם נעליים וכרית. המבנה מורכב מדיקט טבעי ונמצא לפני צבע או גימור.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+            "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני גימור",
+            "naturalWidth": 752,
+            "naturalHeight": 817,
+            "width": 750,
+            "height": 451.5,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "מורכב — מבט בזווית",
+          "label": "02 / מורכב · צילום אמיתי",
+          "description": "המעמד המורכב על שולחן העבודה, במבט שמציג את עומק המדפים ואת הפאה המחוררת. הדיקט וקצוות החיתוך גלויים, לפני צבע או גימור.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-960.webp",
+            "alt": "מעמד הנעליים המורכב מדיקט טבעי על שולחן העבודה, במבט בזווית, לפני גימור",
+            "naturalWidth": 752,
+            "naturalHeight": 603,
+            "width": 750,
+            "height": 451.5,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "מורכב — מבט חזית",
+          "label": "03 / חזית · צילום אמיתי",
+          "description": "צילום חזית של המעמד המורכב: שלושת מדפי הרפפות והמושב העליון נראים יחד. זהו המוצר בדיקט טבעי, לפני צבע או גימור.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-960.webp",
+            "alt": "צילום חזית של מעמד הנעליים המורכב, עם שלושה מדפי רפפות ומושב עליון, לפני גימור",
+            "naturalWidth": 752,
+            "naturalHeight": 549,
+            "width": 750,
+            "height": 451.5,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "במהלך ההרכבה",
+          "label": "04 / הרכבה · צילום אמיתי",
+          "description": "צילום מהסדנה במהלך ההרכבה: פאת צד והמבנה העליון מתחילים להתחבר. החלקים מוצגים בדיקט טבעי, לפני הגימור.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-960.webp",
+            "alt": "פאת צד והמבנה העליון של מעמד הנעליים במהלך ההרכבה בסדנה",
+            "naturalWidth": 752,
+            "naturalHeight": 572,
+            "width": 750,
+            "height": 451.5,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "החלקים לפני הרכבה",
+          "label": "05 / חלקים · צילום אמיתי",
+          "description": "חלקי הדיקט החתוכים פרוסים על שולחן העבודה לפני ההרכבה. הפריסה מציגה את רכיבי המבנה והמדפים כפי שיוצרו.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-960.webp",
+            "alt": "חלקי מעמד הנעליים חתוכים מדיקט ופרוסים על שולחן העבודה לפני ההרכבה",
+            "naturalWidth": 752,
+            "naturalHeight": 623,
+            "width": 750,
+            "height": 451.5,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "חיתוך בלייזר",
+          "label": "06 / חיתוך · צילום אמיתי",
+          "description": "צילום אמיתי של מכונת הלייזר החותכת את חלקי המעמד בלוח הדיקט, בהתאם לפריסה שהוכנה בתכנון.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-960.webp",
+            "alt": "מכונת הלייזר חותכת את חלקי מעמד הנעליים בלוח דיקט בסדנה",
+            "naturalWidth": 752,
+            "naturalHeight": 1033,
+            "width": 750,
+            "height": 451.5,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "תכנון והדמיה",
+          "label": "07 / תכנון והדמיה",
+          "description": "תמונת תכנון והדמיה — אינה צילום של המוצר. היא מגדירה את הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון לפני החיתוך וההרכבה.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "תכנון והדמיה של מעמד הנעליים — מבנה, חלקים ומידות; לא צילום מוצר",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 750,
+            "height": 451.5,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני צבע או גימור",
+        "naturalWidth": 497,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 5.7
+    },
+    {
+      "viewport": [
+        1200,
+        900
+      ],
+      "language": "en",
+      "passed": false,
+      "transitions": 0,
+      "stages": [],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "error": "AssertionError: ['H3. has clipped text']",
+      "console_errors": [],
+      "blocked_writes": [],
+      "duration_seconds": 1.11
+    },
+    {
+      "viewport": [
+        1399,
+        900
+      ],
+      "language": "he",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "בשימוש בבית",
+          "label": "01 / בשימוש · לפני גימור",
+          "description": "צילום אמיתי של המעמד בכניסה לבית, עם נעליים וכרית. המבנה מורכב מדיקט טבעי ונמצא לפני צבע או גימור.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+            "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני גימור",
+            "naturalWidth": 882,
+            "naturalHeight": 958,
+            "width": 820,
+            "height": 551.546875,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "מורכב — מבט בזווית",
+          "label": "02 / מורכב · צילום אמיתי",
+          "description": "המעמד המורכב על שולחן העבודה, במבט שמציג את עומק המדפים ואת הפאה המחוררת. הדיקט וקצוות החיתוך גלויים, לפני צבע או גימור.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-960.webp",
+            "alt": "מעמד הנעליים המורכב מדיקט טבעי על שולחן העבודה, במבט בזווית, לפני גימור",
+            "naturalWidth": 882,
+            "naturalHeight": 708,
+            "width": 883.40625,
+            "height": 551.546875,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "מורכב — מבט חזית",
+          "label": "03 / חזית · צילום אמיתי",
+          "description": "צילום חזית של המעמד המורכב: שלושת מדפי הרפפות והמושב העליון נראים יחד. זהו המוצר בדיקט טבעי, לפני צבע או גימור.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-960.webp",
+            "alt": "צילום חזית של מעמד הנעליים המורכב, עם שלושה מדפי רפפות ומושב עליון, לפני גימור",
+            "naturalWidth": 882,
+            "naturalHeight": 644,
+            "width": 883.40625,
+            "height": 551.546875,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "במהלך ההרכבה",
+          "label": "04 / הרכבה · צילום אמיתי",
+          "description": "צילום מהסדנה במהלך ההרכבה: פאת צד והמבנה העליון מתחילים להתחבר. החלקים מוצגים בדיקט טבעי, לפני הגימור.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-960.webp",
+            "alt": "פאת צד והמבנה העליון של מעמד הנעליים במהלך ההרכבה בסדנה",
+            "naturalWidth": 882,
+            "naturalHeight": 671,
+            "width": 883.40625,
+            "height": 551.546875,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "החלקים לפני הרכבה",
+          "label": "05 / חלקים · צילום אמיתי",
+          "description": "חלקי הדיקט החתוכים פרוסים על שולחן העבודה לפני ההרכבה. הפריסה מציגה את רכיבי המבנה והמדפים כפי שיוצרו.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-960.webp",
+            "alt": "חלקי מעמד הנעליים חתוכים מדיקט ופרוסים על שולחן העבודה לפני ההרכבה",
+            "naturalWidth": 882,
+            "naturalHeight": 731,
+            "width": 883.40625,
+            "height": 551.546875,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "חיתוך בלייזר",
+          "label": "06 / חיתוך · צילום אמיתי",
+          "description": "צילום אמיתי של מכונת הלייזר החותכת את חלקי המעמד בלוח הדיקט, בהתאם לפריסה שהוכנה בתכנון.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-960.webp",
+            "alt": "מכונת הלייזר חותכת את חלקי מעמד הנעליים בלוח דיקט בסדנה",
+            "naturalWidth": 882,
+            "naturalHeight": 1211,
+            "width": 883.40625,
+            "height": 551.546875,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "תכנון והדמיה",
+          "label": "07 / תכנון והדמיה",
+          "description": "תמונת תכנון והדמיה — אינה צילום של המוצר. היא מגדירה את הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון לפני החיתוך וההרכבה.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "תכנון והדמיה של מעמד הנעליים — מבנה, חלקים ומידות; לא צילום מוצר",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 883.40625,
+            "height": 551.546875,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני צבע או גימור",
+        "naturalWidth": 583,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 4.49
+    },
+    {
+      "viewport": [
+        1399,
+        900
+      ],
+      "language": "en",
+      "passed": false,
+      "transitions": 0,
+      "stages": [],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "error": "AssertionError: ['H3. has clipped text']",
+      "console_errors": [],
+      "blocked_writes": [],
+      "duration_seconds": 1.19
+    },
+    {
+      "viewport": [
+        1400,
+        900
+      ],
+      "language": "he",
+      "passed": true,
+      "transitions": 27,
+      "stages": [
+        {
+          "index": 0,
+          "title": "בשימוש בבית",
+          "label": "01 / בשימוש · לפני גימור",
+          "description": "צילום אמיתי של המעמד בכניסה לבית, עם נעליים וכרית. המבנה מורכב מדיקט טבעי ונמצא לפני צבע או גימור.",
+          "full_size": "media/production/06-interior-in-use-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+            "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני גימור",
+            "naturalWidth": 883,
+            "naturalHeight": 958,
+            "width": 820,
+            "height": 552.03125,
+            "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 1,
+          "title": "מורכב — מבט בזווית",
+          "label": "02 / מורכב · צילום אמיתי",
+          "description": "המעמד המורכב על שולחן העבודה, במבט שמציג את עומק המדפים ואת הפאה המחוררת. הדיקט וקצוות החיתוך גלויים, לפני צבע או גימור.",
+          "full_size": "media/production/04-assembled-angled-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/04-assembled-angled-960.webp",
+            "alt": "מעמד הנעליים המורכב מדיקט טבעי על שולחן העבודה, במבט בזווית, לפני גימור",
+            "naturalWidth": 883,
+            "naturalHeight": 708,
+            "width": 884.046875,
+            "height": 552.03125,
+            "srcset": "media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 2,
+          "title": "מורכב — מבט חזית",
+          "label": "03 / חזית · צילום אמיתי",
+          "description": "צילום חזית של המעמד המורכב: שלושת מדפי הרפפות והמושב העליון נראים יחד. זהו המוצר בדיקט טבעי, לפני צבע או גימור.",
+          "full_size": "media/production/05-front-view-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/05-front-view-960.webp",
+            "alt": "צילום חזית של מעמד הנעליים המורכב, עם שלושה מדפי רפפות ומושב עליון, לפני גימור",
+            "naturalWidth": 883,
+            "naturalHeight": 645,
+            "width": 884.046875,
+            "height": 552.03125,
+            "srcset": "media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 3,
+          "title": "במהלך ההרכבה",
+          "label": "04 / הרכבה · צילום אמיתי",
+          "description": "צילום מהסדנה במהלך ההרכבה: פאת צד והמבנה העליון מתחילים להתחבר. החלקים מוצגים בדיקט טבעי, לפני הגימור.",
+          "full_size": "media/production/03-mid-assembly-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/03-mid-assembly-960.webp",
+            "alt": "פאת צד והמבנה העליון של מעמד הנעליים במהלך ההרכבה בסדנה",
+            "naturalWidth": 883,
+            "naturalHeight": 671,
+            "width": 884.046875,
+            "height": 552.03125,
+            "srcset": "media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 4,
+          "title": "החלקים לפני הרכבה",
+          "label": "05 / חלקים · צילום אמיתי",
+          "description": "חלקי הדיקט החתוכים פרוסים על שולחן העבודה לפני ההרכבה. הפריסה מציגה את רכיבי המבנה והמדפים כפי שיוצרו.",
+          "full_size": "media/production/02-parts-layout-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/02-parts-layout-960.webp",
+            "alt": "חלקי מעמד הנעליים חתוכים מדיקט ופרוסים על שולחן העבודה לפני ההרכבה",
+            "naturalWidth": 883,
+            "naturalHeight": 731,
+            "width": 884.046875,
+            "height": 552.03125,
+            "srcset": "media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 5,
+          "title": "חיתוך בלייזר",
+          "label": "06 / חיתוך · צילום אמיתי",
+          "description": "צילום אמיתי של מכונת הלייזר החותכת את חלקי המעמד בלוח הדיקט, בהתאם לפריסה שהוכנה בתכנון.",
+          "full_size": "media/production/01-laser-cutting-full.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/media/production/01-laser-cutting-960.webp",
+            "alt": "מכונת הלייזר חותכת את חלקי מעמד הנעליים בלוח דיקט בסדנה",
+            "naturalWidth": 883,
+            "naturalHeight": 1212,
+            "width": 884.046875,
+            "height": 552.03125,
+            "srcset": "media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w",
+            "sizes": "(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px",
+            "complete": true,
+            "deferred": false
+          }
+        },
+        {
+          "index": 6,
+          "title": "תכנון והדמיה",
+          "label": "07 / תכנון והדמיה",
+          "description": "תמונת תכנון והדמיה — אינה צילום של המוצר. היא מגדירה את הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון לפני החיתוך וההרכבה.",
+          "full_size": "shoe-rack-planning-clean.webp",
+          "image": {
+            "src": "http://127.0.0.1:38667/shoe_rack/shoe-rack-planning-clean.webp",
+            "alt": "תכנון והדמיה של מעמד הנעליים — מבנה, חלקים ומידות; לא צילום מוצר",
+            "naturalWidth": 1200,
+            "naturalHeight": 900,
+            "width": 884.046875,
+            "height": 552.03125,
+            "srcset": null,
+            "sizes": null,
+            "complete": true,
+            "deferred": false
+          }
+        }
+      ],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "hero": {
+        "src": "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "alt": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני צבע או גימור",
+        "naturalWidth": 583,
+        "srcset": "media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w",
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      },
+      "blocked_writes": [],
+      "console_errors": [],
+      "real_posts": 0,
+      "duration_seconds": 4.27
+    },
+    {
+      "viewport": [
+        1400,
+        900
+      ],
+      "language": "en",
+      "passed": false,
+      "transitions": 0,
+      "stages": [],
+      "initial_lazy_sources": 6,
+      "initial_requested_images": [
+        "http://127.0.0.1:38667/shoe_rack/media/production/06-interior-in-use-full.webp"
+      ],
+      "error": "AssertionError: ['H3. has clipped text']",
+      "console_errors": [],
+      "blocked_writes": [],
+      "duration_seconds": 1.1
+    }
+  ]
+}
