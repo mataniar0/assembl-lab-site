@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="מעמד נעליים / גרסה A — מעמד נעליים מתוכנן הנדסית של ASSEMBLE LAB." data-i18n-content="shoe.meta.description">
+<meta name="description" content="מעמד נעליים של ASSEMBLE LAB — תמונות אמיתיות של המוצר המורכב מדיקט טבעי ושל תהליך הבנייה, לפני גימור." data-i18n-content="shoe.meta.description">
 <meta property="og:title" content="מעמד נעליים / גרסה A — ASSEMBLE LAB" data-i18n-content="shoe.meta.title">
-<meta property="og:description" content="תכנון, מבנה והרכבה של חלקים חתוכים בלייזר." data-i18n-content="shoe.meta.social">
-<meta property="og:image" content="https://mataniar0.github.io/assembl-lab-site/shoe_rack/shoe-rack-planning-clean.webp">
+<meta property="og:description" content="תמונות אמיתיות: מעמד נעליים מורכב מדיקט טבעי, לפני גימור, לצד תכנון ותהליך הבנייה." data-i18n-content="shoe.meta.social">
+<meta property="og:image" content="https://mataniar0.github.io/assembl-lab-site/shoe_rack/media/production/06-interior-in-use-full.webp">
 <title data-i18n="shoe.meta.title">מעמד נעליים / גרסה A — ASSEMBLE LAB</title>
 <style>
 :root{--paper:#f3f1eb;--ink:#111311;--muted:#696c67;--line:rgba(17,19,17,.18);--signal:#ff5a36}
@@ -27,7 +27,7 @@
 .header a,.top a,.footer a,.adapt-link{display:inline-flex;align-items:center;min-width:44px;min-height:44px}
 .header .back,.top .back,.footer a{border-bottom:0;text-decoration:underline;text-underline-offset:4px}
 
-/* Mirror copy with the selected language while keeping the planning image and controls stable. */
+/* Mirror copy with the selected language while keeping photographs and controls stable. */
 .kicker,.specs small,.index,.stage small,.custom-size-label{color:#b5391b}
 html[lang="he"] .hero h1,html[lang="he"] .kicker,html[lang="he"] .specs small,html[lang="he"] .custom-size-label,html[lang="he"] .index,html[lang="he"] .badge,html[lang="he"] .stage{direction:rtl;letter-spacing:0;text-align:start}
 html[lang="he"] .hero h1{font-size:clamp(42px,6vw,88px);line-height:1.08}
@@ -35,25 +35,29 @@ html[lang="en"] .adapt-link{direction:ltr}
 .copy{direction:inherit}.gallery .panel{direction:rtl}html[lang="en"] .gallery .panel{direction:ltr}
 .story-head h2,.future h2,.copy h3{line-height:1.1}
 #carousel-note{font-size:13px;line-height:1.6;margin:12px 0 0}
-.viewer{padding:0;touch-action:pan-y}.slide{position:absolute;inset:0;display:none;place-items:center;padding:18px}.slide.active{display:grid}.slide.cutting{position:relative;inset:auto;width:100%;padding:54px 18px 66px}.slide img{min-width:0;min-height:0}.viewer.layout-cutting{aspect-ratio:auto;height:auto;align-self:start}
+.viewer{padding:0;touch-action:pan-y}.slide{position:absolute;inset:0;display:none;place-items:center;padding:18px}.slide.active{display:grid}.slide img{min-width:0;min-height:0}
 .arrow{opacity:1;cursor:pointer;touch-action:manipulation}.arrow:disabled{opacity:.45;cursor:default}.arrow:active{background:var(--ink);color:var(--paper)}
 .nav{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);direction:inherit}.step{font:inherit;min-width:0;min-height:64px;border:0;background:transparent;padding:12px;cursor:pointer;text-align:start}.step+ .step{border-inline-start:1px solid var(--line)}.step small{display:block;font-size:11px;color:var(--muted)}.step b{display:block;font-size:14px}.step.active{background:#fff;box-shadow:inset 0 -3px var(--signal)}.step:focus-visible{outline:3px solid var(--ink);outline-offset:-3px}
-.gallery-image-open{display:inline-flex;align-items:center;min-width:44px;min-height:44px;font-size:13px;text-decoration:underline;text-underline-offset:4px;margin-top:10px}.no-script-photo{margin:24px 0}.landscape-frame{position:relative;width:100%;aspect-ratio:16/9}.landscape-frame img{position:absolute;top:50%;left:50%;width:56.25%;height:177.7778%;min-width:0;min-height:0;max-width:none;max-height:none;object-fit:contain;transform:translate(-50%,-50%) rotate(-90deg)}.no-script-photo .landscape-frame{max-width:960px;margin-inline:auto}.no-script-photo figcaption{margin-top:12px}
-@media(max-width:640px){.slide{padding:8px}.slide.cutting{padding:54px 8px 66px}}
+.gallery-image-open{display:inline-flex;align-items:center;min-width:44px;min-height:44px;font-size:13px;text-decoration:underline;text-underline-offset:4px;margin-top:10px}
+/* Preserve complete real photographs with space for the carousel controls. */
+.hero .hero-media{aspect-ratio:auto}.viewer{min-width:0;min-height:0;align-self:start;aspect-ratio:4/3}.slide{padding:56px 14px 76px}.slide img{width:100%;height:100%;min-height:0;object-fit:contain}.badge{max-width:calc(100% - 28px);left:14px;top:14px;overflow-wrap:anywhere}.progress{left:14px;bottom:14px}.carousel-arrows{right:14px;bottom:14px}
+.nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line)}.step{background:var(--paper);min-height:70px;padding:12px;overflow-wrap:anywhere}.step+.step{border-inline-start:0}.step-planning{grid-column:1/-1}.step b{font-size:13px}.step.active{background:#fff}
+.no-script-photo{margin:24px 0}.no-script-photo img{width:auto;max-width:100%;height:auto;max-height:720px;margin-inline:auto}.no-script-photo figcaption{margin-top:12px}
+@media(max-width:640px){.viewer{aspect-ratio:3/4}.slide{padding:56px 14px 76px}.badge{font-size:10px}.step{min-height:70px}}
 @media(max-width:640px){html[lang="he"] .hero h1{font-size:clamp(38px,11vw,60px)}}
 </style>
 <script type="application/json" id="page-translations">{
   "shoe.meta.description": {
-    "he": "מעמד נעליים / גרסה A — מעמד נעליים מתוכנן הנדסית של ASSEMBLE LAB.",
-    "en": "Shoe Rack / Version A — an engineered shoe rack by ASSEMBLE LAB."
+    "he": "מעמד נעליים של ASSEMBLE LAB — תמונות אמיתיות של המוצר המורכב מדיקט טבעי ושל תהליך הבנייה, לפני גימור.",
+    "en": "Shoe Rack by ASSEMBLE LAB — real photographs of the assembled raw-plywood product and its build process, before finishing."
   },
   "shoe.meta.title": {
     "he": "מעמד נעליים / גרסה A — ASSEMBLE LAB",
     "en": "SHOE RACK / VERSION A — ASSEMBLE LAB"
   },
   "shoe.meta.social": {
-    "he": "תכנון, מבנה והרכבה של חלקים חתוכים בלייזר.",
-    "en": "Planning, structure and laser-cut assembly."
+    "he": "תמונות אמיתיות: מעמד נעליים מורכב מדיקט טבעי, לפני גימור, לצד תכנון ותהליך הבנייה.",
+    "en": "Real photographs: an assembled raw-plywood shoe rack before finishing, alongside its planning and build process."
   },
   "shoe.hero.kicker": {
     "he": "מוצר 04 / אחסון נעליים",
@@ -64,8 +68,8 @@ html[lang="en"] .adapt-link{direction:ltr}
     "en": "SHOE RACK<br>/ VERSION A"
   },
   "shoe.hero.copy": {
-    "he": "מעמד נעליים נמוך עם שלושה מדפי רפפות, פאות צד מחוררות ומושב עליון כפול. המוצר מתוכנן כחלקי דיקט חתוכים בלייזר שמתחברים למבנה אחד.",
-    "en": "A low shoe rack with three slatted shelves, perforated side panels and a double-layer top seat. Laser-cut plywood parts come together as a single structure."
+    "he": "מעמד נעליים נמוך עם שלושה מדפי רפפות, פאות צד מחוררות ומושב עליון כפול. חלקי דיקט חתוכים בלייזר מתחברים למבנה אחד. התמונות האמיתיות מציגות את המוצר המורכב לפני צבע או גימור.",
+    "en": "A low shoe rack with three slatted shelves, perforated side panels and a double-layer top seat. Laser-cut plywood parts come together as a single structure. The real photographs show the assembled product before painting or finishing."
   },
   "shoe.spec.width": {
     "he": "רוחב בסיס",
@@ -100,28 +104,28 @@ html[lang="en"] .adapt-link{direction:ltr}
     "en": "Request a quote for the Shoe Rack"
   },
   "shoe.hero.alt": {
-    "he": "מעמד נעליים גרסה A — תכנון מלא",
-    "en": "Shoe Rack, Version A — complete planning sheet"
+    "he": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני צבע או גימור",
+    "en": "The raw-plywood shoe rack at a home entrance, with shoes and a cushion, before painting or finishing"
   },
   "shoe.story.kicker": {
-    "he": "תהליך הבנייה / תכנון וחיתוך",
-    "en": "BUILD STORY / PLANNING AND CUTTING"
+    "he": "תהליך הבנייה / תמונות אמיתיות",
+    "en": "BUILD STORY / REAL PHOTOGRAPHS"
   },
   "shoe.story.title": {
-    "he": "מהתכנון<br>לחיתוך.",
-    "en": "From planning<br>to cutting."
+    "he": "מהשימוש בבית<br>לתהליך הבנייה.",
+    "en": "From use at home<br>to the build process."
   },
   "shoe.story.copy": {
-    "he": "תמונת התכנון מגדירה את המבנה והמידות. לצידה מופיע צילום מהסדנה של המכונה החותכת את חלקי מעמד הנעליים — שלב נוסף בדרך להרכבה.",
-    "en": "The planning sheet defines the structure and dimensions. Alongside it, a workshop photograph shows the machine cutting the Shoe Rack parts — another step toward assembly."
+    "he": "שש תמונות אמיתיות מתעדות את המעמד בשימוש ואת החיתוך וההרכבה. המוצר מצולם בדיקט טבעי, לפני צבע או גימור. תמונת התכנון וההדמיה מוצגת בנפרד בסוף הגלריה.",
+    "en": "Six real photographs document the rack in use, cutting and assembly. The product is shown in raw plywood, before painting or finishing. The planning and render image is identified separately at the end of the gallery."
   },
   "shoe.story.alt": {
-    "he": "שלב 01 — תכנון מעמד הנעליים",
-    "en": "Stage 01 — Shoe Rack planning"
+    "he": "תכנון והדמיה של מעמד הנעליים — מבנה, חלקים ומידות; לא צילום מוצר",
+    "en": "Shoe Rack planning and render sheet — structure, components and dimensions; not a product photograph"
   },
   "shoe.story.planning": {
-    "he": "01 / תכנון",
-    "en": "01 / PLANNING"
+    "he": "07 / תכנון והדמיה",
+    "en": "07 / PLANNING AND RENDER"
   },
   "shoe.carousel.label": {
     "he": "ניווט קרוסלה",
@@ -136,28 +140,28 @@ html[lang="en"] .adapt-link{direction:ltr}
     "en": "Next image"
   },
   "shoe.story.stage": {
-    "he": "תכנון",
-    "en": "Planning"
+    "he": "תכנון והדמיה",
+    "en": "Planning and render"
   },
   "shoe.story.detail": {
-    "he": "הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון מוגדרים לפני המעבר לקובצי החיתוך ולייצור.",
-    "en": "The geometry, dimensions, three shelves, perforated sides, braces and top seat are defined before creating the cutting files and starting fabrication."
+    "he": "תמונת תכנון והדמיה — אינה צילום של המוצר. היא מגדירה את הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון לפני החיתוך וההרכבה.",
+    "en": "A planning and render image — not a photograph of the product. It defines the geometry, dimensions, three shelves, perforated sides, braces and top seat before cutting and assembly."
   },
   "shoe.stage.current": {
     "he": "השלב הנבחר",
     "en": "SELECTED STAGE"
   },
   "shoe.stage.pending": {
-    "he": "תכנון וחיתוך מתועדים · הרכבה וגימור בהמשך",
-    "en": "Planning and cutting documented · assembly and finishing to come"
+    "he": "המוצר הורכב · התמונות לפני צבע או גימור",
+    "en": "Product assembled · photographs before painting or finishing"
   },
   "shoe.future.title": {
-    "he": "השלב הבא:<br>הרכבה.",
-    "en": "Next:<br>assembly."
+    "he": "השלב הבא:<br>גימור.",
+    "en": "Next:<br>finishing."
   },
   "shoe.future.copy": {
-    "he": "לאחר תכנון וחיתוך החלקים, התהליך ממשיך להרכבה ולגימור. תמונות של השלבים הבאים ושל המוצר המורכב יתווספו כאן כשיהיו זמינות.",
-    "en": "After planning and cutting the parts, the process continues with assembly and finishing. Photographs of the next stages and assembled product will be added here as they become available."
+    "he": "צילום של המוצר לאחר צבע או גימור עדיין אינו זמין. התמונות הקיימות מציגות את המעמד בדיקט טבעי, כולל צילום בשימוש בבית. תמונת הגימור תתווסף כשיהיה צילום אמיתי זמין.",
+    "en": "A photograph of the product after painting or finishing is not available yet. The current photographs show the rack in raw plywood, including one in use at home. A finished-product photograph will be added when a real one is available."
   },
   "shoe.footer": {
     "he": "ASSEMBLE LAB / עיצוב · הנדסה · ייצור",
@@ -188,8 +192,8 @@ html[lang="en"] .adapt-link{direction:ltr}
     "en": "Dimensions and note — optional"
   },
   "batch.intro": {
-    "he": "שלושה מדפים ומושב עליון — מהתכנון לחיתוך החלקים.",
-    "en": "Three shelves and a top seat — from planning to cutting the parts."
+    "he": "שלושה מדפים ומושב עליון — מורכב מדיקט טבעי, לפני גימור.",
+    "en": "Three shelves and a top seat — assembled in raw plywood, before finishing."
   },
   "batch.name": {
     "he": "מעמד נעליים",
@@ -207,21 +211,105 @@ html[lang="en"] .adapt-link{direction:ltr}
     "he": "המשך תהליך הייצור",
     "en": "Next fabrication stages"
   },
-  "shoe.story.cutting": {
-    "he": "02 / חיתוך",
-    "en": "02 / CUTTING"
+  "shoe.status.raw": {
+    "he": "מורכב מדיקט טבעי · לפני גימור",
+    "en": "Assembled in raw plywood · before finishing"
   },
-  "shoe.cutting.title": {
-    "he": "חיתוך",
-    "en": "Cutting"
+  "shoe.photo.inuse.title": {
+    "he": "בשימוש בבית",
+    "en": "In use at home"
   },
-  "shoe.cutting.detail": {
-    "he": "צילום אמיתי מהסדנה: המכונה חותכת את חלקי מעמד הנעליים בלוח הדיקט, בהתאם לפריסה שהוכנה בתכנון. ההרכבה והגימור עדיין בהמשך.",
-    "en": "A real workshop photograph: the machine cuts the Shoe Rack parts from a plywood sheet using the planned component layout. Assembly and finishing are still to come."
+  "shoe.photo.inuse.label": {
+    "he": "01 / בשימוש · לפני גימור",
+    "en": "01 / IN USE · BEFORE FINISHING"
   },
-  "shoe.cutting.alt": {
-    "he": "שלב 02 — המכונה חותכת חלקים למעמד הנעליים בלוח דיקט",
-    "en": "Stage 02 — the machine cutting Shoe Rack parts from a plywood sheet"
+  "shoe.photo.inuse.detail": {
+    "he": "צילום אמיתי של המעמד בכניסה לבית, עם נעליים וכרית. המבנה מורכב מדיקט טבעי ונמצא לפני צבע או גימור.",
+    "en": "A real photograph of the rack at a home entrance, with shoes and a cushion. The raw-plywood structure is assembled and has not been painted or finished."
+  },
+  "shoe.photo.inuse.alt": {
+    "he": "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני גימור",
+    "en": "Raw-plywood shoe rack at a home entrance, with shoes and a cushion, before finishing"
+  },
+  "shoe.photo.angled.title": {
+    "he": "מורכב — מבט בזווית",
+    "en": "Assembled — angled view"
+  },
+  "shoe.photo.angled.label": {
+    "he": "02 / מורכב · צילום אמיתי",
+    "en": "02 / ASSEMBLED · REAL PHOTO"
+  },
+  "shoe.photo.angled.detail": {
+    "he": "המעמד המורכב על שולחן העבודה, במבט שמציג את עומק המדפים ואת הפאה המחוררת. הדיקט וקצוות החיתוך גלויים, לפני צבע או גימור.",
+    "en": "The assembled rack on the workbench, showing the depth of the shelves and the perforated side panel. The plywood and cut edges are visible, before painting or finishing."
+  },
+  "shoe.photo.angled.alt": {
+    "he": "מעמד הנעליים המורכב מדיקט טבעי על שולחן העבודה, במבט בזווית, לפני גימור",
+    "en": "Assembled raw-plywood shoe rack on the workbench, viewed at an angle before finishing"
+  },
+  "shoe.photo.front.title": {
+    "he": "מורכב — מבט חזית",
+    "en": "Assembled — front view"
+  },
+  "shoe.photo.front.label": {
+    "he": "03 / חזית · צילום אמיתי",
+    "en": "03 / FRONT VIEW · REAL PHOTO"
+  },
+  "shoe.photo.front.detail": {
+    "he": "צילום חזית של המעמד המורכב: שלושת מדפי הרפפות והמושב העליון נראים יחד. זהו המוצר בדיקט טבעי, לפני צבע או גימור.",
+    "en": "A front photograph of the assembled rack, showing the three slatted shelves and top seat together. This is the raw-plywood product before painting or finishing."
+  },
+  "shoe.photo.front.alt": {
+    "he": "צילום חזית של מעמד הנעליים המורכב, עם שלושה מדפי רפפות ומושב עליון, לפני גימור",
+    "en": "Front photograph of the assembled shoe rack, with three slatted shelves and a top seat, before finishing"
+  },
+  "shoe.photo.assembly.title": {
+    "he": "במהלך ההרכבה",
+    "en": "During assembly"
+  },
+  "shoe.photo.assembly.label": {
+    "he": "04 / הרכבה · צילום אמיתי",
+    "en": "04 / ASSEMBLY · REAL PHOTO"
+  },
+  "shoe.photo.assembly.detail": {
+    "he": "צילום מהסדנה במהלך ההרכבה: פאת צד והמבנה העליון מתחילים להתחבר. החלקים מוצגים בדיקט טבעי, לפני הגימור.",
+    "en": "A workshop photograph during assembly: a side panel and the upper structure are beginning to come together. The parts are shown in raw plywood, before finishing."
+  },
+  "shoe.photo.assembly.alt": {
+    "he": "פאת צד והמבנה העליון של מעמד הנעליים במהלך ההרכבה בסדנה",
+    "en": "Shoe Rack side panel and upper structure during assembly in the workshop"
+  },
+  "shoe.photo.parts.title": {
+    "he": "החלקים לפני הרכבה",
+    "en": "Parts before assembly"
+  },
+  "shoe.photo.parts.label": {
+    "he": "05 / חלקים · צילום אמיתי",
+    "en": "05 / PARTS · REAL PHOTO"
+  },
+  "shoe.photo.parts.detail": {
+    "he": "חלקי הדיקט החתוכים פרוסים על שולחן העבודה לפני ההרכבה. הפריסה מציגה את רכיבי המבנה והמדפים כפי שיוצרו.",
+    "en": "The cut plywood parts laid out on the workbench before assembly. The layout shows the actual fabricated structure and shelf components."
+  },
+  "shoe.photo.parts.alt": {
+    "he": "חלקי מעמד הנעליים חתוכים מדיקט ופרוסים על שולחן העבודה לפני ההרכבה",
+    "en": "Shoe Rack plywood parts cut and laid out on the workbench before assembly"
+  },
+  "shoe.photo.cutting.title": {
+    "he": "חיתוך בלייזר",
+    "en": "Laser cutting"
+  },
+  "shoe.photo.cutting.label": {
+    "he": "06 / חיתוך · צילום אמיתי",
+    "en": "06 / CUTTING · REAL PHOTO"
+  },
+  "shoe.photo.cutting.detail": {
+    "he": "צילום אמיתי של מכונת הלייזר החותכת את חלקי המעמד בלוח הדיקט, בהתאם לפריסה שהוכנה בתכנון.",
+    "en": "A real photograph of the laser machine cutting the rack parts from a plywood sheet, using the layout prepared during planning."
+  },
+  "shoe.photo.cutting.alt": {
+    "he": "מכונת הלייזר חותכת את חלקי מעמד הנעליים בלוח דיקט בסדנה",
+    "en": "Laser machine cutting Shoe Rack parts from a plywood sheet in the workshop"
   }
 }</script>
 <link rel="stylesheet" href="../assets/language.css">
@@ -233,27 +321,42 @@ html[lang="en"] .adapt-link{direction:ltr}
 <header class="header"><a class="logo" href="../" aria-label="ASSEMBLE LAB — דף הבית" data-i18n-aria-label="nav.home"><span class="mark" data-language-fixed>A/L</span><b data-language-fixed>ASSEMBLE LAB</b></a><a class="back" href="../" data-i18n="nav.back">← לכל המוצרים</a><div class="language-switch" role="group" aria-label="בחירת שפה"><button type="button" data-language="he" lang="he" dir="rtl" aria-pressed="true" disabled>עברית</button><button type="button" data-language="en" lang="en" dir="ltr" aria-pressed="false" disabled>English</button></div></header>
 <main>
 <section class="hero">
-<div class="product-opening-copy"><h1 data-i18n="batch.name">מעמד נעליים</h1><p class="opening-intro" data-i18n="batch.intro">שלושה מדפים ומושב עליון — מהתכנון לחיתוך החלקים.</p><p class="status" data-i18n="status.planning">בתכנון ופיתוח</p><a class="adapt-link" href="../inquiry/?product=shoe-rack" aria-label="בקשת הצעת מחיר עבור מעמד הנעליים" data-i18n-aria-label="shoe.quote.label" data-i18n="cta.quote">בקשת הצעת מחיר</a></div><div class="hero-copy"><p class="kicker" data-i18n="shoe.hero.kicker">מוצר 04 / אחסון נעליים</p></div>
-<div class="hero-media"><a class="product-open-image" href="shoe-rack-planning-clean.webp" target="_blank" rel="noopener" aria-label="פתיחת התמונה בגודל מלא" data-i18n-aria-label="image.open"><img src="shoe-rack-planning-clean.webp" alt="מעמד נעליים גרסה A — תכנון מלא" data-i18n-alt="shoe.hero.alt" width="1200" height="900" loading="eager" decoding="async" fetchpriority="high"></a></div>
+<div class="product-opening-copy"><h1 data-i18n="batch.name">מעמד נעליים</h1><p class="opening-intro" data-i18n="batch.intro">שלושה מדפים ומושב עליון — מורכב מדיקט טבעי, לפני גימור.</p><p class="status" data-i18n="shoe.status.raw">מורכב מדיקט טבעי · לפני גימור</p><a class="adapt-link" href="../inquiry/?product=shoe-rack" aria-label="בקשת הצעת מחיר עבור מעמד הנעליים" data-i18n-aria-label="shoe.quote.label" data-i18n="cta.quote">בקשת הצעת מחיר</a></div><div class="hero-copy"><p class="kicker" data-i18n="shoe.hero.kicker">מוצר 04 / אחסון נעליים</p></div>
+<div class="hero-media"><a class="product-open-image" href="media/production/06-interior-in-use-full.webp" target="_blank" rel="noopener" aria-label="פתיחת התמונה בגודל מלא" data-i18n-aria-label="image.open"><img src="media/production/06-interior-in-use-full.webp" srcset="media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w" sizes="(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), calc(49.2vw - 104px)" alt="מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני צבע או גימור" data-i18n-alt="shoe.hero.alt" width="820" height="890" style="max-width:820px;margin-inline:auto" loading="eager" decoding="async" fetchpriority="high"></a></div>
 </section>
-<details class="product-details"><summary data-i18n="batch.specs">מידות ומפרט</summary><div class="specs"><div><small data-i18n="shoe.spec.width">רוחב בסיס</small><b data-language-fixed>800 mm</b></div><div><small data-i18n="shoe.spec.depth">עומק בסיס</small><b data-language-fixed>320 mm</b></div><div><small data-i18n="shoe.spec.height">גובה בסיס</small><b data-language-fixed>520 mm</b></div><div><small data-i18n="shoe.spec.material">חומר</small><b data-i18n="shoe.spec.plywood">דיקט 6 מ״מ</b></div></div><p data-i18n-html="shoe.hero.title">מעמד נעליים/ גרסה A</p></details><details class="product-details"><summary data-i18n="disclosure.productCustom">על הדגם והתאמת מידות</summary><p class="lead" data-i18n="shoe.hero.copy">מעמד נעליים נמוך עם שלושה מדפי רפפות, פאות צד מחוררות ומושב עליון כפול. המוצר מתוכנן כחלקי דיקט חתוכים בלייזר שמתחברים למבנה אחד.</p><div class="custom-size-copy"><div class="custom-size-label" data-i18n="shoe.size.label">התאמה אישית / מידות לפי הצורך</div><p data-i18n="shoe.size.copy">המידות המוצגות הן גרסת הבסיס. ניתן להתאים את מידות הדגם לחלל ולשימוש, תוך תכנון מחדש של המבנה והחיבורים ובהתאם לחומר ולאילוצי הייצור.</p></div></details><section class="story">
-<details class="product-details"><summary data-i18n="disclosure.stages">שלבי התכנון והבנייה</summary><div class="story-head"><div><p class="kicker" data-i18n="shoe.story.kicker">תהליך הבנייה / תכנון וחיתוך</p><h2 data-i18n="shoe.story.title" data-i18n-html>מהתכנון<br>לחיתוך.</h2></div><p data-i18n="shoe.story.copy">תמונת התכנון מגדירה את המבנה והמידות. לצידה מופיע צילום מהסדנה של המכונה החותכת את חלקי מעמד הנעליים — שלב נוסף בדרך להרכבה.</p></div>
+<details class="product-details"><summary data-i18n="batch.specs">מידות ומפרט</summary><div class="specs"><div><small data-i18n="shoe.spec.width">רוחב בסיס</small><b data-language-fixed>800 mm</b></div><div><small data-i18n="shoe.spec.depth">עומק בסיס</small><b data-language-fixed>320 mm</b></div><div><small data-i18n="shoe.spec.height">גובה בסיס</small><b data-language-fixed>520 mm</b></div><div><small data-i18n="shoe.spec.material">חומר</small><b data-i18n="shoe.spec.plywood">דיקט 6 מ״מ</b></div></div><p data-i18n-html="shoe.hero.title">מעמד נעליים/ גרסה A</p></details><details class="product-details"><summary data-i18n="disclosure.productCustom">על הדגם והתאמת מידות</summary><p class="lead" data-i18n="shoe.hero.copy">מעמד נעליים נמוך עם שלושה מדפי רפפות, פאות צד מחוררות ומושב עליון כפול. חלקי דיקט חתוכים בלייזר מתחברים למבנה אחד. התמונות האמיתיות מציגות את המוצר המורכב לפני צבע או גימור.</p><div class="custom-size-copy"><div class="custom-size-label" data-i18n="shoe.size.label">התאמה אישית / מידות לפי הצורך</div><p data-i18n="shoe.size.copy">המידות המוצגות הן גרסת הבסיס. ניתן להתאים את מידות הדגם לחלל ולשימוש, תוך תכנון מחדש של המבנה והחיבורים ובהתאם לחומר ולאילוצי הייצור.</p></div></details><section class="story">
+<details class="product-details"><summary data-i18n="disclosure.stages">שלבי התכנון והבנייה</summary><div class="story-head"><div><p class="kicker" data-i18n="shoe.story.kicker">תהליך הבנייה / תמונות אמיתיות</p><h2 data-i18n="shoe.story.title" data-i18n-html>מהשימוש בבית<br>לתהליך הבנייה.</h2></div><p data-i18n="shoe.story.copy">שש תמונות אמיתיות מתעדות את המעמד בשימוש ואת החיתוך וההרכבה. המוצר מצולם בדיקט טבעי, לפני צבע או גימור. תמונת התכנון וההדמיה מוצגת בנפרד בסוף הגלריה.</p></div>
 </details><div class="gallery" tabindex="0" role="region" aria-label="שלבי התכנון והבנייה" data-i18n-aria-label="carousel.label">
 <div class="viewer">
-  <div class="slide active" aria-hidden="false"><img src="shoe-rack-planning-clean.webp" alt="שלב 01 — תכנון מעמד הנעליים" data-i18n-alt="shoe.story.alt" width="1200" height="900" loading="lazy" decoding="async"></div>
-  <div class="slide cutting" aria-hidden="true"><div class="landscape-frame"><img data-src="media/shoe-rack-cutting-1080.webp" data-srcset="media/shoe-rack-cutting-540.webp 540w, media/shoe-rack-cutting-1080.webp 1080w" sizes="(max-width:640px) calc(56.25vw - 28px), (max-width:900px) calc(50.625vw - 21px), (max-width:1440px) calc(36.71vw - 21px), 540px" alt="שלב 02 — המכונה חותכת חלקים למעמד הנעליים בלוח דיקט" data-i18n-alt="shoe.cutting.alt" width="1080" height="1920" loading="lazy" decoding="async"></div></div>
-  <div class="badge">01 / תכנון</div><div class="progress"><span>01</span> / 02</div>
+  <div class="slide active" aria-hidden="false" data-photo-kind="real"><img src="media/production/06-interior-in-use-full.webp" srcset="media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w" sizes="(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px" alt="מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני גימור" data-i18n-alt="shoe.photo.inuse.alt" width="820" height="890" style="max-width:820px;max-height:890px" loading="lazy" decoding="async"></div>
+  <div class="slide" aria-hidden="true" data-photo-kind="real"><img data-src="media/production/04-assembled-angled-960.webp" data-srcset="media/production/04-assembled-angled-480.webp 480w, media/production/04-assembled-angled-960.webp 960w, media/production/04-assembled-angled-full.webp 1110w" sizes="(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px" alt="מעמד הנעליים המורכב מדיקט טבעי על שולחן העבודה, במבט בזווית, לפני גימור" data-i18n-alt="shoe.photo.angled.alt" width="960" height="770" style="max-width:1110px;max-height:890px" loading="lazy" decoding="async"></div>
+  <div class="slide" aria-hidden="true" data-photo-kind="real"><img data-src="media/production/05-front-view-960.webp" data-srcset="media/production/05-front-view-480.webp 480w, media/production/05-front-view-960.webp 960w, media/production/05-front-view-full.webp 1110w" sizes="(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px" alt="צילום חזית של מעמד הנעליים המורכב, עם שלושה מדפי רפפות ומושב עליון, לפני גימור" data-i18n-alt="shoe.photo.front.alt" width="960" height="701" style="max-width:1110px;max-height:810px" loading="lazy" decoding="async"></div>
+  <div class="slide" aria-hidden="true" data-photo-kind="real"><img data-src="media/production/03-mid-assembly-960.webp" data-srcset="media/production/03-mid-assembly-480.webp 480w, media/production/03-mid-assembly-960.webp 960w, media/production/03-mid-assembly-full.webp 1280w" sizes="(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px" alt="פאת צד והמבנה העליון של מעמד הנעליים במהלך ההרכבה בסדנה" data-i18n-alt="shoe.photo.assembly.alt" width="960" height="730" style="max-width:1280px;max-height:974px" loading="lazy" decoding="async"></div>
+  <div class="slide" aria-hidden="true" data-photo-kind="real"><img data-src="media/production/02-parts-layout-960.webp" data-srcset="media/production/02-parts-layout-480.webp 480w, media/production/02-parts-layout-960.webp 960w, media/production/02-parts-layout-full.webp 1280w" sizes="(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px" alt="חלקי מעמד הנעליים חתוכים מדיקט ופרוסים על שולחן העבודה לפני ההרכבה" data-i18n-alt="shoe.photo.parts.alt" width="960" height="795" style="max-width:1280px;max-height:1061px" loading="lazy" decoding="async"></div>
+  <div class="slide" aria-hidden="true" data-photo-kind="real"><img data-src="media/production/01-laser-cutting-960.webp" data-srcset="media/production/01-laser-cutting-480.webp 480w, media/production/01-laser-cutting-960.webp 960w, media/production/01-laser-cutting-full.webp 1280w" sizes="(max-width:640px) calc(100vw - 62px), (max-width:900px) calc(90vw - 30px), (max-width:1440px) calc(65.25vw - 30px), 954px" alt="מכונת הלייזר חותכת את חלקי מעמד הנעליים בלוח דיקט בסדנה" data-i18n-alt="shoe.photo.cutting.alt" width="960" height="1317" style="max-width:1280px;max-height:1755px" loading="lazy" decoding="async"></div>
+  <div class="slide" aria-hidden="true" data-photo-kind="planning"><img data-src="shoe-rack-planning-clean.webp" alt="תכנון והדמיה של מעמד הנעליים — מבנה, חלקים ומידות; לא צילום מוצר" data-i18n-alt="shoe.story.alt" width="1200" height="900" loading="lazy" decoding="async"></div>
+  <div class="badge">01 / בשימוש · לפני גימור</div><div class="progress"><span>01</span> / 07</div>
   <div class="carousel-arrows" aria-label="ניווט קרוסלה" data-i18n-aria-label="shoe.carousel.label"><button class="arrow prev" type="button" aria-label="התמונה הקודמת" data-i18n-aria-label="shoe.carousel.previous" disabled>←</button><button class="arrow next" type="button" aria-label="התמונה הבאה" data-i18n-aria-label="shoe.carousel.next" disabled>→</button></div>
 </div>
-<div class="panel"><div class="copy" aria-live="polite" aria-atomic="true"><div class="index">01 / תכנון</div><h3>תכנון</h3><p>הגאומטריה, המידות, שלושת המדפים, הפאות המחוררות, החיזוקים והמושב העליון מוגדרים לפני המעבר לקובצי החיתוך ולייצור.</p><a class="gallery-image-open" href="shoe-rack-planning-clean.webp" target="_blank" rel="noopener" data-i18n="image.open">פתיחת התמונה בגודל מלא</a></div>
+<div class="panel"><div class="copy" aria-live="polite" aria-atomic="true"><div class="index">01 / בשימוש · לפני גימור</div><h3>בשימוש בבית</h3><p>צילום אמיתי של המעמד בכניסה לבית, עם נעליים וכרית. המבנה מורכב מדיקט טבעי ונמצא לפני צבע או גימור.</p><a class="gallery-image-open" href="media/production/06-interior-in-use-full.webp" target="_blank" rel="noopener" data-i18n="image.open">פתיחת התמונה בגודל מלא</a></div>
 <div class="nav" role="group" aria-label="שלבי התכנון והבנייה" data-i18n-aria-label="carousel.label">
-  <button class="step active" type="button" data-title-key="shoe.story.stage" data-label-key="shoe.story.planning" data-desc-key="shoe.story.detail" data-full-size="shoe-rack-planning-clean.webp" aria-pressed="true" disabled><small data-language-fixed>01</small><b data-i18n="shoe.story.stage">תכנון</b></button>
-  <button class="step" type="button" data-title-key="shoe.cutting.title" data-label-key="shoe.story.cutting" data-desc-key="shoe.cutting.detail" data-full-size="media/shoe-rack-cutting-original.jpeg" aria-pressed="false" disabled><small data-language-fixed>02</small><b data-i18n="shoe.cutting.title">חיתוך</b></button>
-</div><div class="stage"><small data-i18n="shoe.stage.current">השלב הנבחר</small><b data-i18n="shoe.stage.pending">תכנון וחיתוך מתועדים · הרכבה וגימור בהמשך</b></div></div>
+  <button class="step active" type="button" data-title-key="shoe.photo.inuse.title" data-label-key="shoe.photo.inuse.label" data-desc-key="shoe.photo.inuse.detail" data-full-size="media/production/06-interior-in-use-full.webp" aria-pressed="true" disabled><small data-language-fixed>01</small><b data-i18n="shoe.photo.inuse.title">בשימוש בבית</b></button>
+  <button class="step" type="button" data-title-key="shoe.photo.angled.title" data-label-key="shoe.photo.angled.label" data-desc-key="shoe.photo.angled.detail" data-full-size="media/production/04-assembled-angled-full.webp" aria-pressed="false" disabled><small data-language-fixed>02</small><b data-i18n="shoe.photo.angled.title">מורכב — מבט בזווית</b></button>
+  <button class="step" type="button" data-title-key="shoe.photo.front.title" data-label-key="shoe.photo.front.label" data-desc-key="shoe.photo.front.detail" data-full-size="media/production/05-front-view-full.webp" aria-pressed="false" disabled><small data-language-fixed>03</small><b data-i18n="shoe.photo.front.title">מורכב — מבט חזית</b></button>
+  <button class="step" type="button" data-title-key="shoe.photo.assembly.title" data-label-key="shoe.photo.assembly.label" data-desc-key="shoe.photo.assembly.detail" data-full-size="media/production/03-mid-assembly-full.webp" aria-pressed="false" disabled><small data-language-fixed>04</small><b data-i18n="shoe.photo.assembly.title">במהלך ההרכבה</b></button>
+  <button class="step" type="button" data-title-key="shoe.photo.parts.title" data-label-key="shoe.photo.parts.label" data-desc-key="shoe.photo.parts.detail" data-full-size="media/production/02-parts-layout-full.webp" aria-pressed="false" disabled><small data-language-fixed>05</small><b data-i18n="shoe.photo.parts.title">החלקים לפני הרכבה</b></button>
+  <button class="step" type="button" data-title-key="shoe.photo.cutting.title" data-label-key="shoe.photo.cutting.label" data-desc-key="shoe.photo.cutting.detail" data-full-size="media/production/01-laser-cutting-full.webp" aria-pressed="false" disabled><small data-language-fixed>06</small><b data-i18n="shoe.photo.cutting.title">חיתוך בלייזר</b></button>
+  <button class="step step-planning" type="button" data-title-key="shoe.story.stage" data-label-key="shoe.story.planning" data-desc-key="shoe.story.detail" data-full-size="shoe-rack-planning-clean.webp" aria-pressed="false" disabled><small data-language-fixed>07</small><b data-i18n="shoe.story.stage">תכנון והדמיה</b></button>
+</div><div class="stage"><small data-i18n="shoe.stage.current">השלב הנבחר</small><b data-i18n="shoe.stage.pending">המוצר הורכב · התמונות לפני צבע או גימור</b></div></div>
 </div>
-<noscript><figure class="no-script-photo"><div class="landscape-frame"><img src="media/shoe-rack-cutting-1080.webp" alt="שלב 02 — המכונה חותכת חלקים למעמד הנעליים בלוח דיקט" width="1080" height="1920" loading="lazy"></div><figcaption>02 / חיתוך — צילום מהסדנה. <a class="gallery-image-open" href="media/shoe-rack-cutting-original.jpeg" target="_blank" rel="noopener">פתיחת התמונה בגודל מלא</a></figcaption></figure></noscript>
+<noscript><figure class="no-script-photo"><img src="media/production/06-interior-in-use-full.webp" alt="מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני גימור" width="820" height="890" loading="lazy"><figcaption>01 / בשימוש בבית — צילום אמיתי לפני גימור. <a class="gallery-image-open" href="media/production/06-interior-in-use-full.webp" target="_blank" rel="noopener">פתיחת התמונה בגודל מלא</a></figcaption></figure>
+<figure class="no-script-photo"><img src="media/production/04-assembled-angled-960.webp" alt="מעמד הנעליים המורכב מדיקט טבעי על שולחן העבודה, במבט בזווית, לפני גימור" width="960" height="770" loading="lazy"><figcaption>02 / מורכב — מבט בזווית — צילום אמיתי לפני גימור. <a class="gallery-image-open" href="media/production/04-assembled-angled-full.webp" target="_blank" rel="noopener">פתיחת התמונה בגודל מלא</a></figcaption></figure>
+<figure class="no-script-photo"><img src="media/production/05-front-view-960.webp" alt="צילום חזית של מעמד הנעליים המורכב, עם שלושה מדפי רפפות ומושב עליון, לפני גימור" width="960" height="701" loading="lazy"><figcaption>03 / מורכב — מבט חזית — צילום אמיתי לפני גימור. <a class="gallery-image-open" href="media/production/05-front-view-full.webp" target="_blank" rel="noopener">פתיחת התמונה בגודל מלא</a></figcaption></figure>
+<figure class="no-script-photo"><img src="media/production/03-mid-assembly-960.webp" alt="פאת צד והמבנה העליון של מעמד הנעליים במהלך ההרכבה בסדנה" width="960" height="730" loading="lazy"><figcaption>04 / במהלך ההרכבה — צילום אמיתי לפני גימור. <a class="gallery-image-open" href="media/production/03-mid-assembly-full.webp" target="_blank" rel="noopener">פתיחת התמונה בגודל מלא</a></figcaption></figure>
+<figure class="no-script-photo"><img src="media/production/02-parts-layout-960.webp" alt="חלקי מעמד הנעליים חתוכים מדיקט ופרוסים על שולחן העבודה לפני ההרכבה" width="960" height="795" loading="lazy"><figcaption>05 / החלקים לפני הרכבה — צילום אמיתי לפני גימור. <a class="gallery-image-open" href="media/production/02-parts-layout-full.webp" target="_blank" rel="noopener">פתיחת התמונה בגודל מלא</a></figcaption></figure>
+<figure class="no-script-photo"><img src="media/production/01-laser-cutting-960.webp" alt="מכונת הלייזר חותכת את חלקי מעמד הנעליים בלוח דיקט בסדנה" width="960" height="1317" loading="lazy"><figcaption>06 / חיתוך בלייזר — צילום אמיתי לפני גימור. <a class="gallery-image-open" href="media/production/01-laser-cutting-full.webp" target="_blank" rel="noopener">פתיחת התמונה בגודל מלא</a></figcaption></figure></noscript>
 </section>
-<details class="product-details"><summary data-i18n="disclosure.future">המשך תהליך הייצור</summary><section class="future"><h2 data-i18n="shoe.future.title" data-i18n-html>השלב הבא:<br>הרכבה.</h2><p data-i18n="shoe.future.copy">לאחר תכנון וחיתוך החלקים, התהליך ממשיך להרכבה ולגימור. תמונות של השלבים הבאים ושל המוצר המורכב יתווספו כאן כשיהיו זמינות.</p></section>
+<details class="product-details"><summary data-i18n="disclosure.future">המשך תהליך הייצור</summary><section class="future"><h2 data-i18n="shoe.future.title" data-i18n-html>השלב הבא:<br>גימור.</h2><p data-i18n="shoe.future.copy">צילום של המוצר לאחר צבע או גימור עדיין אינו זמין. התמונות הקיימות מציגות את המעמד בדיקט טבעי, כולל צילום בשימוש בבית. תמונת הגימור תתווסף כשיהיה צילום אמיתי זמין.</p></section>
 </details></main>
 
 
@@ -282,9 +385,8 @@ html[lang="en"] .adapt-link{direction:ltr}
     });
     const image=slides[active].querySelector('img');
     if(image.dataset.srcset){image.srcset=image.dataset.srcset;delete image.dataset.srcset;}
+    image.loading='eager';
     window.ASSEMBLE_MEDIA.load(slides[active]);
-    // Reserve the landscape frame before the source image arrives.
-    viewer.classList.toggle('layout-cutting',active===1);
     const step=steps[active], label=window.ASSEMBLE_I18N.t(step.dataset.labelKey);
     gallery.querySelector('.badge').textContent=label;
     gallery.querySelector('.index').textContent=label;
