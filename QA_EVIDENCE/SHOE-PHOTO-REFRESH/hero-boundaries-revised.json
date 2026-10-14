@@ -1,0 +1,276 @@
+{
+  "passed": 18,
+  "failed": 0,
+  "results": [
+    {
+      "language": "he",
+      "viewport": [
+        320,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-480.webp",
+        "natural_width": 268,
+        "natural_height": 290,
+        "width": 268,
+        "height": 290.890625,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        640,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "natural_width": 588,
+        "natural_height": 638,
+        "width": 588,
+        "height": 638.1875,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        641,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "natural_width": 553,
+        "natural_height": 600,
+        "width": 553.75,
+        "height": 601.015625,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        900,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "natural_width": 792,
+        "natural_height": 859,
+        "width": 792,
+        "height": 859.609375,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        901,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-480.webp",
+        "natural_width": 368,
+        "natural_height": 399,
+        "width": 367.953125,
+        "height": 399.375,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1400,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "natural_width": 583,
+        "natural_height": 633,
+        "width": 583.53125,
+        "height": 633.34375,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1401,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "natural_width": 584,
+        "natural_height": 634,
+        "width": 584.03125,
+        "height": 633.875,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "natural_width": 603,
+        "natural_height": 655,
+        "width": 603.21875,
+        "height": 654.703125,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1920,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "natural_width": 839,
+        "natural_height": 911,
+        "width": 820,
+        "height": 890,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        320,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-480.webp",
+        "natural_width": 268,
+        "natural_height": 290,
+        "width": 268,
+        "height": 290.890625,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        640,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "natural_width": 588,
+        "natural_height": 638,
+        "width": 588,
+        "height": 638.1875,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        641,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "natural_width": 553,
+        "natural_height": 600,
+        "width": 553.75,
+        "height": 601.015625,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        900,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "natural_width": 792,
+        "natural_height": 859,
+        "width": 792,
+        "height": 859.609375,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        901,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-480.webp",
+        "natural_width": 368,
+        "natural_height": 399,
+        "width": 367.953125,
+        "height": 399.375,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1400,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "natural_width": 583,
+        "natural_height": 633,
+        "width": 583.53125,
+        "height": 633.34375,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1401,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "natural_width": 584,
+        "natural_height": 634,
+        "width": 584.03125,
+        "height": 633.875,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "natural_width": 603,
+        "natural_height": 655,
+        "width": 603.21875,
+        "height": 654.703125,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1920,
+        1100
+      ],
+      "image": {
+        "current_src": "http://127.0.0.1:41515/shoe_rack/media/production/06-interior-in-use-full.webp",
+        "natural_width": 839,
+        "natural_height": 911,
+        "width": 820,
+        "height": 890,
+        "sizes": "(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)"
+      }
+    }
+  ]
+}

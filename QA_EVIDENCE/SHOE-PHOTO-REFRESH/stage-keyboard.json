@@ -1,0 +1,161 @@
+{
+  "passed": 14,
+  "failed": 0,
+  "real_posts": 0,
+  "checks": [
+    {
+      "language": "he",
+      "viewport": [
+        390,
+        844
+      ],
+      "stage": 1,
+      "focus_visible": true,
+      "keyboard_enter": true,
+      "passed": true
+    },
+    {
+      "language": "he",
+      "viewport": [
+        390,
+        844
+      ],
+      "stage": 2,
+      "focus_visible": true,
+      "keyboard_enter": true,
+      "passed": true
+    },
+    {
+      "language": "he",
+      "viewport": [
+        390,
+        844
+      ],
+      "stage": 3,
+      "focus_visible": true,
+      "keyboard_enter": true,
+      "passed": true
+    },
+    {
+      "language": "he",
+      "viewport": [
+        390,
+        844
+      ],
+      "stage": 4,
+      "focus_visible": true,
+      "keyboard_enter": true,
+      "passed": true
+    },
+    {
+      "language": "he",
+      "viewport": [
+        390,
+        844
+      ],
+      "stage": 5,
+      "focus_visible": true,
+      "keyboard_enter": true,
+      "passed": true
+    },
+    {
+      "language": "he",
+      "viewport": [
+        390,
+        844
+      ],
+      "stage": 6,
+      "focus_visible": true,
+      "keyboard_enter": true,
+      "passed": true
+    },
+    {
+      "language": "he",
+      "viewport": [
+        390,
+        844
+      ],
+      "stage": 7,
+      "focus_visible": true,
+      "keyboard_enter": true,
+      "passed": true
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 1,
+      "focus_visible": true,
+      "keyboard_enter": true,
+      "passed": true
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 2,
+      "focus_visible": true,
+      "keyboard_enter": true,
+      "passed": true
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 3,
+      "focus_visible": true,
+      "keyboard_enter": true,
+      "passed": true
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 4,
+      "focus_visible": true,
+      "keyboard_enter": true,
+      "passed": true
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 5,
+      "focus_visible": true,
+      "keyboard_enter": true,
+      "passed": true
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 6,
+      "focus_visible": true,
+      "keyboard_enter": true,
+      "passed": true
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 7,
+      "focus_visible": true,
+      "keyboard_enter": true,
+      "passed": true
+    }
+  ]
+}

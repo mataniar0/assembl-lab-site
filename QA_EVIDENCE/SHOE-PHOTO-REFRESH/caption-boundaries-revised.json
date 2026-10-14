@@ -1,0 +1,1266 @@
+{
+  "passed": 84,
+  "failed": 0,
+  "results": [
+    {
+      "language": "he",
+      "viewport": [
+        901,
+        900
+      ],
+      "stage": 1,
+      "title": {
+        "text": "\u05d1\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05d1\u05d9\u05ea",
+        "font": "36.04px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        901,
+        900
+      ],
+      "stage": 2,
+      "title": {
+        "text": "\u05de\u05d5\u05e8\u05db\u05d1 \u2014 \u05de\u05d1\u05d8 \u05d1\u05d6\u05d5\u05d5\u05d9\u05ea",
+        "font": "36.04px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        901,
+        900
+      ],
+      "stage": 3,
+      "title": {
+        "text": "\u05de\u05d5\u05e8\u05db\u05d1 \u2014 \u05de\u05d1\u05d8 \u05d7\u05d6\u05d9\u05ea",
+        "font": "36.04px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        901,
+        900
+      ],
+      "stage": 4,
+      "title": {
+        "text": "\u05d1\u05de\u05d4\u05dc\u05da \u05d4\u05d4\u05e8\u05db\u05d1\u05d4",
+        "font": "36.04px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        901,
+        900
+      ],
+      "stage": 5,
+      "title": {
+        "text": "\u05d4\u05d7\u05dc\u05e7\u05d9\u05dd \u05dc\u05e4\u05e0\u05d9 \u05d4\u05e8\u05db\u05d1\u05d4",
+        "font": "36.04px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        901,
+        900
+      ],
+      "stage": 6,
+      "title": {
+        "text": "\u05d7\u05d9\u05ea\u05d5\u05da \u05d1\u05dc\u05d9\u05d9\u05d6\u05e8",
+        "font": "36.04px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        901,
+        900
+      ],
+      "stage": 7,
+      "title": {
+        "text": "\u05ea\u05db\u05e0\u05d5\u05df \u05d5\u05d4\u05d3\u05de\u05d9\u05d4",
+        "font": "36.04px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1100,
+        900
+      ],
+      "stage": 1,
+      "title": {
+        "text": "\u05d1\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05d1\u05d9\u05ea",
+        "font": "44px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1100,
+        900
+      ],
+      "stage": 2,
+      "title": {
+        "text": "\u05de\u05d5\u05e8\u05db\u05d1 \u2014 \u05de\u05d1\u05d8 \u05d1\u05d6\u05d5\u05d5\u05d9\u05ea",
+        "font": "44px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1100,
+        900
+      ],
+      "stage": 3,
+      "title": {
+        "text": "\u05de\u05d5\u05e8\u05db\u05d1 \u2014 \u05de\u05d1\u05d8 \u05d7\u05d6\u05d9\u05ea",
+        "font": "44px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1100,
+        900
+      ],
+      "stage": 4,
+      "title": {
+        "text": "\u05d1\u05de\u05d4\u05dc\u05da \u05d4\u05d4\u05e8\u05db\u05d1\u05d4",
+        "font": "44px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1100,
+        900
+      ],
+      "stage": 5,
+      "title": {
+        "text": "\u05d4\u05d7\u05dc\u05e7\u05d9\u05dd \u05dc\u05e4\u05e0\u05d9 \u05d4\u05e8\u05db\u05d1\u05d4",
+        "font": "44px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1100,
+        900
+      ],
+      "stage": 6,
+      "title": {
+        "text": "\u05d7\u05d9\u05ea\u05d5\u05da \u05d1\u05dc\u05d9\u05d9\u05d6\u05e8",
+        "font": "44px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1100,
+        900
+      ],
+      "stage": 7,
+      "title": {
+        "text": "\u05ea\u05db\u05e0\u05d5\u05df \u05d5\u05d4\u05d3\u05de\u05d9\u05d4",
+        "font": "44px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1200,
+        900
+      ],
+      "stage": 1,
+      "title": {
+        "text": "\u05d1\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05d1\u05d9\u05ea",
+        "font": "48px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1200,
+        900
+      ],
+      "stage": 2,
+      "title": {
+        "text": "\u05de\u05d5\u05e8\u05db\u05d1 \u2014 \u05de\u05d1\u05d8 \u05d1\u05d6\u05d5\u05d5\u05d9\u05ea",
+        "font": "48px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1200,
+        900
+      ],
+      "stage": 3,
+      "title": {
+        "text": "\u05de\u05d5\u05e8\u05db\u05d1 \u2014 \u05de\u05d1\u05d8 \u05d7\u05d6\u05d9\u05ea",
+        "font": "48px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1200,
+        900
+      ],
+      "stage": 4,
+      "title": {
+        "text": "\u05d1\u05de\u05d4\u05dc\u05da \u05d4\u05d4\u05e8\u05db\u05d1\u05d4",
+        "font": "48px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1200,
+        900
+      ],
+      "stage": 5,
+      "title": {
+        "text": "\u05d4\u05d7\u05dc\u05e7\u05d9\u05dd \u05dc\u05e4\u05e0\u05d9 \u05d4\u05e8\u05db\u05d1\u05d4",
+        "font": "48px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1200,
+        900
+      ],
+      "stage": 6,
+      "title": {
+        "text": "\u05d7\u05d9\u05ea\u05d5\u05da \u05d1\u05dc\u05d9\u05d9\u05d6\u05e8",
+        "font": "48px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1200,
+        900
+      ],
+      "stage": 7,
+      "title": {
+        "text": "\u05ea\u05db\u05e0\u05d5\u05df \u05d5\u05d4\u05d3\u05de\u05d9\u05d4",
+        "font": "48px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1399,
+        900
+      ],
+      "stage": 1,
+      "title": {
+        "text": "\u05d1\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05d1\u05d9\u05ea",
+        "font": "55.96px",
+        "width": 288.71875,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1399,
+        900
+      ],
+      "stage": 2,
+      "title": {
+        "text": "\u05de\u05d5\u05e8\u05db\u05d1 \u2014 \u05de\u05d1\u05d8 \u05d1\u05d6\u05d5\u05d5\u05d9\u05ea",
+        "font": "55.96px",
+        "width": 288.71875,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1399,
+        900
+      ],
+      "stage": 3,
+      "title": {
+        "text": "\u05de\u05d5\u05e8\u05db\u05d1 \u2014 \u05de\u05d1\u05d8 \u05d7\u05d6\u05d9\u05ea",
+        "font": "55.96px",
+        "width": 288.71875,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1399,
+        900
+      ],
+      "stage": 4,
+      "title": {
+        "text": "\u05d1\u05de\u05d4\u05dc\u05da \u05d4\u05d4\u05e8\u05db\u05d1\u05d4",
+        "font": "55.96px",
+        "width": 288.71875,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1399,
+        900
+      ],
+      "stage": 5,
+      "title": {
+        "text": "\u05d4\u05d7\u05dc\u05e7\u05d9\u05dd \u05dc\u05e4\u05e0\u05d9 \u05d4\u05e8\u05db\u05d1\u05d4",
+        "font": "55.96px",
+        "width": 288.71875,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1399,
+        900
+      ],
+      "stage": 6,
+      "title": {
+        "text": "\u05d7\u05d9\u05ea\u05d5\u05da \u05d1\u05dc\u05d9\u05d9\u05d6\u05e8",
+        "font": "55.96px",
+        "width": 288.71875,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1399,
+        900
+      ],
+      "stage": 7,
+      "title": {
+        "text": "\u05ea\u05db\u05e0\u05d5\u05df \u05d5\u05d4\u05d3\u05de\u05d9\u05d4",
+        "font": "55.96px",
+        "width": 288.71875,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1400,
+        900
+      ],
+      "stage": 1,
+      "title": {
+        "text": "\u05d1\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05d1\u05d9\u05ea",
+        "font": "56px",
+        "width": 288.953125,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1400,
+        900
+      ],
+      "stage": 2,
+      "title": {
+        "text": "\u05de\u05d5\u05e8\u05db\u05d1 \u2014 \u05de\u05d1\u05d8 \u05d1\u05d6\u05d5\u05d5\u05d9\u05ea",
+        "font": "56px",
+        "width": 288.953125,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1400,
+        900
+      ],
+      "stage": 3,
+      "title": {
+        "text": "\u05de\u05d5\u05e8\u05db\u05d1 \u2014 \u05de\u05d1\u05d8 \u05d7\u05d6\u05d9\u05ea",
+        "font": "56px",
+        "width": 288.953125,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1400,
+        900
+      ],
+      "stage": 4,
+      "title": {
+        "text": "\u05d1\u05de\u05d4\u05dc\u05da \u05d4\u05d4\u05e8\u05db\u05d1\u05d4",
+        "font": "56px",
+        "width": 288.953125,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1400,
+        900
+      ],
+      "stage": 5,
+      "title": {
+        "text": "\u05d4\u05d7\u05dc\u05e7\u05d9\u05dd \u05dc\u05e4\u05e0\u05d9 \u05d4\u05e8\u05db\u05d1\u05d4",
+        "font": "56px",
+        "width": 288.953125,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1400,
+        900
+      ],
+      "stage": 6,
+      "title": {
+        "text": "\u05d7\u05d9\u05ea\u05d5\u05da \u05d1\u05dc\u05d9\u05d9\u05d6\u05e8",
+        "font": "56px",
+        "width": 288.953125,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1400,
+        900
+      ],
+      "stage": 7,
+      "title": {
+        "text": "\u05ea\u05db\u05e0\u05d5\u05df \u05d5\u05d4\u05d3\u05de\u05d9\u05d4",
+        "font": "56px",
+        "width": 288.953125,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 1,
+      "title": {
+        "text": "\u05d1\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05d1\u05d9\u05ea",
+        "font": "56px",
+        "width": 298.859375,
+        "client": 299,
+        "scroll": 299
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 2,
+      "title": {
+        "text": "\u05de\u05d5\u05e8\u05db\u05d1 \u2014 \u05de\u05d1\u05d8 \u05d1\u05d6\u05d5\u05d5\u05d9\u05ea",
+        "font": "56px",
+        "width": 298.859375,
+        "client": 299,
+        "scroll": 299
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 3,
+      "title": {
+        "text": "\u05de\u05d5\u05e8\u05db\u05d1 \u2014 \u05de\u05d1\u05d8 \u05d7\u05d6\u05d9\u05ea",
+        "font": "56px",
+        "width": 298.859375,
+        "client": 299,
+        "scroll": 299
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 4,
+      "title": {
+        "text": "\u05d1\u05de\u05d4\u05dc\u05da \u05d4\u05d4\u05e8\u05db\u05d1\u05d4",
+        "font": "56px",
+        "width": 298.859375,
+        "client": 299,
+        "scroll": 299
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 5,
+      "title": {
+        "text": "\u05d4\u05d7\u05dc\u05e7\u05d9\u05dd \u05dc\u05e4\u05e0\u05d9 \u05d4\u05e8\u05db\u05d1\u05d4",
+        "font": "56px",
+        "width": 298.859375,
+        "client": 299,
+        "scroll": 299
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 6,
+      "title": {
+        "text": "\u05d7\u05d9\u05ea\u05d5\u05da \u05d1\u05dc\u05d9\u05d9\u05d6\u05e8",
+        "font": "56px",
+        "width": 298.859375,
+        "client": 299,
+        "scroll": 299
+      }
+    },
+    {
+      "language": "he",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 7,
+      "title": {
+        "text": "\u05ea\u05db\u05e0\u05d5\u05df \u05d5\u05d4\u05d3\u05de\u05d9\u05d4",
+        "font": "56px",
+        "width": 298.859375,
+        "client": 299,
+        "scroll": 299
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        901,
+        900
+      ],
+      "stage": 1,
+      "title": {
+        "text": "In use at home",
+        "font": "34px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        901,
+        900
+      ],
+      "stage": 2,
+      "title": {
+        "text": "Assembled \u2014 angled view",
+        "font": "34px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        901,
+        900
+      ],
+      "stage": 3,
+      "title": {
+        "text": "Assembled \u2014 front view",
+        "font": "34px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        901,
+        900
+      ],
+      "stage": 4,
+      "title": {
+        "text": "During assembly",
+        "font": "34px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        901,
+        900
+      ],
+      "stage": 5,
+      "title": {
+        "text": "Parts before assembly",
+        "font": "34px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        901,
+        900
+      ],
+      "stage": 6,
+      "title": {
+        "text": "Laser cutting",
+        "font": "34px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        901,
+        900
+      ],
+      "stage": 7,
+      "title": {
+        "text": "Planning and render",
+        "font": "34px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1100,
+        900
+      ],
+      "stage": 1,
+      "title": {
+        "text": "In use at home",
+        "font": "38.5px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1100,
+        900
+      ],
+      "stage": 2,
+      "title": {
+        "text": "Assembled \u2014 angled view",
+        "font": "38.5px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1100,
+        900
+      ],
+      "stage": 3,
+      "title": {
+        "text": "Assembled \u2014 front view",
+        "font": "38.5px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1100,
+        900
+      ],
+      "stage": 4,
+      "title": {
+        "text": "During assembly",
+        "font": "38.5px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1100,
+        900
+      ],
+      "stage": 5,
+      "title": {
+        "text": "Parts before assembly",
+        "font": "38.5px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1100,
+        900
+      ],
+      "stage": 6,
+      "title": {
+        "text": "Laser cutting",
+        "font": "38.5px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1100,
+        900
+      ],
+      "stage": 7,
+      "title": {
+        "text": "Planning and render",
+        "font": "38.5px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1200,
+        900
+      ],
+      "stage": 1,
+      "title": {
+        "text": "In use at home",
+        "font": "42px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1200,
+        900
+      ],
+      "stage": 2,
+      "title": {
+        "text": "Assembled \u2014 angled view",
+        "font": "42px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1200,
+        900
+      ],
+      "stage": 3,
+      "title": {
+        "text": "Assembled \u2014 front view",
+        "font": "42px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1200,
+        900
+      ],
+      "stage": 4,
+      "title": {
+        "text": "During assembly",
+        "font": "42px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1200,
+        900
+      ],
+      "stage": 5,
+      "title": {
+        "text": "Parts before assembly",
+        "font": "42px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1200,
+        900
+      ],
+      "stage": 6,
+      "title": {
+        "text": "Laser cutting",
+        "font": "42px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1200,
+        900
+      ],
+      "stage": 7,
+      "title": {
+        "text": "Planning and render",
+        "font": "42px",
+        "width": 243,
+        "client": 243,
+        "scroll": 243
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1399,
+        900
+      ],
+      "stage": 1,
+      "title": {
+        "text": "In use at home",
+        "font": "48.965px",
+        "width": 288.71875,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1399,
+        900
+      ],
+      "stage": 2,
+      "title": {
+        "text": "Assembled \u2014 angled view",
+        "font": "48.965px",
+        "width": 288.71875,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1399,
+        900
+      ],
+      "stage": 3,
+      "title": {
+        "text": "Assembled \u2014 front view",
+        "font": "48.965px",
+        "width": 288.71875,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1399,
+        900
+      ],
+      "stage": 4,
+      "title": {
+        "text": "During assembly",
+        "font": "48.965px",
+        "width": 288.71875,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1399,
+        900
+      ],
+      "stage": 5,
+      "title": {
+        "text": "Parts before assembly",
+        "font": "48.965px",
+        "width": 288.71875,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1399,
+        900
+      ],
+      "stage": 6,
+      "title": {
+        "text": "Laser cutting",
+        "font": "48.965px",
+        "width": 288.71875,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1399,
+        900
+      ],
+      "stage": 7,
+      "title": {
+        "text": "Planning and render",
+        "font": "48.965px",
+        "width": 288.71875,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1400,
+        900
+      ],
+      "stage": 1,
+      "title": {
+        "text": "In use at home",
+        "font": "49px",
+        "width": 288.953125,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1400,
+        900
+      ],
+      "stage": 2,
+      "title": {
+        "text": "Assembled \u2014 angled view",
+        "font": "49px",
+        "width": 288.953125,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1400,
+        900
+      ],
+      "stage": 3,
+      "title": {
+        "text": "Assembled \u2014 front view",
+        "font": "49px",
+        "width": 288.953125,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1400,
+        900
+      ],
+      "stage": 4,
+      "title": {
+        "text": "During assembly",
+        "font": "49px",
+        "width": 288.953125,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1400,
+        900
+      ],
+      "stage": 5,
+      "title": {
+        "text": "Parts before assembly",
+        "font": "49px",
+        "width": 288.953125,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1400,
+        900
+      ],
+      "stage": 6,
+      "title": {
+        "text": "Laser cutting",
+        "font": "49px",
+        "width": 288.953125,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1400,
+        900
+      ],
+      "stage": 7,
+      "title": {
+        "text": "Planning and render",
+        "font": "49px",
+        "width": 288.953125,
+        "client": 289,
+        "scroll": 289
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 1,
+      "title": {
+        "text": "In use at home",
+        "font": "50px",
+        "width": 298.859375,
+        "client": 299,
+        "scroll": 299
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 2,
+      "title": {
+        "text": "Assembled \u2014 angled view",
+        "font": "50px",
+        "width": 298.859375,
+        "client": 299,
+        "scroll": 299
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 3,
+      "title": {
+        "text": "Assembled \u2014 front view",
+        "font": "50px",
+        "width": 298.859375,
+        "client": 299,
+        "scroll": 299
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 4,
+      "title": {
+        "text": "During assembly",
+        "font": "50px",
+        "width": 298.859375,
+        "client": 299,
+        "scroll": 299
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 5,
+      "title": {
+        "text": "Parts before assembly",
+        "font": "50px",
+        "width": 298.859375,
+        "client": 299,
+        "scroll": 299
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 6,
+      "title": {
+        "text": "Laser cutting",
+        "font": "50px",
+        "width": 298.859375,
+        "client": 299,
+        "scroll": 299
+      }
+    },
+    {
+      "language": "en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "stage": 7,
+      "title": {
+        "text": "Planning and render",
+        "font": "50px",
+        "width": 298.859375,
+        "client": 299,
+        "scroll": 299
+      }
+    }
+  ]
+}

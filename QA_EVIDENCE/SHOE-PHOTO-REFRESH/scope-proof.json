@@ -1,0 +1,13 @@
+{
+  "base_sha": "a262c95399275f62d270f4e547154db5e2e52cc0",
+  "reviewed_application_sha": "4048f37e2e54812ca10abfd1cd50f06132027864",
+  "base_files": 236,
+  "byte_identical_existing_files": 233,
+  "changed_existing_files": [
+    "shoe_rack/index.html",
+    "tests/carousel_mobile_smoke.py",
+    "tests/language_site_smoke.py"
+  ],
+  "new_asset_directory": "shoe_rack/media/production/",
+  "main_or_live_published": false
+}

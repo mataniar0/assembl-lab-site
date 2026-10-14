@@ -1,0 +1,19 @@
+{
+  "passed": 2,
+  "failed": 0,
+  "real_posts": 0,
+  "results": [
+    {
+      "width": 320,
+      "passed": true,
+      "fallback_photos": 6,
+      "real_posts": 0
+    },
+    {
+      "width": 1440,
+      "passed": true,
+      "fallback_photos": 6,
+      "real_posts": 0
+    }
+  ]
+}

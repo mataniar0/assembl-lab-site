@@ -1,0 +1,177 @@
+{
+  "source_files_verified": 6,
+  "exports_verified": 17,
+  "total_export_bytes": 1244200,
+  "results": [
+    {
+      "source": "01_laser_cutting.jpg",
+      "export": "01-laser-cutting-480.webp",
+      "width": 480,
+      "height": 658,
+      "bytes": 29608,
+      "source_preserved": true,
+      "sha_verified": true,
+      "no_upscaling": true
+    },
+    {
+      "source": "01_laser_cutting.jpg",
+      "export": "01-laser-cutting-960.webp",
+      "width": 960,
+      "height": 1317,
+      "bytes": 90066,
+      "source_preserved": true,
+      "sha_verified": true,
+      "no_upscaling": true
+    },
+    {
+      "source": "01_laser_cutting.jpg",
+      "export": "01-laser-cutting-full.webp",
+      "width": 1280,
+      "height": 1755,
+      "bytes": 166170,
+      "source_preserved": true,
+      "sha_verified": true,
+      "no_upscaling": true
+    },
+    {
+      "source": "02_parts_layout.jpg",
+      "export": "02-parts-layout-480.webp",
+      "width": 480,
+      "height": 398,
+      "bytes": 23852,
+      "source_preserved": true,
+      "sha_verified": true,
+      "no_upscaling": true
+    },
+    {
+      "source": "02_parts_layout.jpg",
+      "export": "02-parts-layout-960.webp",
+      "width": 960,
+      "height": 795,
+      "bytes": 67172,
+      "source_preserved": true,
+      "sha_verified": true,
+      "no_upscaling": true
+    },
+    {
+      "source": "02_parts_layout.jpg",
+      "export": "02-parts-layout-full.webp",
+      "width": 1280,
+      "height": 1061,
+      "bytes": 111158,
+      "source_preserved": true,
+      "sha_verified": true,
+      "no_upscaling": true
+    },
+    {
+      "source": "03_mid_assembly.jpg",
+      "export": "03-mid-assembly-480.webp",
+      "width": 480,
+      "height": 365,
+      "bytes": 26492,
+      "source_preserved": true,
+      "sha_verified": true,
+      "no_upscaling": true
+    },
+    {
+      "source": "03_mid_assembly.jpg",
+      "export": "03-mid-assembly-960.webp",
+      "width": 960,
+      "height": 730,
+      "bytes": 73522,
+      "source_preserved": true,
+      "sha_verified": true,
+      "no_upscaling": true
+    },
+    {
+      "source": "03_mid_assembly.jpg",
+      "export": "03-mid-assembly-full.webp",
+      "width": 1280,
+      "height": 974,
+      "bytes": 124434,
+      "source_preserved": true,
+      "sha_verified": true,
+      "no_upscaling": true
+    },
+    {
+      "source": "04_assembled_angled.jpg",
+      "export": "04-assembled-angled-480.webp",
+      "width": 480,
+      "height": 385,
+      "bytes": 32096,
+      "source_preserved": true,
+      "sha_verified": true,
+      "no_upscaling": true
+    },
+    {
+      "source": "04_assembled_angled.jpg",
+      "export": "04-assembled-angled-960.webp",
+      "width": 960,
+      "height": 770,
+      "bytes": 89882,
+      "source_preserved": true,
+      "sha_verified": true,
+      "no_upscaling": true
+    },
+    {
+      "source": "04_assembled_angled.jpg",
+      "export": "04-assembled-angled-full.webp",
+      "width": 1110,
+      "height": 890,
+      "bytes": 127758,
+      "source_preserved": true,
+      "sha_verified": true,
+      "no_upscaling": true
+    },
+    {
+      "source": "05_front_view.jpg",
+      "export": "05-front-view-480.webp",
+      "width": 480,
+      "height": 350,
+      "bytes": 23852,
+      "source_preserved": true,
+      "sha_verified": true,
+      "no_upscaling": true
+    },
+    {
+      "source": "05_front_view.jpg",
+      "export": "05-front-view-960.webp",
+      "width": 960,
+      "height": 701,
+      "bytes": 67612,
+      "source_preserved": true,
+      "sha_verified": true,
+      "no_upscaling": true
+    },
+    {
+      "source": "05_front_view.jpg",
+      "export": "05-front-view-full.webp",
+      "width": 1110,
+      "height": 810,
+      "bytes": 94834,
+      "source_preserved": true,
+      "sha_verified": true,
+      "no_upscaling": true
+    },
+    {
+      "source": "06_interior_in_use.jpg",
+      "export": "06-interior-in-use-480.webp",
+      "width": 480,
+      "height": 521,
+      "bytes": 25478,
+      "source_preserved": true,
+      "sha_verified": true,
+      "no_upscaling": true
+    },
+    {
+      "source": "06_interior_in_use.jpg",
+      "export": "06-interior-in-use-full.webp",
+      "width": 820,
+      "height": 890,
+      "bytes": 70214,
+      "source_preserved": true,
+      "sha_verified": true,
+      "no_upscaling": true
+    }
+  ]
+}

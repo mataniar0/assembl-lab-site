@@ -1,0 +1,25 @@
+PASS he (320, 568): 27 transitions
+PASS en (320, 568): 27 transitions
+PASS he (390, 844): 27 transitions
+PASS en (390, 844): 27 transitions
+PASS he (640, 900): 27 transitions
+PASS en (640, 900): 27 transitions
+PASS he (844, 900): 27 transitions
+PASS en (844, 900): 27 transitions
+PASS he (900, 1100): 27 transitions
+PASS en (900, 1100): 27 transitions
+PASS he (901, 1100): 27 transitions
+PASS en (901, 1100): 27 transitions
+PASS he (1440, 900): 27 transitions
+PASS en (1440, 900): 27 transitions
+PASS he (844, 390): 27 transitions
+PASS en (844, 390): 27 transitions
+PASS he (1100, 900): 27 transitions
+PASS en (1100, 900): 27 transitions
+PASS he (1200, 900): 27 transitions
+PASS en (1200, 900): 27 transitions
+PASS he (1399, 900): 27 transitions
+PASS en (1399, 900): 27 transitions
+PASS he (1400, 900): 27 transitions
+PASS en (1400, 900): 27 transitions
+RESULT 24 passed 0 failed 648 transitions 0 real writes
