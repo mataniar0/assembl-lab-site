@@ -1,0 +1,226 @@
+[
+  {
+    "phase": "before",
+    "file": "before/flow-en-1440.png",
+    "width": 1440,
+    "height": 900,
+    "bytes": 38737,
+    "sha256": "290441f587d959743008260886747e786f3a006e6473d6f9477bcc5eba6c425c"
+  },
+  {
+    "phase": "before",
+    "file": "before/flow-he-390.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 23498,
+    "sha256": "8672dd42776496bee75dcb716c7fbc5422dbc98b0cbca0cbc7f43b9b4532f3c6"
+  },
+  {
+    "phase": "before",
+    "file": "before/home-en-1440.png",
+    "width": 1440,
+    "height": 2068,
+    "bytes": 1328904,
+    "sha256": "aae21be30e6af37932dc5c6108315df9dc011800c6c8836e24bbb3b42e0183c1"
+  },
+  {
+    "phase": "before",
+    "file": "before/home-he-390.png",
+    "width": 390,
+    "height": 4636,
+    "bytes": 1146833,
+    "sha256": "608c1d4f633aa1191e5eb72620ddf241fd91c6ec6cd683de8bc65448e8b8529b"
+  },
+  {
+    "phase": "before",
+    "file": "before/shoe-en-1440.png",
+    "width": 1440,
+    "height": 900,
+    "bytes": 502550,
+    "sha256": "718d7085de2e3c81806027ec0ff47b8fd14ce7f287d32629e5fe8f4ffb6fb3ab"
+  },
+  {
+    "phase": "before",
+    "file": "before/shoe-he-390.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 176299,
+    "sha256": "ab3534041697917d15c6e4452854e7f595c446709eb2b69f396104e0acba9e21"
+  },
+  {
+    "phase": "before",
+    "file": "before/tables-en-1440.png",
+    "width": 1440,
+    "height": 1639,
+    "bytes": 383440,
+    "sha256": "02febf659379676716afe2d57ac6a0271f1e6e6938561379774a76794abd679d"
+  },
+  {
+    "phase": "before",
+    "file": "before/tables-he-390.png",
+    "width": 390,
+    "height": 2076,
+    "bytes": 147218,
+    "sha256": "ec22a42f8e9e9d896f7813d801b8ad7a027ec347bed03b5cdd12b5bcfed80441"
+  },
+  {
+    "phase": "after",
+    "file": "after/catalog-en-1440.png",
+    "width": 1440,
+    "height": 883,
+    "bytes": 804307,
+    "sha256": "28451d34ff5606992e7d082ac2ad8d02d13704717c5b2826a05d38fa092286fa"
+  },
+  {
+    "phase": "after",
+    "file": "after/catalog-he-390.png",
+    "width": 390,
+    "height": 3294,
+    "bytes": 963211,
+    "sha256": "c4d09440277e442379d0c8d6f5164278e44e68c50a1206e57013f482bb5d9543"
+  },
+  {
+    "phase": "after",
+    "file": "after/driller-assembled-en-1440.png",
+    "width": 1296,
+    "height": 665,
+    "bytes": 679620,
+    "sha256": "12aa1afac6cbe2a9c7dcde472234703361f929fc86784ffa4736daae51534346"
+  },
+  {
+    "phase": "after",
+    "file": "after/driller-assembled-he-390.png",
+    "width": 358,
+    "height": 518,
+    "bytes": 131022,
+    "sha256": "5c955009820255fde5694e956e94a987dcc13af9717a1b96171f21a985a3f389"
+  },
+  {
+    "phase": "after",
+    "file": "after/driller-en-1440.png",
+    "width": 1440,
+    "height": 900,
+    "bytes": 374287,
+    "sha256": "a426df9c7028b4a029538e58635846cc90291eaa1f6c936fdc37b4af5d5e9a07"
+  },
+  {
+    "phase": "after",
+    "file": "after/driller-he-390.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 131592,
+    "sha256": "083dd9deb93113abaa6c78e3a8c717a8829c9f7741a307ec30c684050c2528d1"
+  },
+  {
+    "phase": "after",
+    "file": "after/flow-en-1440.png",
+    "width": 1440,
+    "height": 900,
+    "bytes": 43639,
+    "sha256": "ef63281b2ba7d876cbc021f8c9758206daad51b5bd43975ec42a01faf7aacd17"
+  },
+  {
+    "phase": "after",
+    "file": "after/flow-he-390.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 24471,
+    "sha256": "1cd7e4cd0dafc436846020df33bebbe2005b1c57fa184374902ef3e8c9cea4b5"
+  },
+  {
+    "phase": "after",
+    "file": "after/geometric-en-1440.png",
+    "width": 1440,
+    "height": 900,
+    "bytes": 405705,
+    "sha256": "c8a0017ba319461c31f8400373ad4f5b8afe8f01c7f80f88c52fb08aa5f0d1ab"
+  },
+  {
+    "phase": "after",
+    "file": "after/geometric-he-390.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 127579,
+    "sha256": "b9b2b3c36ea27e2f8a47840c10707e642d740bdbfd92ee8755167cdefcddd7d2"
+  },
+  {
+    "phase": "after",
+    "file": "after/home-en-1440.png",
+    "width": 1440,
+    "height": 2095,
+    "bytes": 1341545,
+    "sha256": "34fdad953f518da44b08f5cd3df00949aff4eec02407c9a0e5382eedb5a31eff"
+  },
+  {
+    "phase": "after",
+    "file": "after/home-he-390.png",
+    "width": 390,
+    "height": 4744,
+    "bytes": 1157760,
+    "sha256": "5ed1dff4120ade7c28ce6bee2870272180514e6aaf9e13e24cb481eb0dbecaa6"
+  },
+  {
+    "phase": "after",
+    "file": "after/kids-assembled-en-1440.png",
+    "width": 1296,
+    "height": 665,
+    "bytes": 606628,
+    "sha256": "37a5473c29d63e5af20aeedc32dcf93a6cc4975e93ac9064bb9b2003c05d9326"
+  },
+  {
+    "phase": "after",
+    "file": "after/kids-assembled-he-390.png",
+    "width": 358,
+    "height": 495,
+    "bytes": 127288,
+    "sha256": "6c2653d4816e852a45b49f9c02c4fcf1bbdd028812b185d4254cfd4fb3a8dd3d"
+  },
+  {
+    "phase": "after",
+    "file": "after/kids-en-1440.png",
+    "width": 1440,
+    "height": 900,
+    "bytes": 348423,
+    "sha256": "249214edade91e28ce39b3f31ee3d532adbde21822f3793e3adbe850fbe7f33c"
+  },
+  {
+    "phase": "after",
+    "file": "after/kids-he-390.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 123170,
+    "sha256": "6faa16ea435345e330fbab0f21dcf6fbbc9f5ae60acf2c4efc22db23e9aa4be8"
+  },
+  {
+    "phase": "after",
+    "file": "after/shoe-en-1440.png",
+    "width": 1440,
+    "height": 900,
+    "bytes": 502550,
+    "sha256": "718d7085de2e3c81806027ec0ff47b8fd14ce7f287d32629e5fe8f4ffb6fb3ab"
+  },
+  {
+    "phase": "after",
+    "file": "after/shoe-he-390.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 176299,
+    "sha256": "ab3534041697917d15c6e4452854e7f595c446709eb2b69f396104e0acba9e21"
+  },
+  {
+    "phase": "after",
+    "file": "after/tables-en-1440.png",
+    "width": 1440,
+    "height": 1676,
+    "bytes": 388751,
+    "sha256": "885f8a3181cdd1f1ec28d8f6d9df4a102296ff32b07937546185bedad27c85be"
+  },
+  {
+    "phase": "after",
+    "file": "after/tables-he-390.png",
+    "width": 390,
+    "height": 2149,
+    "bytes": 151216,
+    "sha256": "40f377eb8ab713bac912e676f9ad31291b3b14b10c75ed7295bf7190fefe437b"
+  }
+]

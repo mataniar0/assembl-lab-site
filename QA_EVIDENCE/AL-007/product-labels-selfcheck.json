@@ -1,0 +1,105 @@
+{
+  "passed": 15,
+  "failed": 0,
+  "findings": [
+    {
+      "path": "geometric/index.html",
+      "static_preservation": "PASS",
+      "stages": 6
+    },
+    {
+      "path": "shelf/kids/index.html",
+      "static_preservation": "PASS",
+      "stages": 5
+    },
+    {
+      "path": "driller_stand/index.html",
+      "static_preservation": "PASS",
+      "stages": 5
+    },
+    {
+      "route": "geometric/",
+      "lang": "he",
+      "width": 390,
+      "result": "PASS",
+      "console_errors": []
+    },
+    {
+      "route": "geometric/",
+      "lang": "he",
+      "width": 1440,
+      "result": "PASS",
+      "console_errors": []
+    },
+    {
+      "route": "geometric/",
+      "lang": "en",
+      "width": 390,
+      "result": "PASS",
+      "console_errors": []
+    },
+    {
+      "route": "geometric/",
+      "lang": "en",
+      "width": 1440,
+      "result": "PASS",
+      "console_errors": []
+    },
+    {
+      "route": "shelf/kids/",
+      "lang": "he",
+      "width": 390,
+      "result": "PASS",
+      "console_errors": []
+    },
+    {
+      "route": "shelf/kids/",
+      "lang": "he",
+      "width": 1440,
+      "result": "PASS",
+      "console_errors": []
+    },
+    {
+      "route": "shelf/kids/",
+      "lang": "en",
+      "width": 390,
+      "result": "PASS",
+      "console_errors": []
+    },
+    {
+      "route": "shelf/kids/",
+      "lang": "en",
+      "width": 1440,
+      "result": "PASS",
+      "console_errors": []
+    },
+    {
+      "route": "driller_stand/",
+      "lang": "he",
+      "width": 390,
+      "result": "PASS",
+      "console_errors": []
+    },
+    {
+      "route": "driller_stand/",
+      "lang": "he",
+      "width": 1440,
+      "result": "PASS",
+      "console_errors": []
+    },
+    {
+      "route": "driller_stand/",
+      "lang": "en",
+      "width": 390,
+      "result": "PASS",
+      "console_errors": []
+    },
+    {
+      "route": "driller_stand/",
+      "lang": "en",
+      "width": 1440,
+      "result": "PASS",
+      "console_errors": []
+    }
+  ]
+}

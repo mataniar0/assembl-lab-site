@@ -1,0 +1,32 @@
+{
+  "command": "python tests/table_models_smoke.py",
+  "exit_code": 0,
+  "passed": 6,
+  "failed": 0,
+  "observed_by": "coordinator via exec/write_stdin tool output",
+  "languages": [
+    "he",
+    "en"
+  ],
+  "viewports": [
+    [
+      320,
+      568
+    ],
+    [
+      844,
+      390
+    ],
+    [
+      1440,
+      900
+    ]
+  ],
+  "coverage": [
+    "family and model navigation",
+    "Flow DXF download",
+    "Flow inquiry prefill",
+    "return navigation"
+  ],
+  "real_submissions": 0
+}
