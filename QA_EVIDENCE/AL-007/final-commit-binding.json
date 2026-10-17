@@ -1,0 +1,60 @@
+{
+  "candidate_sha": "086adef5477a615c2abc2b3ccc907e644648d731",
+  "caption_checks": [
+    {
+      "page": "shelf/kids/",
+      "commit_sha256": "5cfc377b1a719dfbc37f19cd2d6a7394870f44d23eacbe5d0802691e82d0650f",
+      "case_count": 10,
+      "all_tested_hashes_match": true
+    },
+    {
+      "page": "driller_stand/",
+      "commit_sha256": "2db940a77c648008ef7b00a3d907407430a4639b317551db8d035c9119d1dc70",
+      "case_count": 10,
+      "all_tested_hashes_match": true
+    }
+  ],
+  "committed_files": [
+    {
+      "file": "assets/tables.css",
+      "sha256": "9eb0c086484535f9cf75c32b6549079b9bc136b4e159718916c05a242f8f9d6d",
+      "matches_commit": true
+    },
+    {
+      "file": "driller_stand/index.html",
+      "sha256": "2db940a77c648008ef7b00a3d907407430a4639b317551db8d035c9119d1dc70",
+      "matches_commit": true
+    },
+    {
+      "file": "geometric/index.html",
+      "sha256": "fe50cb46389938fef881e432ebb9761ef564106d5ddc18b8c11e2554690365e5",
+      "matches_commit": true
+    },
+    {
+      "file": "index.html",
+      "sha256": "6df69aaacd179e8540f631eab9444f2f689999ab9b4c9b6a872dd147d33b23ec",
+      "matches_commit": true
+    },
+    {
+      "file": "inquiry/index.html",
+      "sha256": "c9f2653ffa5f5fc761e843beae71a057ad487ea7b1fee931b7ede46c16b1785b",
+      "matches_commit": true
+    },
+    {
+      "file": "shelf/kids/index.html",
+      "sha256": "5cfc377b1a719dfbc37f19cd2d6a7394870f44d23eacbe5d0802691e82d0650f",
+      "matches_commit": true
+    },
+    {
+      "file": "table/flow/index.html",
+      "sha256": "3e8a6969a71b44a182ff2b0c32404fc576adcf7e15f2d8352e4264fe73728f49",
+      "matches_commit": true
+    },
+    {
+      "file": "table/index.html",
+      "sha256": "cc33c327ab87b1fb2981dbfb6176f0a349359f416a633820666ded3ce46bf308",
+      "matches_commit": true
+    }
+  ],
+  "all_match": true
+}

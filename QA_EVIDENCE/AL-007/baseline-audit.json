@@ -1,0 +1,435 @@
+{
+  "task": "AL-007 Issue #5",
+  "baseline_sha": "be50dc06467b252929ae59a9703fefce0ab616df",
+  "audit_mode": "Read-only baseline; all source text loaded via git show at exact baseline SHA. No application files edited.",
+  "homepage_cards": [
+    {
+      "id": "tables",
+      "name": "Tables / שולחנות",
+      "homepage_href": "table/",
+      "homepage_before": {
+        "status": {
+          "he": "אין תגית שלב; משפחת שולחנות",
+          "en": "No lifecycle badge; table family"
+        },
+        "copy": {
+          "he": "שולחנות קפה Geometric ו־Flow.",
+          "en": "Geometric and Flow coffee tables."
+        },
+        "alt": {
+          "he": "שולחן הקפה Geometric",
+          "en": "Geometric coffee table"
+        }
+      },
+      "linked_page": "table/index.html",
+      "truthful_lifecycle": {
+        "he": "משפחה מעורבת: Geometric נבנה, Flow בתכנון",
+        "en": "Mixed family: Geometric built, Flow in planning"
+      },
+      "media_provenance": "Geometric photograph used for family card. Child Flow has no model image.",
+      "evidence": [
+        "index.html:312",
+        "table/index.html:35",
+        "assets/cards/README.md:7"
+      ],
+      "page_before": {
+        "status": {
+          "he": "לא הוגדר; Flow: תמונות יתווספו בהמשך",
+          "en": "Not explicit; Flow: Photos coming soon"
+        },
+        "copy": {
+          "he": "שולחן קפה עם פלטה חלקה, חיבורים היקפיים ורגליים המורכבות משני חלקים בזווית ישרה.",
+          "en": "A coffee table with a smooth top, perimeter joints and legs assembled from two parts at a right angle."
+        }
+      }
+    },
+    {
+      "id": "kids",
+      "name": "Kids Shelf / מדף לילדים",
+      "homepage_href": "shelf/kids/",
+      "homepage_before": {
+        "status": {
+          "he": "אין תגית; טקסט חלופי: לאחר גימור",
+          "en": "No badge; alt: finished product"
+        },
+        "copy": {
+          "he": "מדף קיר קומפקטי עם איורים וחיבורים גלויים.",
+          "en": "A compact wall shelf with illustrations and exposed joints."
+        },
+        "alt": {
+          "he": "מדף לילדים לאחר גימור",
+          "en": "Kids Shelf finished product"
+        }
+      },
+      "linked_page": "shelf/kids/index.html",
+      "truthful_lifecycle": {
+        "he": "נבנה בפועל",
+        "en": "Built"
+      },
+      "media_provenance": "Authentic workshop photograph, approved fifth sprite panel; not evidence of painted finish.",
+      "evidence": [
+        "index.html:313",
+        "shelf/kids/index.html:275"
+      ],
+      "page_before": {
+        "status": {
+          "he": "אין תגית שלב מפורשת",
+          "en": "No explicit lifecycle badge"
+        },
+        "copy": {
+          "he": "מדף קיר קומפקטי עם עיטורי טיל וכוכבים.",
+          "en": "A compact wall shelf with rocket and star details."
+        }
+      }
+    },
+    {
+      "id": "driller",
+      "name": "Driller Stand / מעמד למקדחה",
+      "homepage_href": "driller_stand/",
+      "homepage_before": {
+        "status": {
+          "he": "אין תגית; טקסט חלופי: לאחר גימור",
+          "en": "No badge; alt: finished product"
+        },
+        "copy": {
+          "he": "מעמד מודולרי לסדנה, עם קורות ומדפים.",
+          "en": "A modular workshop stand with beams and shelves."
+        },
+        "alt": {
+          "he": "מעמד למקדחה לאחר גימור",
+          "en": "Driller Stand finished product"
+        }
+      },
+      "linked_page": "driller_stand/index.html",
+      "truthful_lifecycle": {
+        "he": "נבנה בפועל / בשימוש",
+        "en": "Built / in use"
+      },
+      "media_provenance": "Authentic workshop photograph; original photo exists separately and matches card product.",
+      "evidence": [
+        "index.html:314",
+        "driller_stand/index.html:308"
+      ],
+      "page_before": {
+        "status": {
+          "he": "אין תגית שלב מפורשת",
+          "en": "No explicit lifecycle badge"
+        },
+        "copy": {
+          "he": "מעמד מודולרי שמרכז את כלי הסדנה והמדפים.",
+          "en": "A modular stand for workshop tools and shelves."
+        }
+      }
+    },
+    {
+      "id": "shoe",
+      "name": "Shoe rack / מעמד נעליים",
+      "homepage_href": "shoe_rack/",
+      "homepage_before": {
+        "status": {
+          "he": "ללא תגית; שלושה מדפים ומושב — הדמיית הדגם",
+          "en": "No badge; Three shelves and a seat — model rendering"
+        },
+        "copy": {
+          "he": "שלושה מדפים ומושב — הדמיית הדגם.",
+          "en": "Three shelves and a seat — model rendering."
+        },
+        "alt": {
+          "he": "הדמיה של מעמד נעליים עם שלושה מדפים ומושב",
+          "en": "Rendering of a shoe rack with three shelves and a seat"
+        }
+      },
+      "linked_page": "shoe_rack/index.html",
+      "truthful_lifecycle": {
+        "he": "מורכב מדיקט טבעי · לפני גימור",
+        "en": "Assembled in raw plywood · before finishing"
+      },
+      "media_provenance": "Existing homepage image remains a rendering; product page has six real raw/pre-finish photographs plus planning image.",
+      "evidence": [
+        "index.html:315",
+        "shoe_rack/index.html:325",
+        "shoe_rack/media/production/sources/README_SELECTED_FILES.md:31",
+        "shoe_rack/media/production/EDITING.md:3"
+      ],
+      "page_before": {
+        "status": {
+          "he": "מורכב מדיקט טבעי · לפני גימור",
+          "en": "Assembled in raw plywood · before finishing"
+        },
+        "copy": {
+          "he": "שלושה מדפים ומושב עליון — מורכב מדיקט טבעי, לפני גימור.",
+          "en": "Three shelves and a top seat — assembled in raw plywood, before finishing."
+        }
+      }
+    },
+    {
+      "id": "workbench",
+      "name": "Workbench / שולחן עבודה",
+      "homepage_href": "workbench/",
+      "homepage_before": {
+        "status": {
+          "he": "בפיתוח",
+          "en": "IN DEVELOPMENT"
+        },
+        "copy": {
+          "he": "הדמיית שולחן עבודה עם חיזוקים אלכסוניים.",
+          "en": "Workbench rendering with diagonal braces."
+        },
+        "alt": {
+          "he": "הדמיית שולחן עבודה עם חיזוקים אלכסוניים",
+          "en": "Rendering of a workbench with diagonal braces"
+        }
+      },
+      "linked_page": "workbench/index.html",
+      "truthful_lifecycle": {
+        "he": "בתכנון ופיתוח",
+        "en": "In development / Planning"
+      },
+      "media_provenance": "Card is rendered crop from planning board; page planning sheet/render, not documentary product photo.",
+      "evidence": [
+        "index.html:316",
+        "workbench/index.html:231",
+        "workbench/index.html:234"
+      ],
+      "page_before": {
+        "status": {
+          "he": "בתכנון ופיתוח",
+          "en": "In development / Planning"
+        },
+        "copy": {
+          "he": "שולחן עבודה עם חיזוקים אלכסוניים — בתכנון ופיתוח.",
+          "en": "A workbench with diagonal braces — in development."
+        },
+        "note": {
+          "he": "המידות מבוססות על דף התכנון המצורף. המוצר עדיין בבנייה; התמונה היא הדמיה, ותמונות המוצר המוגמר יתווספו בהמשך.",
+          "en": "Dimensions are based on the attached planning sheet. The product is still being built; this image is a rendering. Photos of the finished product will be added later."
+        }
+      }
+    },
+    {
+      "id": "crib",
+      "name": "Crib / מיטת תינוק",
+      "homepage_href": "crib/",
+      "homepage_before": {
+        "status": {
+          "he": "בפיתוח",
+          "en": "IN DEVELOPMENT"
+        },
+        "copy": {
+          "he": "הדמיית מיטת תינוק עם לוחות עץ מעוטרים.",
+          "en": "Rendering of a crib with decorative wooden panels."
+        },
+        "alt": {
+          "he": "הדמיה של מיטת תינוק מעץ לצד מיטת ההורים, עם עיטורי ירח וצמחים",
+          "en": "Rendering of a wooden bedside crib with moon and plant decorations"
+        }
+      },
+      "linked_page": "crib/index.html",
+      "truthful_lifecycle": {
+        "he": "בפיתוח / הדמיה",
+        "en": "In development / Rendering"
+      },
+      "media_provenance": "Card and page rendered project; cutting layout is planning drawing. Preserve infant safety warning.",
+      "evidence": [
+        "index.html:317",
+        "crib/index.html:300",
+        "crib/index.html:303"
+      ],
+      "page_before": {
+        "status": {
+          "he": "בפיתוח / הדמיה",
+          "en": "In development / Rendering"
+        },
+        "copy": {
+          "he": "מיטת תינוק מעץ מעוטר — אב־טיפוס בתכנון.",
+          "en": "A decorative wooden crib — a prototype in design."
+        },
+        "note": {
+          "he": "התמונות מציגות הדמיות של הפרויקט. פרטי המבנה והמידות עדיין בתכנון; תמונות הבנייה והמוצר המוגמר יתווספו בהמשך.",
+          "en": "These images show renderings of the project. Structural details and dimensions are still being planned. Build photos and images of the finished product will be added later."
+        }
+      }
+    },
+    {
+      "id": "etrog",
+      "name": "Etrog box / קופסה לאתרוג",
+      "homepage_href": "etrog_box/",
+      "homepage_before": {
+        "status": {
+          "he": "בפיתוח",
+          "en": "IN DEVELOPMENT"
+        },
+        "copy": {
+          "he": "הדמיית קופסה לאתרוג עם מכסה חרוט.",
+          "en": "Rendering of an etrog box with an engraved lid."
+        },
+        "alt": {
+          "he": "הדמיית קופסה לאתרוג עם החריטה המקורית על המכסה",
+          "en": "Rendering of an etrog box with its original lid engraving"
+        }
+      },
+      "linked_page": "etrog_box/index.html",
+      "truthful_lifecycle": {
+        "he": "בתכנון ופיתוח",
+        "en": "In development / Planning"
+      },
+      "media_provenance": "Rendered decorated box and planned cutting drawings, no product photographs.",
+      "evidence": [
+        "index.html:318",
+        "etrog_box/index.html:280",
+        "etrog_box/index.html:283"
+      ],
+      "page_before": {
+        "status": {
+          "he": "בתכנון ופיתוח",
+          "en": "In development / Planning"
+        },
+        "copy": {
+          "he": "קופסה עם מכסה חרוט וחיבורים גלויים — הדמיית הדגם.",
+          "en": "An etrog box with an engraved lid and exposed joints — model rendering."
+        },
+        "note": {
+          "he": "המוצר בפיתוח. ההדמיה מציגה את העיצוב והמידות המתוכננות; תמונות הבנייה והמוצר המוגמר יתווספו בהמשך.",
+          "en": "The product is in development. The rendering shows the planned design and dimensions. Build photos and images of the finished product will be added later."
+        }
+      }
+    },
+    {
+      "id": "megillah",
+      "name": "Esther scroll case / כיסוי למגילת אסתר",
+      "homepage_href": "megillat_esther_box/",
+      "homepage_before": {
+        "status": {
+          "he": "בפיתוח",
+          "en": "IN DEVELOPMENT"
+        },
+        "copy": {
+          "he": "הדמיית כיסוי למגילה עם גוף עץ ומכסה מעוגל.",
+          "en": "Rendering of a scroll case with a wooden body and curved lid."
+        },
+        "alt": {
+          "he": "הדמיית כיסוי סגור למגילת אסתר עם החריטות המקוריות",
+          "en": "Rendering of a closed Esther scroll case with its original engravings"
+        }
+      },
+      "linked_page": "megillat_esther_box/index.html",
+      "truthful_lifecycle": {
+        "he": "בתכנון ופיתוח",
+        "en": "In development / Planning"
+      },
+      "media_provenance": "Rendered product concept and V8.2.2 technical/planning drawings, no product photographs.",
+      "evidence": [
+        "index.html:319",
+        "megillat_esther_box/index.html:327",
+        "megillat_esther_box/index.html:330"
+      ],
+      "page_before": {
+        "status": {
+          "he": "בתכנון ופיתוח",
+          "en": "In development / Planning"
+        },
+        "copy": {
+          "he": "כיסוי עץ עם מכסה מעוגל וחריטות — הדמיית הדגם.",
+          "en": "A wooden scroll case with a curved lid and engravings — model rendering."
+        },
+        "note": {
+          "he": "ההדמיה מציגה את העיצוב המוצע; שרטוטי התכנון הם של גרסה <bdi>V8.2.2</bdi>. המידות מציינות את החלל הפנימי בתכנון. תמונות הבנייה והמוצר המוגמר יתווספו בהמשך.",
+          "en": "The rendering shows the proposed design; the planning drawings are for version <bdi>V8.2.2</bdi>. Dimensions describe the planned internal space. Build photos and images of the finished product will be added later."
+        }
+      }
+    }
+  ],
+  "table_models": [
+    {
+      "id": "geometric",
+      "parent": "tables",
+      "family_before": {
+        "he": "שולחן קפה שבו הגאומטריה והחיבורים הגלויים הם חלק מהעיצוב.",
+        "en": "A coffee table whose geometry and exposed joints form part of the design."
+      },
+      "page": "geometric/index.html",
+      "page_before": {
+        "he": "שולחן קפה עם גאומטריה וחיבורים גלויים.",
+        "en": "A coffee table with exposed geometry and joints."
+      },
+      "truthful_lifecycle": {
+        "he": "נבנה בפועל",
+        "en": "Built"
+      },
+      "media_provenance": "Built object photo; planning board contains renderings/drawings and documentary thumbnails. Laser, parts, assembly, black-finish stages are documentary images. Distinguish planning stage from photo stages.",
+      "evidence": [
+        "table/index.html:35",
+        "geometric/index.html:262",
+        "geometric/index.html:266",
+        "geometric/index.html:267",
+        "geometric/index.html:270"
+      ]
+    },
+    {
+      "id": "flow",
+      "parent": "tables",
+      "family_before": {
+        "he": "תמונות יתווספו בהמשך; ללא שלב מפורש",
+        "en": "Photos coming soon; no explicit lifecycle status"
+      },
+      "page": "table/flow/index.html",
+      "page_before": {
+        "he": "תמונות יתווספו בהמשך; מפרט תכנון וקבצי DXF",
+        "en": "Photos coming soon; design specifications and DXF files"
+      },
+      "truthful_lifecycle": {
+        "he": "בתכנון; אין צילומי מוצר זמינים",
+        "en": "In planning; no product photographs available"
+      },
+      "media_provenance": "No model images exist. media/ contains README only, placeholder correctly has no missing img URL. DXF package demonstrates design files, not fabrication/completion.",
+      "evidence": [
+        "table/index.html:35",
+        "table/flow/index.html:104",
+        "table/flow/media/README.md:3",
+        "table/flow/README.md:20"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": 1,
+      "change": "Shoe homepage: add actual assembled/raw lifecycle while explicitly retaining/render-labelling existing card image. Keep product status/6 real photos/7th planning stage and no-final-finish statement."
+    },
+    {
+      "priority": 1,
+      "change": "Flow: explicit planning status in both family card and detail; replace vague photos-coming-soon with current no-product-photographs language. Do not add image URLs or imply fabricated/finished object."
+    },
+    {
+      "priority": 2,
+      "change": "Use consistent, minimal lifecycle words on all eight cards and linked pages. Tables family needs mixed status; show Geometric built and Flow planning individually."
+    },
+    {
+      "priority": 2,
+      "change": "Kids/drill: built/workshop-photo labels; replace homepage \"finished\" alts with as-built. Current raw wood photographs do not establish painted/finished coating."
+    },
+    {
+      "priority": 2,
+      "change": "Geometric planning board: label planning/renderings/drawings; do not call entire planning board a product photograph. Documentary stage photos may retain photo labels."
+    },
+    {
+      "priority": 3,
+      "change": "Workbench/crib/etrog/scroll pages already explicit planning/render status: preserve existing notes, diagram labels and crib safety warning; only standardize concise visible card provenance if required."
+    }
+  ],
+  "inspected_images": [
+    "assets/cards/kids-960.webp",
+    "assets/cards/driller-960.webp",
+    "driller_stand/driller_final_original.jpg",
+    "assets/geometric-hero.webp",
+    "geometric/media/embedded-stage-2.jpg",
+    "geometric/media/planning-clean.webp",
+    "assets/cards/shoe-960.webp",
+    "shoe_rack/media/production/06-interior-in-use-full.webp"
+  ],
+  "uncertainties": [
+    "The audit distinguishes workshop photographs visually and by repository provenance. No external EXIF/photographer chain-of-custody verification was performed.",
+    "Kids/drill as-built images do not establish surface finishing or paint. Avoid treating a carousel stage named Finishing as proof of a painted finish.",
+    "Geometric planning-clean.webp is a mixed illustration board including authentic thumbnails; a broad label should say planning/renderings, not pure CAD drawing or authentic product photo.",
+    "Flow lacks product photographs; this does not independently prove whether any physical prototype exists. The supported public description is planning/design files and no available photographs."
+  ]
+}

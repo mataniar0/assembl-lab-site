@@ -1,0 +1,1985 @@
+{
+  "base_sha": "be50dc06467b252929ae59a9703fefce0ab616df",
+  "candidate_sha": "086adef5477a615c2abc2b3ccc907e644648d731",
+  "rows": [
+    {
+      "kind": "home-card",
+      "route": "table/",
+      "before_he": {
+        "status": "—",
+        "visible_card_text": "שולחנות\n\nשולחנות קפה Geometric ו־Flow.",
+        "image_alts": [
+          "שולחן הקפה Geometric"
+        ]
+      },
+      "after_he": {
+        "status": "Geometric נבנה · Flow בתכנון",
+        "visible_card_text": "Geometric נבנה · Flow בתכנון\nשולחנות\n\nשולחנות קפה · בכרטיס: צילום Geometric.",
+        "image_alts": [
+          "שולחן הקפה Geometric"
+        ]
+      },
+      "before_en": {
+        "status": "—",
+        "visible_card_text": "Tables\n\nGeometric and Flow coffee tables.",
+        "image_alts": [
+          "Geometric coffee table"
+        ]
+      },
+      "after_en": {
+        "status": "Geometric built · Flow in planning",
+        "visible_card_text": "Geometric built · Flow in planning\nTables\n\nCoffee tables · card image: Geometric photograph.",
+        "image_alts": [
+          "Geometric coffee table"
+        ]
+      }
+    },
+    {
+      "kind": "home-card",
+      "route": "shelf/kids/",
+      "before_he": {
+        "status": "—",
+        "visible_card_text": "מדף לילדים\n\nמדף קיר קומפקטי עם איורים וחיבורים גלויים.",
+        "image_alts": [
+          "מדף לילדים לאחר גימור"
+        ]
+      },
+      "after_he": {
+        "status": "נבנה בפועל",
+        "visible_card_text": "נבנה בפועל\nמדף לילדים\n\nמדף קיר עם איורים וחיבורים גלויים · צילום המוצר כפי שנבנה.",
+        "image_alts": [
+          "צילום המדף לילדים כפי שנבנה בסדנה"
+        ]
+      },
+      "before_en": {
+        "status": "—",
+        "visible_card_text": "Kids shelf\n\nA compact wall shelf with illustrations and exposed joints.",
+        "image_alts": [
+          "Kids Shelf finished product"
+        ]
+      },
+      "after_en": {
+        "status": "Built",
+        "visible_card_text": "Built\nKids shelf\n\nA wall shelf with illustrations and exposed joints · as-built product photograph.",
+        "image_alts": [
+          "Workshop photograph of the built Kids Shelf"
+        ]
+      }
+    },
+    {
+      "kind": "home-card",
+      "route": "driller_stand/",
+      "before_he": {
+        "status": "—",
+        "visible_card_text": "מעמד למקדחה\n\nמעמד מודולרי לסדנה, עם קורות ומדפים.",
+        "image_alts": [
+          "מעמד למקדחה לאחר גימור"
+        ]
+      },
+      "after_he": {
+        "status": "נבנה בפועל",
+        "visible_card_text": "נבנה בפועל\nמעמד למקדחה\n\nמעמד מודולרי לסדנה · צילום המוצר כפי שנבנה.",
+        "image_alts": [
+          "צילום מעמד המקדחה כפי שנבנה בסדנה"
+        ]
+      },
+      "before_en": {
+        "status": "—",
+        "visible_card_text": "Drill stand\n\nA modular workshop stand with beams and shelves.",
+        "image_alts": [
+          "Driller Stand finished product"
+        ]
+      },
+      "after_en": {
+        "status": "Built",
+        "visible_card_text": "Built\nDrill stand\n\nA modular workshop stand · as-built product photograph.",
+        "image_alts": [
+          "Workshop photograph of the built Driller Stand"
+        ]
+      }
+    },
+    {
+      "kind": "home-card",
+      "route": "shoe_rack/",
+      "before_he": {
+        "status": "—",
+        "visible_card_text": "מעמד נעליים\n\nשלושה מדפים ומושב — הדמיית הדגם.",
+        "image_alts": [
+          "הדמיה של מעמד נעליים עם שלושה מדפים ומושב"
+        ]
+      },
+      "after_he": {
+        "status": "מורכב מדיקט טבעי · לפני גימור",
+        "visible_card_text": "מורכב מדיקט טבעי · לפני גימור\nמעמד נעליים\n\nבכרטיס: הדמיה. צילומי המוצר המורכב מופיעים בעמוד.",
+        "image_alts": [
+          "הדמיה של מעמד נעליים עם שלושה מדפים ומושב"
+        ]
+      },
+      "before_en": {
+        "status": "—",
+        "visible_card_text": "Shoe rack\n\nThree shelves and a seat — model rendering.",
+        "image_alts": [
+          "Rendering of a shoe rack with three shelves and a seat"
+        ]
+      },
+      "after_en": {
+        "status": "Assembled in raw plywood · before finishing",
+        "visible_card_text": "Assembled in raw plywood · before finishing\nShoe rack\n\nCard image: rendering. Assembled product photographs are on the product page.",
+        "image_alts": [
+          "Rendering of a shoe rack with three shelves and a seat"
+        ]
+      }
+    },
+    {
+      "kind": "home-card",
+      "route": "workbench/",
+      "before_he": {
+        "status": "בפיתוח",
+        "visible_card_text": "בפיתוח\nשולחן עבודה\n\nהדמיית שולחן עבודה עם חיזוקים אלכסוניים.",
+        "image_alts": [
+          "הדמיית שולחן עבודה עם חיזוקים אלכסוניים"
+        ]
+      },
+      "after_he": {
+        "status": "בתכנון ופיתוח",
+        "visible_card_text": "בתכנון ופיתוח\nשולחן עבודה\n\nהדמיית שולחן עבודה עם חיזוקים אלכסוניים.",
+        "image_alts": [
+          "הדמיית שולחן עבודה עם חיזוקים אלכסוניים"
+        ]
+      },
+      "before_en": {
+        "status": "IN DEVELOPMENT",
+        "visible_card_text": "IN DEVELOPMENT\nWORKBENCH\n\nWorkbench rendering with diagonal braces.",
+        "image_alts": [
+          "Rendering of a workbench with diagonal braces"
+        ]
+      },
+      "after_en": {
+        "status": "In development / Planning",
+        "visible_card_text": "In development / Planning\nWORKBENCH\n\nWorkbench rendering with diagonal braces.",
+        "image_alts": [
+          "Rendering of a workbench with diagonal braces"
+        ]
+      }
+    },
+    {
+      "kind": "home-card",
+      "route": "crib/",
+      "before_he": {
+        "status": "בפיתוח",
+        "visible_card_text": "בפיתוח\nמיטת תינוק\n\nהדמיית מיטת תינוק עם לוחות עץ מעוטרים.",
+        "image_alts": [
+          "הדמיה של מיטת תינוק מעץ לצד מיטת ההורים, עם עיטורי ירח וצמחים"
+        ]
+      },
+      "after_he": {
+        "status": "בפיתוח / הדמיה",
+        "visible_card_text": "בפיתוח / הדמיה\nמיטת תינוק\n\nהדמיית מיטת תינוק עם לוחות עץ מעוטרים.",
+        "image_alts": [
+          "הדמיה של מיטת תינוק מעץ לצד מיטת ההורים, עם עיטורי ירח וצמחים"
+        ]
+      },
+      "before_en": {
+        "status": "IN DEVELOPMENT",
+        "visible_card_text": "IN DEVELOPMENT\nBEDSIDE CRIB\n\nRendering of a crib with decorative wooden panels.",
+        "image_alts": [
+          "Rendering of a wooden bedside crib with moon and plant decorations"
+        ]
+      },
+      "after_en": {
+        "status": "In development / Rendering",
+        "visible_card_text": "In development / Rendering\nBEDSIDE CRIB\n\nRendering of a crib with decorative wooden panels.",
+        "image_alts": [
+          "Rendering of a wooden bedside crib with moon and plant decorations"
+        ]
+      }
+    },
+    {
+      "kind": "home-card",
+      "route": "etrog_box/",
+      "before_he": {
+        "status": "בפיתוח",
+        "visible_card_text": "בפיתוח\nקופסה מהודרת לאתרוג\n\nהדמיית קופסה לאתרוג עם מכסה חרוט.",
+        "image_alts": [
+          "הדמיית קופסה לאתרוג עם החריטה המקורית על המכסה"
+        ]
+      },
+      "after_he": {
+        "status": "בתכנון ופיתוח",
+        "visible_card_text": "בתכנון ופיתוח\nקופסה מהודרת לאתרוג\n\nהדמיית קופסה לאתרוג עם מכסה חרוט.",
+        "image_alts": [
+          "הדמיית קופסה לאתרוג עם החריטה המקורית על המכסה"
+        ]
+      },
+      "before_en": {
+        "status": "IN DEVELOPMENT",
+        "visible_card_text": "IN DEVELOPMENT\nETROG BOX\n\nRendering of an etrog box with an engraved lid.",
+        "image_alts": [
+          "Rendering of an etrog box with its original lid engraving"
+        ]
+      },
+      "after_en": {
+        "status": "In development / Planning",
+        "visible_card_text": "In development / Planning\nETROG BOX\n\nRendering of an etrog box with an engraved lid.",
+        "image_alts": [
+          "Rendering of an etrog box with its original lid engraving"
+        ]
+      }
+    },
+    {
+      "kind": "home-card",
+      "route": "megillat_esther_box/",
+      "before_he": {
+        "status": "בפיתוח",
+        "visible_card_text": "בפיתוח\nכיסוי למגילת אסתר\n\nהדמיית כיסוי למגילה עם גוף עץ ומכסה מעוגל.",
+        "image_alts": [
+          "הדמיית כיסוי סגור למגילת אסתר עם החריטות המקוריות"
+        ]
+      },
+      "after_he": {
+        "status": "בתכנון ופיתוח",
+        "visible_card_text": "בתכנון ופיתוח\nכיסוי למגילת אסתר\n\nהדמיית כיסוי למגילה עם גוף עץ ומכסה מעוגל.",
+        "image_alts": [
+          "הדמיית כיסוי סגור למגילת אסתר עם החריטות המקוריות"
+        ]
+      },
+      "before_en": {
+        "status": "IN DEVELOPMENT",
+        "visible_card_text": "IN DEVELOPMENT\nMEGILLAH CASE\n\nRendering of a scroll case with a wooden body and curved lid.",
+        "image_alts": [
+          "Rendering of a closed Esther scroll case with its original engravings"
+        ]
+      },
+      "after_en": {
+        "status": "In development / Planning",
+        "visible_card_text": "In development / Planning\nMEGILLAH CASE\n\nRendering of a scroll case with a wooden body and curved lid.",
+        "image_alts": [
+          "Rendering of a closed Esther scroll case with its original engravings"
+        ]
+      }
+    },
+    {
+      "kind": "model-card",
+      "route": "../geometric/",
+      "before_he": {
+        "status": "—",
+        "visible_card_text": "GEOMETRIC\n\nשולחן קפה שבו הגאומטריה והחיבורים הגלויים הם חלק מהעיצוב.\n\nלפרטי הדגם ←",
+        "image_alts": [
+          "שולחן קפה Geometric"
+        ]
+      },
+      "after_he": {
+        "status": "נבנה בפועל",
+        "visible_card_text": "GEOMETRIC\n\nנבנה בפועל\n\nשולחן קפה עם גאומטריה וחיבורים גלויים · צילום המוצר כפי שנבנה.\n\nלפרטי הדגם ←",
+        "image_alts": [
+          "שולחן קפה Geometric"
+        ]
+      },
+      "before_en": {
+        "status": "—",
+        "visible_card_text": "GEOMETRIC\n\nA coffee table whose geometry and exposed joints form part of the design.\n\nVIEW MODEL →",
+        "image_alts": [
+          "Geometric coffee table"
+        ]
+      },
+      "after_en": {
+        "status": "Built",
+        "visible_card_text": "GEOMETRIC\n\nBuilt\n\nA coffee table with exposed geometry and joints · as-built product photograph.\n\nVIEW MODEL →",
+        "image_alts": [
+          "Geometric coffee table"
+        ]
+      }
+    },
+    {
+      "kind": "model-card",
+      "route": "flow/",
+      "before_he": {
+        "status": "—",
+        "visible_card_text": "FLOW\n\nתמונות יתווספו בהמשך\n\nFLOW\n\nשולחן קפה עם פלטה חלקה, חיבורים היקפיים ורגליים המורכבות משני חלקים בזווית ישרה.\n\nלפרטי הדגם ←",
+        "image_alts": []
+      },
+      "after_he": {
+        "status": "בתכנון · טרם נוספו צילומי מוצר",
+        "visible_card_text": "FLOW\n\nטרם נוספו צילומי מוצר\n\nFLOW\n\nבתכנון · טרם נוספו צילומי מוצר\n\nשולחן קפה עם פלטה חלקה, חיבורים היקפיים ורגליים המורכבות משני חלקים בזווית ישרה.\n\nלפרטי הדגם ←",
+        "image_alts": []
+      },
+      "before_en": {
+        "status": "—",
+        "visible_card_text": "FLOW\n\nPhotos coming soon\n\nFLOW\n\nA coffee table with a smooth top, perimeter joints and legs assembled from two parts at a right angle.\n\nVIEW MODEL →",
+        "image_alts": []
+      },
+      "after_en": {
+        "status": "In planning · no product photographs available",
+        "visible_card_text": "FLOW\n\nNo product photographs available\n\nFLOW\n\nIn planning · no product photographs available\n\nA coffee table with a smooth top, perimeter joints and legs assembled from two parts at a right angle.\n\nVIEW MODEL →",
+        "image_alts": []
+      }
+    },
+    {
+      "kind": "product-page",
+      "route": "geometric/",
+      "before_he": {
+        "status": "—",
+        "media_labels": [],
+        "hero_image_alts": [
+          "Geometric"
+        ],
+        "explicit_provenance": []
+      },
+      "after_he": {
+        "status": "נבנה בפועל",
+        "media_labels": [],
+        "hero_image_alts": [
+          "Geometric"
+        ],
+        "explicit_provenance": [
+          "צילום המוצר"
+        ]
+      },
+      "before_en": {
+        "status": "—",
+        "media_labels": [],
+        "hero_image_alts": [
+          "Geometric"
+        ],
+        "explicit_provenance": []
+      },
+      "after_en": {
+        "status": "Built",
+        "media_labels": [],
+        "hero_image_alts": [
+          "Geometric"
+        ],
+        "explicit_provenance": [
+          "Product photograph"
+        ]
+      }
+    },
+    {
+      "kind": "product-page",
+      "route": "table/flow/",
+      "before_he": {
+        "status": "—",
+        "media_labels": [
+          {
+            "text": "תמונות יתווספו בהמשך",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [],
+        "explicit_provenance": []
+      },
+      "after_he": {
+        "status": "בתכנון · טרם נוספו צילומי מוצר",
+        "media_labels": [
+          {
+            "text": "טרם נוספו צילומי מוצר",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [],
+        "explicit_provenance": []
+      },
+      "before_en": {
+        "status": "—",
+        "media_labels": [
+          {
+            "text": "Photos coming soon",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [],
+        "explicit_provenance": []
+      },
+      "after_en": {
+        "status": "In planning · no product photographs available",
+        "media_labels": [
+          {
+            "text": "No product photographs available",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [],
+        "explicit_provenance": []
+      }
+    },
+    {
+      "kind": "product-page",
+      "route": "driller_stand/",
+      "before_he": {
+        "status": "—",
+        "media_labels": [],
+        "hero_image_alts": [],
+        "explicit_provenance": []
+      },
+      "after_he": {
+        "status": "נבנה בפועל",
+        "media_labels": [],
+        "hero_image_alts": [],
+        "explicit_provenance": [
+          "צילום המוצר"
+        ]
+      },
+      "before_en": {
+        "status": "—",
+        "media_labels": [],
+        "hero_image_alts": [],
+        "explicit_provenance": []
+      },
+      "after_en": {
+        "status": "Built",
+        "media_labels": [],
+        "hero_image_alts": [],
+        "explicit_provenance": [
+          "Product photograph"
+        ]
+      }
+    },
+    {
+      "kind": "product-page",
+      "route": "shelf/kids/",
+      "before_he": {
+        "status": "—",
+        "media_labels": [],
+        "hero_image_alts": [],
+        "explicit_provenance": []
+      },
+      "after_he": {
+        "status": "נבנה בפועל",
+        "media_labels": [],
+        "hero_image_alts": [],
+        "explicit_provenance": [
+          "צילום המוצר"
+        ]
+      },
+      "before_en": {
+        "status": "—",
+        "media_labels": [],
+        "hero_image_alts": [],
+        "explicit_provenance": []
+      },
+      "after_en": {
+        "status": "Built",
+        "media_labels": [],
+        "hero_image_alts": [],
+        "explicit_provenance": [
+          "Product photograph"
+        ]
+      }
+    },
+    {
+      "kind": "product-page",
+      "route": "shoe_rack/",
+      "before_he": {
+        "status": "מורכב מדיקט טבעי · לפני גימור",
+        "media_labels": [],
+        "hero_image_alts": [
+          "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני צבע או גימור"
+        ],
+        "explicit_provenance": []
+      },
+      "after_he": {
+        "status": "מורכב מדיקט טבעי · לפני גימור",
+        "media_labels": [],
+        "hero_image_alts": [
+          "מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני צבע או גימור"
+        ],
+        "explicit_provenance": []
+      },
+      "before_en": {
+        "status": "Assembled in raw plywood · before finishing",
+        "media_labels": [],
+        "hero_image_alts": [
+          "The raw-plywood shoe rack at a home entrance, with shoes and a cushion, before painting or finishing"
+        ],
+        "explicit_provenance": []
+      },
+      "after_en": {
+        "status": "Assembled in raw plywood · before finishing",
+        "media_labels": [],
+        "hero_image_alts": [
+          "The raw-plywood shoe rack at a home entrance, with shoes and a cushion, before painting or finishing"
+        ],
+        "explicit_provenance": []
+      }
+    },
+    {
+      "kind": "product-page",
+      "route": "workbench/",
+      "before_he": {
+        "status": "בתכנון ופיתוח",
+        "media_labels": [
+          {
+            "text": "המידות מבוססות על דף התכנון המצורף. המוצר עדיין בבנייה; התמונה היא הדמיה, ותמונות המוצר המוגמר יתווספו בהמשך.",
+            "key": "planning.note",
+            "kind": null
+          },
+          {
+            "text": "01 / תכנון והדמיה\nפתיחת התכנון בגודל מלא",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "הגליון מציג הדמיה כללית, מבטי חזית, צד ואחור, תקריבים של חיבורי הקורות והעמודים, חתך העמוד ופריסת חלקים לחיתוך.",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [
+          "דף תכנון והדמיה של שולחן עבודה מעץ: מבט כללי, מבטי חזית, צד ואחור, חיזוקים מוצלבים, פרטי חיבורים ופריסת חלקים. רוחב 1400 מ״מ, עומק משטח 800 מ״מ, גובה 900 מ״מ ועומק שלד 700 מ״מ."
+        ],
+        "explicit_provenance": []
+      },
+      "after_he": {
+        "status": "בתכנון ופיתוח",
+        "media_labels": [
+          {
+            "text": "המידות מבוססות על דף התכנון המצורף. המוצר עדיין בבנייה; התמונה היא הדמיה, ותמונות המוצר המוגמר יתווספו בהמשך.",
+            "key": "planning.note",
+            "kind": null
+          },
+          {
+            "text": "01 / תכנון והדמיה\nפתיחת התכנון בגודל מלא",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "הגליון מציג הדמיה כללית, מבטי חזית, צד ואחור, תקריבים של חיבורי הקורות והעמודים, חתך העמוד ופריסת חלקים לחיתוך.",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [
+          "דף תכנון והדמיה של שולחן עבודה מעץ: מבט כללי, מבטי חזית, צד ואחור, חיזוקים מוצלבים, פרטי חיבורים ופריסת חלקים. רוחב 1400 מ״מ, עומק משטח 800 מ״מ, גובה 900 מ״מ ועומק שלד 700 מ״מ."
+        ],
+        "explicit_provenance": []
+      },
+      "before_en": {
+        "status": "In development / Planning",
+        "media_labels": [
+          {
+            "text": "Dimensions are based on the attached planning sheet. The product is still being built; this image is a rendering. Photos of the finished product will be added later.",
+            "key": "planning.note",
+            "kind": null
+          },
+          {
+            "text": "01 / PLANNING & RENDERING\nView full-size plan",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "The sheet combines a product rendering, front, side and rear views, close-ups of beam and post joints, the post cross-section, and component cutting layouts.",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [
+          "Planning and rendering sheet for a wooden workbench: overall view, front, side and rear views, cross braces, connection details and parts layout. Planned width 1400 mm, worktop depth 800 mm, height 900 mm and frame depth 700 mm."
+        ],
+        "explicit_provenance": []
+      },
+      "after_en": {
+        "status": "In development / Planning",
+        "media_labels": [
+          {
+            "text": "Dimensions are based on the attached planning sheet. The product is still being built; this image is a rendering. Photos of the finished product will be added later.",
+            "key": "planning.note",
+            "kind": null
+          },
+          {
+            "text": "01 / PLANNING & RENDERING\nView full-size plan",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "The sheet combines a product rendering, front, side and rear views, close-ups of beam and post joints, the post cross-section, and component cutting layouts.",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [
+          "Planning and rendering sheet for a wooden workbench: overall view, front, side and rear views, cross braces, connection details and parts layout. Planned width 1400 mm, worktop depth 800 mm, height 900 mm and frame depth 700 mm."
+        ],
+        "explicit_provenance": []
+      }
+    },
+    {
+      "kind": "product-page",
+      "route": "crib/",
+      "before_he": {
+        "status": "בפיתוח / הדמיה",
+        "media_labels": [
+          {
+            "text": "התמונות מציגות הדמיות של הפרויקט. פרטי המבנה והמידות עדיין בתכנון; תמונות הבנייה והמוצר המוגמר יתווספו בהמשך.",
+            "key": "planning.note",
+            "kind": null
+          },
+          {
+            "text": "01 / הדמיית המוצר\nפתיחת ההדמיה בגודל מלא",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "פריסת החיתוך מציגה שלוש דפנות ומייצב. מזהי החלקים והגליונות נשמרו בשרטוט. זהו אב־טיפוס בתכנון; התאמת המזרן ודרישות הבטיחות לשימוש תינוקות עדיין דורשות אימות.",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": "plan.caption",
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [
+          "הדמיה של מיטת תינוק מעץ לצד מיטת הורים בחדר מואר, עם שלבים אנכיים, חיבורים גלויים ולוח מעוטר בירח, כוכבים ועלים."
+        ],
+        "explicit_provenance": []
+      },
+      "after_he": {
+        "status": "בפיתוח / הדמיה",
+        "media_labels": [
+          {
+            "text": "התמונות מציגות הדמיות של הפרויקט. פרטי המבנה והמידות עדיין בתכנון; תמונות הבנייה והמוצר המוגמר יתווספו בהמשך.",
+            "key": "planning.note",
+            "kind": null
+          },
+          {
+            "text": "01 / הדמיית המוצר\nפתיחת ההדמיה בגודל מלא",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "פריסת החיתוך מציגה שלוש דפנות ומייצב. מזהי החלקים והגליונות נשמרו בשרטוט. זהו אב־טיפוס בתכנון; התאמת המזרן ודרישות הבטיחות לשימוש תינוקות עדיין דורשות אימות.",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": "plan.caption",
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [
+          "הדמיה של מיטת תינוק מעץ לצד מיטת הורים בחדר מואר, עם שלבים אנכיים, חיבורים גלויים ולוח מעוטר בירח, כוכבים ועלים."
+        ],
+        "explicit_provenance": []
+      },
+      "before_en": {
+        "status": "In development / Rendering",
+        "media_labels": [
+          {
+            "text": "These images show renderings of the project. Structural details and dimensions are still being planned. Build photos and images of the finished product will be added later.",
+            "key": "planning.note",
+            "kind": null
+          },
+          {
+            "text": "01 / PRODUCT RENDERING\nView full-size rendering",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "The cutting layout shows three sides and a stabilizer. Part and sheet identifiers remain on the drawing. This is a prototype in development; mattress fit and infant-use safety requirements still need validation.",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": "plan.caption",
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [
+          "Rendering of a wooden bedside crib beside a bed in a bright room, with vertical slats, exposed joints and a panel decorated with a moon, stars and leaves."
+        ],
+        "explicit_provenance": []
+      },
+      "after_en": {
+        "status": "In development / Rendering",
+        "media_labels": [
+          {
+            "text": "These images show renderings of the project. Structural details and dimensions are still being planned. Build photos and images of the finished product will be added later.",
+            "key": "planning.note",
+            "kind": null
+          },
+          {
+            "text": "01 / PRODUCT RENDERING\nView full-size rendering",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "The cutting layout shows three sides and a stabilizer. Part and sheet identifiers remain on the drawing. This is a prototype in development; mattress fit and infant-use safety requirements still need validation.",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": "plan.caption",
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [
+          "Rendering of a wooden bedside crib beside a bed in a bright room, with vertical slats, exposed joints and a panel decorated with a moon, stars and leaves."
+        ],
+        "explicit_provenance": []
+      }
+    },
+    {
+      "kind": "product-page",
+      "route": "etrog_box/",
+      "before_he": {
+        "status": "בתכנון ופיתוח",
+        "media_labels": [
+          {
+            "text": "המוצר בפיתוח. ההדמיה מציגה את העיצוב והמידות המתוכננות; תמונות הבנייה והמוצר המוגמר יתווספו בהמשך.",
+            "key": "planning.note",
+            "kind": null
+          },
+          {
+            "text": "01 / תכנון והדמיה\nפתיחת ההדמיה בגודל מלא",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "מבט כללי, חזית וצד, מבט מפורק ופרט הציר. המכסה, מסגרת המכסה, הדפנות והעריסה הפנימית מוצגים בנפרד; הפינות המעוגלות מורכבות משכבות.",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [
+          "תכנון והדמיה של קופסה מהודרת לאתרוג מעץ, עם מכסה מעוטר בארבעת המינים ובכיתוב ולקחתם לכם, פינות מעוגלות בשכבות, מבט מפורק ופרט ציר. מידות חיצוניות בתכנון: 260 על 160 על 150 מ״מ."
+        ],
+        "explicit_provenance": []
+      },
+      "after_he": {
+        "status": "בתכנון ופיתוח",
+        "media_labels": [
+          {
+            "text": "המוצר בפיתוח. ההדמיה מציגה את העיצוב והמידות המתוכננות; תמונות הבנייה והמוצר המוגמר יתווספו בהמשך.",
+            "key": "planning.note",
+            "kind": null
+          },
+          {
+            "text": "01 / תכנון והדמיה\nפתיחת ההדמיה בגודל מלא",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "מבט כללי, חזית וצד, מבט מפורק ופרט הציר. המכסה, מסגרת המכסה, הדפנות והעריסה הפנימית מוצגים בנפרד; הפינות המעוגלות מורכבות משכבות.",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [
+          "תכנון והדמיה של קופסה מהודרת לאתרוג מעץ, עם מכסה מעוטר בארבעת המינים ובכיתוב ולקחתם לכם, פינות מעוגלות בשכבות, מבט מפורק ופרט ציר. מידות חיצוניות בתכנון: 260 על 160 על 150 מ״מ."
+        ],
+        "explicit_provenance": []
+      },
+      "before_en": {
+        "status": "In development / Planning",
+        "media_labels": [
+          {
+            "text": "The product is in development. The rendering shows the planned design and dimensions. Build photos and images of the finished product will be added later.",
+            "key": "planning.note",
+            "kind": null
+          },
+          {
+            "text": "01 / PLANNING & RENDERING\nView full-size rendering",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "Overall, front and side views, an exploded view and hinge details. The lid, lid frame, walls and inner cradle are shown separately; the rounded corners are built from layers.",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [
+          "Planning and rendering of a decorative wooden etrog box, with a lid featuring the Four Species and Hebrew inscription, layered rounded corners, an exploded view and a hinge detail. Planned outer dimensions: 260 × 160 × 150 mm."
+        ],
+        "explicit_provenance": []
+      },
+      "after_en": {
+        "status": "In development / Planning",
+        "media_labels": [
+          {
+            "text": "The product is in development. The rendering shows the planned design and dimensions. Build photos and images of the finished product will be added later.",
+            "key": "planning.note",
+            "kind": null
+          },
+          {
+            "text": "01 / PLANNING & RENDERING\nView full-size rendering",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "Overall, front and side views, an exploded view and hinge details. The lid, lid frame, walls and inner cradle are shown separately; the rounded corners are built from layers.",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [
+          "Planning and rendering of a decorative wooden etrog box, with a lid featuring the Four Species and Hebrew inscription, layered rounded corners, an exploded view and a hinge detail. Planned outer dimensions: 260 × 160 × 150 mm."
+        ],
+        "explicit_provenance": []
+      }
+    },
+    {
+      "kind": "product-page",
+      "route": "megillat_esther_box/",
+      "before_he": {
+        "status": "בתכנון ופיתוח",
+        "media_labels": [
+          {
+            "text": "ההדמיה מציגה את העיצוב המוצע; שרטוטי התכנון הם של גרסה V8.2.2. המידות מציינות את החלל הפנימי בתכנון. תמונות הבנייה והמוצר המוגמר יתווספו בהמשך.",
+            "key": "planning.note",
+            "kind": null
+          },
+          {
+            "text": "01 / הדמיית העיצוב\nפתיחת ההדמיה בגודל מלא",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "מבט סגור ופתוח, מבטי חזית וצד ותקריבים של המכסה, הסוגר והצירים. החריטה שעל הקופסה היא חלק מעיצוב המוצר; מידות החלל הפנימי בתכנון הן 310 × 65 × 65 mm.",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [
+          "הדמיה של כיסוי מהודר למגילת אסתר מעץ: מכסה קמור מחורץ, עיטורים וכיתוב מגילת אסתר, מבטים פתוחים וסגורים ותקריבים של הסוגר וצירי העץ."
+        ],
+        "explicit_provenance": []
+      },
+      "after_he": {
+        "status": "בתכנון ופיתוח",
+        "media_labels": [
+          {
+            "text": "ההדמיה מציגה את העיצוב המוצע; שרטוטי התכנון הם של גרסה V8.2.2. המידות מציינות את החלל הפנימי בתכנון. תמונות הבנייה והמוצר המוגמר יתווספו בהמשך.",
+            "key": "planning.note",
+            "kind": null
+          },
+          {
+            "text": "01 / הדמיית העיצוב\nפתיחת ההדמיה בגודל מלא",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "מבט סגור ופתוח, מבטי חזית וצד ותקריבים של המכסה, הסוגר והצירים. החריטה שעל הקופסה היא חלק מעיצוב המוצר; מידות החלל הפנימי בתכנון הן 310 × 65 × 65 mm.",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [
+          "הדמיה של כיסוי מהודר למגילת אסתר מעץ: מכסה קמור מחורץ, עיטורים וכיתוב מגילת אסתר, מבטים פתוחים וסגורים ותקריבים של הסוגר וצירי העץ."
+        ],
+        "explicit_provenance": []
+      },
+      "before_en": {
+        "status": "In development / Planning",
+        "media_labels": [
+          {
+            "text": "The rendering shows the proposed design; the planning drawings are for version V8.2.2. Dimensions describe the planned internal space. Build photos and images of the finished product will be added later.",
+            "key": "planning.note",
+            "kind": null
+          },
+          {
+            "text": "01 / DESIGN RENDERING\nView full-size rendering",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "Closed and open views, front and side views, and close-ups of the lid, clasp and hinges. The engraved inscription is part of the product design; the planned internal cavity is 310 × 65 × 65 mm.",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [
+          "Rendering of a decorative wooden Megillat Esther case: a slotted curved lid, ornaments and Hebrew inscription, open and closed views, and close-ups of the latch and wooden hinges."
+        ],
+        "explicit_provenance": []
+      },
+      "after_en": {
+        "status": "In development / Planning",
+        "media_labels": [
+          {
+            "text": "The rendering shows the proposed design; the planning drawings are for version V8.2.2. Dimensions describe the planned internal space. Build photos and images of the finished product will be added later.",
+            "key": "planning.note",
+            "kind": null
+          },
+          {
+            "text": "01 / DESIGN RENDERING\nView full-size rendering",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "Closed and open views, front and side views, and close-ups of the lid, clasp and hinges. The engraved inscription is part of the product design; the planned internal cavity is 310 × 65 × 65 mm.",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          },
+          {
+            "text": "",
+            "key": null,
+            "kind": null
+          }
+        ],
+        "hero_image_alts": [
+          "Rendering of a decorative wooden Megillat Esther case: a slotted curved lid, ornaments and Hebrew inscription, open and closed views, and close-ups of the latch and wooden hinges."
+        ],
+        "explicit_provenance": []
+      }
+    }
+  ],
+  "consistency_cases": 90,
+  "consistent": 90,
+  "failures": [],
+  "checks": [
+    {
+      "width": 320,
+      "language": "he",
+      "source": "home",
+      "page": "shelf/kids/",
+      "catalog_status": "נבנה בפועל",
+      "page_status": "נבנה בפועל",
+      "consistent": true
+    },
+    {
+      "width": 320,
+      "language": "he",
+      "source": "home",
+      "page": "driller_stand/",
+      "catalog_status": "נבנה בפועל",
+      "page_status": "נבנה בפועל",
+      "consistent": true
+    },
+    {
+      "width": 320,
+      "language": "he",
+      "source": "home",
+      "page": "shoe_rack/",
+      "catalog_status": "מורכב מדיקט טבעי · לפני גימור",
+      "page_status": "מורכב מדיקט טבעי · לפני גימור",
+      "consistent": true
+    },
+    {
+      "width": 320,
+      "language": "he",
+      "source": "home",
+      "page": "workbench/",
+      "catalog_status": "בתכנון ופיתוח",
+      "page_status": "בתכנון ופיתוח",
+      "consistent": true
+    },
+    {
+      "width": 320,
+      "language": "he",
+      "source": "home",
+      "page": "crib/",
+      "catalog_status": "בפיתוח / הדמיה",
+      "page_status": "בפיתוח / הדמיה",
+      "consistent": true
+    },
+    {
+      "width": 320,
+      "language": "he",
+      "source": "home",
+      "page": "etrog_box/",
+      "catalog_status": "בתכנון ופיתוח",
+      "page_status": "בתכנון ופיתוח",
+      "consistent": true
+    },
+    {
+      "width": 320,
+      "language": "he",
+      "source": "home",
+      "page": "megillat_esther_box/",
+      "catalog_status": "בתכנון ופיתוח",
+      "page_status": "בתכנון ופיתוח",
+      "consistent": true
+    },
+    {
+      "width": 320,
+      "language": "he",
+      "source": "table-hub",
+      "page": "geometric/",
+      "catalog_status": "נבנה בפועל",
+      "page_status": "נבנה בפועל",
+      "consistent": true
+    },
+    {
+      "width": 320,
+      "language": "he",
+      "source": "table-hub",
+      "page": "table/flow/",
+      "catalog_status": "בתכנון · טרם נוספו צילומי מוצר",
+      "page_status": "בתכנון · טרם נוספו צילומי מוצר",
+      "consistent": true
+    },
+    {
+      "width": 320,
+      "language": "en",
+      "source": "home",
+      "page": "shelf/kids/",
+      "catalog_status": "Built",
+      "page_status": "Built",
+      "consistent": true
+    },
+    {
+      "width": 320,
+      "language": "en",
+      "source": "home",
+      "page": "driller_stand/",
+      "catalog_status": "Built",
+      "page_status": "Built",
+      "consistent": true
+    },
+    {
+      "width": 320,
+      "language": "en",
+      "source": "home",
+      "page": "shoe_rack/",
+      "catalog_status": "Assembled in raw plywood · before finishing",
+      "page_status": "Assembled in raw plywood · before finishing",
+      "consistent": true
+    },
+    {
+      "width": 320,
+      "language": "en",
+      "source": "home",
+      "page": "workbench/",
+      "catalog_status": "In development / Planning",
+      "page_status": "In development / Planning",
+      "consistent": true
+    },
+    {
+      "width": 320,
+      "language": "en",
+      "source": "home",
+      "page": "crib/",
+      "catalog_status": "In development / Rendering",
+      "page_status": "In development / Rendering",
+      "consistent": true
+    },
+    {
+      "width": 320,
+      "language": "en",
+      "source": "home",
+      "page": "etrog_box/",
+      "catalog_status": "In development / Planning",
+      "page_status": "In development / Planning",
+      "consistent": true
+    },
+    {
+      "width": 320,
+      "language": "en",
+      "source": "home",
+      "page": "megillat_esther_box/",
+      "catalog_status": "In development / Planning",
+      "page_status": "In development / Planning",
+      "consistent": true
+    },
+    {
+      "width": 320,
+      "language": "en",
+      "source": "table-hub",
+      "page": "geometric/",
+      "catalog_status": "Built",
+      "page_status": "Built",
+      "consistent": true
+    },
+    {
+      "width": 320,
+      "language": "en",
+      "source": "table-hub",
+      "page": "table/flow/",
+      "catalog_status": "In planning · no product photographs available",
+      "page_status": "In planning · no product photographs available",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "he",
+      "source": "home",
+      "page": "shelf/kids/",
+      "catalog_status": "נבנה בפועל",
+      "page_status": "נבנה בפועל",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "he",
+      "source": "home",
+      "page": "driller_stand/",
+      "catalog_status": "נבנה בפועל",
+      "page_status": "נבנה בפועל",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "he",
+      "source": "home",
+      "page": "shoe_rack/",
+      "catalog_status": "מורכב מדיקט טבעי · לפני גימור",
+      "page_status": "מורכב מדיקט טבעי · לפני גימור",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "he",
+      "source": "home",
+      "page": "workbench/",
+      "catalog_status": "בתכנון ופיתוח",
+      "page_status": "בתכנון ופיתוח",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "he",
+      "source": "home",
+      "page": "crib/",
+      "catalog_status": "בפיתוח / הדמיה",
+      "page_status": "בפיתוח / הדמיה",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "he",
+      "source": "home",
+      "page": "etrog_box/",
+      "catalog_status": "בתכנון ופיתוח",
+      "page_status": "בתכנון ופיתוח",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "he",
+      "source": "home",
+      "page": "megillat_esther_box/",
+      "catalog_status": "בתכנון ופיתוח",
+      "page_status": "בתכנון ופיתוח",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "he",
+      "source": "table-hub",
+      "page": "geometric/",
+      "catalog_status": "נבנה בפועל",
+      "page_status": "נבנה בפועל",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "he",
+      "source": "table-hub",
+      "page": "table/flow/",
+      "catalog_status": "בתכנון · טרם נוספו צילומי מוצר",
+      "page_status": "בתכנון · טרם נוספו צילומי מוצר",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "en",
+      "source": "home",
+      "page": "shelf/kids/",
+      "catalog_status": "Built",
+      "page_status": "Built",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "en",
+      "source": "home",
+      "page": "driller_stand/",
+      "catalog_status": "Built",
+      "page_status": "Built",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "en",
+      "source": "home",
+      "page": "shoe_rack/",
+      "catalog_status": "Assembled in raw plywood · before finishing",
+      "page_status": "Assembled in raw plywood · before finishing",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "en",
+      "source": "home",
+      "page": "workbench/",
+      "catalog_status": "In development / Planning",
+      "page_status": "In development / Planning",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "en",
+      "source": "home",
+      "page": "crib/",
+      "catalog_status": "In development / Rendering",
+      "page_status": "In development / Rendering",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "en",
+      "source": "home",
+      "page": "etrog_box/",
+      "catalog_status": "In development / Planning",
+      "page_status": "In development / Planning",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "en",
+      "source": "home",
+      "page": "megillat_esther_box/",
+      "catalog_status": "In development / Planning",
+      "page_status": "In development / Planning",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "en",
+      "source": "table-hub",
+      "page": "geometric/",
+      "catalog_status": "Built",
+      "page_status": "Built",
+      "consistent": true
+    },
+    {
+      "width": 390,
+      "language": "en",
+      "source": "table-hub",
+      "page": "table/flow/",
+      "catalog_status": "In planning · no product photographs available",
+      "page_status": "In planning · no product photographs available",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "he",
+      "source": "home",
+      "page": "shelf/kids/",
+      "catalog_status": "נבנה בפועל",
+      "page_status": "נבנה בפועל",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "he",
+      "source": "home",
+      "page": "driller_stand/",
+      "catalog_status": "נבנה בפועל",
+      "page_status": "נבנה בפועל",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "he",
+      "source": "home",
+      "page": "shoe_rack/",
+      "catalog_status": "מורכב מדיקט טבעי · לפני גימור",
+      "page_status": "מורכב מדיקט טבעי · לפני גימור",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "he",
+      "source": "home",
+      "page": "workbench/",
+      "catalog_status": "בתכנון ופיתוח",
+      "page_status": "בתכנון ופיתוח",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "he",
+      "source": "home",
+      "page": "crib/",
+      "catalog_status": "בפיתוח / הדמיה",
+      "page_status": "בפיתוח / הדמיה",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "he",
+      "source": "home",
+      "page": "etrog_box/",
+      "catalog_status": "בתכנון ופיתוח",
+      "page_status": "בתכנון ופיתוח",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "he",
+      "source": "home",
+      "page": "megillat_esther_box/",
+      "catalog_status": "בתכנון ופיתוח",
+      "page_status": "בתכנון ופיתוח",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "he",
+      "source": "table-hub",
+      "page": "geometric/",
+      "catalog_status": "נבנה בפועל",
+      "page_status": "נבנה בפועל",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "he",
+      "source": "table-hub",
+      "page": "table/flow/",
+      "catalog_status": "בתכנון · טרם נוספו צילומי מוצר",
+      "page_status": "בתכנון · טרם נוספו צילומי מוצר",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "en",
+      "source": "home",
+      "page": "shelf/kids/",
+      "catalog_status": "Built",
+      "page_status": "Built",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "en",
+      "source": "home",
+      "page": "driller_stand/",
+      "catalog_status": "Built",
+      "page_status": "Built",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "en",
+      "source": "home",
+      "page": "shoe_rack/",
+      "catalog_status": "Assembled in raw plywood · before finishing",
+      "page_status": "Assembled in raw plywood · before finishing",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "en",
+      "source": "home",
+      "page": "workbench/",
+      "catalog_status": "In development / Planning",
+      "page_status": "In development / Planning",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "en",
+      "source": "home",
+      "page": "crib/",
+      "catalog_status": "In development / Rendering",
+      "page_status": "In development / Rendering",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "en",
+      "source": "home",
+      "page": "etrog_box/",
+      "catalog_status": "In development / Planning",
+      "page_status": "In development / Planning",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "en",
+      "source": "home",
+      "page": "megillat_esther_box/",
+      "catalog_status": "In development / Planning",
+      "page_status": "In development / Planning",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "en",
+      "source": "table-hub",
+      "page": "geometric/",
+      "catalog_status": "Built",
+      "page_status": "Built",
+      "consistent": true
+    },
+    {
+      "width": 768,
+      "language": "en",
+      "source": "table-hub",
+      "page": "table/flow/",
+      "catalog_status": "In planning · no product photographs available",
+      "page_status": "In planning · no product photographs available",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "he",
+      "source": "home",
+      "page": "shelf/kids/",
+      "catalog_status": "נבנה בפועל",
+      "page_status": "נבנה בפועל",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "he",
+      "source": "home",
+      "page": "driller_stand/",
+      "catalog_status": "נבנה בפועל",
+      "page_status": "נבנה בפועל",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "he",
+      "source": "home",
+      "page": "shoe_rack/",
+      "catalog_status": "מורכב מדיקט טבעי · לפני גימור",
+      "page_status": "מורכב מדיקט טבעי · לפני גימור",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "he",
+      "source": "home",
+      "page": "workbench/",
+      "catalog_status": "בתכנון ופיתוח",
+      "page_status": "בתכנון ופיתוח",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "he",
+      "source": "home",
+      "page": "crib/",
+      "catalog_status": "בפיתוח / הדמיה",
+      "page_status": "בפיתוח / הדמיה",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "he",
+      "source": "home",
+      "page": "etrog_box/",
+      "catalog_status": "בתכנון ופיתוח",
+      "page_status": "בתכנון ופיתוח",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "he",
+      "source": "home",
+      "page": "megillat_esther_box/",
+      "catalog_status": "בתכנון ופיתוח",
+      "page_status": "בתכנון ופיתוח",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "he",
+      "source": "table-hub",
+      "page": "geometric/",
+      "catalog_status": "נבנה בפועל",
+      "page_status": "נבנה בפועל",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "he",
+      "source": "table-hub",
+      "page": "table/flow/",
+      "catalog_status": "בתכנון · טרם נוספו צילומי מוצר",
+      "page_status": "בתכנון · טרם נוספו צילומי מוצר",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "en",
+      "source": "home",
+      "page": "shelf/kids/",
+      "catalog_status": "Built",
+      "page_status": "Built",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "en",
+      "source": "home",
+      "page": "driller_stand/",
+      "catalog_status": "Built",
+      "page_status": "Built",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "en",
+      "source": "home",
+      "page": "shoe_rack/",
+      "catalog_status": "Assembled in raw plywood · before finishing",
+      "page_status": "Assembled in raw plywood · before finishing",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "en",
+      "source": "home",
+      "page": "workbench/",
+      "catalog_status": "In development / Planning",
+      "page_status": "In development / Planning",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "en",
+      "source": "home",
+      "page": "crib/",
+      "catalog_status": "In development / Rendering",
+      "page_status": "In development / Rendering",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "en",
+      "source": "home",
+      "page": "etrog_box/",
+      "catalog_status": "In development / Planning",
+      "page_status": "In development / Planning",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "en",
+      "source": "home",
+      "page": "megillat_esther_box/",
+      "catalog_status": "In development / Planning",
+      "page_status": "In development / Planning",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "en",
+      "source": "table-hub",
+      "page": "geometric/",
+      "catalog_status": "Built",
+      "page_status": "Built",
+      "consistent": true
+    },
+    {
+      "width": 1024,
+      "language": "en",
+      "source": "table-hub",
+      "page": "table/flow/",
+      "catalog_status": "In planning · no product photographs available",
+      "page_status": "In planning · no product photographs available",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "he",
+      "source": "home",
+      "page": "shelf/kids/",
+      "catalog_status": "נבנה בפועל",
+      "page_status": "נבנה בפועל",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "he",
+      "source": "home",
+      "page": "driller_stand/",
+      "catalog_status": "נבנה בפועל",
+      "page_status": "נבנה בפועל",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "he",
+      "source": "home",
+      "page": "shoe_rack/",
+      "catalog_status": "מורכב מדיקט טבעי · לפני גימור",
+      "page_status": "מורכב מדיקט טבעי · לפני גימור",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "he",
+      "source": "home",
+      "page": "workbench/",
+      "catalog_status": "בתכנון ופיתוח",
+      "page_status": "בתכנון ופיתוח",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "he",
+      "source": "home",
+      "page": "crib/",
+      "catalog_status": "בפיתוח / הדמיה",
+      "page_status": "בפיתוח / הדמיה",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "he",
+      "source": "home",
+      "page": "etrog_box/",
+      "catalog_status": "בתכנון ופיתוח",
+      "page_status": "בתכנון ופיתוח",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "he",
+      "source": "home",
+      "page": "megillat_esther_box/",
+      "catalog_status": "בתכנון ופיתוח",
+      "page_status": "בתכנון ופיתוח",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "he",
+      "source": "table-hub",
+      "page": "geometric/",
+      "catalog_status": "נבנה בפועל",
+      "page_status": "נבנה בפועל",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "he",
+      "source": "table-hub",
+      "page": "table/flow/",
+      "catalog_status": "בתכנון · טרם נוספו צילומי מוצר",
+      "page_status": "בתכנון · טרם נוספו צילומי מוצר",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "en",
+      "source": "home",
+      "page": "shelf/kids/",
+      "catalog_status": "Built",
+      "page_status": "Built",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "en",
+      "source": "home",
+      "page": "driller_stand/",
+      "catalog_status": "Built",
+      "page_status": "Built",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "en",
+      "source": "home",
+      "page": "shoe_rack/",
+      "catalog_status": "Assembled in raw plywood · before finishing",
+      "page_status": "Assembled in raw plywood · before finishing",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "en",
+      "source": "home",
+      "page": "workbench/",
+      "catalog_status": "In development / Planning",
+      "page_status": "In development / Planning",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "en",
+      "source": "home",
+      "page": "crib/",
+      "catalog_status": "In development / Rendering",
+      "page_status": "In development / Rendering",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "en",
+      "source": "home",
+      "page": "etrog_box/",
+      "catalog_status": "In development / Planning",
+      "page_status": "In development / Planning",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "en",
+      "source": "home",
+      "page": "megillat_esther_box/",
+      "catalog_status": "In development / Planning",
+      "page_status": "In development / Planning",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "en",
+      "source": "table-hub",
+      "page": "geometric/",
+      "catalog_status": "Built",
+      "page_status": "Built",
+      "consistent": true
+    },
+    {
+      "width": 1440,
+      "language": "en",
+      "source": "table-hub",
+      "page": "table/flow/",
+      "catalog_status": "In planning · no product photographs available",
+      "page_status": "In planning · no product photographs available",
+      "consistent": true
+    }
+  ]
+}

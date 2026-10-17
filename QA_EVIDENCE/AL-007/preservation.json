@@ -1,0 +1,685 @@
+{
+  "base_sha": "be50dc06467b252929ae59a9703fefce0ab616df",
+  "images": [
+    {
+      "file": "workbench/workbench-planning.png",
+      "sha256": "e0591a163e3bcfade13dc57fbb1e57d1c258bee909b0e20e03dd4376d82a88ed",
+      "unchanged": true
+    },
+    {
+      "file": "workbench/workbench-planning-clean.webp",
+      "sha256": "1aa07cd86804c3c7c4240ed8e2f18df695d28ced053f0466d97fb85737a71344",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/shoe_rack_planning.webp",
+      "sha256": "2b962bb3b4bc75dd5b865f1e7f1d57922455d552c23f6220988aa53d6442ea15",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/shoe_rack_planning.svg",
+      "sha256": "7669944f489bbaeafd8af32730e1af81997703971050b2b55441aa8bbb96a78d",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/shoe-rack-planning-clean.webp",
+      "sha256": "1ac4a8f9832cbcf8bb414e038d9b29c1c191eff84bbd384643eea99245104a8f",
+      "unchanged": true
+    },
+    {
+      "file": "driller_stand/driller_story_v2.jpg",
+      "sha256": "29eb25e4f5efc9117b387c46f212a8e272e9d5aafc1248787c421a46b5d93311",
+      "unchanged": true
+    },
+    {
+      "file": "driller_stand/driller_story.jpg",
+      "sha256": "7c594df7236e39bc134555725a88f27924125867c60ac2b6b5d9d5e32e5db282",
+      "unchanged": true
+    },
+    {
+      "file": "driller_stand/driller_final_original.jpg",
+      "sha256": "10a682326dce37d72d4aa23f2e9bf42f6a95e78d098632790fd3d7ee33e8f696",
+      "unchanged": true
+    },
+    {
+      "file": "driller_stand/driller-planning-original.webp",
+      "sha256": "65da75d172c7b01ec0762b96ddcc4129dea16482154e9430a6dc5c83c444fd6a",
+      "unchanged": true
+    },
+    {
+      "file": "driller_stand/driller-planning-clean.webp",
+      "sha256": "26ad87edf3bcd618a1929d609e6af9f08e64856a7e9f9bccf02e6126c78aff8a",
+      "unchanged": true
+    },
+    {
+      "file": "crib/crib-side-detail.png",
+      "sha256": "100ad45eb47d7432a72acd9b23a5de2e61564d664115159fdd29e08c1e759072",
+      "unchanged": true
+    },
+    {
+      "file": "crib/crib-hero.png",
+      "sha256": "7d27514edc97c9f6b19ff78ba7572e1c59d38b54e22ae0b52df60b55adbc00e3",
+      "unchanged": true
+    },
+    {
+      "file": "crib/crib-hero-display.webp",
+      "sha256": "e79bf505909602741429f0cff7ea70db28f8ebb92d61cd6d6c5ca2a1aec2ebcc",
+      "unchanged": true
+    },
+    {
+      "file": "crib/crib-hero-display-768.webp",
+      "sha256": "25b54d9cdc5a537562ec8ac7d19d50e6171102358e50db24000bf13b3913ed6f",
+      "unchanged": true
+    },
+    {
+      "file": "crib/crib-cut-plan.png",
+      "sha256": "de8aa234bd42ee919be14a3a2b35f7fbb44e7b3d38de9c0a9bfb9ce977c2d87f",
+      "unchanged": true
+    },
+    {
+      "file": "crib/crib-cut-plan-clean.png",
+      "sha256": "53d88a49c891a0351adeb39bfa917af291686de91dd50ab16afcc7c70b81c4ed",
+      "unchanged": true
+    },
+    {
+      "file": "assets/geometric-process-preview.png",
+      "sha256": "cb787e50c6380c3e9ff71ffd54a7ec868dc82a66800b12fc5c1e6108c81e5016",
+      "unchanged": true
+    },
+    {
+      "file": "assets/geometric-process-preview-v2.png",
+      "sha256": "d069faaa0f0b778e8b04afe55d40e40ce21249c1240e27d82fda7a4854b9d368",
+      "unchanged": true
+    },
+    {
+      "file": "assets/geometric-process-preview-clean.webp",
+      "sha256": "7aad9e5d46bc4f9ae365b2edbf17f1da2d69ee52c5a56106d94b2471dafef1de",
+      "unchanged": true
+    },
+    {
+      "file": "assets/geometric-process-preview-768.webp",
+      "sha256": "8c7bb1514e2edddcf28d72ec00da63d091ad61205ef350e2a296bcf902a134df",
+      "unchanged": true
+    },
+    {
+      "file": "assets/geometric-leg-drawing.svg",
+      "sha256": "9c0b2d1bc4b03588e4105aa01b831a9049572b99b5e331c79d936e434c58c08e",
+      "unchanged": true
+    },
+    {
+      "file": "assets/geometric-hero.webp",
+      "sha256": "819ce1f90d45cf741413ee23c35dd7d0c813566f76ee1bdac3607044137b41cc",
+      "unchanged": true
+    },
+    {
+      "file": "assets/geometric-engineering-object.webp",
+      "sha256": "1080b5755759e77c4991a95701c1efadcbe194cf7066cdfdd322da3560b890a0",
+      "unchanged": true
+    },
+    {
+      "file": "assets/geometric-engineering-object-clean.webp",
+      "sha256": "e99659bc54603ea2582a50c53570f733c31951e385e5e636ecf37d4c2c665de1",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/shoe-rack-cutting-original.jpeg",
+      "sha256": "0a192c1bdf9d603978c3c8eacef2301d4473cc99a7035cb88df77ee5dcc0084e",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/shoe-rack-cutting-540.webp",
+      "sha256": "7667a24dfa32987f469bda9515bc8db3a59b4e1fd4d75f40c661d7b389841dbd",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/shoe-rack-cutting-1080.webp",
+      "sha256": "4c8779d515ed88b54b994b44ba3ad98f01f1a4f430ced13cdf523f08a3e72ec3",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/06-interior-in-use-full.webp",
+      "sha256": "5a9e4d560ea84180e016b175ad1b2efd60821d57520faeb0832292f7c588f2d8",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/06-interior-in-use-480.webp",
+      "sha256": "3ff7ee54f4450146a92bdc04451b5a1a0c463c63bb424d73ea37e9863b933a7d",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/05-front-view-full.webp",
+      "sha256": "dd7470511a95bac1bba3be43a57980a72eeff744a0a2b15c491832b552530a8a",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/05-front-view-960.webp",
+      "sha256": "1319c7343e3b9ba75d8c452caf1e54c8f9838e57a956c20575ea8cafbd35e935",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/05-front-view-480.webp",
+      "sha256": "172eef7c89d003a5cf37152bb4e62e8ff4c40b6b4c2aa54176d3d65248ededf0",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/04-assembled-angled-full.webp",
+      "sha256": "4fd925b2330272f14be94a04c99a952472c87d1ba53ef24db8be664cf7925821",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/04-assembled-angled-960.webp",
+      "sha256": "5224c51a30cb865512afb6c798779f94715f0f30162400fc17f99934f915aa29",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/04-assembled-angled-480.webp",
+      "sha256": "fb08004e1c3e06c664ab29185cb7adc28bbaa18fc2eefc5def197d84e8956979",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/03-mid-assembly-full.webp",
+      "sha256": "c9a75ebe3fec7777aa2f47cd06cfce60d499614e88258623259b3f83ac125396",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/03-mid-assembly-960.webp",
+      "sha256": "437b0a85a212f8182796ddb3515a63db30f1a90c65cd1bd5dc2882814add83f1",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/03-mid-assembly-480.webp",
+      "sha256": "b9db715a799171fbf63f40e26a95ee1903be86d4b089ff8c34587e80f9f033a7",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/02-parts-layout-full.webp",
+      "sha256": "50838f04ca4bcf052690e70fa7221667689760cece0d1a8eb17bb8890bbd171a",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/02-parts-layout-960.webp",
+      "sha256": "7b31af381840b57b5301cd3575ad98e6fd33cacd5b8b07dcb688fdab2af5d4ed",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/02-parts-layout-480.webp",
+      "sha256": "f77e319bbf9455d6e2c03bf8616b4a1d66d9efa15a65ede9906d6fed2c2a100c",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/01-laser-cutting-full.webp",
+      "sha256": "058493ddd341ca3c5c99e8d90379b685751343980e184cd45969172aa7e9a79e",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/01-laser-cutting-960.webp",
+      "sha256": "9400f810f18f0a084ed2305ce8409400b630fa98b53305c686f92ff8e237ab92",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/01-laser-cutting-480.webp",
+      "sha256": "5b0699247b271ee2379af8d6a3be8a9327897beaa51420566b3b6040c45d2039",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/sources/06_interior_in_use.jpg",
+      "sha256": "92e7f9ec745c1f17175ef878bcd4002d4cc103c0775bd574254c67dd9854210e",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/sources/05_front_view.jpg",
+      "sha256": "896dda7939e3d8cbe46fe415860079a908a961a83409dccbb82abfcb09616d0b",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/sources/04_assembled_angled.jpg",
+      "sha256": "52e13c2038dc83fa4b1e167bfff50fcb16faf4737c3be4816ab0c635e15795c3",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/sources/03_mid_assembly.jpg",
+      "sha256": "5d343b8b6b785d0611dbfdc8dee05b2a59dc85bd98692bbdb6340335cfcf07b4",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/sources/02_parts_layout.jpg",
+      "sha256": "56a69f6c784baab217463e19ef84b4c10d96136654bc4aaf7471c99da01bed40",
+      "unchanged": true
+    },
+    {
+      "file": "shoe_rack/media/production/sources/01_laser_cutting.jpg",
+      "sha256": "9e400414fb0d7f441c8bc71307e56d8b6cbed57e98c17ef0c796e54fa1bd70d4",
+      "unchanged": true
+    },
+    {
+      "file": "shelf/kids/kids_shelf_story_v2.jpg",
+      "sha256": "00d3ec876948980b3f82036c6dcab2b991793f1c14cfd66a8825ed88bf00b91a",
+      "unchanged": true
+    },
+    {
+      "file": "shelf/kids/kids_shelf_story_clean.webp",
+      "sha256": "5aca9863aed4aa7e72d4ee65f19b4cec3fd019d9b2a1444d7d93d3825d226773",
+      "unchanged": true
+    },
+    {
+      "file": "shelf/kids/kids_shelf_story.jpg",
+      "sha256": "eb474423736d5cb7e77b76130fa7d41e9539deac3cc525590923037edc7823f7",
+      "unchanged": true
+    },
+    {
+      "file": "megillat_esther_box/media/product-render.png",
+      "sha256": "3d33e91140b6a981626a0ef355b44db6ce975a68d5e8b0fb75d7dffc9f5874bc",
+      "unchanged": true
+    },
+    {
+      "file": "megillat_esther_box/media/product-render-clean.webp",
+      "sha256": "2f3c7cfaba78e7da782d6ee47829584e6e1f35c200b10416c10451e00706be37",
+      "unchanged": true
+    },
+    {
+      "file": "megillat_esther_box/media/planning-board.png",
+      "sha256": "c91bde8d6e611b315eb4b565e12d80c7f33b031b5dd0998982af27c23713bcec",
+      "unchanged": true
+    },
+    {
+      "file": "megillat_esther_box/media/planning-board-clean.png",
+      "sha256": "6451902cdce4dce7490ab0306faa9b2e62e0657ee5147b5afc9f89f91170adf8",
+      "unchanged": true
+    },
+    {
+      "file": "megillat_esther_box/media/living-hinge.png",
+      "sha256": "64c29325a019832bb1b1af056b23ef1d89e6f0cca130bbb9fe1c52da69ea8c84",
+      "unchanged": true
+    },
+    {
+      "file": "megillat_esther_box/media/living-hinge-clean.png",
+      "sha256": "ed4494d749fe7440c5f717605b899dfa8039fa00a3164adcb7237fc22225c7b2",
+      "unchanged": true
+    },
+    {
+      "file": "megillat_esther_box/media/center-rib.png",
+      "sha256": "54b366fa20fd8a060de3af6c9eb09e7f02c52b1959825260d3aff70e5ea6c8d0",
+      "unchanged": true
+    },
+    {
+      "file": "megillat_esther_box/media/center-rib-clean.png",
+      "sha256": "ed904257dced4e4b469cc5a5fad05dffe37af440dcd833365f0b9a3ee62942df",
+      "unchanged": true
+    },
+    {
+      "file": "megillat_esther_box/media/body-ring.png",
+      "sha256": "f1a2cdafe32567e999cde90ef637abff3dd368a27496f5176db0699fd7de7428",
+      "unchanged": true
+    },
+    {
+      "file": "megillat_esther_box/media/body-ring-clean.png",
+      "sha256": "b1cee00086e5c1f665e8d4cff2ff2fdcb5228b832d22187b598e31d4b529eb73",
+      "unchanged": true
+    },
+    {
+      "file": "geometric/media/planning-clean.webp",
+      "sha256": "399ceb509e94c388317a13d2b7d089251a045f7401714c778afcc32372e696ca",
+      "unchanged": true
+    },
+    {
+      "file": "geometric/media/embedded-stage-4.jpg",
+      "sha256": "22d3c05f89dcdc762643d83c94d74d2bea0d03056ead20405c15fd9c4f16dcdb",
+      "unchanged": true
+    },
+    {
+      "file": "geometric/media/embedded-stage-3.jpg",
+      "sha256": "b25553f961e2cdab3833f324258649abfa8d2c088f3a2329a73d7eaa496f0637",
+      "unchanged": true
+    },
+    {
+      "file": "geometric/media/embedded-stage-2.jpg",
+      "sha256": "094341db53e491e51ac73201d87014fbfa21b782023390bbe04bf47c0e3fd872",
+      "unchanged": true
+    },
+    {
+      "file": "geometric/media/05_finish.jpg",
+      "sha256": "22d3c05f89dcdc762643d83c94d74d2bea0d03056ead20405c15fd9c4f16dcdb",
+      "unchanged": true
+    },
+    {
+      "file": "geometric/media/04_assemble.jpg",
+      "sha256": "b25553f961e2cdab3833f324258649abfa8d2c088f3a2329a73d7eaa496f0637",
+      "unchanged": true
+    },
+    {
+      "file": "geometric/media/03_components.jpg",
+      "sha256": "094341db53e491e51ac73201d87014fbfa21b782023390bbe04bf47c0e3fd872",
+      "unchanged": true
+    },
+    {
+      "file": "geometric/media/02_laser_cut.jpg",
+      "sha256": "336c17e47426179371954f03e9d80d79b6d52a71262ac988552616f66cb8460d",
+      "unchanged": true
+    },
+    {
+      "file": "geometric/media/01_plan.jpg",
+      "sha256": "336c17e47426179371954f03e9d80d79b6d52a71262ac988552616f66cb8460d",
+      "unchanged": true
+    },
+    {
+      "file": "etrog_box/media/planning-decorated.png",
+      "sha256": "7d85997b2f81860eb0c7168f10ed452900f24faa5041f9cac57ab0540bee9e48",
+      "unchanged": true
+    },
+    {
+      "file": "etrog_box/media/planning-decorated-clean.webp",
+      "sha256": "f0c1300b0a4255eb6cf1d0bae917782797b4646e45ed3bf2a99fe6af4dedde42",
+      "unchanged": true
+    },
+    {
+      "file": "etrog_box/media/cutting-sheet-b.png",
+      "sha256": "e8d7e5d8935809b3fcb0bdb20a9c9135bf6c7f535ea7f4c1a866ebfb6369c094",
+      "unchanged": true
+    },
+    {
+      "file": "etrog_box/media/cutting-sheet-b-clean.png",
+      "sha256": "498add634dbab10a26096e0d2738a81a0507a8d3c4f4129a5da791a5714886ec",
+      "unchanged": true
+    },
+    {
+      "file": "etrog_box/media/cutting-sheet-a.png",
+      "sha256": "c260b87d1cdf53fca0417600b4db75ce14ddb7b0fb0f67c24e398fa9c751cf59",
+      "unchanged": true
+    },
+    {
+      "file": "etrog_box/media/cutting-sheet-a-clean.png",
+      "sha256": "faa997e0b51e951886b529e7068765b65672bbc492377c6db3d8f92d82322cd9",
+      "unchanged": true
+    },
+    {
+      "file": "etrog_box/v6_2/previews/V6_hinge_rotation_check.png",
+      "sha256": "66ca0297c8316639f885893f8b836502df2f63f2580c42425a6aed811c58dce1",
+      "unchanged": true
+    },
+    {
+      "file": "etrog_box/v6_2/previews/V6_exact_parts_preview.png",
+      "sha256": "2ed03ff9dd0e4e15707e1e4067e87ba8468eb3fc185aa2d7703578e065b95e6b",
+      "unchanged": true
+    },
+    {
+      "file": "etrog_box/v6_2/previews/V6_corner_connection_exact.png",
+      "sha256": "3aac380afadf589fdc99a21a06f0bbdb1354ff48dedd18774d63e7c99ab911da",
+      "unchanged": true
+    },
+    {
+      "file": "assets/cards/workbench-960.webp",
+      "sha256": "93df84037f65cf8291be938a7406a09a0391df29e8ef082d68ce28e0cc1c5604",
+      "unchanged": true
+    },
+    {
+      "file": "assets/cards/workbench-480.webp",
+      "sha256": "d3522f1c67c53620aafe6e234d68c6e22642b8a569263737d9078cef13792620",
+      "unchanged": true
+    },
+    {
+      "file": "assets/cards/tables-960.webp",
+      "sha256": "f95de3481640b5fc46d25405c7850dce69442b235e9b5894a7283d0ded90e835",
+      "unchanged": true
+    },
+    {
+      "file": "assets/cards/tables-480.webp",
+      "sha256": "bfd9f5756344013f3fe7a67f16896b71d37b1582a2c7e402ec7317455d00298f",
+      "unchanged": true
+    },
+    {
+      "file": "assets/cards/shoe-960.webp",
+      "sha256": "5b8c156ee7ff80fe3dc6724e0da940c1a70c44849162fbb043899425b0c85a5e",
+      "unchanged": true
+    },
+    {
+      "file": "assets/cards/shoe-480.webp",
+      "sha256": "04b0bfbf0cec97347ad2793c222caff8be4a98332c7a394402ded5bc9f46972b",
+      "unchanged": true
+    },
+    {
+      "file": "assets/cards/megillah-960.webp",
+      "sha256": "35c9268cde0e7a6955e4470c046cdbe79fc7da4b42dc602057b55d844ea55f2f",
+      "unchanged": true
+    },
+    {
+      "file": "assets/cards/megillah-480.webp",
+      "sha256": "db1721db11d9cdcf0b235fd3b84d3f8fd718f14a5c0cbaee9f8203c12861f884",
+      "unchanged": true
+    },
+    {
+      "file": "assets/cards/kids-960.webp",
+      "sha256": "b391e4d04e0250e9931aabc14b832c3cfdd7ba10924f70c93d8cf1f087cd3a8d",
+      "unchanged": true
+    },
+    {
+      "file": "assets/cards/kids-480.webp",
+      "sha256": "b893d983d28ad3b2bb4b1e9294b098cbfa1031de6f38509a65c6c269c0f498a1",
+      "unchanged": true
+    },
+    {
+      "file": "assets/cards/etrog-960.webp",
+      "sha256": "e909d5f26e96e1a60daf7c65201177770af7e7a3328a157138b54e21ca039c1a",
+      "unchanged": true
+    },
+    {
+      "file": "assets/cards/etrog-480.webp",
+      "sha256": "764b53522b71135a61e4ac156abd2d612143be798871202c688098da59031812",
+      "unchanged": true
+    },
+    {
+      "file": "assets/cards/driller-960.webp",
+      "sha256": "61af75bbc24e86d2fe73eea50d182a85584157ef284c06bf8fc3754d08010bd1",
+      "unchanged": true
+    },
+    {
+      "file": "assets/cards/driller-480.webp",
+      "sha256": "f7e6c60e60e07e29826f947128dae7363a372836c2d7c6831d60a7afa2c85ad2",
+      "unchanged": true
+    },
+    {
+      "file": "assets/cards/crib-960.webp",
+      "sha256": "a909333afdcbd7651a19068f93905e66fbb446f4ace7b8e0aa9049f46a9a7690",
+      "unchanged": true
+    },
+    {
+      "file": "assets/cards/crib-480.webp",
+      "sha256": "4f48c96efc83756c0b86549a128bb38899c29a3fbcdfae518d0c8f00302bd3ac",
+      "unchanged": true
+    },
+    {
+      "file": "QA_EVIDENCE/SHOE-PHOTO-REFRESH/initial-failure-he-901.png",
+      "sha256": "f0ee06b4e820a71ac0ffb62578cadc2b8f0ff3f36675db54fea4158c4dd7e0b1",
+      "unchanged": true
+    },
+    {
+      "file": "QA_EVIDENCE/SHOE-PHOTO-REFRESH/initial-failure-en-901.png",
+      "sha256": "c5d7ad1886be85b92726c9a2fc82e7795df6fb02fc519027e3fc2fb43cbf2d8d",
+      "unchanged": true
+    },
+    {
+      "file": "QA_EVIDENCE/SHOE-PHOTO-REFRESH/gallery-he-390-stage-07.png",
+      "sha256": "b458f42a07725726cd6676aa78a6cfb917c78cd3c3b658c21491d84e8b9b7faa",
+      "unchanged": true
+    },
+    {
+      "file": "QA_EVIDENCE/SHOE-PHOTO-REFRESH/gallery-he-390-stage-06.png",
+      "sha256": "91b8c2746c9b1f981fa473d05b825d9fda433777469abaefb4f5d8e686a6b416",
+      "unchanged": true
+    },
+    {
+      "file": "QA_EVIDENCE/SHOE-PHOTO-REFRESH/gallery-he-390-stage-02.png",
+      "sha256": "1dc699aa81754b35d963be75b995bdc908ac38594ea16ce185df2e3d3664e9d2",
+      "unchanged": true
+    },
+    {
+      "file": "QA_EVIDENCE/SHOE-PHOTO-REFRESH/gallery-en-1440-stage-07.png",
+      "sha256": "164afb5b50257462ba17556512a8ab37d1caa1cf89268b908d39e4814b2d04db",
+      "unchanged": true
+    },
+    {
+      "file": "QA_EVIDENCE/SHOE-PHOTO-REFRESH/gallery-en-1440-stage-06.png",
+      "sha256": "d99d497ab7a9302e177b118937f22fcb5d26b2e5c81ae04d8e448513fdf7abd3",
+      "unchanged": true
+    },
+    {
+      "file": "QA_EVIDENCE/SHOE-PHOTO-REFRESH/gallery-en-1440-stage-02.png",
+      "sha256": "92e52a77b06d8d51343bdbb015f7e5cd395228be77ec809edc5bacd740ef9ed6",
+      "unchanged": true
+    },
+    {
+      "file": "QA_EVIDENCE/SHOE-PHOTO-REFRESH/edited-photos-contact-sheet.jpg",
+      "sha256": "ed3dac561b0aa59e96c03673101c1cef49c2b16853bea089b99442fdfc32b0f5",
+      "unchanged": true
+    },
+    {
+      "file": "QA_EVIDENCE/SHOE-PHOTO-REFRESH/before-he-390.png",
+      "sha256": "48946c5ce451af1b1d8726e07b25aac818fe2adb73174a28fb878f18f02ece2c",
+      "unchanged": true
+    },
+    {
+      "file": "QA_EVIDENCE/SHOE-PHOTO-REFRESH/before-en-1440.png",
+      "sha256": "5be6f800283a403c594b74c7ed9339cbc70efec869c1db3a2ccff28e7b733cc7",
+      "unchanged": true
+    },
+    {
+      "file": "QA_EVIDENCE/SHOE-PHOTO-REFRESH/after-he-390.png",
+      "sha256": "35a730248a55ec7c4485df5c39e30964cb7810d73dc6468fbdd0a33cb550ad5d",
+      "unchanged": true
+    },
+    {
+      "file": "QA_EVIDENCE/SHOE-PHOTO-REFRESH/after-en-1440.png",
+      "sha256": "86c0f882da0aedab2fe4107286f891b18c75e8e43d84547013aa1b6dded60feb",
+      "unchanged": true
+    },
+    {
+      "file": "QA_EVIDENCE/AL-001/screenshots/home-he-390.png",
+      "sha256": "608c1d4f633aa1191e5eb72620ddf241fd91c6ec6cd683de8bc65448e8b8529b",
+      "unchanged": true
+    },
+    {
+      "file": "QA_EVIDENCE/AL-001/screenshots/home-en-1440.png",
+      "sha256": "aae21be30e6af37932dc5c6108315df9dc011800c6c8836e24bbb3b42e0183c1",
+      "unchanged": true
+    }
+  ],
+  "pages": [
+    {
+      "page": "index.html",
+      "images_unchanged": true,
+      "arrows_unchanged": true,
+      "steps_unchanged": true,
+      "links_unchanged": true,
+      "forms_unchanged": true,
+      "scripts_unchanged": true
+    },
+    {
+      "page": "workbench/index.html",
+      "images_unchanged": true,
+      "arrows_unchanged": true,
+      "steps_unchanged": true,
+      "links_unchanged": true,
+      "forms_unchanged": true,
+      "scripts_unchanged": true
+    },
+    {
+      "page": "table/index.html",
+      "images_unchanged": true,
+      "arrows_unchanged": true,
+      "steps_unchanged": true,
+      "links_unchanged": true,
+      "forms_unchanged": true,
+      "scripts_unchanged": true
+    },
+    {
+      "page": "shoe_rack/index.html",
+      "images_unchanged": true,
+      "arrows_unchanged": true,
+      "steps_unchanged": true,
+      "links_unchanged": true,
+      "forms_unchanged": true,
+      "scripts_unchanged": true
+    },
+    {
+      "page": "megillat_esther_box/index.html",
+      "images_unchanged": true,
+      "arrows_unchanged": true,
+      "steps_unchanged": true,
+      "links_unchanged": true,
+      "forms_unchanged": true,
+      "scripts_unchanged": true
+    },
+    {
+      "page": "inquiry/index.html",
+      "images_unchanged": true,
+      "arrows_unchanged": true,
+      "steps_unchanged": true,
+      "links_unchanged": true,
+      "forms_unchanged": true,
+      "scripts_unchanged": true
+    },
+    {
+      "page": "geometric/index.html",
+      "images_unchanged": true,
+      "arrows_unchanged": true,
+      "steps_unchanged": true,
+      "links_unchanged": true,
+      "forms_unchanged": true,
+      "scripts_unchanged": true
+    },
+    {
+      "page": "etrog_box/index.html",
+      "images_unchanged": true,
+      "arrows_unchanged": true,
+      "steps_unchanged": true,
+      "links_unchanged": true,
+      "forms_unchanged": true,
+      "scripts_unchanged": true
+    },
+    {
+      "page": "driller_stand/index.html",
+      "images_unchanged": true,
+      "arrows_unchanged": true,
+      "steps_unchanged": true,
+      "links_unchanged": true,
+      "forms_unchanged": true,
+      "scripts_unchanged": true
+    },
+    {
+      "page": "crib/index.html",
+      "images_unchanged": true,
+      "arrows_unchanged": true,
+      "steps_unchanged": true,
+      "links_unchanged": true,
+      "forms_unchanged": true,
+      "scripts_unchanged": true
+    },
+    {
+      "page": "table/flow/index.html",
+      "images_unchanged": true,
+      "arrows_unchanged": true,
+      "steps_unchanged": true,
+      "links_unchanged": true,
+      "forms_unchanged": true,
+      "scripts_unchanged": true
+    },
+    {
+      "page": "shelf/kids/index.html",
+      "images_unchanged": true,
+      "arrows_unchanged": true,
+      "steps_unchanged": true,
+      "links_unchanged": true,
+      "forms_unchanged": true,
+      "scripts_unchanged": true
+    }
+  ],
+  "errors": [],
+  "formspree_urls_before": [
+    "https://formspree.io/f/xwlvlbno"
+  ],
+  "formspree_urls_after": [
+    "https://formspree.io/f/xwlvlbno"
+  ],
+  "image_count": 112,
+  "page_count": 12,
+  "formspree_unchanged": true
+}
