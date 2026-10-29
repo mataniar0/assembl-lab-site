@@ -18,12 +18,12 @@
 ## P0 — G0 Identity, privacy and consent
 Owner / qualified adviser:
 - [ ] Confirm actual current taxpayer status (exempt/authorized), registration, and whether engineering/design activity requires a particular classification.
-- [ ] Confirm registered proprietor's legal name/identification disclosure and whether business name ASSEMBLE LAB may be used alongside it. Do not place identity numbers or residential details in GitHub.
-- [ ] Verify proposed privacy contact mailbox ownership and ability to receive/respond.
+- [ ] Confirm registered proprietor's legal name/identification disclosure and whether business name ASSEMBLE LAB may be used alongside it. Owner confirmed the draft name but formal registration check remains pending. Do not place identity numbers or residential details in GitHub.
+- [x] Privacy contact `labassemble@gmail.com` explicitly approved by owner; prior Formspree notifications received. Ongoing mailbox rights-request operations still require process verification.
 - [ ] Verify Formspree shared account, form ownership, permission lists, restriction-to-domain, spam, automated forwarding, notifications, quota, processor terms, location, retention and deletion.
 - [ ] Audit all live pages/network for cookies and external scripts, and revise policies to match facts.
 - [ ] Review and explicitly approve exact HE/EN short notices and full policies, legal identity, rights contact, retention and international transfer language.
-**Acceptance:** approved written text and operational verification from authorized owner; no placeholders remain in published policies.
+**Acceptance:** owner-validated factual/legal identity, accurate and approved HE/EN disclosures, verified service processing and practical rights workflow; no placeholders remain in published policies. **An attorney signature is not a blanket statutory requirement for posting a privacy policy.** Seek targeted qualified advice if unresolved legal questions or higher-risk processing arise; this does not waive applicable legal duties.
 
 ## P0 — G1 Site and inquiry verification (mocked)
 ChatGPT prepares + Codex only if browser/automation integration is required:
