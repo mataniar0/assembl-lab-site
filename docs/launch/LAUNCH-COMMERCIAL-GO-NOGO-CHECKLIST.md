@@ -77,3 +77,14 @@ ChatGPT prepares + Codex only if browser/automation integration is required:
 5. Live-site visual/network QA and final independent QA/owner GO.
 
 **Prohibitions:** no changes to WUL flags, no public activation, no real POST, no payments/charges, no merge/deploy under this documentation task. A general instruction to continue work is not a specific approval of any of these actions.
+
+
+## Owner-verified Formspree account checks — 2026-10-29
+- Owner found form `xwlvlbno` in account.
+- Owner confirmed notification destination `labassemble@gmail.com` and receipt of earlier Formspree email notifications.
+- Screenshot: Form Enabled and Submission Archive both on.
+- Screenshot: project Restrict to Domain input blank (no domain value configured).
+- Screenshot: multiple ASSEMBL LAB-subject submissions visible in Inbox, Spam count 0 at observation. Existing records do not establish new WUL end-to-end delivery.
+- Owner reports plan allowance 50 submissions/month; usage count not verified.
+- Remaining account checks: role/permission list, automated workflow/forwarding, actual retention/deletion and vendors. No sensitive submission screenshots should be committed.
+- This does not authorize a fresh live POST, changing shared settings, deploying or enabling WUL approval flags.
