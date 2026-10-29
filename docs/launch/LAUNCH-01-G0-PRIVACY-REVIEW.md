@@ -3,14 +3,14 @@
 Date: 2026-10-29  
 Status: OWNER REVIEW REQUIRED — NOT APPROVED FOR PUBLICATION  
 Brands: ASSEMBL LAB and WOOD U LIKE  
-Business form: Israeli individual sole proprietor, exempt dealer OR authorized dealer, exact status not yet confirmed. Neither is a limited company.
+Business form: Israeli individual sole proprietor, exempt dealer OR authorized dealer, exact status not yet confirmed. Owner confirmed that **ASSEMBLE LAB** is the registered business name under which both ASSEMBL LAB and WOOD U LIKE operate (owner assertion, registration documents not independently verified). Neither is claimed to be a limited company.
 
 ## Rules of presentation
 - Public marketing and form headings: brand name only.
 - Privacy notice/controller disclosure: **[registered individual proprietor's legal name]**, alongside relevant brand and business contact. The legal identity must not be hidden merely to remove it from a marketing heading.
 - Do **not** publish a tax registration number, home address or other personal data without confirming whether and where legally required.
 - Proposed contact: labassemble@gmail.com; mailbox ownership, receiving capability, privacy request handling and shared Formspree routing not yet checked.
-- Two brands share a Formspree destination; confirm whether both are controlled by the same legal proprietor before claiming joint control.
+- Owner confirmed the two brands operate under the registered business name **ASSEMBLE LAB**; confirm exact registered individual proprietor/controller identity and corresponding legal disclosure, as a trade/business name alone may not fully identify an individual data controller.
 
 ## A — WOOD U LIKE short form notice, Hebrew
 **פרטיות בפנייה אל WOOD U LIKE**
@@ -32,9 +32,12 @@ Your name, contact information and inquiry details are used to respond to your i
 
 Your name, contact information and inquiry details are used to respond to your inquiry, assess design, development or production options and prepare a quotation. Providing information is voluntary and not legally required; without contact information we cannot respond. Information is transmitted through Formspree, also used by WOOD U LIKE, and may be accessed by authorized inquiry handlers and service providers needed to operate the service, for these purposes and in accordance with the Privacy Policy. Information will not be used for marketing except as permitted by applicable law. You may request access to your information and correction or deletion of information that is inaccurate, incomplete, unclear or out of date, subject to applicable law. Data controller: **[registered sole proprietor legal name — to confirm]** (ASSEMBL LAB). Proposed privacy email: **labassemble@gmail.com** (verification pending). Sending an inquiry does not create an order or payment.
 
+## Owner confirmation (2026-10-29)
+Owner answered yes to the clarification that ASSEMBLE LAB is the registered business name operating WOOD U LIKE. This confirms the owner's intended umbrella business structure; it is not documentary verification that an individual proprietor's legal name may be omitted from the section 11 notice. Marketing brand spelling remains subject to site-wide branding consistency (ASSEMBL vs ASSEMBLE).
+
 ## G0 approval gates
 - [ ] Confirm which of exempt/authorized dealer is registered and exact registered proprietor/controller legal name.
-- [ ] Confirm same proprietor is responsible for both brands; if not, split controllers, notices and destination arrangements.
+- [x] Owner states both brands operate under the same registered business name ASSEMBLE LAB; independently verify proprietor identity and legal form before publication.
 - [ ] Verify inbox owner, permissions and receiving notifications, including privacy rights requests.
 - [ ] Verify Formspree domain restrictions, delivery routing, spam, retention, subprocessors and possible international transfers; do not invent retention periods.
 - [ ] Prepare full privacy policies reflecting actual data flow, storage/deletion, third parties and rights; check analytics/cookies before claiming absent.
