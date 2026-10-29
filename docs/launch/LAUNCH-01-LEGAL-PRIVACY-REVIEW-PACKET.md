@@ -1,11 +1,11 @@
 # LAUNCH-01 — Legal privacy review handoff / חבילת מסירה לביקורת משפטית
 **Date:** 2026-10-29
-**Status:** DRAFT FOR COUNSEL — NOT APPROVED FOR PUBLICATION
+**Status:** DRAFT FOR OWNER COMPLIANCE REVIEW; OPTIONAL TARGETED COUNSEL — NOT APPROVED FOR PUBLICATION
 **Brands:** ASSEMBL LAB (public website branding; reported registered business/trade name ASSEMBLE LAB), WOOD U LIKE.
 
 ## Owner-verified inputs / עובדות שנמסרו כעת
 - **Privacy-rights contact:** labassemble@gmail.com — explicitly approved by owner for privacy-related requests.
-- **Legal proprietor name:** owner confirms the name appearing in current drafts, **מתניה רוזנצויג**, is correct, **subject to checking against formal registration**. Do not mark formal identity verification complete; attorney to validate name in HE/EN, legal controller classification and appropriate display.
+- **Legal proprietor name:** owner confirms the name appearing in current drafts, **מתניה רוזנצויג**, is correct, **subject to checking against formal registration**. Do not mark formal identity verification complete; registration check remains required; obtain qualified advice if unresolved legal classification/identification questions persist.
 - **Tax/business registration status:** **NOT YET VERIFIED** (עוסק פטור / עוסק מורשה unknown). Do not advertise status or provide unconfirmed tax representations.
 - Both brands operate the same shared Formspree destination xwlvlbno; notification account owner confirms receipt of past notification emails.
 
@@ -17,7 +17,7 @@
 5. `LAUNCH-01-WUL-CONTROLLED-TEST-READINESS.md` — technical service and test gates.
 6. `LAUNCH-01-G1-FORM-PRIVACY-GAP.md` — outstanding collection notice and code-related issues.
 
-## Counsel decisions requested — actionable checklist
+## Owner compliance decisions; seek targeted counsel if unresolved — actionable checklist
 - [ ] Confirm legal controller/proprietor identity, registered status, trade names, and site-specific legally sufficient disclosures; exclude ID numbers from public GitHub.
 - [ ] Confirm collection notices for Section 11 requirements: identity and contact, purposes, voluntary/mandatory nature, consequences of refusal, recipients/purposes, access/correction/deletion as applicable, transparent link to full privacy policy.
 - [ ] Review HE and EN texts and synchronize wording, especially right-to-delete nuance and international transfers.
@@ -27,12 +27,12 @@
 - [ ] Check whether extra protections apply if inquiries from minors or child products are handled.
 - [ ] Approve final privacy wording independently of business/tax, payment, shipping, returns and product safety launch readiness.
 
-## Deliverable and sign-off requested from attorney
-- Approved HE/EN privacy policy and concise notices for both sites, OR annotated change requests;
-- effective date, document version, lawyer/reviewer name and review date;
+## Owner sign-off record (optional independent attorney review)
+- Owner-reviewed, fact-checked HE/EN privacy policy and concise notices for both sites, OR change requests; obtain professional legal review where material uncertainty remains.
+- effective date, document version, owner/reviewer identity and review date; record attorney details only if independently reviewed;
 - clear list of vendor confirmations required before go-live;
 - privacy rights channel confirmed as labassemble@gmail.com, unless counsel identifies need for modification;
-- explicit designation APPROVED / CONDITIONALLY APPROVED / NOT APPROVED for publication.
+- explicit designation APPROVED / CONDITIONALLY APPROVED / NOT APPROVED for publication, together with evidence of factual checks. No blanket lawyer signature required by policy; this document is not legal certification.
 
 ## Current technical safeguards
 - WOOD U LIKE main public sending flags remain all false.
