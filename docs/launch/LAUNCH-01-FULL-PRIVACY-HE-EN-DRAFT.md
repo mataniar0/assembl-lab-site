@@ -5,9 +5,9 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 
 ## Premises
 - Public brands: **ASSEMBL LAB** (site identity; owner also stated registered business name **ASSEMBLE LAB**, precise spelling to confirm) and **WOOD U LIKE**.
-- Both operated by a single individual dealer (exempt or authorized VAT status not yet identified), according to owner confirmation. Individual legal controller name remains **[TO VERIFY]**.
+- Both operated by a single individual dealer (exempt or authorized VAT status not yet identified), according to owner confirmation. Individual controller name in drafts is owner-confirmed as **מתניה רוזנצויג**; formal registration verification **remains pending**.
 - Formspree endpoint is shared; specific account settings, retention, country of storage, subprocessors, access permissions, notification targets and any transfers abroad are **UNVERIFIED**.
-- Contact address `labassemble@gmail.com` is **PROPOSED**, not confirmed as owner-controlled.
+- Contact address `labassemble@gmail.com` is **APPROVED by owner** as the privacy request mailbox; historical receipt of Formspree notifications confirmed. Ongoing request-handling process still pending verification.
 - Do not claim that the websites have no cookies, analytics or additional providers until checked.
 
 # A. WOOD U LIKE — עברית
@@ -15,7 +15,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 ## מדיניות פרטיות — טיוטה
 **עדכון:** 29.10.2026 | **סטטוס:** טיוטה לא מאושרת.
 
-**1. זהות והתקשרות.** אתר WOOD U LIKE מופעל במסגרת העסק ASSEMBLE LAB, לפי המידע שמסר בעל העסק. בעל השליטה במידע האישי הוא **[שם העוסק היחיד כפי שרשום כדין — להשלמה ואימות]**. לפניות בנושא פרטיות: **[כתובת קשר מאושרת; מוצע labassemble@gmail.com]**.
+**1. זהות והתקשרות.** אתר WOOD U LIKE מופעל במסגרת העסק ASSEMBLE LAB, לפי המידע שמסר בעל העסק. בעל השליטה במידע האישי הוא **מתניה רוזנצויג (השם אושר על ידי בעל העסק; אימות מול הרישום טרם הושלם)**. לפניות בנושא פרטיות: **labassemble@gmail.com**.
 
 **2. אילו פרטים נאספים.** כאשר אתם פונים דרך טופס בקשת הצעת מחיר אנו מקבלים את הפרטים שאתם מוסרים, כגון שם, אמצעי קשר, מוצר מבוקש, כמות, מידות, פרטי התאמה/חריטה והערות. ייתכן שיתקבלו גם פרטים טכניים והקשר הפנייה הנדרשים לתפעול ולמניעת שימוש לרעה, בהתאם להתנהגות הספקים שתאומת. אל תשלחו מידע רגיש שאינו נחוץ להכנת ההצעה.
 
@@ -29,7 +29,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 
 **7. אבטחה.** ננקוט אמצעים סבירים ובהתאם לדין להגבלת גישה והגנה על מידע אישי. אין הבטחה לאבטחה מוחלטת. **[יש לתעד אמצעי הרשאות, גישה, אימות וגיבוי בפועל].**
 
-**8. זכויות.** תוכלו לפנות ולבקש לעיין במידע על אודותיכם, ולבקש תיקון או מחיקה של מידע שאינו נכון, שלם, ברור או מעודכן בהתאם לדין. כתובת הפנייה: **[כתובת פרטיות שאומתה]**. טיפול בבקשות ייעשה בהתאם לזכויות ולמגבלות הקבועות בדין.
+**8. זכויות.** תוכלו לפנות ולבקש לעיין במידע על אודותיכם, ולבקש תיקון או מחיקה של מידע שאינו נכון, שלם, ברור או מעודכן בהתאם לדין. כתובת הפנייה: **labassemble@gmail.com**. טיפול בבקשות ייעשה בהתאם לזכויות ולמגבלות הקבועות בדין.
 
 **9. עוגיות וכלים חיצוניים.** **[להשלים לאחר בדיקת אתר חי: עוגיות, אחסון דפדפן, נתוני מדידה, embeds ושירותים נוספים; מנגנון הסכמה אם נדרש].**
 
@@ -40,7 +40,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 ## Privacy Policy — draft
 **Updated:** 29 October 2026 | **Status:** Not approved.
 
-**1. Identity and contact.** WOOD U LIKE is operated as a brand of the ASSEMBLE LAB business, based on the owner's confirmation. The controller of personal data is **[registered individual proprietor's legal name — verify]**. Privacy contact: **[verified address; labassemble@gmail.com proposed]**.
+**1. Identity and contact.** WOOD U LIKE is operated as a brand of the ASSEMBLE LAB business, based on the owner's confirmation. The controller of personal data is **מתניה רוזנצויג (owner-confirmed name; registration verification pending)**. Privacy contact: **labassemble@gmail.com**.
 
 **2. Information collected.** If you request a quotation, we receive information you provide, such as your name, contact details, selected product, quantity, dimensions, custom engraving or design requirements, and notes. Technical and contextual information needed to operate or protect the service may also be processed by providers, subject to verification. Please do not include unnecessary sensitive information.
 
@@ -54,7 +54,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 
 **7. Security.** Appropriate protections under applicable law will be used to restrict access and protect personal information; absolute security cannot be guaranteed. **[Confirm actual controls].**
 
-**8. Your rights.** Subject to applicable law, you may request access to information about you and correction or deletion of information that is inaccurate, incomplete, unclear or out of date. Contact: **[verified privacy contact]**.
+**8. Your rights.** Subject to applicable law, you may request access to information about you and correction or deletion of information that is inaccurate, incomplete, unclear or out of date. Contact: **labassemble@gmail.com**.
 
 **9. Cookies and external services.** **[Inventory actual cookies, browser storage, analytics and embedded services; confirm whether consent controls are necessary].**
 
@@ -65,7 +65,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 ## מדיניות פרטיות — טיוטה
 **עדכון:** 29.10.2026 | **סטטוס:** טיוטה לא מאושרת.
 
-**1. זהות והתקשרות.** אתר ASSEMBL LAB מופעל על ידי העסק **ASSEMBLE LAB** לפי הצהרת בעל העסק; **[יש לאמת את האיות המשפטי ואת שם העוסק היחיד הרשום]**. לפניות פרטיות: **[כתובת מאושרת; labassemble@gmail.com מוצעת]**.
+**1. זהות והתקשרות.** אתר ASSEMBL LAB מופעל על ידי העסק **ASSEMBLE LAB** לפי הצהרת בעל העסק; **[יש לאמת את האיות המשפטי ואת שם העוסק היחיד הרשום]**. לפניות פרטיות: **labassemble@gmail.com**.
 
 **2. מידע שנאסף.** בעת פנייה בנוגע לתכנון, פיתוח, ייצור או התאמת מוצר אנו מקבלים את השם, פרטי הקשר, בחירת המוצר, כמות, מידות, תיאור הדרישות והערות שתמסרו. ייתכן עיבוד של מידע טכני לצורך תפעול ואבטחה באמצעות ספקים — **[לאמת בפועל]**. אין למסור נתונים רגישים שאינם נדרשים.
 
@@ -79,7 +79,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 
 **7. אבטחה.** גישה למידע תוגבל למורשים ויינקטו אמצעי הגנה בהתאם לדין ולסיכונים; **[לאמת אמצעים בפועל].**
 
-**8. זכויות נושאי מידע.** ניתן לבקש עיון במידע, וכן תיקון או מחיקה של מידע שאינו נכון, שלם, ברור או מעודכן, בהתאם לדין, באמצעות **[כתובת מאושרת]**.
+**8. זכויות נושאי מידע.** ניתן לבקש עיון במידע, וכן תיקון או מחיקה של מידע שאינו נכון, שלם, ברור או מעודכן, בהתאם לדין, באמצעות **labassemble@gmail.com**.
 
 **9. עוגיות וטכנולוגיות נוספות.** **[להשלים רק לאחר בדיקת השירותים והאחסון באתר בפועל].**
 
@@ -90,7 +90,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 ## Privacy Policy — draft
 **Updated:** 29 October 2026 | **Status:** Not approved.
 
-**1. Identity.** ASSEMBL LAB is operated by the business **ASSEMBLE LAB**, according to the owner. **[Confirm registered individual proprietor legal name and spelling].** Privacy inquiries: **[verified address; labassemble@gmail.com proposed]**.
+**1. Identity.** ASSEMBL LAB is operated by the business **ASSEMBLE LAB**, according to the owner. **[Confirm registered individual proprietor legal name and spelling].** Privacy inquiries: **labassemble@gmail.com**.
 
 **2. Information.** When you request a design, development, production or customization quotation, we receive the name, contact information, product selection, quantity, dimensions, project requirements and notes that you submit. Service providers may also process technical information for operation and security **[verify]**. Please do not send unnecessary sensitive information.
 
