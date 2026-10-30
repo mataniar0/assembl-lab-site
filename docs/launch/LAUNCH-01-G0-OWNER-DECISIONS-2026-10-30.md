@@ -7,9 +7,11 @@ Status: INCOMPLETE — NOT APPROVED / NOT FOR PUBLICATION.
 - Both brands use the shared Formspree endpoint xwlvlbno; historic notifications confirmed.
 - No automatic requirement for legal-counsel signature; compliance still required.
 
+- Quarterly inquiry review and deletion of records no longer needed, subject to legal retention duties: **OWNER-APPROVED 2026-10-30**. This is a review cadence, not a fixed 90-day destruction guarantee.
+
 ## Unresolved; obtain facts before publication
 1. Registered controller/trade name and taxpayer status: confirm privately with records. Never include identity numbers in repository.
-2. Operational inquiry retention practice: propose quarterly review of unanswered or closed inquiries and deletion when no longer needed; distinguish ordinary leads from orders and legal records. Owner to confirm actual capability in Gmail, exports, Formspree and backups.
+2. Verify execution of owner-approved quarterly review and deletion across Gmail, exports, Formspree and backups; distinguish ordinary leads from orders and legally preserved records.
 3. Formspree processor terms, storage, overseas transfers, subprocessors and effective deletion policy: verify official documents, avoid universal guarantees.
 4. Current site live network/cookie/embed inventory and account access roles: read-only verification.
 5. Review each site HE/EN policy and short notice against actual forms and service workflow; approve exact version only once placeholders are resolved.
