@@ -1,5 +1,5 @@
 # LAUNCH-01 — נוהל שמירת מידע ובקשות פרטיות / Data Retention & Rights SOP
-Date: 2026-10-29. Status: DRAFT — pending owner and legal review. Applies to ASSEMBL LAB and WOOD U LIKE.
+Updated: 2026-10-30. Status: QUARTERLY REVIEW CADENCE OWNER-APPROVED; other details pending verification. Applies to ASSEMBL LAB and WOOD U LIKE.
 This is an internal operating procedure, not a published legal policy. No live submission, deletion, policy approval, merge or deployment.
 
 ## Data map / מפת מידע
@@ -12,8 +12,8 @@ This is an internal operating procedure, not a published legal policy. No live s
 ## Interim operating controls / נהלי ביניים
 1. Treat submissions as confidential. Limit access to owner and specifically authorized handlers; enable available account security controls and verify roles.
 2. Review new inquiries regularly, distinguish brand/product, and avoid unnecessary copies; do not export to shared/public storage.
-3. Review information at a defined periodic interval once approved (suggested quarterly). Assess whether each lead is active, converted to an order, needed for support/tax/legal duties or no longer necessary.
-4. Do NOT invent an automatic retention period, delete invoices/required records, or claim vendor backups are erased. Owner and professional adviser to approve a retention schedule distinguishing abandoned inquiries, completed orders, tax records, complaints and pending disputes.
+3. Review information **once every three months (owner-approved 2026-10-30)**. Assess whether each lead is active, converted to an order, needed for support/tax/legal duties or no longer necessary.
+4. Do NOT invent an automatic retention period, delete invoices/required records, or claim vendor backups are erased. Remaining schedule details and statutory exceptions must be verified, distinguishing abandoned inquiries, completed orders, tax records, complaints and pending disputes.
 5. To delete a record: verify record and scope, identify all copies (Formspree, mailbox, private tracker, exports), preserve legally required records, then execute authorized deletion and log outcome privately with no actual personal details in GitHub.
 6. Avoid deletion on the basis of unverifiable requests. Verify requester identity proportionately without collecting excessive new personal data.
 7. For access/correction requests: log privately (reference ID, received date, request type, verification, systems checked, decision and completion), review applicable rights/exceptions/deadlines with adviser, respond through verified contact address and document any limitations.
