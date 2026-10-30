@@ -25,7 +25,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 
 **5. העברה ונגישות.** הטופס משתמש בשירות Formspree המשמש גם את ASSEMBL LAB. המידע עשוי להיות נגיש לבעל העסק ולמורשים לטפל בפניות, ולספקי שירות המאפשרים קליטה, הודעות ותפעול, בהתאם להסדרים עמם. **[לאמת בפועל: הספקים, הרשאות, נמעני ההתראות, העברות למדינות אחרות, אמצעי הגנה].** לא נפרסם את פרטי הפנייה באתר.
 
-**6. שמירה ומחיקה.** נשמור מידע רק ככל שנדרש למטרות המתוארות ולחובות החלות על העסק. **[להגדיר ולאשר תקופת שמירה ספציפית, תהליך מחיקה, גיבויים ומגבלות ספק].** אין להבטיח משך מחיקה לפני אימות יכולת הביצוע.
+**6. שמירה ומחיקה.** אנו מתכננים לבחון את הצורך בהמשך שמירת פניות אחת לשלושה חודשים ולמחוק פניות שכבר אינן נחוצות, בכפוף לחובות שמירה על פי דין ולצרכים חוקיים אחרים. תדירות הבחינה אינה מועד מחיקה קבוע. עותקים בתיבת הדוא״ל, אצל ספקים ובגיבויים עשויים להיות כפופים לתהליכי שמירה ומחיקה נפרדים, שעדיין נבדקים לפני פרסום המדיניות.
 
 **7. אבטחה.** ננקוט אמצעים סבירים ובהתאם לדין להגבלת גישה והגנה על מידע אישי. אין הבטחה לאבטחה מוחלטת. **[יש לתעד אמצעי הרשאות, גישה, אימות וגיבוי בפועל].**
 
@@ -50,7 +50,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 
 **5. Sharing and access.** Inquiry submissions use Formspree, shared with ASSEMBL LAB. The business and authorized handlers, as well as necessary service providers, may access information for the purposes described. **[Verify actual access, notifications, vendors, international transfers and safeguards].** Inquiry contents will not be posted publicly.
 
-**6. Retention.** Information is kept only as needed for these purposes and applicable obligations. **[Confirm actual retention periods, deletion methods, backups and vendor limits].**
+**6. Retention.** We plan to review inquiry records every three months and delete records that are no longer needed, subject to applicable legal retention obligations and other legitimate requirements. Quarterly review is not a fixed deletion deadline. Copies in email, service providers' systems and backups may be subject to separate retention and deletion processes that remain under verification before publication.
 
 **7. Security.** Appropriate protections under applicable law will be used to restrict access and protect personal information; absolute security cannot be guaranteed. **[Confirm actual controls].**
 
@@ -75,7 +75,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 
 **5. ספקים ומקבלים.** הפניות נשלחות דרך Formspree, המשמש גם את WOOD U LIKE; למורשי העסק ולספקי תפעול עשויה להיות גישה במסגרת מטרות השירות. **[לאמת חשבון, הרשאות, נמעני התראות, העברות לחו״ל ואמצעי הגנה].**
 
-**6. שמירה ומחיקה.** המידע יישמר רק לצורך מטרות הטיפול וחובות הדין. **[לאשר פרקי שמירה, מחיקה, גיבויים ומנגנון בקשות].**
+**6. שמירה ומחיקה.** פניות ייבחנו אחת לשלושה חודשים כדי לקבוע אם נדרש להמשיך לשמור אותן. מידע שאין עוד צורך לשמור יימחק בכפוף לחובות שמירה בדין ולצרכים חוקיים אחרים. בדיקה רבעונית אינה הבטחה למחיקה בתוך 90 יום. נהלי המחיקה לגבי תיבת הדוא״ל, ספקים וגיבויים עדיין נבדקים לפני פרסום המדיניות.
 
 **7. אבטחה.** גישה למידע תוגבל למורשים ויינקטו אמצעי הגנה בהתאם לדין ולסיכונים; **[לאמת אמצעים בפועל].**
 
@@ -100,7 +100,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 
 **5. Recipients.** Submissions are sent through Formspree, also used by WOOD U LIKE. Authorized handlers and necessary service providers may access data for these purposes. **[Verify account, permissions, notifications, international transfers and safeguards].**
 
-**6. Retention.** Data will be held only as needed for these purposes and applicable obligations. **[Confirm concrete periods, deletion, backups and requests].**
+**6. Retention.** We plan to review inquiries every three months to assess whether they remain necessary. Records no longer needed will be deleted, subject to legal retention duties and other legitimate requirements. A quarterly review does not promise deletion within 90 days. Email, vendor and backup deletion arrangements remain under verification before publication.
 
 **7. Security.** Access will be restricted and safeguards applied as required by applicable law and risk. **[Verify implemented controls].**
 
