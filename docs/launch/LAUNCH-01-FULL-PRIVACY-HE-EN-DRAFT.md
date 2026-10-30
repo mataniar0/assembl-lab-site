@@ -104,7 +104,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 
 **7. Security.** Access will be restricted and safeguards applied as required by applicable law and risk. **[Verify implemented controls].**
 
-**8. Rights.** You may request access and correction or deletion of inaccurate, incomplete, unclear or outdated personal information, subject to applicable law, at **[verified contact]**.
+**8. Rights.** You may request access and correction or deletion of inaccurate, incomplete, unclear or outdated personal information, subject to applicable law, at **labassemble@gmail.com**.
 
 **9. Cookies and technologies.** **[Complete based on real site inventory].**
 
