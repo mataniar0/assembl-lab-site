@@ -1,0 +1,76 @@
+{
+  "passed": 9,
+  "failed": 1,
+  "real_posts": 0,
+  "results": [
+    {
+      "language": "he",
+      "width": 320,
+      "passed": true,
+      "slides": 7,
+      "real_posts": 0
+    },
+    {
+      "language": "he",
+      "width": 390,
+      "passed": true,
+      "slides": 7,
+      "real_posts": 0
+    },
+    {
+      "language": "he",
+      "width": 768,
+      "passed": true,
+      "slides": 7,
+      "real_posts": 0
+    },
+    {
+      "language": "he",
+      "width": 1024,
+      "passed": true,
+      "slides": 7,
+      "real_posts": 0
+    },
+    {
+      "language": "he",
+      "width": 1440,
+      "passed": true,
+      "slides": 7,
+      "real_posts": 0
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "passed": true,
+      "slides": 7,
+      "real_posts": 0
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "passed": true,
+      "slides": 7,
+      "real_posts": 0
+    },
+    {
+      "language": "en",
+      "width": 768,
+      "passed": true,
+      "slides": 7,
+      "real_posts": 0
+    },
+    {
+      "language": "en",
+      "width": 1024,
+      "passed": true,
+      "slides": 7,
+      "real_posts": 0
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "passed": false,
+      "error": "Failed local request: http://127.0.0.1:35701/table/personal/media/01-hero-finished-angled-480.webp\nFailed local request: http://127.0.0.1:35701/table/personal/media/02-finished-front-480.webp\nFailed local request: http://127.0.0.1:35701/table/personal/media/03-prototype-before-finish-480.webp\nFailed local request: http://127.0.0.1:35701/table/personal/media/04-assembly-clamped-480.webp\nFailed local request: http://127.0.0.1:35701/table/personal/media/05-underside-structure-480.webp\nFailed local request: http://127.0.0.1:35701/table/personal/media/06-leg-structure-480.webp\nFailed local request: http://127.0.0.1:35701/table/personal/media/07-laser-cutting-480.webp"
+    }
+  ]
+}

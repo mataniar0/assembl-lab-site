@@ -1,0 +1,318 @@
+{
+  "source_hashes_verified": 7,
+  "export_reproductions_passed": 29,
+  "failed": 0,
+  "all_before_after_pairs_present": true,
+  "contact_sheet_present": true,
+  "checks": [
+    {
+      "file": "01-hero-finished-angled-480.webp",
+      "dimensions": [
+        480,
+        624
+      ],
+      "bytes": 35400,
+      "sha256": "4c8dda257d619da854d4f904d6f273545742f9e3ad34656ecbb79d665796659f",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "01-hero-finished-angled-768.webp",
+      "dimensions": [
+        768,
+        998
+      ],
+      "bytes": 87080,
+      "sha256": "28c12294f273082262ff57864734222ed93d6cc71f28ca06a1d43734f511321f",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "01-hero-finished-angled-960.webp",
+      "dimensions": [
+        960,
+        1248
+      ],
+      "bytes": 122958,
+      "sha256": "46ae74b423a94d19a19890a14625511f855fb56c68579973f119dd3b712e4406",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "01-hero-finished-angled-full.webp",
+      "dimensions": [
+        1000,
+        1300
+      ],
+      "bytes": 156100,
+      "sha256": "7a915b1c0e3b5ece387940d53c7e90064c58e292a5d87b6eac55c56b77e5dd67",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "personal-card-480.webp",
+      "reproduction_match": true,
+      "no_upscaling": true,
+      "bytes": 35400
+    },
+    {
+      "file": "personal-card-960.webp",
+      "reproduction_match": true,
+      "no_upscaling": true,
+      "bytes": 122958
+    },
+    {
+      "file": "02-finished-front-480.webp",
+      "dimensions": [
+        480,
+        597
+      ],
+      "bytes": 52958,
+      "sha256": "5d475f600974af42f868fce3ec763ed99572379f43764feacc1b41e1c26b89dd",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "02-finished-front-768.webp",
+      "dimensions": [
+        768,
+        955
+      ],
+      "bytes": 108746,
+      "sha256": "c1dbc4cf8db8c1756e230b3aa9bf9c28e13b9529c5f72e8fee4405843c2898da",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "02-finished-front-960.webp",
+      "dimensions": [
+        960,
+        1194
+      ],
+      "bytes": 149854,
+      "sha256": "f7f0b7f43a95e6ee33fab15636491d6e698b7930fa0ff564aec7347166cd0775",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "02-finished-front-full.webp",
+      "dimensions": [
+        1110,
+        1380
+      ],
+      "bytes": 174994,
+      "sha256": "fc31e0b46f623c2311d229e152b503196c23dfecb46e33ae01c2321fa5efcf3b",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "03-prototype-before-finish-480.webp",
+      "dimensions": [
+        480,
+        597
+      ],
+      "bytes": 22270,
+      "sha256": "78699fb16b139d7b4509aced70e50aab660901c4d2d52d8b9a3460834db88d28",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "03-prototype-before-finish-768.webp",
+      "dimensions": [
+        768,
+        956
+      ],
+      "bytes": 39816,
+      "sha256": "6157aa462eb0f375010bc32e1e88a35f5fbc65420045f4649d9c3c71c702d19c",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "03-prototype-before-finish-full.webp",
+      "dimensions": [
+        940,
+        1170
+      ],
+      "bytes": 56468,
+      "sha256": "1a281d1e1b0f5784c69d505905121064e9f337b149ff9c4e27904ea059cc546c",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "04-assembly-clamped-480.webp",
+      "dimensions": [
+        480,
+        422
+      ],
+      "bytes": 47164,
+      "sha256": "475e749756e9d53e2bf2f64065632e787f3375b5539c44b6c6c1f271b40c3c6f",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "04-assembly-clamped-768.webp",
+      "dimensions": [
+        768,
+        676
+      ],
+      "bytes": 100490,
+      "sha256": "3f187027ba25fb1624151451aacf9299cef7e6b82d0914dd5d2171ef26e312f6",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "04-assembly-clamped-960.webp",
+      "dimensions": [
+        960,
+        845
+      ],
+      "bytes": 141024,
+      "sha256": "30810f1c122d3124f52790c290bb228ef8a903bec2f5f41665e4e555d503fa09",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "04-assembly-clamped-full.webp",
+      "dimensions": [
+        1440,
+        1267
+      ],
+      "bytes": 264784,
+      "sha256": "802387209cb14ea0a61ba210f8884f70575ac85ce4db2ef073eae3c4b43a2c13",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "05-underside-structure-480.webp",
+      "dimensions": [
+        480,
+        535
+      ],
+      "bytes": 45532,
+      "sha256": "344a22e7fd4285f052e37d49f3fd66439d3b7bcb76b5e9d89d25e03f215d68ce",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "05-underside-structure-768.webp",
+      "dimensions": [
+        768,
+        856
+      ],
+      "bytes": 93054,
+      "sha256": "3d73caa1b3405406c27e5f4fec34f39dc1ddd5aeb1bd647e67696bee9fd30204",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "05-underside-structure-960.webp",
+      "dimensions": [
+        960,
+        1070
+      ],
+      "bytes": 131188,
+      "sha256": "b0a7661fb531bec7defcc7279e95a9c3030fe10db4ae9f9341e8e017e840072e",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "05-underside-structure-full.webp",
+      "dimensions": [
+        1400,
+        1560
+      ],
+      "bytes": 228194,
+      "sha256": "88334b75e7ac2f800a3b69e252e7c16b9e15695f4d07eefcd8a088adebb24ead",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "06-leg-structure-480.webp",
+      "dimensions": [
+        480,
+        613
+      ],
+      "bytes": 30394,
+      "sha256": "ea9c9a77f1aba274ba13027d98302189d4d1b82ba6251527193246d3f0a32a5b",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "06-leg-structure-768.webp",
+      "dimensions": [
+        768,
+        981
+      ],
+      "bytes": 68238,
+      "sha256": "edf17876d2bf647e1f3ec5597c9438e485d44516cffc7f71f66674864994734d",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "06-leg-structure-960.webp",
+      "dimensions": [
+        960,
+        1226
+      ],
+      "bytes": 99434,
+      "sha256": "b7caa7e0ed14651a3d995c015eeba5093a325bcfb99965a2ba3c9d1482c45546",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "06-leg-structure-full.webp",
+      "dimensions": [
+        1120,
+        1430
+      ],
+      "bytes": 146700,
+      "sha256": "a6131246843842526d4a7afdb517aab05c6a4e81f1e62407aded36aad8791f24",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "07-laser-cutting-480.webp",
+      "dimensions": [
+        480,
+        640
+      ],
+      "bytes": 33196,
+      "sha256": "4e1c3b92eb72c793c6c39a55b3c8a238a9610557fb8e403f6edfc8176d04c65e",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "07-laser-cutting-768.webp",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "bytes": 94636,
+      "sha256": "c62dc0059c4b910e6e9d17d100ff185454fe2ab8c7b3844c1c4f8142cd7a356e",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "07-laser-cutting-960.webp",
+      "dimensions": [
+        960,
+        1280
+      ],
+      "bytes": 153596,
+      "sha256": "8b9440b2265adf1bc27acf12bedb54a75943d58f8300d21c21dd214f9fe3b114",
+      "reproduction_match": true,
+      "no_upscaling": true
+    },
+    {
+      "file": "07-laser-cutting-full.webp",
+      "dimensions": [
+        1440,
+        1920
+      ],
+      "bytes": 290148,
+      "sha256": "477bbee611e96c0ebc63d53163225b12aed78a18d09551d1846d59bd93f05412",
+      "reproduction_match": true,
+      "no_upscaling": true
+    }
+  ]
+}
