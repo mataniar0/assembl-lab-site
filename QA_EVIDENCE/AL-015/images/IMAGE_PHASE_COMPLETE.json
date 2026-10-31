@@ -1,0 +1,20 @@
+{
+  "issue": 22,
+  "originals_verified": 7,
+  "gallery_exports": 27,
+  "card_exports": 2,
+  "reproduction_passed": 29,
+  "failed": 0,
+  "before_after_pairs": 7,
+  "contact_sheet": "BEFORE_AFTER_CONTACT_SHEET.jpg",
+  "report": "table/personal/media/IMAGE_QA.md",
+  "mandatory_report_and_reproduction_preceded_html_file": true,
+  "chronology": {
+    "image_report_mtime_ns": 1793476310122861895,
+    "contact_sheet_mtime_ns": 1793476190188279562,
+    "reproduction_proof_mtime_ns": 1793476319327575706,
+    "html_page_mtime_ns": 1793476344138466725
+  },
+  "internal_pre_handoff_revisions": 1,
+  "post_handoff_repairs": 0
+}

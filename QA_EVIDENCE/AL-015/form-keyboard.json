@@ -1,0 +1,21 @@
+{
+  "passed": 4,
+  "failed": 0,
+  "real_posts": 0,
+  "mocked_forms": [
+    {
+      "language": "he",
+      "required_validation": true,
+      "draft_preserved": true,
+      "mocked_posts": 1,
+      "real_posts": 0
+    },
+    {
+      "language": "en",
+      "required_validation": true,
+      "draft_preserved": true,
+      "mocked_posts": 1,
+      "real_posts": 0
+    }
+  ]
+}

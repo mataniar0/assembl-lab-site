@@ -21,3 +21,8 @@
 ## מעמד נעליים: מימוש בסביבה הפעילה
 
 לאחר קבלת הצילום המקורי, סוכן המשנה `/root/shoe_photo_implementation` השלים את המימוש בענף עבודה והעלה את הקומיט שבטבלה. זו מסירה של סוכן אחר בסביבה פעילה; אין לתת באמצעותה ציון לסוכן שהיה חסום. הציון ניתן להגשה שהוכרזה מוכנה לאחר שני סבבי התיקון המקדימים, ובהתאם לכל חמשת תחומי המחוון. המיזוג ובדיקת האתר החי באחריות ראש הצוות ומתועדים בנפרד מדירוג עבודת המימוש.
+
+
+## AL-015 — pending project-manager review
+
+2026-10-31: Personal Coffee Table implemented on `feature/al-015-personal-coffee-table`. Mandatory seven-photo improvement evidence, raw sources and tests are retained in [delivery report](QA_AL015_DELIVERY_REPORT.md). Per the user’s explicit workflow, the manager will assign the score; no implementing-agent score or merge approval is claimed. Three revision cycles are explained in the report. No merge/publication.

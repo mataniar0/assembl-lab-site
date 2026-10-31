@@ -1,0 +1,440 @@
+{
+  "issue": "https://github.com/mataniar0/assembl-lab-site/issues/22",
+  "method": "Ordinary deterministic ImageMagick crop and mild tonal/RGB adjustments only; no synthesis, object removal, studio background replacement, repainting, geometry warping or sharpening.",
+  "gallery_order": [
+    "01-hero-finished-angled",
+    "02-finished-front",
+    "03-prototype-before-finish",
+    "04-assembly-clamped",
+    "05-underside-structure",
+    "06-leg-structure",
+    "07-laser-cutting"
+  ],
+  "images": [
+    {
+      "source": "sources/01_hero_finished_angled.jpeg",
+      "source_original_name": "WhatsApp Image 2026-10-31 at 21.30.59.jpeg",
+      "source_sha256": "bfb1099e1bdb54600741ca33a43137f4e53ec36691089f418eb5c70f63276756",
+      "source_bytes": 262784,
+      "source_dimensions_px": [
+        1500,
+        2000
+      ],
+      "manifest_declared_role": "hero",
+      "observed_role": "Finished product, angled view",
+      "stem": "01-hero-finished-angled",
+      "crop_geometry": "1000x1300+300+500",
+      "native_edited_dimensions_px": [
+        1000,
+        1300
+      ],
+      "brightness_contrast": "3x1",
+      "rgb_matrix": "0.995 0 0 0 1 0 0 0 1.018",
+      "note": "Entire tabletop, feet, joinery and original plaque retained; excess wall/floor cropped.",
+      "exports": [
+        {
+          "path": "01-hero-finished-angled-480.webp",
+          "width": 480,
+          "height": 624,
+          "bytes": 35400,
+          "quality": 86,
+          "sha256": "4c8dda257d619da854d4f904d6f273545742f9e3ad34656ecbb79d665796659f"
+        },
+        {
+          "path": "01-hero-finished-angled-768.webp",
+          "width": 768,
+          "height": 998,
+          "bytes": 87080,
+          "quality": 86,
+          "sha256": "28c12294f273082262ff57864734222ed93d6cc71f28ca06a1d43734f511321f"
+        },
+        {
+          "path": "01-hero-finished-angled-960.webp",
+          "width": 960,
+          "height": 1248,
+          "bytes": 122958,
+          "quality": 86,
+          "sha256": "46ae74b423a94d19a19890a14625511f855fb56c68579973f119dd3b712e4406"
+        },
+        {
+          "path": "01-hero-finished-angled-full.webp",
+          "width": 1000,
+          "height": 1300,
+          "bytes": 156100,
+          "quality": 88,
+          "sha256": "7a915b1c0e3b5ece387940d53c7e90064c58e292a5d87b6eac55c56b77e5dd67"
+        }
+      ]
+    },
+    {
+      "source": "sources/02_finished_front.jpeg",
+      "source_original_name": "WhatsApp Image 2026-10-31 at 21.30.54 (1).jpeg",
+      "source_sha256": "490b98bf4117616488357ef7540a1b34fc2da96e8cf018390113d1372db1d510",
+      "source_bytes": 202939,
+      "source_dimensions_px": [
+        1200,
+        1600
+      ],
+      "manifest_declared_role": "finished",
+      "observed_role": "Workshop assembly and leg structure, unfinished",
+      "stem": "02-finished-front",
+      "crop_geometry": "1110x1380+90+220",
+      "native_edited_dimensions_px": [
+        1110,
+        1380
+      ],
+      "brightness_contrast": "4x2",
+      "rgb_matrix": "1.005 0 0 0 0.995 0 0 0 1.015",
+      "note": "Manifest role is incorrect: source is an unfinished workshop assembly, not a finished front photograph. Preserve clamps and structure.",
+      "exports": [
+        {
+          "path": "02-finished-front-480.webp",
+          "width": 480,
+          "height": 597,
+          "bytes": 52958,
+          "quality": 86,
+          "sha256": "5d475f600974af42f868fce3ec763ed99572379f43764feacc1b41e1c26b89dd"
+        },
+        {
+          "path": "02-finished-front-768.webp",
+          "width": 768,
+          "height": 955,
+          "bytes": 108746,
+          "quality": 86,
+          "sha256": "c1dbc4cf8db8c1756e230b3aa9bf9c28e13b9529c5f72e8fee4405843c2898da"
+        },
+        {
+          "path": "02-finished-front-960.webp",
+          "width": 960,
+          "height": 1194,
+          "bytes": 149854,
+          "quality": 86,
+          "sha256": "f7f0b7f43a95e6ee33fab15636491d6e698b7930fa0ff564aec7347166cd0775"
+        },
+        {
+          "path": "02-finished-front-full.webp",
+          "width": 1110,
+          "height": 1380,
+          "bytes": 174994,
+          "quality": 84,
+          "sha256": "fc31e0b46f623c2311d229e152b503196c23dfecb46e33ae01c2321fa5efcf3b"
+        }
+      ]
+    },
+    {
+      "source": "sources/03_prototype_before_finish.jpeg",
+      "source_original_name": "WhatsApp Image 2026-10-31 at 21.30.57 (2).jpeg",
+      "source_sha256": "66e6d477023a072acec43ecee567dc038084605298a101dbfbb31773bb97aeb2",
+      "source_bytes": 111623,
+      "source_dimensions_px": [
+        1152,
+        2048
+      ],
+      "manifest_declared_role": "before_finish",
+      "observed_role": "Assembled prototype before finish",
+      "stem": "03-prototype-before-finish",
+      "crop_geometry": "940x1170+150+390",
+      "native_edited_dimensions_px": [
+        940,
+        1170
+      ],
+      "brightness_contrast": "4x2",
+      "rgb_matrix": "0.995 0 0 0 1 0 0 0 1.018",
+      "note": "Crop excess room/floor while retaining complete tabletop and feet; preserve the pale prototype top and natural unfinished legs.",
+      "exports": [
+        {
+          "path": "03-prototype-before-finish-480.webp",
+          "width": 480,
+          "height": 597,
+          "bytes": 22270,
+          "quality": 86,
+          "sha256": "78699fb16b139d7b4509aced70e50aab660901c4d2d52d8b9a3460834db88d28"
+        },
+        {
+          "path": "03-prototype-before-finish-768.webp",
+          "width": 768,
+          "height": 956,
+          "bytes": 39816,
+          "quality": 86,
+          "sha256": "6157aa462eb0f375010bc32e1e88a35f5fbc65420045f4649d9c3c71c702d19c"
+        },
+        {
+          "path": "03-prototype-before-finish-full.webp",
+          "width": 940,
+          "height": 1170,
+          "bytes": 56468,
+          "quality": 88,
+          "sha256": "1a281d1e1b0f5784c69d505905121064e9f337b149ff9c4e27904ea059cc546c"
+        }
+      ]
+    },
+    {
+      "source": "sources/04_assembly_clamped.jpeg",
+      "source_original_name": "WhatsApp Image 2026-10-31 at 21.30.56.jpeg",
+      "source_sha256": "6fe15fb722d357db64c327d96145d25dab8785ba3c3f6303d302cc35e0ffeada",
+      "source_bytes": 357934,
+      "source_dimensions_px": [
+        1500,
+        2000
+      ],
+      "manifest_declared_role": "assembly",
+      "observed_role": "Clamped assembly",
+      "stem": "04-assembly-clamped",
+      "crop_geometry": "1500x1320+0+440",
+      "native_edited_dimensions_px": [
+        1500,
+        1320
+      ],
+      "brightness_contrast": "3x2",
+      "rgb_matrix": "1.005 0 0 0 0.995 0 0 0 1.012",
+      "note": "Crop upper shelf and foreground clutter, retaining table structure and visible clamp supports. No joints/tools erased.",
+      "exports": [
+        {
+          "path": "04-assembly-clamped-480.webp",
+          "width": 480,
+          "height": 422,
+          "bytes": 47164,
+          "quality": 86,
+          "sha256": "475e749756e9d53e2bf2f64065632e787f3375b5539c44b6c6c1f271b40c3c6f"
+        },
+        {
+          "path": "04-assembly-clamped-768.webp",
+          "width": 768,
+          "height": 676,
+          "bytes": 100490,
+          "quality": 86,
+          "sha256": "3f187027ba25fb1624151451aacf9299cef7e6b82d0914dd5d2171ef26e312f6"
+        },
+        {
+          "path": "04-assembly-clamped-960.webp",
+          "width": 960,
+          "height": 845,
+          "bytes": 141024,
+          "quality": 86,
+          "sha256": "30810f1c122d3124f52790c290bb228ef8a903bec2f5f41665e4e555d503fa09"
+        },
+        {
+          "path": "04-assembly-clamped-full.webp",
+          "width": 1440,
+          "height": 1267,
+          "bytes": 264784,
+          "quality": 86,
+          "sha256": "802387209cb14ea0a61ba210f8884f70575ac85ce4db2ef073eae3c4b43a2c13"
+        }
+      ]
+    },
+    {
+      "source": "sources/05_underside_structure.jpeg",
+      "source_original_name": "WhatsApp Image 2026-10-31 at 21.30.56 (1).jpeg",
+      "source_sha256": "8e184f8d067c7113ca31fe0dd7d0228d1c6b8f6ce1b7f9cae0294e476815833d",
+      "source_bytes": 297108,
+      "source_dimensions_px": [
+        1500,
+        2000
+      ],
+      "manifest_declared_role": "engineering_detail",
+      "observed_role": "Underside and radial supports",
+      "stem": "05-underside-structure",
+      "crop_geometry": "1400x1560+50+180",
+      "native_edited_dimensions_px": [
+        1400,
+        1560
+      ],
+      "brightness_contrast": "3x2",
+      "rgb_matrix": "1.005 0 0 0 0.995 0 0 0 1.012",
+      "note": "Tighter view retains the full circular structure, radial supports, tabs, cut edges and technical marks.",
+      "exports": [
+        {
+          "path": "05-underside-structure-480.webp",
+          "width": 480,
+          "height": 535,
+          "bytes": 45532,
+          "quality": 86,
+          "sha256": "344a22e7fd4285f052e37d49f3fd66439d3b7bcb76b5e9d89d25e03f215d68ce"
+        },
+        {
+          "path": "05-underside-structure-768.webp",
+          "width": 768,
+          "height": 856,
+          "bytes": 93054,
+          "quality": 86,
+          "sha256": "3d73caa1b3405406c27e5f4fec34f39dc1ddd5aeb1bd647e67696bee9fd30204"
+        },
+        {
+          "path": "05-underside-structure-960.webp",
+          "width": 960,
+          "height": 1070,
+          "bytes": 131188,
+          "quality": 86,
+          "sha256": "b0a7661fb531bec7defcc7279e95a9c3030fe10db4ae9f9341e8e017e840072e"
+        },
+        {
+          "path": "05-underside-structure-full.webp",
+          "width": 1400,
+          "height": 1560,
+          "bytes": 228194,
+          "quality": 86,
+          "sha256": "88334b75e7ac2f800a3b69e252e7c16b9e15695f4d07eefcd8a088adebb24ead"
+        }
+      ]
+    },
+    {
+      "source": "sources/06_leg_structure.jpeg",
+      "source_original_name": "WhatsApp Image 2026-10-31 at 21.30.58 (3).jpeg",
+      "source_sha256": "28384266059e081e59a61b7eb28478894720fba0772e6b2d07d7e8d4f5fa8b10",
+      "source_bytes": 227287,
+      "source_dimensions_px": [
+        1500,
+        2000
+      ],
+      "manifest_declared_role": "engineering_detail",
+      "observed_role": "Finished front view and leg structure",
+      "stem": "06-leg-structure",
+      "crop_geometry": "1120x1430+220+410",
+      "native_edited_dimensions_px": [
+        1120,
+        1430
+      ],
+      "brightness_contrast": "2x1",
+      "rgb_matrix": "0.995 0 0 0 1 0 0 0 1.018",
+      "note": "Manifest role is incomplete: source shows the finished table from the front. Warm top, black legs, complete feet and original plaque retained.",
+      "exports": [
+        {
+          "path": "06-leg-structure-480.webp",
+          "width": 480,
+          "height": 613,
+          "bytes": 30394,
+          "quality": 86,
+          "sha256": "ea9c9a77f1aba274ba13027d98302189d4d1b82ba6251527193246d3f0a32a5b"
+        },
+        {
+          "path": "06-leg-structure-768.webp",
+          "width": 768,
+          "height": 981,
+          "bytes": 68238,
+          "quality": 86,
+          "sha256": "edf17876d2bf647e1f3ec5597c9438e485d44516cffc7f71f66674864994734d"
+        },
+        {
+          "path": "06-leg-structure-960.webp",
+          "width": 960,
+          "height": 1226,
+          "bytes": 99434,
+          "quality": 86,
+          "sha256": "b7caa7e0ed14651a3d995c015eeba5093a325bcfb99965a2ba3c9d1482c45546"
+        },
+        {
+          "path": "06-leg-structure-full.webp",
+          "width": 1120,
+          "height": 1430,
+          "bytes": 146700,
+          "quality": 88,
+          "sha256": "a6131246843842526d4a7afdb517aab05c6a4e81f1e62407aded36aad8791f24"
+        }
+      ]
+    },
+    {
+      "source": "sources/07_laser_cutting.jpeg",
+      "source_original_name": "WhatsApp Image 2026-10-31 at 21.30.53.jpeg",
+      "source_sha256": "1e63807cc2e61b66285e144fdab5129a72b4c4968d8fe3c8066adf03e98de9e3",
+      "source_bytes": 320021,
+      "source_dimensions_px": [
+        1500,
+        2000
+      ],
+      "manifest_declared_role": "production",
+      "observed_role": "Laser cutting",
+      "stem": "07-laser-cutting",
+      "crop_geometry": null,
+      "native_edited_dimensions_px": [
+        1500,
+        2000
+      ],
+      "brightness_contrast": "3x2",
+      "rgb_matrix": "1.005 0 0 0 1 0 0 0 1.012",
+      "note": "Full source frame retained to avoid losing the laser head or cut geometry; mild tonal correction improves line/shadow readability.",
+      "exports": [
+        {
+          "path": "07-laser-cutting-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 33196,
+          "quality": 86,
+          "sha256": "4e1c3b92eb72c793c6c39a55b3c8a238a9610557fb8e403f6edfc8176d04c65e"
+        },
+        {
+          "path": "07-laser-cutting-768.webp",
+          "width": 768,
+          "height": 1024,
+          "bytes": 94636,
+          "quality": 86,
+          "sha256": "c62dc0059c4b910e6e9d17d100ff185454fe2ab8c7b3844c1c4f8142cd7a356e"
+        },
+        {
+          "path": "07-laser-cutting-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 153596,
+          "quality": 86,
+          "sha256": "8b9440b2265adf1bc27acf12bedb54a75943d58f8300d21c21dd214f9fe3b114"
+        },
+        {
+          "path": "07-laser-cutting-full.webp",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 290148,
+          "quality": 84,
+          "sha256": "477bbee611e96c0ebc63d53163225b12aed78a18d09551d1846d59bd93f05412"
+        }
+      ]
+    }
+  ],
+  "card_assets": [
+    {
+      "path": "personal-card-480.webp",
+      "width": 480,
+      "height": 624,
+      "bytes": 35400,
+      "quality": 86,
+      "sha256": "4c8dda257d619da854d4f904d6f273545742f9e3ad34656ecbb79d665796659f",
+      "source": "sources/01_hero_finished_angled.jpeg",
+      "crop_geometry": "1000x1300+300+500",
+      "display_guidance": "Contain portrait asset inside the existing 4:3 card viewport; do not cover-crop product features."
+    },
+    {
+      "path": "personal-card-960.webp",
+      "width": 960,
+      "height": 1248,
+      "bytes": 122958,
+      "quality": 86,
+      "sha256": "46ae74b423a94d19a19890a14625511f855fb56c68579973f119dd3b712e4406",
+      "source": "sources/01_hero_finished_angled.jpeg",
+      "crop_geometry": "1000x1300+300+500",
+      "display_guidance": "Contain portrait asset inside the existing 4:3 card viewport; do not cover-crop product features."
+    }
+  ],
+  "source_sha256_verified_count": 7,
+  "originals_preserved_byte_exact": true,
+  "hero_brand_exception": {
+    "status": "User approved retaining the original plaque in hero/card photograph",
+    "user_reply": "לאשר שימוש בצילום המקורי עם השלט",
+    "scope": "Only use of the authentic photographed plaque. No changes to WOOD U LIKE or to the plaque itself."
+  },
+  "source_role_corrections": [
+    {
+      "source": "sources/02_finished_front.jpeg",
+      "truthful_role": "Workshop assembly and leg structure, unfinished"
+    },
+    {
+      "source": "sources/06_leg_structure.jpeg",
+      "truthful_role": "Finished front view and leg structure"
+    }
+  ],
+  "original_source_total_bytes": 1779696,
+  "gallery_export_total_bytes": 2974416,
+  "card_export_total_bytes": 158358,
+  "accepted_photographic_edit_passes": 1,
+  "internal_pre_handoff_revisions": 1,
+  "internal_revision_reason": "Expanded image05 upper crop to retain a support tab and tuned high-entropy full-export compression after visual first-draft review.",
+  "qa_repair_cycles": 0
+}

@@ -1,0 +1,95 @@
+{
+  "product_he": "שולחן קפה אישי",
+  "product_en": "Personal Coffee Table",
+  "project": "ASSEMBL LAB",
+  "photo_count": 7,
+  "photos_are_original_unedited": true,
+  "gallery_order": [
+    "selected_originals/01_hero_finished_angled.jpeg",
+    "selected_originals/02_finished_front.jpeg",
+    "selected_originals/03_prototype_before_finish.jpeg",
+    "selected_originals/04_assembly_clamped.jpeg",
+    "selected_originals/05_underside_structure.jpeg",
+    "selected_originals/06_leg_structure.jpeg",
+    "selected_originals/07_laser_cutting.jpeg"
+  ],
+  "selected": [
+    {
+      "file": "selected_originals/01_hero_finished_angled.jpeg",
+      "original_uploaded_name": "WhatsApp Image 2026-10-31 at 21.30.59.jpeg",
+      "role": "hero",
+      "description_he": "מוצר מוגמר — מבט בזווית על הפלטה בגוון עץ חם והרגליים השחורות",
+      "dimensions_px": [
+        1500,
+        2000
+      ],
+      "sha256": "bfb1099e1bdb54600741ca33a43137f4e53ec36691089f418eb5c70f63276756"
+    },
+    {
+      "file": "selected_originals/02_finished_front.jpeg",
+      "original_uploaded_name": "WhatsApp Image 2026-10-31 at 21.30.54 (1).jpeg",
+      "role": "finished",
+      "description_he": "מוצר מוגמר — מבט חזיתי, רקע ביתי בהיר",
+      "dimensions_px": [
+        1200,
+        1600
+      ],
+      "sha256": "490b98bf4117616488357ef7540a1b34fc2da96e8cf018390113d1372db1d510"
+    },
+    {
+      "file": "selected_originals/03_prototype_before_finish.jpeg",
+      "original_uploaded_name": "WhatsApp Image 2026-10-31 at 21.30.57 (2).jpeg",
+      "role": "before_finish",
+      "description_he": "מוצר מורכב לפני גימור בחלל ביתי",
+      "dimensions_px": [
+        1152,
+        2048
+      ],
+      "sha256": "66e6d477023a072acec43ecee567dc038084605298a101dbfbb31773bb97aeb2"
+    },
+    {
+      "file": "selected_originals/04_assembly_clamped.jpeg",
+      "original_uploaded_name": "WhatsApp Image 2026-10-31 at 21.30.56.jpeg",
+      "role": "assembly",
+      "description_he": "הרכבה עם קליבות — מבנה השולחן",
+      "dimensions_px": [
+        1500,
+        2000
+      ],
+      "sha256": "6fe15fb722d357db64c327d96145d25dab8785ba3c3f6303d302cc35e0ffeada"
+    },
+    {
+      "file": "selected_originals/05_underside_structure.jpeg",
+      "original_uploaded_name": "WhatsApp Image 2026-10-31 at 21.30.56 (1).jpeg",
+      "role": "engineering_detail",
+      "description_he": "מבט על מבנה החלק התחתון של הפלטה",
+      "dimensions_px": [
+        1500,
+        2000
+      ],
+      "sha256": "8e184f8d067c7113ca31fe0dd7d0228d1c6b8f6ce1b7f9cae0294e476815833d"
+    },
+    {
+      "file": "selected_originals/06_leg_structure.jpeg",
+      "original_uploaded_name": "WhatsApp Image 2026-10-31 at 21.30.58 (3).jpeg",
+      "role": "engineering_detail",
+      "description_he": "מבנה הרגליים והחיבור הטבעתי",
+      "dimensions_px": [
+        1500,
+        2000
+      ],
+      "sha256": "28384266059e081e59a61b7eb28478894720fba0772e6b2d07d7e8d4f5fa8b10"
+    },
+    {
+      "file": "selected_originals/07_laser_cutting.jpeg",
+      "original_uploaded_name": "WhatsApp Image 2026-10-31 at 21.30.53.jpeg",
+      "role": "production",
+      "description_he": "שלב החיתוך בלייזר",
+      "dimensions_px": [
+        1500,
+        2000
+      ],
+      "sha256": "1e63807cc2e61b66285e144fdab5129a72b4c4968d8fe3c8066adf03e98de9e3"
+    }
+  ]
+}
