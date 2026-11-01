@@ -1,0 +1,1158 @@
+{
+  "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97",
+  "wulSha": "600cf71236828040cb32f8a0b9d102e52c4c4412",
+  "scope": "local browser unless explicitly public",
+  "started": "2026-11-01T08:43:36.123Z",
+  "browser": "154.0.8037.57",
+  "runtimeSourceHashes": {
+    "inquiry/index.html": "f29be93cbf3ad9c73e16410b423e7e174173f3abaf78ff1b96b946b0bb4b1797",
+    "inquiry/inquiry.js": "1e981f06ba7ea4818ad604561533786102208f90ceba558a7e9a5b610a84ead8",
+    "inquiry/contact-config.js": "e5b6eeb8538f358aab7b24988c52cb3d96eddbf7b27f1c3f011c180df46cdfb2",
+    "assets/language.js": "e1d998997524ed8d72034991bf25d5e80d385f33bcbbb2b5fe1de87a7ff5199c"
+  },
+  "cases": [
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": false,
+        "privacyApproved": false,
+        "contactDetailsApproved": false
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "boolean-0",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": false,
+        "contactDetailsApproved": false
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "boolean-1",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": false,
+        "privacyApproved": true,
+        "contactDetailsApproved": false
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "boolean-2",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": false
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "boolean-3",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": false,
+        "privacyApproved": false,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "boolean-4",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": false,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "boolean-5",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": false,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "boolean-6",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "MOCK_ONLY",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "submitVisible": true,
+      "scope": "local; in-memory configuration only",
+      "test": "boolean-7",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "formDestinationApproved-missing",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": null,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "formDestinationApproved-null",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": "true",
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "formDestinationApproved-string-true",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": 1,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "formDestinationApproved-number-one",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "privacyApproved-missing",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": null,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "privacyApproved-null",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": "true",
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "privacyApproved-string-true",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": 1,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "privacyApproved-number-one",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "contactDetailsApproved-missing",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": null
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "contactDetailsApproved-null",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": "true"
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "contactDetailsApproved-string-true",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": 1
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "contactDetailsApproved-number-one",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": null,
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-null",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "http://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-http://formspree.io/f/qaformfixture",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://example.invalid/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-https://example.invalid/f/qaformfixture",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-https://formspree.io/f/",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture?x=1",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-https://formspree.io/f/qaformfixture?x=1",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://user@formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-https://user@formspree.io/f/qaformfixture",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture/",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-https://formspree.io/f/qaformfixture/",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-missing",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": null,
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "config-null",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "configuration": {},
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "config-empty",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": false,
+        "privacyApproved": false,
+        "contactDetailsApproved": false
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "boolean-0",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": false,
+        "contactDetailsApproved": false
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "boolean-1",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": false,
+        "privacyApproved": true,
+        "contactDetailsApproved": false
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "boolean-2",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": false
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "boolean-3",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": false,
+        "privacyApproved": false,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "boolean-4",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": false,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "boolean-5",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": false,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "boolean-6",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "MOCK_ONLY",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "submitVisible": true,
+      "scope": "local; in-memory configuration only",
+      "test": "boolean-7",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "formDestinationApproved-missing",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": null,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "formDestinationApproved-null",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": "true",
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "formDestinationApproved-string-true",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": 1,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "formDestinationApproved-number-one",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "privacyApproved-missing",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": null,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "privacyApproved-null",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": "true",
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "privacyApproved-string-true",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": 1,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "privacyApproved-number-one",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "contactDetailsApproved-missing",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": null
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "contactDetailsApproved-null",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": "true"
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "contactDetailsApproved-string-true",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": 1
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "contactDetailsApproved-number-one",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": null,
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-null",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "http://formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-http://formspree.io/f/qaformfixture",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://example.invalid/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-https://example.invalid/f/qaformfixture",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-https://formspree.io/f/",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture?x=1",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-https://formspree.io/f/qaformfixture?x=1",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://user@formspree.io/f/qaformfixture",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-https://user@formspree.io/f/qaformfixture",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "formEndpoint": "https://formspree.io/f/qaformfixture/",
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-https://formspree.io/f/qaformfixture/",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {
+        "email": "fixture@example.invalid",
+        "whatsapp": "",
+        "formDestinationApproved": true,
+        "privacyApproved": true,
+        "contactDetailsApproved": true
+      },
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "endpoint-missing",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": null,
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "config-null",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "configuration": {},
+      "expected": "BLOCK",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "submitVisible": false,
+      "scope": "local; in-memory configuration only",
+      "test": "config-empty",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    }
+  ],
+  "finished": "2026-11-01T08:44:12.923Z"
+}
