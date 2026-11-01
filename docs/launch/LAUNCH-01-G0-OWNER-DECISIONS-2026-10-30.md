@@ -46,3 +46,6 @@ Owner confirms the **Delete** option is currently visible when viewing an inquir
 
 ## Gmail deletion UI — owner attestation, 2026-11-01
 Owner confirms Gmail provides **Delete** and a **Trash** folder for inquiry-related messages. These controls are visible/available; **no actual inquiry was deleted**, and full deletion (including trash retention, provider backups or Formspree) is not established. Formspree Delete was separately confirmed as visible. The two-system non-destructive UI checklist is now owner-confirmed; end-to-end erasure remains open.
+
+## Formspree security inquiry — owner update, 2026-11-01
+Owner confirms they sent the prepared email to Formspree requesting clarification about deletion of regular submissions, backups/logs, 30-day Free history, applicable DPA/subprocessors/transfers, and erasure confirmation. **Status: SENT BY OWNER / AWAITING VENDOR RESPONSE.** Delivery and the eventual answer are not independently verified; no answer has been received in this conversation. Follow up when vendor responds. Do not interpret lack of response as approval, assume an erasure timeline or enable live sending. Continue policy drafting with vendor-dependent language explicitly conditional.
