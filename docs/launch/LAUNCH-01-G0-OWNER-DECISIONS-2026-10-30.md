@@ -31,3 +31,6 @@ Owner explicitly confirms **Formspree sends notifications only to `labassemble@g
 
 ## Formspree account 2FA — owner attestation, 2026-11-01
 Owner confirms two-factor authentication is **not enabled** for the Formspree account. Treat as an OPEN ACCOUNT-SECURITY ACTION (P0-02 safeguard) before handling live customer inquiries. Official Formspree documentation says app-generated codes are supported for all accounts, enabled via Account Settings; store recovery codes securely and do not place passwords, OTPs or recovery codes in ChatGPT/GitHub. Source: https://help.formspree.io/articles/account-management/setting-up-2-factor-authentication . No account settings were changed by the assistant. This does not change the prior confirmations of sole owner access, sole notification address and no automated forwarding.
+
+## 2FA activation deferred — owner decision, 2026-11-01
+Owner plans to enable Formspree two-factor authentication later. **P0-02 security action OPEN** until explicit confirmation; no claim it has been enabled. Continue G0 fact finding on retention/deletion in parallel. No credentials/recovery codes requested.
