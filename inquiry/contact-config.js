@@ -2,5 +2,8 @@
 window.ASSEMBLE_CONTACT = Object.freeze({
   email: "labassemble@gmail.com",
   whatsapp: "",
-  formEndpoint: "https://formspree.io/f/xwlvlbno"
+  formEndpoint: "https://formspree.io/f/xwlvlbno",
+  formDestinationApproved: false,
+  privacyApproved: false,
+  contactDetailsApproved: false
 });
