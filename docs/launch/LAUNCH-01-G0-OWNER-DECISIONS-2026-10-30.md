@@ -18,3 +18,7 @@ Status: INCOMPLETE — NOT APPROVED / NOT FOR PUBLICATION.
 
 ## Approval evidence required
 Approver identity (internal), date, approved HE and EN revision hashes for both brands, confirmation of factual processing, record of unresolved exceptions, and an explicit publish GO. Approval to draft does not automatically permit deployment or customer inquiries.
+
+## Owner registration confirmation — 2026-11-01
+Owner confirms they checked their registration and that the sole proprietor name already stated in the drafts matches the registration, and the registered business name is precisely **ASSEMBLE LAB**. This is an **owner attestation**, not independently inspected registry evidence. Do not publish tax identifiers or registration documents. Distinguish marketing brand **ASSEMBL LAB** from registered business name **ASSEMBLE LAB**.
+Next verification: authorized Formspree account users, notification recipients and forwarding/integrations. Do not assume a unique recipient merely because previous screenshots showed one notification action.
