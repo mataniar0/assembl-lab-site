@@ -43,3 +43,6 @@ Owner reports **no prior completed deletion of an inquiry across both Formspree 
 
 ## Formspree Delete control — owner visual confirmation, 2026-11-01
 Owner confirms the **Delete** option is currently visible when viewing an inquiry in their Formspree account. This verifies availability of the UI control only, **not** successful deletion, deletion scope, email copies, recovery, backups, or provider data lifecycle. No deletion was performed. Next check: Gmail delete/trash control and applicable retention behavior.
+
+## Gmail deletion UI — owner attestation, 2026-11-01
+Owner confirms Gmail provides **Delete** and a **Trash** folder for inquiry-related messages. These controls are visible/available; **no actual inquiry was deleted**, and full deletion (including trash retention, provider backups or Formspree) is not established. Formspree Delete was separately confirmed as visible. The two-system non-destructive UI checklist is now owner-confirmed; end-to-end erasure remains open.
