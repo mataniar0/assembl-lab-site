@@ -19,7 +19,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 
 **2. אילו פרטים נאספים.** כאשר אתם פונים דרך טופס בקשת הצעת מחיר אנו מקבלים את הפרטים שאתם מוסרים, כגון שם, אמצעי קשר, מוצר מבוקש, כמות, מידות, פרטי התאמה/חריטה והערות. ייתכן שיתקבלו גם פרטים טכניים והקשר הפנייה הנדרשים לתפעול ולמניעת שימוש לרעה, בהתאם להתנהגות הספקים שתאומת. אל תשלחו מידע רגיש שאינו נחוץ להכנת ההצעה.
 
-**3. מטרות השימוש.** מענה לפנייה, בדיקת היתכנות ואפשרויות ייצור, הכנת הצעת מחיר, תיאום המשך שירות לפי בקשתכם, אבטחה וטיפול בתקלות. שימוש למטרות אחרות, כגון שיווק, יתבצע רק בהתאם לדין.
+**3. מטרות השימוש.** מענה לפנייה, בדיקת היתכנות ואפשרויות ייצור, הכנת הצעת מחיר, תיאום המשך שירות לפי בקשתכם, אבטחה וטיפול בתקלות. פרטי הפנייה לא ישמשו לשליחת דברי פרסומת ללא הסכמה נפרדת, ככל שנדרשת לפי הדין. **[לאמת פרקטיקת שיווק בפועל לפני אישור].**
 
 **4. חובה למסור מידע?** מסירת המידע מרצונכם ואינה חובה חוקית לצורך פנייה. ללא שם או אמצעי קשר מתאים לא נוכל לחזור אליכם. שליחת פנייה אינה מהווה הזמנה מחייבת או תשלום.
 
@@ -44,7 +44,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 
 **2. Information collected.** If you request a quotation, we receive information you provide, such as your name, contact details, selected product, quantity, dimensions, custom engraving or design requirements, and notes. Technical and contextual information needed to operate or protect the service may also be processed by providers, subject to verification. Please do not include unnecessary sensitive information.
 
-**3. Purposes.** Responding to inquiries, assessing feasibility and production options, preparing quotations, communicating about requested services, security, and troubleshooting. Additional use, including marketing, will occur only as permitted by applicable law.
+**3. Purposes.** Responding to inquiries, assessing feasibility and production options, preparing quotations, communicating about requested services, security, and troubleshooting. Inquiry details will not be used to send promotional messages without separate consent where required by law. **[Verify actual marketing practice before approval].**
 
 **4. Voluntary submission.** You are not legally required to submit inquiry information. Without a suitable name or contact method, we cannot respond. Sending an inquiry does not create a binding order or payment.
 
