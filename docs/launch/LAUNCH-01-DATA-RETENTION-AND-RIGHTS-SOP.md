@@ -5,7 +5,7 @@ This is an internal operating procedure, not a published legal policy. No live s
 ## Data map / מפת מידע
 - Formspree (shared form xwlvlbno): names, contact details, product descriptions, quantities, project dimensions and notes. Screenshots demonstrate saved records and manual Delete/Export buttons, NOT deletion from backup systems.
 - Email notifications: labassemble@gmail.com (owner confirms prior delivery); email copies may be retained separately from Formspree.
-- Any owner-side copies: private tracker, mailbox, archives, downloads and backups must be checked; no customer data in public GitHub.
+- Owner confirms no separately maintained Excel/local/private-tracker copies; current owner-managed systems are **Formspree + Gmail only** (owner attestation 2026-11-01). Provider-side logs/backups and Gmail trash/backups remain outside that statement. If exports/new tools are introduced, update this map; never put customer data in public GitHub.
 - Browser storage: language preference in localStorage on both sites; WOOD U LIKE transient campaign attribution in sessionStorage.
 - Access to account roles, subprocessor details, overseas transfers, retention schedule and backup deletion policy remain unverified.
 
@@ -37,3 +37,11 @@ Formspree owner screenshots show Delete availability and no visible added workfl
 Israeli Privacy Protection Authority Q&A on Amendment 13: https://www.gov.il/he/pages/tikun13_qa?chapterIndex=6
 Israeli PPA guide to Amendment 13: https://www.gov.il/BlobFolder/reports/guide_tikon13_professional/he/tikun%2013%20_170825.pdf
 Israeli PPA right of access position: https://www.gov.il/BlobFolder/reports/right_to_access2023/he/The%20right%20to%20access.pdf
+
+## Approved quarterly operational workflow (owner attestations, 2026-11-01)
+1. Once every three months, review inquiry records available in Formspree and relevant Gmail notifications/threads. **Free plan's 30-day history may mean some earlier records are visible only in Gmail**; verify actual plan behavior before depending on dashboard completeness.
+2. Separate open conversations, fulfilled orders, complaint/dispute records and legally required business documents from stale, closed/unneeded inquiries. Do not erase records with outstanding business/legal purpose.
+3. Delete unnecessary inquiry records where available from Formspree dashboard and the corresponding Gmail messages/threads (including labels/archives), only after checking exceptions and dependencies. Take care not to delete correspondence needed for customer support or statutory accounting.
+4. Record privately the review date, rough count by outcome and any vendor deletion limitation. Store no customer identifiers in public GitHub. Gmail Trash and Formspree backups must not be represented as immediately purged unless verified.
+5. For privacy access/correction/deletion requests, verify requester proportionately, search both systems and account for provider-controlled copies; respond accurately on limits.
+**Open:** Formspree provider retention/deletion/backup facts; Gmail Trash/retention semantics as actually configured; practical ability to remove all relevant mail and supplier copies; final approved rights-request operating timetable.
