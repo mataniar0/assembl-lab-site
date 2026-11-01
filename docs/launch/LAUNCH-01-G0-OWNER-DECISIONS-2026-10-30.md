@@ -22,3 +22,6 @@ Approver identity (internal), date, approved HE and EN revision hashes for both 
 ## Owner registration confirmation — 2026-11-01
 Owner confirms they checked their registration and that the sole proprietor name already stated in the drafts matches the registration, and the registered business name is precisely **ASSEMBLE LAB**. This is an **owner attestation**, not independently inspected registry evidence. Do not publish tax identifiers or registration documents. Distinguish marketing brand **ASSEMBL LAB** from registered business name **ASSEMBLE LAB**.
 Next verification: authorized Formspree account users, notification recipients and forwarding/integrations. Do not assume a unique recipient merely because previous screenshots showed one notification action.
+
+## Formspree account access attestation — 2026-11-01
+Owner explicitly confirms **only the owner has access to the Formspree account**. This is owner-attested and not an independent role or security-settings audit. Do not infer that notifications or forwarding go only to owner, that email account has no other access, or that vendor subprocessors cannot process submissions. Remaining P0-02: confirm notification email recipient list, workflow integrations, downstream forwarding and mailbox access; record account login-protection settings separately without credentials.
