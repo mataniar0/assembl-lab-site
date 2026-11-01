@@ -20,6 +20,8 @@
   const hasWhatsApp = /^[1-9][0-9]{6,14}$/u.test(whatsappNumber);
   const hasEmail = emailPattern.test(String(config.email || ""));
   const hasEndpoint = /^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/u.test(String(config.formEndpoint || ""));
+  // Endpoint existence alone never authorizes customer-data transmission.
+  const sendingApproved = hasEndpoint && config.formDestinationApproved === true && config.privacyApproved === true && config.contactDetailsApproved === true;
   let submitting = false;
   let currentStatus = { key: "", state: "", variables: {} };
   const validityKeys = new Map();
@@ -91,8 +93,8 @@
     email.hidden = false;
   }
   renderDynamicText();
-  if (hasEndpoint) {
-    form.action = config.formEndpoint;
+  if (sendingApproved) {
+    // Keep HTML action inert: the approved path is handled by fetch only.
     send.hidden = false;
   }
 
@@ -133,7 +135,13 @@
 
   form.addEventListener("submit", async event => {
     event.preventDefault();
-    if (submitting || !validate()) return;
+    if (submitting) return;
+    if (!sendingApproved) {
+      const channel = fallbackChannel();
+      setStatus(channel ? "inquiry.status.fallback" : "inquiry.status.unavailable", "", { channel });
+      return;
+    }
+    if (!validate()) return;
     if (!hasEndpoint) {
       const channel = fallbackChannel();
       setStatus(channel ? "inquiry.status.fallback" : "inquiry.status.unavailable", "", { channel });
