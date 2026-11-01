@@ -1,0 +1,1476 @@
+{
+  "task": "PRIVACY-AUDIT-01",
+  "started": "2026-11-01T07:30:36.360Z",
+  "scope": "local unless explicitly public",
+  "commits": {
+    "assembl-lab-site": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+    "wood-u-like-site": "600cf71236828040cb32f8a0b9d102e52c4c4412"
+  },
+  "observations": [
+    {
+      "site": "assembl-lab-site",
+      "route": "crib/",
+      "stage": "first load",
+      "localStorage": {},
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "crib/",
+      "stage": "after language switch",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "driller_stand/",
+      "stage": "first load",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "driller_stand/",
+      "stage": "after language switch",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "etrog_box/",
+      "stage": "first load",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "etrog_box/",
+      "stage": "after language switch",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "geometric/",
+      "stage": "first load",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "geometric/",
+      "stage": "after language switch",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "",
+      "stage": "first load",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "",
+      "stage": "after language switch",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "inquiry/",
+      "stage": "first load",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "inquiry/",
+      "stage": "after language switch",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "megillat_esther_box/",
+      "stage": "first load",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "megillat_esther_box/",
+      "stage": "after language switch",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "shelf/kids/",
+      "stage": "first load",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "shelf/kids/",
+      "stage": "after language switch",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "shoe_rack/",
+      "stage": "first load",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "shoe_rack/",
+      "stage": "after language switch",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "table/flow/",
+      "stage": "first load",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "table/flow/",
+      "stage": "after language switch",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "table/",
+      "stage": "first load",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "table/",
+      "stage": "after language switch",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "table/personal/",
+      "stage": "first load",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "table/personal/",
+      "stage": "after language switch",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "workbench/",
+      "stage": "first load",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "route": "workbench/",
+      "stage": "after language switch",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "collections/gifts-memories/",
+      "stage": "first load",
+      "localStorage": {},
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "collections/gifts-memories/",
+      "stage": "after language switch",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "collections/home-decor/",
+      "stage": "first load",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "collections/home-decor/",
+      "stage": "after language switch",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "collections/judaica-tradition/",
+      "stage": "first load",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "collections/judaica-tradition/",
+      "stage": "after language switch",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "collections/kitchen-hosting/",
+      "stage": "first load",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "collections/kitchen-hosting/",
+      "stage": "after language switch",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "",
+      "stage": "first load",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "",
+      "stage": "after language switch",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "inquiry/",
+      "stage": "first load",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "inquiry/",
+      "stage": "after language switch",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/blessing/",
+      "stage": "first load",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/blessing/",
+      "stage": "after language switch",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/family-sign/",
+      "stage": "first load",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/family-sign/",
+      "stage": "after language switch",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/hanging-home-sign/",
+      "stage": "first load",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/hanging-home-sign/",
+      "stage": "after language switch",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/kitchen/",
+      "stage": "first load",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/kitchen/",
+      "stage": "after language switch",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/natural-edge-door-sign/",
+      "stage": "first load",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/natural-edge-door-sign/",
+      "stage": "after language switch",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/oval-room-signs/",
+      "stage": "first load",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/oval-room-signs/",
+      "stage": "after language switch",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/personalized-clock/",
+      "stage": "first load",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/personalized-clock/",
+      "stage": "after language switch",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/pizza-peel/",
+      "stage": "first load",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/pizza-peel/",
+      "stage": "after language switch",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/welcome/",
+      "stage": "first load",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "route": "products/welcome/",
+      "stage": "after language switch",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    }
+  ],
+  "behavior": [
+    {
+      "site": "assembl-lab-site",
+      "test": "reload after English selection",
+      "language": "en",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form production",
+      "language": "he",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form success",
+      "language": "he",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form 422",
+      "language": "he",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form 500",
+      "language": "he",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form network",
+      "language": "he",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form malformed",
+      "language": "he",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form unacknowledged",
+      "language": "he",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form timeout",
+      "language": "he",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form duplicate",
+      "language": "he",
+      "localStorage": {
+        "assemble-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form production",
+      "language": "en",
+      "localStorage": {
+        "assemble-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form success",
+      "language": "en",
+      "localStorage": {
+        "assemble-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form 422",
+      "language": "en",
+      "localStorage": {
+        "assemble-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form 500",
+      "language": "en",
+      "localStorage": {
+        "assemble-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form network",
+      "language": "en",
+      "localStorage": {
+        "assemble-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form malformed",
+      "language": "en",
+      "localStorage": {
+        "assemble-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form unacknowledged",
+      "language": "en",
+      "localStorage": {
+        "assemble-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form timeout",
+      "language": "en",
+      "localStorage": {
+        "assemble-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "filled form duplicate",
+      "language": "en",
+      "localStorage": {
+        "assemble-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "reload after English selection",
+      "language": "en",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "synthetic campaign capture",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {
+        "wood-u-like-campaign": "{\"utm_source\":\"audit\",\"utm_campaign\":\"privacy\"}"
+      },
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "campaign consumed at inquiry",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "consumed campaign reload",
+      "campaign": {
+        "campaign": {
+          "utm_source": "",
+          "utm_campaign": ""
+        }
+      },
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form production",
+      "language": "he",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form success",
+      "language": "he",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form 422",
+      "language": "he",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form 500",
+      "language": "he",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form network",
+      "language": "he",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form malformed",
+      "language": "he",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form unacknowledged",
+      "language": "he",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form timeout",
+      "language": "he",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form duplicate",
+      "language": "he",
+      "localStorage": {
+        "wood-u-like-language": "en"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form production",
+      "language": "en",
+      "localStorage": {
+        "wood-u-like-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form success",
+      "language": "en",
+      "localStorage": {
+        "wood-u-like-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form 422",
+      "language": "en",
+      "localStorage": {
+        "wood-u-like-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form 500",
+      "language": "en",
+      "localStorage": {
+        "wood-u-like-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form network",
+      "language": "en",
+      "localStorage": {
+        "wood-u-like-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form malformed",
+      "language": "en",
+      "localStorage": {
+        "wood-u-like-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form unacknowledged",
+      "language": "en",
+      "localStorage": {
+        "wood-u-like-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form timeout",
+      "language": "en",
+      "localStorage": {
+        "wood-u-like-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "filled form duplicate",
+      "language": "en",
+      "localStorage": {
+        "wood-u-like-language": "he"
+      },
+      "sessionStorage": {},
+      "indexedDB": [],
+      "cacheStorage": [],
+      "serviceWorkers": [],
+      "registrationAttempts": [],
+      "frames": [],
+      "cookies": []
+    }
+  ],
+  "interpretation": {
+    "localStorage": "assemble-language and wood-u-like-language store language preference and survive refresh. They coexist on a shared origin; separate names do not create a security boundary.",
+    "sessionStorage": "wood-u-like-campaign stores sanitized utm_source/utm_campaign; consumed upon inquiry entry; no form drafts found. Query parameters still form part of initial hosting request, even when not copied into browser storage.",
+    "cookies": "None observed in fresh local contexts; production cookies unverified.",
+    "indexedDB_cacheStorage_serviceWorkers": "Empty in local snapshots; service worker registration attempts blocked and recorded. HTTP browser cache is separate from Cache Storage and not exhaustively audited.",
+    "drafts": "Synthetic name/contact not found in application storage; reload clears customer-name input. Browser autofill/back-forward restoration are separate browser capabilities, not proven disabled."
+  }
+}

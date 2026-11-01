@@ -1,0 +1,1495 @@
+{
+  "task": "PRIVACY-AUDIT-01",
+  "started": "2026-11-01T07:30:36.360Z",
+  "scope": "local unless explicitly public",
+  "commits": {
+    "assembl-lab-site": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+    "wood-u-like-site": "600cf71236828040cb32f8a0b9d102e52c4c4412"
+  },
+  "cases": [
+    {
+      "test": "write interception self-test",
+      "status": "PASS",
+      "scope": "harness"
+    },
+    {
+      "test": "privacy notice present",
+      "status": "FAIL",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scope": "local unmodified configuration"
+    },
+    {
+      "test": "required field validation without transmission",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "production",
+      "invalid": true,
+      "statusText": "\u05d1\u05d3\u05e7\u05d5 \u05d0\u05ea \u05d4\u05e9\u05d3\u05d5\u05ea \u05d4\u05de\u05e1\u05d5\u05de\u05e0\u05d9\u05dd \u05dc\u05e4\u05e0\u05d9 \u05e9\u05dc\u05d9\u05d7\u05ea \u05d4\u05d1\u05e7\u05e9\u05d4.",
+      "focus": "product"
+    },
+    {
+      "test": "unapproved production configuration does not attempt submission",
+      "status": "FAIL",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "statusObserved": "error",
+      "mockedPosts": 0,
+      "blockedWrites": 1,
+      "scope": "local original config; writes blocked"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "production"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "production"
+    },
+    {
+      "test": "required field validation without transmission",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "success",
+      "invalid": true,
+      "statusText": "\u05d1\u05d3\u05e7\u05d5 \u05d0\u05ea \u05d4\u05e9\u05d3\u05d5\u05ea \u05d4\u05de\u05e1\u05d5\u05de\u05e0\u05d9\u05dd \u05dc\u05e4\u05e0\u05d9 \u05e9\u05dc\u05d9\u05d7\u05ea \u05d4\u05d1\u05e7\u05e9\u05d4.",
+      "focus": "product"
+    },
+    {
+      "test": "form success",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "statusObserved": "success",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "success"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "success"
+    },
+    {
+      "test": "form 422",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "422"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "422"
+    },
+    {
+      "test": "form 500",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "500"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "500"
+    },
+    {
+      "test": "form network",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "network"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "network"
+    },
+    {
+      "test": "form malformed",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "malformed"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "malformed"
+    },
+    {
+      "test": "form unacknowledged",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "unacknowledged"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "unacknowledged"
+    },
+    {
+      "test": "form timeout",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "timeout"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "timeout"
+    },
+    {
+      "test": "pending duplicate prevented",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "mockedPosts": 1
+    },
+    {
+      "test": "form duplicate",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "statusObserved": "",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "duplicate"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "he",
+      "scenario": "duplicate"
+    },
+    {
+      "test": "privacy notice present",
+      "status": "FAIL",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scope": "local unmodified configuration"
+    },
+    {
+      "test": "required field validation without transmission",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "production",
+      "invalid": true,
+      "statusText": "Check the highlighted fields before sending your request.",
+      "focus": "product"
+    },
+    {
+      "test": "unapproved production configuration does not attempt submission",
+      "status": "FAIL",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "statusObserved": "error",
+      "mockedPosts": 0,
+      "blockedWrites": 1,
+      "scope": "local original config; writes blocked"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "production"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "production"
+    },
+    {
+      "test": "required field validation without transmission",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "success",
+      "invalid": true,
+      "statusText": "Check the highlighted fields before sending your request.",
+      "focus": "product"
+    },
+    {
+      "test": "form success",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "statusObserved": "success",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "success"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "success"
+    },
+    {
+      "test": "form 422",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "422"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "422"
+    },
+    {
+      "test": "form 500",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "500"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "500"
+    },
+    {
+      "test": "form network",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "network"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "network"
+    },
+    {
+      "test": "form malformed",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "malformed"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "malformed"
+    },
+    {
+      "test": "form unacknowledged",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "unacknowledged"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "unacknowledged"
+    },
+    {
+      "test": "form timeout",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "timeout"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "timeout"
+    },
+    {
+      "test": "pending duplicate prevented",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "mockedPosts": 1
+    },
+    {
+      "test": "form duplicate",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "statusObserved": "",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "duplicate"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "assembl-lab-site",
+      "language": "en",
+      "scenario": "duplicate"
+    },
+    {
+      "test": "no-JS ordinary UI cannot submit",
+      "site": "assembl-lab-site",
+      "status": "PASS",
+      "action": "https://formspree.io/f/xwlvlbno",
+      "method": "post",
+      "submitDisabled": false,
+      "submitVisible": false,
+      "visibleInputs": 0,
+      "blockedWrites": 0,
+      "blockedQueryNavigations": 0,
+      "implicitEnterTest": "inputs hidden by noscript; no ordinary UI submission available",
+      "scope": "local"
+    },
+    {
+      "test": "privacy notice present",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scope": "local unmodified configuration"
+    },
+    {
+      "test": "three production flags remain false",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "flags": {
+        "formDestinationApproved": false,
+        "privacyApproved": false,
+        "contactDetailsApproved": false
+      }
+    },
+    {
+      "test": "required field validation without transmission",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "production",
+      "invalid": true,
+      "statusText": "\u05e9\u05dc\u05d9\u05d7\u05ea \u05d1\u05e7\u05e9\u05d5\u05ea \u05d3\u05e8\u05da \u05d4\u05d0\u05ea\u05e8 \u05d0\u05d9\u05e0\u05d4 \u05d6\u05de\u05d9\u05e0\u05d4 \u05db\u05e8\u05d2\u05e2. \u05d0\u05e4\u05e9\u05e8 \u05dc\u05e2\u05d9\u05d9\u05df \u05d1\u05d8\u05d5\u05e4\u05e1, \u05d0\u05da \u05d4\u05e4\u05e8\u05d8\u05d9\u05dd \u05dc\u05d0 \u05d9\u05d9\u05e9\u05dc\u05d7\u05d5.",
+      "focus": "inquiry-status"
+    },
+    {
+      "test": "unapproved production configuration does not attempt submission",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "statusObserved": "",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "scope": "local original config; writes blocked"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "production"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "production"
+    },
+    {
+      "test": "required field validation without transmission",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "success",
+      "invalid": true,
+      "statusText": "\u05d1\u05d3\u05e7\u05d5 \u05d0\u05ea \u05d4\u05e9\u05d3\u05d5\u05ea \u05d4\u05de\u05e1\u05d5\u05de\u05e0\u05d9\u05dd. \u05d4\u05e4\u05e8\u05d8\u05d9\u05dd \u05e2\u05d3\u05d9\u05d9\u05df \u05dc\u05d0 \u05e0\u05e9\u05dc\u05d7\u05d5.",
+      "focus": "product"
+    },
+    {
+      "test": "form success",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "statusObserved": "success",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "success"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "success"
+    },
+    {
+      "test": "form 422",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "422"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "422"
+    },
+    {
+      "test": "form 500",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "500"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "500"
+    },
+    {
+      "test": "form network",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "network"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "network"
+    },
+    {
+      "test": "form malformed",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "malformed"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "malformed"
+    },
+    {
+      "test": "form unacknowledged",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "unacknowledged"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "unacknowledged"
+    },
+    {
+      "test": "form timeout",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "timeout"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "timeout"
+    },
+    {
+      "test": "pending duplicate prevented",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "mockedPosts": 1
+    },
+    {
+      "test": "form duplicate",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "statusObserved": "",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "duplicate"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "he",
+      "scenario": "duplicate"
+    },
+    {
+      "test": "privacy notice present",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scope": "local unmodified configuration"
+    },
+    {
+      "test": "three production flags remain false",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "flags": {
+        "formDestinationApproved": false,
+        "privacyApproved": false,
+        "contactDetailsApproved": false
+      }
+    },
+    {
+      "test": "required field validation without transmission",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "production",
+      "invalid": true,
+      "statusText": "Sending requests through this website is currently unavailable. You can explore the form, but your details will not be sent.",
+      "focus": "inquiry-status"
+    },
+    {
+      "test": "unapproved production configuration does not attempt submission",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "statusObserved": "",
+      "mockedPosts": 0,
+      "blockedWrites": 0,
+      "scope": "local original config; writes blocked"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "production"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "production"
+    },
+    {
+      "test": "required field validation without transmission",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "success",
+      "invalid": true,
+      "statusText": "Check the highlighted fields. Your details have not been sent.",
+      "focus": "product"
+    },
+    {
+      "test": "form success",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "statusObserved": "success",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "success"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "success"
+    },
+    {
+      "test": "form 422",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "422"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "422"
+    },
+    {
+      "test": "form 500",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "500"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "500"
+    },
+    {
+      "test": "form network",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "network"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "network"
+    },
+    {
+      "test": "form malformed",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "malformed"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "malformed"
+    },
+    {
+      "test": "form unacknowledged",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "unacknowledged"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "unacknowledged"
+    },
+    {
+      "test": "form timeout",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "statusObserved": "error",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "timeout"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "timeout"
+    },
+    {
+      "test": "pending duplicate prevented",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "mockedPosts": 1
+    },
+    {
+      "test": "form duplicate",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "statusObserved": "",
+      "mockedPosts": 1,
+      "blockedWrites": 0,
+      "scope": "local response/config mock"
+    },
+    {
+      "test": "status changes with language",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "duplicate"
+    },
+    {
+      "test": "form draft not persisted on reload",
+      "status": "PASS",
+      "site": "wood-u-like-site",
+      "language": "en",
+      "scenario": "duplicate"
+    },
+    {
+      "test": "no-JS ordinary UI cannot submit",
+      "site": "wood-u-like-site",
+      "status": "PASS",
+      "action": null,
+      "method": "get",
+      "submitDisabled": true,
+      "submitVisible": false,
+      "visibleInputs": 3,
+      "blockedWrites": 0,
+      "blockedQueryNavigations": 0,
+      "implicitEnterTest": "three filled input fields; Enter did not submit",
+      "scope": "local"
+    }
+  ],
+  "supplement": [
+    {
+      "site": "assembl-lab-site",
+      "test": "privacy disclosure changes language",
+      "status": "FAIL",
+      "copyHashes": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ],
+      "noticeVisible": false,
+      "scope": "local",
+      "note": "Legal identity and contact are masked in screenshots; no full notice text stored."
+    },
+    {
+      "site": "assembl-lab-site",
+      "test": "language preference survives reload",
+      "status": "PASS",
+      "scope": "local"
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "privacy disclosure changes language",
+      "status": "PASS",
+      "copyHashes": [
+        "9fd28dff5cbfa4b1dbeddc91242858397d78d26f33c39311b0ecfd4133c0e3d8",
+        "ee89b9d9ead2ebec0dce4bbad1ba28491cedad94ea7f72c08555c14bbe8ad720"
+      ],
+      "noticeVisible": true,
+      "scope": "local",
+      "note": "Legal identity and contact are masked in screenshots; no full notice text stored."
+    },
+    {
+      "site": "wood-u-like-site",
+      "test": "language preference survives reload",
+      "status": "PASS",
+      "scope": "local"
+    },
+    {
+      "test": "shared origin has distinct brand language keys",
+      "status": "PASS",
+      "keys": [
+        "wood-u-like-language",
+        "assemble-language"
+      ],
+      "scope": "local shared origin"
+    }
+  ],
+  "screenshotRedaction": {
+    "inputs": true,
+    "privacyCopy": true,
+    "mailtoLinks": true,
+    "externalRequestsBlocked": 0
+  },
+  "existingWulSuite": {
+    "status": "PASS",
+    "results": [
+      {
+        "test": "viewport/navigation/blocked/axe",
+        "language": "he",
+        "status": "PASS",
+        "viewport": [
+          320,
+          568
+        ],
+        "violations": [],
+        "errors": []
+      },
+      {
+        "test": "viewport/navigation/blocked/axe",
+        "language": "en",
+        "status": "PASS",
+        "viewport": [
+          320,
+          568
+        ],
+        "violations": [],
+        "errors": []
+      },
+      {
+        "test": "viewport/navigation/blocked/axe",
+        "language": "he",
+        "status": "PASS",
+        "viewport": [
+          390,
+          844
+        ],
+        "violations": [],
+        "errors": []
+      },
+      {
+        "test": "viewport/navigation/blocked/axe",
+        "language": "en",
+        "status": "PASS",
+        "viewport": [
+          390,
+          844
+        ],
+        "violations": [],
+        "errors": []
+      },
+      {
+        "test": "viewport/navigation/blocked/axe",
+        "language": "he",
+        "status": "PASS",
+        "viewport": [
+          768,
+          1024
+        ],
+        "violations": [],
+        "errors": []
+      },
+      {
+        "test": "viewport/navigation/blocked/axe",
+        "language": "en",
+        "status": "PASS",
+        "viewport": [
+          768,
+          1024
+        ],
+        "violations": [],
+        "errors": []
+      },
+      {
+        "test": "viewport/navigation/blocked/axe",
+        "language": "he",
+        "status": "PASS",
+        "viewport": [
+          1024,
+          768
+        ],
+        "violations": [],
+        "errors": []
+      },
+      {
+        "test": "viewport/navigation/blocked/axe",
+        "language": "en",
+        "status": "PASS",
+        "viewport": [
+          1024,
+          768
+        ],
+        "violations": [],
+        "errors": []
+      },
+      {
+        "test": "viewport/navigation/blocked/axe",
+        "language": "he",
+        "status": "PASS",
+        "viewport": [
+          1440,
+          900
+        ],
+        "violations": [],
+        "errors": []
+      },
+      {
+        "test": "viewport/navigation/blocked/axe",
+        "language": "en",
+        "status": "PASS",
+        "viewport": [
+          1440,
+          900
+        ],
+        "violations": [],
+        "errors": []
+      },
+      {
+        "test": "validation/allowlist/planning/phone/honeypot/language/privacy",
+        "language": "he",
+        "status": "PASS"
+      },
+      {
+        "test": "simulated:ok",
+        "language": "he",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:next",
+        "language": "he",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:400",
+        "language": "he",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:422",
+        "language": "he",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:500",
+        "language": "he",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:malformed",
+        "language": "he",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:unacknowledged",
+        "language": "he",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:false",
+        "language": "he",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:errors",
+        "language": "he",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:network",
+        "language": "he",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:timeout",
+        "language": "he",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:pending",
+        "language": "he",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "missing/invalid/unapproved-endpoint/privacy",
+        "language": "he",
+        "status": "PASS"
+      },
+      {
+        "test": "external-channels:hidden",
+        "language": "he",
+        "status": "PASS"
+      },
+      {
+        "test": "external-channels:approved",
+        "language": "he",
+        "status": "PASS"
+      },
+      {
+        "test": "validation/allowlist/planning/phone/honeypot/language/privacy",
+        "language": "en",
+        "status": "PASS"
+      },
+      {
+        "test": "simulated:ok",
+        "language": "en",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:next",
+        "language": "en",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:400",
+        "language": "en",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:422",
+        "language": "en",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:500",
+        "language": "en",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:malformed",
+        "language": "en",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:unacknowledged",
+        "language": "en",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:false",
+        "language": "en",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:errors",
+        "language": "en",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:network",
+        "language": "en",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:timeout",
+        "language": "en",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "simulated:pending",
+        "language": "en",
+        "status": "PASS",
+        "mockedPosts": 1
+      },
+      {
+        "test": "missing/invalid/unapproved-endpoint/privacy",
+        "language": "en",
+        "status": "PASS"
+      },
+      {
+        "test": "external-channels:hidden",
+        "language": "en",
+        "status": "PASS"
+      },
+      {
+        "test": "external-channels:approved",
+        "language": "en",
+        "status": "PASS"
+      },
+      {
+        "test": "personalized-clock:simulated-payload",
+        "language": "he",
+        "status": "PASS"
+      },
+      {
+        "test": "personalized-clock:simulated-payload",
+        "language": "en",
+        "status": "PASS"
+      },
+      {
+        "test": "pizza-peel:simulated-payload",
+        "language": "he",
+        "status": "PASS"
+      },
+      {
+        "test": "pizza-peel:simulated-payload",
+        "language": "en",
+        "status": "PASS"
+      },
+      {
+        "test": "family-sign:simulated-payload",
+        "language": "he",
+        "status": "PASS"
+      },
+      {
+        "test": "family-sign:simulated-payload",
+        "language": "en",
+        "status": "PASS"
+      },
+      {
+        "test": "hanging-home-sign:simulated-payload",
+        "language": "he",
+        "status": "PASS"
+      },
+      {
+        "test": "hanging-home-sign:simulated-payload",
+        "language": "en",
+        "status": "PASS"
+      },
+      {
+        "test": "oval-room-signs:simulated-payload",
+        "language": "he",
+        "status": "PASS"
+      },
+      {
+        "test": "oval-room-signs:simulated-payload",
+        "language": "en",
+        "status": "PASS"
+      },
+      {
+        "test": "natural-edge-door-sign:simulated-payload",
+        "language": "he",
+        "status": "PASS"
+      },
+      {
+        "test": "natural-edge-door-sign:simulated-payload",
+        "language": "en",
+        "status": "PASS"
+      },
+      {
+        "test": "no-JavaScript",
+        "language": "he",
+        "status": "PASS"
+      }
+    ],
+    "interceptedFormPosts": 38,
+    "realInquiryRequests": 0,
+    "unexpectedExternalRequests": 0
+  },
+  "existingWulNetworkGuard": {
+    "localReads": 7408,
+    "mockedPosts": 32,
+    "denied": 0,
+    "realPosts": 0,
+    "unexpectedExternal": 0,
+    "status": "PASS"
+  },
+  "existingWulGuardNote": "38 intercepted POST attempts, 32 in-memory response fulfillments; pending/timeout requests do not fulfill. No request was forwarded."
+}

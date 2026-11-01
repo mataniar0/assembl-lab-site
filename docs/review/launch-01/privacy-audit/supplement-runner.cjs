@@ -1,0 +1,11 @@
+const fs=require('fs'),{chromium}=require('playwright');const OUT=__dirname;
+(async()=>{const b=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});const c=await b.newContext({serviceWorkers:'block'});let blocked=0;await c.route('**/*',r=>{const q=r.request();if(new URL(q.url()).origin==='http://127.0.0.1:8001'&&['GET','HEAD'].includes(q.method()))return r.continue();blocked++;return r.abort()});await c.routeWebSocket('**/*',ws=>ws.close());const p=await c.newPage(),rows=[];
+for(const site of ['assembl-lab-site','wood-u-like-site']){const api=site.startsWith('wood')?'WUL_I18N':'ASSEMBLE_I18N';
+await p.goto(`http://127.0.0.1:8001/${site}/inquiry/`);const copies=[];
+for(const l of ['he','en']){await p.evaluate(({api,l})=>window[api].setLanguage(l),{api,l});copies.push(await p.locator('#privacy-notice').count()?await p.locator('#privacy-copy').textContent():'');
+for(const width of [320,1440]){await p.setViewportSize({width,height:900});await p.screenshot({path:`${OUT}/screenshots/${site}-${l}-${width}.png`,fullPage:true,mask:[p.locator('input,textarea,a[href^="mailto:"],#privacy-copy')],maskColor:'#d5d5d5'});}}
+rows.push({site,test:'privacy disclosure changes language',status:copies.every(Boolean)&&copies[0]!==copies[1]?'PASS':'FAIL',copyHashes:copies.map(s=>require('crypto').createHash('sha256').update(s).digest('hex')),noticeVisible:await p.locator('#privacy-notice').count()===1,scope:'local',note:'Legal identity and contact are masked in screenshots; no full notice text stored.'});
+await p.reload();rows.push({site,test:'language preference survives reload',status:await p.locator('html').getAttribute('lang')==='en'?'PASS':'FAIL',scope:'local'});
+}
+const keys=await p.evaluate(()=>Object.keys(localStorage));rows.push({test:'shared origin has distinct brand language keys',status:keys.includes('assemble-language')&&keys.includes('wood-u-like-language')?'PASS':'FAIL',keys,scope:'local shared origin'});
+await b.close();const f=JSON.parse(fs.readFileSync(OUT+'/FORM_QA.json'));f.supplement=rows;f.screenshotRedaction={inputs:true,privacyCopy:true,mailtoLinks:true,externalRequestsBlocked:blocked};fs.writeFileSync(OUT+'/FORM_QA.json',JSON.stringify(f,null,2)+'\n');console.log(JSON.stringify(rows));})().catch(e=>{console.error(e);process.exit(1)});

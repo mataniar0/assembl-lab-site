@@ -1,0 +1,13 @@
+# Privacy gaps — observed facts and review needs
+
+| Priority | Finding | Evidence | Proposed separate follow-up |
+| --- | --- | --- | --- |
+| P0 | ASSEMBL LAB has no visible bilingual collection/privacy notice or full privacy policy link at inquiry collection. | FORM_QA production/supplement, source inquiry/index.html; screenshots | Add reviewed HE/EN notice and policy link in a separately authorized code PR. Do not invent approved legal wording. |
+| P0 | ASSEMBL LAB original configuration attempts a real Formspree POST when valid form is submitted, without explicit privacy/activation flags. Every attempt in this audit was blocked. | FORM_QA blockedWrites=1 for each language; inquiry/inquiry.js | Design fail-closed approval controls and preserve existing behavior only as explicitly authorized. Endpoint presence is not owner approval or verified delivery. |
+| P0 verification | Both public deployments are unverified; no correspondence to local source SHA established. | 16 BLOCKED browser probes in NETWORK_AUDIT | Allow host access, capture deployed asset hashes and repeat read-only audit. Do not mark live tests PASS based on localhost. |
+| P1 | Policies must describe persistent language preferences and WUL temporary campaign attribution separately from server submission. | STORAGE_AUDIT | Include key purposes, persistence/lifetime and query/hosting implications in both languages. Sanitized labels are not guaranteed anonymous. |
+| P1 | Both brands use a shared Formspree destination and share public browser origin. | Source configs; shared-origin key check | Explain actual inquiry access/brand routing; do not imply browser storage isolation by URL path. Confirm authorized staff with owner. |
+| P1 | Retention, deletion process, backups, account security, subprocessors, country of processing, hosting logs and notifications cannot be established from browser results. | Deliberately outside read-only browser scope | Obtain owner/provider evidence before approving privacy statements. |
+| P2 defense in depth | ASSEMBL HTML contains external form action although its no-JS ordinary UI hides form controls. WUL has no external action and disabled submit. | FORM_QA no-JS actual UI checks | Consider safe inert HTML fallback in a separate reviewed code change. No ordinary no-JS submission was observed. |
+
+WOOD U LIKE's three false flags must remain false. Its current notice is a preview, not legal approval. No analytics/tracker was observed locally or in audited runtime source; public absence remains unverified. No real inquiry, customer data, payment, merge or deployment is authorized by this report.
