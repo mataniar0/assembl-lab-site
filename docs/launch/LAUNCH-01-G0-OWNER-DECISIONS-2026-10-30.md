@@ -40,3 +40,6 @@ Owner confirms current inquiry records are kept **only in Formspree and Gmail**.
 
 ## Deletion practice — owner confirmation, 2026-11-01
 Owner reports **no prior completed deletion of an inquiry across both Formspree and Gmail**. Therefore cross-system deletion is **NOT operationally verified**. No actual customer record was deleted for this review. Prepare no-PII dry-run checklist; do not claim vendor/backups erased. G0-FACTS-03 P0-04 still open for practical confirmation.
+
+## Formspree Delete control — owner visual confirmation, 2026-11-01
+Owner confirms the **Delete** option is currently visible when viewing an inquiry in their Formspree account. This verifies availability of the UI control only, **not** successful deletion, deletion scope, email copies, recovery, backups, or provider data lifecycle. No deletion was performed. Next check: Gmail delete/trash control and applicable retention behavior.
