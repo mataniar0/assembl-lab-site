@@ -34,3 +34,6 @@ Owner confirms two-factor authentication is **not enabled** for the Formspree ac
 
 ## 2FA activation deferred — owner decision, 2026-11-01
 Owner plans to enable Formspree two-factor authentication later. **P0-02 security action OPEN** until explicit confirmation; no claim it has been enabled. Continue G0 fact finding on retention/deletion in parallel. No credentials/recovery codes requested.
+
+## Owner-managed inquiry copies — 2026-11-01
+Owner confirms current inquiry records are kept **only in Formspree and Gmail**. No separately maintained Excel/computer/other-system copies are reported. This is owner attestation, not evidence of supplier-side logs, backups, or automatic Gmail retention. Any later export or new tool requires updating this data map and policy before use.
