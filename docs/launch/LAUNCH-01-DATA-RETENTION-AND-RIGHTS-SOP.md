@@ -45,3 +45,10 @@ Israeli PPA right of access position: https://www.gov.il/BlobFolder/reports/righ
 4. Record privately the review date, rough count by outcome and any vendor deletion limitation. Store no customer identifiers in public GitHub. Gmail Trash and Formspree backups must not be represented as immediately purged unless verified.
 5. For privacy access/correction/deletion requests, verify requester proportionately, search both systems and account for provider-controlled copies; respond accurately on limits.
 **Open:** Formspree provider retention/deletion/backup facts; Gmail Trash/retention semantics as actually configured; practical ability to remove all relevant mail and supplier copies; final approved rights-request operating timetable.
+
+## Deletion procedure verification status — 2026-11-01
+Owner confirms they have **not previously deleted an inquiry from both Formspree and Gmail**. Therefore this operating procedure is documented but not yet demonstrated end-to-end. Do not delete real inquiry data just to pass QA.
+
+**Non-destructive dry-run:** (1) identify where Delete / Trash controls exist in Formspree and Gmail without activating them; (2) trace a fictional record through a paper checklist of both places and any archived labels; (3) document how to protect open orders, ongoing correspondence and statutory records; (4) record any unknown Formspree backup/erasure behavior for provider clarification; (5) when a legitimately obsolete record exists, perform an owner-authorized deletion with a private audit note, but do not send PII into GitHub or the chat.
+
+**Acceptance:** owner confirms controls and review process; supplier documentation or written answer supports accurate statements on server-side deletion and backups. 30-day visible history is not proof of erasure. This is a process-validation task separate from actual deletion and from policy publication.
