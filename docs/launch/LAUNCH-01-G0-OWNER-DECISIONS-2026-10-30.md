@@ -37,3 +37,6 @@ Owner plans to enable Formspree two-factor authentication later. **P0-02 securit
 
 ## Owner-managed inquiry copies — 2026-11-01
 Owner confirms current inquiry records are kept **only in Formspree and Gmail**. No separately maintained Excel/computer/other-system copies are reported. This is owner attestation, not evidence of supplier-side logs, backups, or automatic Gmail retention. Any later export or new tool requires updating this data map and policy before use.
+
+## Deletion practice — owner confirmation, 2026-11-01
+Owner reports **no prior completed deletion of an inquiry across both Formspree and Gmail**. Therefore cross-system deletion is **NOT operationally verified**. No actual customer record was deleted for this review. Prepare no-PII dry-run checklist; do not claim vendor/backups erased. G0-FACTS-03 P0-04 still open for practical confirmation.
