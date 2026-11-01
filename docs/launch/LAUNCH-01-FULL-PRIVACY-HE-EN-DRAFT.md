@@ -100,7 +100,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 
 **5. Recipients.** Submissions are sent through Formspree, also used by WOOD U LIKE. Authorized handlers and necessary service providers may access data for these purposes. **[Verify account, permissions, notifications, international transfers and safeguards].**
 
-**6. Retention.** We plan to review inquiries every three months to assess whether they remain necessary. Records no longer needed will be deleted, subject to legal retention duties and other legitimate requirements. A quarterly review does not promise deletion within 90 days. Email, vendor and backup deletion arrangements remain under verification before publication.
+**6. Retention.** We review inquiries every three months to assess whether they remain necessary. Records no longer needed will be deleted, subject to legal retention duties and other legitimate requirements. A quarterly review does not promise deletion within 90 days. Email, vendor and backup deletion arrangements remain under verification before publication.
 
 **7. Security.** Access will be restricted and safeguards applied as required by applicable law and risk. **[Verify implemented controls].**
 
