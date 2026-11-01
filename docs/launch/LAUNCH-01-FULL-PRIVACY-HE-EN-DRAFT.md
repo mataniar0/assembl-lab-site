@@ -31,7 +31,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 
 **8. זכויות.** תוכלו לפנות ולבקש לעיין במידע על אודותיכם, ולבקש תיקון או מחיקה של מידע שאינו נכון, שלם, ברור או מעודכן בהתאם לדין. כתובת הפנייה: **labassemble@gmail.com**. טיפול בבקשות ייעשה בהתאם לזכויות ולמגבלות הקבועות בדין.
 
-**9. עוגיות וכלים חיצוניים.** **[להשלים לאחר בדיקת אתר חי: עוגיות, אחסון דפדפן, נתוני מדידה, embeds ושירותים נוספים; מנגנון הסכמה אם נדרש].**
+**9. אחסון בדפדפן ושירותים חיצוניים.** האתר שומר בדפדפן את העדפת השפה באמצעות localStorage ואת נתוני שיוך הקמפיין הזמניים (utm_source ו־utm_campaign) באמצעות sessionStorage. שני המותגים מתארחים תחת אותו מקור GitHub Pages ולכן אין להניח שהאחסון מופרד לפי נתיב. בבדיקות מקומיות לא נצפו עוגיות או כלי מעקב, אך **[נדרשת בדיקת רשת באתר הציבורי לפני קביעה מלאה לגבי עוגיות, שירותים חיצוניים או העברת מידע].**
 
 **10. שינויים.** נעדכן מסמך זה כאשר ישתנו השימושים במידע או הספקים ונדאג להודעה מתאימה כשנדרש.
 
@@ -56,7 +56,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 
 **8. Your rights.** Subject to applicable law, you may request access to information about you and correction or deletion of information that is inaccurate, incomplete, unclear or out of date. Contact: **labassemble@gmail.com**.
 
-**9. Cookies and external services.** **[Inventory actual cookies, browser storage, analytics and embedded services; confirm whether consent controls are necessary].**
+**9. Browser storage and external services.** The site uses localStorage for language preferences and sessionStorage for temporary campaign attribution (utm_source and utm_campaign). Both brands are hosted under the same GitHub Pages origin, so browser storage is not isolated solely by URL path. Local testing did not observe cookies or trackers; **[a live public-site network inspection remains required before making definitive claims about cookies, additional services or data transfers].**
 
 **10. Updates.** We may update this policy when processing or services change and will give appropriate notice where required.
 
@@ -81,7 +81,7 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 
 **8. זכויות נושאי מידע.** ניתן לבקש עיון במידע, וכן תיקון או מחיקה של מידע שאינו נכון, שלם, ברור או מעודכן, בהתאם לדין, באמצעות **labassemble@gmail.com**.
 
-**9. עוגיות וטכנולוגיות נוספות.** **[להשלים רק לאחר בדיקת השירותים והאחסון באתר בפועל].**
+**9. אחסון בדפדפן וטכנולוגיות נוספות.** האתר שומר העדפת שפה באמצעות localStorage. שני המותגים מתארחים תחת אותו מקור GitHub Pages, ולכן אין לראות בנתיבי האתרים הפרדה של אחסון הדפדפן. בבדיקות מקומיות לא נצפו עוגיות או כלי מעקב, אך **[נדרשת בדיקת רשת של האתר הציבורי לפני קביעה מלאה לגבי עוגיות ושירותים חיצוניים].**
 
 **10. עדכונים.** שינויים במדיניות יתועדו ויפורסמו לפי הצורך והדין.
 
@@ -106,14 +106,14 @@ Prepared 2026-10-29. For legal and owner review only. No customer data, config c
 
 **8. Rights.** You may request access and correction or deletion of inaccurate, incomplete, unclear or outdated personal information, subject to applicable law, at **labassemble@gmail.com**.
 
-**9. Cookies and technologies.** **[Complete based on real site inventory].**
+**9. Browser storage and technologies.** The site stores language preferences in localStorage. Both brands share a GitHub Pages origin, so browser storage is not isolated by site path. No cookies or trackers were observed in local testing, but **[a live public-site network inventory remains required before definitive statements about cookies or additional services].**
 
 **10. Updates.** Changes to processing practices and this policy will be documented and notified when appropriate.
 
 ## Publication and QA gate
 1. Verify individual legal controller identity and exact registered business name (ASSEMBLE vs ASSEMBL); no identifiers or personal home address should be added to public GitHub before deciding where disclosure is legally required.
 2. Verify accurate account and vendor facts, actual retention, cross-border processing, email ownership/receipt, analytics/cookies, and document both languages.
-3. Obtain owner and appropriate legal review of the full policy and short-form Section 11 notices; confirm accessibility and link placement.
+3. Obtain documented owner approval of the full policies and short-form Section 11 notices after fact verification; seek qualified legal advice if material uncertainties remain. An attorney signature is not a blanket requirement. Confirm accessibility and link placement.
 4. No publication, enablement, real POST, merge or deployment until separate approval. WUL three flags remain false.
 5. Separate owner-approved E2E test and later public launch approvals are required.
 
