@@ -1,0 +1,290 @@
+{
+  "definition": "Readiness review records; not re-executed browser cases or legal certification",
+  "counts": {
+    "PASS": 28,
+    "FAIL": 4,
+    "BLOCKED": 8
+  },
+  "checks": [
+    {
+      "id": "P-WUL-identity_contact",
+      "status": "PASS",
+      "subject": "WUL HE/EN identity_contact",
+      "evidence": "PR19 full policy draft, corresponding sections 1\u20139; POLICY_HE_EN_MATRIX.md",
+      "scope": "Language consistency only; not independent factual or legal verification"
+    },
+    {
+      "id": "P-WUL-purposes",
+      "status": "PASS",
+      "subject": "WUL HE/EN purposes",
+      "evidence": "PR19 full policy draft, corresponding sections 1\u20139; POLICY_HE_EN_MATRIX.md",
+      "scope": "Language consistency only; not independent factual or legal verification"
+    },
+    {
+      "id": "P-WUL-data_types",
+      "status": "PASS",
+      "subject": "WUL HE/EN data_types",
+      "evidence": "PR19 full policy draft, corresponding sections 1\u20139; POLICY_HE_EN_MATRIX.md",
+      "scope": "Language consistency only; not independent factual or legal verification"
+    },
+    {
+      "id": "P-WUL-formspree",
+      "status": "PASS",
+      "subject": "WUL HE/EN formspree",
+      "evidence": "PR19 full policy draft, corresponding sections 1\u20139; POLICY_HE_EN_MATRIX.md",
+      "scope": "Language consistency only; not independent factual or legal verification"
+    },
+    {
+      "id": "P-WUL-browser_storage",
+      "status": "PASS",
+      "subject": "WUL HE/EN browser_storage",
+      "evidence": "PR19 full policy draft, corresponding sections 1\u20139; POLICY_HE_EN_MATRIX.md",
+      "scope": "Language consistency only; not independent factual or legal verification"
+    },
+    {
+      "id": "P-WUL-quarterly_review",
+      "status": "PASS",
+      "subject": "WUL HE/EN quarterly_review",
+      "evidence": "PR19 full policy draft, corresponding sections 1\u20139; POLICY_HE_EN_MATRIX.md",
+      "scope": "Language consistency only; not independent factual or legal verification"
+    },
+    {
+      "id": "P-WUL-deletion_legal_duties",
+      "status": "PASS",
+      "subject": "WUL HE/EN deletion_legal_duties",
+      "evidence": "PR19 full policy draft, corresponding sections 1\u20139; POLICY_HE_EN_MATRIX.md",
+      "scope": "Language consistency only; not independent factual or legal verification"
+    },
+    {
+      "id": "P-WUL-rights",
+      "status": "PASS",
+      "subject": "WUL HE/EN rights",
+      "evidence": "PR19 full policy draft, corresponding sections 1\u20139; POLICY_HE_EN_MATRIX.md",
+      "scope": "Language consistency only; not independent factual or legal verification"
+    },
+    {
+      "id": "P-ASSEMBL-identity_contact",
+      "status": "PASS",
+      "subject": "ASSEMBL HE/EN identity_contact",
+      "evidence": "PR19 full policy draft, corresponding sections 1\u20139; POLICY_HE_EN_MATRIX.md",
+      "scope": "Language consistency only; not independent factual or legal verification"
+    },
+    {
+      "id": "P-ASSEMBL-purposes",
+      "status": "PASS",
+      "subject": "ASSEMBL HE/EN purposes",
+      "evidence": "PR19 full policy draft, corresponding sections 1\u20139; POLICY_HE_EN_MATRIX.md",
+      "scope": "Language consistency only; not independent factual or legal verification"
+    },
+    {
+      "id": "P-ASSEMBL-data_types",
+      "status": "PASS",
+      "subject": "ASSEMBL HE/EN data_types",
+      "evidence": "PR19 full policy draft, corresponding sections 1\u20139; POLICY_HE_EN_MATRIX.md",
+      "scope": "Language consistency only; not independent factual or legal verification"
+    },
+    {
+      "id": "P-ASSEMBL-formspree",
+      "status": "PASS",
+      "subject": "ASSEMBL HE/EN formspree",
+      "evidence": "PR19 full policy draft, corresponding sections 1\u20139; POLICY_HE_EN_MATRIX.md",
+      "scope": "Language consistency only; not independent factual or legal verification"
+    },
+    {
+      "id": "P-ASSEMBL-browser_storage",
+      "status": "PASS",
+      "subject": "ASSEMBL HE/EN browser_storage",
+      "evidence": "PR19 full policy draft, corresponding sections 1\u20139; POLICY_HE_EN_MATRIX.md",
+      "scope": "Language consistency only; not independent factual or legal verification"
+    },
+    {
+      "id": "P-ASSEMBL-quarterly_review",
+      "status": "FAIL",
+      "subject": "ASSEMBL HE/EN quarterly_review",
+      "evidence": "PR19 full policy draft, corresponding sections 1\u20139; POLICY_HE_EN_MATRIX.md",
+      "scope": "Language consistency only; not independent factual or legal verification"
+    },
+    {
+      "id": "P-ASSEMBL-deletion_legal_duties",
+      "status": "PASS",
+      "subject": "ASSEMBL HE/EN deletion_legal_duties",
+      "evidence": "PR19 full policy draft, corresponding sections 1\u20139; POLICY_HE_EN_MATRIX.md",
+      "scope": "Language consistency only; not independent factual or legal verification"
+    },
+    {
+      "id": "P-ASSEMBL-rights",
+      "status": "PASS",
+      "subject": "ASSEMBL HE/EN rights",
+      "evidence": "PR19 full policy draft, corresponding sections 1\u20139; POLICY_HE_EN_MATRIX.md",
+      "scope": "Language consistency only; not independent factual or legal verification"
+    },
+    {
+      "id": "C1",
+      "status": "PASS",
+      "subject": "AS candidate notice",
+      "evidence": "SOURCE_EVIDENCE.json codeFacts; CODE_GATE_REVIEW.md",
+      "scope": "Inspected source refs only; not deployed-site proof"
+    },
+    {
+      "id": "C2",
+      "status": "PASS",
+      "subject": "AS candidate three false flags",
+      "evidence": "SOURCE_EVIDENCE.json codeFacts; CODE_GATE_REVIEW.md",
+      "scope": "Inspected source refs only; not deployed-site proof"
+    },
+    {
+      "id": "C3",
+      "status": "PASS",
+      "subject": "AS strict three-boolean gate",
+      "evidence": "SOURCE_EVIDENCE.json codeFacts; CODE_GATE_REVIEW.md",
+      "scope": "Inspected source refs only; not deployed-site proof"
+    },
+    {
+      "id": "C4",
+      "status": "PASS",
+      "subject": "AS inert native action",
+      "evidence": "SOURCE_EVIDENCE.json codeFacts; CODE_GATE_REVIEW.md",
+      "scope": "Inspected source refs only; not deployed-site proof"
+    },
+    {
+      "id": "C5",
+      "status": "PASS",
+      "subject": "WUL notice",
+      "evidence": "SOURCE_EVIDENCE.json codeFacts; CODE_GATE_REVIEW.md",
+      "scope": "Inspected source refs only; not deployed-site proof"
+    },
+    {
+      "id": "C6",
+      "status": "PASS",
+      "subject": "WUL three false flags",
+      "evidence": "SOURCE_EVIDENCE.json codeFacts; CODE_GATE_REVIEW.md",
+      "scope": "Inspected source refs only; not deployed-site proof"
+    },
+    {
+      "id": "C7",
+      "status": "PASS",
+      "subject": "WUL explicit destination/privacy gate",
+      "evidence": "SOURCE_EVIDENCE.json codeFacts; CODE_GATE_REVIEW.md",
+      "scope": "Inspected source refs only; not deployed-site proof"
+    },
+    {
+      "id": "C8",
+      "status": "PASS",
+      "subject": "WUL inert native action",
+      "evidence": "SOURCE_EVIDENCE.json codeFacts; CODE_GATE_REVIEW.md",
+      "scope": "Inspected source refs only; not deployed-site proof"
+    },
+    {
+      "id": "C9",
+      "status": "PASS",
+      "subject": "no public HTML links to unapproved draft",
+      "evidence": "SOURCE_EVIDENCE.json codeFacts; CODE_GATE_REVIEW.md",
+      "scope": "Inspected source refs only; not deployed-site proof"
+    },
+    {
+      "id": "C10",
+      "status": "FAIL",
+      "subject": "ASSEMBL main already contains approval gate",
+      "evidence": "SOURCE_EVIDENCE.json assembl_main: flags absent, direct HTML Formspree action, no notice",
+      "scope": "main source; deployment unverified"
+    },
+    {
+      "id": "C11",
+      "status": "FAIL",
+      "subject": "approved full-policy links present",
+      "evidence": "PR26 reused failures and source anchor scan",
+      "scope": "Candidate/static source"
+    },
+    {
+      "id": "R1",
+      "status": "PASS",
+      "subject": "AS existing browser evidence matches candidate runtime hashes",
+      "evidence": "SOURCE_EVIDENCE.json reuse.pr26RuntimeHashesMatch",
+      "scope": "Evidence applicability; no repeat execution"
+    },
+    {
+      "id": "R2",
+      "status": "PASS",
+      "subject": "WUL prior runtime hashes unchanged",
+      "evidence": "SOURCE_EVIDENCE.json reuse.wulAllAuditedRuntimeHashesMatch",
+      "scope": "Evidence applicability; no repeat execution"
+    },
+    {
+      "id": "R3",
+      "status": "BLOCKED",
+      "subject": "public inventory and deployment correspondence",
+      "evidence": "PR25 public 16 BLOCKED; PR26 public BLOCKED; unchanged runtime access policy",
+      "scope": "Public verification not established; no repeated blocked probe"
+    },
+    {
+      "id": "V1",
+      "status": "PASS",
+      "subject": "Official vendor-document evidence is recorded with limits",
+      "evidence": "PR19 vendor verification, owner decisions and SOP; FORMSPREE_VERIFICATION_MATRIX.md",
+      "scope": "Evidence provenance only; owner screenshots not independently re-opened"
+    },
+    {
+      "id": "V2",
+      "status": "PASS",
+      "subject": "Owner contact/cadence and account screenshot statements are recorded",
+      "evidence": "PR19 vendor verification, owner decisions and SOP; FORMSPREE_VERIFICATION_MATRIX.md",
+      "scope": "Evidence provenance only; owner screenshots not independently re-opened"
+    },
+    {
+      "id": "V3",
+      "status": "BLOCKED",
+      "subject": "formal controller registration identity",
+      "evidence": "PR19 open owner/vendor/signoff checklists; OPEN_BLOCKERS.md",
+      "scope": "Required owner/provider evidence absent; no account access authorized"
+    },
+    {
+      "id": "V4",
+      "status": "BLOCKED",
+      "subject": "actual account roles and login security",
+      "evidence": "PR19 open owner/vendor/signoff checklists; OPEN_BLOCKERS.md",
+      "scope": "Required owner/provider evidence absent; no account access authorized"
+    },
+    {
+      "id": "V5",
+      "status": "BLOCKED",
+      "subject": "current full notification/workflow recipient map",
+      "evidence": "PR19 open owner/vendor/signoff checklists; OPEN_BLOCKERS.md",
+      "scope": "Required owner/provider evidence absent; no account access authorized"
+    },
+    {
+      "id": "V6",
+      "status": "BLOCKED",
+      "subject": "processor terms, subprocessors, transfers and safeguards",
+      "evidence": "PR19 open owner/vendor/signoff checklists; OPEN_BLOCKERS.md",
+      "scope": "Required owner/provider evidence absent; no account access authorized"
+    },
+    {
+      "id": "V7",
+      "status": "BLOCKED",
+      "subject": "actual retention/deletion and backup constraints",
+      "evidence": "PR19 open owner/vendor/signoff checklists; OPEN_BLOCKERS.md",
+      "scope": "Required owner/provider evidence absent; no account access authorized"
+    },
+    {
+      "id": "V8",
+      "status": "BLOCKED",
+      "subject": "practical rights and cross-system deletion procedure",
+      "evidence": "PR19 open owner/vendor/signoff checklists; OPEN_BLOCKERS.md",
+      "scope": "Required owner/provider evidence absent; no account access authorized"
+    },
+    {
+      "id": "V9",
+      "status": "BLOCKED",
+      "subject": "versioned owner approval of all four final policies",
+      "evidence": "PR19 open owner/vendor/signoff checklists; OPEN_BLOCKERS.md",
+      "scope": "Required owner/provider evidence absent; no account access authorized"
+    },
+    {
+      "id": "V10",
+      "status": "FAIL",
+      "subject": "WUL full-policy marketing promise matches short notice",
+      "evidence": "Full draft \u00a73 only as permitted by law vs WUL short copy no marketing without separate consent",
+      "scope": "Cross-document promise alignment; no legal conclusion"
+    }
+  ]
+}

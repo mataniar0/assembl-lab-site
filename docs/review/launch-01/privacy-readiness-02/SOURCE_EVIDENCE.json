@@ -1,0 +1,115 @@
+{
+  "refs": {
+    "policies_pr19": "807a652c1e80264c983f3c6053187efcb95321dd",
+    "fix_pr21": "3c405f361f3171ea26483c39838265bce1c58c97",
+    "audit_pr25": "44f1ecef946979c48d971a3781200549af865239",
+    "qa_pr26": "d59c269799a701179530cedfbd636397aa4effff",
+    "assembl_main": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+    "wul_main": "600cf71236828040cb32f8a0b9d102e52c4c4412"
+  },
+  "documentHashes": {
+    "docs/launch/LAUNCH-01-DATA-RETENTION-AND-RIGHTS-SOP.md": "311bc185311ff07df24ecd88a848e679d69ce5f81ebf855ccbce75f5d678abb0",
+    "docs/launch/LAUNCH-01-EXTERNAL-SERVICES-AUDIT-2026-10-31.md": "e1749b5975d415eaa9ec7339f0f86b54e501c23367f9add4fdaca3fb8a6bcd9e",
+    "docs/launch/LAUNCH-01-FORMSPREE-VENDOR-VERIFICATION.md": "b886ad918806e462cbda45741cf6f7c3fc5eb3efbeee6940b348f71b864a1b4d",
+    "docs/launch/LAUNCH-01-FULL-PRIVACY-HE-EN-DRAFT.md": "4b829801fb8cbc3aa1c4434401db31c59d98a812de63d78ebe5fb788e8afc005",
+    "docs/launch/LAUNCH-01-G0-OWNER-DECISIONS-2026-10-30.md": "9aacaa28ea0f741219e92e98c667e4d3c904a1d3f5096f91213976d6039482c1",
+    "docs/launch/LAUNCH-01-G0-OWNER-PRIVACY-SIGNOFF.md": "4fc8d3b14e53f72c83bd7949bc500578db750256d01e865ec5dc382b40db63b1",
+    "docs/launch/LAUNCH-01-G0-PRIVACY-APPROVAL-STATUS-2026-11-01.md": "bc442c37f3b14f02b13d5cb36ba60c73aca38b830b52f536b218847fd9cf4cd5",
+    "docs/launch/LAUNCH-01-G0-PRIVACY-REVIEW.md": "7eca90ed6e9da410a8864c886b69aad3402695567a81c9afc51d2525553ab308",
+    "docs/launch/LAUNCH-01-G0-PRIVACY-TECHNICAL-AUDIT.md": "55a71c76ca6a1278e1425aa820f6e4c824c9a929d85663a3b0a84766ace51af8",
+    "docs/launch/LAUNCH-01-G1-CI-CURRENT-2026-10-29.md": "685b7e7fd0431898c3838cbd0019d9b01e8396ba0bb8af47709cb4155b5f31cd",
+    "docs/launch/LAUNCH-01-G1-FORM-PRIVACY-GAP.md": "9124d2ff6dc0db0311cf6a41d78a27050f6d74975592656cd1f757c730182536",
+    "docs/launch/LAUNCH-01-G1-MOCK-QA-REVIEW.md": "daada8edef382bf4d68cacd30bcff377aa540fb00f6a93903ca1dc22e75e2846",
+    "docs/launch/LAUNCH-01-LEGAL-PRIVACY-REVIEW-PACKET.md": "f3481fbc258e981eb6a8e2c2126868baad332616f929b9c06d94eb57b41af5db",
+    "docs/launch/LAUNCH-01-WUL-CONTROLLED-TEST-READINESS.md": "d904ef27a3366c9b25512b0e0446b6130fba737461deb32c4bde5f0de2ff0bac",
+    "docs/launch/LAUNCH-COMMERCIAL-GO-NOGO-CHECKLIST.md": "5e5f35902f51ca8dc094243f76f8af113dead4720ac03018b76667adfde74814",
+    "docs/launch/LAUNCH-QUOTE-ORDER-FULFILLMENT-TEMPLATES.md": "9d35014f7809bc7879a24e65405993facb1da62752e1507f2eba74991c79dbb1"
+  },
+  "codeFacts": {
+    "assembl_main": {
+      "sourceSha": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "flags": {
+        "formDestinationApproved": "ABSENT",
+        "privacyApproved": "ABSENT",
+        "contactDetailsApproved": "ABSENT"
+      },
+      "formTag": "<form id=\"inquiry-form\" class=\"quote-form\" action=\"https://formspree.io/f/xwlvlbno\" method=\"post\">",
+      "noticeIdPresent": false,
+      "htmlPagesInspected": 13,
+      "possiblePolicyOrDraftLinks": [],
+      "runtimeHashes": {
+        "inquiry/index.html": "4afb0a7a9175f96b277abd7c01aa20e2a6030ab55864f7b0517f6764b37a5755",
+        "inquiry/inquiry.js": "f181d043c0a4fce79ac66e6c50eb33b0ab20e71578138eccb15be42eab2e9001",
+        "inquiry/contact-config.js": "638e7ddbd0bd6d8e280082a341148c7e832844e8b34ceefa68802039d247bc4b"
+      }
+    },
+    "policies_pr19": {
+      "sourceSha": "807a652c1e80264c983f3c6053187efcb95321dd",
+      "flags": {
+        "formDestinationApproved": "ABSENT",
+        "privacyApproved": "ABSENT",
+        "contactDetailsApproved": "ABSENT"
+      },
+      "formTag": "<form id=\"inquiry-form\" class=\"quote-form\" action=\"https://formspree.io/f/xwlvlbno\" method=\"post\">",
+      "noticeIdPresent": false,
+      "htmlPagesInspected": 12,
+      "possiblePolicyOrDraftLinks": [],
+      "runtimeHashes": {
+        "inquiry/index.html": "c9f2653ffa5f5fc761e843beae71a057ad487ea7b1fee931b7ede46c16b1785b",
+        "inquiry/inquiry.js": "f181d043c0a4fce79ac66e6c50eb33b0ab20e71578138eccb15be42eab2e9001",
+        "inquiry/contact-config.js": "638e7ddbd0bd6d8e280082a341148c7e832844e8b34ceefa68802039d247bc4b"
+      }
+    },
+    "fix_pr21": {
+      "sourceSha": "3c405f361f3171ea26483c39838265bce1c58c97",
+      "flags": {
+        "formDestinationApproved": "false",
+        "privacyApproved": "false",
+        "contactDetailsApproved": "false"
+      },
+      "formTag": "<form id=\"inquiry-form\" class=\"quote-form\" action=\"#\" method=\"post\">",
+      "noticeIdPresent": true,
+      "htmlPagesInspected": 12,
+      "possiblePolicyOrDraftLinks": [],
+      "runtimeHashes": {
+        "inquiry/index.html": "f29be93cbf3ad9c73e16410b423e7e174173f3abaf78ff1b96b946b0bb4b1797",
+        "inquiry/inquiry.js": "1e981f06ba7ea4818ad604561533786102208f90ceba558a7e9a5b610a84ead8",
+        "inquiry/contact-config.js": "e5b6eeb8538f358aab7b24988c52cb3d96eddbf7b27f1c3f011c180df46cdfb2"
+      }
+    },
+    "wul_main": {
+      "sourceSha": "600cf71236828040cb32f8a0b9d102e52c4c4412",
+      "flags": {
+        "formDestinationApproved": "false",
+        "privacyApproved": "false",
+        "contactDetailsApproved": "false"
+      },
+      "formTag": "<form id=\"inquiry-form\" novalidate>",
+      "noticeIdPresent": true,
+      "htmlPagesInspected": 15,
+      "possiblePolicyOrDraftLinks": [],
+      "runtimeHashes": {
+        "inquiry/index.html": "7fc5157b4fc9bad8d175b46697ba008f54801b81b71a5dbfcfdddff36b121fe0",
+        "inquiry/inquiry.js": "69eaf291ca56578a46dd1a16fb6c7658513931c569746df78683d025fc94e695",
+        "inquiry/contact-config.js": "2544a923b1c35320b300b677ffe460b893545ddffa3a6edd6d6aa83aadb8e05e"
+      }
+    }
+  },
+  "reuse": {
+    "pr26RuntimeHashesMatch": true,
+    "wulAllAuditedRuntimeHashesMatch": true,
+    "pr26Counts": {
+      "PASS": 199,
+      "FAIL": 2,
+      "BLOCKED": 1,
+      "note": "Reused unchanged-source evidence; not rerun or added to readiness counts."
+    },
+    "pr25Counts": {
+      "local": 647,
+      "PASS": 642,
+      "FAIL": 5,
+      "publicBLOCKED": 16
+    }
+  },
+  "scope": "Static/document evidence review; no new browser execution or supplier account access"
+}
