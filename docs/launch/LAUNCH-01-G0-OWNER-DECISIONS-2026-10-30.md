@@ -25,3 +25,6 @@ Next verification: authorized Formspree account users, notification recipients a
 
 ## Formspree account access attestation — 2026-11-01
 Owner explicitly confirms **only the owner has access to the Formspree account**. This is owner-attested and not an independent role or security-settings audit. Do not infer that notifications or forwarding go only to owner, that email account has no other access, or that vendor subprocessors cannot process submissions. Remaining P0-02: confirm notification email recipient list, workflow integrations, downstream forwarding and mailbox access; record account login-protection settings separately without credentials.
+
+## Notification destinations and downstream forwarding — owner confirmation, 2026-11-01
+Owner explicitly confirms **Formspree sends notifications only to `labassemble@gmail.com`**, with **no additional recipients or automatic forwarding/integrations**. This is an owner attestation about current configuration; no credentials or customer data were collected. It does not establish whether the Gmail account itself has forwarding or delegates, whether the provider uses subprocessors, or the vendor's backup deletion timetable. P0-02 notification destination subitem: OWNER-CONFIRMED; further independent settings/security verification optional as risk appropriate.
