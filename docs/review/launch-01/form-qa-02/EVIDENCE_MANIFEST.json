@@ -1,0 +1,23 @@
+{
+  "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97",
+  "wulSha": "600cf71236828040cb32f8a0b9d102e52c4c4412",
+  "files": {
+    "docs/review/launch-01/form-qa-02/COMPARISON_WITH_PR25.md": "79c60720bba3be674a124123023fc6566e79359f9e49e4e000c9ed8b1c43fc8c",
+    "docs/review/launch-01/form-qa-02/DELIVERY.md": "1e9a94183eac772a9384d660e996661ecbfde6d1f4211a9822659db34a633c40",
+    "docs/review/launch-01/form-qa-02/FAILURES_AND_FIXES.md": "4951f6a4d6babc508fda4a03fb6d8558586c464015a0f4ec4885c3e713ffac86",
+    "docs/review/launch-01/form-qa-02/FORM_REGRESSION.json": "2eee70a03301c1f43814cf2947bf2576b24a2779e7535ad03d8ba2e036edd5c2",
+    "docs/review/launch-01/form-qa-02/GATE_MATRIX.json": "57f95a8ea6dfe54d8b3669a599140c229cf9fafe0d0b26f1976701d95bf9f32e",
+    "docs/review/launch-01/form-qa-02/PRIVACY_NOTICE_QA.md": "77ab03b0118a0e7782f1e6984ea1f27cb6edb09c2e102e60c4deb95135cb9837",
+    "docs/review/launch-01/form-qa-02/REPORT_HE.md": "5942a127645b179b3ef50251a01747d23b69c4cdd28d6790150a9aa4bc784f26",
+    "docs/review/launch-01/form-qa-02/SMOKE_FINAL.json": "db98af3d2ed9fa4c35a32aaca98d8e0bb8ef47d614f2a425cbe4a91e0ce0b3f8",
+    "docs/review/launch-01/form-qa-02/SMOKE_INITIAL.json": "1fc155443d842cfbbb49f4dbf2e919cad6a82e3c234c40d6f8e5ca22e51e0126",
+    "docs/review/launch-01/form-qa-02/inquiry-en-1440.png": "a64fac616f9d98c8ea91b8d29156176904f61854c51e8deb0921573e5018aac5",
+    "docs/review/launch-01/form-qa-02/inquiry-en-320.png": "6977e1772301538bbedb40610146bc534d20d58ffe3e76a9ce75373f58e8d9cb",
+    "docs/review/launch-01/form-qa-02/inquiry-he-1440.png": "51a07bc2d6f8ce6dfd07b49ffa0f00cc2548fc2149d8496ac316f92647dd5f8b",
+    "docs/review/launch-01/form-qa-02/inquiry-he-320.png": "90021537d29b6eb085ae1e1a34d1de471d7968a715067df28424a9e6ed1654ff"
+  },
+  "testFiles": {
+    "tests/form_qa_02.cjs": "fd91b049d7be6ea51c8853786d865424b19e6c56e38a5d5dc6aa34dd17c15289",
+    "tests/site_smoke.py": "e3d6becd23fcb8e766d3f4d5aeaa7c829e0ea1399de382cf9973bba2c5c8d340"
+  }
+}

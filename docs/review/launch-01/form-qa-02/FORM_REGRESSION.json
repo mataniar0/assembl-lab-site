@@ -1,0 +1,2351 @@
+{
+  "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97",
+  "wulSha": "600cf71236828040cb32f8a0b9d102e52c4c4412",
+  "scope": "local browser unless explicitly public",
+  "started": "2026-11-01T08:43:36.123Z",
+  "browser": "154.0.8037.57",
+  "runtimeSourceHashes": {
+    "inquiry/index.html": "f29be93cbf3ad9c73e16410b423e7e174173f3abaf78ff1b96b946b0bb4b1797",
+    "inquiry/inquiry.js": "1e981f06ba7ea4818ad604561533786102208f90ceba558a7e9a5b610a84ead8",
+    "inquiry/contact-config.js": "e5b6eeb8538f358aab7b24988c52cb3d96eddbf7b27f1c3f011c180df46cdfb2",
+    "assets/language.js": "e1d998997524ed8d72034991bf25d5e80d385f33bcbbb2b5fe1de87a7ff5199c"
+  },
+  "cases": [
+    {
+      "scope": "harness",
+      "test": "guard self-test blocks external write",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "flags": {
+        "formDestinationApproved": false,
+        "privacyApproved": false,
+        "contactDetailsApproved": false
+      },
+      "test": "original three flags remain false",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "test": "original configuration does not attempt POST",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "width": 320,
+      "lang": "he",
+      "dir": "rtl",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "test": "privacy notice layout",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "width": 320,
+      "violations": [],
+      "test": "mobile axe WCAG A/AA",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "width": 390,
+      "lang": "he",
+      "dir": "rtl",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "test": "privacy notice layout",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "width": 768,
+      "lang": "he",
+      "dir": "rtl",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "test": "privacy notice layout",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "width": 1024,
+      "lang": "he",
+      "dir": "rtl",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "test": "privacy notice layout",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "width": 1440,
+      "lang": "he",
+      "dir": "rtl",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "test": "privacy notice layout",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "observedLinks": [],
+      "approval": "No approved policy or approval evidence present in candidate",
+      "test": "full approved privacy policy link exists",
+      "status": "FAIL",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "violations": [],
+      "test": "axe WCAG A/AA",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "focusSequence": [
+        {
+          "id": "customer-contact",
+          "tag": "INPUT",
+          "outline": "solid"
+        },
+        {
+          "id": "quantity",
+          "tag": "INPUT",
+          "outline": "solid"
+        },
+        {
+          "id": "",
+          "tag": "SUMMARY",
+          "outline": "solid"
+        },
+        {
+          "id": "email-request",
+          "tag": "A",
+          "outline": "solid"
+        },
+        {
+          "id": "",
+          "tag": "BODY",
+          "outline": "none"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "outline": "solid"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "outline": "solid"
+        },
+        {
+          "id": "",
+          "tag": "BUTTON",
+          "outline": "solid"
+        },
+        {
+          "id": "",
+          "tag": "BUTTON",
+          "outline": "solid"
+        },
+        {
+          "id": "",
+          "tag": "SUMMARY",
+          "outline": "solid"
+        },
+        {
+          "id": "product",
+          "tag": "SELECT",
+          "outline": "solid"
+        },
+        {
+          "id": "customer-name",
+          "tag": "INPUT",
+          "outline": "solid"
+        }
+      ],
+      "test": "keyboard can reach email fallback",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "test": "notice text changes language",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "openedExternalApplication": false,
+      "fieldsEncoded": true,
+      "test": "email fallback builds draft only",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "focus": "product",
+      "test": "required validation and readable error",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "test": "invalid contact blocked",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "test": "validation message switches language",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "mockedPosts": 1,
+      "expectedState": "success",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock success",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "test": "outcome language change success",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "mockedPosts": 1,
+      "expectedState": "error",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock 422",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "test": "outcome language change 422",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "mockedPosts": 1,
+      "expectedState": "error",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock 500",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "test": "outcome language change 500",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "mockedPosts": 1,
+      "expectedState": "error",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock network",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "test": "outcome language change network",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "mockedPosts": 1,
+      "expectedState": "error",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock timeout",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "test": "outcome language change timeout",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "test": "pending duplicate blocked",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "mockedPosts": 1,
+      "expectedState": "success",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock duplicate",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "test": "outcome language change duplicate",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "mockedPosts": 1,
+      "expectedState": "error",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock malformed",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "test": "outcome language change malformed",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "mockedPosts": 1,
+      "expectedState": "error",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock unacknowledged",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "test": "outcome language change unacknowledged",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "test": "language switches while submission pending",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "mockedPosts": 1,
+      "expectedState": "success",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock pending-language",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "test": "outcome language change pending-language",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "requestedLanguage": "he",
+      "actualLanguage": "he",
+      "note": "English requires JS; no-JS is Hebrew fallback, not a claimed English pass",
+      "noticeVisible": true,
+      "action": "#",
+      "visibleFields": 0,
+      "visibleSubmit": false,
+      "mailto": true,
+      "test": "no-JS safe static fallback",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "flags": {
+        "formDestinationApproved": false,
+        "privacyApproved": false,
+        "contactDetailsApproved": false
+      },
+      "test": "original three flags remain false",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "test": "original configuration does not attempt POST",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "lang": "en",
+      "dir": "ltr",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "test": "privacy notice layout",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "violations": [],
+      "test": "mobile axe WCAG A/AA",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "lang": "en",
+      "dir": "ltr",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "test": "privacy notice layout",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "width": 768,
+      "lang": "en",
+      "dir": "ltr",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "test": "privacy notice layout",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "width": 1024,
+      "lang": "en",
+      "dir": "ltr",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "test": "privacy notice layout",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "lang": "en",
+      "dir": "ltr",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "test": "privacy notice layout",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "observedLinks": [],
+      "approval": "No approved policy or approval evidence present in candidate",
+      "test": "full approved privacy policy link exists",
+      "status": "FAIL",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "violations": [],
+      "test": "axe WCAG A/AA",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "focusSequence": [
+        {
+          "id": "customer-contact",
+          "tag": "INPUT",
+          "outline": "solid"
+        },
+        {
+          "id": "quantity",
+          "tag": "INPUT",
+          "outline": "solid"
+        },
+        {
+          "id": "",
+          "tag": "SUMMARY",
+          "outline": "solid"
+        },
+        {
+          "id": "email-request",
+          "tag": "A",
+          "outline": "solid"
+        },
+        {
+          "id": "",
+          "tag": "BODY",
+          "outline": "none"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "outline": "solid"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "outline": "solid"
+        },
+        {
+          "id": "",
+          "tag": "BUTTON",
+          "outline": "solid"
+        },
+        {
+          "id": "",
+          "tag": "BUTTON",
+          "outline": "solid"
+        },
+        {
+          "id": "",
+          "tag": "SUMMARY",
+          "outline": "solid"
+        },
+        {
+          "id": "product",
+          "tag": "SELECT",
+          "outline": "solid"
+        },
+        {
+          "id": "customer-name",
+          "tag": "INPUT",
+          "outline": "solid"
+        }
+      ],
+      "test": "keyboard can reach email fallback",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "test": "notice text changes language",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "openedExternalApplication": false,
+      "fieldsEncoded": true,
+      "test": "email fallback builds draft only",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "focus": "product",
+      "test": "required validation and readable error",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "test": "invalid contact blocked",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "test": "validation message switches language",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "mockedPosts": 1,
+      "expectedState": "success",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock success",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "test": "outcome language change success",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "mockedPosts": 1,
+      "expectedState": "error",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock 422",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "test": "outcome language change 422",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "mockedPosts": 1,
+      "expectedState": "error",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock 500",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "test": "outcome language change 500",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "mockedPosts": 1,
+      "expectedState": "error",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock network",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "test": "outcome language change network",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "mockedPosts": 1,
+      "expectedState": "error",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock timeout",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "test": "outcome language change timeout",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "test": "pending duplicate blocked",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "mockedPosts": 1,
+      "expectedState": "success",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock duplicate",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "test": "outcome language change duplicate",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "mockedPosts": 1,
+      "expectedState": "error",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock malformed",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "test": "outcome language change malformed",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "mockedPosts": 1,
+      "expectedState": "error",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock unacknowledged",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "test": "outcome language change unacknowledged",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "test": "language switches while submission pending",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "mockedPosts": 1,
+      "expectedState": "success",
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ],
+      "test": "mock pending-language",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "test": "outcome language change pending-language",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "requestedLanguage": "en",
+      "actualLanguage": "he",
+      "note": "English requires JS; no-JS is Hebrew fallback, not a claimed English pass",
+      "noticeVisible": true,
+      "action": "#",
+      "visibleFields": 0,
+      "visibleSubmit": false,
+      "mailto": true,
+      "test": "no-JS safe static fallback",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "he",
+      "wulSha": "600cf71236828040cb32f8a0b9d102e52c4c4412",
+      "flags": [
+        false,
+        false,
+        false
+      ],
+      "noticeVisible": true,
+      "copy": true,
+      "submitDisabled": true,
+      "test": "WUL focused regression",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "language": "en",
+      "wulSha": "600cf71236828040cb32f8a0b9d102e52c4c4412",
+      "flags": [
+        false,
+        false,
+        false
+      ],
+      "noticeVisible": true,
+      "copy": true,
+      "submitDisabled": true,
+      "test": "WUL focused regression",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    },
+    {
+      "test": "public inquiry reachable",
+      "status": "BLOCKED",
+      "scope": "public",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97",
+      "error": "page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://mataniar0.github.io/assembl-lab-site/inquiry/",
+      "deployedSha": "UNVERIFIED"
+    },
+    {
+      "totalMockedPosts": 20,
+      "blockedWrites": 1,
+      "test": "zero forwarded writes and no page errors",
+      "status": "PASS",
+      "candidateSha": "3c405f361f3171ea26483c39838265bce1c58c97"
+    }
+  ],
+  "privacy": [
+    {
+      "language": "he",
+      "width": 320,
+      "lang": "he",
+      "dir": "rtl",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "textSha256": "6580cf0637ecc30ed0a6664004913e185449df893a8abfb829d474599bffd36a"
+    },
+    {
+      "language": "he",
+      "width": 390,
+      "lang": "he",
+      "dir": "rtl",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "textSha256": "6580cf0637ecc30ed0a6664004913e185449df893a8abfb829d474599bffd36a"
+    },
+    {
+      "language": "he",
+      "width": 768,
+      "lang": "he",
+      "dir": "rtl",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "textSha256": "6580cf0637ecc30ed0a6664004913e185449df893a8abfb829d474599bffd36a"
+    },
+    {
+      "language": "he",
+      "width": 1024,
+      "lang": "he",
+      "dir": "rtl",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "textSha256": "6580cf0637ecc30ed0a6664004913e185449df893a8abfb829d474599bffd36a"
+    },
+    {
+      "language": "he",
+      "width": 1440,
+      "lang": "he",
+      "dir": "rtl",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "textSha256": "6580cf0637ecc30ed0a6664004913e185449df893a8abfb829d474599bffd36a"
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "lang": "en",
+      "dir": "ltr",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "textSha256": "9ebb94e8b167e595eaa218a51f353eb442f14bdf84dbbea97e44c6cb80c104c0"
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "lang": "en",
+      "dir": "ltr",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "textSha256": "9ebb94e8b167e595eaa218a51f353eb442f14bdf84dbbea97e44c6cb80c104c0"
+    },
+    {
+      "language": "en",
+      "width": 768,
+      "lang": "en",
+      "dir": "ltr",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "textSha256": "9ebb94e8b167e595eaa218a51f353eb442f14bdf84dbbea97e44c6cb80c104c0"
+    },
+    {
+      "language": "en",
+      "width": 1024,
+      "lang": "en",
+      "dir": "ltr",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "textSha256": "9ebb94e8b167e595eaa218a51f353eb442f14bdf84dbbea97e44c6cb80c104c0"
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "lang": "en",
+      "dir": "ltr",
+      "visible": true,
+      "noticeBeforeControls": true,
+      "fontSize": 13,
+      "overflow": false,
+      "policyLinks": [],
+      "textSha256": "9ebb94e8b167e595eaa218a51f353eb442f14bdf84dbbea97e44c6cb80c104c0"
+    }
+  ],
+  "guardContexts": [
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 1,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "422",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "500",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "network",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "timeout",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "duplicate",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "malformed",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "unacknowledged",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "pending-language",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "422",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "500",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "network",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "timeout",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "duplicate",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "malformed",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "unacknowledged",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "pending-language",
+      "blockedWrites": 0,
+      "mockedPosts": 1,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": [
+        "product",
+        "name",
+        "contact",
+        "quantity",
+        "width",
+        "depth",
+        "height",
+        "note",
+        "_gotcha",
+        "product_name",
+        "message",
+        "_subject",
+        "email"
+      ]
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "wood-u-like-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [],
+      "payloadFieldNames": []
+    },
+    {
+      "site": "assembl-lab-site",
+      "scenario": "success",
+      "blockedWrites": 0,
+      "mockedPosts": 0,
+      "passedWrites": 0,
+      "blockedWebSockets": 0,
+      "readFailures": [
+        {
+          "url": "https://mataniar0.github.io/assembl-lab-site/inquiry/",
+          "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        }
+      ],
+      "payloadFieldNames": []
+    }
+  ],
+  "pageErrors": [],
+  "finished": "2026-11-01T08:44:12.923Z"
+}

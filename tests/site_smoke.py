@@ -139,6 +139,7 @@ class Session:
         self.base = base
         self.errors, self.blocked_writes, self.mock_requests = [], [], []
         self.mock_endpoint = None
+        self.mock_contact_config = None
         self.context = browser.new_context(viewport={"width": viewport[0], "height": viewport[1]},
                                            has_touch=True, is_mobile=viewport[0] < 900, service_workers="block")
         self.context.set_default_timeout(5000)
@@ -148,12 +149,16 @@ class Session:
         if locale == "en":
             self.context.add_init_script("try { if (!localStorage.getItem('assemble-language')) localStorage.setItem('assemble-language', 'en'); } catch (_) { /* Initial about:blank has no storage. */ }")
         self.context.route("**/*", self.guard)
+        self.context.route_web_socket("**/*", lambda websocket: websocket.close())
         self.context.on("page", self.observe)
         self.page = self.context.new_page()
 
     def guard(self, route):
         request = route.request
         if request.method in ("GET", "HEAD"):
+            if self.mock_contact_config is not None and urlsplit(request.url).path.endswith("/inquiry/contact-config.js"):
+                return route.fulfill(content_type="application/javascript",
+                                     body="window.ASSEMBLE_CONTACT = " + json.dumps(self.mock_contact_config) + ";")
             return route.continue_()
         headers = {"access-control-allow-origin": "*", "access-control-allow-methods": "POST, OPTIONS",
                    "access-control-allow-headers": "*"}
@@ -384,9 +389,29 @@ def form_smoke(browser, base, root, quote, locale):
         session.ready(route_name(root, inquiry) + "?product=" + product)
         page = session.page
         form, send = page.locator("#inquiry-form"), page.locator("#send-request")
-        require(form.count() == 1 and send.is_visible() and send.is_enabled(), "Inquiry submission controls are unavailable")
-        session.mock_endpoint = form.get_attribute("action")
-        require(session.mock_endpoint and urlsplit(session.mock_endpoint).scheme == "https", "No configured HTTPS form endpoint")
+        require(form.count() == 1, "Inquiry form is unavailable")
+        config = page.evaluate("() => window.ASSEMBLE_CONTACT || {}")
+        approval_keys = ("formDestinationApproved", "privacyApproved", "contactDetailsApproved")
+        gated = any(key in config for key in approval_keys)
+        if gated:
+            require(all(config.get(key) is False for key in approval_keys), "Original approval flags must remain false")
+            require(form.get_attribute("action") == "#", "Native form action is not inert")
+            require(not send.is_visible(), "Unapproved submit button must stay hidden")
+            page.locator("#customer-name").fill("Smoke test — never delivered")
+            page.locator("#customer-contact").fill("qa@example.invalid")
+            form.evaluate("f => f.requestSubmit()")
+            require(not session.mock_requests and not session.blocked_writes,
+                    "Original unapproved configuration attempted a request")
+            session.mock_endpoint = config.get("formEndpoint")
+            require(session.mock_endpoint and urlsplit(session.mock_endpoint).scheme == "https",
+                    "No configured HTTPS mock endpoint")
+            # Test-only response override, before reload; source flags remain false.
+            session.mock_contact_config = {**config, **{key: True for key in approval_keys}}
+            session.ready(route_name(root, inquiry) + "?product=" + product)
+        else:
+            session.mock_endpoint = form.get_attribute("action")
+            require(session.mock_endpoint and urlsplit(session.mock_endpoint).scheme == "https", "No configured HTTPS form endpoint")
+        require(send.is_visible() and send.is_enabled(), "Mock-approved submission controls are unavailable")
         require(not form.evaluate("f => f.checkValidity()"), "Empty required fields are accepted")
         send.click()
         require(not session.mock_requests, "Invalid form was submitted")
@@ -405,7 +430,7 @@ def form_smoke(browser, base, root, quote, locale):
         require(product in session.mock_requests[0] and "qa@example.invalid" in session.mock_requests[0], "Mocked submission omitted product or contact")
         require(send.is_enabled(), "Submit control was not restored after completion")
         session.healthy()
-        return {"language": locale, "required_validation": True, "draft_preserved": True, "mocked_posts": 1, "real_posts": 0}
+        return {"language": locale, "required_validation": True, "draft_preserved": True, "original_approval_gate_verified": gated, "in_memory_approval_override": gated, "mocked_posts": 1, "real_posts": 0}
     finally:
         session.close()
 
