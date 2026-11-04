@@ -49,3 +49,6 @@ Owner confirms Gmail provides **Delete** and a **Trash** folder for inquiry-rela
 
 ## Formspree security inquiry — owner update, 2026-11-01
 Owner confirms they sent the prepared email to Formspree requesting clarification about deletion of regular submissions, backups/logs, 30-day Free history, applicable DPA/subprocessors/transfers, and erasure confirmation. **Status: SENT BY OWNER / AWAITING VENDOR RESPONSE.** Delivery and the eventual answer are not independently verified; no answer has been received in this conversation. Follow up when vendor responds. Do not interpret lack of response as approval, assume an erasure timeline or enable live sending. Continue policy drafting with vendor-dependent language explicitly conditional.
+
+## Marketing use of inquiries — owner confirmation, 2026-11-04
+The owner explicitly confirms customer inquiry addresses are used **only to respond to inquiries and coordinate orders**, **not** to send marketing, advertising, promotions, or newsletters. This is owner-attested current practice for both brands. Any future marketing use requires a fresh compliance/consent assessment and revised notices/policies before use. No advertising or customer record was transmitted as part of this check.
