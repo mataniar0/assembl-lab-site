@@ -52,3 +52,6 @@ Owner confirms they sent the prepared email to Formspree requesting clarificatio
 
 ## Marketing use of inquiries — owner confirmation, 2026-11-04
 The owner explicitly confirms customer inquiry addresses are used **only to respond to inquiries and coordinate orders**, **not** to send marketing, advertising, promotions, or newsletters. This is owner-attested current practice for both brands. Any future marketing use requires a fresh compliance/consent assessment and revised notices/policies before use. No advertising or customer record was transmitted as part of this check.
+
+## Formspree response received — owner copy 2026-11-04
+Owner forwarded support response attributed to Alex de la Rosa (security@formspree.zendesk.com). Free-plan 30-day archive is access-only and does NOT delete old entries. Agent says records retained while account active unless deletion requested; dashboard supports individual/bulk removal, not automatic; request backup/other-data deletion via support@formspree.io, claimed 30-day request completion period. Applicable terms/SCCs remain unresolved: agent says legal terms are being updated. See LAUNCH-01-FORMSPREE-VENDOR-REPLY-2026-11-04.md. This closes the wait-for-first-response status but DOES NOT authorize live forms, claim successful erasure or close cross-border transfer legal gate.
