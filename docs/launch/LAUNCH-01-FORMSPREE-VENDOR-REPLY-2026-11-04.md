@@ -28,3 +28,10 @@ The official Formspree security page https://formspree.io/security/ says, as of 
 
 ## Gate
 **P0-03 PROCESSOR/TRANSFER: OPEN. P0-04 RECORDS/DELETION: PARTIALLY CLARIFIED (OPERATING LIMITATION DISCOVERED).** Drafts can proceed; publication/live forms not authorized. No email sent by assistant.
+
+## Follow-up response received — 2026-11-09 (owner-provided excerpt)
+Alex replied: "Our legal team is working on updating our DPA. I'll keep you on the loop of any developments." He also stated: "For now, you can send us a request to support@formspree.io."
+
+**Assessment:** Updated DPA remains pending; no presently applicable executed/binding DPA, SCCs, cross-border mechanism, subprocessor countries, or applicability to the Free tier was supplied in this response. The support mailbox is an available request channel (presumably for the deletion question in the preceding thread), **not proof of completed erasure**, and not a substitute for binding transfer terms. Do not mark supplier/transfer or deletion-operation gate PASS. This is owner-supplied message text, not independently verified headers or attachment. Technical privacy integration and local QA can continue fail-closed; live inquiry submission remains NO-GO pending separate approval.
+
+**Recommended focused next step:** Ask supplier for the presently applicable (not future) Free-plan DPA/transfer terms and, if unavailable, confirm that directly; for actual deletion needs, send a separate identified support request through a private channel and preserve confirmation, without customer details in GitHub. Investigate an alternative service/architecture only if the contractual blocker persists and launch requires immediate form collection.
