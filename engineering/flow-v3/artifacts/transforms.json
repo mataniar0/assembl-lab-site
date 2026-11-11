@@ -1,0 +1,249 @@
+{
+  "frame": "mm Z-up; frame lower SW corner, NOT floor",
+  "dxf_local": "u,v,t = DXF x,DXF y,thickness 0..6",
+  "glb_axes": "m Y-up: (X,Z,-Y)/1000",
+  "instances": [
+    {
+      "name": "L_south",
+      "part": "LENGTH_OUTER_L",
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          6.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evidence": "V3 860mm rail ends, width 480mm; corner fingers at 0..6 and 854..860"
+    },
+    {
+      "name": "L_north",
+      "part": "LENGTH_OUTER_L",
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          480.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evidence": "Opposite identical rail: 480-6=474 inner plane"
+    },
+    {
+      "name": "W_west",
+      "part": "WIDTH_OUTER_W",
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evidence": "V3 480mm width rail; complementary corner ends"
+    },
+    {
+      "name": "W_east",
+      "part": "WIDTH_OUTER_W",
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          1.0,
+          854.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evidence": "Opposite identical rail: 860-6=854 inner plane"
+    },
+    {
+      "name": "LC",
+      "part": "LENGTH_CENTER_LC",
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          243.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evidence": "WIDTH receiver x=247..253 minus 10 => Y=237..243"
+    },
+    {
+      "name": "C_1",
+      "part": "CROSS_BEAM_C",
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          1.0,
+          283.666667
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evidence": "LENGTH receiver x=293.667..299.667 /580.333..586.333 minus 10; C slot at Y=237..243"
+    },
+    {
+      "name": "C_2",
+      "part": "CROSS_BEAM_C",
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          1.0,
+          570.333333
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evidence": "LENGTH receiver x=293.667..299.667 /580.333..586.333 minus 10; C slot at Y=237..243"
+    }
+  ],
+  "unplaced": [
+    {
+      "part": "LEG_A",
+      "quantity": 4,
+      "transform": null,
+      "status": "BLOCKED: floor-relative XYZ/orientation contract not recovered"
+    },
+    {
+      "part": "LEG_B",
+      "quantity": 4,
+      "transform": null,
+      "status": "BLOCKED: floor-relative XYZ/orientation contract not recovered"
+    },
+    {
+      "part": "TRI_BASE_ROUNDED",
+      "quantity": 4,
+      "transform": null,
+      "status": "BLOCKED: floor-relative XYZ/orientation contract not recovered"
+    }
+  ],
+  "tabletop": {
+    "source": null,
+    "transform": null,
+    "status": "BLOCKED: no V3 profile"
+  }
+}

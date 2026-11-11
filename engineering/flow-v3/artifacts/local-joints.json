@@ -1,0 +1,142 @@
+{
+  "finger_samples": [
+    {
+      "y_mm": 20,
+      "xA_mm": 10.0,
+      "xB_mm": 16.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 40,
+      "xA_mm": 16.0,
+      "xB_mm": 10.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 60,
+      "xA_mm": 10.0,
+      "xB_mm": 16.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 80,
+      "xA_mm": 16.0,
+      "xB_mm": 10.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 100,
+      "xA_mm": 10.0,
+      "xB_mm": 16.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 120,
+      "xA_mm": 16.0,
+      "xB_mm": 10.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 140,
+      "xA_mm": 10.0,
+      "xB_mm": 16.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 160,
+      "xA_mm": 16.0,
+      "xB_mm": 10.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 180,
+      "xA_mm": 10.0,
+      "xB_mm": 16.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 200,
+      "xA_mm": 16.0,
+      "xB_mm": 10.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 220,
+      "xA_mm": 10.0,
+      "xB_mm": 16.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 240,
+      "xA_mm": 16.0,
+      "xB_mm": 10.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 260,
+      "xA_mm": 10.0,
+      "xB_mm": 16.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 280,
+      "xA_mm": 16.0,
+      "xB_mm": 10.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 300,
+      "xA_mm": 10.0,
+      "xB_mm": 16.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 320,
+      "xA_mm": 16.0,
+      "xB_mm": 10.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 340,
+      "xA_mm": 10.0,
+      "xB_mm": 16.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 360,
+      "xA_mm": 16.0,
+      "xB_mm": 10.0,
+      "sum_mm": 26.0
+    },
+    {
+      "y_mm": 380,
+      "xA_mm": 10.0,
+      "xB_mm": 16.0,
+      "sum_mm": 26.0
+    }
+  ],
+  "left_leg_rail": [
+    {
+      "interface": "LEG_A left \u2194 LENGTH_OUTER_L",
+      "offset_mm": [
+        -6,
+        -380
+      ],
+      "overlap_mm2": 0.0,
+      "distance_mm": 0.0,
+      "status": "PASS"
+    },
+    {
+      "interface": "LEG_A left \u2194 WIDTH_OUTER_W",
+      "offset_mm": [
+        -6,
+        -380
+      ],
+      "overlap_mm2": 0.0,
+      "distance_mm": 0.0,
+      "status": "PASS"
+    }
+  ],
+  "scope": "2D local mating only; right mirrors, world leg placements and tri-base orientation BLOCKED",
+  "negative_control_shifted_C_mm3": 210.0
+}

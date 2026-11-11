@@ -1,0 +1,29 @@
+{
+  "status": "BLOCKED_FULL_ASSEMBLY",
+  "profiles": "PASS",
+  "unique_parts": 7,
+  "available_instances": 19,
+  "placed_frame_instances": 7,
+  "unplaced_instances": 12,
+  "missing_tabletop": true,
+  "pair_checks": 21,
+  "collision_failures": 0,
+  "frame_bounds_mm": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      860,
+      480,
+      70
+    ]
+  ],
+  "expected_contacts": 12,
+  "negative_control_collision_mm3": 210.0,
+  "step_roundtrip": "PASS",
+  "glb_meshes": 7,
+  "glb_bytes": 51636,
+  "physical_validation": "NOT_PERFORMED"
+}

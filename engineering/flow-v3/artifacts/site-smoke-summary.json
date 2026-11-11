@@ -1,0 +1,8 @@
+{
+  "passed": 66,
+  "failed": 0,
+  "real_submissions": 0,
+  "scope": "Existing site smoke; browser forms mocked; no site integration",
+  "report_source": ".qa-reports/latest.json",
+  "report_sha256": "6685427d5df4a8533537ed70426e794a0d8c0008d8f815d120cc1a75ae5bf0c9"
+}

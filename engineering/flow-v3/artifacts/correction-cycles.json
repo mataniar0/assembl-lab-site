@@ -1,0 +1,24 @@
+{
+  "implementation_corrections": 2,
+  "design_geometry_corrections": 0,
+  "attempts": [
+    {
+      "attempt": 1,
+      "result": "FAIL",
+      "error": "AssertionError: all(e.dxftype()==LWPOLYLINE and e.closed for e in es)",
+      "correction": "Preserve existing group70=1 tags by declaring headerless modern input AC1015 in memory"
+    },
+    {
+      "attempt": 2,
+      "result": "FAIL",
+      "error": "OCP.OCP.Standard.Standard_ConstructionError: gp_GTrsf::Trsf() - non-orthogonal GTrsf",
+      "correction": "Use rigid gp_Trsf.SetValues and cq.Location, preserving intended matrices"
+    },
+    {
+      "attempt": 3,
+      "result": "PASS_PARTIAL",
+      "full_table": "BLOCKED_SOURCE",
+      "frame_collisions": 0
+    }
+  ]
+}

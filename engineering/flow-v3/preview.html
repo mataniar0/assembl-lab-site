@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><title>Flow V3 partial frame — DESIGN ONLY</title>
+<style>body{margin:0;background:#f3f1eb;font:17px Arial;color:#252b30}h1{font-size:22px;margin:24px 32px 8px}p{margin:8px 32px}canvas{display:block}#status{font-size:14px}</style>
+<h1>FLOW V3 · PARTIAL FRAME · DESIGN_ONLY</h1><p>Tabletop absent. Legs and tri-bases remain unplaced. No physical fit or strength approval.</p><p id="status">Loading source-backed GLB…</p>
+<script type="importmap">{"imports":{"three":"/work/flow-browser/node_modules/three/build/three.module.js","three/addons/":"/work/flow-browser/node_modules/three/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+const scene=new THREE.Scene();scene.background=new THREE.Color('#f3f1eb');
+const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});renderer.setSize(1100,700);renderer.setPixelRatio(1);document.body.appendChild(renderer.domElement);
+scene.add(new THREE.HemisphereLight(0xffffff,0x665c44,2.5));let light=new THREE.DirectionalLight(0xffffff,3);light.position.set(1,2,3);scene.add(light);
+let camera=new THREE.PerspectiveCamera(36,1100/700,.001,20);let center=new THREE.Vector3(.43,.035,-.24);
+window.view=(which)=>{let pos={front:[.43,.24,1.13],side:[1.75,.24,-.24],underside:[1.05,-.82,.6]}[which];camera.position.set(...pos);camera.up.set(0,1,0);camera.lookAt(center);renderer.render(scene,camera);window.currentView=which;};
+new GLTFLoader().load('artifacts/Flow_V3_PARTIAL_FRAME_DESIGN_ONLY.glb',g=>{scene.add(g.scene);window.model=g.scene;window.view('front');document.querySelector('#status').textContent='Frame 860 × 480 × 70 mm · 7 bodies · Z=0 is frame bottom, not floor';window.ready=true;},undefined,e=>{window.loadError=String(e)});
+</script>
