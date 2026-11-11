@@ -1,0 +1,199 @@
+{
+  "branch": "feature/33-flow-v3-cad",
+  "PR": 34,
+  "sha": "efc6335e4b6deadbed2195f8731c63aa17c234b4",
+  "files_inspected": [
+    {
+      "path": "engineering/flow-v3/HANDOFF_HE.md",
+      "sha256": "5de028ab5948a083d0295218c16a3ae234b843a0f6f9af3902b253379e70fc3a",
+      "bytes": 3089
+    },
+    {
+      "path": "engineering/flow-v3/README.md",
+      "sha256": "f949768168f7f5f281057eb958928937bd6e34740c9aac3098d880ab2c6d0cc8",
+      "bytes": 10426
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/CROSS_BEAM_C.step",
+      "sha256": "665e4b014efa2dde37a169ab9db5722e4911a30414ecea0e6639479cbc82cd43",
+      "bytes": 84797
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/Flow_V3_PARTIAL_FRAME_DESIGN_ONLY-gltf-validation.json",
+      "sha256": "d6921f72cbd454b85902eb82bfb4c959ef653960b5b94bfdfe1361b8c8d24c14",
+      "bytes": 4294
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/Flow_V3_PARTIAL_FRAME_DESIGN_ONLY.glb",
+      "sha256": "3506ef2d745e6a0e892d6e0f0b0e6ba80530e85ad0d42380abd2bf19d3332146",
+      "bytes": 51636
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/Flow_V3_PARTIAL_FRAME_DESIGN_ONLY.step",
+      "sha256": "2cef5d8bb8ef438040b8d4c4333c05f9b9df68ce101e82353679fef8aac97ee9",
+      "bytes": 3454104
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/Flow_V3_PART_LIBRARY_NOT_ASSEMBLED-gltf-validation.json",
+      "sha256": "fbbbe8ad732b32b3c10d23297f9a7f0c9effed82528e0b6ce6ecba7a6e179689",
+      "bytes": 4034
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/Flow_V3_PART_LIBRARY_NOT_ASSEMBLED.glb",
+      "sha256": "27ecc04ae6584696eb6505e413a4d6113e381eed7ba47ba74b53c6f6bc44ce6c",
+      "bytes": 104464
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/Flow_V3_PART_LIBRARY_NOT_ASSEMBLED.step",
+      "sha256": "8fb5162f6511ab14a952f3856c5d7e79b93779fd6a48cbd8240d352143d4810e",
+      "bytes": 5470809
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/LEG_A.step",
+      "sha256": "1167268f4582797bd22286c32c69e1b888ef36d8eb3d02066367e40781cde8fa",
+      "bytes": 1690181
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/LEG_B.step",
+      "sha256": "36946ab73b966aa80f5c03e241c785b4cc8115ec8b5c3e307e2e9dce46e4c5b3",
+      "bytes": 1682090
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/LENGTH_CENTER_LC.step",
+      "sha256": "868d890b9efd0eae9014bda8b588d938f1e57177c54247886e1fb3b651ce07ad",
+      "bytes": 99354
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/LENGTH_OUTER_L.step",
+      "sha256": "896efe87da3249d3b648fb9670f05f1cb4a4836e46971edd52f07e94b8483a6d",
+      "bytes": 821443
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/SHA256SUMS",
+      "sha256": "d966ee34e900f2290a9e9b2108cf9920586f8bdc105990185b32d41016ef2b44",
+      "bytes": 2482
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/TRI_BASE_ROUNDED.step",
+      "sha256": "98350173bf06977183ed49a191942c15735d7aab346abaab0bfaaa2ffd0eeea5",
+      "bytes": 227761
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/WIDTH_OUTER_W.step",
+      "sha256": "22abb613813611d5f908db3bf0ff64e643886304ae9d0f7bfb138ee687e2d8e7",
+      "bytes": 719755
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/browser.json",
+      "sha256": "cef3315333dd5f57fd38db37c678322b249bca132e307d1442247b941d94cd00",
+      "bytes": 226
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/correction-cycles.json",
+      "sha256": "73723291f4630fd8d388f9eb2a71dd8f5a2025d478a903a85aadf077b6e38f27",
+      "bytes": 735
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/export-checks.json",
+      "sha256": "5e42c375dcee918b9a377cd8f9c29662780093ab9850a9cf9605a14dbe494447",
+      "bytes": 874
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/frame-pairs.json",
+      "sha256": "e576ade96e3e074086982b01bb623764f2b687a968cc65608cef7a40a443de35",
+      "bytes": 2505
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/front.png",
+      "sha256": "29301cdcc5009f89fa68ad176ea0c5700e131bcc71034a70afa50ed5952dec0a",
+      "bytes": 29517
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/inventory.json",
+      "sha256": "94b1b1ff21dcb87c3226cbd7bfb044d46cb820b24b507eea95619ac5c49620de",
+      "bytes": 3405
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/local-joints.json",
+      "sha256": "8742b99c47caf86de6659bf2a0cf9eb0b5922f9fcf76c6e10a95bcc6ca312c5c",
+      "bytes": 2398
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/poster.webp",
+      "sha256": "1b95463ca2b3594ab581b68c4783cf9bc89ca9a65bdb2f952befb53dedcc197b",
+      "bytes": 37742
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/side.png",
+      "sha256": "9514384ab4b893d9a5448fad4caeb42df98a3ba68f3cd5f1318ba61f30aea484",
+      "bytes": 30363
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/site-smoke-summary.json",
+      "sha256": "6683ba903c009a6b3e6b311b778da5bf9733d299f60d9e479ddc071f8aabb2a9",
+      "bytes": 269
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/source-hashes.json",
+      "sha256": "0f737a9512c0c69fcc57c5d3c8755801de17afe3d7aa816694e4665a2197f513",
+      "bytes": 1120
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/source-search.json",
+      "sha256": "25f4bcabf465f770c6a967395ae1b31862a27609c16a647d8d4f0da43fa8a6e0",
+      "bytes": 17820
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/transforms.json",
+      "sha256": "6fbacc3cbeda8a7ba9f967da02a0de11cb4f588be65a42619e9ef421ce5bbabe",
+      "bytes": 4306
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/underside.png",
+      "sha256": "9d2f8084e87c56fa6296ebdfbea44f80eccfb22e49ee5261a4de1a56a07191f4",
+      "bytes": 52723
+    },
+    {
+      "path": "engineering/flow-v3/artifacts/validation.json",
+      "sha256": "68a460bce626dee4ee6523c0d49b1e0b8df32c72bca7f623de2e117e861bdfea",
+      "bytes": 538
+    },
+    {
+      "path": "engineering/flow-v3/audit_sources.py",
+      "sha256": "3069fa244c94fabe7e59328b79305b9e27195c1dce831a373b9a7d457d74b94d",
+      "bytes": 2058
+    },
+    {
+      "path": "engineering/flow-v3/browser_check.py",
+      "sha256": "7209e007911d299ecfbea7eb65e18ccd2923d5aafca93324774961aabef8604b",
+      "bytes": 1218
+    },
+    {
+      "path": "engineering/flow-v3/build.py",
+      "sha256": "b3f6df7989f6cb449d7e0961980f876bf294bb00eb93b0800c4d5f06a28e8ace",
+      "bytes": 9282
+    },
+    {
+      "path": "engineering/flow-v3/check_exports.py",
+      "sha256": "44b1329f87b1d5983843f2379198d60c81c2d20aa7d1726e2887b8ca7005cb52",
+      "bytes": 1592
+    },
+    {
+      "path": "engineering/flow-v3/preview.html",
+      "sha256": "60f56190a67c4061153c52eb97dbeda8cc7778bbcf662df4f3f49951a39533a8",
+      "bytes": 1852
+    },
+    {
+      "path": "engineering/flow-v3/requirements.lock",
+      "sha256": "ef9aa1f5f11e859cae150ff07031fadab09999bc5209b6f386071f22aa958049",
+      "bytes": 951
+    },
+    {
+      "path": "engineering/flow-v3/validate_glb.cjs",
+      "sha256": "4b5855464c992da7048d235fed396f525f2e9ffb3302235614bf0d1c15a48404",
+      "bytes": 696
+    }
+  ],
+  "classification": "Flow V3 parts/partial assembly only, not a source authorization for Geometric. No model or dimension reused. Read README/HANDOFF and all changed file bytes.",
+  "frozen_primary_snapshot_unchanged": true
+}

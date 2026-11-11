@@ -1,0 +1,16 @@
+[
+  {
+    "repository": "assembl-lab-site",
+    "changed_or_missing_frozen_remote_refs": [],
+    "new_remote_refs": [
+      "refs/heads/feature/33-flow-v3-cad",
+      "refs/pull/34/head",
+      "refs/tags/baseline-before-language-switch-2026-10-07^{}"
+    ]
+  },
+  {
+    "repository": "assembl-lab-engineering",
+    "changed_or_missing_frozen_remote_refs": [],
+    "new_remote_refs": []
+  }
+]

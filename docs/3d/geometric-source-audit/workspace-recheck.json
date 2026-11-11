@@ -1,0 +1,19 @@
+[
+  {
+    "path": "/workspace/attachments/ef7519b4-aa56-4c6e-a6ef-fc4ad8d492e9/personal_coffee_table_AL015_handoff.zip",
+    "cad_members": [],
+    "classification": "Personal Coffee Table or derived AL-016 handoff; no Geometric assembly source"
+  },
+  {
+    "path": "/workspace/AL015_REVIEW_BUNDLE.zip",
+    "cad_members": [],
+    "classification": "Personal Coffee Table or derived AL-016 handoff; no Geometric assembly source"
+  },
+  {
+    "path": "/workspace/AL-016-handoff.zip",
+    "cad_members": [
+      "table/personal/media/personal-design-preview.glb"
+    ],
+    "classification": "Personal Coffee Table or derived AL-016 handoff; no Geometric assembly source"
+  }
+]
