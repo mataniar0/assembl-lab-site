@@ -1,0 +1,15 @@
+{
+  "status": "PASS_FROZEN_SOURCE_SNAPSHOT",
+  "results": [
+    {
+      "repository": "assembl-lab-site",
+      "blobs": 872,
+      "frozen_refs_paths_hashes_archives_candidates_reproduced": true
+    },
+    {
+      "repository": "assembl-lab-engineering",
+      "blobs": 1234,
+      "frozen_refs_paths_hashes_archives_candidates_reproduced": true
+    }
+  ]
+}

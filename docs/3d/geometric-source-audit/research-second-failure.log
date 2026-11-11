@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/tmp/al032_history_audit.py", line 65, in <module>
+    if data.startswith(b'PK\x03\x04'):archive_scan(data,path,oid)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/al032_history_audit.py", line 38, in archive_scan
+    with zipfile.ZipFile(io.BytesIO(data)) as z:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/zipfile/__init__.py", line 1371, in __init__
+    self._RealGetContents()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/zipfile/__init__.py", line 1438, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file

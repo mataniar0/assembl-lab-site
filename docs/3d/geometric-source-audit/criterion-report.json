@@ -1,0 +1,82 @@
+{
+  "overall": "BLOCKED_MISSING_GEOMETRIC_SOURCE",
+  "criteria": [
+    {
+      "criterion": "reachable_source_search",
+      "status": "PASS",
+      "evidence_or_reason": "All recorded refs and their full ancestry scanned; damaged historical archives listed, not accepted as authority."
+    },
+    {
+      "criterion": "reject_other_product",
+      "status": "PASS",
+      "evidence_or_reason": "CTB-01/Flow/other-product geometry is not substituted."
+    },
+    {
+      "criterion": "unitless_reference_topology",
+      "status": "PASS",
+      "evidence_or_reason": "Seven positive 2D checks and two rejected negative controls; zero solid/product-body claim."
+    },
+    {
+      "criterion": "product_source_completeness",
+      "status": "BLOCKED",
+      "evidence_or_reason": "No Geometric authoritative physical part CAD/BOM/units."
+    },
+    {
+      "criterion": "3d_assembly",
+      "status": "BLOCKED",
+      "evidence_or_reason": "No validated product solids or placements can be established."
+    },
+    {
+      "criterion": "joint_alignment",
+      "status": "BLOCKED",
+      "evidence_or_reason": "Actual joint profiles/thickness and mating transforms absent."
+    },
+    {
+      "criterion": "collision_and_insertion",
+      "status": "BLOCKED",
+      "evidence_or_reason": "No material solids/assembly path to compute; execution NOT_RUN."
+    },
+    {
+      "criterion": "physical_scale_and_world_axes",
+      "status": "BLOCKED",
+      "evidence_or_reason": "Printed claims not approved or reconciled to actual photographed construction."
+    },
+    {
+      "criterion": "glb_validity",
+      "status": "NOT_RUN",
+      "evidence_or_reason": "No grounded product mesh exported; export gate BLOCKED."
+    },
+    {
+      "criterion": "browser_model_render",
+      "status": "NOT_RUN",
+      "evidence_or_reason": "No GLB to load; website not changed."
+    },
+    {
+      "criterion": "front_side_underside_renders",
+      "status": "NOT_RUN",
+      "evidence_or_reason": "No source-backed 3D assembly; existing source photographs linked instead of fabricated renderings."
+    },
+    {
+      "criterion": "physical_fit_load_safety",
+      "status": "NOT_RUN",
+      "evidence_or_reason": "Not performed; CAD research is not physical certification."
+    },
+    {
+      "criterion": "independent_manager_QA",
+      "status": "PENDING",
+      "evidence_or_reason": "Manager review required; implementer self-checks are not independent QA."
+    }
+  ],
+  "correction_cycles": {
+    "research_archive_parser": 2,
+    "unitless_reference_topology_checker": 1,
+    "physical_product_CAD": 0,
+    "total_tooling_self_corrections": 4,
+    "delivery_csv_line_endings": 1
+  },
+  "unique_positive_reference_checks": 7,
+  "negative_reference_controls_rejected": 2,
+  "frozen_history_reproduction": "PASS: same2106 blob identities and SHA256 after frozen-ref rerun",
+  "manufacturing_release": false,
+  "merge_or_deploy": false
+}

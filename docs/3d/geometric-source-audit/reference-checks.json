@@ -1,0 +1,68 @@
+{
+  "scope": "UNIT_UNKNOWN 2D illustrative reference only; not a physical leg or assembly; zero product solids verified",
+  "positive_checks": 7,
+  "failed": 0,
+  "checks": [
+    {
+      "case": "exact committed SVG source hash",
+      "passed": true
+    },
+    {
+      "case": "two closed reference contours",
+      "passed": true
+    },
+    {
+      "case": "OCC reference face topology valid",
+      "passed": true
+    },
+    {
+      "case": "independent SVG integral and OCC face area agree",
+      "passed": true
+    },
+    {
+      "case": "planar source has zero solids; no invented thickness",
+      "passed": true
+    },
+    {
+      "case": "no physical units/scale declared by SVG",
+      "passed": true
+    },
+    {
+      "case": "printed frame dimensions arithmetic only",
+      "passed": true
+    }
+  ],
+  "negative_controls_rejected": [
+    "open contour rejected",
+    "disjoint outside-hole topology rejected"
+  ],
+  "source_sha256": "9c0b2d1bc4b03588e4105aa01b831a9049572b99b5e331c79d936e434c58c08e",
+  "source_path": "assets/geometric-leg-drawing.svg",
+  "viewBox": "0 0 600 340",
+  "units": "SVG user units, NOT mm",
+  "source_bounds": [
+    [
+      235.0,
+      405.0,
+      55.0,
+      310.0
+    ],
+    [
+      275.8479374819037,
+      338.7803887661782,
+      116.0,
+      272.0
+    ]
+  ],
+  "signed_areas_user_units_squared": [
+    22696.0,
+    -6834.300000000005
+  ],
+  "kernel_face_area_user_units_squared": 15861.699999999995,
+  "solid_count": 0,
+  "versions": {
+    "cadquery": "2.7.0",
+    "cadquery-ocp": "7.8.1.1.post1",
+    "svgpathtools": "1.7.2"
+  }
+}
