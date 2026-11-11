@@ -1,0 +1,294 @@
+{
+  "source_sha256": "285dabf36be7d7a26772d4ad9dba7442eb1c06704fe104aec929adf4c4a65bf4",
+  "export_sha256": "17da2aafb7f17182b940804c22cb2be8dc0430cad26f20c76ca78e08ae9b8841",
+  "source_bytes": 654268,
+  "export_bytes": 1700936,
+  "mesh_count": 32,
+  "triangles": 41234,
+  "source_bounds_metres": [
+    [
+      -0.17499999701976776,
+      -0.2336486577987671,
+      0.0
+    ],
+    [
+      0.2619999945163727,
+      0.2336486577987671,
+      0.5
+    ]
+  ],
+  "display_bounds_metres": [
+    [
+      -0.17499999701976776,
+      0.0,
+      -0.2336486577987671
+    ],
+    [
+      0.2619999945163727,
+      0.5,
+      0.2336486577987671
+    ]
+  ],
+  "triangle_positions_preserved": true,
+  "display_transform": "Rigid Rx(-90 degrees), metres, Y-up",
+  "new_normals": "Area-weighted normals within 30-degree CAD creases; split shading vertices only, exact triangle positions/colors preserved",
+  "parts": [
+    {
+      "source_part": "P03",
+      "public_part": "design-part-01",
+      "vertices": 1988,
+      "source_vertices": 978,
+      "triangles": 1952,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L1_P01_1",
+      "public_part": "design-part-02",
+      "vertices": 1776,
+      "source_vertices": 888,
+      "triangles": 1796,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L1_P01_2",
+      "public_part": "design-part-03",
+      "vertices": 1776,
+      "source_vertices": 888,
+      "triangles": 1796,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L1_S1",
+      "public_part": "design-part-04",
+      "vertices": 296,
+      "source_vertices": 144,
+      "triangles": 284,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L1_S2",
+      "public_part": "design-part-05",
+      "vertices": 296,
+      "source_vertices": 144,
+      "triangles": 284,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L1_S3",
+      "public_part": "design-part-06",
+      "vertices": 296,
+      "source_vertices": 144,
+      "triangles": 284,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L1_S4",
+      "public_part": "design-part-07",
+      "vertices": 296,
+      "source_vertices": 144,
+      "triangles": 284,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L2_P01_1",
+      "public_part": "design-part-08",
+      "vertices": 1776,
+      "source_vertices": 888,
+      "triangles": 1796,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L2_P01_2",
+      "public_part": "design-part-09",
+      "vertices": 1776,
+      "source_vertices": 888,
+      "triangles": 1796,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L2_S1",
+      "public_part": "design-part-10",
+      "vertices": 296,
+      "source_vertices": 144,
+      "triangles": 284,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L2_S2",
+      "public_part": "design-part-11",
+      "vertices": 296,
+      "source_vertices": 144,
+      "triangles": 284,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L2_S3",
+      "public_part": "design-part-12",
+      "vertices": 292,
+      "source_vertices": 144,
+      "triangles": 284,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L2_S4",
+      "public_part": "design-part-13",
+      "vertices": 294,
+      "source_vertices": 144,
+      "triangles": 284,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L3_P01_1",
+      "public_part": "design-part-14",
+      "vertices": 1776,
+      "source_vertices": 888,
+      "triangles": 1796,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L3_P01_2",
+      "public_part": "design-part-15",
+      "vertices": 1776,
+      "source_vertices": 888,
+      "triangles": 1796,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L3_S1",
+      "public_part": "design-part-16",
+      "vertices": 296,
+      "source_vertices": 144,
+      "triangles": 284,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L3_S2",
+      "public_part": "design-part-17",
+      "vertices": 296,
+      "source_vertices": 144,
+      "triangles": 284,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L3_S3",
+      "public_part": "design-part-18",
+      "vertices": 292,
+      "source_vertices": 144,
+      "triangles": 284,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "L3_S4",
+      "public_part": "design-part-19",
+      "vertices": 294,
+      "source_vertices": 144,
+      "triangles": 284,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "P04L",
+      "public_part": "design-part-20",
+      "vertices": 2376,
+      "source_vertices": 1164,
+      "triangles": 2348,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "P04U",
+      "public_part": "design-part-21",
+      "vertices": 2376,
+      "source_vertices": 1164,
+      "triangles": 2348,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "P05_1",
+      "public_part": "design-part-22",
+      "vertices": 228,
+      "source_vertices": 112,
+      "triangles": 220,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "P05_2",
+      "public_part": "design-part-23",
+      "vertices": 228,
+      "source_vertices": 112,
+      "triangles": 220,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "P05_3",
+      "public_part": "design-part-24",
+      "vertices": 228,
+      "source_vertices": 112,
+      "triangles": 220,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "P05_4",
+      "public_part": "design-part-25",
+      "vertices": 228,
+      "source_vertices": 112,
+      "triangles": 220,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "P05_5",
+      "public_part": "design-part-26",
+      "vertices": 228,
+      "source_vertices": 112,
+      "triangles": 220,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "P05_6",
+      "public_part": "design-part-27",
+      "vertices": 228,
+      "source_vertices": 112,
+      "triangles": 220,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "P07B",
+      "public_part": "design-part-28",
+      "vertices": 2304,
+      "source_vertices": 1152,
+      "triangles": 2324,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "P07T",
+      "public_part": "design-part-29",
+      "vertices": 1440,
+      "source_vertices": 720,
+      "triangles": 1436,
+      "source_zero_area_triangles": 0
+    },
+    {
+      "source_part": "P07R1",
+      "public_part": "design-part-30",
+      "vertices": 4949,
+      "source_vertices": 2183,
+      "triangles": 4614,
+      "source_zero_area_triangles": 440
+    },
+    {
+      "source_part": "P07R2",
+      "public_part": "design-part-31",
+      "vertices": 4993,
+      "source_vertices": 2186,
+      "triangles": 4620,
+      "source_zero_area_triangles": 432
+    },
+    {
+      "source_part": "P06_BONDED",
+      "public_part": "design-part-32",
+      "vertices": 6112,
+      "source_vertices": 3044,
+      "triangles": 6088,
+      "source_zero_area_triangles": 0
+    }
+  ],
+  "status": "DESIGN_ONLY; physical replica UNVERIFIED"
+}

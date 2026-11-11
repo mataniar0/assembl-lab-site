@@ -216,8 +216,77 @@
   "stage.plan": {
     "he": "תכנון והדמיות",
     "en": "Planning and renderings"
+  },
+  "three.title": {
+    "he": "תצוגת תלת־ממד",
+    "en": "3D preview"
+  },
+  "three.open": {
+    "he": "צפה בתלת־ממד",
+    "en": "View in 3D"
+  },
+  "three.blocked": {
+    "he": "תצוגת תלת־ממד עדיין אינה זמינה לדגם זה: חסר תכנון מלא ומאומת. התוכן הקיים בעמוד נשאר זמין.",
+    "en": "3D is not available for this model yet: a complete verified design is missing. The existing page content remains available."
+  },
+  "three.design": {
+    "he": "תצוגת תכנון דיגיטלית של אב־טיפוס. המבנה והגימור אינם העתק מאומת של המוצר המצולם; התאמה וחוזק לא אומתו.",
+    "en": "Digital prototype design preview. Geometry and finish are not a verified replica of the photographed product; fit and strength are unverified."
+  },
+  "three.help": {
+    "he": "גררו אופקית לסיבוב, צבטו לזום או השתמשו בכפתורים. גרירה אנכית גוללת את העמוד. Esc לחזרה לתמונות.",
+    "en": "Drag horizontally to orbit, pinch to zoom, or use the buttons. Vertical gestures scroll the page. Escape returns to photos."
+  },
+  "three.loading": {
+    "he": "טוען תצוגת תלת־ממד… אפשר לחזור לתמונות בכל עת.",
+    "en": "Loading 3D preview… you can return to photos at any time."
+  },
+  "three.error": {
+    "he": "לא ניתן לפתוח תלת־ממד כרגע. התמונות זמינות; ניתן לנסות שוב.",
+    "en": "3D could not be opened. Photos remain available; you can try again."
+  },
+  "three.ready": {
+    "he": "תצוגת התכנון מוכנה. ניתן לסובב, להגדיל ולאפס.",
+    "en": "Design preview ready. Orbit, zoom or reset the view."
+  },
+  "three.alt": {
+    "he": "תכנון דיגיטלי של אב־טיפוס שולחן קפה אישי, לא צילום מוצר",
+    "en": "Digital design of a personal coffee table prototype, not a product photograph"
+  },
+  "three.left": {
+    "he": "סיבוב שמאלה",
+    "en": "Orbit left"
+  },
+  "three.right": {
+    "he": "סיבוב ימינה",
+    "en": "Orbit right"
+  },
+  "three.up": {
+    "he": "מבט גבוה יותר",
+    "en": "Orbit up"
+  },
+  "three.down": {
+    "he": "מבט תחתון",
+    "en": "Orbit down"
+  },
+  "three.in": {
+    "he": "הגדלה",
+    "en": "Zoom in"
+  },
+  "three.out": {
+    "he": "הקטנה",
+    "en": "Zoom out"
+  },
+  "three.reset": {
+    "he": "איפוס תצוגה",
+    "en": "Reset view"
+  },
+  "three.close": {
+    "he": "חזרה לתמונות",
+    "en": "Back to photos"
   }
-}</script>
+}
+</script>
 <script src="../assets/language.js"></script>
 <style>
 :root{--paper:#f3f1eb;--ink:#111311;--muted:#6d7069;--line:rgba(17,19,17,.18);--signal:#ff5a36}
@@ -267,7 +336,7 @@ html[lang="he"] .story-head h2,html[lang="he"] .original h2,html[lang="he"] .pri
 <link rel="stylesheet" href="../assets/language.css">
 <link rel="stylesheet" href="../assets/product-light.css">
 <script src="../assets/media-loading.js"></script>
-</head>
+<link rel="stylesheet" href="../assets/three-preview.css"><script src="../assets/three-preview.js" defer></script></head>
 <body>
 <header class="header"><a class="logo" href="../"><span class="mark">A/L</span><b>ASSEMBLE LAB</b></a><a class="back" data-i18n="nav.tables" href="../table/">← לכל המוצרים</a><div class="language-switch" role="group" aria-label="בחירת שפה"><button type="button" data-language="he" lang="he" dir="rtl" aria-pressed="true" disabled>עברית</button><button type="button" data-language="en" lang="en" dir="ltr" aria-pressed="false" disabled>English</button></div></header>
 <main>
@@ -294,7 +363,7 @@ html[lang="he"] .story-head h2,html[lang="he"] .original h2,html[lang="he"] .pri
 </div></div></div></section>
 <details class="product-details"><summary data-i18n="disclosure.principle">עקרון ההרכבה</summary><section class="principle"><h2 data-i18n-html="principle.title">הרכבה<br>כחלק מהעיצוב.</h2><p data-i18n="principle.description">ב־ASSEMBLE LAB ההרכבה אינה שלב שמגיע אחרי העיצוב. עובי החומר, מיקום החיבור, יכולת החיתוך והדרך שבה החלקים נפגשים נכנסים למודל מראש — כך שהמוצר הסופי הוא תוצאה ישירה של ההנדסה שלו.</p></section>
 </details><section class="model-navigation"><a class="back" href="../table/flow/" data-i18n="model.other">הכירו גם את דגם Flow ←</a></section>
-</main>
+<section class="three-preview" data-three-preview data-state="blocked" aria-labelledby="three-title"><h2 id="three-title" data-i18n="three.title">תצוגת תלת־ממד</h2><p data-i18n="three.blocked">תצוגת תלת־ממד עדיין אינה זמינה לדגם זה: חסר תכנון מלא ומאומת. התוכן הקיים בעמוד נשאר זמין.</p></section></main>
 
 
 

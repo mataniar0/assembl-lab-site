@@ -1,0 +1,12 @@
+{
+  "passed": 3,
+  "failed": 0,
+  "negative_controls_rejected": 2,
+  "result": {
+    "mesh_count": 32,
+    "triangles": 41234,
+    "sha256": "17da2aafb7f17182b940804c22cb2be8dc0430cad26f20c76ca78e08ae9b8841",
+    "bytes": 1700936,
+    "source_triangle_positions_colors_identical": true
+  }
+}

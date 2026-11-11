@@ -1,0 +1,38 @@
+{
+  "uri": "personal-design-preview.glb",
+  "mimeType": "model/gltf-binary",
+  "validatorVersion": "2.0.0-dev.3.10",
+  "validatedAt": "2026-11-11T10:18:36.796Z",
+  "issues": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 0,
+    "numHints": 0,
+    "messages": [],
+    "truncated": false
+  },
+  "info": {
+    "version": "2.0",
+    "generator": "https://github.com/mikedh/trimesh",
+    "resources": [
+      {
+        "pointer": "/buffers/0",
+        "mimeType": "application/gltf-buffer",
+        "storage": "glb",
+        "byteLength": 1673664
+      }
+    ],
+    "animationCount": 0,
+    "materialCount": 0,
+    "hasMorphTargets": false,
+    "hasSkins": false,
+    "hasTextures": false,
+    "hasDefaultScene": true,
+    "drawCallCount": 32,
+    "totalVertexCount": 42102,
+    "totalTriangleCount": 41234,
+    "maxUVs": 0,
+    "maxInfluences": 0,
+    "maxAttributes": 3
+  }
+}

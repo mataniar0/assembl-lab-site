@@ -1,0 +1,126 @@
+{
+  "site_sha": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+  "engineering_sha": "548133b0462909e63c41d29d5bef859ce8fbc60c",
+  "records": [
+    {
+      "repository": "site",
+      "path": "assets/geometric-leg-drawing.svg",
+      "sha256": "9c0b2d1bc4b03588e4105aa01b831a9049572b99b5e331c79d936e434c58c08e",
+      "bytes": 418
+    },
+    {
+      "repository": "site",
+      "path": "flowgen/FLOW_V3_TRIBASE_VERIFICATION_REPORT_HE.md",
+      "sha256": "a3e91c19be596fee0502b63b4bf278fdd871bf3ecd88a804b342f9a885060964",
+      "bytes": 8437
+    },
+    {
+      "repository": "site",
+      "path": "flowgen/Flow_CROSS_BEAM_C_x2_t6_V3.dxf",
+      "sha256": "c395a5cff6989a3624c36621dcf9cb191f68738a24efd80060f2bcfd5f89e240",
+      "bytes": 473
+    },
+    {
+      "repository": "site",
+      "path": "flowgen/Flow_LEG_A_x4_t6_V3_TRIBASE.dxf",
+      "sha256": "55e15f9d2470b3ff0da84b9b3ec66193527abf0325ccbbae90622f8eca3d4db5",
+      "bytes": 10992
+    },
+    {
+      "repository": "site",
+      "path": "flowgen/Flow_LEG_B_x4_t6_V3_TRIBASE.dxf",
+      "sha256": "bc6ca44ed8825bc5c46a410ac6969d1e4d4453c4828b0c978bc2ae6ef096c825",
+      "bytes": 10967
+    },
+    {
+      "repository": "site",
+      "path": "flowgen/Flow_LENGTH_CENTER_LC_x1_t6_V3.dxf",
+      "sha256": "4aea167a098bd2ea89ffc629a55484b73c1848fbb1aab78acf77aac1e721c63a",
+      "bytes": 642
+    },
+    {
+      "repository": "site",
+      "path": "flowgen/Flow_LENGTH_OUTER_L_x2_t6_V3.dxf",
+      "sha256": "0e00929fc3ce4f3f8e127df3e842b78f8d2bdc5035640a72e15de1d0a1f7a257",
+      "bytes": 5184
+    },
+    {
+      "repository": "site",
+      "path": "flowgen/Flow_TRI_BASE_ROUNDED_x4_t6_V3.dxf",
+      "sha256": "c52bd16c20ba9129b7d9fc2f5cbf964e13164cb2a05effc094184d5ebbfd4982",
+      "bytes": 1462
+    },
+    {
+      "repository": "site",
+      "path": "flowgen/Flow_WIDTH_OUTER_W_x2_t6_V3.dxf",
+      "sha256": "583fd78a61216d00e95c6e3d925d199a9dbf667c932a6ddaaa45c4d904f879a7",
+      "bytes": 4380
+    },
+    {
+      "repository": "site",
+      "path": "flowgen/README_HE.txt",
+      "sha256": "faa130047072b1d7147ac39ef91c54baadd78da4f921b6b975a540ba1e091956",
+      "bytes": 455
+    },
+    {
+      "repository": "site",
+      "path": "flowgen/verification_V3.json",
+      "sha256": "3011f65b12386c05d56ca3b9ad9fd67bcdf53b2c2fa9c05fbdcdf0ac5edcbad2",
+      "bytes": 8829
+    },
+    {
+      "repository": "engineering",
+      "path": "projects/CTB-01/closeout/personal-prototype-design-only/assembly/validated-candidate-DESIGN_ONLY.glb",
+      "sha256": "285dabf36be7d7a26772d4ad9dba7442eb1c06704fe104aec929adf4c4a65bf4",
+      "bytes": 654268
+    },
+    {
+      "repository": "engineering",
+      "path": "projects/CTB-01/closeout/personal-prototype-design-only/CAD_sources/frozen-parameters.json",
+      "sha256": "9338eff356c166d481669592d7740f9023de7884a0e8a023a42656de5b9e6961",
+      "bytes": 4200
+    },
+    {
+      "repository": "engineering",
+      "path": "projects/CTB-01/closeout/personal-prototype-design-only/CAD_sources/native-profiles.json",
+      "sha256": "b08174439e5e8edce6e493efe3a5ae0fe9aa5a03cc01fc2a00937c33757129b0",
+      "bytes": 270556
+    },
+    {
+      "repository": "engineering",
+      "path": "projects/CTB-01/closeout/personal-prototype-design-only/README.md",
+      "sha256": "4d1ea21b07e7cdcbeef00038eed3250297b531700fd3f30981f352a99db5eb9f",
+      "bytes": 3127
+    },
+    {
+      "repository": "engineering",
+      "path": "projects/CTB-01/closeout/personal-prototype-design-only/QA/QA_REPORT.md",
+      "sha256": "b702ccb77c38539b858174b0a020c020426a3d8992f50918eceb58df42bd91ae",
+      "bytes": 2443
+    },
+    {
+      "repository": "engineering",
+      "path": "projects/CTB-01/closeout/personal-prototype-design-only/QA/INDEPENDENT_QA.md",
+      "sha256": "ffa684a4a04ac6286d7b14d027137be3ddce92ba2631bca9225492801e88c62a",
+      "bytes": 6453
+    },
+    {
+      "repository": "engineering",
+      "path": "projects/CTB-01/closeout/personal-prototype-design-only/assembly/ASSEMBLY_SEQUENCE.md",
+      "sha256": "0a60b195da428c15ec3f35701bf998178446f9bcc97c532c9168d1d412fdb725",
+      "bytes": 2841
+    },
+    {
+      "repository": "site",
+      "path": "table/personal/media/03-prototype-before-finish-full.webp",
+      "sha256": "1a281d1e1b0f5784c69d505905121064e9f337b149ff9c4e27904ea059cc546c",
+      "bytes": 56468
+    },
+    {
+      "repository": "site",
+      "path": "table/personal/media/01-hero-finished-angled-full.webp",
+      "sha256": "7a915b1c0e3b5ece387940d53c7e90064c58e292a5d87b6eac55c56b77e5dd67",
+      "bytes": 156100
+    }
+  ]
+}
