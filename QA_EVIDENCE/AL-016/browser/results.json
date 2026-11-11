@@ -1,6 +1,6 @@
 {
-  "passed": 37,
-  "failed": 0,
+  "passed": 35,
+  "failed": 2,
   "real_posts": 0,
   "results": [
     {
@@ -10,52 +10,52 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 23.5
+              "duration": 25.899999976158142
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 16.69999998807907
+              "duration": 33.799999952316284
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 34.19999998807907
+              "duration": 28.400000035762787
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 34.10000002384186
+              "duration": 44
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 29.399999976158142
+              "duration": 39.80000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/geometric-hero.webp",
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 82.89999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
               "bytes": 190662,
-              "duration": 32.09999996423721
+              "duration": 44.200000047683716
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 43
-            },
-            {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 4.199999988079071
+              "duration": 2.800000011920929
             },
             {
-              "url": "http://127.0.0.1:36905/geometric/media/planning-clean.webp",
+              "url": "http://127.0.0.1:39539/geometric/media/planning-clean.webp",
               "bytes": 202824,
-              "duration": 29.69999998807907
+              "duration": 80.59999996423721
             }
           ],
-          "LCP": 532
+          "LCP": 620
         },
         "model": "BLOCKED"
       }
@@ -67,107 +67,55 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 35
+              "duration": 28.299999952316284
             },
             {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 32.19999998807907
+              "duration": 24.5
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 42.60000002384186
+              "duration": 23.299999952316284
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 33.80000001192093
+              "duration": 39.299999952316284
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
-              "bytes": 852,
-              "duration": 33.80000001192093
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 33.200000047683716
+              "duration": 33.69999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 59
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 39.5
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 56.40000003576279
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 1.899999976158142
+              "duration": 59.09999996423721
             }
           ],
-          "LCP": 252
+          "LCP": 236
         },
         "model": "BLOCKED"
       }
     },
     {
       "case": "table/personal/:he:320",
-      "passed": true,
-      "details": {
-        "initial": {
-          "resources": [
-            {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
-              "bytes": 3015,
-              "duration": 38.80000001192093
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/language.css",
-              "bytes": 2568,
-              "duration": 43.69999998807907
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
-              "bytes": 4777,
-              "duration": 43.80000001192093
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/language.js",
-              "bytes": 7127,
-              "duration": 47.5
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
-              "bytes": 852,
-              "duration": 47.30000001192093
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
-              "bytes": 1619,
-              "duration": 43.69999998807907
-            },
-            {
-              "url": "http://127.0.0.1:36905/table/personal/media/01-hero-finished-angled-480.webp",
-              "bytes": 35700,
-              "duration": 50.69999998807907
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 89.5
-            },
-            {
-              "url": "http://127.0.0.1:36905/favicon.ico",
-              "bytes": 0,
-              "duration": 55.69999998807907
-            }
-          ],
-          "LCP": 256
-        },
-        "model": "PASS_DESIGN_ONLY"
-      }
+      "passed": false,
+      "error": ""
     },
     {
       "case": "geometric/:he:390",
@@ -176,52 +124,47 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 19.30000001192093
+              "duration": 40
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 19.599999964237213
+              "duration": 36.89999997615814
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 29.900000035762787
+              "duration": 69.10000002384186
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 42.60000002384186
+              "duration": 69.20000004768372
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 45.89999997615814
+              "duration": 68.59999996423721
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 68.79999995231628
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 95.5
             },
             {
-              "url": "http://127.0.0.1:36905/assets/geometric-hero.webp",
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
               "bytes": 190662,
-              "duration": 46.90000003576279
+              "duration": 47.19999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/geometric/media/planning-clean.webp",
-              "bytes": 202824,
-              "duration": 12.699999988079071
-            },
-            {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 24.400000035762787
+              "duration": 3.899999976158142
             }
           ],
-          "LCP": 196
+          "LCP": null
         },
         "model": "BLOCKED"
       }
@@ -233,47 +176,47 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 14.199999988079071
+              "duration": 51.09999996423721
             },
             {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 17.900000035762787
+              "duration": 58.39999997615814
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 18.600000023841858
+              "duration": 61.200000047683716
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 21.100000023841858
+              "duration": 63.200000047683716
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
-              "bytes": 852,
-              "duration": 21.30000001192093
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 23.30000001192093
+              "duration": 65.89999997615814
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 36.5
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 66.10000002384186
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 93.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 15.899999976158142
+              "duration": 41.19999998807907
             }
           ],
-          "LCP": 144
+          "LCP": 176
         },
         "model": "BLOCKED"
       }
@@ -285,52 +228,52 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 28.099999964237213
+              "duration": 34.30000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 28.5
+              "duration": 31.400000035762787
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 36
+              "duration": 36.19999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 37.80000001192093
+              "duration": 36.5
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 35.30000001192093
+              "duration": 35.90000003576279
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 37
+              "duration": 41.69999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 55.40000003576279
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 55
             },
             {
-              "url": "http://127.0.0.1:36905/table/personal/media/01-hero-finished-angled-480.webp",
+              "url": "http://127.0.0.1:39539/table/personal/media/01-hero-finished-angled-480.webp",
               "bytes": 35700,
-              "duration": 38.39999997615814
+              "duration": 37.10000002384186
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 12.899999976158142
+              "duration": 18.80000001192093
             }
           ],
-          "LCP": 132
+          "LCP": 184
         },
         "model": "PASS_DESIGN_ONLY"
       }
@@ -342,52 +285,52 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 26.399999976158142
+              "duration": 33.90000003576279
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 17.900000035762787
+              "duration": 23.80000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 18.69999998807907
+              "duration": 32.30000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 23.600000023841858
+              "duration": 32.19999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 24.80000001192093
+              "duration": 41.09999996423721
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 43.30000001192093
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 92.59999996423721
             },
             {
-              "url": "http://127.0.0.1:36905/assets/geometric-hero.webp",
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
               "bytes": 190662,
-              "duration": 21.69999998807907
+              "duration": 41.700000047683716
             },
             {
-              "url": "http://127.0.0.1:36905/geometric/media/planning-clean.webp",
+              "url": "http://127.0.0.1:39539/geometric/media/planning-clean.webp",
               "bytes": 202824,
-              "duration": 61.19999998807907
+              "duration": 114.80000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 34
+              "duration": 93.60000002384186
             }
           ],
-          "LCP": 152
+          "LCP": 384
         },
         "model": "BLOCKED"
       }
@@ -399,47 +342,47 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 26.099999964237213
+              "duration": 63.80000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
-              "bytes": 2568,
-              "duration": 22.30000001192093
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 25.30000001192093
+              "duration": 60.30000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 52.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 25.099999964237213
+              "duration": 59.5
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
-              "bytes": 1619,
-              "duration": 25.30000001192093
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 25.30000001192093
+              "duration": 74.5
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 36.90000003576279
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 74
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 124.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 13.699999988079071
+              "duration": 40.10000002384186
             }
           ],
-          "LCP": 112
+          "LCP": 308
         },
         "model": "BLOCKED"
       }
@@ -451,52 +394,52 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 18.69999998807907
+              "duration": 47.10000002384186
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 17.599999964237213
+              "duration": 36
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 21.19999998807907
+              "duration": 40
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 25.69999998807907
+              "duration": 40.19999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
-              "bytes": 852,
-              "duration": 24.200000047683716
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 22.19999998807907
+              "duration": 56.19999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 33
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 39.69999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/table/personal/media/01-hero-finished-angled-768.webp",
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 117.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/table/personal/media/01-hero-finished-angled-768.webp",
               "bytes": 87380,
-              "duration": 23.80000001192093
+              "duration": 56.80000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 9
+              "duration": 30.099999964237213
             }
           ],
-          "LCP": 96
+          "LCP": 360
         },
         "model": "PASS_DESIGN_ONLY"
       }
@@ -508,52 +451,52 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 19.100000023841858
+              "duration": 59.60000002384186
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
-              "bytes": 4777,
-              "duration": 18.600000023841858
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 20.600000023841858
+              "duration": 52.19999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
-              "bytes": 1619,
-              "duration": 21.19999998807907
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 52.59999996423721
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 20.599999964237213
+              "duration": 59.09999996423721
             },
             {
-              "url": "http://127.0.0.1:36905/assets/geometric-hero.webp",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 52.200000047683716
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 92.40000003576279
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
               "bytes": 190662,
-              "duration": 23.200000047683716
+              "duration": 75.40000003576279
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 38.30000001192093
-            },
-            {
-              "url": "http://127.0.0.1:36905/geometric/media/planning-clean.webp",
+              "url": "http://127.0.0.1:39539/geometric/media/planning-clean.webp",
               "bytes": 202824,
-              "duration": 13.800000011920929
+              "duration": 47.59999996423721
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 44.799999952316284
+              "duration": 2.700000047683716
             }
           ],
-          "LCP": 156
+          "LCP": 360
         },
         "model": "BLOCKED"
       }
@@ -565,47 +508,47 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 22.700000047683716
+              "duration": 62
             },
             {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 18.100000023841858
+              "duration": 41.89999997615814
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 20.600000023841858
+              "duration": 60.700000047683716
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 21.19999998807907
+              "duration": 41.89999997615814
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 20.69999998807907
+              "duration": 41.80000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 21.30000001192093
+              "duration": 60.89999997615814
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 36
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 102.10000002384186
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 15.599999964237213
+              "duration": 3.099999964237213
             }
           ],
-          "LCP": 124
+          "LCP": 284
         },
         "model": "BLOCKED"
       }
@@ -617,57 +560,57 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 23.69999998807907
+              "duration": 39.5
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 25.80000001192093
+              "duration": 47.59999996423721
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 31.900000035762787
+              "duration": 44.90000003576279
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 29.899999976158142
+              "duration": 49
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 30.100000023841858
+              "duration": 49.5
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 30.19999998807907
+              "duration": 49.69999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 39.80000001192093
-            },
-            {
-              "url": "http://127.0.0.1:36905/table/personal/media/01-hero-finished-angled-768.webp",
+              "url": "http://127.0.0.1:39539/table/personal/media/01-hero-finished-angled-768.webp",
               "bytes": 87380,
-              "duration": 27
+              "duration": 51.30000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/table/personal/media/personal-design-preview-poster.webp",
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 83.20000004768372
+            },
+            {
+              "url": "http://127.0.0.1:39539/table/personal/media/personal-design-preview-poster.webp",
               "bytes": 9476,
-              "duration": 26.69999998807907
+              "duration": 66.90000003576279
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 4.399999976158142
+              "duration": 51.89999997615814
             }
           ],
-          "LCP": 116
+          "LCP": 168
         },
         "model": "PASS_DESIGN_ONLY"
       }
@@ -679,52 +622,52 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
+              "duration": 26.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 36.10000002384186
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 36.09999996423721
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 36.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 35
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 52.90000003576279
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
+              "bytes": 190662,
               "duration": 36.30000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
-              "bytes": 2568,
-              "duration": 24.19999998807907
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
-              "bytes": 4777,
-              "duration": 27.69999998807907
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
-              "bytes": 852,
-              "duration": 34.90000003576279
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
-              "bytes": 1619,
-              "duration": 27.399999976158142
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/geometric-hero.webp",
-              "bytes": 190662,
-              "duration": 36
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 47.80000001192093
-            },
-            {
-              "url": "http://127.0.0.1:36905/geometric/media/planning-clean.webp",
+              "url": "http://127.0.0.1:39539/geometric/media/planning-clean.webp",
               "bytes": 202824,
-              "duration": 9
+              "duration": 57.69999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 3.100000023841858
+              "duration": 39.60000002384186
             }
           ],
-          "LCP": 164
+          "LCP": 272
         },
         "model": "BLOCKED"
       }
@@ -736,47 +679,47 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 13.800000011920929
+              "duration": 36.89999997615814
             },
             {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 14.099999964237213
+              "duration": 31.900000035762787
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 16.899999976158142
+              "duration": 31.900000035762787
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 17.100000023841858
+              "duration": 31.899999976158142
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
-              "bytes": 1619,
-              "duration": 16.899999976158142
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 17.100000023841858
+              "duration": 34.69999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 30.400000035762787
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 31.30000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 67.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 6.900000035762787
+              "duration": 36.799999952316284
             }
           ],
-          "LCP": 100
+          "LCP": 192
         },
         "model": "BLOCKED"
       }
@@ -788,52 +731,52 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 16.100000023841858
+              "duration": 42.40000003576279
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 19.5
+              "duration": 44
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 21
+              "duration": 44.200000047683716
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 26.099999964237213
+              "duration": 48.5
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
-              "bytes": 1619,
-              "duration": 23.200000047683716
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 25.600000023841858
+              "duration": 48.19999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 35.60000002384186
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 53.5
             },
             {
-              "url": "http://127.0.0.1:36905/table/personal/media/01-hero-finished-angled-768.webp",
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 78.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/table/personal/media/01-hero-finished-angled-768.webp",
               "bytes": 87380,
-              "duration": 27.100000023841858
+              "duration": 62.89999997615814
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 35.90000003576279
+              "duration": 5.300000011920929
             }
           ],
-          "LCP": 144
+          "LCP": 312
         },
         "model": "PASS_DESIGN_ONLY"
       }
@@ -845,52 +788,52 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 51.89999997615814
+              "duration": 49.09999996423721
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 45.5
+              "duration": 48.10000002384186
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 57.39999997615814
+              "duration": 48.19999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
-              "bytes": 1619,
-              "duration": 65.10000002384186
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 65.39999997615814
+              "duration": 48.5
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 82.09999996423721
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 47.5
             },
             {
-              "url": "http://127.0.0.1:36905/assets/geometric-hero.webp",
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 68
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
               "bytes": 190662,
-              "duration": 67.40000003576279
+              "duration": 50.39999997615814
             },
             {
-              "url": "http://127.0.0.1:36905/geometric/media/planning-clean.webp",
+              "url": "http://127.0.0.1:39539/geometric/media/planning-clean.webp",
               "bytes": 202824,
-              "duration": 7.900000035762787
+              "duration": 14.600000023841858
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 10
+              "duration": 1.300000011920929
             }
           ],
-          "LCP": 248
+          "LCP": 232
         },
         "model": "BLOCKED"
       }
@@ -902,107 +845,55 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 22.80000001192093
+              "duration": 30.600000023841858
             },
             {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 20.099999964237213
+              "duration": 35
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 15.800000011920929
+              "duration": 52.10000002384186
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 26.5
+              "duration": 50.89999997615814
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 26.600000023841858
+              "duration": 51.69999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 26.700000047683716
+              "duration": 54.30000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 39.10000002384186
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 64
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 2.800000011920929
+              "duration": 1.800000011920929
             }
           ],
-          "LCP": 128
+          "LCP": 144
         },
         "model": "BLOCKED"
       }
     },
     {
       "case": "table/personal/:en:320",
-      "passed": true,
-      "details": {
-        "initial": {
-          "resources": [
-            {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
-              "bytes": 3015,
-              "duration": 42.60000002384186
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/language.css",
-              "bytes": 2568,
-              "duration": 47.80000001192093
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
-              "bytes": 4777,
-              "duration": 49.69999998807907
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/language.js",
-              "bytes": 7127,
-              "duration": 50.19999998807907
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
-              "bytes": 852,
-              "duration": 46.30000001192093
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
-              "bytes": 1619,
-              "duration": 47.10000002384186
-            },
-            {
-              "url": "http://127.0.0.1:36905/table/personal/media/01-hero-finished-angled-480.webp",
-              "bytes": 35700,
-              "duration": 49.59999996423721
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 75
-            },
-            {
-              "url": "http://127.0.0.1:36905/favicon.ico",
-              "bytes": 0,
-              "duration": 2.699999988079071
-            }
-          ],
-          "LCP": 176
-        },
-        "model": "PASS_DESIGN_ONLY"
-      }
+      "passed": false,
+      "error": ""
     },
     {
       "case": "geometric/:en:390",
@@ -1011,52 +902,47 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 16.69999998807907
+              "duration": 36.30000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 15.300000011920929
+              "duration": 28.899999976158142
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 16.30000001192093
+              "duration": 35.69999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 21.600000023841858
+              "duration": 35.89999997615814
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 26.099999964237213
+              "duration": 35.10000002384186
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 37.39999997615814
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/geometric-hero.webp",
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
               "bytes": 190662,
-              "duration": 31.30000001192093
+              "duration": 39.30000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/geometric/media/planning-clean.webp",
-              "bytes": 202824,
-              "duration": 16.19999998807907
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 91.69999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 1.4000000357627869
+              "duration": 4.800000011920929
             }
           ],
-          "LCP": 208
+          "LCP": null
         },
         "model": "BLOCKED"
       }
@@ -1068,47 +954,47 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 24.30000001192093
+              "duration": 18.400000035762787
             },
             {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 22.900000035762787
+              "duration": 32.80000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 25.80000001192093
+              "duration": 31.100000023841858
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 28.100000023841858
+              "duration": 32.80000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
-              "bytes": 1619,
-              "duration": 28
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 28.099999964237213
+              "duration": 33
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 36.60000002384186
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 32.200000047683716
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 56
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 1.699999988079071
+              "duration": 6.5
             }
           ],
-          "LCP": 96
+          "LCP": 156
         },
         "model": "BLOCKED"
       }
@@ -1120,52 +1006,52 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 25.799999952316284
+              "duration": 18.399999976158142
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 29.69999998807907
+              "duration": 19.30000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 35.10000002384186
+              "duration": 30.399999976158142
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 39.69999998807907
+              "duration": 31.200000047683716
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
-              "bytes": 1619,
-              "duration": 39.40000003576279
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 39.60000002384186
+              "duration": 31.30000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 52.19999998807907
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 30.5
             },
             {
-              "url": "http://127.0.0.1:36905/table/personal/media/01-hero-finished-angled-480.webp",
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 76.89999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/table/personal/media/01-hero-finished-angled-480.webp",
               "bytes": 35700,
-              "duration": 38.19999998807907
+              "duration": 25.399999976158142
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 16.899999976158142
+              "duration": 24.30000001192093
             }
           ],
-          "LCP": 144
+          "LCP": 196
         },
         "model": "PASS_DESIGN_ONLY"
       }
@@ -1177,52 +1063,52 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 41.59999996423721
+              "duration": 42.69999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 46.200000047683716
+              "duration": 46.60000002384186
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 47.19999998807907
+              "duration": 46.59999996423721
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 47.30000001192093
+              "duration": 53.69999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 47
+              "duration": 53.200000047683716
             },
             {
-              "url": "http://127.0.0.1:36905/assets/geometric-hero.webp",
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 67.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
               "bytes": 190662,
-              "duration": 49.80000001192093
+              "duration": 53.89999997615814
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 69.90000003576279
-            },
-            {
-              "url": "http://127.0.0.1:36905/geometric/media/planning-clean.webp",
+              "url": "http://127.0.0.1:39539/geometric/media/planning-clean.webp",
               "bytes": 202824,
-              "duration": 10.800000011920929
+              "duration": 42.59999996423721
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 12
+              "duration": 5.699999988079071
             }
           ],
-          "LCP": 320
+          "LCP": 204
         },
         "model": "BLOCKED"
       }
@@ -1234,47 +1120,47 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 26.600000023841858
+              "duration": 20.5
             },
             {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 21.399999976158142
+              "duration": 28.69999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 22.200000047683716
+              "duration": 30.30000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 23
+              "duration": 33.80000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 27.30000001192093
+              "duration": 33.80000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 34
+              "duration": 33.90000003576279
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 47.80000001192093
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 49.60000002384186
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 2.300000011920929
+              "duration": 17.400000035762787
             }
           ],
-          "LCP": 136
+          "LCP": 184
         },
         "model": "BLOCKED"
       }
@@ -1286,52 +1172,52 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 15.600000023841858
+              "duration": 21.899999976158142
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 15.399999976158142
+              "duration": 23.700000047683716
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 15.5
+              "duration": 25.400000035762787
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 22.5
+              "duration": 28.200000047683716
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 18.5
+              "duration": 32.69999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 19.599999964237213
+              "duration": 28.19999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 28.700000047683716
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 52.09999996423721
             },
             {
-              "url": "http://127.0.0.1:36905/table/personal/media/01-hero-finished-angled-768.webp",
+              "url": "http://127.0.0.1:39539/table/personal/media/01-hero-finished-angled-768.webp",
               "bytes": 87380,
-              "duration": 23.599999964237213
+              "duration": 28.100000023841858
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 7.300000011920929
+              "duration": 3.5
             }
           ],
-          "LCP": 104
+          "LCP": 136
         },
         "model": "PASS_DESIGN_ONLY"
       }
@@ -1343,52 +1229,52 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 18.30000001192093
+              "duration": 23
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 16
+              "duration": 16.5
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 16.600000023841858
+              "duration": 19.599999964237213
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 25.30000001192093
+              "duration": 21.799999952316284
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 19.5
+              "duration": 23.899999976158142
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 37.5
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 32.40000003576279
             },
             {
-              "url": "http://127.0.0.1:36905/assets/geometric-hero.webp",
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
               "bytes": 190662,
-              "duration": 25.899999976158142
+              "duration": 25.69999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/geometric/media/planning-clean.webp",
+              "url": "http://127.0.0.1:39539/geometric/media/planning-clean.webp",
               "bytes": 202824,
-              "duration": 14.700000047683716
+              "duration": 9.699999988079071
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 1.4000000357627869
+              "duration": 4.600000023841858
             }
           ],
-          "LCP": 148
+          "LCP": 136
         },
         "model": "BLOCKED"
       }
@@ -1400,47 +1286,47 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 17.80000001192093
+              "duration": 40.5
             },
             {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 28.19999998807907
+              "duration": 38.89999997615814
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 28.599999964237213
+              "duration": 44.19999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 30.099999964237213
+              "duration": 44.5
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
-              "bytes": 1619,
-              "duration": 33.5
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 33.60000002384186
+              "duration": 51.40000003576279
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 46.39999997615814
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 50.89999997615814
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 72.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 6.899999976158142
+              "duration": 2.899999976158142
             }
           ],
-          "LCP": 132
+          "LCP": 208
         },
         "model": "BLOCKED"
       }
@@ -1452,57 +1338,57 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 16.100000023841858
+              "duration": 25.399999976158142
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 14.400000035762787
+              "duration": 29.399999976158142
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 15.900000035762787
+              "duration": 29.69999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
-              "bytes": 852,
-              "duration": 18.100000023841858
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 17.899999976158142
+              "duration": 34.30000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 33.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 17.599999964237213
+              "duration": 29.399999976158142
             },
             {
-              "url": "http://127.0.0.1:36905/table/personal/media/01-hero-finished-angled-768.webp",
+              "url": "http://127.0.0.1:39539/table/personal/media/01-hero-finished-angled-768.webp",
               "bytes": 87380,
-              "duration": 26.80000001192093
+              "duration": 34.39999997615814
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 30.900000035762787
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 57.5
             },
             {
-              "url": "http://127.0.0.1:36905/table/personal/media/personal-design-preview-poster.webp",
+              "url": "http://127.0.0.1:39539/table/personal/media/personal-design-preview-poster.webp",
               "bytes": 9476,
-              "duration": 15.899999976158142
+              "duration": 16.600000023841858
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 8.199999988079071
+              "duration": 8.5
             }
           ],
-          "LCP": 108
+          "LCP": 128
         },
         "model": "PASS_DESIGN_ONLY"
       }
@@ -1514,52 +1400,52 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 31.100000023841858
+              "duration": 28.399999976158142
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 31.5
+              "duration": 24
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 39.10000002384186
+              "duration": 24.700000047683716
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
-              "bytes": 1619,
-              "duration": 40.60000002384186
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 41.40000003576279
+              "duration": 26.900000035762787
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 54
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 32.19999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/geometric-hero.webp",
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
               "bytes": 190662,
-              "duration": 45.10000002384186
+              "duration": 33.10000002384186
             },
             {
-              "url": "http://127.0.0.1:36905/geometric/media/planning-clean.webp",
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 44.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/geometric/media/planning-clean.webp",
               "bytes": 202824,
-              "duration": 19.69999998807907
+              "duration": 14.599999964237213
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 2
+              "duration": 7.599999964237213
             }
           ],
-          "LCP": 196
+          "LCP": 172
         },
         "model": "BLOCKED"
       }
@@ -1571,47 +1457,47 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 20.099999964237213
+              "duration": 23.30000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 15.399999976158142
+              "duration": 24.5
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 17.399999976158142
+              "duration": 24.5
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 17.399999976158142
+              "duration": 25.599999964237213
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
-              "bytes": 852,
-              "duration": 18
-            },
-            {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 17.80000001192093
+              "duration": 31.30000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 34.30000001192093
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 25.600000023841858
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 44.700000047683716
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 2.700000047683716
+              "duration": 4.600000023841858
             }
           ],
-          "LCP": 128
+          "LCP": 124
         },
         "model": "BLOCKED"
       }
@@ -1623,52 +1509,52 @@
         "initial": {
           "resources": [
             {
-              "url": "http://127.0.0.1:36905/assets/tables.css",
+              "url": "http://127.0.0.1:39539/assets/tables.css",
               "bytes": 3015,
-              "duration": 25.299999952316284
+              "duration": 27.19999998807907
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.css",
+              "url": "http://127.0.0.1:39539/assets/language.css",
               "bytes": 2568,
-              "duration": 29
+              "duration": 30.899999976158142
             },
             {
-              "url": "http://127.0.0.1:36905/assets/product-light.css",
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
               "bytes": 4777,
-              "duration": 29
+              "duration": 30.900000035762787
             },
             {
-              "url": "http://127.0.0.1:36905/assets/language.js",
+              "url": "http://127.0.0.1:39539/assets/language.js",
               "bytes": 7127,
-              "duration": 29.399999976158142
+              "duration": 33.80000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/media-loading.js",
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
               "bytes": 852,
-              "duration": 29.099999964237213
+              "duration": 33.80000001192093
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.css",
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
               "bytes": 1619,
-              "duration": 32
+              "duration": 30.899999976158142
             },
             {
-              "url": "http://127.0.0.1:36905/assets/three-preview.js",
-              "bytes": 5213,
-              "duration": 43.69999998807907
-            },
-            {
-              "url": "http://127.0.0.1:36905/table/personal/media/01-hero-finished-angled-768.webp",
+              "url": "http://127.0.0.1:39539/table/personal/media/01-hero-finished-angled-768.webp",
               "bytes": 87380,
-              "duration": 32.19999998807907
+              "duration": 34
             },
             {
-              "url": "http://127.0.0.1:36905/favicon.ico",
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 46.09999996423721
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
               "bytes": 0,
-              "duration": 4.599999964237213
+              "duration": 1.2000000476837158
             }
           ],
-          "LCP": 144
+          "LCP": 136
         },
         "model": "PASS_DESIGN_ONLY"
       }

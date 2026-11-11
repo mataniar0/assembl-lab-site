@@ -1,10 +1,10 @@
-import sys,json,time,subprocess,math,argparse
+import sys,json,time,subprocess,math,argparse,traceback
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from site_smoke import site_server,Session,toggle,locale_and_layout
 from playwright.sync_api import sync_playwright
 R=Path(__file__).resolve().parents[1];OUT=R/'QA_EVIDENCE/AL-016/browser';OUT.mkdir(parents=True,exist_ok=True);RESULTS=[]
-args=argparse.ArgumentParser();args.add_argument('--no-captures',action='store_true');args=args.parse_args()
+args=argparse.ArgumentParser();args.add_argument('--no-captures',action='store_true');args.add_argument('--only-case');args=args.parse_args()
 BASE='/tmp/al016-baseline'
 subprocess.run(['mkdir','-p',BASE],check=True)
 # A separate archive is used for immutable before captures and initial request metrics.
@@ -16,8 +16,9 @@ def initial(context,page,url):
  page.add_init_script("try{new PerformanceObserver(l=>{for(const e of l.getEntries())window.__lcp=e.startTime}).observe({type:'largest-contentful-paint',buffered:true})}catch(_){}")
  page.goto(url,wait_until='networkidle');page.wait_for_function('Boolean(window.ASSEMBLE_I18N)')
 def record(name,fn):
+ if args.only_case and name!=args.only_case:return
  try:r=fn();RESULTS.append({'case':name,'passed':True,'details':r});print('PASS',name,flush=True)
- except Exception as e:RESULTS.append({'case':name,'passed':False,'error':str(e)});print('FAIL',name,str(e),flush=True)
+ except Exception as e:RESULTS.append({'case':name,'passed':False,'error':str(e),'traceback':traceback.format_exc()});print('FAIL',name,traceback.format_exc(),flush=True)
 with site_server(R) as base,site_server(Path(BASE)) as before,sync_playwright() as pw:
  b=pw.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--enable-webgl','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
  for lang in ('he','en'):
@@ -42,6 +43,10 @@ with site_server(R) as base,site_server(Path(BASE)) as before,sync_playwright() 
       viewer=page.locator('model-viewer');assert viewer.count()==1
       assert all(r['url'].startswith(base) for r in metrics(page)['resources']), 'Unexpected external request'
       orbit=viewer.evaluate('e=>({...e.getCameraOrbit()})')
+      assert viewer.evaluate('e=>e.fieldOfView')=='45deg', 'Requested camera FOV not retained'
+      computed_fov=viewer.evaluate('e=>e.getFieldOfView()');assert math.isfinite(computed_fov) and computed_fov>0
+      page.locator('[data-three-action=out]').click();assert viewer.evaluate('e=>e.getCameraOrbit().radius')>orbit['radius'], 'Cannot zoom out beyond initial fit'
+      page.locator('[data-three-action=reset]').click()
       for _ in range(12):page.locator('[data-three-action=right]').click()
       after=viewer.evaluate('e=>({...e.getCameraOrbit()})');assert abs(after['theta']-orbit['theta'])>6,'No full orbit'
       page.locator('[data-three-action=in]').click();zoom=viewer.evaluate('e=>e.getCameraOrbit().radius');assert zoom<orbit['radius']
@@ -52,7 +57,7 @@ with site_server(R) as base,site_server(Path(BASE)) as before,sync_playwright() 
       toggle(page,'en' if lang=='he' else'he');assert page.locator('model-viewer').count()==1;toggle(page,lang)
       page.locator('[data-three-close]').click();assert page.locator('model-viewer').count()==0;assert page.locator('.gallery').evaluate('e=>document.activeElement===e')
       page.locator('.gallery .next').click();assert page.locator('.gallery .progress span').inner_text()=='02'
-     s.healthy();s.close();return {'initial':m,'model':'PASS_DESIGN_ONLY' if route=='table/personal/' else'BLOCKED'}
+     s.healthy();s.close();return {'initial':m,'model':'PASS_DESIGN_ONLY' if route=='table/personal/' else'BLOCKED','computed_fov':computed_fov if route=='table/personal/' else None}
     record(f'{route}:{lang}:{width}',check)
  # Negative scenarios: expected network failures are scoped to this model, gallery must remain usable.
  for scenario in ('model404','library404','webgl','slow','close-loading','nojs','blockedjs'):
@@ -93,4 +98,4 @@ with site_server(R) as base,site_server(Path(BASE)) as before,sync_playwright() 
   for label,orbit in [('front',f'0deg 75deg {radius}m'),('side',f'90deg 75deg {radius}m'),('underside',f'35deg 150deg {radius}m')]:
    s.page.locator('model-viewer').evaluate('(e,v)=>{e.cameraOrbit=v;e.jumpCameraToGoal()}',orbit);s.page.wait_for_timeout(600);s.page.locator('.three-stage').screenshot(path=str(OUT/f'personal-{label}.png'))
   s.close();b.close()
-report={'passed':sum(r['passed'] for r in RESULTS),'failed':sum(not r['passed'] for r in RESULTS),'real_posts':0,'results':RESULTS};(OUT/'results.json').write_text(json.dumps(report,indent=2)+'\n');print('TOTAL',report['passed'],report['failed']);sys.exit(bool(report['failed']))
+report={'passed':sum(r['passed'] for r in RESULTS),'failed':sum(not r['passed'] for r in RESULTS),'real_posts':0,'results':RESULTS};(OUT/('focused-results.json' if args.only_case else 'results.json')).write_text(json.dumps(report,indent=2)+'\n');print('TOTAL',report['passed'],report['failed']);sys.exit(bool(report['failed']))

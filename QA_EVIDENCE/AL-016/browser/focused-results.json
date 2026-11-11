@@ -1,0 +1,65 @@
+{
+  "passed": 1,
+  "failed": 0,
+  "real_posts": 0,
+  "results": [
+    {
+      "case": "table/personal/:en:320",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:41427/assets/tables.css",
+              "bytes": 3015,
+              "duration": 19.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:41427/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 26.100000023841858
+            },
+            {
+              "url": "http://127.0.0.1:41427/assets/language.css",
+              "bytes": 2568,
+              "duration": 23.80000001192093
+            },
+            {
+              "url": "http://127.0.0.1:41427/assets/language.js",
+              "bytes": 7127,
+              "duration": 26.100000023841858
+            },
+            {
+              "url": "http://127.0.0.1:41427/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 25.5
+            },
+            {
+              "url": "http://127.0.0.1:41427/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 26
+            },
+            {
+              "url": "http://127.0.0.1:41427/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 50.5
+            },
+            {
+              "url": "http://127.0.0.1:41427/table/personal/media/01-hero-finished-angled-480.webp",
+              "bytes": 35700,
+              "duration": 27.600000023841858
+            },
+            {
+              "url": "http://127.0.0.1:41427/favicon.ico",
+              "bytes": 0,
+              "duration": 2.100000023841858
+            }
+          ],
+          "LCP": 452
+        },
+        "model": "PASS_DESIGN_ONLY",
+        "computed_fov": 55.14426322785422
+      }
+    }
+  ]
+}

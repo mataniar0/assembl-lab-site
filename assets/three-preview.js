@@ -37,6 +37,8 @@
         viewer = document.createElement('model-viewer');
         viewer.setAttribute('camera-controls', ''); viewer.setAttribute('touch-action', 'pan-y');
         viewer.setAttribute('interaction-prompt', 'none'); viewer.setAttribute('camera-orbit', '35deg 70deg auto');
+        viewer.setAttribute('min-camera-orbit', 'auto 5deg 0.1m'); viewer.setAttribute('max-camera-orbit', 'auto 175deg 10m');
+        viewer.setAttribute('min-field-of-view', '20deg'); viewer.setAttribute('max-field-of-view', '60deg');
         viewer.setAttribute('field-of-view', '45deg'); viewer.setAttribute('alt', t('alt'));
         const ready = new Promise((resolve, reject) => {
           viewer.addEventListener('load', resolve, {once: true});

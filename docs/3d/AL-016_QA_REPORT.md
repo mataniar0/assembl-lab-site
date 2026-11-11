@@ -1,8 +1,8 @@
 # AL-016 — partial design-preview handoff
 
-Issue: https://github.com/mataniar0/assembl-lab-site/issues/30  
-Branch: `feature/al-016-coffee-table-3d`  
-Base main: `2a0fe67d742dec79421a03a9dd10076aba427aa5`  
+Issue: https://github.com/mataniar0/assembl-lab-site/issues/30
+Branch: `feature/al-016-coffee-table-3d`
+Base main: `2a0fe67d742dec79421a03a9dd10076aba427aa5`
 Read-only engineering source: `548133b0462909e63c41d29d5bef859ce8fbc60c`
 
 **Scope review required: one digital design preview, two source blockers. This is not 3/3 completion or a verified replica of the manufactured Personal table. No merge/deployment authorized.** The coordinating manager owns independent source/visual QA, numerical score and APPROVED decision. This implementer's checks are self-QA, not an independent reviewer approval.
@@ -52,7 +52,7 @@ The browser suite uses existing pinned QA Playwright and `/usr/bin/chromium`, wi
 | Khronos glTF validator2.0.0-dev.3.10 | [JSON](../../QA_EVIDENCE/AL-016/gltf-validation.json): **0 errors, 0 warnings, 0 hints** |
 | Separate binary/source checks | [JSON](../../QA_EVIDENCE/AL-016/independent-asset-check.json): **3 passed, 0 failed**, including two genuinely corrupt GLBs rejected and exact source triangle/color comparison |
 | Dedicated browser suite | [JSON](../../QA_EVIDENCE/AL-016/browser/results.json): **37 passed, 0 failed, 0 real posts** |
-| Touch | [JSON](../../QA_EVIDENCE/AL-016/touch.json): **3 passed, 0 failed** — emulated drag orbit, pinch zoom and 150px vertical page scroll |
+| Touch | [JSON](../../QA_EVIDENCE/AL-016/touch.json): **3 passed, 0 failed** — emulated drag orbit, pinch zoom and 125px vertical page scroll |
 | Generic smoke | Working candidate: **66 passed, 0 failed, 0 real posts**. Exact committed/pre-push result attached at handoff. |
 | Hook integration after commit | Pending final evidence attachment. Uses a temporary local bare remote only, never GitHub. |
 | GitHub Actions | **Not yet evidenced**. Existing `Site checks / Site smoke` workflow remains intact and runs on a PR targeting main. Branch-only push does not trigger it. A local pass is not a remote CI run. |
@@ -63,12 +63,12 @@ The dedicated suite covers all3routes × HE/EN × 320/390/768/1024/1440 (**30 ca
 
 ## Loading/performance
 
-[Six cold local HTTP before/after pairs](../../QA_EVIDENCE/AL-016/performance.json), at390/1440 across all3routes, show **+6,832 initial transferred bytes** for the shared local JS/CSS including local HTTP overhead; **zero initial GLB/library requests**. The 979,139-byte pinned library and 1,700,936-byte GLB load only after activation; subsequent browser caching can reduce transfer. Local observed LCP samples are in the JSON, not a statistically valid production performance benchmark. No claim of improved production LCP. Slow-network coverage is a1s model delay plus timeout/fallback implementation, not a full bandwidth matrix.
+[Six cold local HTTP before/after pairs](../../QA_EVIDENCE/AL-016/performance.json), at390/1440 across all3routes, show **+7,069 initial transferred bytes** for the shared local JS/CSS including local HTTP overhead; **zero initial GLB/library requests**. The 979,139-byte pinned library and 1,700,936-byte GLB load only after activation; subsequent browser caching can reduce transfer. Local observed LCP samples are in the JSON, not a statistically valid production performance benchmark. No claim of improved production LCP. Slow-network coverage is a1s model delay plus timeout/fallback implementation, not a full bandwidth matrix.
 
 ## Correction history and limitations
 
-**Three implementation self-correction cycles before handoff:** (1) bufferView targets removed55 validator hints (initially0errors/0warnings), (2) blocked-page wording and return-focus-to-gallery behavior, (3) visual review caught smoothed triangle shading on CAD flats; crease-aware normals corrected it while exact triangles/colors remained unchanged. No reviewer-authored repairs or post-review cycles.
+**Four implementation self-correction cycles before handoff:** (1) bufferView targets removed55 validator hints (initially0errors/0warnings), (2) blocked-page wording and return-focus-to-gallery behavior, (3) visual review caught smoothed triangle shading on CAD flats; crease-aware normals corrected it while exact triangles/colors remained unchanged, (4) camera API inspection found library-default radius/FOV clamps; explicit bounds now allow zooming out past initial fit, and the suite verifies requested FOV45° and actual radius changes; computed vertical FOV may adapt to viewport aspect ratio. No reviewer-authored repairs or post-review cycles.
 
-During the shading cycle, a zero-area-face assertion exposed872 source degenerate triangles; retained them and used adjacent normals for their invisible surfaces. A QA-venv export attempt lacked NumPy; the documented system NumPy environment succeeded. These are recorded failed attempts, not new geometry. Separate tooling corrections: npm default cache failed (used writable `/tmp` cache), an initial one-off Node validator wrapper used a boolean exitCode (replaced with maintained numeric-exit wrapper), and a new gallery-preservation selector had an unquoted colon (corrected; [failed harness log](../../QA_EVIDENCE/AL-016/tooling-selector-failure.log)). This harness run was stopped and superseded by the final complete run. None were hidden by relaxing acceptance assertions or bypassing hooks.
+During the shading cycle, a zero-area-face assertion exposed872 source degenerate triangles; retained them and used adjacent normals for their invisible surfaces. A QA-venv export attempt lacked NumPy; the documented system NumPy environment succeeded. These are recorded failed attempts, not new geometry. Separate tooling corrections: npm default cache failed (used writable `/tmp` cache), an initial one-off Node validator wrapper used a boolean exitCode (replaced with maintained numeric-exit wrapper), and a new gallery-preservation selector had an unquoted colon (corrected; [failed harness log](../../QA_EVIDENCE/AL-016/tooling-selector-failure.log)). This harness run was stopped and superseded by the final complete run. The first expanded camera run was35passed/2failed because a new test incorrectly required computed FOV45° at320px; focused reproduction identified the responsive vertical-FOV conversion. The corrected check verifies the requested45° and finite computed FOV, while retaining the actual zoom-out requirement. Both failed JSON reports are retained beside the final results. None were hidden by removing user acceptance requirements or bypassing hooks.
 
 Physical mobile devices, Safari/iOS, real-user GPU diversity and production network LCP were not tested. Source fit/strength, painted appearance and as-built exactness remain unverified. Source blockers require new authoritative artifacts, not extra retries. Manager scope approval and independent quality score remain pending; this report gives no numerical self-grade and authorizes no publication.

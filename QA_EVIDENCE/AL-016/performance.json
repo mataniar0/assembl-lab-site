@@ -1,35 +1,39 @@
 {
-  "method": "Cold isolated contexts, local HTTP, no compression; LCP samples indicative only, not a benchmark.",
+  "method": "Cold isolated contexts, local HTTP, no compression; totals include navigation document plus resources. LCP samples indicative only, not a benchmark.",
   "results": [
     {
       "width": 390,
       "route": "geometric/",
       "before": {
-        "LCP_ms": 176,
-        "bytes": 408810,
+        "LCP_ms": 120,
+        "bytes": 439469,
+        "document_bytes": 30659,
+        "resource_bytes": 408810,
         "urls": [
-          "http://127.0.0.1:40299/assets/language.js",
-          "http://127.0.0.1:40299/assets/product-light.css",
-          "http://127.0.0.1:40299/assets/language.css",
-          "http://127.0.0.1:40299/assets/media-loading.js",
-          "http://127.0.0.1:40299/assets/geometric-hero.webp",
-          "http://127.0.0.1:40299/geometric/media/planning-clean.webp",
-          "http://127.0.0.1:40299/favicon.ico"
+          "http://127.0.0.1:36885/assets/language.js",
+          "http://127.0.0.1:36885/assets/language.css",
+          "http://127.0.0.1:36885/assets/product-light.css",
+          "http://127.0.0.1:36885/assets/media-loading.js",
+          "http://127.0.0.1:36885/assets/geometric-hero.webp",
+          "http://127.0.0.1:36885/geometric/media/planning-clean.webp",
+          "http://127.0.0.1:36885/favicon.ico"
         ]
       },
       "after": {
-        "LCP_ms": 128,
-        "bytes": 415642,
+        "LCP_ms": 100,
+        "bytes": 449717,
+        "document_bytes": 33838,
+        "resource_bytes": 415879,
         "urls": [
-          "http://127.0.0.1:40543/assets/language.js",
-          "http://127.0.0.1:40543/assets/language.css",
-          "http://127.0.0.1:40543/assets/product-light.css",
-          "http://127.0.0.1:40543/assets/media-loading.js",
-          "http://127.0.0.1:40543/assets/three-preview.css",
-          "http://127.0.0.1:40543/assets/geometric-hero.webp",
-          "http://127.0.0.1:40543/assets/three-preview.js",
-          "http://127.0.0.1:40543/geometric/media/planning-clean.webp",
-          "http://127.0.0.1:40543/favicon.ico"
+          "http://127.0.0.1:33883/assets/language.js",
+          "http://127.0.0.1:33883/assets/language.css",
+          "http://127.0.0.1:33883/assets/product-light.css",
+          "http://127.0.0.1:33883/assets/three-preview.css",
+          "http://127.0.0.1:33883/assets/media-loading.js",
+          "http://127.0.0.1:33883/assets/geometric-hero.webp",
+          "http://127.0.0.1:33883/assets/three-preview.js",
+          "http://127.0.0.1:33883/geometric/media/planning-clean.webp",
+          "http://127.0.0.1:33883/favicon.ico"
         ]
       }
     },
@@ -37,29 +41,33 @@
       "width": 390,
       "route": "table/flow/",
       "before": {
-        "LCP_ms": 140,
-        "bytes": 18339,
+        "LCP_ms": 104,
+        "bytes": 25333,
+        "document_bytes": 6994,
+        "resource_bytes": 18339,
         "urls": [
-          "http://127.0.0.1:40299/assets/language.js",
-          "http://127.0.0.1:40299/assets/tables.css",
-          "http://127.0.0.1:40299/assets/language.css",
-          "http://127.0.0.1:40299/assets/product-light.css",
-          "http://127.0.0.1:40299/assets/media-loading.js",
-          "http://127.0.0.1:40299/favicon.ico"
+          "http://127.0.0.1:36885/assets/language.js",
+          "http://127.0.0.1:36885/assets/tables.css",
+          "http://127.0.0.1:36885/assets/language.css",
+          "http://127.0.0.1:36885/assets/product-light.css",
+          "http://127.0.0.1:36885/assets/media-loading.js",
+          "http://127.0.0.1:36885/favicon.ico"
         ]
       },
       "after": {
-        "LCP_ms": 100,
-        "bytes": 25171,
+        "LCP_ms": 124,
+        "bytes": 35586,
+        "document_bytes": 10178,
+        "resource_bytes": 25408,
         "urls": [
-          "http://127.0.0.1:40543/assets/language.js",
-          "http://127.0.0.1:40543/assets/language.css",
-          "http://127.0.0.1:40543/assets/tables.css",
-          "http://127.0.0.1:40543/assets/product-light.css",
-          "http://127.0.0.1:40543/assets/three-preview.css",
-          "http://127.0.0.1:40543/assets/media-loading.js",
-          "http://127.0.0.1:40543/assets/three-preview.js",
-          "http://127.0.0.1:40543/favicon.ico"
+          "http://127.0.0.1:33883/assets/language.js",
+          "http://127.0.0.1:33883/assets/tables.css",
+          "http://127.0.0.1:33883/assets/language.css",
+          "http://127.0.0.1:33883/assets/product-light.css",
+          "http://127.0.0.1:33883/assets/three-preview.css",
+          "http://127.0.0.1:33883/assets/media-loading.js",
+          "http://127.0.0.1:33883/assets/three-preview.js",
+          "http://127.0.0.1:33883/favicon.ico"
         ]
       }
     },
@@ -67,31 +75,35 @@
       "width": 390,
       "route": "table/personal/",
       "before": {
-        "LCP_ms": 144,
-        "bytes": 54039,
+        "LCP_ms": 100,
+        "bytes": 76297,
+        "document_bytes": 22258,
+        "resource_bytes": 54039,
         "urls": [
-          "http://127.0.0.1:40299/assets/tables.css",
-          "http://127.0.0.1:40299/assets/language.css",
-          "http://127.0.0.1:40299/assets/product-light.css",
-          "http://127.0.0.1:40299/assets/language.js",
-          "http://127.0.0.1:40299/assets/media-loading.js",
-          "http://127.0.0.1:40299/table/personal/media/01-hero-finished-angled-480.webp",
-          "http://127.0.0.1:40299/favicon.ico"
+          "http://127.0.0.1:36885/assets/tables.css",
+          "http://127.0.0.1:36885/assets/language.css",
+          "http://127.0.0.1:36885/assets/product-light.css",
+          "http://127.0.0.1:36885/assets/language.js",
+          "http://127.0.0.1:36885/assets/media-loading.js",
+          "http://127.0.0.1:36885/table/personal/media/01-hero-finished-angled-480.webp",
+          "http://127.0.0.1:36885/favicon.ico"
         ]
       },
       "after": {
-        "LCP_ms": 176,
-        "bytes": 60871,
+        "LCP_ms": 88,
+        "bytes": 88347,
+        "document_bytes": 27239,
+        "resource_bytes": 61108,
         "urls": [
-          "http://127.0.0.1:40543/assets/tables.css",
-          "http://127.0.0.1:40543/assets/language.css",
-          "http://127.0.0.1:40543/assets/product-light.css",
-          "http://127.0.0.1:40543/assets/language.js",
-          "http://127.0.0.1:40543/assets/three-preview.css",
-          "http://127.0.0.1:40543/assets/media-loading.js",
-          "http://127.0.0.1:40543/table/personal/media/01-hero-finished-angled-480.webp",
-          "http://127.0.0.1:40543/assets/three-preview.js",
-          "http://127.0.0.1:40543/favicon.ico"
+          "http://127.0.0.1:33883/assets/tables.css",
+          "http://127.0.0.1:33883/assets/language.css",
+          "http://127.0.0.1:33883/assets/product-light.css",
+          "http://127.0.0.1:33883/assets/language.js",
+          "http://127.0.0.1:33883/assets/three-preview.css",
+          "http://127.0.0.1:33883/assets/media-loading.js",
+          "http://127.0.0.1:33883/assets/three-preview.js",
+          "http://127.0.0.1:33883/table/personal/media/01-hero-finished-angled-480.webp",
+          "http://127.0.0.1:33883/favicon.ico"
         ]
       }
     },
@@ -99,31 +111,35 @@
       "width": 1440,
       "route": "geometric/",
       "before": {
-        "LCP_ms": 236,
-        "bytes": 408810,
+        "LCP_ms": 124,
+        "bytes": 439469,
+        "document_bytes": 30659,
+        "resource_bytes": 408810,
         "urls": [
-          "http://127.0.0.1:40299/assets/language.js",
-          "http://127.0.0.1:40299/assets/language.css",
-          "http://127.0.0.1:40299/assets/product-light.css",
-          "http://127.0.0.1:40299/assets/media-loading.js",
-          "http://127.0.0.1:40299/assets/geometric-hero.webp",
-          "http://127.0.0.1:40299/geometric/media/planning-clean.webp",
-          "http://127.0.0.1:40299/favicon.ico"
+          "http://127.0.0.1:36885/assets/language.js",
+          "http://127.0.0.1:36885/assets/language.css",
+          "http://127.0.0.1:36885/assets/product-light.css",
+          "http://127.0.0.1:36885/assets/media-loading.js",
+          "http://127.0.0.1:36885/assets/geometric-hero.webp",
+          "http://127.0.0.1:36885/geometric/media/planning-clean.webp",
+          "http://127.0.0.1:36885/favicon.ico"
         ]
       },
       "after": {
-        "LCP_ms": 168,
-        "bytes": 415642,
+        "LCP_ms": 120,
+        "bytes": 449717,
+        "document_bytes": 33838,
+        "resource_bytes": 415879,
         "urls": [
-          "http://127.0.0.1:40543/assets/language.js",
-          "http://127.0.0.1:40543/assets/language.css",
-          "http://127.0.0.1:40543/assets/product-light.css",
-          "http://127.0.0.1:40543/assets/three-preview.css",
-          "http://127.0.0.1:40543/assets/media-loading.js",
-          "http://127.0.0.1:40543/assets/three-preview.js",
-          "http://127.0.0.1:40543/assets/geometric-hero.webp",
-          "http://127.0.0.1:40543/geometric/media/planning-clean.webp",
-          "http://127.0.0.1:40543/favicon.ico"
+          "http://127.0.0.1:33883/assets/language.js",
+          "http://127.0.0.1:33883/assets/language.css",
+          "http://127.0.0.1:33883/assets/product-light.css",
+          "http://127.0.0.1:33883/assets/media-loading.js",
+          "http://127.0.0.1:33883/assets/three-preview.css",
+          "http://127.0.0.1:33883/assets/three-preview.js",
+          "http://127.0.0.1:33883/assets/geometric-hero.webp",
+          "http://127.0.0.1:33883/geometric/media/planning-clean.webp",
+          "http://127.0.0.1:33883/favicon.ico"
         ]
       }
     },
@@ -131,29 +147,33 @@
       "width": 1440,
       "route": "table/flow/",
       "before": {
-        "LCP_ms": 108,
-        "bytes": 18339,
+        "LCP_ms": 100,
+        "bytes": 25333,
+        "document_bytes": 6994,
+        "resource_bytes": 18339,
         "urls": [
-          "http://127.0.0.1:40299/assets/language.js",
-          "http://127.0.0.1:40299/assets/tables.css",
-          "http://127.0.0.1:40299/assets/language.css",
-          "http://127.0.0.1:40299/assets/product-light.css",
-          "http://127.0.0.1:40299/assets/media-loading.js",
-          "http://127.0.0.1:40299/favicon.ico"
+          "http://127.0.0.1:36885/assets/language.js",
+          "http://127.0.0.1:36885/assets/tables.css",
+          "http://127.0.0.1:36885/assets/language.css",
+          "http://127.0.0.1:36885/assets/product-light.css",
+          "http://127.0.0.1:36885/assets/media-loading.js",
+          "http://127.0.0.1:36885/favicon.ico"
         ]
       },
       "after": {
-        "LCP_ms": 88,
-        "bytes": 25171,
+        "LCP_ms": 96,
+        "bytes": 35586,
+        "document_bytes": 10178,
+        "resource_bytes": 25408,
         "urls": [
-          "http://127.0.0.1:40543/assets/language.js",
-          "http://127.0.0.1:40543/assets/tables.css",
-          "http://127.0.0.1:40543/assets/language.css",
-          "http://127.0.0.1:40543/assets/product-light.css",
-          "http://127.0.0.1:40543/assets/media-loading.js",
-          "http://127.0.0.1:40543/assets/three-preview.css",
-          "http://127.0.0.1:40543/assets/three-preview.js",
-          "http://127.0.0.1:40543/favicon.ico"
+          "http://127.0.0.1:33883/assets/language.js",
+          "http://127.0.0.1:33883/assets/tables.css",
+          "http://127.0.0.1:33883/assets/language.css",
+          "http://127.0.0.1:33883/assets/product-light.css",
+          "http://127.0.0.1:33883/assets/media-loading.js",
+          "http://127.0.0.1:33883/assets/three-preview.css",
+          "http://127.0.0.1:33883/assets/three-preview.js",
+          "http://127.0.0.1:33883/favicon.ico"
         ]
       }
     },
@@ -161,31 +181,35 @@
       "width": 1440,
       "route": "table/personal/",
       "before": {
-        "LCP_ms": 188,
-        "bytes": 105719,
+        "LCP_ms": 88,
+        "bytes": 127977,
+        "document_bytes": 22258,
+        "resource_bytes": 105719,
         "urls": [
-          "http://127.0.0.1:40299/assets/tables.css",
-          "http://127.0.0.1:40299/assets/language.css",
-          "http://127.0.0.1:40299/assets/product-light.css",
-          "http://127.0.0.1:40299/assets/language.js",
-          "http://127.0.0.1:40299/assets/media-loading.js",
-          "http://127.0.0.1:40299/table/personal/media/01-hero-finished-angled-768.webp",
-          "http://127.0.0.1:40299/favicon.ico"
+          "http://127.0.0.1:36885/assets/tables.css",
+          "http://127.0.0.1:36885/assets/language.css",
+          "http://127.0.0.1:36885/assets/product-light.css",
+          "http://127.0.0.1:36885/assets/language.js",
+          "http://127.0.0.1:36885/assets/media-loading.js",
+          "http://127.0.0.1:36885/table/personal/media/01-hero-finished-angled-768.webp",
+          "http://127.0.0.1:36885/favicon.ico"
         ]
       },
       "after": {
-        "LCP_ms": 120,
-        "bytes": 112551,
+        "LCP_ms": 92,
+        "bytes": 140027,
+        "document_bytes": 27239,
+        "resource_bytes": 112788,
         "urls": [
-          "http://127.0.0.1:40543/assets/tables.css",
-          "http://127.0.0.1:40543/assets/language.css",
-          "http://127.0.0.1:40543/assets/product-light.css",
-          "http://127.0.0.1:40543/assets/language.js",
-          "http://127.0.0.1:40543/assets/three-preview.css",
-          "http://127.0.0.1:40543/assets/media-loading.js",
-          "http://127.0.0.1:40543/assets/three-preview.js",
-          "http://127.0.0.1:40543/table/personal/media/01-hero-finished-angled-768.webp",
-          "http://127.0.0.1:40543/favicon.ico"
+          "http://127.0.0.1:33883/assets/tables.css",
+          "http://127.0.0.1:33883/assets/language.css",
+          "http://127.0.0.1:33883/assets/product-light.css",
+          "http://127.0.0.1:33883/assets/language.js",
+          "http://127.0.0.1:33883/assets/media-loading.js",
+          "http://127.0.0.1:33883/assets/three-preview.css",
+          "http://127.0.0.1:33883/table/personal/media/01-hero-finished-angled-768.webp",
+          "http://127.0.0.1:33883/assets/three-preview.js",
+          "http://127.0.0.1:33883/favicon.ico"
         ]
       }
     }
