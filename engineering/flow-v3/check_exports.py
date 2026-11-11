@@ -5,6 +5,10 @@ import numpy as np
 import cadquery as cq,trimesh
 from pygltflib import GLTF2
 P=Path(__file__).parent/'artifacts';checks={}
+scope=json.loads((P/'scope.json').read_text());v=json.loads((P/'validation.json').read_text());t=json.loads((P/'transforms.json').read_text())
+assert scope['tabletop_required'] is False and v['tabletop_required'] is False and t['tabletop']['required'] is False
+assert 'missing_tabletop' not in v and v['bom_complete'] and v['required_instances']==19
+assert sum(i['quantity'] for i in json.loads((P/'inventory.json').read_text()))==19
 for key,expected in [('Flow_V3_PARTIAL_FRAME_DESIGN_ONLY',7),('Flow_V3_PART_LIBRARY_NOT_ASSEMBLED',7)]:
  s=cq.importers.importStep(str(P/(key+'.step'))).val();assert s.isValid() and len(s.Solids())==expected
  scene=trimesh.load(P/(key+'.glb'),force='scene');g=GLTF2().load(str(P/(key+'.glb')))

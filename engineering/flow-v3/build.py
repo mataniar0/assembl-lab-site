@@ -104,9 +104,9 @@ assembly.export(str(OUT/'Flow_V3_PARTIAL_FRAME_DESIGN_ONLY.step'))
 roundtrip=cq.importers.importStep(str(OUT/'Flow_V3_PARTIAL_FRAME_DESIGN_ONLY.step')).val()
 assert roundtrip.isValid() and len(roundtrip.Solids())==7
 assert all(abs(a-b)<1e-6 for a,b in zip((roundtrip.BoundingBox().xlen,roundtrip.BoundingBox().ylen,roundtrip.BoundingBox().zlen),(860,480,70)))
-scene.metadata={'status':'DESIGN_ONLY_PARTIAL','missing':'tabletop; authoritative floor-relative leg and tri-base placements','units':'metres','axes':'Y-up; X=CAD X; Z=-CAD Y'}
+scene.metadata={'status':'DESIGN_ONLY_PARTIAL','missing':'authoritative floor-relative leg and tri-base placements','tabletop':'EXCLUDED_BY_OWNER','units':'metres','axes':'Y-up; X=CAD X; Z=-CAD Y'}
 scene.export(str(OUT/'Flow_V3_PARTIAL_FRAME_DESIGN_ONLY.glb'))
-write('transforms.json',dict(frame='mm Z-up; frame lower SW corner, NOT floor',dxf_local='u,v,t = DXF x,DXF y,thickness 0..6',glb_axes='m Y-up: (X,Z,-Y)/1000',instances=[{k:v for k,v in i.items() if k not in ('solid','mesh')} for i in instances],unplaced=[dict(part=k,quantity=next(x['quantity'] for x in inventory if x['part']==k),transform=None,status='BLOCKED: floor-relative XYZ/orientation contract not recovered') for k in ('LEG_A','LEG_B','TRI_BASE_ROUNDED')],tabletop=dict(source=None,transform=None,status='BLOCKED: no V3 profile')))
+write('transforms.json',dict(frame='mm Z-up; frame lower SW corner, NOT floor',dxf_local='u,v,t = DXF x,DXF y,thickness 0..6',glb_axes='m Y-up: (X,Z,-Y)/1000',instances=[{k:v for k,v in i.items() if k not in ('solid','mesh')} for i in instances],unplaced=[dict(part=k,quantity=next(x['quantity'] for x in inventory if x['part']==k),transform=None,status='BLOCKED: floor-relative XYZ/orientation contract not recovered') for k in ('LEG_A','LEG_B','TRI_BASE_ROUNDED')],tabletop=dict(required=False,source=None,transform=None,status='EXCLUDED_BY_OWNER: design has no tabletop')))
 # Library is explicitly a layout of seven UNIQUE parts, never an assembled table.
 lib=cq.Assembly(name='Flow_V3_UNPLACED_PART_LIBRARY_DESIGN_ONLY');libs=trimesh.Scene()
 for idx,(k,(s,m,p)) in enumerate(parts.items()):
@@ -118,5 +118,5 @@ libs.metadata={'status':'UNPLACED_PART_LIBRARY_NOT_ASSEMBLED','layout':'arbitrar
 libs.export(str(OUT/'Flow_V3_PART_LIBRARY_NOT_ASSEMBLED.glb'))
 loaded=trimesh.load(OUT/'Flow_V3_PARTIAL_FRAME_DESIGN_ONLY.glb',force='scene')
 assert len(loaded.geometry)==7 and all(np.isfinite(m.vertices).all() for m in loaded.geometry.values())
-write('validation.json',dict(status='BLOCKED_FULL_ASSEMBLY',profiles='PASS',unique_parts=7,available_instances=19,placed_frame_instances=7,unplaced_instances=12,missing_tabletop=True,pair_checks=len(pairs),collision_failures=sum(p['status']=='FAIL' for p in pairs),frame_bounds_mm=[[0,0,0],[860,480,70]],expected_contacts=12,negative_control_collision_mm3=bad,step_roundtrip='PASS',glb_meshes=len(loaded.geometry),glb_bytes=(OUT/'Flow_V3_PARTIAL_FRAME_DESIGN_ONLY.glb').stat().st_size,physical_validation='NOT_PERFORMED'))
+write('validation.json',dict(status='BLOCKED_FULL_ASSEMBLY',profiles='PASS',unique_parts=7,available_instances=19,required_instances=19,bom_complete=True,placed_frame_instances=7,unplaced_instances=12,tabletop_required=False,tabletop_status='EXCLUDED_BY_OWNER',pair_checks=len(pairs),collision_failures=sum(p['status']=='FAIL' for p in pairs),frame_bounds_mm=[[0,0,0],[860,480,70]],expected_contacts=12,negative_control_collision_mm3=bad,step_roundtrip='PASS',glb_meshes=len(loaded.geometry),glb_bytes=(OUT/'Flow_V3_PARTIAL_FRAME_DESIGN_ONLY.glb').stat().st_size,physical_validation='NOT_PERFORMED'))
 print(json.dumps({'pairs':len(pairs),'collisions':[p for p in pairs if p['status']=='FAIL']}))

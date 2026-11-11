@@ -5,7 +5,8 @@
   "available_instances": 19,
   "placed_frame_instances": 7,
   "unplaced_instances": 12,
-  "missing_tabletop": true,
+  "tabletop_required": false,
+  "tabletop_status": "EXCLUDED_BY_OWNER",
   "pair_checks": 21,
   "collision_failures": 0,
   "frame_bounds_mm": [
@@ -24,6 +25,8 @@
   "negative_control_collision_mm3": 210.0,
   "step_roundtrip": "PASS",
   "glb_meshes": 7,
-  "glb_bytes": 51636,
-  "physical_validation": "NOT_PERFORMED"
+  "glb_bytes": 51656,
+  "physical_validation": "NOT_PERFORMED",
+  "required_instances": 19,
+  "bom_complete": true
 }

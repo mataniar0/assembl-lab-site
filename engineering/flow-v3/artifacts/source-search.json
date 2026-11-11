@@ -241,5 +241,6 @@
     ],
     "flow_objects": []
   },
-  "conclusion": "No V3 tabletop or source assembly CAD in reachable Flow paths. REV2 top is not compatible authority. Engineering has no Flow design paths. Unreachable/deleted refs and external owner files are not accessible."
+  "conclusion": "Original bounded search retained as historical evidence. Owner subsequently clarified that design has no tabletop; no tabletop input is needed. Remaining gate is verified leg/base assembly placements.",
+  "historical_conclusion": "No V3 tabletop or source assembly CAD in reachable Flow paths. REV2 top is not compatible authority. Engineering has no Flow design paths. Unreachable/deleted refs and external owner files are not accessible."
 }

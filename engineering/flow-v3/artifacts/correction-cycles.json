@@ -20,5 +20,16 @@
       "full_table": "BLOCKED_SOURCE",
       "frame_collisions": 0
     }
-  ]
+  ],
+  "scope_clarifications": [
+    {
+      "owner_instruction": "התכנון הוא ללא פלטה",
+      "effect": "Top excluded from BOM and blockers"
+    }
+  ],
+  "followup_diagnostics": {
+    "rejected_corner_candidates": 2,
+    "source_geometry_corrections": 0,
+    "status": "Documented source-based placement failures, not repaired or approved"
+  }
 }

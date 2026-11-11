@@ -25,6 +25,6 @@ for name,repo in [('site',ROOT),('engineering',Path(sys.argv[1]))]:
     except Exception as e:entry['error']=str(e)
     archives.append(entry)
   report[name]['legacy_archives']=archives
-report['conclusion']='No V3 tabletop or source assembly CAD in reachable Flow paths. REV2 top is not compatible authority. Engineering has no Flow design paths. Unreachable/deleted refs and external owner files are not accessible.'
+report['conclusion']='Owner clarification excludes tabletop from design; tabletop recovery is not an acceptance gate. Full source assembly CAD was not recovered in the original history search. Engineering has no Flow design paths. Unreachable/deleted refs and external owner files are not accessible.'
 OUT.mkdir(exist_ok=True);(OUT/'source-search.json').write_text(json.dumps(report,indent=2)+'\n')
 print({k:(v['commits'],len(v['refs']),len(v['flow_objects'])) for k,v in report.items() if isinstance(v,dict)})

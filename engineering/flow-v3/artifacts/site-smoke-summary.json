@@ -2,7 +2,7 @@
   "passed": 66,
   "failed": 0,
   "real_submissions": 0,
-  "scope": "Existing site smoke; browser forms mocked; no site integration",
+  "scope": "Existing site smoke after owner topless clarification; forms mocked; no site integration",
   "report_source": ".qa-reports/latest.json",
-  "report_sha256": "6685427d5df4a8533537ed70426e794a0d8c0008d8f815d120cc1a75ae5bf0c9"
+  "report_sha256": "9b0e550d111aaf72fbeab856b399effb2c09604fef7305e7bf21af6201a8c9a3"
 }
