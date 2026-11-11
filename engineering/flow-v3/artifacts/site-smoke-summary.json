@@ -2,7 +2,7 @@
   "passed": 66,
   "failed": 0,
   "real_submissions": 0,
-  "scope": "Existing site smoke after owner topless clarification; forms mocked; no site integration",
+  "scope": "Website software smoke only, separate from source-contact assembly failure. Normal pre-push checks exact outgoing commit.",
   "report_source": ".qa-reports/latest.json",
-  "report_sha256": "9b0e550d111aaf72fbeab856b399effb2c09604fef7305e7bf21af6201a8c9a3"
+  "report_sha256": "00f9cd9e20653904afd718194287664e1f728286bde87a8857ede4e77c4a61bb"
 }

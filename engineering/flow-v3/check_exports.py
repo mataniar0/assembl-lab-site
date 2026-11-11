@@ -9,7 +9,7 @@ scope=json.loads((P/'scope.json').read_text());v=json.loads((P/'validation.json'
 assert scope['tabletop_required'] is False and v['tabletop_required'] is False and t['tabletop']['required'] is False
 assert 'missing_tabletop' not in v and v['bom_complete'] and v['required_instances']==19
 assert sum(i['quantity'] for i in json.loads((P/'inventory.json').read_text()))==19
-for key,expected in [('Flow_V3_PARTIAL_FRAME_DESIGN_ONLY',7),('Flow_V3_PART_LIBRARY_NOT_ASSEMBLED',7)]:
+for key,expected in [('Flow_V3_PARTIAL_FRAME_DESIGN_ONLY',7),('Flow_V3_PART_LIBRARY_NOT_ASSEMBLED',7),('search/REJECTED_SW_CORNER_DESIGN_ONLY',5)]:
  s=cq.importers.importStep(str(P/(key+'.step'))).val();assert s.isValid() and len(s.Solids())==expected
  scene=trimesh.load(P/(key+'.glb'),force='scene');g=GLTF2().load(str(P/(key+'.glb')))
  assert len(scene.geometry)==expected

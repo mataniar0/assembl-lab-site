@@ -1,89 +1,25 @@
-# Flow V3 — without tabletop; engineering handoff for #33
+# Flow V3 — no tabletop; source-constrained CAD search for #33
 
-**Owner clarification: the design has no tabletop.** A top is excluded from the BOM and is **not a missing input or acceptance blocker**. This clarification supersedes the tabletop requirement in the issue and first PR34 delivery. [Scope record](artifacts/scope.json).
+**Current result: full assembly BLOCKED by incompatible source-contact constraints.** Seven V3 classes supply all19 required instances. No tabletop is included or requested. Source DXFs remain unchanged.
 
-**Overall assembly: still BLOCKED pending verified leg/base reference placement. DESIGN_ONLY.** The available seven V3 part classes account for all **19 required instances** of the topless design. The seven-body frame is verified; eight leg panels and four bases are exported as individual solids but remain unplaced in the accepted model. Two explicitly rejected corner interpretations now have measured interference evidence; neither is exported as an approved complete assembly. No source geometry is changed.
+The requested systematic search is now complete within the explicit full-face joint contract: **1,152 leg–rail candidates,512 corner/rail-state combinations (128 distinct A/B pose pairs) and8,192 base orientation/correspondence tests**. It includes panel handedness, signed6mm offsets, independent translations, both A/B assignments, all four corners, outer-rail U/V flips and continuous translation residual bounds. No reference corner passes; no failed19-body layout is presented as complete.
 
-## Artifacts
+Read the [full search report, coverage boundary, PASS/FAIL and minimal drawing request](SEARCH_REPORT.md) and the [machine-readable unsatisfied-constraint certificate](artifacts/search/unsat-certificate.json). [Hebrew PM handoff](HANDOFF_HE.md).
 
-- [Partial frame STEP](artifacts/Flow_V3_PARTIAL_FRAME_DESIGN_ONLY.step), [GLB](artifacts/Flow_V3_PARTIAL_FRAME_DESIGN_ONLY.glb).
-- [Seven unique CAD parts, NOT ASSEMBLED](artifacts/Flow_V3_PART_LIBRARY_NOT_ASSEMBLED.step), [library GLB](artifacts/Flow_V3_PART_LIBRARY_NOT_ASSEMBLED.glb). The grid is a display layout, not assembly coordinates.
-- [Front](artifacts/front.png), [side](artifacts/side.png), [underside](artifacts/underside.png), [poster](artifacts/poster.webp). These show the verified partial frame of the design without a tabletop.
-- [Inventory](artifacts/inventory.json), [source hashes](artifacts/source-hashes.json), [transforms](artifacts/transforms.json), [frame pairs](artifacts/frame-pairs.json), [local2D checks](artifacts/local-joints.json), [rejected corner study](artifacts/corner-study.json), [STEP/GLB checks](artifacts/export-checks.json), [browser](artifacts/browser.json), [correction history](artifacts/correction-cycles.json).
+| Deliverable | Scope |
+|---|---|
+| [Frame STEP](artifacts/Flow_V3_PARTIAL_FRAME_DESIGN_ONLY.step), [GLB](artifacts/Flow_V3_PARTIAL_FRAME_DESIGN_ONLY.glb) | Verified7-body partial frame, DESIGN_ONLY |
+| [Frame front](artifacts/front.png), [side](artifacts/side.png), [underside](artifacts/underside.png) | Partial frame only |
+| [Seven unique parts STEP](artifacts/Flow_V3_PART_LIBRARY_NOT_ASSEMBLED.step), [GLB](artifacts/Flow_V3_PART_LIBRARY_NOT_ASSEMBLED.glb) | Unassembled display grid, not assembly transforms |
+| [Rejected corner STEP](artifacts/search/REJECTED_SW_CORNER_DESIGN_ONLY.step), [GLB](artifacts/search/REJECTED_SW_CORNER_DESIGN_ONLY.glb) | Five-body failure witness, explicitly FAIL |
+| [Rejected front](artifacts/search/rejected-front.png), [side](artifacts/search/rejected-side.png), [underside](artifacts/search/rejected-underside.png) | Diagnostic only, not a completed table |
+| [Constraint plan](artifacts/search/constraint-plan.svg) | Source6×6 tongue/receiver footprints and centre-distance conflict |
+| [Search summary](artifacts/search/summary.json), [replay](artifacts/search/replay-checks.json) | Reproducible enumeration and32 seven-body frame orientations /672 pair checks |
 
-## Remaining corner placement problem
+The rigid base tongue-centre distance is12√2mm. The closest source-upper-aligned floor-slot-centre distance is6√2mm, leaving8.485281374mm distance mismatch. Even the best balanced base translation leaves3mm coordinate error, versus1e-6mm tolerance. All512 A/B pairs also overlap; smallest overlap0.245243391mm³ exceeds the1e-5mm³ threshold. These results apply to the report's stated joint topology; they do not claim that every conceivable altered interface arrangement fails.
 
-The initial handoff treated absence of a top as a blocker. That conclusion is withdrawn. The clarification removes that gate, but it does not establish the leg/base transformations. To advance beyond the initial null placements, `corner_study.py` now tests two **diagnostic interpretations**, without changing source profiles:
+The minimal next input is one dimensioned named-corner plan/section identifying the intended A/B thickness faces, four-tab rail mapping, lower receiver centres and base tongue mapping in the same datum, plus the other corners' orientation map. It must resolve or explicitly revise the conflicting interface contract. Original DXF edits require PM design-change approval.
 
-1. Put both panels in the mating rail thickness planes, and apply the report's left horizontal offset -6mm. With raw DXF u shifted by -16mm and floor v=10mm mapped to Z0, the upper tabs clear the rails. However, the two leg panels overlap in3D. The report's sampled condition xA+xB=26mm alone does not validate this perpendicular placement.
-2. Shift both panels6mm along their profile directions so that their vertical finger joint and the base can meet in the same thickness planes. This clears leg-to-leg interference but the upper tabs now collide with the rails.
+BOM: L×2, W×2, LC×1, C×2, LEG_A×4, LEG_B×4, rounded base×4. CAD uses mm, X-length/Y-width/Z-up. Accepted partial-frame origin is its lower SW corner, not floor level; GLB is metres/Y-up `(X,Z,-Y)/1000`. Diagnostic corner floor is Z0. [Source hashes](artifacts/source-hashes.json), [part inventory](artifacts/inventory.json), [frame transforms](artifacts/transforms.json), [scope](artifacts/scope.json), [historical source search](artifacts/source-search.json). The older REV2 archive is not imported.
 
-The exact pair volumes and matrices' construction values are recorded in `corner-study.json`. These are **rejected candidates**, not a claim that every possible assembly is impossible. The earlier local2D PASS results remain limited to their specified offsets and cannot certify all joints at once.
-
-**Smallest remaining input:** a dimensioned reference-corner section or authoritative assembly CAD for this **topless V3**, identifying the signed XYZ and panel-normal directions of LEG_A, LEG_B, TRI_BASE and their mating rails at a named corner, plus the other corners' orientation map. This must resolve the6mm datum conflict demonstrated by the two candidates. **No tabletop drawing, dimensions or file is requested.** Once the intended corner is established, apply its compatible transforms to all19 instances, fix verified failures coherently if required, and rerun all171 pair checks before claiming full-model PASS.
-
-## BOM and coordinates
-
-| V3 class | Qty | Envelope mm | Placement |
-|---|---:|---|---|
-| LENGTH_OUTER_L | 2 |860×70×6| Measured frame candidate, verified |
-| WIDTH_OUTER_W | 2 |480×70×6| Measured frame candidate, verified |
-| LENGTH_CENTER_LC | 1 |860×70×6| Measured frame candidate, verified |
-| CROSS_BEAM_C | 2 |480×70×6| Measured frame candidate, verified |
-| LEG_A | 4 |156×386×6| Individual solid; world placement BLOCKED |
-| LEG_B | 4 |156×386×6| Individual solid; world placement BLOCKED |
-| TRI_BASE_ROUNDED | 4 |21.5×21.5×6| Individual solid; world placement BLOCKED |
-
-Tabletop quantity is **zero by owner instruction**. All available types match the required topless BOM; geometry completeness passes. Full assembly placement and collision acceptance do not yet pass.
-
-CAD units are millimetres, X-length/Y-width/Z-up. The accepted partial frame origin is its lower southwest corner, **not floor level**. Receiving slots establish LC at Y237..243mm and C beams at X283.666667..289.666667 /570.333333..576.333333mm. Half-laps meet at Z35mm. The explicit matrices remove the10mm DXF drawing margin. These are source-measured, validated placements, not recovered owner-approved CAD assembly matrices. GLB uses metres/Y-up: `(X,Z,-Y)/1000`.
-
-The diagnostic corner study uses floor Z0 and frame-bottom Z380mm, inferred from the source six-mm upper tabs; this floor datum has not been promoted into the accepted partial frame. No rejected candidate is silently published as the intended design.
-
-## Source provenance
-
-V3 sources are unchanged from site baseline `2a0fe67d742dec79421a03a9dd10076aba427aa5`. Engineering was inspected read-only at `548133b0462909e63c41d29d5bef859ce8fbc60c`. The original [history search](artifacts/source-search.json) is retained as a dated baseline search covering271 site commits/20 local refs and287 engineering commits/67 refs, all advertised branches and the site's historical tag. The prior tabletop conclusion is explicitly marked historical and superseded by owner clarification. The older Option2/REV2 ZIP is incompatible and never imported; per-member CRC results are preserved. No additional tabletop source search is needed for this design.
-
-Headerless V3 DXFs contain modern LWPOLYLINE records, original group70=1 closure flags and CUT layers. The loader declares AC1015 **in memory**, preserving those tags rather than assuming R12. It does not edit any coordinate or manually close a profile. Slots are subtracted from the largest outline; interior rings are retained. Curves are the original sampled segments with zero bulges, without invented smoothing. Every source SHA256 is retained.
-
-## PASS / FAIL / BLOCKED
-
-| Gate | Status | Evidence / limit |
-|---|---|---|
-| Required topless part geometry/BOM | PASS |7 types/19 instances; no top required |
-| Closed valid source profiles; nominal6mm | PASS |18 polylines, seven valid solids, planar area×6 equals solid volume |
-| Complete19-instance placement | BLOCKED |12 leg/base transforms remain unapproved/null |
-| Partial frame dimensions and STEP roundtrip | PASS |7 valid solids;860×480×70mm |
-| Frame mating and collisions | PASS |12 expected contacts; all21 pairs free of volumetric interference, tolerance1e-5mm³ |
-| Negative control | PASS |C shifted1mm collides with LC by210mm³ |
-| Local leg geometry | PASS, limited |19 spine samples and two local left leg/rail planar fits; not full3D approval |
-| Two reference-corner interpretations | FAIL, retained |Measured clashes in `corner-study.json`; no design-geometry repair or full assembly approval claimed |
-| Whole19-body collisions/mating | BLOCKED |No accepted full placement;171-pair check must follow a valid placement |
-| Khronos glTF2.0 | PASS |Both GLBs0 errors/0 warnings; nonblocking bufferView.target hints retained |
-| Scale, finite transforms, visible surfaces | PASS, partial |7 mesh nodes per file; valid indices/finite geometry/watertight surfaces; frame0.860×0.070×0.480m in display axes |
-| Browser and three views | PASS, partial |Chromium software WebGL; updated label explicitly says design without tabletop |
-| Full intended-design view match | BLOCKED |Accepted model still excludes unplaced legs/bases |
-| Performance | PASS |Both GLBs below3MB; exact current bytes in export-checks.json |
-| Site smoke | PASS |66 cases/0 failed/0 real submissions; push hook validates outgoing commit |
-| Physical fit/kerf/strength | NOT PERFORMED |Nominal zero-clearance design, no source kerf compensation |
-
-## Correction and scope history
-
-Two implementation correction cycles, zero source-geometry corrections: (1) preserve existing DXF tags via AC1015 reader declaration; (2) replace failing general-matrix conversion with rigid gp_Trsf/cq.Location. The first handoff is preserved in Git history. This follow-up records one owner scope clarification and two rejected reference-corner tests; it does not count the clarification as a geometry repair or convert the rejected candidates into PASS. The owner has not supplied new part geometry or corner matrices.
-
-## Reproduce
-
-From repository root, with the existing managed workspace dependencies:
-
-```sh
-/workspace/work/venv-cad/bin/python engineering/flow-v3/build.py
-/workspace/work/venv-cad/bin/python engineering/flow-v3/corner_study.py
-/workspace/work/venv-cad/bin/python engineering/flow-v3/check_exports.py
-node engineering/flow-v3/validate_glb.cjs
-python -m http.server 8765 --directory /workspace
-# Separate terminal:
-python engineering/flow-v3/browser_check.py
-python scripts/check_site.py
-```
-
-For a fresh setup use `requirements.lock` in a project-local venv, Playwright with system Chromium, and `npm install --cache /workspace/work/npm-cache --prefix /workspace/work/flow-browser three@0.187.0 gltf-validator@2.0.0-dev.3.10`. The preview uses explicit workspace import paths and is a review harness, not a site integration. The history search script requires the read-only engineering checkout; rebuilding the model does not require a new history search. SHA256SUMS covers final artifacts. No merge/deployment; PM reviews the exact branch SHA independently.
+Cumulative implementation correction cycles: **4**, source-geometry changes: **0**. Full19-body mating,171-pair scan and completed-design rendering remain **NOT RUN / BLOCKED** because no corner is feasible under the tested source constraints. Site smoke is a separate software check. No physical fit, kerf or strength approval. Branch `feature/33-flow-v3-cad`, Draft PR #34; exact SHA is in the PM handoff comment. No merge/deploy.

@@ -1,0 +1,259 @@
+{
+  "status": "REJECTED_NOT_ASSEMBLY",
+  "corner": "SW_lu0_wu0_lv0_wv0_LEG_A_u1_u1",
+  "instances": [
+    {
+      "name": "L_south",
+      "part": "LENGTH_OUTER_L",
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          6.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          370.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "color": [
+        178,
+        137,
+        85,
+        255
+      ]
+    },
+    {
+      "name": "W_west",
+      "part": "WIDTH_OUTER_W",
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          370.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "color": [
+        178,
+        137,
+        85,
+        255
+      ]
+    },
+    {
+      "name": "LEG_A",
+      "part": "LEG_A",
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -16.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          6.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "color": [
+        60,
+        125,
+        200,
+        255
+      ]
+    },
+    {
+      "name": "LEG_B",
+      "part": "LEG_B",
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          -0.0,
+          -16.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "color": [
+        230,
+        120,
+        60,
+        255
+      ]
+    },
+    {
+      "name": "TRI_BASE_REJECTED_POSITION",
+      "part": "TRI_BASE_ROUNDED",
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "color": [
+        200,
+        40,
+        65,
+        255
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "a": "L_south",
+      "b": "W_west",
+      "overlap_mm3": 0.0,
+      "status": "PASS"
+    },
+    {
+      "a": "L_south",
+      "b": "LEG_A",
+      "overlap_mm3": 0.0,
+      "status": "PASS"
+    },
+    {
+      "a": "L_south",
+      "b": "LEG_B",
+      "overlap_mm3": 0.0,
+      "status": "PASS"
+    },
+    {
+      "a": "L_south",
+      "b": "TRI_BASE_REJECTED_POSITION",
+      "overlap_mm3": 0.0,
+      "status": "PASS"
+    },
+    {
+      "a": "W_west",
+      "b": "LEG_A",
+      "overlap_mm3": 0.0,
+      "status": "PASS"
+    },
+    {
+      "a": "W_west",
+      "b": "LEG_B",
+      "overlap_mm3": 0.0,
+      "status": "PASS"
+    },
+    {
+      "a": "W_west",
+      "b": "TRI_BASE_REJECTED_POSITION",
+      "overlap_mm3": 0.0,
+      "status": "PASS"
+    },
+    {
+      "a": "LEG_A",
+      "b": "LEG_B",
+      "overlap_mm3": 13679.999999999982,
+      "status": "FAIL"
+    },
+    {
+      "a": "LEG_A",
+      "b": "TRI_BASE_REJECTED_POSITION",
+      "overlap_mm3": 0.0,
+      "status": "PASS"
+    },
+    {
+      "a": "LEG_B",
+      "b": "TRI_BASE_REJECTED_POSITION",
+      "overlap_mm3": 324.72598117963605,
+      "status": "FAIL"
+    }
+  ],
+  "base_fit": {
+    "max_axis_residual_mm": 6.0,
+    "second_tongue_residual_mm": [
+      6.0,
+      6.0
+    ]
+  },
+  "step_roundtrip": true,
+  "solids": 5,
+  "complete_table": false,
+  "tabletop_required": false
+}

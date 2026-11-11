@@ -1,5 +1,5 @@
 {
-  "implementation_corrections": 2,
+  "implementation_corrections": 4,
   "design_geometry_corrections": 0,
   "attempts": [
     {
@@ -31,5 +31,23 @@
     "rejected_corner_candidates": 2,
     "source_geometry_corrections": 0,
     "status": "Documented source-based placement failures, not repaired or approved"
+  },
+  "systematic_search": {
+    "implementation_corrections_this_stage": 2,
+    "source_geometry_corrections": 0,
+    "failure": "NumPy boolean scalar not JSON serializable on first enumeration output",
+    "repair": "Serialize NumPy scalar values with item(); no transforms or geometry altered",
+    "log": "search/implementation-failure-01.log",
+    "rejected_corner_pairs": 512,
+    "base_candidates": 8192,
+    "source_contact_contract_status": "UNSAT",
+    "visual_correction": {
+      "issue": "First diagnostic underside view cropped a rail; first dimension plot showed NumPy scalar repr labels",
+      "repair": "Fit camera from projected CAD bounding-box corners and assert extent<1 for every view; format dimension labels explicitly",
+      "first_evidence": [
+        "search/first-rejected-underside-clipped.png",
+        "search/first-constraint-plan-labels.png"
+      ]
+    }
   }
 }

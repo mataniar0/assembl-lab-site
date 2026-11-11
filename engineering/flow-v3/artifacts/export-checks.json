@@ -42,5 +42,27 @@
     "bytes": 104464,
     "finite": true,
     "watertight": true
+  },
+  "search/REJECTED_SW_CORNER_DESIGN_ONLY": {
+    "status": "PASS",
+    "step_solids": 5,
+    "glb_nodes": 5,
+    "glb_unique_meshes": 5,
+    "glb_mesh_instances": 5,
+    "bounds_metres": [
+      [
+        -0.006000000052154064,
+        0.0,
+        -0.47999998927116394
+      ],
+      [
+        0.8600000143051147,
+        0.44999998807907104,
+        0.006000000052154064
+      ]
+    ],
+    "bytes": 111532,
+    "finite": true,
+    "watertight": true
   }
 }
