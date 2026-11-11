@@ -40,3 +40,5 @@ Verified model: [front](browser/personal-front.png), [side](browser/personal-sid
 Machine-readable: [browser results](browser/results.json), [touch](touch.json), [Khronos glTF validator](gltf-validation.json), [separate binary/source checks](independent-asset-check.json), [initial transfer/LCP samples](performance.json).
 
 [Source gate](../../docs/3d/AL-016_SOURCE_AUDIT.md) · [Delivery/QA report](../../docs/3d/AL-016_QA_REPORT.md).
+
+[Final hook integration proof](hook-integration-final.json) · [Preservation proof](preservation.json). Earlier camera-test failures are retained as `browser/camera-test-first-run.json` and `browser/camera-test-focused-failure.json`; `browser/results.json` is the final37/0 run.
