@@ -1,0 +1,73 @@
+{
+  "audit": "AL017 2026-11-12",
+  "parent_issue": 37,
+  "viewer_pr": 31,
+  "site_publication": false,
+  "entries": [
+    {
+      "id": "etrog",
+      "issue": 38,
+      "source_version": "ETG C12",
+      "local_geometry_components": 102,
+      "source_qc": "FAIL_6_MOVING_COMPONENT_COLLISIONS",
+      "site_gate": "BLOCKED"
+    },
+    {
+      "id": "megillah",
+      "issue": 39,
+      "source_version": "MEB028",
+      "local_geometry_components": 20,
+      "source_qc": "PASS_20_FLAT_PARTS_ONLY",
+      "site_gate": "BLOCKED_ASSEMBLY"
+    },
+    {
+      "id": "shoe",
+      "issue": 40,
+      "source_version": "V4 700",
+      "local_geometry_components": 36,
+      "source_qc": "PASS_SOURCE_NOMINAL_CAD",
+      "site_gate": "BLOCKED_SOURCE_VS_PAGE_700_800"
+    },
+    {
+      "id": "driller",
+      "issue": 41,
+      "source_version": "V364",
+      "local_geometry_components": 7,
+      "bom_instances": 31,
+      "source_qc": "PASS_UNIQUE_CUT_PART_LIBRARY",
+      "site_gate": "BLOCKED_ASSEMBLY"
+    },
+    {
+      "id": "shelf",
+      "issue": 42,
+      "source_version": "700x220",
+      "local_geometry_components": 3,
+      "source_qc": "PASS_3_PART_KIT",
+      "site_gate": "BLOCKED_BRACKET_MATCH"
+    },
+    {
+      "id": "workbench",
+      "issue": 43,
+      "source_version": "V5.3",
+      "local_geometry_components": 0,
+      "source_qc": "PASS_2D_162PART_662CUT_17BED",
+      "site_gate": "BLOCKED_G2A"
+    },
+    {
+      "id": "crib",
+      "issue": 44,
+      "source_version": "V0.6.7",
+      "local_geometry_components": 33,
+      "source_qc": "PASS_BASE_ONLY",
+      "site_gate": "BLOCKED_NO_INFANT_USE"
+    },
+    {
+      "id": "plant",
+      "issue": 46,
+      "source_version": "PST230",
+      "local_geometry_components": 22,
+      "source_qc": "PASS_NOMINAL_231_PAIR_CAD",
+      "site_gate": "OWNER_GO_NEW_PAGE_REQUIRED"
+    }
+  ]
+}
