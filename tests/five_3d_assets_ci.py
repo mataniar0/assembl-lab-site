@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""AL-016/017: source-traceable viewer asset contract for exactly five selected pages."""
+"""AL-016/017: source-traceable viewer asset contract for six selected product pages."""
 from __future__ import annotations
 import hashlib,json,struct,sys
 from pathlib import Path
@@ -9,7 +9,8 @@ ASSETS={
  "table/flow/":("flow-v31-design-only.glb",19,"6194d110245a59289ba76bb5b5386648eaa8b0a679936c0e80602e679f42a8c3"),
  "table/personal/":("personal-design-preview.glb",32,None),
  "shelf/kids/":("kids-shelf-700-design-only.glb",5,None),
- "driller_stand/":("driller-v365-design-only.glb",31,None)
+ "driller_stand/":("driller-v365-design-only.glb",31,None),
+ "shoe_rack/":("shoe-rack-v4-700-design-only.glb",36,"84fbf1bef9a264c399ac800333a899e818a1fdf68c956d6eabdb4a896fa49445")
 }
 # Color-fix contract: new whole-file Git blob IDs, exact original mesh buffer SHA256,
 # and warm-birch PBR color in every primitive. Other three models are untouched.
@@ -58,6 +59,7 @@ def run():
    assert all(p.get("material")==0 for p in prims),(route,"uncolored primitives")
   else:
    assert any("COLOR_0" in p.get("attributes",{}) for p in prims) or header.get("materials"),(route,"existing model has no visible color")
+   if route=="shoe_rack/": assert all("COLOR_0" in p.get("attributes",{}) for p in prims),(route,"shoe rack lost source wood vertex colors")
   assert poster.read_bytes()[:4]==b"RIFF" and b"WEBP" in poster.read_bytes()[:16],(route,"not WebP")
   h=page.read_text(encoding="utf8")
   assert h.count("data-three-preview")==1 and 'data-state="idle"' in h,(route,"viewer not ready")
@@ -73,7 +75,8 @@ def run():
   try:parse(bad)
   except Exception:pass
   else:raise AssertionError("negative-control corrupted GLB was accepted")
- print(json.dumps({"passed":5,"failed":0,"results":info,"real_posts":0},ensure_ascii=False,indent=2))
+ assert len(info)==len(ASSETS)==6, ("wrong six-model coverage",len(info))
+ print(json.dumps({"passed":len(info),"failed":0,"results":info,"real_posts":0},ensure_ascii=False,indent=2))
 if __name__=="__main__":
  try:run()
  except Exception as error:print("FAIL",repr(error));raise

@@ -73,8 +73,8 @@ html[lang="en"] .adapt-link{direction:ltr}
     "en": "A low shoe rack with three slatted shelves, perforated side panels and a double-layer top seat. Laser-cut plywood parts come together as a single structure. The real photographs show the assembled product before painting or finishing."
   },
   "shoe.spec.width": {
-    "he": "רוחב בסיס",
-    "en": "BASE WIDTH"
+    "he": "רוחב תכנון V4",
+    "en": "V4 DESIGN WIDTH"
   },
   "shoe.spec.depth": {
     "he": "עומק בסיס",
@@ -311,12 +311,30 @@ html[lang="en"] .adapt-link{direction:ltr}
   "shoe.photo.cutting.alt": {
     "he": "מכונת הלייזר חותכת את חלקי מעמד הנעליים בלוח דיקט בסדנה",
     "en": "Laser machine cutting Shoe Rack parts from a plywood sheet in the workshop"
-  }
+  },
+  "three.title": {"he":"תצוגת תלת־ממד","en":"3D preview"},
+  "three.open": {"he":"צפה בתלת־ממד","en":"View in 3D"},
+  "three.help": {"he":"גררו אופקית לסיבוב, צבטו לזום או השתמשו בכפתורים. גרירה אנכית גוללת את העמוד. Esc לחזרה לתמונות.","en":"Drag horizontally to orbit, pinch to zoom, or use the buttons. Vertical gestures scroll the page. Escape returns to photos."},
+  "three.loading": {"he":"טוען תצוגת תלת־ממד… אפשר לחזור לתמונות בכל עת.","en":"Loading 3D preview… you can return to photos at any time."},
+  "three.error": {"he":"לא ניתן לפתוח תלת־ממד כרגע. התמונות זמינות; ניתן לנסות שוב.","en":"3D could not be opened. Photos remain available; you can try again."},
+  "three.ready": {"he":"תצוגת התכנון מוכנה. ניתן לסובב, להגדיל ולאפס.","en":"Design preview ready. Orbit, zoom or reset the view."},
+  "three.left": {"he":"סיבוב שמאלה","en":"Orbit left"},
+  "three.right": {"he":"סיבוב ימינה","en":"Orbit right"},
+  "three.up": {"he":"מבט גבוה יותר","en":"Orbit up"},
+  "three.down": {"he":"מבט תחתון","en":"Orbit down"},
+  "three.in": {"he":"הגדלה","en":"Zoom in"},
+  "three.out": {"he":"הקטנה","en":"Zoom out"},
+  "three.reset": {"he":"איפוס תצוגה","en":"Reset view"},
+  "three.close": {"he":"חזרה לתמונות","en":"Back to photos"},
+  "three.blocked": {"he":"תצוגת תלת־ממד אינה זמינה; התמונות זמינות כרגיל.","en":"3D is unavailable; photos remain available."},
+  "three.design": {"he":"הדמיית CAD של מעמד הנעליים V4 ברוחב תכנון 700 מ״מ, עומק 320 מ״מ וגובה 520 מ״מ, מ־36 חלקי דיקט 6 מ״מ. תצלומי האתר כוללים מוצר שנבנה, אך רוחבו בפועל לא נמדד כאן; לכן המודל אינו העתק מדוד של המוצר המצולם. התאמה פיזית, נשיאת עומס ואישור ייצור לא אומתו.","en":"CAD design preview of the V4 shoe rack: nominal design dimensions 700 × 320 × 520 mm, 36 parts in 6 mm plywood. The page includes photos of a built product, but its actual width has not been independently measured; this 3D model is not a verified as-built replica. Physical fit, load rating and manufacturing approval have not been established."},
+  "three.alt": {"he":"מודל CAD של מעמד נעליים V4 ברוחב תכנון 700 מ״מ, שבע רפפות בכל אחד משלושת המדפים; הדמיית תכנון בלבד","en":"Design-only CAD model of the 700 mm V4 shoe rack, with seven slats per shelf; not a verified as-built replica"}
 }</script>
 <link rel="stylesheet" href="../assets/language.css">
 <script src="../assets/language.js"></script>
 <link rel="stylesheet" href="../assets/product-light.css">
 <script src="../assets/media-loading.js"></script>
+<link rel="stylesheet" href="../assets/three-preview.css">
 </head>
 <body>
 <header class="header"><a class="logo" href="../" aria-label="ASSEMBLE LAB — דף הבית" data-i18n-aria-label="nav.home"><span class="mark" data-language-fixed>A/L</span><b data-language-fixed>ASSEMBLE LAB</b></a><a class="back" href="../" data-i18n="nav.back">← לכל המוצרים</a><div class="language-switch" role="group" aria-label="בחירת שפה"><button type="button" data-language="he" lang="he" dir="rtl" aria-pressed="true" disabled>עברית</button><button type="button" data-language="en" lang="en" dir="ltr" aria-pressed="false" disabled>English</button></div></header>
@@ -325,7 +343,7 @@ html[lang="en"] .adapt-link{direction:ltr}
 <div class="product-opening-copy"><h1 data-i18n="batch.name">מעמד נעליים</h1><p class="opening-intro" data-i18n="batch.intro">שלושה מדפים ומושב עליון — מורכב מדיקט טבעי, לפני גימור.</p><p class="status" data-i18n="shoe.status.raw">מורכב מדיקט טבעי · לפני גימור</p><a class="adapt-link" href="../inquiry/?product=shoe-rack" aria-label="בקשת הצעת מחיר עבור מעמד הנעליים" data-i18n-aria-label="shoe.quote.label" data-i18n="cta.quote">בקשת הצעת מחיר</a></div><div class="hero-copy"><p class="kicker" data-i18n="shoe.hero.kicker">מוצר 04 / אחסון נעליים</p></div>
 <div class="hero-media"><a class="product-open-image" href="media/production/06-interior-in-use-full.webp" target="_blank" rel="noopener" aria-label="פתיחת התמונה בגודל מלא" data-i18n-aria-label="image.open"><img src="media/production/06-interior-in-use-full.webp" srcset="media/production/06-interior-in-use-480.webp 480w, media/production/06-interior-in-use-full.webp 820w" sizes="(max-width:640px) calc(100vw - 52px), (max-width:900px) calc(92vw - 36px), (max-width:1400px) calc(43.21vw - 21px), calc(49.21vw - 105px)" alt="מעמד הנעליים מדיקט טבעי בכניסה לבית, עם נעליים וכרית, לפני צבע או גימור" data-i18n-alt="shoe.hero.alt" width="820" height="890" style="max-width:820px;margin-inline:auto" loading="eager" decoding="async" fetchpriority="high"></a></div>
 </section>
-<details class="product-details"><summary data-i18n="batch.specs">מידות ומפרט</summary><div class="specs"><div><small data-i18n="shoe.spec.width">רוחב בסיס</small><b data-language-fixed>800 mm</b></div><div><small data-i18n="shoe.spec.depth">עומק בסיס</small><b data-language-fixed>320 mm</b></div><div><small data-i18n="shoe.spec.height">גובה בסיס</small><b data-language-fixed>520 mm</b></div><div><small data-i18n="shoe.spec.material">חומר</small><b data-i18n="shoe.spec.plywood">דיקט 6 מ״מ</b></div></div><p data-i18n-html="shoe.hero.title">מעמד נעליים/ גרסה A</p></details><details class="product-details"><summary data-i18n="disclosure.productCustom">על הדגם והתאמת מידות</summary><p class="lead" data-i18n="shoe.hero.copy">מעמד נעליים נמוך עם שלושה מדפי רפפות, פאות צד מחוררות ומושב עליון כפול. חלקי דיקט חתוכים בלייזר מתחברים למבנה אחד. התמונות האמיתיות מציגות את המוצר המורכב לפני צבע או גימור.</p><div class="custom-size-copy"><div class="custom-size-label" data-i18n="shoe.size.label">התאמה אישית / מידות לפי הצורך</div><p data-i18n="shoe.size.copy">המידות המוצגות הן גרסת הבסיס. ניתן להתאים את מידות הדגם לחלל ולשימוש, תוך תכנון מחדש של המבנה והחיבורים ובהתאם לחומר ולאילוצי הייצור.</p></div></details><section class="story">
+<details class="product-details"><summary data-i18n="batch.specs">מידות ומפרט</summary><div class="specs"><div><small data-i18n="shoe.spec.width">רוחב תכנון V4</small><b data-language-fixed>700 mm</b></div><div><small data-i18n="shoe.spec.depth">עומק בסיס</small><b data-language-fixed>320 mm</b></div><div><small data-i18n="shoe.spec.height">גובה בסיס</small><b data-language-fixed>520 mm</b></div><div><small data-i18n="shoe.spec.material">חומר</small><b data-i18n="shoe.spec.plywood">דיקט 6 מ״מ</b></div></div><p data-i18n-html="shoe.hero.title">מעמד נעליים/ גרסה A</p></details><details class="product-details"><summary data-i18n="disclosure.productCustom">על הדגם והתאמת מידות</summary><p class="lead" data-i18n="shoe.hero.copy">מעמד נעליים נמוך עם שלושה מדפי רפפות, פאות צד מחוררות ומושב עליון כפול. חלקי דיקט חתוכים בלייזר מתחברים למבנה אחד. התמונות האמיתיות מציגות את המוצר המורכב לפני צבע או גימור.</p><div class="custom-size-copy"><div class="custom-size-label" data-i18n="shoe.size.label">התאמה אישית / מידות לפי הצורך</div><p data-i18n="shoe.size.copy">המידות המוצגות הן גרסת הבסיס. ניתן להתאים את מידות הדגם לחלל ולשימוש, תוך תכנון מחדש של המבנה והחיבורים ובהתאם לחומר ולאילוצי הייצור.</p></div></details><section class="story">
 <details class="product-details"><summary data-i18n="disclosure.stages">שלבי התכנון והבנייה</summary><div class="story-head"><div><p class="kicker" data-i18n="shoe.story.kicker">תהליך הבנייה / תמונות אמיתיות</p><h2 data-i18n="shoe.story.title" data-i18n-html>מהשימוש בבית<br>לתהליך הבנייה.</h2></div><p data-i18n="shoe.story.copy">שש תמונות אמיתיות מתעדות את המעמד בשימוש ואת החיתוך וההרכבה. המוצר מצולם בדיקט טבעי, לפני צבע או גימור. תמונת התכנון וההדמיה מוצגת בנפרד בסוף הגלריה.</p></div>
 </details><div class="gallery" tabindex="0" role="region" aria-label="שלבי התכנון והבנייה" data-i18n-aria-label="carousel.label">
 <div class="viewer">
@@ -358,7 +376,9 @@ html[lang="en"] .adapt-link{direction:ltr}
 <figure class="no-script-photo"><img src="media/production/01-laser-cutting-960.webp" alt="מכונת הלייזר חותכת את חלקי מעמד הנעליים בלוח דיקט בסדנה" width="960" height="1317" loading="lazy"><figcaption>06 / חיתוך בלייזר — צילום אמיתי לפני גימור. <a class="gallery-image-open" href="media/production/01-laser-cutting-full.webp" target="_blank" rel="noopener">פתיחת התמונה בגודל מלא</a></figcaption></figure></noscript>
 </section>
 <details class="product-details"><summary data-i18n="disclosure.future">המשך תהליך הייצור</summary><section class="future"><h2 data-i18n="shoe.future.title" data-i18n-html>השלב הבא:<br>גימור.</h2><p data-i18n="shoe.future.copy">צילום של המוצר לאחר צבע או גימור עדיין אינו זמין. התמונות הקיימות מציגות את המעמד בדיקט טבעי, כולל צילום בשימוש בבית. תמונת הגימור תתווסף כשיהיה צילום אמיתי זמין.</p></section>
-</details></main>
+</details>
+<section class="three-preview" data-three-preview data-state="idle" data-model-src="media/shoe-rack-v4-700-design-only.glb" aria-labelledby="three-title"><h2 id="three-title" data-i18n="three.title">תצוגת תלת־ממד</h2><p data-i18n="three.design">הדמיית CAD של מעמד הנעליים V4 ברוחב תכנון 700 מ״מ, עומק 320 מ״מ וגובה 520 מ״מ, מ־36 חלקי דיקט 6 מ״מ. תצלומי האתר כוללים מוצר שנבנה, אך רוחבו בפועל לא נמדד כאן; לכן המודל אינו העתק מדוד של המוצר המצולם. התאמה פיזית, נשיאת עומס ואישור ייצור לא אומתו.</p><img class="three-poster" src="media/shoe-rack-v4-700-design-only-poster.webp" width="900" height="900" alt="מודל CAD של מעמד נעליים V4 ברוחב תכנון 700 מ״מ, שבע רפפות בכל אחד משלושת המדפים; הדמיית תכנון בלבד" data-i18n-alt="three.alt" loading="lazy" decoding="async"><button type="button" data-three-open disabled aria-expanded="false" aria-controls="three-stage" data-i18n="three.open">צפה בתלת־ממד</button><p id="three-help" data-i18n="three.help">גררו אופקית לסיבוב, צבטו לזום או השתמשו בכפתורים. גרירה אנכית גוללת את העמוד. Esc לחזרה לתמונות.</p><p class="three-status" role="status" aria-live="polite"></p><div class="three-stage" id="three-stage" aria-describedby="three-help" hidden></div><div class="three-toolbar" hidden><button type="button" data-three-action="left" data-i18n="three.left">סיבוב שמאלה</button><button type="button" data-three-action="right" data-i18n="three.right">סיבוב ימינה</button><button type="button" data-three-action="up" data-i18n="three.up">מבט גבוה יותר</button><button type="button" data-three-action="down" data-i18n="three.down">מבט תחתון</button><button type="button" data-three-action="in" data-i18n="three.in">הגדלה</button><button type="button" data-three-action="out" data-i18n="three.out">הקטנה</button><button type="button" data-three-action="reset" data-i18n="three.reset">איפוס תצוגה</button><button type="button" data-three-close data-i18n="three.close">חזרה לתמונות</button></div><noscript><p data-i18n="three.blocked">נדרש JavaScript לתצוגת תלת־ממד. התמונות זמינות כרגיל.</p></noscript></section>
+</main>
 
 
 
@@ -418,5 +438,6 @@ html[lang="en"] .adapt-link{direction:ltr}
   show(active);
 })();
 </script>
-<script>window.ASSEMBLE_I18N.translate();</script></body>
+<script>window.ASSEMBLE_I18N.translate();</script><script src="../assets/three-preview.js"></script>
+</body>
 </html>

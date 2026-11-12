@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""AL-016/017 five-product WebGL/browser regression; requires local Chromium + Playwright."""
+"""AL-016/017 six-product WebGL/browser regression; requires local Chromium + Playwright."""
 from __future__ import annotations
 import argparse,json,os,sys,traceback
 from pathlib import Path
@@ -7,7 +7,7 @@ from playwright.sync_api import sync_playwright
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from site_smoke import site_server,Session,toggle
 ROOT=Path(__file__).resolve().parents[1]
-ROUTES=("geometric/","table/flow/","table/personal/","shelf/kids/","driller_stand/")
+ROUTES=("geometric/","table/flow/","table/personal/","shelf/kids/","driller_stand/","shoe_rack/")
 ap=argparse.ArgumentParser();ap.add_argument("--browser",default=os.environ.get("ASSEMBLE_BROWSER","/usr/bin/chromium"));args=ap.parse_args()
 results=[]
 def check(label,fn):
