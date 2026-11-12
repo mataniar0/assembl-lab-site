@@ -7,6 +7,7 @@ R=Path(__file__).resolve().parents[1];OUT=R/'QA_EVIDENCE/AL-016/browser';OUT.mkd
 args=argparse.ArgumentParser();args.add_argument('--no-captures',action='store_true');args.add_argument('--only-case');args=args.parse_args()
 BASE='/tmp/al016-baseline'
 subprocess.run(['mkdir','-p',BASE],check=True)
+# Personal-table legacy AL-016 regression only; all five selected pages now covered by five_3d_browser_ci.py.
 # A separate archive is used for immutable before captures and initial request metrics.
 p=subprocess.run(['git','archive','2a0fe67d742dec79421a03a9dd10076aba427aa5'],cwd=R,stdout=subprocess.PIPE,check=True);import tarfile,io
 with tarfile.open(fileobj=io.BytesIO(p.stdout)) as tar:tar.extractall(BASE,filter='data')
@@ -23,7 +24,7 @@ with site_server(R) as base,site_server(Path(BASE)) as before,sync_playwright() 
  b=pw.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--enable-webgl','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
  for lang in ('he','en'):
   for width in (320,390,768,1024,1440):
-   for route in ('geometric/','table/flow/','table/personal/'):
+   for route in ('table/personal/',):
     def check(lang=lang,width=width,route=route):
      s=Session(b,base,(width,900 if width>900 else 844),lang);page=s.page;initial(s.context,page,base+route);m=metrics(page)
      assert not any('.glb' in x['url'] or 'model-viewer.min.js' in x['url'] for x in m['resources']), '3D eagerly fetched'
@@ -88,7 +89,7 @@ with site_server(R) as base,site_server(Path(BASE)) as before,sync_playwright() 
   for phase,url in [('before',before),('after',base)]:
    for lang in ('he','en'):
     for width in (320,390,768,1024,1440):
-     for route in ('geometric/','table/flow/','table/personal/'):
+     for route in ('table/personal/',):
       s=Session(b,url,(width,900),lang);initial(s.context,s.page,url+route);s.page.evaluate("scrollTo({top:0,behavior:'instant'})");dest=OUT/phase;dest.mkdir(exist_ok=True)
       s.page.screenshot(path=str(dest/f'{route.strip("/").replace("/","-")}-{lang}-{width}.png'),full_page=True)
       s.close()
