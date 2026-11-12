@@ -1,0 +1,9 @@
+{
+  "site_base": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+  "audited_commit": "47b5a229e017c240082445ea09980612e1266d86",
+  "existing_files_changed_or_removed": [],
+  "all_added_files_are_research_evidence": true,
+  "engineering_worktree_clean": true,
+  "no_site_forms_or_WOOD_U_LIKE_changes": true,
+  "merge_deploy": false
+}

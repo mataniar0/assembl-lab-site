@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/tmp/al032_history_audit.py", line 57, in <module>
+    if data.startswith(b'PK\x03\x04'):archive_scan(data,path,oid)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/al032_history_audit.py", line 43, in archive_scan
+    content=z.read(info);members.append({'path':info.filename,'bytes':len(content),'sha256':hashlib.sha256(content).hexdigest()})
+            ^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/zipfile/__init__.py", line 1586, in read
+    return fp.read()
+           ^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/zipfile/__init__.py", line 994, in read
+    buf += self._read1(self.MAX_N)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/zipfile/__init__.py", line 1098, in _read1
+    self._update_crc(data)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/zipfile/__init__.py", line 1026, in _update_crc
+    raise BadZipFile("Bad CRC-32 for file %r" % self.name)
+zipfile.BadZipFile: Bad CRC-32 for file 'WIDTH_OUTER_W_x2_t6_option2_smooth_top_tri_base_rev2.dxf'

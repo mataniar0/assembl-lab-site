@@ -1,0 +1,255 @@
+{
+  "scope": "Research/intake register, NOT a validated BOM or approved G0",
+  "source_revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+  "sources": [
+    {
+      "path": "geometric/media/01_plan.jpg",
+      "revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "sha256": "336c17e47426179371954f03e9d80d79b6d52a71262ac988552616f66cb8460d",
+      "bytes": 208193,
+      "role": "Illustrative planning sheet; printed claims, not approved CAD",
+      "url": "https://github.com/mataniar0/assembl-lab-site/blob/2a0fe67d742dec79421a03a9dd10076aba427aa5/geometric/media/01_plan.jpg"
+    },
+    {
+      "path": "geometric/media/planning-clean.webp",
+      "revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "sha256": "399ceb509e94c388317a13d2b7d089251a045f7401714c778afcc32372e696ca",
+      "bytes": 202524,
+      "role": "Caption-cleaned planning derivative; not independent dimension evidence",
+      "url": "https://github.com/mataniar0/assembl-lab-site/blob/2a0fe67d742dec79421a03a9dd10076aba427aa5/geometric/media/planning-clean.webp"
+    },
+    {
+      "path": "geometric/media/embedded-stage-4.jpg",
+      "revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "sha256": "22d3c05f89dcdc762643d83c94d74d2bea0d03056ead20405c15fd9c4f16dcdb",
+      "bytes": 213388,
+      "role": "Authentic raw-frame assembly photograph; no calibrated dimensions",
+      "url": "https://github.com/mataniar0/assembl-lab-site/blob/2a0fe67d742dec79421a03a9dd10076aba427aa5/geometric/media/embedded-stage-4.jpg"
+    },
+    {
+      "path": "geometric/media/embedded-stage-3.jpg",
+      "revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "sha256": "b25553f961e2cdab3833f324258649abfa8d2c088f3a2329a73d7eaa496f0637",
+      "bytes": 235250,
+      "role": "Authentic parts photograph; no calibrated dimensions",
+      "url": "https://github.com/mataniar0/assembl-lab-site/blob/2a0fe67d742dec79421a03a9dd10076aba427aa5/geometric/media/embedded-stage-3.jpg"
+    },
+    {
+      "path": "geometric/media/05_finish.jpg",
+      "revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "sha256": "22d3c05f89dcdc762643d83c94d74d2bea0d03056ead20405c15fd9c4f16dcdb",
+      "bytes": 213388,
+      "role": "Existing finish visual reference, not a measurement",
+      "url": "https://github.com/mataniar0/assembl-lab-site/blob/2a0fe67d742dec79421a03a9dd10076aba427aa5/geometric/media/05_finish.jpg"
+    },
+    {
+      "path": "assets/geometric-engineering-object-clean.webp",
+      "revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "sha256": "e99659bc54603ea2582a50c53570f733c31951e385e5e636ecf37d4c2c665de1",
+      "bytes": 46360,
+      "role": "Existing process/frame image; appearance reference",
+      "url": "https://github.com/mataniar0/assembl-lab-site/blob/2a0fe67d742dec79421a03a9dd10076aba427aa5/assets/geometric-engineering-object-clean.webp"
+    },
+    {
+      "path": "assets/geometric-hero.webp",
+      "revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "sha256": "819ce1f90d45cf741413ee23c35dd7d0c813566f76ee1bdac3607044137b41cc",
+      "bytes": 190362,
+      "role": "Existing finished-product hero; appearance reference",
+      "url": "https://github.com/mataniar0/assembl-lab-site/blob/2a0fe67d742dec79421a03a9dd10076aba427aa5/assets/geometric-hero.webp"
+    },
+    {
+      "path": "assets/geometric-leg-drawing.svg",
+      "revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "sha256": "9c0b2d1bc4b03588e4105aa01b831a9049572b99b5e331c79d936e434c58c08e",
+      "bytes": 418,
+      "role": "Illustrative unitless vector; not a validated physical part",
+      "url": "https://github.com/mataniar0/assembl-lab-site/blob/2a0fe67d742dec79421a03a9dd10076aba427aa5/assets/geometric-leg-drawing.svg"
+    }
+  ],
+  "parts_and_interfaces": [
+    {
+      "id": "GEO-TOP",
+      "part_or_interface": "Tabletop",
+      "source_paths": [
+        "geometric/media/01_plan.jpg",
+        "assets/geometric-hero.webp"
+      ],
+      "revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "observed_or_printed_only": "Printed 1000x620mm claim; visible rectangular top",
+      "measured_dimensions": null,
+      "approved_dimensions": null,
+      "assumed_dimensions": [],
+      "verified_quantity": null,
+      "verified_transform": null,
+      "status": "BLOCKED",
+      "missing_for_3d": "Authoritative 1:1 outline, thickness, edge details, holes and support interfaces; confirmation printed dimensions apply to photographed version"
+    },
+    {
+      "id": "GEO-LONG-SIDE",
+      "part_or_interface": "Long side/leg panels",
+      "source_paths": [
+        "geometric/media/embedded-stage-4.jpg",
+        "geometric/media/embedded-stage-3.jpg"
+      ],
+      "revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "observed_or_printed_only": "Photo appears to show side panels integrating rail and legs",
+      "measured_dimensions": null,
+      "approved_dimensions": null,
+      "assumed_dimensions": [],
+      "verified_quantity": null,
+      "verified_transform": null,
+      "status": "BLOCKED",
+      "missing_for_3d": "Exact panel outlines and cutouts, thickness, qty and orientation; confirm whether this is the real integral-panel variant rather than separate legs in render"
+    },
+    {
+      "id": "GEO-END-SIDE",
+      "part_or_interface": "End side/leg panels",
+      "source_paths": [
+        "geometric/media/embedded-stage-4.jpg",
+        "geometric/media/01_plan.jpg"
+      ],
+      "revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "observed_or_printed_only": "Visible perpendicular side and finger-seam construction",
+      "measured_dimensions": null,
+      "approved_dimensions": null,
+      "assumed_dimensions": [],
+      "verified_quantity": null,
+      "verified_transform": null,
+      "status": "BLOCKED",
+      "missing_for_3d": "Exact complementary profiles, top datum, thickness, qty and end/long-side mating geometry"
+    },
+    {
+      "id": "GEO-LONG-BEAM",
+      "part_or_interface": "Internal longitudinal member(s)",
+      "source_paths": [
+        "geometric/media/embedded-stage-4.jpg"
+      ],
+      "revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "observed_or_printed_only": "Internal lengthwise divider visible; no measured section or locations",
+      "measured_dimensions": null,
+      "approved_dimensions": null,
+      "assumed_dimensions": [],
+      "verified_quantity": null,
+      "verified_transform": null,
+      "status": "BLOCKED",
+      "missing_for_3d": "Exact profile/count, section/thickness, end connections and XYZ placement"
+    },
+    {
+      "id": "GEO-CROSS-BEAM",
+      "part_or_interface": "Internal transverse member(s)",
+      "source_paths": [
+        "geometric/media/embedded-stage-4.jpg",
+        "geometric/media/01_plan.jpg"
+      ],
+      "revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "observed_or_printed_only": "Internal transverse grid visible; render/photo do not prove identical inventory",
+      "measured_dimensions": null,
+      "approved_dimensions": null,
+      "assumed_dimensions": [],
+      "verified_quantity": null,
+      "verified_transform": null,
+      "status": "BLOCKED",
+      "missing_for_3d": "Exact profile/count, half-lap depths and positions, global locations and installation direction"
+    },
+    {
+      "id": "GEO-FINGER",
+      "part_or_interface": "Corner finger joints",
+      "source_paths": [
+        "geometric/media/01_plan.jpg",
+        "geometric/media/embedded-stage-4.jpg"
+      ],
+      "revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "observed_or_printed_only": "Interleaved corner seam is visible",
+      "measured_dimensions": null,
+      "approved_dimensions": null,
+      "assumed_dimensions": [],
+      "verified_quantity": null,
+      "verified_transform": null,
+      "status": "BLOCKED",
+      "missing_for_3d": "Source tooth pitch/count/depth, complementary phase, material thickness and mating coordinate frames; not an approximate drawn pattern"
+    },
+    {
+      "id": "GEO-LAP",
+      "part_or_interface": "Beam intersections and insertion",
+      "source_paths": [
+        "geometric/media/embedded-stage-4.jpg"
+      ],
+      "revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "observed_or_printed_only": "Crossed members visible",
+      "measured_dimensions": null,
+      "approved_dimensions": null,
+      "assumed_dimensions": [],
+      "verified_quantity": null,
+      "verified_transform": null,
+      "status": "BLOCKED",
+      "missing_for_3d": "Actual slot widths/depths, member order, axial orientation and insertion route; distinguish nominal CAD fit from physical kerf/fit"
+    },
+    {
+      "id": "GEO-TOP-MOUNT",
+      "part_or_interface": "Top-to-frame attachment",
+      "source_paths": [
+        "geometric/media/01_plan.jpg",
+        "assets/geometric-hero.webp"
+      ],
+      "revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "observed_or_printed_only": "Top rests over a frame in illustrative/finished views",
+      "measured_dimensions": null,
+      "approved_dimensions": null,
+      "assumed_dimensions": [],
+      "verified_quantity": null,
+      "verified_transform": null,
+      "status": "BLOCKED",
+      "missing_for_3d": "Actual top support height, fastener/bonding location and any cut geometry; no attachment inferred from photographs"
+    },
+    {
+      "id": "GEO-WORLD",
+      "part_or_interface": "Assembly frame/version/dimensions",
+      "source_paths": [
+        "geometric/media/01_plan.jpg",
+        "geometric/media/embedded-stage-4.jpg"
+      ],
+      "revision": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+      "observed_or_printed_only": "Printed overall height450mm and leg diagram450mm; printed frame860x480mm, offsets70mm",
+      "measured_dimensions": null,
+      "approved_dimensions": null,
+      "assumed_dimensions": [],
+      "verified_quantity": null,
+      "verified_transform": null,
+      "status": "BLOCKED",
+      "missing_for_3d": "Authoritative version and coordinate/placement contract, scale, overall-height datum and top thickness. Printed height does not specify how leg and top datums combine"
+    }
+  ],
+  "physical_part_bodies_verified": 0,
+  "assembly_transforms_verified": 0,
+  "largest_verified_intermediate": "Exact 2D unitless reference contours only. They are not a Geometric product part and cannot ground a material subassembly.",
+  "prohibited_substitute": "CTB-01 P01 GEOMETRIC leg profile and all CTB-01 personal-table assemblies are another product",
+  "parameters": {
+    "units": "UNKNOWN",
+    "world_axes": "UNKNOWN",
+    "tabletop_dimensions_mm": null,
+    "tabletop_thickness_mm": null,
+    "frame_material_thickness_mm": null,
+    "overall_height_mm": null,
+    "placements": null,
+    "stock_sheet_mm": null,
+    "physical_kerf_mm": null
+  },
+  "printed_unconfirmed_claims": {
+    "tabletop_mm": [
+      1000,
+      620
+    ],
+    "overall_height_mm": 450,
+    "frame_clear_mm": [
+      860,
+      480
+    ],
+    "border_offsets_mm": 70,
+    "illustrated_leg_mm": [
+      150,
+      450
+    ]
+  },
+  "downstream_gate": "G0 geometry/placement inputs missing; no G1/G2 claim; G3/G4 NOT_RUN; INDEPENDENT_QA_PENDING"
+}

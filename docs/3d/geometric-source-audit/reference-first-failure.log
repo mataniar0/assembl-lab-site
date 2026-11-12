@@ -1,0 +1,7 @@
+Cannot create cache home directory: '/home/agent/.cache/ezdxf', cache files will not be saved.
+See also issue https://github.com/mozman/ezdxf/issues/923.
+Traceback (most recent call last):
+  File "/workspace/assembl-lab-site/docs/3d/geometric-source-audit/check_reference.py", line 47, in <module>
+    else:raise AssertionError('Outside hole accepted')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Outside hole accepted
