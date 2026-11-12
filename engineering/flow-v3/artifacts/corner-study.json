@@ -1,0 +1,166 @@
+{
+  "status": "FAIL_CANDIDATES_NOT_APPROVED_ASSEMBLY",
+  "scope": "SW reference-corner interpretations only; not proof that every possible assembly fails",
+  "geometry_changes": 0,
+  "sources": [
+    "V3 DXF via individually exported STEP",
+    "verification report: left profile X offset -6mm; floor notch0..6mm;19 complementary spine segments"
+  ],
+  "interpretation": "Raw u,v are DXF coordinates; nominal t6mm. Leg floor v=10. Frame bottom Z380 inferred from six-mm upper tabs. Rail/base alignment interpretation is diagnostic, not authoritative recovered placement.",
+  "candidates": [
+    {
+      "candidate": "rail_tabs_aligned",
+      "status": "REJECTED",
+      "leg_profile_u_offset_mm": -16,
+      "frame_bottom_from_floor_mm": 380,
+      "base_xy_mm": [
+        0,
+        0
+      ],
+      "pairs": [
+        {
+          "a": "L",
+          "b": "W",
+          "intersection_mm3": 0
+        },
+        {
+          "a": "L",
+          "b": "A",
+          "intersection_mm3": 0
+        },
+        {
+          "a": "L",
+          "b": "B",
+          "intersection_mm3": 0
+        },
+        {
+          "a": "L",
+          "b": "BASE",
+          "intersection_mm3": 0
+        },
+        {
+          "a": "W",
+          "b": "A",
+          "intersection_mm3": 0
+        },
+        {
+          "a": "W",
+          "b": "B",
+          "intersection_mm3": 0
+        },
+        {
+          "a": "W",
+          "b": "BASE",
+          "intersection_mm3": 0
+        },
+        {
+          "a": "A",
+          "b": "B",
+          "intersection_mm3": 13679.999999999982
+        },
+        {
+          "a": "A",
+          "b": "BASE",
+          "intersection_mm3": 327.6876640605995
+        },
+        {
+          "a": "B",
+          "b": "BASE",
+          "intersection_mm3": 327.6876640606009
+        }
+      ],
+      "collisions": [
+        {
+          "a": "A",
+          "b": "B",
+          "intersection_mm3": 13679.999999999982
+        },
+        {
+          "a": "A",
+          "b": "BASE",
+          "intersection_mm3": 327.6876640605995
+        },
+        {
+          "a": "B",
+          "b": "BASE",
+          "intersection_mm3": 327.6876640606009
+        }
+      ]
+    },
+    {
+      "candidate": "leg_corner_and_base_aligned",
+      "status": "REJECTED",
+      "leg_profile_u_offset_mm": -10,
+      "frame_bottom_from_floor_mm": 380,
+      "base_xy_mm": [
+        6,
+        6
+      ],
+      "pairs": [
+        {
+          "a": "L",
+          "b": "W",
+          "intersection_mm3": 0
+        },
+        {
+          "a": "L",
+          "b": "A",
+          "intersection_mm3": 838.4898369110535
+        },
+        {
+          "a": "L",
+          "b": "B",
+          "intersection_mm3": 0
+        },
+        {
+          "a": "L",
+          "b": "BASE",
+          "intersection_mm3": 0
+        },
+        {
+          "a": "W",
+          "b": "A",
+          "intersection_mm3": 0
+        },
+        {
+          "a": "W",
+          "b": "B",
+          "intersection_mm3": 836.6965697309749
+        },
+        {
+          "a": "W",
+          "b": "BASE",
+          "intersection_mm3": 0
+        },
+        {
+          "a": "A",
+          "b": "B",
+          "intersection_mm3": 0
+        },
+        {
+          "a": "A",
+          "b": "BASE",
+          "intersection_mm3": 0
+        },
+        {
+          "a": "B",
+          "b": "BASE",
+          "intersection_mm3": 0
+        }
+      ],
+      "collisions": [
+        {
+          "a": "L",
+          "b": "A",
+          "intersection_mm3": 838.4898369110535
+        },
+        {
+          "a": "W",
+          "b": "B",
+          "intersection_mm3": 836.6965697309749
+        }
+      ]
+    }
+  ],
+  "remaining_input": "Confirm intended signed A/B/tri-base and rail datum at one named corner and orientation at other corners, or supply authoritative topless assembly CAD. Tabletop is excluded by owner and is not requested."
+}

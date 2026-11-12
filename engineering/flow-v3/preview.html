@@ -1,0 +1,25 @@
+<!doctype html><meta charset="utf-8"><title>Flow V3 partial frame — DESIGN ONLY</title>
+<style>body{margin:0;background:#f3f1eb;font:17px Arial;color:#252b30}h1{font-size:22px;margin:24px 32px 8px}p{margin:8px 32px}canvas{display:block}#status{font-size:14px}</style>
+<h1>FLOW V3 · PARTIAL FRAME · DESIGN_ONLY</h1><p>Design without tabletop. Legs and tri-bases remain unplaced. No physical fit or strength approval.</p><p id="status">Loading source-backed GLB…</p>
+<script type="importmap">{"imports":{"three":"/work/flow-browser/node_modules/three/build/three.module.js","three/addons/":"/work/flow-browser/node_modules/three/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+const witness=new URLSearchParams(location.search).has('witness');
+if(witness){document.querySelector('h1').textContent='FLOW V3 · REJECTED SW CORNER · FAIL / DESIGN_ONLY';document.querySelector('p').textContent='Diagnostic only. Blue/orange legs overlap; red base has an unmatched tongue. Not a complete assembly.';}
+const scene=new THREE.Scene();scene.background=new THREE.Color('#f3f1eb');
+const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});renderer.setSize(1100,700);renderer.setPixelRatio(1);document.body.appendChild(renderer.domElement);
+scene.add(new THREE.HemisphereLight(0xffffff,0x665c44,2.5));let light=new THREE.DirectionalLight(0xffffff,3);light.position.set(1,2,3);scene.add(light);
+let camera=new THREE.PerspectiveCamera(36,1100/700,.001,20);let center=witness?new THREE.Vector3(.35,.225,-.20):new THREE.Vector3(.43,.035,-.24);
+window.view=(which)=>{
+ let direction=new THREE.Vector3(...{front:[0,.12,1],side:[1,.12,0],underside:[.65,-.9,.85]}[which]).normalize();
+ let bounds=new THREE.Box3().setFromObject(window.model);bounds.getCenter(center);
+ let right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),direction).normalize();
+ let up=new THREE.Vector3().crossVectors(direction,right).normalize();let points=[];
+ for(let x of [bounds.min.x,bounds.max.x])for(let y of [bounds.min.y,bounds.max.y])for(let z of [bounds.min.z,bounds.max.z])points.push(new THREE.Vector3(x,y,z));
+ let tangent=Math.tan(THREE.MathUtils.degToRad(camera.fov/2));let distance=.1;
+ for(let p of points){let r=p.clone().sub(center);distance=Math.max(distance,r.dot(direction)+Math.max(Math.abs(r.dot(up))/tangent,Math.abs(r.dot(right))/(tangent*camera.aspect)));}
+ camera.position.copy(center).addScaledVector(direction,distance*1.15);camera.up.set(0,1,0);camera.lookAt(center);camera.updateMatrixWorld();
+ renderer.render(scene,camera);window.currentView=which;window.maxProjectedExtent=Math.max(...points.flatMap(p=>{let q=p.clone().project(camera);return [Math.abs(q.x),Math.abs(q.y)];}));
+};
+new GLTFLoader().load(witness?'artifacts/search/REJECTED_SW_CORNER_DESIGN_ONLY.glb':'artifacts/Flow_V3_PARTIAL_FRAME_DESIGN_ONLY.glb',g=>{scene.add(g.scene);window.model=g.scene;window.view('front');document.querySelector('#status').textContent=witness?'5 bodies · upper tabs match rails, but legs overlap 13,680 mm³ · base tongue residual 6 mm':'Frame 860 × 480 × 70 mm · 7 bodies · Z=0 is frame bottom, not floor';window.ready=true;},undefined,e=>{window.loadError=String(e)});
+</script>

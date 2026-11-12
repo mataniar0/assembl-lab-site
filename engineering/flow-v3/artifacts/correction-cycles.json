@@ -1,0 +1,53 @@
+{
+  "implementation_corrections": 4,
+  "design_geometry_corrections": 0,
+  "attempts": [
+    {
+      "attempt": 1,
+      "result": "FAIL",
+      "error": "AssertionError: all(e.dxftype()==LWPOLYLINE and e.closed for e in es)",
+      "correction": "Preserve existing group70=1 tags by declaring headerless modern input AC1015 in memory"
+    },
+    {
+      "attempt": 2,
+      "result": "FAIL",
+      "error": "OCP.OCP.Standard.Standard_ConstructionError: gp_GTrsf::Trsf() - non-orthogonal GTrsf",
+      "correction": "Use rigid gp_Trsf.SetValues and cq.Location, preserving intended matrices"
+    },
+    {
+      "attempt": 3,
+      "result": "PASS_PARTIAL",
+      "full_table": "BLOCKED_SOURCE",
+      "frame_collisions": 0
+    }
+  ],
+  "scope_clarifications": [
+    {
+      "owner_instruction": "התכנון הוא ללא פלטה",
+      "effect": "Top excluded from BOM and blockers"
+    }
+  ],
+  "followup_diagnostics": {
+    "rejected_corner_candidates": 2,
+    "source_geometry_corrections": 0,
+    "status": "Documented source-based placement failures, not repaired or approved"
+  },
+  "systematic_search": {
+    "implementation_corrections_this_stage": 2,
+    "source_geometry_corrections": 0,
+    "failure": "NumPy boolean scalar not JSON serializable on first enumeration output",
+    "repair": "Serialize NumPy scalar values with item(); no transforms or geometry altered",
+    "log": "search/implementation-failure-01.log",
+    "rejected_corner_pairs": 512,
+    "base_candidates": 8192,
+    "source_contact_contract_status": "UNSAT",
+    "visual_correction": {
+      "issue": "First diagnostic underside view cropped a rail; first dimension plot showed NumPy scalar repr labels",
+      "repair": "Fit camera from projected CAD bounding-box corners and assert extent<1 for every view; format dimension labels explicitly",
+      "first_evidence": [
+        "search/first-rejected-underside-clipped.png",
+        "search/first-constraint-plan-labels.png"
+      ]
+    }
+  }
+}
