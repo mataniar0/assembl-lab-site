@@ -36,7 +36,16 @@ with site_server(ROOT) as base,sync_playwright() as pw:
      gallery_before=page.locator(".gallery").count()
      if width in (390,1440):
       page.locator("[data-three-open]").click()
-      page.wait_for_function("document.querySelector('[data-three-preview]').dataset.state==='ready'&&document.querySelector('model-viewer')?.loaded",timeout=70000)
+      page.wait_for_function("['ready','error'].includes(document.querySelector('[data-three-preview]').dataset.state)",timeout=45000)
+      state=box.get_attribute("data-state")
+      diagnostics=page.evaluate("""() => ({
+        state:document.querySelector('[data-three-preview]').dataset.state,
+        status:document.querySelector('.three-status')?.textContent,
+        stageSize:(() => {const r=document.querySelector('.three-stage')?.getBoundingClientRect();return r?{width:r.width,height:r.height}:null})(),
+        modelLoaded:!!document.querySelector('model-viewer')?.loaded,
+        modelResourceRequests:performance.getEntriesByType('resource').filter(e=>e.name.endsWith('.glb')).map(e=>e.name),
+      })""")
+      assert state=="ready", (route,lang,width,diagnostics,errors)
       model=page.locator("model-viewer");assert model.count()==1
       before=model.evaluate("e=>({...e.getCameraOrbit()})")
       page.locator("[data-three-action=right]").click()
