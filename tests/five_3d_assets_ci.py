@@ -75,7 +75,8 @@ def run():
   try:parse(bad)
   except Exception:pass
   else:raise AssertionError("negative-control corrupted GLB was accepted")
- print(json.dumps({"passed":5,"failed":0,"results":info,"real_posts":0},ensure_ascii=False,indent=2))
+ assert len(info)==len(ASSETS)==6, ("wrong six-model coverage",len(info))
+ print(json.dumps({"passed":len(info),"failed":0,"results":info,"real_posts":0},ensure_ascii=False,indent=2))
 if __name__=="__main__":
  try:run()
  except Exception as error:print("FAIL",repr(error));raise
