@@ -35,7 +35,7 @@
         clearTimeout(timer);
         if (attempt !== generation) return;
         viewer = document.createElement('model-viewer');
-        viewer.setAttribute('camera-controls', ''); viewer.setAttribute('touch-action', 'pan-y');
+        viewer.setAttribute('camera-controls', ''); viewer.setAttribute('touch-action', 'pan-y'); viewer.setAttribute('loading', 'eager');
         viewer.setAttribute('interaction-prompt', 'none'); viewer.setAttribute('camera-orbit', '35deg 70deg auto');
         viewer.setAttribute('min-camera-orbit', 'auto 5deg 0.1m'); viewer.setAttribute('max-camera-orbit', 'auto 175deg 10m');
         viewer.setAttribute('min-field-of-view', '20deg'); viewer.setAttribute('max-field-of-view', '60deg');
@@ -46,6 +46,8 @@
           timer = setTimeout(() => reject(new Error('model timeout')), 30000);
         });
         viewer.src = box.dataset.modelSrc; stage.replaceChildren(viewer); stage.hidden = false;
+        // Load begins only after explicit click; reveal the canvas even on tall desktop posters.
+        stage.scrollIntoView({block: 'nearest', behavior: 'instant'});
         await ready; clearTimeout(timer);
         if (attempt !== generation) return;
         poster.hidden = true; box.dataset.state = 'ready';
