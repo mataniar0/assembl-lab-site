@@ -1,0 +1,57 @@
+{
+  "issue": 41,
+  "date": "2026-11-12",
+  "executor": "ChatGPT_only",
+  "status": "FAILED_3D_ASSEMBLY_HYPOTHESIS",
+  "source": {
+    "archive": "V364_CUT_FILES_900x440_PRODUCTION.zip",
+    "sha256": "f21223fbd6a3c34f90f1d6482422312685e93902347614cc2d5abe266ee5313b",
+    "cut_lines": [
+      10912,
+      436,
+      6012
+    ],
+    "master_cut_lines": 17360,
+    "source_master_exact_match": true,
+    "source_cut_modified": false
+  },
+  "design": {
+    "profile_classes": 7,
+    "parts": 31,
+    "hypothesis_thickness_mm": 4,
+    "thickness_unconfirmed": true,
+    "previous_issue_assumed_thickness_mm": 6
+  },
+  "diagnostics": {
+    "candidate_step_solids": 31,
+    "step_valid_solids": 31,
+    "candidate_glb_meshes": 31,
+    "watertight_glb_meshes": 31,
+    "distinct_pairs": 465,
+    "skipped_by_AABB": 405,
+    "exact_booleans": 60,
+    "exact_boolean_failures": 0,
+    "overlap_pairs": 42,
+    "overlap_by_family": {
+      "LS_Slat": 20,
+      "Rail_Perimeter": 8,
+      "Rail_Arch": 4,
+      "Rail_LS": 4,
+      "Rail_TP1": 4,
+      "Perimeter_TP1": 2
+    },
+    "candidate_envelope_mm": [
+      370,
+      370,
+      853
+    ]
+  },
+  "assets": {
+    "STEP_SHA256": "d775aee7ecbfc06e26a62b5c11cd1d18459af6dbd366b7dc22f39abe1d4af0c0",
+    "GLB_SHA256": "5bce34d86b3728b7bc2567f5c2f6f73636500548a683d9ae82fa3061b7439a46"
+  },
+  "site_publication_approved": false,
+  "manufacturing_approved": false,
+  "repair_cycles": 0,
+  "unapproved_position_trials": 1
+}
