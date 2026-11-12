@@ -8,8 +8,22 @@ ASSETS={
  "geometric/":("geometric-v11-design-only.glb",15,"b3ee4944fee14901bafa2f50e52820d2e8394c13b41563ee627ba719bac9a1e9"),
  "table/flow/":("flow-v31-design-only.glb",19,"6194d110245a59289ba76bb5b5386648eaa8b0a679936c0e80602e679f42a8c3"),
  "table/personal/":("personal-design-preview.glb",32,None),
- "shelf/kids/":("kids-shelf-700-design-only.glb",5,"d06a7c058c4b0eacf7296e7c76f0b9f7427874db31f58aee355e925a587f976f"),
- "driller_stand/":("driller-v365-design-only.glb",31,"64d77807279c9afb647886062ddaf650a3500fd10d9aa9374721c7aef1360320")
+ "shelf/kids/":("kids-shelf-700-design-only.glb",5,None),
+ "driller_stand/":("driller-v365-design-only.glb",31,None)
+}
+# Color-fix contract: new whole-file Git blob IDs, exact original mesh buffer SHA256,
+# and warm-birch PBR color in every primitive. Other three models are untouched.
+WOOD_FIXES={
+ "shelf/kids/": {
+  "git_blob":"4d45a91ced22f644ecdc6674403dadd1b01411fb",
+  "bin_sha256":"dd2364b650f92166436506b719b3add4f9c0f150031541cfa3a534be9eba2c10",
+  "color":[0.67,0.54,0.35,1.0],
+ },
+ "driller_stand/": {
+  "git_blob":"73c7900e553289cf1f9562305d223c9e71c42a01",
+  "bin_sha256":"062b8e0e0e76f4fca7da2525d14ffa5b0e1de7dfe937463aa33b59bb4845d65b",
+  "color":[0.64,0.49,0.30,1.0],
+ },
 }
 def parse(data):
  if len(data)<28:raise AssertionError("GLB too short")
@@ -29,6 +43,21 @@ def run():
   assert model.is_file() and poster.is_file(),(route,"missing asset")
   b=model.read_bytes(); meshes=parse(b);assert meshes==expected,(route,meshes,expected)
   if sha:assert hashlib.sha256(b).hexdigest()==sha,(route,"unapproved GLB version")
+  header=json.loads(b[20:20+struct.unpack_from('<I',b,12)[0]])
+  prims=[p for m in header["meshes"] for p in m["primitives"]]
+  if route in WOOD_FIXES:
+   spec=WOOD_FIXES[route]
+   blob=hashlib.sha1(b"blob "+str(len(b)).encode()+b"\\0"+b).hexdigest()
+   assert blob==spec["git_blob"],(route,"unexpected colored GLB version",blob)
+   offset=20+struct.unpack_from('<I',b,12)[0]
+   chunk_len,chunk_type=struct.unpack_from('<II',b,offset)
+   assert chunk_type==0x4E4942 and hashlib.sha256(b[offset+8:offset+8+chunk_len]).hexdigest()==spec["bin_sha256"],(route,"geometry buffer changed")
+   assert len(header.get("materials",[]))==1,(route,"missing warm-wood material")
+   mat=header["materials"][0]["pbrMetallicRoughness"]
+   assert mat["baseColorFactor"]==spec["color"] and mat["metallicFactor"]==0 and mat["roughnessFactor"]==1,(route,"wrong color/PBR")
+   assert all(p.get("material")==0 for p in prims),(route,"uncolored primitives")
+  else:
+   assert any("COLOR_0" in p.get("attributes",{}) for p in prims) or header.get("materials"),(route,"existing model has no visible color")
   assert poster.read_bytes()[:4]==b"RIFF" and b"WEBP" in poster.read_bytes()[:16],(route,"not WebP")
   h=page.read_text(encoding="utf8")
   assert h.count("data-three-preview")==1 and 'data-state="idle"' in h,(route,"viewer not ready")
