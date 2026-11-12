@@ -7,6 +7,24 @@
 <title data-i18n="meta.title">מדף ילדים / 700 — ASSEMBLE LAB</title>
 <meta name="description" data-i18n-content="meta.description" content="מדף קיר קומפקטי שבו המבנה, ההתקנה והגרפיקה נפתרו כאותה מערכת גאומטרית — מתכנון מדויק ועד למדף המורכב.">
 <script type="application/json" id="page-translations">{
+  "three.title": {"he":"תצוגת תלת־ממד","en":"3D preview"},
+  "three.open": {"he":"צפה בתלת־ממד","en":"View in 3D"},
+  "three.help": {"he":"גררו אופקית לסיבוב, צבטו לזום או השתמשו בכפתורים. גרירה אנכית גוללת את העמוד. Esc לחזרה לתמונות.","en":"Drag horizontally to orbit, pinch to zoom, or use the buttons. Vertical gestures scroll the page. Escape returns to photos."},
+  "three.loading": {"he":"טוען תצוגת תלת־ממד… אפשר לחזור לתמונות בכל עת.","en":"Loading 3D preview… you can return to photos at any time."},
+  "three.error": {"he":"לא ניתן לפתוח תלת־ממד כרגע. התמונות זמינות; ניתן לנסות שוב.","en":"3D could not be opened. Photos remain available; you can try again."},
+  "three.ready": {"he":"תצוגת התכנון מוכנה. ניתן לסובב, להגדיל ולאפס.","en":"Design preview ready. Orbit, zoom or reset the view."},
+  "three.left": {"he":"סיבוב שמאלה","en":"Orbit left"},
+  "three.right": {"he":"סיבוב ימינה","en":"Orbit right"},
+  "three.up": {"he":"מבט גבוה יותר","en":"Orbit up"},
+  "three.down": {"he":"מבט תחתון","en":"Orbit down"},
+  "three.in": {"he":"הגדלה","en":"Zoom in"},
+  "three.out": {"he":"הקטנה","en":"Zoom out"},
+  "three.reset": {"he":"איפוס תצוגה","en":"Reset view"},
+  "three.close": {"he":"חזרה לתמונות","en":"Back to photos"},
+  "three.blocked": {"he":"תצוגת תלת־ממד אינה זמינה; התמונות זמינות כרגיל.","en":"3D is unavailable; photos remain available."},
+  "three.design": {"he":"הדמיית CAD של מדף ילדים בתכנון 700×220 מ״מ, חמישה חלקים. צילומים היסטוריים באתר כוללים גרסה אחרת; המודל אינו העתק פיזי מאומת. חוזק החיבור לקיר, משקל נשיאה והתאמה לייצור לא אומתו.","en":"CAD design preview of the five-part 700×220mm kids shelf. Historical site photos include a different version; this 3D model is not a verified as-built replica. Wall fixing, load capacity and manufacturing fit are unverified."},
+  "three.alt": {"he":"תצוגת CAD של מדף ילדים ברוחב 700 מ״מ עם תומכי טיל וכוכבים — תכנון בלבד","en":"CAD design of a 700mm kids shelf with rocket and star side brackets, design only"},
+
   "custom.label": {
     "he": "לפי מידה / מידות מותאמות",
     "en": "MADE TO SIZE / CUSTOM DIMENSIONS"
@@ -279,6 +297,7 @@ html[lang="he"] .story-head h2,html[lang="he"] .original h2,html[lang="he"] .pri
 <link rel="stylesheet" href="../../assets/language.css">
 <link rel="stylesheet" href="../../assets/product-light.css">
 <script src="../../assets/media-loading.js"></script>
+<link rel="stylesheet" href="../../assets/three-preview.css">
 </head>
 <body>
 <header class="top"><a class="brand" href="../../">ASSEMBLE LAB</a><a class="back" data-i18n="nav.back" href="../../">← לכל המוצרים</a><div class="language-switch" role="group" aria-label="בחירת שפה"><button type="button" data-language="he" lang="he" dir="rtl" aria-pressed="true" disabled>עברית</button><button type="button" data-language="en" lang="en" dir="ltr" aria-pressed="false" disabled>English</button></div></header>
@@ -314,6 +333,7 @@ html[lang="he"] .story-head h2,html[lang="he"] .original h2,html[lang="he"] .pri
   </div>
 </section>
 
+<section class="three-preview" data-three-preview data-state="idle" data-model-src="media/kids-shelf-700-design-only.glb" aria-labelledby="three-title"><h2 id="three-title" data-i18n="three.title">תצוגת תלת־ממד</h2><p data-i18n="three.design">הדמיית CAD של מדף ילדים בתכנון 700×220 מ״מ, חמישה חלקים. צילומים היסטוריים באתר כוללים גרסה אחרת; המודל אינו העתק פיזי מאומת. חוזק החיבור לקיר, משקל נשיאה והתאמה לייצור לא אומתו.</p><img class="three-poster" src="media/kids-shelf-700-design-only-poster.webp" width="900" height="900" alt="תצוגת CAD של מדף ילדים ברוחב 700 מ״מ עם תומכי טיל וכוכבים — תכנון בלבד" data-i18n-alt="three.alt" loading="lazy" decoding="async"><button type="button" data-three-open disabled aria-expanded="false" aria-controls="three-stage" data-i18n="three.open">צפה בתלת־ממד</button><p id="three-help" data-i18n="three.help">גררו אופקית לסיבוב, צבטו לזום או השתמשו בכפתורים. גרירה אנכית גוללת את העמוד. Esc לחזרה לתמונות.</p><p class="three-status" role="status" aria-live="polite"></p><div class="three-stage" id="three-stage" aria-describedby="three-help" hidden></div><div class="three-toolbar" hidden><button type="button" data-three-action="left" data-i18n="three.left">סיבוב שמאלה</button><button type="button" data-three-action="right" data-i18n="three.right">סיבוב ימינה</button><button type="button" data-three-action="up" data-i18n="three.up">מבט גבוה יותר</button><button type="button" data-three-action="down" data-i18n="three.down">מבט תחתון</button><button type="button" data-three-action="in" data-i18n="three.in">הגדלה</button><button type="button" data-three-action="out" data-i18n="three.out">הקטנה</button><button type="button" data-three-action="reset" data-i18n="three.reset">איפוס תצוגה</button><button type="button" data-three-close data-i18n="three.close">חזרה לתמונות</button></div><noscript><p data-i18n="three.blocked">נדרש JavaScript לתצוגת תלת־ממד. התמונות זמינות כרגיל.</p></noscript></section>
 </main>
 
 
@@ -389,4 +409,5 @@ viewer.addEventListener('touchend',e=>{
 document.addEventListener('assemble:languagechange',()=>show(active));
 show(active);
 </script>
-<script>window.ASSEMBLE_I18N.translate();</script></body></html>
+<script>window.ASSEMBLE_I18N.translate();</script><script src="../../assets/three-preview.js"></script>
+</body></html>

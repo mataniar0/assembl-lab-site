@@ -1,0 +1,9 @@
+{
+  "passed": 3,
+  "failed": 0,
+  "real_posts": 0,
+  "touch_orbit": true,
+  "pinch_zoom": true,
+  "vertical_scroll_delta": 125,
+  "scope": "Chromium emulated touch with software GPU; physical devices and Safari not tested"
+}

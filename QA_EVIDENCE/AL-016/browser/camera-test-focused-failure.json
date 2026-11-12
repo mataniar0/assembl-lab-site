@@ -1,0 +1,13 @@
+{
+  "passed": 0,
+  "failed": 1,
+  "real_posts": 0,
+  "results": [
+    {
+      "case": "table/personal/:en:320",
+      "passed": false,
+      "error": "",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/assembl-lab-site/tests/three_preview_smoke.py\", line 20, in record\n    try:r=fn();RESULTS.append({'case':name,'passed':True,'details':r});print('PASS',name,flush=True)\n          ^^^^\n  File \"/workspace/assembl-lab-site/tests/three_preview_smoke.py\", line 46, in check\n    assert abs(viewer.evaluate('e=>e.getFieldOfView()')-45)<.01\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+    }
+  ]
+}

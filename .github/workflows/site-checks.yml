@@ -77,6 +77,13 @@ jobs:
           set -euo pipefail
           python scripts/check_site.py --commit HEAD --browser "$ASSEMBLE_BROWSER" --report .qa-reports/ci/site-smoke.json 2>&1 | tee .qa-reports/ci/site-smoke.log
 
+      - name: Validate five chosen 3D products
+        shell: bash
+        run: |
+          set -euo pipefail
+          .venv-qa/bin/python tests/five_3d_assets_ci.py 2>&1 | tee .qa-reports/ci/five-models-assets.log
+          .venv-qa/bin/python tests/five_3d_browser_ci.py --browser "$ASSEMBLE_BROWSER" 2>&1 | tee .qa-reports/ci/five-models-browser.log
+
       - name: Retain QA evidence even after failure
         if: always()
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6

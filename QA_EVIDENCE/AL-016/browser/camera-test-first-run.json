@@ -1,0 +1,1619 @@
+{
+  "passed": 35,
+  "failed": 2,
+  "real_posts": 0,
+  "results": [
+    {
+      "case": "geometric/:he:320",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 25.899999976158142
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 33.799999952316284
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 28.400000035762787
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 44
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 39.80000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 82.89999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
+              "bytes": 190662,
+              "duration": 44.200000047683716
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 2.800000011920929
+            },
+            {
+              "url": "http://127.0.0.1:39539/geometric/media/planning-clean.webp",
+              "bytes": 202824,
+              "duration": 80.59999996423721
+            }
+          ],
+          "LCP": 620
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/flow/:he:320",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 28.299999952316284
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 24.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 23.299999952316284
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 39.299999952316284
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 33.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 39.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 56.40000003576279
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 59.09999996423721
+            }
+          ],
+          "LCP": 236
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/personal/:he:320",
+      "passed": false,
+      "error": ""
+    },
+    {
+      "case": "geometric/:he:390",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 40
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 36.89999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 69.10000002384186
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 69.20000004768372
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 68.59999996423721
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 95.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
+              "bytes": 190662,
+              "duration": 47.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 3.899999976158142
+            }
+          ],
+          "LCP": null
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/flow/:he:390",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 51.09999996423721
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 58.39999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 61.200000047683716
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 63.200000047683716
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 65.89999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 66.10000002384186
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 93.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 41.19999998807907
+            }
+          ],
+          "LCP": 176
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/personal/:he:390",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 34.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 31.400000035762787
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 36.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 36.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 35.90000003576279
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 41.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 55
+            },
+            {
+              "url": "http://127.0.0.1:39539/table/personal/media/01-hero-finished-angled-480.webp",
+              "bytes": 35700,
+              "duration": 37.10000002384186
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 18.80000001192093
+            }
+          ],
+          "LCP": 184
+        },
+        "model": "PASS_DESIGN_ONLY"
+      }
+    },
+    {
+      "case": "geometric/:he:768",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 33.90000003576279
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 23.80000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 32.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 32.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 41.09999996423721
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 92.59999996423721
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
+              "bytes": 190662,
+              "duration": 41.700000047683716
+            },
+            {
+              "url": "http://127.0.0.1:39539/geometric/media/planning-clean.webp",
+              "bytes": 202824,
+              "duration": 114.80000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 93.60000002384186
+            }
+          ],
+          "LCP": 384
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/flow/:he:768",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 63.80000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 60.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 52.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 59.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 74.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 74
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 124.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 40.10000002384186
+            }
+          ],
+          "LCP": 308
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/personal/:he:768",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 47.10000002384186
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 36
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 40
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 40.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 56.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 39.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 117.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/table/personal/media/01-hero-finished-angled-768.webp",
+              "bytes": 87380,
+              "duration": 56.80000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 30.099999964237213
+            }
+          ],
+          "LCP": 360
+        },
+        "model": "PASS_DESIGN_ONLY"
+      }
+    },
+    {
+      "case": "geometric/:he:1024",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 59.60000002384186
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 52.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 52.59999996423721
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 59.09999996423721
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 52.200000047683716
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 92.40000003576279
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
+              "bytes": 190662,
+              "duration": 75.40000003576279
+            },
+            {
+              "url": "http://127.0.0.1:39539/geometric/media/planning-clean.webp",
+              "bytes": 202824,
+              "duration": 47.59999996423721
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 2.700000047683716
+            }
+          ],
+          "LCP": 360
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/flow/:he:1024",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 62
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 41.89999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 60.700000047683716
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 41.89999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 41.80000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 60.89999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 102.10000002384186
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 3.099999964237213
+            }
+          ],
+          "LCP": 284
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/personal/:he:1024",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 39.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 47.59999996423721
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 44.90000003576279
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 49
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 49.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 49.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/table/personal/media/01-hero-finished-angled-768.webp",
+              "bytes": 87380,
+              "duration": 51.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 83.20000004768372
+            },
+            {
+              "url": "http://127.0.0.1:39539/table/personal/media/personal-design-preview-poster.webp",
+              "bytes": 9476,
+              "duration": 66.90000003576279
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 51.89999997615814
+            }
+          ],
+          "LCP": 168
+        },
+        "model": "PASS_DESIGN_ONLY"
+      }
+    },
+    {
+      "case": "geometric/:he:1440",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 26.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 36.10000002384186
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 36.09999996423721
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 36.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 35
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 52.90000003576279
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
+              "bytes": 190662,
+              "duration": 36.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/geometric/media/planning-clean.webp",
+              "bytes": 202824,
+              "duration": 57.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 39.60000002384186
+            }
+          ],
+          "LCP": 272
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/flow/:he:1440",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 36.89999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 31.900000035762787
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 31.900000035762787
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 31.899999976158142
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 34.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 31.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 67.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 36.799999952316284
+            }
+          ],
+          "LCP": 192
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/personal/:he:1440",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 42.40000003576279
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 44
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 44.200000047683716
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 48.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 48.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 53.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 78.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/table/personal/media/01-hero-finished-angled-768.webp",
+              "bytes": 87380,
+              "duration": 62.89999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 5.300000011920929
+            }
+          ],
+          "LCP": 312
+        },
+        "model": "PASS_DESIGN_ONLY"
+      }
+    },
+    {
+      "case": "geometric/:en:320",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 49.09999996423721
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 48.10000002384186
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 48.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 48.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 47.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 68
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
+              "bytes": 190662,
+              "duration": 50.39999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/geometric/media/planning-clean.webp",
+              "bytes": 202824,
+              "duration": 14.600000023841858
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 1.300000011920929
+            }
+          ],
+          "LCP": 232
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/flow/:en:320",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 30.600000023841858
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 35
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 52.10000002384186
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 50.89999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 51.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 54.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 64
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 1.800000011920929
+            }
+          ],
+          "LCP": 144
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/personal/:en:320",
+      "passed": false,
+      "error": ""
+    },
+    {
+      "case": "geometric/:en:390",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 36.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 28.899999976158142
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 35.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 35.89999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 35.10000002384186
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
+              "bytes": 190662,
+              "duration": 39.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 91.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 4.800000011920929
+            }
+          ],
+          "LCP": null
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/flow/:en:390",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 18.400000035762787
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 32.80000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 31.100000023841858
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 32.80000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 33
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 32.200000047683716
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 56
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 6.5
+            }
+          ],
+          "LCP": 156
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/personal/:en:390",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 18.399999976158142
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 19.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 30.399999976158142
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 31.200000047683716
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 31.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 30.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 76.89999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/table/personal/media/01-hero-finished-angled-480.webp",
+              "bytes": 35700,
+              "duration": 25.399999976158142
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 24.30000001192093
+            }
+          ],
+          "LCP": 196
+        },
+        "model": "PASS_DESIGN_ONLY"
+      }
+    },
+    {
+      "case": "geometric/:en:768",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 42.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 46.60000002384186
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 46.59999996423721
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 53.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 53.200000047683716
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 67.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
+              "bytes": 190662,
+              "duration": 53.89999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/geometric/media/planning-clean.webp",
+              "bytes": 202824,
+              "duration": 42.59999996423721
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 5.699999988079071
+            }
+          ],
+          "LCP": 204
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/flow/:en:768",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 20.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 28.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 30.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 33.80000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 33.80000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 33.90000003576279
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 49.60000002384186
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 17.400000035762787
+            }
+          ],
+          "LCP": 184
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/personal/:en:768",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 21.899999976158142
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 23.700000047683716
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 25.400000035762787
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 28.200000047683716
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 32.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 28.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 52.09999996423721
+            },
+            {
+              "url": "http://127.0.0.1:39539/table/personal/media/01-hero-finished-angled-768.webp",
+              "bytes": 87380,
+              "duration": 28.100000023841858
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 3.5
+            }
+          ],
+          "LCP": 136
+        },
+        "model": "PASS_DESIGN_ONLY"
+      }
+    },
+    {
+      "case": "geometric/:en:1024",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 23
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 16.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 19.599999964237213
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 21.799999952316284
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 23.899999976158142
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 32.40000003576279
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
+              "bytes": 190662,
+              "duration": 25.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/geometric/media/planning-clean.webp",
+              "bytes": 202824,
+              "duration": 9.699999988079071
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 4.600000023841858
+            }
+          ],
+          "LCP": 136
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/flow/:en:1024",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 40.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 38.89999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 44.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 44.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 51.40000003576279
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 50.89999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 72.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 2.899999976158142
+            }
+          ],
+          "LCP": 208
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/personal/:en:1024",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 25.399999976158142
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 29.399999976158142
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 29.69999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 34.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 33.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 29.399999976158142
+            },
+            {
+              "url": "http://127.0.0.1:39539/table/personal/media/01-hero-finished-angled-768.webp",
+              "bytes": 87380,
+              "duration": 34.39999997615814
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 57.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/table/personal/media/personal-design-preview-poster.webp",
+              "bytes": 9476,
+              "duration": 16.600000023841858
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 8.5
+            }
+          ],
+          "LCP": 128
+        },
+        "model": "PASS_DESIGN_ONLY"
+      }
+    },
+    {
+      "case": "geometric/:en:1440",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 28.399999976158142
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 24
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 24.700000047683716
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 26.900000035762787
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 32.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/geometric-hero.webp",
+              "bytes": 190662,
+              "duration": 33.10000002384186
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 44.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/geometric/media/planning-clean.webp",
+              "bytes": 202824,
+              "duration": 14.599999964237213
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 7.599999964237213
+            }
+          ],
+          "LCP": 172
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/flow/:en:1440",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 23.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 24.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 24.5
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 25.599999964237213
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 31.30000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 25.600000023841858
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 44.700000047683716
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 4.600000023841858
+            }
+          ],
+          "LCP": 124
+        },
+        "model": "BLOCKED"
+      }
+    },
+    {
+      "case": "table/personal/:en:1440",
+      "passed": true,
+      "details": {
+        "initial": {
+          "resources": [
+            {
+              "url": "http://127.0.0.1:39539/assets/tables.css",
+              "bytes": 3015,
+              "duration": 27.19999998807907
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.css",
+              "bytes": 2568,
+              "duration": 30.899999976158142
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/product-light.css",
+              "bytes": 4777,
+              "duration": 30.900000035762787
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/language.js",
+              "bytes": 7127,
+              "duration": 33.80000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/media-loading.js",
+              "bytes": 852,
+              "duration": 33.80000001192093
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.css",
+              "bytes": 1619,
+              "duration": 30.899999976158142
+            },
+            {
+              "url": "http://127.0.0.1:39539/table/personal/media/01-hero-finished-angled-768.webp",
+              "bytes": 87380,
+              "duration": 34
+            },
+            {
+              "url": "http://127.0.0.1:39539/assets/three-preview.js",
+              "bytes": 5450,
+              "duration": 46.09999996423721
+            },
+            {
+              "url": "http://127.0.0.1:39539/favicon.ico",
+              "bytes": 0,
+              "duration": 1.2000000476837158
+            }
+          ],
+          "LCP": 136
+        },
+        "model": "PASS_DESIGN_ONLY"
+      }
+    },
+    {
+      "case": "fallback:model404",
+      "passed": true,
+      "details": {
+        "gallery_available": true,
+        "real_posts": 0
+      }
+    },
+    {
+      "case": "fallback:library404",
+      "passed": true,
+      "details": {
+        "gallery_available": true,
+        "real_posts": 0
+      }
+    },
+    {
+      "case": "fallback:webgl",
+      "passed": true,
+      "details": {
+        "gallery_available": true,
+        "real_posts": 0
+      }
+    },
+    {
+      "case": "fallback:slow",
+      "passed": true,
+      "details": {
+        "gallery_available": true,
+        "real_posts": 0
+      }
+    },
+    {
+      "case": "fallback:close-loading",
+      "passed": true,
+      "details": {
+        "gallery_available": true,
+        "real_posts": 0
+      }
+    },
+    {
+      "case": "fallback:nojs",
+      "passed": true,
+      "details": {
+        "gallery_available": true,
+        "real_posts": 0
+      }
+    },
+    {
+      "case": "fallback:blockedjs",
+      "passed": true,
+      "details": {
+        "gallery_available": true,
+        "real_posts": 0
+      }
+    }
+  ]
+}

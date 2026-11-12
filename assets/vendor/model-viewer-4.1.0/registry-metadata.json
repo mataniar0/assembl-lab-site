@@ -1,0 +1,16 @@
+{
+  "version": "4.1.0",
+  "dist": {
+    "shasum": "c1d9e1d633845b7be93c822b570fba28850f4684",
+    "tarball": "https://registry.npmjs.org/@google/model-viewer/-/model-viewer-4.1.0.tgz",
+    "fileCount": 401,
+    "integrity": "sha512-7WB/jS6wfBfRl/tWhsUUvDMKFE1KlKME97coDLlZQfvJD0nCwjhES1lJ+k7wnmf7T3zMvCfn9mIjM/mgZapuig==",
+    "signatures": [
+      {
+        "sig": "MEUCIDww1YHIK9xLa9TKMQgIQcDsQY48KDQykWrRsULLQYWXAiEA8vgAhLYgbDfeYFR7wiAfv0XsxnbQuOeDj3qXKOMhZyc=",
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+      }
+    ],
+    "unpackedSize": 37273426
+  }
+}

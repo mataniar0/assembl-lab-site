@@ -1,0 +1,14 @@
+{
+  "site_base": "2a0fe67d742dec79421a03a9dd10076aba427aa5",
+  "runtime_commit": "343e0040c298eb7c5509330a3c49b174cf9b3816",
+  "modified_existing_files": [
+    "geometric/index.html",
+    "table/flow/index.html",
+    "table/personal/index.html"
+  ],
+  "all_other_existing_files_unchanged": true,
+  "engineering_source_commit": "548133b0462909e63c41d29d5bef859ce8fbc60c",
+  "engineering_worktree_clean": true,
+  "original_gallery_metadata_inquiry_links": "Exact DOM/metadata/destination comparison in all 30 positive browser cases",
+  "model_sha256": "17da2aafb7f17182b940804c22cb2be8dc0430cad26f20c76ca78e08ae9b8841"
+}
