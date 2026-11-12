@@ -55,6 +55,6 @@
 
 ## מצב התוכנית ליום 2026-11-12
 - APP-SPEC-001: DRAFT כתוב; משפחת שידת לילה קטנה נבחרה כהנחת פיילוט ראשונית; שאר פרטי ההיקף ממתינים לאישור בעל המוצר.
-- APP-UX-002: DRAFT (מפת מסכים ותרחישי משתמש תועדו ב־APP-UX-002_USER_JOURNEY_AND_SCREENS_HE.md; ממתין לעיצוב wireframes חזותיים ולאימות שימושיות).
+- APP-UX-002: PROTOTYPE LOCAL PASS / APPROVAL PENDING — מסכי שלב 1 פותחו באב־טיפוס מקומי (29/29 בדיקות Chromium PASS) ומתועדים ב־`prototype/app-ux-002/index.html` וב־`docs/app/APP-UX-002_INTERACTIVE_PROTOTYPE_QA_HE.md`. טרם נערכו בדיקות משתמשים, ביקורת עצמאית או פריסה. אין מנועי AI/3D/CAD מחוברים.
 - APP-ARCH-003 עד APP-OPS-011: NOT STARTED.
 - אין טענה שהממירים הוטמעו, שקיים Backend חדש, שאושר חיתוך או שבוצע Release.
