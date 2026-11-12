@@ -1,0 +1,46 @@
+{
+  "issue": 41,
+  "stage": "G4-G5",
+  "date": "2026-11-12",
+  "executor": "ChatGPT-only",
+  "model_revision": "V365 virtual design proposal",
+  "orig_source_revision": "V364 unchanged",
+  "material_mm": 4,
+  "source_original_modified": false,
+  "original_parts": 31,
+  "model_parts": 31,
+  "step_reimport_valid_solids": 31,
+  "glb_reimport_watertight_meshes": 31,
+  "unique_pair_screen": 465,
+  "exact_occ_tests_after_broadphase": 48,
+  "positive_overlaps": 0,
+  "negative_control_sliding_slat_mm": 3,
+  "negative_control_overlap_pairs": 3,
+  "envelope_mm": [
+    370,
+    370,
+    857
+  ],
+  "step_sha256": "ddf497af1208ba6e04af8bdbe891d5bb5e167d9b3d23c34eb5efacb28d173c36",
+  "glb_sha256": "64d77807279c9afb647886062ddaf650a3500fd10d9aa9374721c7aef1360320",
+  "zip_sha256": "b8d19c34c165446616d81629b1ed9aec2606d447a0dfb5bc76123e2ce2efacfe",
+  "changes": {
+    "top_perimeter_virtual_trim_area_mm2": 31.60294,
+    "shelf_support_source_width_mm": 306,
+    "shelf_support_virtual_width_mm": 290,
+    "shelf_support_modified_units": 4,
+    "shelf_slats_source_width_mm": 370,
+    "shelf_slats_virtual_width_mm": 354,
+    "shelf_slats_modified_units": 10,
+    "tp1_source_dimensions_mm": [
+      370,
+      370
+    ],
+    "tp1_placed_on_top_instead_of_finger_connection": true
+  },
+  "mechanical_assembly_paths_approved": false,
+  "physical_fit_approved": false,
+  "production_approved": false,
+  "website_published": false,
+  "model_files_in_github": false
+}
