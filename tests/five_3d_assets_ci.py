@@ -47,7 +47,7 @@ def run():
   prims=[p for m in header["meshes"] for p in m["primitives"]]
   if route in WOOD_FIXES:
    spec=WOOD_FIXES[route]
-   blob=hashlib.sha1(b"blob "+str(len(b)).encode()+b"\\0"+b).hexdigest()
+   blob=hashlib.sha1(b"blob "+str(len(b)).encode()+bytes([0])+b).hexdigest()
    assert blob==spec["git_blob"],(route,"unexpected colored GLB version",blob)
    offset=20+struct.unpack_from('<I',b,12)[0]
    chunk_len,chunk_type=struct.unpack_from('<II',b,offset)
