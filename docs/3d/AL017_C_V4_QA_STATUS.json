@@ -1,0 +1,25 @@
+{
+  "issue": 40,
+  "revision": "V4-700 VERSION A",
+  "status": "DESIGN_ONLY_CAD_PASS_PHOTO_PATTERN_PASS_METRIC_MEASUREMENT_PENDING",
+  "source_sha256": "3e7ee4476b4b884058c883a8439f0ab6a8ed9f559cd0c44867f9a33d63c78652",
+  "source_nominal_mm": {
+    "width": 700,
+    "depth": 320,
+    "height": 520
+  },
+  "live_page_current_width_mm": 800,
+  "visible_photo_slats_per_tier": 7,
+  "source_v4_slats_per_tier": 7,
+  "historical_v3_slats_per_tier": 8,
+  "photo_metric_measurement_verified": false,
+  "step_sha256": "01cbe984f5a300084950d8db3b59be8d0dd4346c81bb203b3859f5832b52b3cf",
+  "glb_sha256": "84fbf1bef9a264c399ac800333a899e818a1fdf68c956d6eabdb4a896fa49445",
+  "step_solids": 36,
+  "glb_meshes": 36,
+  "prior_pairwise_checks": 630,
+  "prior_zero_overlap": true,
+  "site_3d_publication_approved": false,
+  "physical_production_approved": false,
+  "implementation": "ChatGPT only"
+}
