@@ -1,0 +1,52 @@
+{
+  "issue": 41,
+  "stage": "G3",
+  "date": "2026-11-12",
+  "executor": "ChatGPT only",
+  "owner_confirmed_material_mm": 4,
+  "original_version": "V364 immutable",
+  "source_parts_total": 31,
+  "g3_tested_parts": 16,
+  "corner_inset_xy_mm": 8,
+  "frame_envelope_xyz_mm": [
+    354,
+    354,
+    853
+  ],
+  "native_g3": {
+    "unique_pairs": 120,
+    "exact_booleans": 20,
+    "positive_collisions": 8,
+    "approval": false
+  },
+  "virtual_g3": {
+    "unique_pairs": 120,
+    "exact_booleans": 20,
+    "positive_collisions": 0,
+    "removed_perimeter_profile_area_mm2": 31.60294,
+    "original_perimeter_profile_area_mm2": 11877.84801,
+    "nominal_clearance_mm": 0.03,
+    "material_profile_modified_in_memory_only": true,
+    "geometry_collision_pass": true,
+    "manufacturing_approved": false
+  },
+  "independent_reimport": {
+    "step_solids_each": 16,
+    "glb_watertight_each": 16
+  },
+  "corner_tabs": {
+    "sample_points": 1700,
+    "one_finger": 1692,
+    "zero_fingers_terminal_top": 8,
+    "overlap_both": 0
+  },
+  "tp1_candidate": {
+    "z_bottom_mm": 849,
+    "pairs": 136,
+    "collisions": 12,
+    "approval": false
+  },
+  "next_gate": "G4 TP1 and all 31 bodies",
+  "website_published": false,
+  "full_assembly_approved": false
+}

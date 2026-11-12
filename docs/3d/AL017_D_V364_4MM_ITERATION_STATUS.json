@@ -1,0 +1,27 @@
+{
+  "issue": 41,
+  "date": "2026-11-12",
+  "owner_confirmed_thickness_mm": 4,
+  "previous_thickness_6mm_superseded": true,
+  "phase": "second_planning_hypothesis",
+  "part_count": 31,
+  "step_reimport_valid_solids": 31,
+  "glb_reimport_watertight_meshes": 31,
+  "unique_pairs": 465,
+  "exact_boolean_candidates": 60,
+  "prior_hypothesis_overlaps": 42,
+  "new_hypothesis_overlaps": 16,
+  "remaining": {
+    "rail_a_arch": 8,
+    "rail_a_top_perimeter": 4,
+    "rail_b_top_perimeter": 4
+  },
+  "source_geometry_edits": 0,
+  "assembly_pose_cycle_count_new": 1,
+  "engineering_assembly_approved": false,
+  "source_archive_sha256": "f21223fbd6a3c34f90f1d6482422312685e93902347614cc2d5abe266ee5313b",
+  "step_sha256": "505ac68a58ee1c13e56f9b7043a6bb36b099baa4bc9a1426e1d456b118e763c0",
+  "glb_sha256": "c88b8bfd235c4d63f4159387afd1a997d1db3ca9b54d0ebd83745d8158f2bf28",
+  "website_publish_approved": false,
+  "executor": "ChatGPT_only"
+}
