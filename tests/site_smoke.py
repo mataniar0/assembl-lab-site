@@ -317,7 +317,7 @@ def app_smoke(browser, base, path, locale, viewport):
         page.locator("#generate").click()
         require(page.locator("#review").is_visible(), "PWA design review missing")
         page.locator("#open-approval").click()
-        require(page.locator("#approval-modal").is_visible(), "PWA approval confirmation missing")
+        require(page.locator("#approval-dialog").is_visible(), "PWA approval confirmation missing")
         page.locator("#confirm-approval").click()
         require(page.locator("#approved").is_visible(), "PWA GATE 1 receipt missing")
         require("visual-v1" in page.locator("#approval-record").inner_text(),
