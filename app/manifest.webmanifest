@@ -1,0 +1,27 @@
+{
+  "name": "ASSEMBL LAB — Design Studio",
+  "short_name": "ASSEMBL LAB",
+  "description": "סביבת הדגמה לעיצוב רהיט בתוך חלל מצולם",
+  "lang": "he",
+  "dir": "rtl",
+  "id": "./",
+  "start_url": "./?source=android-pwa",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fcfaf7",
+  "theme_color": "#20231f",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
