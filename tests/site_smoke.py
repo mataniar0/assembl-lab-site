@@ -85,7 +85,7 @@ def check_references(root, documents):
     # JavaScript (for example, URL.createObjectURL(blob)) is NOT a file link.
     # Keep checking all HTML src/href/poster refs collected by Document.
     sources = {path: (doc.refs + [url for css in re.findall(
-        r"<style\\b[^>]*>(.*?)</style\\s*>", path.read_text(encoding="utf-8"), flags=re.I | re.S)
+        r"<style\b[^>]*>(.*?)</style\s*>", path.read_text(encoding="utf-8"), flags=re.I | re.S)
         for _, url in URL_PATTERN.findall(css)]) for path, doc in documents.items()}
     for path in root.rglob("*.css"):
         if not any(part in EXCLUDED or part.startswith(".") for part in path.relative_to(root).parts):
