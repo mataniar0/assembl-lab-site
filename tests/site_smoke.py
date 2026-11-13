@@ -81,8 +81,12 @@ def local_target(root, source, reference):
 def check_references(root, documents):
     checked = 0
     failures = []
-    sources = {path: (doc.refs + [url for _, url in URL_PATTERN.findall(path.read_text(encoding="utf-8"))])
-               for path, doc in documents.items()}
+    # Only CSS url(...) constructs are asset paths. The same syntax inside
+    # JavaScript (for example, URL.createObjectURL(blob)) is NOT a file link.
+    # Keep checking all HTML src/href/poster refs collected by Document.
+    sources = {path: (doc.refs + [url for css in re.findall(
+        r"<style\\b[^>]*>(.*?)</style\\s*>", path.read_text(encoding="utf-8"), flags=re.I | re.S)
+        for _, url in URL_PATTERN.findall(css)]) for path, doc in documents.items()}
     for path in root.rglob("*.css"):
         if not any(part in EXCLUDED or part.startswith(".") for part in path.relative_to(root).parts):
             sources[path] = [url for _, url in URL_PATTERN.findall(path.read_text(encoding="utf-8"))]
@@ -286,7 +290,48 @@ def carousel_smoke(page):
     return {"carousels": groups.count(), "transitions": transitions, "disabled_single_image": disabled}
 
 
+
+def app_smoke(browser, base, path, locale, viewport):
+    """PWA-specific smoke: the app intentionally has its own i18n/CSP."""
+    session = Session(browser, base, viewport, locale=None)
+    try:
+        page = session.page
+        response = page.goto(urljoin(base, path), wait_until="load")
+        require(response and response.status == 200, "App did not return HTTP 200")
+        require(page.locator('link[rel="manifest"]').get_attribute("href") == "./manifest.webmanifest",
+                "Missing relative PWA manifest")
+        require(page.locator("#intro").is_visible(), "PWA introduction missing")
+        require(page.locator("#live-camera").count() == 1, "Live-camera control missing")
+        require(page.locator("#gallery").count() == 1, "Gallery fallback missing")
+        if locale == "en":
+            page.locator("#lang").click()
+        require(page.locator("html").get_attribute("lang") == locale, "PWA language mismatch")
+        require(page.locator("html").get_attribute("dir") == ("rtl" if locale == "he" else "ltr"),
+                "PWA direction mismatch")
+        page.locator("#start").click()
+        require(page.locator("#capture").is_visible(), "PWA camera screen missing")
+        page.locator("#demo").click()
+        require(page.locator("#capture-next").is_enabled(), "PWA demo scene not selected")
+        page.locator("#capture-next").click()
+        require(page.locator("#configure").is_visible(), "PWA design screen missing")
+        page.locator("#generate").click()
+        require(page.locator("#review").is_visible(), "PWA design review missing")
+        page.locator("#open-approval").click()
+        require(page.locator("#approval-modal").is_visible(), "PWA approval confirmation missing")
+        page.locator("#confirm-approval").click()
+        require(page.locator("#approved").is_visible(), "PWA GATE 1 receipt missing")
+        require("visual-v1" in page.locator("#approval-record").inner_text(),
+                "GATE 1 did not bind to selected visual version")
+        session.healthy()
+        return {"page": path, "language": locale, "viewport": list(viewport),
+                "pwa": True, "local_demo_only": True}
+    finally:
+        session.close()
+
+
 def page_smoke(browser, base, path, locale, viewport):
+    if path.startswith("app/"):
+        return app_smoke(browser, base, path, locale, viewport)
     session = Session(browser, base, viewport, locale)
     try:
         session.ready(path)
