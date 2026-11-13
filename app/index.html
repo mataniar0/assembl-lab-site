@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fcfaf7">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="ASSEMBL LAB">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+<meta name="description" content="ASSEMBL LAB — אב טיפוס מקומי לשלב צילום חלל והדמיית רהיט">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' blob: data:; script-src 'sha256-GBnlKux09VbgrayAnLRJMrWvjFuJ9hF2QuT9vewZR6U='; style-src 'sha256-89Sc5Gf+7JqCtzias9Yo+4XLau6VOtWxNhx/QN80yyI='; img-src 'self' blob: data:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>ASSEMBL LAB — UX Prototype</title>
+<style>:root{--paper:#fcfaf7;--ink:#20231f;--muted:#656a61;--line:#dbddd5;--accent:#ba482d;--green:#28463e;--cream:#f0ede6;--soft:#f7f4ee;--radius:17px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,"Helvetica Neue",sans-serif;font-size:16px;line-height:1.55}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.45}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,.upload:focus-within{outline:3px solid var(--accent);outline-offset:3px}button,select,textarea,input{color:var(--ink)}[hidden]{display:none!important}.app-header{height:78px;padding:0 clamp(18px,4vw,70px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:16px}.logo{direction:ltr;display:flex;align-items:center;gap:14px}.logo-mark{display:grid;place-items:center;width:45px;height:45px;background:var(--green);color:white;font-size:29px;font-weight:800;transform:skew(-8deg);border-radius:3px}.logo-dot{color:#e6b994}.logo b{display:block;font-size:15px;letter-spacing:.08em;white-space:nowrap}.logo small{display:block;color:var(--muted);font-size:8px;letter-spacing:.2em;white-space:nowrap}.header-actions{display:flex;align-items:center;gap:15px}.draft-label{font-size:11px;color:var(--muted)}.lang{background:transparent;border:1px solid var(--line);border-radius:100px;padding:6px 12px;min-width:47px;min-height:38px;font-weight:bold;font-size:12px}.progress{display:flex;justify-content:center;align-items:center;gap:16px;padding:19px 16px;background:#f8f7f3;border-bottom:1px solid var(--line)}.progress-step{display:flex;align-items:center;gap:9px;color:#999d98;font-size:12px;font-weight:700}.step-number{width:29px;height:29px;border:1px solid #bdc1b7;border-radius:50%;display:grid;place-items:center;font-size:11px}.progress-step.active{color:var(--green)}.progress-step.active .step-number{background:var(--green);color:white;border-color:var(--green)}.progress-line{width:clamp(20px,5vw,100px);height:1px;background:var(--line)}.screen{max-width:1290px;margin:auto;padding:clamp(25px,4vw,62px) clamp(18px,4vw,60px);min-height:calc(100vh - 215px)}h1,h2,h3,p{margin:0}h1{font-size:clamp(30px,4vw,57px);line-height:1.14;letter-spacing:-.045em;margin:10px 0 18px;max-width:850px}h2{font-size:25px;line-height:1.25;margin-bottom:14px}h3{font-size:16px;margin:23px 0 10px}.eyebrow{font-size:11px;font-weight:800;letter-spacing:.18em;color:var(--accent);direction:ltr;text-align:start}.hero-layout{display:grid;grid-template-columns:1.07fr .93fr;align-items:center;gap:8%;min-height:62vh}.hero-copy p{color:var(--muted);font-size:17px;max-width:56ch;margin-bottom:29px}.hero-copy .compact{margin-top:17px}.hero-visual{display:flex;justify-content:center}.hero-card{background:#ece9df;max-width:445px;width:100%;padding:16px 16px 5px;transform:rotate(-1.4deg);box-shadow:0 18px 50px #20231f17;border-radius:7px}.hero-card .mini-scene{height:390px;overflow:hidden;border-radius:3px;margin-top:10px}.hero-card>p{padding:14px 0;color:var(--muted);font-size:11px}.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:49px;border-radius:8px;border:1px solid transparent;padding:12px 20px;font-weight:700;font-size:14px;transition:background .15s ease,transform .1s ease}.btn:active:not(:disabled){transform:scale(.985)}.primary{background:var(--green);color:white}.primary:hover:not(:disabled){background:#18312b}.secondary{background:transparent;border-color:var(--green);color:var(--green)}.secondary:hover:not(:disabled){background:#edf1ec}.ghost{background:transparent;color:var(--ink)}.ghost:hover:not(:disabled){background:#eeece6}.compact{font-size:12px!important}.muted{color:var(--muted)}.head-row{max-width:900px;margin-bottom:31px}.head-row h1{font-size:clamp(29px,3vw,42px);margin:10px 0 12px}.head-row p{color:var(--muted);max-width:680px}.content-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);gap:clamp(25px,4vw,65px);align-items:start}.scene{height:520px;border-radius:var(--radius);overflow:hidden;position:relative;isolation:isolate;background:linear-gradient(110deg,#d6cfbe 0%,#f4ede2 57%,#e2d9c9 100%);border:1px solid #e9e5de;box-shadow:inset 2px 0 23px #8b7b6a22}.scene:after{content:'';position:absolute;inset:69% -20% -18% -20%;background:repeating-linear-gradient(86deg,#bd9e79,#b99a77 34px,#ad8b68 35px,#ad8b68 36px,#d1b18e 38px,#bf9d77 68px);transform:skewY(3deg);box-shadow:0 -9px 18px #8b6c4c20;z-index:0}.scene .floor-line{position:absolute;z-index:1;inset:69% 0 auto;height:3px;background:#8a786266}.scene .wall-corner{position:absolute;z-index:1;top:0;right:28%;bottom:31%;border-right:2px solid #c6bdae66;box-shadow:4px 0 16px #73685a1f}.room-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}.scene:has(.room-photo:not([hidden])):after,.scene:has(.room-photo:not([hidden])) .floor-line,.scene:has(.room-photo:not([hidden])) .wall-corner{display:none}.scene-corner-label{position:absolute;z-index:4;bottom:12px;right:12px;display:inline-flex;padding:5px 9px;background:#fcfaf7db;color:#20231f;border-radius:4px;font-size:10px;backdrop-filter:blur(3px)}.furniture-mount{position:absolute;z-index:3;left:50%;top:61%;width:45%;height:50%;transform:translate(-50%,-50%);pointer-events:none;filter:drop-shadow(14px 19px 13px #33271e3d)}.furniture-mount svg{height:100%;width:100%;overflow:visible}.preview-column>.muted{margin-top:12px}.mini-scene{position:relative;background:linear-gradient(108deg,#d2c6b3,#eee6d9 75%);overflow:hidden}.mini-scene::after{content:'';position:absolute;inset:70% 0 0;background:repeating-linear-gradient(92deg,#c3a17f 0 3px,#cbaa85 4px 42px)}.mini-scene .furniture-mount{height:56%;width:54%;top:62%}.form-panel{background:white;padding:clamp(22px,3vw,36px);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 13px 30px #4c514411}.form-panel>p{color:var(--muted);margin-bottom:20px}.form-icon{display:grid;place-items:center;width:45px;height:45px;border:1px solid var(--line);border-radius:50%;font-size:24px;color:var(--green);margin-bottom:22px}.upload{width:100%;cursor:pointer}.form-panel .upload+input{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden}.form-panel>.btn{width:100%;margin-bottom:9px}.small-note{font-size:12px!important;color:var(--muted);line-height:1.55;padding:14px;background:var(--soft);border-radius:8px;margin:16px 0!important}.button-row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:23px;flex-wrap:wrap}.button-row .btn{flex:1}.button-row.vertical{display:flex;flex-direction:column;align-items:stretch}.button-row.vertical .btn{width:100%}.field{display:grid;gap:7px;margin:0 0 18px;min-width:0}.field>span,.field>label{font-size:13px;font-weight:700}input[type=number],select,textarea{border:1px solid #cfd1ca;border-radius:8px;min-height:45px;width:100%;background:#fff;padding:10px 12px}textarea{resize:vertical;min-height:66px}input[type=range]{accent-color:var(--green);width:100%;min-height:35px}.fields-inline{display:grid;grid-template-columns:1fr 1fr;gap:15px}.error{color:#982c20;font-size:13px;background:#fff2ef;padding:10px 14px;border-radius:8px}.version-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:24px;font-weight:700}.versions{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}.versions button{border:1px solid var(--line);background:white;border-radius:8px;padding:12px 18px;font-weight:700;min-height:45px}.versions button.selected{border-color:var(--green);background:#eaf1ec;color:var(--green)}.tag{font-size:11px;font-weight:800;color:var(--green);border:1px solid #bdcfc3;padding:5px 9px;border-radius:30px}.summary{background:var(--soft);padding:15px 18px;border-radius:9px;font-size:13px;line-height:1.8}.summary strong{color:var(--ink)}.quick-actions{display:flex;gap:8px;flex-wrap:wrap}.pill{min-height:43px;border-radius:32px;border:1px solid #b9c8bd;color:var(--green);padding:8px 14px;background:#f2f6f2;font-weight:700;font-size:12px}.pill:hover{background:#dceadf}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:#f5f4ef;padding:14px;margin-top:13px;border-radius:12px}.comparison .scene{height:230px;border-radius:9px}.comparison .furniture-mount{height:58%}.comparison strong{display:block;font-size:12px;margin-bottom:9px}.approved-card{max-width:670px;margin:30px auto;background:white;border:1px solid var(--line);border-radius:20px;padding:clamp(26px,5vw,55px);text-align:center;box-shadow:0 18px 50px #20231f12}.approved-card h1{font-size:39px;margin:13px auto}.approved-card p{color:var(--muted);margin:0 auto 17px}.approved-card .eyebrow{text-align:center}.success-mark{display:grid;place-items:center;width:73px;height:73px;margin:0 auto 25px;background:#e4f0e7;border-radius:50%;color:#2b6845;font-size:36px}.record{padding:18px;background:var(--soft);border-radius:10px;margin:23px 0;font-size:13px;direction:ltr;text-align:left;overflow-wrap:anywhere}dialog{max-width:450px;border:1px solid var(--line);border-radius:16px;padding:0;box-shadow:0 35px 120px #0004}dialog::backdrop{background:#1c261d88;backdrop-filter:blur(2px)}.dialog-content{padding:32px}.dialog-content h2{margin-top:12px}.dialog-content p{color:var(--muted);margin:12px 0}.review-grid .scene-large{height:560px}footer{border-top:1px solid var(--line);padding:22px 4vw;color:var(--muted);font-size:10px;letter-spacing:.04em;display:flex;justify-content:space-between;gap:15px}html[dir=ltr] .scene-corner-label{right:auto;left:12px}html[dir=ltr] .eyebrow{text-align:left}
+@media(max-width:850px){.hero-layout{grid-template-columns:1fr;gap:20px;padding-bottom:30px}.hero-card{max-width:500px}.hero-card .mini-scene{height:310px}.content-grid{grid-template-columns:1fr;gap:22px}.screen{padding-top:30px;min-height:calc(100vh - 175px)}.scene,.review-grid .scene-large{height:400px}.draft-label{display:none}}@media(max-width:520px){.app-header{height:65px}.logo b{font-size:12px}.logo small{font-size:7px}.logo-mark{height:37px;width:37px;font-size:24px}.progress{gap:7px;padding:12px 10px}.progress-step{font-size:10px;gap:5px}.step-number{width:25px;height:25px;font-size:10px}.progress-line{width:12px}.scene,.review-grid .scene-large{height:380px}.form-panel{padding:19px}.fields-inline{gap:10px}.button-row .btn{font-size:12px;padding:10px}.hero-copy h1{font-size:37px}.hero-copy p{font-size:15px}.comparison{grid-template-columns:1fr}.comparison .scene{height:215px}footer{display:block}footer span{display:block;margin-bottom:5px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* APP-MOBILE-001: camera, Android PWA install and update controls */
+#live-camera-panel{margin:10px 0;border-radius:16px;overflow:hidden;background:#121f1c;padding:10px}
+#camera-preview{display:block;width:100%;max-height:390px;object-fit:contain;border-radius:10px;transform:scaleX(1);background:#131d1d}
+#live-camera-panel .button-row{justify-content:center;margin:10px 0 0}
+.install-zone{display:grid;justify-items:start;gap:4px;margin:14px 0}
+#update-banner{position:fixed;z-index:80;bottom:max(10px,env(safe-area-inset-bottom));left:12px;right:12px;display:flex;align-items:center;justify-content:center;gap:12px;background:#20231f;color:white;border-radius:12px;padding:13px;box-shadow:0 8px 32px #0004}
+#update-banner button{padding:9px 16px;border:0;border-radius:9px;background:#fcfaf7;color:#20231f;font-weight:bold}
+
+</style>
+
+</head>
+<body>
+<header class="app-header">
+  <div class="logo"><span class="logo-mark">A<span class="logo-dot">.</span></span><span><b>ASSEMBL LAB</b><small>VISION TO ENGINEERING</small></span></div>
+  <div class="header-actions"><span class="draft-label" data-he="אב־טיפוס · ללא AI או שרת" data-en="Prototype · no AI or server">אב־טיפוס · ללא AI או שרת</span><button id="lang" class="lang" type="button" aria-label="Switch language">EN</button></div>
+</header>
+<div class="progress" aria-label="שלבי האפליקציה">
+  <div class="progress-step active" data-phase="1"><span class="step-number">01</span><span data-he="הדמיה בחלל" data-en="Room preview">הדמיה בחלל</span></div>
+  <span class="progress-line"></span>
+  <div class="progress-step" data-phase="2"><span class="step-number">02</span><span data-he="מודל תלת־ממדי" data-en="3D model">מודל תלת־ממדי</span></div>
+  <span class="progress-line"></span>
+  <div class="progress-step" data-phase="3"><span class="step-number">03</span><span data-he="הנדסה וייצור" data-en="Engineering">הנדסה וייצור</span></div>
+</div>
+<main id="app">
+  <section class="screen" id="intro" aria-labelledby="intro-title">
+    <div class="hero-layout">
+      <div class="hero-copy"><div class="eyebrow" data-he="ASSEMBL LAB / שלב 1 מתוך 3" data-en="ASSEMBL LAB / Step 1 of 3">ASSEMBL LAB / שלב 1 מתוך 3</div>
+        <h1 id="intro-title" data-he="מרעיון בחלל הבית — לעיצוב שמרגיש נכון." data-en="From your space to a design that belongs.">מרעיון בחלל הבית — לעיצוב שמרגיש נכון.</h1>
+        <p data-he="צלמו את הפינה בבית, הגדירו רהיט וראו המחשה שלו בתוך החלל. בהמשך נתרגם את העיצוב לתלת־ממד ולתכנון הנדסי." data-en="Capture a corner of your home, describe the furniture and preview it in the space. 3D and engineering come later.">צלמו את הפינה בבית, הגדירו רהיט וראו המחשה שלו בתוך החלל. בהמשך נתרגם את העיצוב לתלת־ממד ולתכנון הנדסי.</p>
+        <button id="start" class="btn primary" type="button" data-he="התחל פרויקט חדש" data-en="Start a project">התחל פרויקט חדש</button>
+        <div class="install-zone"><button id="install-app" class="btn secondary" type="button" hidden data-he="התקן את ASSEMBL LAB" data-en="Install ASSEMBL LAB">התקן את ASSEMBL LAB</button><p class="small-note" id="install-help" data-he="באנדרואיד: פתחו ב־Chrome, לחצו על ⋮ ובחרו 'התקנה' או 'הוספה למסך הבית'." data-en="On Android: in Chrome open ⋮ and choose 'Install app' or 'Add to Home screen'.">באנדרואיד: פתחו ב־Chrome, לחצו על ⋮ ובחרו 'התקנה' או 'הוספה למסך הבית'.</p></div>
+        <p class="muted compact" data-he="בפיילוט: שידת לילה קטנה. אין העלאת תמונות לשרת, ואין יצירת AI אמיתית." data-en="Pilot: small nightstand. Photos stay on this device; no real AI generation.">בפיילוט: שידת לילה קטנה. אין העלאת תמונות לשרת, ואין יצירת AI אמיתית.</p>
+      </div>
+      <div class="hero-visual"><div class="hero-card"><div class="eyebrow">DESIGN STUDY / 001</div><div class="mini-scene" id="intro-scene"></div><p data-he="חלל לדוגמה · שידה סכמטית" data-en="Sample room · schematic nightstand">חלל לדוגמה · שידה סכמטית</p></div></div>
+    </div>
+  </section>
+  <section class="screen" id="capture" hidden aria-labelledby="capture-title">
+    <div class="head-row"><div><div class="eyebrow">01 / CAPTURE</div><h1 id="capture-title" data-he="נתחיל מהחלל שלכם" data-en="Start with your space">נתחיל מהחלל שלכם</h1><p data-he="צלמו נישה או העלו תמונה. וודאו שהקיר והרצפה נראים היטב." data-en="Photograph a niche or upload a room photo. Include the wall and floor.">צלמו נישה או העלו תמונה. וודאו שהקיר והרצפה נראים היטב.</p></div></div>
+    <div class="content-grid"><div class="photo-surface"><div id="capture-scene" class="scene scene-demo"><div class="wall-corner"></div><div class="floor-line"></div><img class="room-photo" alt="" hidden><div class="scene-corner-label" data-he="חלל הדגמה מאויר" data-en="Illustrated demo room">חלל הדגמה מאויר</div></div></div>
+      <div class="form-panel"><div class="form-icon">↗</div><h2 data-he="בחירת תמונה" data-en="Select a photo">בחירת תמונה</h2><p data-he="אפשר להעלות צילום מהמכשיר או להשתמש בחלל הדגמה מאויר, לצורך התנסות." data-en="Upload a photo or use an illustrated demo room for testing.">אפשר להעלות צילום מהמכשיר או להשתמש בחלל הדגמה מאויר, לצורך התנסות.</p>
+      <button class="btn secondary" id="live-camera" type="button" data-he="פתח מצלמה חיה" data-en="Open live camera">פתח מצלמה חיה</button>
+      <div id="live-camera-panel" hidden><video id="camera-preview" autoplay playsinline muted aria-label="תצוגת מצלמה"></video><div class="button-row"><button class="btn primary" id="take-shot" type="button" data-he="צלם תמונה" data-en="Take photo">צלם תמונה</button><button class="btn ghost" id="close-camera" type="button" data-he="סגור מצלמה" data-en="Close camera">סגור מצלמה</button></div></div>
+      <label class="upload btn secondary" for="photo" data-he="צלם באמצעות המכשיר" data-en="Use device camera">צלם באמצעות המכשיר</label><input id="photo" type="file" accept="image/*" capture="environment" aria-label="צילום החלל במצלמה">
+      <label class="upload btn secondary" for="gallery" data-he="העלה תמונה מהגלריה" data-en="Upload from gallery">העלה תמונה מהגלריה</label><input id="gallery" type="file" accept="image/*" aria-label="העלאת תמונת חלל מהגלריה">
+      <button class="btn ghost" id="demo" type="button" data-he="השתמש בחלל הדגמה" data-en="Use demo room">השתמש בחלל הדגמה</button>
+      <p class="small-note" data-he="פרטיות: התמונה מוצגת מקומית בדפדפן, ולא נשלחת לשום שירות. לא נשמור אותה אחרי סגירת הדף." data-en="Privacy: photos are displayed only in this browser and are never uploaded or retained after closing the page.">פרטיות: התמונה מוצגת מקומית בדפדפן, ולא נשלחת לשום שירות. לא נשמור אותה אחרי סגירת הדף.</p><p id="capture-error" class="error" role="alert" hidden></p>
+      <div class="button-row"><button class="btn ghost" id="capture-back" type="button" data-he="חזור" data-en="Back">חזור</button><button class="btn primary" id="capture-next" type="button" disabled data-he="המשך להגדרת הרהיט" data-en="Describe furniture">המשך להגדרת הרהיט</button></div>
+      </div></div>
+  </section>
+  <section class="screen" id="configure" hidden aria-labelledby="configure-title">
+    <div class="head-row"><div class="eyebrow">01 / DESIGN INTENT</div><h1 id="configure-title" data-he="איזה רהיט ניצור?" data-en="What shall we design?">איזה רהיט ניצור?</h1><p data-he="כרגע הפיילוט מתמקד בשידת לילה עומדת. בחרו מאפיינים ונתוני מידה, גם אם הם עדיין משוערים." data-en="The pilot supports a freestanding nightstand. Choose options and optional dimensions.">כרגע הפיילוט מתמקד בשידת לילה עומדת. בחרו מאפיינים ונתוני מידה, גם אם הם עדיין משוערים.</p></div>
+    <div class="content-grid"><div class="preview-column"><div id="config-scene" class="scene scene-demo"><div class="wall-corner"></div><div class="floor-line"></div><img class="room-photo" alt="" hidden><div class="furniture-mount"></div><span class="scene-corner-label" data-he="המחשה סכמטית בלבד" data-en="Schematic preview only">המחשה סכמטית בלבד</span></div><p class="muted compact" data-he="זו אינה הדמיית AI. מיקום וגודל חזותיים אינם מדידה של החלל." data-en="Not AI. Visual size and position are not physical measurements.">זו אינה הדמיית AI. מיקום וגודל חזותיים אינם מדידה של החלל.</p></div>
+    <div class="form-panel"><form id="design-form" novalidate>
+      <label class="field"><span data-he="סוג הרהיט" data-en="Furniture type">סוג הרהיט</span><select disabled><option data-he="שידת לילה — פיילוט" data-en="Nightstand — pilot">שידת לילה — פיילוט</option></select></label>
+      <div class="fields-inline"><label class="field"><span data-he="גוון העץ" data-en="Wood finish">גוון העץ</span><select id="finish"><option value="natural" data-he="בירץ טבעי" data-en="Natural birch">בירץ טבעי</option><option value="honey" data-he="דבש חם" data-en="Honey">דבש חם</option><option value="walnut" data-he="אגוז כהה" data-en="Walnut">אגוז כהה</option></select></label>
+      <label class="field"><span data-he="מגירות" data-en="Drawers">מגירות</span><select id="drawers"><option value="1" data-he="מגירה אחת" data-en="One drawer">מגירה אחת</option><option value="2" data-he="שתי מגירות" data-en="Two drawers">שתי מגירות</option></select></label></div>
+      <label class="field"><span data-he="מבנה החלק התחתון" data-en="Lower section">מבנה החלק התחתון</span><select id="bottom"><option value="shelf" data-he="מדף פתוח" data-en="Open shelf">מדף פתוח</option><option value="closed" data-he="חזית סגורה" data-en="Closed front">חזית סגורה</option></select></label>
+      <div class="field"><label for="description" data-he="הערה לעיצוב (לא מבוצעת אוטומטית באב־הטיפוס)" data-en="Design note (not automatically applied in prototype)">הערה לעיצוב (לא מבוצעת אוטומטית באב־הטיפוס)</label><textarea id="description" rows="2" maxlength="500" placeholder="למשל: קצוות מעוגלים, ידית עדינה"></textarea></div>
+      <div class="fields-inline"><label class="field"><span data-he="רוחב רצוי (ס״מ)" data-en="Desired width (cm)">רוחב רצוי (ס״מ)</span><input id="width-cm" type="number" min="20" max="90" step="1" value="50"></label><label class="field"><span data-he="גובה רצוי (ס״מ)" data-en="Desired height (cm)">גובה רצוי (ס״מ)</span><input id="height-cm" type="number" min="20" max="100" step="1" value="55"></label></div>
+      <label class="field"><span data-he="מקור המידות" data-en="Dimensions are">מקור המידות</span><select id="measure"><option value="estimated" data-he="משוערות" data-en="Estimated">משוערות</option><option value="measured" data-he="נמדדו בפועל" data-en="Measured">נמדדו בפועל</option><option value="unknown" data-he="לא ידועות" data-en="Unknown">לא ידועות</option></select></label>
+      <div class="fields-inline"><label class="field"><span data-he="גודל חזותי" data-en="Visual size">גודל חזותי</span><input id="scale" type="range" min="65" max="125" value="88"></label><label class="field"><span data-he="מיקום רוחבי" data-en="Horizontal placement">מיקום רוחבי</span><input id="position" type="range" min="30" max="70" value="52"></label></div>
+      <div id="design-error" class="error" role="alert" hidden></div>
+      <div class="button-row"><button class="btn ghost" id="configure-back" type="button" data-he="חזור לצילום" data-en="Back to photo">חזור לצילום</button><button class="btn primary" id="generate" type="submit" data-he="צור גרסה סכמטית" data-en="Create schematic version">צור גרסה סכמטית</button></div>
+      </form></div></div>
+  </section>
+  <section class="screen" id="review" hidden aria-labelledby="review-title">
+    <div class="head-row"><div class="eyebrow">01 / VISUAL REVIEW</div><h1 id="review-title" data-he="זה הכיוון שהתכוונתם אליו?" data-en="Is this what you had in mind?">זה הכיוון שהתכוונתם אליו?</h1><p data-he="שמרו גרסאות, שנו פרטים והשוו — רק לאחר מכן אשרו את העיצוב." data-en="Keep versions, refine details and compare before approval.">שמרו גרסאות, שנו פרטים והשוו — רק לאחר מכן אשרו את העיצוב.</p></div>
+    <div class="content-grid review-grid"><div class="preview-column"><div id="result-scene" class="scene scene-demo scene-large"><div class="wall-corner"></div><div class="floor-line"></div><img class="room-photo" alt="" hidden><div class="furniture-mount"></div><span class="scene-corner-label" data-he="הדמיה סכמטית · לא AI" data-en="Schematic preview · not AI">הדמיה סכמטית · לא AI</span></div>
+      <div class="version-head"><span data-he="גרסאות שנוצרו" data-en="Created versions">גרסאות שנוצרו</span><span id="current-label" class="tag">V1</span></div><div id="versions" class="versions" role="group" aria-label="בחירת גרסת עיצוב"></div>
+      <div class="button-row"><button class="btn secondary" id="compare" type="button" data-he="השווה מול גרסה קודמת" data-en="Compare with previous">השווה מול גרסה קודמת</button><button class="btn ghost" id="return-config" type="button" data-he="שנה פרטים" data-en="Edit design">שנה פרטים</button></div>
+      <div id="comparison" class="comparison" hidden></div>
+      </div><div class="form-panel"><h2 data-he="בדיקת התאמה חזותית" data-en="Visual review">בדיקת התאמה חזותית</h2><p data-he="האב־טיפוס מציג שידה סכמטית על גבי החלל שבחרתם. הטקסט החופשי מתועד בלבד; לא מבוצעת יצירת תמונה באמצעות AI." data-en="This prototype overlays a schematic nightstand onto your room. Notes are recorded only; no AI image generation.">האב־טיפוס מציג שידה סכמטית על גבי החלל שבחרתם. הטקסט החופשי מתועד בלבד; לא מבוצעת יצירת תמונה באמצעות AI.</p>
+      <div id="design-summary" class="summary"></div><h3 data-he="מה תרצו לשנות?" data-en="What would you like to change?">מה תרצו לשנות?</h3><div class="quick-actions"><button type="button" class="pill" data-change="finish" data-he="החלף גוון" data-en="Change finish">החלף גוון</button><button type="button" class="pill" data-change="drawers" data-he="שנה מגירות" data-en="Change drawers">שנה מגירות</button><button type="button" class="pill" data-change="bottom" data-he="שנה מדף" data-en="Change shelf">שנה מדף</button></div>
+      <p class="muted compact" data-he="לחיצה על שינוי תכין גרסה חדשה. אפשר לחזור לכל גרסה קודמת." data-en="Changes create a new version. You can return to older versions.">לחיצה על שינוי תכין גרסה חדשה. אפשר לחזור לכל גרסה קודמת.</p>
+      <div class="button-row vertical"><button class="btn primary" id="open-approval" type="button" data-he="אשר הדמיה והמשך ל־3D" data-en="Approve preview and continue to 3D">אשר הדמיה והמשך ל־3D</button><button class="btn ghost" id="review-back" type="button" data-he="חזור לתכנון" data-en="Back to design">חזור לתכנון</button></div>
+      </div></div>
+  </section>
+  <section class="screen" id="approved" hidden aria-labelledby="approved-title"><div class="approved-card"><span class="success-mark">✓</span><div class="eyebrow">GATE 1 / VISUAL APPROVAL</div><h1 id="approved-title" data-he="ההדמיה אושרה" data-en="Preview approved">ההדמיה אושרה</h1><p id="approved-detail"></p><p data-he="האישור מתייחס למראה בלבד. שלב קונברטר ה־3D ותכנון הייצור עדיין אינם פעילים באב־טיפוס זה." data-en="Approval covers visual appearance only. The 3D converter and engineering stages are not active in this prototype.">האישור מתייחס למראה בלבד. שלב קונברטר ה־3D ותכנון הייצור עדיין אינם פעילים באב־טיפוס זה.</p><div id="approval-record" class="record"></div><button class="btn secondary" id="approved-back" type="button" data-he="חזור לגרסאות (שינוי ידרוש אישור חדש)" data-en="Back to versions (changes require new approval)">חזור לגרסאות (שינוי ידרוש אישור חדש)</button></div></section>
+</main>
+<div id="update-banner" hidden role="status"><span data-he="גרסה חדשה זמינה" data-en="Update available">גרסה חדשה זמינה</span><button type="button" id="apply-update" data-he="עדכן כעת" data-en="Update now">עדכן כעת</button></div>
+<dialog id="approval-dialog" aria-labelledby="dialog-title"><div class="dialog-content"><div class="eyebrow">GATE 1</div><h2 id="dialog-title" data-he="לאשר את ההדמיה?" data-en="Approve this preview?">לאשר את ההדמיה?</h2><p id="dialog-version"></p><p data-he="אישור זה מתייחס למראה בלבד, ולא למידות, לעמידות או למוכנות לייצור." data-en="This approves appearance only, not dimensions, durability or manufacturing readiness.">אישור זה מתייחס למראה בלבד, ולא למידות, לעמידות או למוכנות לייצור.</p><div class="button-row"><button id="cancel-approval" class="btn ghost" type="button" data-he="חזור" data-en="Back">חזור</button><button id="confirm-approval" class="btn primary" type="button" data-he="מאשר את המראה" data-en="Approve appearance">מאשר את המראה</button></div></div></dialog>
+<footer><span>ASSEMBL LAB — UX STUDY / 2026</span><span data-he="כל הנתונים בדפדפן בלבד · אין שליחה לשרת" data-en="Local browser only · no data uploaded">כל הנתונים בדפדפן בלבד · אין שליחה לשרת</span></footer>
+<script>/* AL APP UX-002 phase-one prototype. Schematic vector overlay ONLY; no server/AI/network. */
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const screens = ['intro','capture','configure','review','approved'];
+  const palettes = {
+    natural: { top:'#e4bc86',front:'#d5a56b',side:'#b7834e',edge:'#9d7041',line:'#936538' },
+    honey: { top:'#d09b58',front:'#bc8042',side:'#965e30',edge:'#78451f',line:'#664122' },
+    walnut: { top:'#8d6249',front:'#6c4432',side:'#523428',edge:'#3b241e',line:'#36231b' }
+  };
+  const i18n = {
+    he:{needImage:'בחרו תמונת חלל או חלל הדגמה כדי להמשיך.',invalidImage:'יש לבחור קובץ תמונה תקין עד 10MB.',invalidDimensions:'הזינו רוחב בין 20 ל־90 ס״מ וגובה בין 20 ל־100 ס״מ.',v:'גרסה',comparePrev:'גרסה קודמת',compareCurrent:'גרסה נבחרת',compareNone:'אין עדיין גרסה נוספת להשוואה.',summary:'פרטי גרסה',drawers:'מגירות',bottom:'חלק תחתון',finish:'גוון',dimensions:'מידות רצויות',confidence:'סטטוס מידות',note:'הערה',noNote:'אין',measured:'נמדדו',estimated:'משוערות',unknown:'לא ידועות',shelf:'מדף פתוח',closed:'סגור',natural:'בירץ טבעי',honey:'דבש',walnut:'אגוז',approved:'אושרה גרסה',approveDialog:'לאשר את גרסה',confirm:'גרסה',modified:'יצירת גרסה חדשה תדרוש אישור מחודש.',noEarlier:'אין גרסה קודמת להשוואה.',photo:'התמונה שבחרתם',demo:'חלל הדגמה מאויר'},
+    en:{needImage:'Choose a room photo or demo room.',invalidImage:'Choose a valid image file smaller than 10 MB.',invalidDimensions:'Use width 20–90 cm and height 20–100 cm.',v:'Version',comparePrev:'Previous version',compareCurrent:'Selected version',compareNone:'No earlier version to compare.',summary:'Version summary',drawers:'Drawers',bottom:'Lower section',finish:'Finish',dimensions:'Requested size',confidence:'Measurement status',note:'Note',noNote:'None',measured:'Measured',estimated:'Estimated',unknown:'Unknown',shelf:'Open shelf',closed:'Closed',natural:'Natural birch',honey:'Honey',walnut:'Walnut',approved:'Approved version',approveDialog:'Approve version',confirm:'Version',modified:'Making a new version requires fresh approval.',noEarlier:'No previous version to compare.',photo:'Your photo',demo:'Illustrated demo room'}
+  };
+  let lang='he', stage='intro', roomKind=null, roomUrl=null, versions=[], selected=0, approved=null, cameraStream=null, installPrompt=null, waitingWorker=null;
+  const t=key=>i18n[lang][key] || key;
+  const configFields=['finish','drawers','bottom','width-cm','height-cm','measure','scale','position','description'];
+  function init() {
+    $('intro-scene').innerHTML='<div class="furniture-mount"></div>';
+    $('intro-scene').querySelector('.furniture-mount').innerHTML=nightstandSvg({finish:'natural',drawers:1,bottom:'shelf'});
+    $('start').addEventListener('click',()=>go('capture'));
+    $('capture-back').addEventListener('click',()=>go('intro'));
+    $('capture-next').addEventListener('click',()=>{if(!roomKind)return showError('capture-error',t('needImage')); go('configure')});
+    $('configure-back').addEventListener('click',()=>go('capture'));
+    $('return-config').addEventListener('click',()=>go('configure'));
+    $('review-back').addEventListener('click',()=>go('configure'));
+    $('approved-back').addEventListener('click',()=>go('review'));
+    $('demo').addEventListener('click',()=>chooseRoom('demo'));
+    $('live-camera').addEventListener('click',openCamera);
+    $('take-shot').addEventListener('click',takePhoto);
+    $('close-camera').addEventListener('click',stopCamera);
+    $('photo').addEventListener('change',onFileChange);
+    $('gallery').addEventListener('change',onFileChange);
+    $('design-form').addEventListener('submit',onGenerate);
+    configFields.forEach(id=>$(id).addEventListener('input',()=>renderRoom('config-scene',readInputs())));
+    $('open-approval').addEventListener('click',()=>{
+      if(!versions.length)return;
+      $('dialog-version').textContent=`${t('approveDialog')} V${versions[selected].id}?`;
+      $('approval-dialog').showModal();
+    });
+    $('cancel-approval').addEventListener('click',()=>$('approval-dialog').close());
+    $('confirm-approval').addEventListener('click',()=>{
+      if(!versions.length)return;
+      approved={id:versions[selected].id,versionId:`visual-v${versions[selected].id}`,at:new Date().toISOString()};
+      $('approval-dialog').close();go('approved');
+    });
+    $('compare').addEventListener('click',()=>{$('comparison').hidden=!$('comparison').hidden;renderComparison()});
+    document.querySelectorAll('.quick-actions [data-change]').forEach(b=>b.addEventListener('click',()=>{
+      const v=versions[selected]?.design; if(!v)return;
+      applyInputs(v);
+      const field=b.dataset.change;
+      if(field==='finish')$('finish').value=v.finish==='natural'?'honey':v.finish==='honey'?'walnut':'natural';
+      if(field==='drawers')$('drawers').value=v.drawers===1?'2':'1';
+      if(field==='bottom')$('bottom').value=v.bottom==='shelf'?'closed':'shelf';
+      createVersion(readInputs());
+    }));
+    $('lang').addEventListener('click',()=>setLanguage(lang==='he'?'en':'he'));
+    setLanguage('he');go('intro');
+  }
+  function setLanguage(next){lang=next; document.documentElement.lang=next;document.documentElement.dir=next==='he'?'rtl':'ltr';
+    document.querySelectorAll('[data-he][data-en]').forEach(n=>{n.textContent=n.dataset[next]});
+    $('lang').textContent=next==='he'?'EN':'עברית';$('photo').setAttribute('aria-label',next==='he'?'צילום חלל במצלמה':'Take room photo');$('gallery').setAttribute('aria-label',next==='he'?'העלאת תמונה מהגלריה':'Upload room image');
+    if(stage==='review')renderReview();if(stage==='approved')renderApproved();
+  }
+  function go(next){if(stage==='capture'&&next!=='capture')stopCamera();stage=next;screens.forEach(id=>$(id).hidden=id!==next);
+    document.querySelectorAll('.progress-step').forEach(el=>{el.classList.toggle('active',el.dataset.phase==='1')});
+    if(next==='configure')renderRoom('config-scene',readInputs());
+    if(next==='review')renderReview();if(next==='approved')renderApproved();
+    window.scrollTo({top:0,behavior:'instant'});
+    if(next!=='intro')$(next).querySelector('h1')?.focus?.();
+  }
+  function showError(id,msg){$(id).textContent=msg;$(id).hidden=false}
+  function clearError(id){$(id).hidden=true;$(id).textContent=''}
+  function chooseRoom(kind,url=null){
+    if(roomUrl)URL.revokeObjectURL(roomUrl);
+    roomUrl=url;roomKind=kind;versions=[];selected=0;approved=null;
+    $('capture-next').disabled=false;clearError('capture-error');
+    renderRoom('capture-scene');
+    renderRoom('config-scene',readInputs());
+    $('photo').value='';$('gallery').value='';
+  }
+  async function openCamera(){
+    clearError('capture-error');
+    if(!window.isSecureContext || !navigator.mediaDevices?.getUserMedia){
+      showError('capture-error',lang==='he'?'המצלמה דורשת פתיחה ב־HTTPS ודפדפן תומך. ניתן לצלם דרך המכשיר או להעלות תמונה.':'Live camera requires HTTPS and a supported browser. Use device camera or gallery instead.');return;
+    }
+    stopCamera();
+    try{
+      cameraStream=await navigator.mediaDevices.getUserMedia({audio:false,video:{facingMode:{ideal:'environment'}}});
+      if(stage!=='capture'){stopCamera();return;}
+      const video=$('camera-preview');video.srcObject=cameraStream;$('live-camera-panel').hidden=false;
+      await video.play().catch(()=>{});
+    }catch(err){stopCamera();const denied=['NotAllowedError','PermissionDeniedError'].includes(err?.name);
+      showError('capture-error',denied?(lang==='he'?'לא התקבלה הרשאה למצלמה. אפשר לאשר ב־Chrome או להעלות תמונה.':'Camera permission was denied. You can enable it in Chrome or upload a photo.'):(lang==='he'?'לא ניתן לפתוח מצלמה במכשיר זה. אפשר לצלם דרך המכשיר או להעלות תמונה.':'Camera unavailable. Use the device camera or gallery instead.'));
+    }
+  }
+  function stopCamera(){if(cameraStream){cameraStream.getTracks().forEach(track=>track.stop());cameraStream=null;}const video=$('camera-preview');video.pause();video.srcObject=null;$('live-camera-panel').hidden=true;}
+  function takePhoto(){const video=$('camera-preview');if(!cameraStream||!video.videoWidth||!video.videoHeight){showError('capture-error',lang==='he'?'המצלמה עדיין לא מוכנה לצילום.':'Camera is not ready yet.');return;}
+    const canvas=document.createElement('canvas');const scale=Math.min(1,1600/video.videoWidth);canvas.width=Math.round(video.videoWidth*scale);canvas.height=Math.round(video.videoHeight*scale);canvas.getContext('2d').drawImage(video,0,0,canvas.width,canvas.height);
+    canvas.toBlob(blob=>{if(!blob){showError('capture-error',lang==='he'?'לא הצלחנו לשמור את התמונה.':'Could not capture photo.');return;}
+      const url=URL.createObjectURL(blob);const img=new Image();img.onload=()=>{stopCamera();chooseRoom('photo',url)};img.onerror=()=>{URL.revokeObjectURL(url);showError('capture-error',lang==='he'?'שגיאה בקובץ הצילום.':'Photo decode error.')};img.src=url;
+    },'image/jpeg',.88);
+  }
+  function onFileChange(e){const f=e.target.files?.[0];if(!f)return;
+    if(!f.type.startsWith('image/')||f.size>10*1024*1024){showError('capture-error',t('invalidImage'));e.target.value='';return}
+    const newUrl=URL.createObjectURL(f);const img=new Image();
+    img.onload=()=>chooseRoom('photo',newUrl);
+    img.onerror=()=>{URL.revokeObjectURL(newUrl);showError('capture-error',t('invalidImage'));};
+    img.src=newUrl;
+  }
+  function readInputs(){return {finish:$('finish').value,drawers:Number($('drawers').value),bottom:$('bottom').value,width:Number($('width-cm').value),height:Number($('height-cm').value),measure:$('measure').value,scale:Number($('scale').value),position:Number($('position').value),description:$('description').value.trim().slice(0,500)}}
+  function applyInputs(d){$('finish').value=d.finish;$('drawers').value=String(d.drawers);$('bottom').value=d.bottom;$('width-cm').value=d.width;$('height-cm').value=d.height;$('measure').value=d.measure;$('scale').value=d.scale;$('position').value=d.position;$('description').value=d.description||''}
+  function onGenerate(e){e.preventDefault();if(!roomKind){go('capture');return showError('capture-error',t('needImage'))}
+    const d=readInputs();if(!Number.isFinite(d.width)||!Number.isFinite(d.height)||d.width<20||d.width>90||d.height<20||d.height>100)return showError('design-error',t('invalidDimensions'));
+    clearError('design-error');createVersion(d);
+  }
+  function createVersion(d){const oldApproved=approved;versions.push({id:versions.length+1,design:{...d},roomKind,created:new Date().toISOString()});selected=versions.length-1;approved=null;
+    $('comparison').hidden=true;go('review');
+    if(oldApproved) $('design-summary').setAttribute('title',t('modified'));
+  }
+  function renderRoom(targetId,design){const root=$(targetId);if(!root)return;
+    const photo=root.querySelector('.room-photo'); if(photo){photo.hidden=roomKind!=='photo';if(roomKind==='photo'&&roomUrl)photo.src=roomUrl;else photo.removeAttribute('src');}
+    const mount=root.querySelector('.furniture-mount');if(mount){mount.hidden=!design;if(design){mount.innerHTML=nightstandSvg(design);mount.style.left=`${design.position}%`;mount.style.width=`${Math.round(design.scale*.50)}%`;}}
+    const label=root.querySelector('.scene-corner-label');if(label&&roomKind)label.textContent=roomKind==='photo'?t('photo'):t('demo');
+  }
+  function nightstandSvg(d){const p=palettes[d.finish]||palettes.natural;const drawers=d.drawers===2?2:1;const open=d.bottom==='shelf';
+    const fronts=drawers===2?`<path d="M50 112 L281 125 L281 178 L50 165 Z" fill="${p.front}" stroke="${p.line}" stroke-width="3"/><path d="M50 168 L281 181 L281 229 L50 218 Z" fill="${p.front}" stroke="${p.line}" stroke-width="3"/><path d="M144 146 Q165 149 185 150" stroke="${p.line}" stroke-width="7" stroke-linecap="round"/><path d="M144 203 Q165 206 185 207" stroke="${p.line}" stroke-width="7" stroke-linecap="round"/>`:`<path d="M50 112 L281 125 L281 208 L50 195 Z" fill="${p.front}" stroke="${p.line}" stroke-width="3"/><path d="M144 159 Q165 162 185 163" stroke="${p.line}" stroke-width="8" stroke-linecap="round"/>`;
+    const lower=open?`<path d="M55 225 L275 236 L275 303 L55 292 Z" fill="#614a35" opacity=".24"/><path d="M55 296 L275 308 L281 323 L50 311 Z" fill="${p.top}" stroke="${p.line}" stroke-width="3"/>`:`<path d="M50 220 L281 232 L281 313 L50 301 Z" fill="${p.front}" stroke="${p.line}" stroke-width="3"/>`;
+    return `<svg viewBox="0 0 360 400" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><ellipse cx="169" cy="365" rx="143" ry="24" fill="#271f17" opacity=".16"/><path d="M49 98 L280 110 L324 86 L96 77 Z" fill="${p.top}" stroke="${p.line}" stroke-width="4"/><path d="M280 110 L324 86 L322 325 L280 348 Z" fill="${p.side}" stroke="${p.line}" stroke-width="4"/><path d="M49 98 L280 110 L280 348 L49 334 Z" fill="${p.edge}" stroke="${p.line}" stroke-width="4"/>${lower}${fronts}<path d="M50 333 L74 334 L74 361 L50 359 Z M256 346 L280 348 L280 365 L256 364 Z" fill="${p.side}" stroke="${p.line}" stroke-width="2"/><path d="M49 98 L280 110" stroke="${p.top}" stroke-width="5"/></svg>`;
+  }
+  function renderReview(){if(!versions.length)return;const v=versions[selected];renderRoom('result-scene',v.design);$('current-label').textContent=`V${v.id}`;
+    const list=$('versions');list.replaceChildren();versions.forEach((ver,i)=>{const b=document.createElement('button');b.type='button';b.className=i===selected?'selected':'';b.textContent=`V${ver.id}`;b.setAttribute('aria-pressed',String(i===selected));b.addEventListener('click',()=>{selected=i;applyInputs(versions[i].design);renderReview()});list.append(b)});
+    const d=v.design;const rows=[[t('finish'),t(d.finish)],[t('drawers'),String(d.drawers)],[t('bottom'),t(d.bottom)],[t('dimensions'),`${d.width} × ${d.height} cm`],[t('confidence'),t(d.measure)],[t('note'),d.description||t('noNote')]];
+    const summary=$('design-summary');summary.replaceChildren();rows.forEach(([k,val])=>{const row=document.createElement('div');const strong=document.createElement('strong');strong.textContent=k+': ';row.append(strong,document.createTextNode(val));summary.append(row)});
+    if(!$('comparison').hidden)renderComparison();
+  }
+  function renderComparison(){const cmp=$('comparison');cmp.replaceChildren();if(cmp.hidden||versions.length<2){if(!cmp.hidden){const p=document.createElement('p');p.textContent=t('noEarlier');cmp.append(p)}return}
+    const current=versions[selected],prior=versions[selected===0?1:selected-1];[[prior,t('comparePrev')],[current,t('compareCurrent')]].forEach(([v,title])=>{
+      const box=document.createElement('div');const heading=document.createElement('strong');heading.textContent=`${title} · V${v.id}`;box.append(heading);
+      const scene=document.createElement('div');scene.className='scene scene-demo';scene.innerHTML='<div class="wall-corner"></div><div class="floor-line"></div><img class="room-photo" alt="" hidden><div class="furniture-mount"></div>';
+      const photo=scene.querySelector('img');if(roomKind==='photo'&&roomUrl){photo.src=roomUrl;photo.hidden=false;}
+      const mount=scene.querySelector('.furniture-mount');mount.innerHTML=nightstandSvg(v.design);mount.style.left=v.design.position+'%';mount.style.width=Math.round(v.design.scale*.5)+'%';box.append(scene);cmp.append(box);
+    });
+  }
+  function renderApproved(){if(!approved)return;$('approved-detail').textContent=`${t('approved')} V${approved.id}`;
+    const a=$('approval-record');a.replaceChildren();const lines=[`approval: VISUAL_APPROVED`,`approved_visual_version_id: ${approved.versionId}`,`approved_at: ${approved.at}`,`server_submission: false`,`next_stage: NOT_IMPLEMENTED`];lines.forEach(s=>{const div=document.createElement('div');div.textContent=s;a.append(div)});
+  }
+  window.addEventListener('pagehide',()=>{stopCamera();if(roomUrl)URL.revokeObjectURL(roomUrl)});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)stopCamera()});
+  window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();installPrompt=event;$('install-app').hidden=false});
+  window.addEventListener('appinstalled',()=>{$('install-app').hidden=true;installPrompt=null});
+  document.addEventListener('click',async event=>{if(event.target?.id!=='install-app'||!installPrompt)return;
+    const prompt=installPrompt;installPrompt=null;$('install-app').hidden=true;await prompt.prompt();await prompt.userChoice;
+  });
+  if('serviceWorker' in navigator && location.protocol.startsWith('http')){
+    window.addEventListener('load',async()=>{
+      try{const registration=await navigator.serviceWorker.register('./sw.js',{scope:'./'});
+        const showWaiting=()=>{if(registration.waiting && navigator.serviceWorker.controller){waitingWorker=registration.waiting;$('update-banner').hidden=false;}};
+        showWaiting();registration.addEventListener('updatefound',()=>{const worker=registration.installing;if(worker)worker.addEventListener('statechange',()=>{if(worker.state==='installed')showWaiting()})});
+        navigator.serviceWorker.addEventListener('controllerchange',()=>location.reload());
+        document.getElementById('apply-update').addEventListener('click',()=>waitingWorker?.postMessage({type:'SKIP_WAITING'}));
+        document.addEventListener('visibilitychange',()=>{if(!document.hidden)registration.update().catch(()=>{})});
+      }catch(err){/* PWA remains usable in a regular browser */}
+    });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
+</script>
+</body></html>
