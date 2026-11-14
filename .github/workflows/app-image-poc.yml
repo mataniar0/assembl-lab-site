@@ -1,0 +1,52 @@
+name: App synthetic image POC
+
+on:
+  pull_request:
+    branches: [main, feature/app-mvp-06-supabase-private-schema]
+    paths:
+      - 'prototype/app-mvp-07/**'
+      - '.github/workflows/app-image-poc.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'prototype/app-mvp-07/**'
+      - '.github/workflows/app-image-poc.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic-image-poc:
+    name: Synthetic room generator and model request checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Checkout candidate
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate scripts and tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in prototype/app-mvp-07/*.mjs; do node --check "$file"; done
+          node --test prototype/app-mvp-07/poc.test.mjs
+      - name: Generate synthetic PNG fixtures and manifest (no paid calls)
+        shell: bash
+        run: |
+          set -euo pipefail
+          node prototype/app-mvp-07/export-synthetic-fixtures.mjs .qa-reports/app-mvp-07
+          test "$(find .qa-reports/app-mvp-07 -maxdepth 1 -name 'SC-*.png' | wc -l | tr -d ' ')" -eq 10
+          node -e "const m=require('./.qa-reports/app-mvp-07/manifest.json'); if(m.room_count!==10||m.provider_api_calls!==0||m.customer_photos_used!==0)process.exit(1)"
+      - name: Preserve fully synthetic POC evidence
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: app-mvp-07-synthetic-rooms
+          path: .qa-reports/app-mvp-07/
+          if-no-files-found: warn
+          retention-days: 14
