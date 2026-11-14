@@ -1,0 +1,5 @@
+# Local development only. No API keys or secrets belong in this file.
+project_id = "assembl-lab-app-dev"
+
+[functions.app-mock-api]
+verify_jwt = true
