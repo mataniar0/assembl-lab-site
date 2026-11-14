@@ -1,6 +1,6 @@
 /* APP-MOBILE-001 — same-scope offline shell. No customer photos stored here. */
-const CACHE = 'assemble-lab-android-v0.1.0';
-const SHELL = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png'];
+const CACHE = 'assemble-lab-android-v0.2.0-dev';
+const SHELL = ['./', './index.html', './nightstand-intent.js', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png'];
 self.addEventListener('install', event => { event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL))); });
 self.addEventListener('activate', event => { event.waitUntil((async()=>{for(const key of await caches.keys())if(key.startsWith('assemble-lab-android-')&&key!==CACHE)await caches.delete(key);await self.clients.claim();})()); });
 self.addEventListener('message', event => { if(event.data?.type==='SKIP_WAITING')self.skipWaiting(); });
