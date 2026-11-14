@@ -58,3 +58,8 @@
 - APP-UX-002: DRAFT (מפת מסכים ותרחישי משתמש תועדו ב־APP-UX-002_USER_JOURNEY_AND_SCREENS_HE.md; ממתין לעיצוב wireframes חזותיים ולאימות שימושיות).
 - APP-ARCH-003 עד APP-OPS-011: NOT STARTED.
 - אין טענה שהממירים הוטמעו, שקיים Backend חדש, שאושר חיתוך או שבוצע Release.
+
+
+## 2026-11-14 — אימות התקנה בסלולרי
+- APP-MOBILE-001: **ANDROID INSTALL + CAMERA FIELD PASS** לפי אישור המשתמש בשיחה. יתר בדיקות הנייד/עדכוני PWA ממתינות; פרטים ב־APP-MOBILE-001_ANDROID_FIELD_ACCEPTANCE_HE.md.
+- APP-ARCH-003: מסמך טיוטת ארכיטקטורת מנוע הדמיה ב־APP-ARCH-003_VISION_BACKEND_PLAN_HE.md; טרם נבחר ספק או חובר API.
