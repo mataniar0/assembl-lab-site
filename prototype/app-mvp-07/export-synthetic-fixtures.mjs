@@ -16,7 +16,8 @@ const manifest=[];
 for(let i=0;i<scenarios.length;i++){
   const scene=renderScene(i);
   const filename=scene.id+'.png';
-  const request=buildDryRunInteraction({model:'gemini-nano-banana-2.1',intent,fixtureBytes:scene.png});
+  const perCaseIntent={...intent,placement_preview:{...intent.placement_preview,horizontal_position_percent:scene.case.position}};
+  const request=buildDryRunInteraction({model:'gemini-nano-banana-2.1',intent:perCaseIntent,fixtureBytes:scene.png});
   const dryrun=summarizeDryRun(request);
   await writeFile(resolve(root,filename),scene.png);
   manifest.push({
