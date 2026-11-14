@@ -1,0 +1,40 @@
+name: App backend synthetic contract
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'prototype/app-mvp-03/**'
+      - 'prototype/app-mvp-06/**'
+      - '.github/workflows/app-backend-contract.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'prototype/app-mvp-03/**'
+      - 'prototype/app-mvp-06/**'
+      - '.github/workflows/app-backend-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    name: Local-only synthetic backend contract
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify mock server and prompt contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check prototype/app-mvp-03/room-edit-contract.mjs
+          node --check prototype/app-mvp-06/mock-store.mjs
+          node --check prototype/app-mvp-06/server.mjs
+          node --test prototype/app-mvp-03/contract.test.mjs prototype/app-mvp-06/server.test.mjs
