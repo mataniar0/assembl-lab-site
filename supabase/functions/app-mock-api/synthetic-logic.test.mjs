@@ -80,7 +80,7 @@ test('migration contains owner RLS, private buckets and no public storage policy
   assert.match(sql,/alter table public\.al_app_projects enable row level security/i);
   assert.match(sql,/alter table public\.al_app_visualization_jobs enable row level security/i);
   assert.match(sql,/using \(owner_id = \(select auth\.uid\(\)\)\)/i);
-  assert.match(sql,/public,\s*false,\s*5242880/i);
+  assert.match(sql,/\('al-app-room-inputs', 'al-app-room-inputs', false, 5242880/i);
   assert.doesNotMatch(sql,/create policy [^;]* on storage\.objects/gi);
   assert.match(sql,/check \(status = 'MOCK_READY'\)/i);
   assert.match(sql,/constraint al_app_job_unique_request unique \(owner_id, idempotency_key\)/i);
