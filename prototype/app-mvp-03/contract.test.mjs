@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {buildRoomEditRequest,validateDesignIntent,estimateIllustrativeCosts} from './room-edit-contract.mjs';
+import {readFileSync} from 'node:fs';
+const fixture=JSON.parse(readFileSync(new URL('./synthetic-intent.json',import.meta.url),'utf-8'));
+assert.equal(validateDesignIntent(fixture).ok,true);
+assert.equal(buildRoomEditRequest(fixture,{sourceKind:'synthetic'}).provider_mode,'image_edit');
+assert.equal(buildRoomEditRequest(fixture,{sourceKind:'synthetic'}).request_ready_for_paid_provider,false);
+assert.match(buildRoomEditRequest(fixture,{sourceKind:'synthetic'}).prompt,/width 50 cm, height 55 cm, depth 35 cm/);
+assert.throws(()=>buildRoomEditRequest(fixture,{sourceKind:'user-consented'}),/explicit_consent_required/);
+assert.equal(buildRoomEditRequest(fixture,{sourceKind:'user-consented',explicitConsent:true}).image_source_kind,'user-consented');
+assert.equal(validateDesignIntent({...fixture,category:'crib'}).ok,false);
+assert.equal(validateDesignIntent({...fixture,requested_dimensions_mm:{...fixture.requested_dimensions_mm,width:Infinity}}).ok,false);
+assert.equal(validateDesignIntent({...fixture,appearance:{...fixture.appearance,notes:'x'.repeat(501)}}).ok,false);
+assert.equal(estimateIllustrativeCosts({provider:'gemini-3.1-flash-lite-image',images:10}).estimated_output_usd,0.336);
+assert.equal(estimateIllustrativeCosts({provider:'gpt-image-2.6-sunburst',images:1}).estimated_output_usd,null);
+console.log('11/11 synthetic POC contract tests passed; no image API calls made.');
