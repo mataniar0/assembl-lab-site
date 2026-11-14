@@ -5,6 +5,7 @@
  */
 import { withSupabase } from 'npm:@supabase/server@1';
 import { parseAction, InvalidMockRequest } from './synthetic-logic.mjs';
+import { parseBoundedJson, RequestBodyError } from './request-body.mjs';
 
 const errorResponse=(status,code)=>Response.json({error:{code}},{status,headers:{
   'cache-control':'no-store',
@@ -19,14 +20,8 @@ export default {
     // User identity is derived from the verified JWT, NEVER an owner_id supplied by the client.
     const owner=ctx.userClaims?.id;
     if(typeof owner!=='string'||!uuidRE.test(owner))return errorResponse(401,'USER_REQUIRED');
-    const length=Number(req.headers.get('content-length')||'0');
-    if(!Number.isFinite(length)||length>12000)return errorResponse(413,'BODY_TOO_LARGE');
-    if(!(req.headers.get('content-type')||'').toLowerCase().startsWith('application/json'))
-      return errorResponse(415,'JSON_REQUIRED');
     try{
-      const raw=await req.text();
-      if(raw.length>12000)return errorResponse(413,'BODY_TOO_LARGE');
-      const action=parseAction(JSON.parse(raw));
+      const action=parseAction(await parseBoundedJson(req,{maxBytes:12000}));
       // Using the JWT-scoped client prevents cross-owner data access.
       // Never replace this client with supabaseAdmin for user actions.
       const client=ctx.supabase;
@@ -90,7 +85,7 @@ export default {
       return errorResponse(400,'UNKNOWN_ACTION');
     }catch(error){
       if(error instanceof InvalidMockRequest)return errorResponse(422,error.code);
-      if(error instanceof SyntaxError)return errorResponse(400,'MALFORMED_JSON');
+      if(error instanceof RequestBodyError)return errorResponse(error.status,error.code);
       // Never log request bodies, tokens, image data or design notes.
       return errorResponse(500,'INTERNAL_ERROR');
     }
