@@ -25,7 +25,8 @@
   }
   function designIntent() {
     const size = dimensions();
-    const candidate = within(size,'engineeringCandidate');
+    const thickness = Number($('plywood-thickness').value);
+    const candidate = within(size,'engineeringCandidate') && thickness === 6;
     return {
       schema_version: 'ASSEMBL-LAB.DESIGN-INTENT.0.1',
       category: 'freestanding_nightstand',
@@ -47,7 +48,7 @@
       },
       construction_preferences: {
         material: 'birch_plywood',
-        nominal_thickness_mm: 6,
+        nominal_thickness_mm: thickness,
         joining_method: 'finger_joints_candidate',
         construction_verified: false
       },
@@ -69,6 +70,11 @@
     if (!within(size,'preview')) {
       el.textContent = text('יש להזין רוחב 20–90, גובה 20–100 ועומק 25–60 ס״מ.',
         'Enter width 20–90, height 20–100 and depth 25–60 cm.');
+      return;
+    }
+    if (Number($('plywood-thickness').value) !== 6) {
+      el.textContent = text('עובי 4 מ״מ מוצע להמחשה בלבד; הוא אינו בטווח ההנדסי הראשוני ואינו מאושר לייצור.',
+        '4 mm is available for a concept preview only; it is outside the initial engineering candidate and not approved for manufacturing.');
       return;
     }
     if (!within(size,'engineeringCandidate')) {
@@ -127,7 +133,7 @@
     if (!form || !$('depth-cm') || !$('download-intent')) return;
     form.addEventListener('submit',blockInvalidSubmission,true);
     form.addEventListener('submit',captureVersion);
-    ['width-cm','height-cm','depth-cm','measure'].forEach(id=>$(id).addEventListener('input',showStatus));
+    ['width-cm','height-cm','depth-cm','measure','plywood-thickness'].forEach(id=>$(id).addEventListener('input',showStatus));
     document.querySelectorAll('.quick-actions [data-change]').forEach(btn=>btn.addEventListener('click',captureVersion));
     $('confirm-approval').addEventListener('click',markApproved);
     $('download-intent').addEventListener('click',exportApproved);
