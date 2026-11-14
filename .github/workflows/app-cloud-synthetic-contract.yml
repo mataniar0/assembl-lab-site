@@ -34,7 +34,8 @@ jobs:
         run: |
           set -euo pipefail
           node --check supabase/functions/app-mock-api/synthetic-logic.mjs
+          node --check supabase/functions/app-mock-api/request-body.mjs
           node --check --input-type=module < supabase/functions/app-mock-api/index.ts
-          node --test supabase/functions/app-mock-api/synthetic-logic.test.mjs
+          node --test supabase/functions/app-mock-api/synthetic-logic.test.mjs supabase/functions/app-mock-api/request-body.test.mjs
       - name: Explicitly state validation boundary
         run: echo "This workflow does not start Supabase, apply SQL migrations, deploy APIs or test real RLS behavior."
