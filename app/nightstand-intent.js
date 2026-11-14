@@ -95,10 +95,26 @@
     error.hidden = false;
     showStatus();
   }
+  function renderSnapshotDetails() {
+    const id = currentVersionId();
+    const snap = snapshots.get(id);
+    const summary = $('design-summary');
+    if (!snap || !summary) return;
+    const prev = summary.querySelector('[data-design-intent-detail]');
+    if (prev) prev.remove();
+    const extra = document.createElement('div');
+    extra.dataset.designIntentDetail = '';
+    const strong = document.createElement('strong');
+    strong.textContent = text('עומק / חומר: ', 'Depth / material: ');
+    const depthCm = snap.requested_dimensions_mm.depth / 10;
+    extra.append(strong,document.createTextNode(depthCm+' cm · Birch '+snap.construction_preferences.nominal_thickness_mm+' mm'));
+    summary.append(extra);
+  }
   function captureVersion() {
     const id = currentVersionId();
     if (!Number.isInteger(id) || id < 1 || !within(dimensions(),'preview')) return;
     snapshots.set(id, structuredClone(designIntent()));
+    renderSnapshotDetails();
   }
   function markApproved() {
     const id = currentVersionId();
@@ -134,10 +150,19 @@
     form.addEventListener('submit',blockInvalidSubmission,true);
     form.addEventListener('submit',captureVersion);
     ['width-cm','height-cm','depth-cm','measure','plywood-thickness'].forEach(id=>$(id).addEventListener('input',showStatus));
+    $('versions').addEventListener('click', event=>{
+      if(!event.target.closest('button')) return;
+      const snap = snapshots.get(currentVersionId());
+      if(!snap) return;
+      $('depth-cm').value = String(snap.requested_dimensions_mm.depth / 10);
+      $('plywood-thickness').value = String(snap.construction_preferences.nominal_thickness_mm);
+      renderSnapshotDetails();
+      showStatus();
+    });
     document.querySelectorAll('.quick-actions [data-change]').forEach(btn=>btn.addEventListener('click',captureVersion));
     $('confirm-approval').addEventListener('click',markApproved);
     $('download-intent').addEventListener('click',exportApproved);
-    document.addEventListener('click',event=>{if (event.target?.id==='lang') showStatus()});
+    document.addEventListener('click',event=>{if (event.target?.id==='lang'){showStatus(); renderSnapshotDetails();}});
     showStatus();
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init,{once:true});
