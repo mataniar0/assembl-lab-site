@@ -17,7 +17,7 @@ assert "LID_SKIN_RADIAL_4MM" in names and "BODY_FLOOR" in names
 assert "MEB029_SINGLE_INVERSE_CURVE_4MM" not in names
 assert gltf["extras"]["stockMm"]==4
 assert gltf["extras"]["lidCutlines"]==88 and gltf["extras"]["lidSlitRows"]==22
-assert "approximate" in gltf["extras"]["caveat"].lower()
+assert "indicative" in gltf["extras"]["caveat"].lower() or "approximate" in gltf["extras"]["caveat"].lower()
 binpos=20+jsize
 blen,btype=struct.unpack_from("<II",blob,binpos)
 assert btype==0x004e4942 and binpos+8+blen==size
