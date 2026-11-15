@@ -35,3 +35,49 @@ jobs:
           node --check app/preview-state.mjs
           node --check app/preview-lab.mjs
           node --test app/preview-state.test.mjs
+
+  visual-browser-qa:
+    name: Mobile/Desktop Chromium synthetic review
+    runs-on: ubuntu-24.04
+    timeout-minutes: 14
+    env:
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.qa-browsers
+      PYTHONUNBUFFERED: "1"
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
+    steps:
+      - name: Check out candidate
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+      - name: Install pinned QA dependencies and Chromium
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Check interactive synthetic room visual review
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .qa-reports/app-mvp-09
+          browser_path="$(python - <<'PY'
+          from playwright.sync_api import sync_playwright
+          with sync_playwright() as playwright:
+              print(playwright.chromium.executable_path)
+          PY
+          )"
+          test -x "$browser_path"
+          python tests/app_preview_browser_ci.py --browser "$browser_path" \
+            --output .qa-reports/app-mvp-09 2>&1 | tee .qa-reports/app-mvp-09/browser.log
+      - name: Retain safe synthetic screenshots and QA data
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: app-mvp-09-synthetic-browser-${{ github.run_id }}
+          path: .qa-reports/app-mvp-09/
+          if-no-files-found: warn
+          retention-days: 14
