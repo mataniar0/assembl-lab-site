@@ -46,7 +46,7 @@ with site_server(ROOT) as base,sync_playwright() as pw:
             assert not writes,(lang,width,writes)
             s.close()
             print("PASS MEB-033 viewer",lang,width,"/ 0 POSTs",flush=True)
-    # No JS must retain the prior concept image as a fallback.
+    # No JS must retain the updated source-derived poster as a fallback.
     ctx=browser.new_context(java_script_enabled=False)
     page=ctx.new_page();page.goto(base+"megillat_esther_box/",wait_until="networkidle")
     assert page.locator(".three-poster").is_visible()
