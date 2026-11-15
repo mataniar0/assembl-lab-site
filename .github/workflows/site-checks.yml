@@ -2,9 +2,9 @@ name: Site checks
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, feature/app-mvp-09-synthetic-room-review]
   push:
-    branches: [main]
+    branches: [main, feature/app-mvp-09-c-png-review]
 
 permissions:
   contents: read
