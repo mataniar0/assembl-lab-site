@@ -99,9 +99,10 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 )
                 page.locator("#compare-split").focus()
                 page.keyboard.press("ArrowLeft")
-                expect(page.locator("#compare-split")).to_have_value("64")
+                # RTL native range semantics: ArrowLeft increases the value by one.
+                expect(page.locator("#compare-split")).to_have_value("66")
                 expect(page.locator("#room")).to_have_attribute(
-                    "style", "--compare-split: 64%;"
+                    "style", "--compare-split: 66%;"
                 )
                 page.locator("#compare-view").click()
                 expect(page.locator("#room")).to_have_class("room window")
