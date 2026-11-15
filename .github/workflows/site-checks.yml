@@ -71,6 +71,12 @@ jobs:
           test -x "$ci_browser_path"
           printf 'ASSEMBLE_BROWSER=%s\n' "$ci_browser_path" >> "$GITHUB_ENV"
 
+      - name: Check cloud lab on mobile and desktop without contacting Supabase
+        shell: bash
+        run: |
+          set -euo pipefail
+          .venv-qa/bin/python tests/app_cloud_lab_browser_ci.py --browser "$ASSEMBLE_BROWSER" 2>&1 | tee .qa-reports/ci/cloud-lab-browser.log
+
       - name: Check the exact candidate commit
         shell: bash
         run: |
