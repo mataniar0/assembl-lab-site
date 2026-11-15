@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {planSyntheticEdit,callLiveProvider} from './synthetic-edit-plan.mjs';
+import {planSyntheticEdit,callLiveProvider,createDryRunLedger} from './synthetic-edit-plan.mjs';
 import {assessImageReview,METRICS} from './evaluation.mjs';
 const manifest=JSON.parse(readFileSync(new URL('../../app/preview-fixtures/manifest.json',import.meta.url)));
 const fixture=manifest.fixtures[0];
@@ -155,4 +155,28 @@ test('invalid numeric scores or scores missing any required metric remain unasse
  const bad={...valid,[METRICS[0]]:5.5};
  assert.equal(assessImageReview({...basic,scores:bad}).status,'UNASSESSED');
  assert.equal(assessImageReview({...basic,scores:{room_geometry:5}}).status,'UNASSESSED');
+});
+
+test('memory-only ledger replays identical plans without submitting a request',()=>{
+ const ledger=createDryRunLedger();
+ const plan=planSyntheticEdit(input());
+ assert.deepEqual(ledger.accept(plan),{replayed:false,submitted:false,paid_calls:0});
+ assert.deepEqual(ledger.accept(plan),{replayed:true,submitted:false,paid_calls:0});
+});
+test('idempotency key reuse with changed design or different fixture fails closed',()=>{
+ const ledger=createDryRunLedger();
+ ledger.accept(planSyntheticEdit(input()));
+ const changed=planSyntheticEdit(input({review:{...input().review,drawers:2}}));
+ assert.throws(()=>ledger.accept(changed),/IDEMPOTENCY_CONFLICT/);
+ const row=manifest.fixtures[1];
+ const other=planSyntheticEdit(input({sceneId:row.id,fixtureSha256:row.sha256,
+  review:{...input().review,sceneId:row.id}}));
+ assert.throws(()=>ledger.accept(other),/IDEMPOTENCY_CONFLICT/);
+});
+test('ledger never accepts a fabricated billable or network plan',()=>{
+ const ledger=createDryRunLedger();
+ const plan=planSyntheticEdit(input());
+ for(const change of [{sent_to_provider:true},{network_calls:1},{paid_calls:1},{mode:'LIVE'}]){
+  assert.throws(()=>ledger.accept({...plan,...change}),/INVALID_OFFLINE_PLAN/);
+ }
 });
