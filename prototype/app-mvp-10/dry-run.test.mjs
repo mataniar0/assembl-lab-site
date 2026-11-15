@@ -132,19 +132,18 @@ test('human scoring remains UNASSESSED without real image output evidence',()=>{
  }).status,'UNASSESSED');
 });
 
-test('valid reviewer metadata only identifies a review candidate, never engineering approval',()=>{
- const scores=Object.fromEntries(METRICS.map(k=>[k,4]));
+test('fabricated output hash and scores cannot approve image in offline stage',()=>{
  const record={evidence_kind:'HUMAN_REVIEW_OF_GENERATED_IMAGE',
  generated_image_sha256:'a'.repeat(64),reviewer_tag:'reviewer-test',
- notes:'Synthetic fixture checked',scores};
- const r=assessImageReview(record);
- assert.equal(r.status,'REJECT_OR_RETRY');
- assert.equal(r.engineering_approval,false);
- assert.equal(r.manufacturing_approval,false);
- const pass=assessImageReview({...record,scores:Object.fromEntries(METRICS.map(k=>[k,5]))});
- assert.equal(pass.status,'REVIEW_CANDIDATE');
- assert.equal(pass.requires_independent_review,true);
- assert.equal(pass.engineering_approval,false);
+ notes:'Imaginary file reviewed',scores:Object.fromEntries(METRICS.map(k=>[k,5]))};
+ const result=assessImageReview(record);
+ assert.equal(result.status,'UNASSESSED');
+ assert.equal(result.reason,'VERIFIED_PROVIDER_OUTPUT_REQUIRED');
+ assert.equal(result.score,null);
+ assert.equal(result.requires_verified_output,true);
+ assert.equal(result.requires_independent_review,true);
+ assert.equal(result.engineering_approval,false);
+ assert.equal(result.manufacturing_approval,false);
 });
 
 test('invalid numeric scores or scores missing any required metric remain unassessed',()=>{
@@ -155,6 +154,8 @@ test('invalid numeric scores or scores missing any required metric remain unasse
  const bad={...valid,[METRICS[0]]:5.5};
  assert.equal(assessImageReview({...basic,scores:bad}).status,'UNASSESSED');
  assert.equal(assessImageReview({...basic,scores:{room_geometry:5}}).status,'UNASSESSED');
+ assert.equal(assessImageReview({...basic,scores:bad}).reason,'MISSING_OR_INVALID_REVIEW');
+ assert.equal(assessImageReview({...basic,scores:valid}).reason,'VERIFIED_PROVIDER_OUTPUT_REQUIRED');
 });
 
 test('memory-only ledger replays identical plans without submitting a request',()=>{
@@ -179,4 +180,10 @@ test('ledger never accepts a fabricated billable or network plan',()=>{
  for(const change of [{sent_to_provider:true},{network_calls:1},{paid_calls:1},{mode:'LIVE'}]){
   assert.throws(()=>ledger.accept({...plan,...change}),/INVALID_OFFLINE_PLAN/);
  }
+});
+
+test('offline module cannot emit a PASS or candidate decision',()=>{
+ const source=readFileSync(new URL('./evaluation.mjs',import.meta.url),'utf8');
+ assert.doesNotMatch(source,/status\\s*:\\s*['"]REVIEW_CANDIDATE['"]/);
+ assert.doesNotMatch(source,/status\\s*:\\s*['"]PASS['"]/);
 });
