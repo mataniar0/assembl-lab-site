@@ -49,7 +49,14 @@ def main(browser_path:str):
                         route.fulfill(status=204,headers=headers)
                         return
                     if path=="/auth/v1/token" and req.method=="POST":
-                        data={"access_token":"a"*90,"user":{"id":USER},"expires_in":3600}
+                        login=json.loads(req.post_data)
+                        pilot=login.get("email")!="unapproved@example.test"
+                        data={"access_token":"a"*90,"user":{"id":USER,
+                          "app_metadata":{"assembl_lab_pilot":"enabled"} if pilot else {},
+                          "user_metadata":{"assembl_lab_pilot":"enabled"} if not pilot else {}
+                        },"expires_in":3600}
+                    elif path=="/auth/v1/logout" and req.method=="POST":
+                        data={}
                     elif path=="/rest/v1/al_app_projects" and req.method=="GET":
                         data=[]
                     elif path=="/rest/v1/al_app_projects" and req.method=="POST":
@@ -84,6 +91,17 @@ def main(browser_path:str):
                 assert page.locator('input[type="file"]').count()==0
                 assert page.evaluate("localStorage.length")==0
                 assert len(provider_calls)==calls_before_page_load, "No provider call should occur before signing in"
+                if index==1:
+                    previous=len(provider_calls)
+                    page.locator("#dev-email").fill("unapproved@example.test")
+                    page.locator("#dev-password").fill("synthetic-strong-password")
+                    page.locator("#sign-in").click()
+                    expect(page.locator("#auth-status")).to_contain_text("טרם אושר",timeout=10000)
+                    assert page.locator("#save-synthetic").is_disabled()
+                    new_requests=provider_calls[previous:]
+                    assert any(path=="/auth/v1/token" for _,path,_ in new_requests)
+                    assert any(path=="/auth/v1/logout" for _,path,_ in new_requests)
+                    assert all(not path.startswith("/rest/") for _,path,_ in new_requests)
                 if index==0:
                     page.locator("#dev-email").fill("synthetic@example.test")
                     page.locator("#dev-password").fill("synthetic-strong-password")
