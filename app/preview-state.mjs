@@ -2,9 +2,11 @@
  * No photos, external provider calls, SDK, personal data, or engineering approval.
  */
 export const SCENES=Object.freeze([
-  Object.freeze({id:'SC-01',he:'קיר נייטרלי',en:'Neutral wall',kind:'neutral'}),
-  Object.freeze({id:'SC-02',he:'חלון משמאל',en:'Left window',kind:'window'}),
-  Object.freeze({id:'SC-04',he:'עציץ בפינה',en:'Corner plant',kind:'plant'})
+  Object.freeze({id:'SC-01',he:'קיר נייטרלי',en:'Neutral wall',kind:'neutral',png:'./preview-fixtures/SC-01.png'}),
+  Object.freeze({id:'SC-02',he:'חלון משמאל',en:'Left window',kind:'window',png:'./preview-fixtures/SC-02.png'}),
+  Object.freeze({id:'SC-04',he:'עציץ בפינה',en:'Corner plant',kind:'plant',png:'./preview-fixtures/SC-04.png'}),
+  Object.freeze({id:'SC-07',he:'קיר ירקרק ומנורה',en:'Olive wall and lamp',kind:'lamp',png:'./preview-fixtures/SC-07.png'}),
+  Object.freeze({id:'SC-10',he:'חלון וחפצים',en:'Window with objects',kind:'combined',png:'./preview-fixtures/SC-10.png'})
 ]);
 export const FINISHES=Object.freeze(['natural','honey','walnut']);
 const sceneIds=new Set(SCENES.map(scene=>scene.id));
