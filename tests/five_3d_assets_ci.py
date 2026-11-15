@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""AL-016/017: source-traceable viewer asset contract for six selected product pages."""
+"""AL-016/017: source-traceable viewer asset contract for seven selected product pages."""
 from __future__ import annotations
 import hashlib,json,struct,sys
 from pathlib import Path
@@ -10,7 +10,8 @@ ASSETS={
  "table/personal/":("personal-design-preview.glb",32,None),
  "shelf/kids/":("kids-shelf-700-design-only.glb",5,None),
  "driller_stand/":("driller-v365-design-only.glb",31,None),
- "shoe_rack/":("shoe-rack-v4-700-design-only.glb",36,"84fbf1bef9a264c399ac800333a899e818a1fdf68c956d6eabdb4a896fa49445")
+ "shoe_rack/":("shoe-rack-v4-700-design-only.glb",36,"84fbf1bef9a264c399ac800333a899e818a1fdf68c956d6eabdb4a896fa49445"),
+ "workbench/":("workbench-v58-design-only.glb",161,"df73cbf5e694b5fe0078f1072a3199297399addcca1d26df9ab3579dbc12e4da")
 }
 # Color-fix contract: new whole-file Git blob IDs, exact original mesh buffer SHA256,
 # and warm-birch PBR color in every primitive. Other three models are untouched.
@@ -75,7 +76,7 @@ def run():
   try:parse(bad)
   except Exception:pass
   else:raise AssertionError("negative-control corrupted GLB was accepted")
- assert len(info)==len(ASSETS)==6, ("wrong six-model coverage",len(info))
+ assert len(info)==len(ASSETS)==7, ("wrong seven-model coverage",len(info))
  print(json.dumps({"passed":len(info),"failed":0,"results":info,"real_posts":0},ensure_ascii=False,indent=2))
 if __name__=="__main__":
  try:run()

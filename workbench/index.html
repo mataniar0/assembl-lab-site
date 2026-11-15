@@ -10,6 +10,23 @@
 <meta property="og:image" content="https://mataniar0.github.io/assembl-lab-site/workbench/workbench-planning-clean.webp">
 <title data-i18n="meta.title">שולחן עבודה — ASSEMBLE LAB</title>
 <script type="application/json" id="page-translations">{
+  "three.title": {"he":"תצוגת תלת־ממד","en":"3D preview"},
+  "three.open": {"he":"צפה בתלת־ממד","en":"View in 3D"},
+  "three.help": {"he":"גררו אופקית לסיבוב, צבטו לזום או השתמשו בכפתורים. גרירה אנכית גוללת את העמוד. Esc לחזרה לתמונות.","en":"Drag horizontally to orbit, pinch to zoom, or use the buttons. Vertical gestures scroll the page. Escape returns to photos."},
+  "three.loading": {"he":"טוען תצוגת תלת־ממד… אפשר לחזור לתמונות בכל עת.","en":"Loading 3D preview… you can return to photos at any time."},
+  "three.error": {"he":"לא ניתן לפתוח תלת־ממד כרגע. התמונות זמינות; ניתן לנסות שוב.","en":"3D could not be opened. Photos remain available; you can try again."},
+  "three.ready": {"he":"תצוגת התכנון מוכנה. ניתן לסובב, להגדיל ולאפס.","en":"Design preview ready. Orbit, zoom or reset the view."},
+  "three.left": {"he":"סיבוב שמאלה","en":"Orbit left"},
+  "three.right": {"he":"סיבוב ימינה","en":"Orbit right"},
+  "three.up": {"he":"מבט גבוה יותר","en":"Orbit up"},
+  "three.down": {"he":"מבט תחתון","en":"Orbit down"},
+  "three.in": {"he":"הגדלה","en":"Zoom in"},
+  "three.out": {"he":"הקטנה","en":"Zoom out"},
+  "three.reset": {"he":"איפוס תצוגה","en":"Reset view"},
+  "three.close": {"he":"חזרה לתמונות","en":"Back to photos"},
+  "three.blocked": {"he":"תצוגת תלת־ממד אינה זמינה; התמונות זמינות כרגיל.","en":"3D is unavailable; photos remain available."},
+  "three.design": {"he":"הדמיית CAD של שלד שולחן עבודה V5.8 עם 161 חלקי בירץ׳ בעובי 6 מ״מ. מעטפת השלד: 1400×700×900 מ״מ ללא הפלטה העליונה הנפרדת (1400×800 מ״מ). זו הצעת תכנון בלבד: 158 התנגשויות גאומטריות נותרו במודל השלם. רצף הרכבה מלא, חוזק, יציבות, עומס, התאמה פיזית לחריצים והיתכנות ייצור עדיין לא אושרו.","en":"CAD design study of the V5.8 workbench frame (161 parts, nominal 6mm birch plywood). Frame envelope: 1400 × 700 × 900mm, excluding the separate 1400 × 800mm tabletop. DESIGN ONLY: 158 geometric overlaps remain in the full model. Complete assembly sequence, strength, stability, load capacity, physical joint fit and production readiness are NOT verified."},
+  "three.alt": {"he":"מודל CAD תלת־ממדי של שלד שולחן העבודה V5.8, עם קורות הנדסיות ואלכסונים, תכנון בלבד","en":"3D CAD design study of workbench V5.8 frame with engineered beams and cross braces, design only"},
   "meta.title": {
     "he": "שולחן עבודה — ASSEMBLE LAB",
     "en": "Workbench — ASSEMBLE LAB"
@@ -43,8 +60,8 @@
     "en": "Worktop depth"
   },
   "specs.height": {
-    "he": "גובה",
-    "en": "Height"
+    "he": "גובה השלד (ללא הפלטה)",
+    "en": "Frame height (excluding tabletop)"
   },
   "specs.frameDepth": {
     "he": "עומק השלד",
@@ -223,6 +240,7 @@ html[lang="he"] .specs dd{text-align:start}
 <link rel="stylesheet" href="../assets/language.css">
 <link rel="stylesheet" href="../assets/product-light.css">
 <script src="../assets/media-loading.js"></script>
+<link rel="stylesheet" href="../assets/three-preview.css">
 </head>
 <body>
 <header class="header"><a class="logo" href="../" aria-label="ASSEMBLE LAB — דף הבית" data-i18n-aria-label="nav.home"><span class="mark" aria-hidden="true">A/L</span><b>ASSEMBLE LAB</b></a><a class="back" href="../#products" aria-label="חזרה לכל המוצרים" data-i18n="nav.back" data-i18n-aria-label="navigation.back.aria">← לכל המוצרים</a><div class="language-switch" role="group" aria-label="בחירת שפה"><button type="button" data-language="he" lang="he" dir="rtl" aria-pressed="true" disabled>עברית</button><button type="button" data-language="en" lang="en" dir="ltr" aria-pressed="false" disabled>English</button></div></header>
@@ -242,7 +260,7 @@ html[lang="he"] .specs dd{text-align:start}
 <dl class="specs">
 <div><dt data-i18n="specs.width">רוחב</dt><dd><bdi>1400 mm</bdi></dd></div>
 <div><dt data-i18n="specs.topDepth">עומק המשטח העליון</dt><dd><bdi>800 mm</bdi></dd></div>
-<div><dt data-i18n="specs.height">גובה</dt><dd><bdi>900 mm</bdi></dd></div>
+<div><dt data-i18n="specs.height">גובה השלד (ללא הפלטה)</dt><dd><bdi>900 mm</bdi></dd></div>
 <div><dt data-i18n="specs.frameDepth">עומק השלד</dt><dd><bdi>700 mm</bdi></dd></div>
 </dl>
 </details><details class="product-details"><summary data-i18n="disclosure.product">על המוצר</summary><p class="lead" data-i18n="product.lead">שולחן עבודה בתכנון, הבנוי מלוחות עץ עם שלד מחוזק באלכסונים מוצלבים. ההדמיה מציגה את המבנה, פרטי החיבורים ופריסת החלקים לקראת הבנייה.</p>
@@ -255,8 +273,10 @@ html[lang="he"] .specs dd{text-align:start}
 </div>
 </section>
 </details><details class="product-details"><summary data-i18n="disclosure.custom">התאמת מידות</summary><section class="custom-size" aria-labelledby="custom-title"><div><p class="kicker" data-i18n="custom.category">התאמת מידות</p><h2 id="custom-title" data-i18n="custom.heading">לתכנן לפי החלל.</h2><p data-i18n="custom.copy">רוצים לבדוק התאמת מידות לשולחן העבודה? אפשר לפנות עם המידות והשימוש הרצוי ולדון בהתאמת המבנה והחיבורים במסגרת התכנון.</p></div></section>
-</details></main>
+</details><section class="three-preview" data-three-preview data-state="idle" data-model-src="media/workbench-v58-design-only.glb" aria-labelledby="three-title"><h2 id="three-title" data-i18n="three.title">תצוגת תלת־ממד</h2><p data-i18n="three.design">הדמיית CAD של שלד שולחן עבודה V5.8 עם 161 חלקי בירץ׳ בעובי 6 מ״מ. מעטפת השלד: 1400×700×900 מ״מ ללא הפלטה העליונה הנפרדת (1400×800 מ״מ). זו הצעת תכנון בלבד: 158 התנגשויות גאומטריות נותרו במודל השלם. רצף הרכבה מלא, חוזק, יציבות, עומס, התאמה פיזית לחריצים והיתכנות ייצור עדיין לא אושרו.</p><img class="three-poster" src="media/workbench-v58-design-only-poster.webp" width="900" height="900" alt="מודל CAD תלת־ממדי של שלד שולחן העבודה V5.8, עם קורות הנדסיות ואלכסונים, תכנון בלבד" data-i18n-alt="three.alt" loading="lazy" decoding="async"><button type="button" data-three-open disabled aria-expanded="false" aria-controls="three-stage" data-i18n="three.open">צפה בתלת־ממד</button><p id="three-help" data-i18n="three.help">גררו אופקית לסיבוב, צבטו לזום או השתמשו בכפתורים. גרירה אנכית גוללת את העמוד. Esc לחזרה לתמונות.</p><p class="three-status" role="status" aria-live="polite"></p><div class="three-stage" id="three-stage" aria-describedby="three-help" hidden></div><div class="three-toolbar" hidden><button type="button" data-three-action="left" data-i18n="three.left">סיבוב שמאלה</button><button type="button" data-three-action="right" data-i18n="three.right">סיבוב ימינה</button><button type="button" data-three-action="up" data-i18n="three.up">מבט גבוה יותר</button><button type="button" data-three-action="down" data-i18n="three.down">מבט תחתון</button><button type="button" data-three-action="in" data-i18n="three.in">הגדלה</button><button type="button" data-three-action="out" data-i18n="three.out">הקטנה</button><button type="button" data-three-action="reset" data-i18n="three.reset">איפוס תצוגה</button><button type="button" data-three-close data-i18n="three.close">חזרה לתמונות</button></div><noscript><p data-i18n="three.blocked">נדרש JavaScript לתצוגת תלת־ממד. התמונות זמינות כרגיל.</p></noscript></section>
+</main>
 
 <footer class="footer"><span data-language-fixed>ASSEMBLE LAB / <span data-i18n="footer.discipline">עיצוב · הנדסה · ייצור</span></span><a data-i18n="footer.back" href="../#products" aria-label="חזרה למוצרים בדף הבית" data-i18n-aria-label="navigation.back.aria">חזרה למוצרים ↑</a></footer>
-<script>window.ASSEMBLE_I18N.translate();</script></body>
+<script>window.ASSEMBLE_I18N.translate();</script><script src="../assets/three-preview.js"></script>
+</body>
 </html>
