@@ -82,6 +82,7 @@ jobs:
         run: |
           set -euo pipefail
           python tests/meb033_site_contract.py | tee .qa-reports/ci/meb033-site-contract.log
+          python tests/meb033_3d_site_contract.py | tee .qa-reports/ci/meb033-3d-contract.log
 
       - name: Validate eight chosen 3D products
         shell: bash
