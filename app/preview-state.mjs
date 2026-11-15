@@ -66,3 +66,30 @@ export function fittedPlacement(roomWidth,requestedPercent,scalePercent){
   return Object.freeze({requested_percent:requested,effective_percent:position,
     was_fitted:Math.abs(position-requested)>0.05,object_width:objectWidth});
 }
+
+/* A safe in-memory projection of the established design-intent contract.
+ * This illustrative example never includes user images, custom text or PII.
+ * Keeping the contract explicit lets later features reuse it after Auth QA.
+ */
+export function designIntentFor(review){
+  const s=normalizeReview({
+    sceneId:review?.scene_id,position:review?.position_percent,scale:review?.scale_percent,
+    finish:review?.finish,drawers:review?.drawers,view:review?.view,
+    comparison:review?.comparison_percent
+  });
+  return Object.freeze({
+    schema_version:'ASSEMBL-LAB.DESIGN-INTENT.0.1',
+    category:'freestanding_nightstand',
+    source_kind:'synthetic',
+    requested_dimensions_mm:Object.freeze({width:500,height:550,depth:350}),
+    dimension_confidence:'estimated',
+    appearance:Object.freeze({finish:s.finish,drawers:s.drawers,lower_section:'shelf',notes:''}),
+    placement_preview:Object.freeze({horizontal_position_percent:s.position_percent,relative_scale:s.scale_percent}),
+    construction_preferences:Object.freeze({
+      material:'birch_plywood',nominal_thickness_mm:6,construction_verified:false
+    }),
+    photo_included:false,
+    engineering_approval:false,
+    manufacturing_approval:false
+  });
+}
