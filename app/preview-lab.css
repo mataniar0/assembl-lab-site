@@ -19,4 +19,4 @@
 .preferred-actions button{flex:1 1 160px}
 button:disabled{opacity:.5;cursor:not-allowed}
 #preferred-status{padding:10px 12px;background:#f2f4ee;border-radius:9px;min-height:46px}
-@media(max-width:480px){.stand-position{filter:drop-shadow(6px 9px 6px #4432204d)}.preferred-actions{flex-direction:column}}
+@media(max-width:480px){.stand-position{filter:drop-shadow(6px 9px 6px #4432204d)}.preferred-actions{flex-direction:column}.preferred-actions button{flex:0 0 auto;width:100%}}
