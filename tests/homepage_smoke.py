@@ -167,7 +167,7 @@ def check_contrast_page(browser, base_url, viewport, language="he"):
 def check_grid(page, width):
     measured = page.evaluate(GRID_CHECK)
     grid, featured, cards = measured["grid"], measured["featured"], measured["cards"]
-    assert not featured and len(cards) == 8, measured
+    assert not featured and len(cards) == 9, measured
     rows = []
     for card in cards:
         row = next((row for row in rows if abs(row[0]["top"] - card["top"]) <= 1), None)
@@ -175,13 +175,18 @@ def check_grid(page, width):
             rows.append([card])
         else:
             row.append(card)
-    expected = [1] * 8 if width <= 640 else [2] * 4 if width <= 1100 else [4, 4]
+    expected = [1] * 9 if width <= 640 else [2] * 4 + [1] if width <= 1100 else [4, 4, 1]
     assert [len(row) for row in rows] == expected, {"expected_rows": expected, **measured}
     for row in rows:
         ordered = sorted(row, key=lambda card: card["left"])
         assert max(card["width"] for card in row) - min(card["width"] for card in row) <= 1, measured
-        assert abs(ordered[0]["left"] - grid["left"]) <= 1, measured
-        assert abs(ordered[-1]["right"] - grid["right"]) <= 1, measured
+        if len(row) == 1 and width > 640:
+            # Nine products leave one final card; RTL/LTR determine its side.
+            assert (abs(ordered[0]["left"] - grid["left"]) <= 1 or
+                    abs(ordered[0]["right"] - grid["right"]) <= 1), measured
+        else:
+            assert abs(ordered[0]["left"] - grid["left"]) <= 1, measured
+            assert abs(ordered[-1]["right"] - grid["right"]) <= 1, measured
         assert all(a["right"] < b["left"] for a, b in zip(ordered, ordered[1:])), measured
     return expected
 
