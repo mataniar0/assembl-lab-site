@@ -77,7 +77,7 @@ def main(browser_path:str):
                 assert "access_token" not in page.url and "refresh_token" not in page.url
                 assert page.locator("h1").inner_text()=="חיבור ניסיוני לענן"
                 assert page.locator("#save-synthetic").is_disabled()
-                assert page.locator("#sign-up").is_enabled()
+                assert page.locator("#sign-up").count()==0
                 summary=page.locator("#design-summary").inner_text()
                 assert "רוחב 50 ס״מ" in summary
                 assert "ללא צילום" in summary
