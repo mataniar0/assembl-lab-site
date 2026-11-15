@@ -50,7 +50,13 @@ function refresh(){
   if(fixtureImage.getAttribute('src')!==fixture.png){
     fixtureImage.setAttribute('src',fixture.png);
   }
-  room.dataset.fixture='png';
+  // Render the vetted PNG only after the current source has decoded. If a
+  // fixture is missing/corrupt/offline, retain the existing schematic room
+  // rather than showing an empty frame. No network retry is performed.
+  const fixtureReady=fixtureImage.complete&&fixtureImage.naturalWidth===384&&
+    fixtureImage.naturalHeight===384;
+  const fixtureFailed=fixtureImage.complete&&!fixtureReady;
+  room.dataset.fixture=fixtureReady?'png':'css';
   room.style.setProperty('--compare-split',state.comparison_percent+'%');
   const fit=fittedPlacement(room.clientWidth||400,state.position_percent,
     state.scale_percent,room.clientHeight||400);
@@ -79,7 +85,9 @@ function refresh(){
     phrase('גבול ההשוואה לפני ואחרי','Before and after comparison split'));
   el('view-status').textContent=mode+'. '+phrase('לא תמונת AI אמיתית.','Not a real AI image.')+
     (fit.was_fitted?phrase(' המיקום הותאם לגודל המסך כדי למנוע חיתוך.',
-      ' Placement was adjusted to keep the furniture inside the canvas.'):'');
+      ' Placement was adjusted to keep the furniture inside the canvas.'):'')+
+    (fixtureFailed?phrase(' תמונת החדר אינה זמינה; מוצגת המחשה חלופית.',
+      ' Room fixture unavailable; showing a schematic fallback.'):'');
   el('position-value').textContent=state.position_percent+'%';
   el('scale-value').textContent=state.scale_percent+'%';
   const intent=designIntentFor(state);
@@ -146,6 +154,9 @@ el('lang').addEventListener('click',()=>{
   document.documentElement.lang=lang()==='he'?'en':'he';
   translate();
 });
+// Local fixture load or decode failure must update the fallback and status.
+el('synthetic-room-image').addEventListener('load',refresh);
+el('synthetic-room-image').addEventListener('error',refresh);
 // Window resizing can change the safe frame on Android rotation.
 window.addEventListener('resize',refresh,{passive:true});
 syncInputs();translate();
