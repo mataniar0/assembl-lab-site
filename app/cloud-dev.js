@@ -18,6 +18,7 @@ function errorMessage(error){
     if(error.status===401)return 'ההתחברות אינה תקפה או פג תוקפה. יש להתחבר מחדש.';
     if(error.status===429)return 'הגעת למכסת הניסוי. אפשר למחוק פרויקט קודם.';
     if(error.code==='PROJECT_NOT_FOUND')return 'הפרויקט לא נמצא או אינו שייך לחשבון המחובר.';
+    if(error.status===403||error.code==='42501')return 'החשבון מחובר, אך טרם אושר לפיילוט ASSEMBL LAB. יש לבקש אישור ממנהל הפרויקט.';
     if(error.status===400||error.status===422)return 'נתוני הבקשה לא התקבלו. בדקו את טופס הניסוי.';
     if(error.status===409)return 'הבקשה כבר נוצלה לפרויקט אחר.';
   }
