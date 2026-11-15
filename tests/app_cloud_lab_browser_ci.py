@@ -72,6 +72,7 @@ def main(browser_path:str):
                         return
                     route.fulfill(status=200,content_type="application/json",headers=headers,body=json.dumps(data))
                 page.route(f"https://{PROVIDER}/**",mock_supabase)
+                calls_before_page_load=len(provider_calls)
                 page.goto(base+"/app/cloud-dev.html",wait_until="networkidle")
                 assert page.locator("h1").inner_text()=="חיבור ניסיוני לענן"
                 assert page.locator("#save-synthetic").is_disabled()
@@ -81,7 +82,7 @@ def main(browser_path:str):
                 assert "ללא צילום" in summary
                 assert page.locator('input[type="file"]').count()==0
                 assert page.evaluate("localStorage.length")==0
-                assert not provider_calls, "No provider call should occur before signing in"
+                assert len(provider_calls)==calls_before_page_load, "No provider call should occur before signing in"
                 if index==0:
                     page.locator("#dev-email").fill("synthetic@example.test")
                     page.locator("#dev-password").fill("synthetic-strong-password")
