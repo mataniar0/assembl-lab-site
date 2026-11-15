@@ -151,7 +151,21 @@ async function deleteProject(){
     render();
   },'job-message');
 }
+function clearUnsupportedAuthRedirectTokens(){
+  // Auth email redirects may contain sensitive fragments/query parameters.
+  // This prototype uses a fresh password login instead of parsing these tokens.
+  const url=new URL(window.location.href);
+  let changed=false;
+  for(const key of ['code','token_hash','access_token','refresh_token','error','error_description','error_code']){
+    if(url.searchParams.has(key)){url.searchParams.delete(key);changed=true;}
+  }
+  if(url.hash && /access_token|refresh_token|token_hash|error/.test(url.hash)){
+    url.hash='';changed=true;
+  }
+  if(changed)window.history.replaceState(null,'',url.pathname+url.search);
+}
 function init(){
+  clearUnsupportedAuthRedirectTokens();
   fromHandoff();describe();render();
   el('auth-form').addEventListener('submit',event=>{event.preventDefault();void signIn();});
   el('sign-up').addEventListener('click',()=>void signUp());
