@@ -184,6 +184,6 @@ test('ledger never accepts a fabricated billable or network plan',()=>{
 
 test('offline module cannot emit a PASS or candidate decision',()=>{
  const source=readFileSync(new URL('./evaluation.mjs',import.meta.url),'utf8');
- assert.doesNotMatch(source,/status\\s*:\\s*['"]REVIEW_CANDIDATE['"]/);
- assert.doesNotMatch(source,/status\\s*:\\s*['"]PASS['"]/);
+ assert.doesNotMatch(source,/status\s*:\s*['"]REVIEW_CANDIDATE['"]/);
+ assert.doesNotMatch(source,/status\s*:\s*['"]PASS['"]/);
 });
