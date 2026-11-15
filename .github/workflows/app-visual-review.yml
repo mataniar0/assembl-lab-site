@@ -1,0 +1,37 @@
+name: APP MVP-09 local visual review
+
+on:
+  push:
+    branches:
+      - feature/app-mvp-09-synthetic-room-review
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'app/preview-*'
+      - '.github/workflows/app-visual-review.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  preview-contract:
+    name: Offline synthetic review (no provider traffic)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out candidate
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax and contract tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check app/preview-state.mjs
+          node --check app/preview-lab.mjs
+          node --test app/preview-state.test.mjs
