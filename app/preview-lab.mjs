@@ -43,10 +43,19 @@ function refresh(){
   const room=el('room');
   room.className='room '+visual.scene_kind+
     (state.view==='before'?' before':state.view==='compare'?' compare':'');
+  // Only approved, hard-coded local PNG fixture paths may be loaded. Never
+  // accept a camera photo, URL parameter or untrusted path as image src.
+  const fixture=sceneFor(state.scene_id);
+  const fixtureImage=el('synthetic-room-image');
+  if(fixtureImage.getAttribute('src')!==fixture.png){
+    fixtureImage.setAttribute('src',fixture.png);
+  }
+  room.dataset.fixture='png';
   room.style.setProperty('--compare-split',state.comparison_percent+'%');
-  const fit=fittedPlacement(room.clientWidth||400,state.position_percent,state.scale_percent);
+  const fit=fittedPlacement(room.clientWidth||400,state.position_percent,
+    state.scale_percent,room.clientHeight||400);
   el('stand-position').style.left=fit.effective_percent.toFixed(2)+'%';
-  el('stand-position').style.transform='translateX(-50%) scale('+visual.nightstand_scale+')';
+  el('stand-position').style.transform='translateX(-50%) scale('+fit.effective_scale.toFixed(3)+')';
   const stand=el('stand');
   stand.dataset.finish=visual.finish;
   stand.classList.toggle('two-drawers',visual.drawers===2);
