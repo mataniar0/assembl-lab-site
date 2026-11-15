@@ -245,6 +245,74 @@
   "disclosure.custom": {
     "he": "התאמת מידות",
     "en": "Custom dimensions"
+  },
+  "three.title": {
+    "he": "תצוגת CAD תלת־ממדית — C13",
+    "en": "Interactive 3D CAD preview — C13"
+  },
+  "three.design": {
+    "he": "מודל תכנון C13 של קופסת האתרוג: 114 חלקים, פינות מעוגלות וציר H1. המכסה מוצג פתוח ב־120° (ללא אנימציית פתיחה). זוהי הדמיית CAD בלבד, ללא העיטור והעריסה המופיעים בתמונת ההדמיה הראשית. כיסוי פתחי הציר, התאמת הדבק ובדיקות הייצור טרם הושלמו.",
+    "en": "C13 CAD design preview of the etrog box with 114 parts, rounded corners and H1 hinge. The lid is shown fixed at 120° open (not an opening animation). This CAD model does not include the engraving or inner cradle shown in the main illustration. Hinge cutout coverage, glue, and manufacturing tests remain pending."
+  },
+  "three.alt": {
+    "he": "מודל CAD C13 של קופסת אתרוג מעץ עם מכסה פתוח ב־120 מעלות, 114 רכיבי תכנון וציר H1",
+    "en": "C13 CAD etrog box model with lid open at 120 degrees, 114 design components and H1 hinge"
+  },
+  "three.open": {
+    "he": "צפייה בתלת־ממד",
+    "en": "View in 3D"
+  },
+  "three.help": {
+    "he": "גררו לצדדים לסיבוב, השתמשו בשתי אצבעות להגדלה, או הפעילו את כפתורי התצוגה. גרירה אנכית גוללת את העמוד. Esc מחזיר לתמונה.",
+    "en": "Drag sideways to orbit, pinch to zoom, or use the viewer controls. Vertical gestures scroll the page. Press Escape to return to the image."
+  },
+  "three.loading": {
+    "he": "טוען את מודל C13…",
+    "en": "Loading the C13 model…"
+  },
+  "three.ready": {
+    "he": "המודל נטען. ניתן לסובב ולהגדיל אותו.",
+    "en": "Model loaded. You can rotate and zoom."
+  },
+  "three.error": {
+    "he": "לא ניתן לטעון את המודל. תמונת ה־CAD עדיין זמינה; ניתן לנסות שוב.",
+    "en": "The 3D model could not load. The CAD preview image remains available; please retry."
+  },
+  "three.blocked": {
+    "he": "נדרש JavaScript להצגת מודל תלת־ממדי. תמונת ה־CAD זמינה גם בלעדיו.",
+    "en": "JavaScript is required for interactive 3D. The CAD image remains available."
+  },
+  "three.left": {
+    "he": "סיבוב שמאלה",
+    "en": "Rotate left"
+  },
+  "three.right": {
+    "he": "סיבוב ימינה",
+    "en": "Rotate right"
+  },
+  "three.up": {
+    "he": "מבט גבוה יותר",
+    "en": "View from above"
+  },
+  "three.down": {
+    "he": "מבט נמוך יותר",
+    "en": "View from below"
+  },
+  "three.in": {
+    "he": "הגדלה",
+    "en": "Zoom in"
+  },
+  "three.out": {
+    "he": "הקטנה",
+    "en": "Zoom out"
+  },
+  "three.reset": {
+    "he": "איפוס תצוגה",
+    "en": "Reset view"
+  },
+  "three.close": {
+    "he": "חזרה לתמונה",
+    "en": "Back to image"
   }
 }</script>
 <script src="../assets/language.js"></script>
@@ -271,6 +339,7 @@ html[lang="he"] .specs dd{text-align:start}
 </style>
 <link rel="stylesheet" href="../assets/language.css">
 <link rel="stylesheet" href="../assets/product-light.css">
+<link rel="stylesheet" href="../assets/three-preview.css">
 <script src="../assets/media-loading.js"></script>
 </head>
 <body>
@@ -286,6 +355,27 @@ html[lang="he"] .specs dd{text-align:start}
 <img src="media/planning-decorated-clean.webp" alt="תכנון והדמיה של קופסה מהודרת לאתרוג מעץ, עם מכסה מעוטר בארבעת המינים ובכיתוב ולקחתם לכם, פינות מעוגלות בשכבות, מבט מפורק ופרט ציר. מידות חיצוניות בתכנון: 260 על 160 על 150 מ״מ." data-i18n-alt="image.1.alt" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high">
 <figcaption class="media-caption"><span class="image-label" data-i18n="image.hero.caption">01 / תכנון והדמיה</span><a class="image-open" href="media/planning-decorated-clean.webp" target="_blank" rel="noopener" aria-label="פתיחת הדמיית קופסת האתרוג בגודל מלא בלשונית חדשה" data-i18n-aria-label="accessibility.1"><span data-i18n="image.hero.open">פתיחת ההדמיה בגודל מלא</span> <svg viewbox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"></path></svg></a></figcaption>
 <p class="image-explanation" data-i18n-html="image.overview.explanation">מבט כללי, חזית וצד, מבט מפורק ופרט הציר. המכסה, מסגרת המכסה, הדפנות והעריסה הפנימית מוצגים בנפרד; הפינות המעוגלות מורכבות משכבות.</p></figure>
+</section>
+
+<section class="three-preview" id="etrog-c13-preview" data-three-preview data-state="idle" data-model-src="media/etrog-c13-open-120-design-only.glb" aria-labelledby="three-title">
+<h2 id="three-title" data-i18n="three.title">תצוגת CAD תלת־ממדית — C13</h2>
+<p data-i18n="three.design">מודל תכנון C13 של קופסת האתרוג: 114 חלקים, פינות מעוגלות וציר H1. המכסה מוצג פתוח ב־120° (ללא אנימציית פתיחה). זוהי הדמיית CAD בלבד, ללא העיטור והעריסה המופיעים בתמונת ההדמיה הראשית. כיסוי פתחי הציר, התאמת הדבק ובדיקות הייצור טרם הושלמו.</p>
+<img class="three-poster" src="media/etrog-c13-open-120-poster.webp" width="1024" height="768" alt="מודל CAD C13 של קופסת אתרוג מעץ עם מכסה פתוח ב־120 מעלות, 114 רכיבי תכנון וציר H1" data-i18n-alt="three.alt" loading="lazy" decoding="async">
+<button type="button" data-three-open disabled aria-expanded="false" aria-controls="three-stage" data-i18n="three.open">צפייה בתלת־ממד</button>
+<p id="three-help" data-i18n="three.help">גררו לצדדים לסיבוב, השתמשו בשתי אצבעות להגדלה, או הפעילו את כפתורי התצוגה. גרירה אנכית גוללת את העמוד. Esc מחזיר לתמונה.</p>
+<p class="three-status" role="status" aria-live="polite"></p>
+<div class="three-stage" id="three-stage" aria-describedby="three-help" hidden></div>
+<div class="three-toolbar" hidden>
+<button type="button" data-three-action="left" data-i18n="three.left">סיבוב שמאלה</button>
+<button type="button" data-three-action="right" data-i18n="three.right">סיבוב ימינה</button>
+<button type="button" data-three-action="up" data-i18n="three.up">מבט גבוה יותר</button>
+<button type="button" data-three-action="down" data-i18n="three.down">מבט נמוך יותר</button>
+<button type="button" data-three-action="in" data-i18n="three.in">הגדלה</button>
+<button type="button" data-three-action="out" data-i18n="three.out">הקטנה</button>
+<button type="button" data-three-action="reset" data-i18n="three.reset">איפוס תצוגה</button>
+<button type="button" data-three-close data-i18n="three.close">חזרה לתמונה</button>
+</div>
+<noscript><p data-i18n="three.blocked">נדרש JavaScript להצגת מודל תלת־ממדי. תמונת ה־CAD זמינה גם בלעדיו.</p></noscript>
 </section>
 <details class="product-details"><summary data-i18n="batch.specs">מידות ומפרט</summary><h2 class="specs-title" data-i18n="specs.heading">מידות בתכנון</h2>
 <dl class="specs">
@@ -314,5 +404,6 @@ html[lang="he"] .specs dd{text-align:start}
 </details></main>
 
 <footer class="footer"><span data-language-fixed>ASSEMBLE LAB / <span data-i18n="footer.discipline">עיצוב · הנדסה · ייצור</span></span><a data-i18n="footer.back" href="../#products" aria-label="חזרה למוצרים בדף הבית" data-i18n-aria-label="navigation.back.aria">חזרה למוצרים ↑</a></footer>
-<script>window.ASSEMBLE_I18N.translate();</script></body>
+<script>window.ASSEMBLE_I18N.translate();</script><script src="../assets/three-preview.js"></script>
+</body>
 </html>
