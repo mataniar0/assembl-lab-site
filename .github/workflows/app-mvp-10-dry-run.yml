@@ -1,0 +1,45 @@
+name: APP MVP-10-A offline synthetic AI preflight
+
+on:
+  push:
+    branches:
+      - feature/app-mvp-10-a-offline-dry-run
+  pull_request:
+    branches:
+      - feature/app-mvp-09-c-png-review
+    paths:
+      - 'prototype/app-mvp-10/**'
+      - 'app/preview-fixtures/**'
+      - '.github/workflows/app-mvp-10-dry-run.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    name: Offline-only image edit contract
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax and dry-run tests (no external calls)
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check prototype/app-mvp-10/synthetic-edit-plan.mjs
+          node --check prototype/app-mvp-10/evaluation.mjs
+          node --test prototype/app-mvp-10/dry-run.test.mjs
+      - name: No live provider or credential transport in offline module
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -En 'sb_secret_|SUPABASE_SERVICE_ROLE_KEY|GEMINI_API_KEY|OPENAI_API_KEY'             prototype/app-mvp-10/synthetic-edit-plan.mjs prototype/app-mvp-10/evaluation.mjs; then
+            echo 'Prohibited credential reference in dry-run module'
+            exit 1
+          fi
+          echo 'Offline preflight module contains no provider credential references'
