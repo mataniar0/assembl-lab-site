@@ -5,7 +5,8 @@
 - Page: `workbench/index.html`
 - Model: `workbench/media/workbench-v58-design-only.glb`
 - Poster: `workbench/media/workbench-v58-design-only-poster.webp`
-- Model original local SHA256: `df73cbf5e694b5fe0078f1072a3199297399addcca1d26df9ab3579dbc12e4da`
+- Original engineering GLB SHA256 (millimetre units, not modified): `df73cbf5e694b5fe0078f1072a3199297399addcca1d26df9ab3579dbc12e4da`
+- Site GLB SHA256 (vertex coordinates converted from millimetres to metres, same 161 meshes): `a8ab0fb20818f6de0c46e69216177fb5a7b2182d5cec081eebe0bada4c503309`
 - Model content: 161 distinct named meshes, 161 physically modeled wood parts, nominal 6 mm material, frame envelope 1400 × 700 × 900 mm. The separate 1400 × 800 mm top is not included.
 - Source is the real V5.8 GLB created from CAD part profiles, not AI-generated product artwork.
 - **Known unresolved CAD defect:** 158 solid intersections remain in the *full table*, and no full assembly insertion proof or independent physical QA has passed.
