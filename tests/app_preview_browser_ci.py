@@ -76,6 +76,8 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 expect(room_png).to_have_attribute("src", "./preview-fixtures/SC-01.png")
                 expect(room_png).to_have_js_property("naturalWidth", 384)
                 expect(room_png).to_have_js_property("naturalHeight", 384)
+                expect(room_png).to_have_js_property("complete", True)
+                expect(page.locator("#room")).to_have_attribute("data-fixture", "png")
                 assert page.locator('input[type="file"]').count() == 0
 
                 page.locator("#scene").select_option("SC-02")
@@ -138,6 +140,12 @@ def run(browser_exe: str, output_dir: Path) -> None:
                     expect(room_png).to_have_attribute("src", f"./preview-fixtures/{id}.png")
                     expect(room_png).to_have_js_property("naturalWidth", 384)
                     expect(room_png).to_have_js_property("naturalHeight", 384)
+                    expect(room_png).to_have_js_property("complete", True)
+                    expect(page.locator("#room")).to_have_attribute("data-fixture", "png")
+                    if width in (390, 1440):
+                        page.locator("#room").screenshot(
+                            path=str(output_dir / f"mvp09-scene-{id}-{width}.png")
+                        )
                 page.locator("#scene").select_option("SC-02")
                 expect(room_png).to_have_attribute("src", "./preview-fixtures/SC-02.png")
 
@@ -198,6 +206,25 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 )
                 print("PASS", width, height, "scene/finish/drawers/compare/keyboard/preference/resize/language")
                 context.close()
+            # Failure injection: missing local PNG should never blank the room.
+            fallback = browser.new_context(viewport={"width":390, "height":844})
+            fallback_page = fallback.new_page()
+            fallback_errors = []
+            fallback_page.on("pageerror", lambda error: fallback_errors.append(str(error)))
+            fallback_page.route("**/app/preview-fixtures/SC-10.png", lambda route: route.abort())
+            fallback_page.goto(root + "/app/preview-lab.html", wait_until="networkidle")
+            fallback_page.locator("#scene").select_option("SC-10")
+            expect(fallback_page.locator("#synthetic-room-image")).to_have_attribute(
+                "src", "./preview-fixtures/SC-10.png"
+            )
+            expect(fallback_page.locator("#room")).to_have_attribute(
+                "data-fixture", "css"
+            )
+            expect(fallback_page.locator("#view-status")).to_contain_text(
+                "תמונת החדר אינה זמינה"
+            )
+            assert not fallback_errors, repr(fallback_errors)
+            fallback.close()
             browser.close()
     finally:
         server.shutdown()
@@ -209,7 +236,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
         encoding="utf8",
     )
     assert len(results) == 4
-    print("MVP-09-C 4/4 Chromium viewports PASS; 5 local PNG fixtures; no external requests or customer content.")
+    print("MVP-09-C 4/4 Chromium viewports + missing-image fallback PASS; 5 local PNG fixtures; no external requests or customer content.")
 
 
 if __name__ == "__main__":
