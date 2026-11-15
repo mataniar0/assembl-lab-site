@@ -93,10 +93,6 @@ export function createCloudClient({fetchImpl=fetch,endpoint=CONFIG.endpoint,publ
   };
   const ensure=s=>{assertSession(s);return s.user.id;};
   return {
-    async register(email,password){
-      const data=await request('/auth/v1/signup',{method:'POST',body:{email,password}});
-      return {confirmation_required:!data?.access_token};
-    },
     async signIn(email,password){
       const data=await request('/auth/v1/token?grant_type=password',{method:'POST',body:{email,password}});
       const session={user:{id:data?.user?.id},access_token:data?.access_token,
