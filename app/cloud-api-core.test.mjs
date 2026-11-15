@@ -60,11 +60,31 @@ test('invite-only pilot client has no public sign-up workflow',()=>{
   assert.doesNotMatch(html,/<button[^>]+id="sign-up"/);
 });
 test('sign in yields ephemeral session from Auth response',async()=>{
-  const {cloud,calls}=mock({access_token:token,user:{id:USER},expires_in:3600});
+  const {cloud,calls}=mock({access_token:token,user:{id:USER,app_metadata:{assembl_lab_pilot:'enabled'}},expires_in:3600});
   const result=await cloud.signIn('dev@example.test','a very long password');
   assert.equal(result.user.id,USER);
   assert.equal(result.access_token,token);
   assert.match(calls[0].url,/\/auth\/v1\/token\?grant_type=password$/);
+});
+test('valid GoTrue password without administrator pilot grant is denied before data API',async()=>{
+  const {cloud,calls}=mock({access_token:token,user:{id:USER,app_metadata:{}},expires_in:3600});
+  await assert.rejects(()=>cloud.signIn('unapproved@example.test','valid password'),
+    e=>e instanceof CloudApiError&&e.status===403&&e.code==='PILOT_ACCESS_REQUIRED');
+  assert.equal(calls.length,2);
+  assert.match(calls[0].url,/\/auth\/v1\/token/);
+  assert.match(calls[1].url,/\/auth\/v1\/logout$/);
+  assert.equal(calls[1].request.headers.authorization,'Bearer '+token);
+  assert.ok(calls.every(c=>!c.url.includes('/rest/v1/')));
+});
+test('self-editable user_metadata cannot activate the pilot session',async()=>{
+  const {cloud}=mock({access_token:token,user:{id:USER,app_metadata:{},user_metadata:{assembl_lab_pilot:'enabled'}},expires_in:3600});
+  await assert.rejects(()=>cloud.signIn('unapproved@example.test','valid password'),/PILOT_ACCESS_REQUIRED/);
+});
+test('pilot grant must be the exact enabled string in app_metadata',async()=>{
+  for(const flag of [true,'ENABLED','disabled',1]){
+    const {cloud}=mock({access_token:token,user:{id:USER,app_metadata:{assembl_lab_pilot:flag}},expires_in:3600});
+    await assert.rejects(()=>cloud.signIn('unapproved@example.test','valid password'),/PILOT_ACCESS_REQUIRED/);
+  }
 });
 test('sign in rejects insufficient Auth response',async()=>{
   const {cloud}=mock({access_token:'bad',user:{id:'wrong'}});
