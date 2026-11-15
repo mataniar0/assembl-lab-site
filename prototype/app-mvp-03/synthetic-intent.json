@@ -1,0 +1,30 @@
+{
+  "schema_version": "ASSEMBL-LAB.DESIGN-INTENT.0.1",
+  "category": "freestanding_nightstand",
+  "requested_dimensions_mm": {
+    "width": 500,
+    "height": 550,
+    "depth": 350
+  },
+  "dimension_confidence": "estimated",
+  "appearance": {
+    "finish": "natural",
+    "drawers": 1,
+    "lower_section": "shelf",
+    "notes": "rounded visible edges"
+  },
+  "placement_preview": {
+    "relative_scale": 88,
+    "horizontal_position_percent": 52
+  },
+  "construction_preferences": {
+    "material": "birch_plywood",
+    "nominal_thickness_mm": 6,
+    "joining_method": "finger_joints_candidate",
+    "construction_verified": false
+  },
+  "lifecycle_status": "VISUAL_CONCEPT_ONLY",
+  "engineering_approval": false,
+  "manufacturing_approval": false,
+  "photo_included": false
+}
