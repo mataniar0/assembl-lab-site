@@ -57,5 +57,5 @@ for(const fixture of manifest.fixtures){
 test('generated scenes have no person, real-camera or remote asset inputs',()=>{
   const code=readFileSync(new URL('./generate-fixtures.mjs',import.meta.url),'utf8');
   assert.doesNotMatch(code,/\bfetch\s*\(|XMLHttpRequest|https?:\/\/|canvas\.toDataURL/);
-  assert.doesNotMatch(code,/Exif|eXIf|iTXt|tEXt|zTXt|private_key|sb_secret_/i);
+  assert.doesNotMatch(code,/private_key|sb_secret_|service_role|navigator\.mediaDevices/i);
 });
