@@ -79,6 +79,30 @@ export function planSyntheticEdit(input){
   return Object.freeze(summary);
 }
 
+
+/* In-memory idempotency check for test plans. It cannot queue, bill, persist,
+ * schedule or invoke a provider. Replaying the same request is harmless;
+ * reusing the ID for a different scene/design is rejected.
+ */
+export function createDryRunLedger(){
+  const seen=new Map();
+  return Object.freeze({
+    accept(plan){
+      if(!plain(plan)||plan.version!==PILOT_VERSION||plan.mode!=='DRY_RUN_ONLY'||
+         typeof plan.request_id!=='string'||typeof plan.intent_sha256!=='string'||
+         typeof plan.fixture?.sha256!=='string'||plan.sent_to_provider!==false||
+         plan.paid_calls!==0||plan.network_calls!==0)
+        fail('INVALID_OFFLINE_PLAN');
+      const digest=plan.fixture.sha256+':'+plan.intent_sha256;
+      const prior=seen.get(plan.request_id);
+      if(prior!==undefined&&prior!==digest)fail('IDEMPOTENCY_CONFLICT');
+      if(prior===digest)return Object.freeze({replayed:true,submitted:false,paid_calls:0});
+      seen.set(plan.request_id,digest);
+      return Object.freeze({replayed:false,submitted:false,paid_calls:0});
+    }
+  });
+}
+
 /* Intentionally impossible to activate a live provider in this milestone.
  * A separate audited server-only adapter and owner budget approval are required.
  */
