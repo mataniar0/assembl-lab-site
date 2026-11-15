@@ -3,3 +3,20 @@
 @media(max-width:850px){.workspace{grid-template-columns:1fr}.room{height:440px}.title-row{align-items:flex-start}.header{padding:14px 20px}}
 @media(max-width:480px){.main{padding:25px 14px 40px}.room{height:365px}.stand-position{bottom:10%}.preview-panel,.controls{padding:15px}.title-row h1{font-size:30px}.title-row{gap:12px}.chip{font-size:10px}.brand{font-size:12px}.brand-mark{width:36px;height:36px}.room-window{width:26%}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* MVP-09-B: the room remains one synthetic background; comparison only reveals
+   a locally drawn furniture layer. Neither photos nor assets are downloaded. */
+.room-after-layer{position:absolute;inset:0;z-index:3;pointer-events:none}
+.room.before .room-after-layer{display:none}
+.room.compare .room-after-layer{clip-path:inset(0 0 0 var(--compare-split,50%))}
+.compare-divider{display:none;position:absolute;z-index:5;left:var(--compare-split,50%);top:0;bottom:0;border-left:3px dashed #284840;pointer-events:none;filter:drop-shadow(1px 0 2px #ffffff)}
+.room.compare .compare-divider{display:block}
+#compare-control{margin-top:16px;background:#f1f5f1;padding:12px;border-radius:10px}
+#compare-control[hidden]{display:none}
+#compare-control label{display:block;font-size:13px;font-weight:700;margin-bottom:5px}
+#compare-split{width:100%;min-height:44px;accent-color:var(--green)}
+.preferred-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}
+.preferred-actions button{flex:1 1 160px}
+button:disabled{opacity:.5;cursor:not-allowed}
+#preferred-status{padding:10px 12px;background:#f2f4ee;border-radius:9px;min-height:46px}
+@media(max-width:480px){.stand-position{filter:drop-shadow(6px 9px 6px #4432204d)}.preferred-actions{flex-direction:column}}
