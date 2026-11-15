@@ -1,0 +1,56 @@
+name: App cloud Auth client (synthetic only)
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'app/cloud-*'
+      - 'app/index.html'
+      - 'app/nightstand-intent.js'
+      - 'app/sw.js'
+      - '.github/workflows/app-cloud-auth-client.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'app/cloud-*'
+      - 'app/index.html'
+      - 'app/nightstand-intent.js'
+      - 'app/sw.js'
+      - '.github/workflows/app-cloud-auth-client.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic-cloud-client:
+    name: Verify Supabase browser client (no real requests)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out proposed revision
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax and contract tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check app/cloud-api-core.mjs
+          node --check app/cloud-dev.js
+          node --check app/nightstand-intent.js
+          node --check app/sw.js
+          node --test app/cloud-api-core.test.mjs
+      - name: Verify no service-role credentials were included
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -Ei 'sb_secret_|SUPABASE_SERVICE_ROLE_KEY|service_role.*eyJ' \
+            app/cloud-api-core.mjs app/cloud-dev.js app/cloud-dev.html; then
+            echo 'Potential server-only credential found in frontend.'
+            exit 1
+          fi
+          echo 'Client includes only a documented public publishable key.'
