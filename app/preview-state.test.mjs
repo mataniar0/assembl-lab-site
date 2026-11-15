@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {normalizeReview,sceneFor,viewFor,SCENES} from './preview-state.mjs';
+import {normalizeReview,sceneFor,viewFor,SCENES,fittedPlacement,designIntentFor} from './preview-state.mjs';
 
 test('three recognized synthetic fixture scenarios only',()=>{
   assert.deepEqual(SCENES.map(s=>s.id),['SC-01','SC-02','SC-04']);
@@ -76,4 +76,66 @@ test('HE and EN copy plus accessible controls are provided',()=>{
   assert.match(html,/aria-live="polite"/);
   assert.match(html,/for="scale"/);
   assert.match(html,/for="position"/);
+});
+
+test('compare mode preserves explicit split and never claims to generate a photo',()=>{
+  const compare=normalizeReview({view:'compare',comparison:64,finish:'walnut'});
+  assert.equal(compare.view,'compare');
+  assert.equal(compare.comparison_percent,64);
+  const view=viewFor(compare);
+  assert.equal(view.comparison_enabled,true);
+  assert.equal(view.show_nightstand,true);
+  assert.equal(view.comparison_percent,64);
+  assert.equal(normalizeReview({view:'invalid',comparison:200}).view,'after');
+  assert.equal(normalizeReview({comparison:200}).comparison_percent,85);
+  assert.equal(normalizeReview({comparison:1}).comparison_percent,15);
+});
+test('furniture stays within small canvas when position and scale reach extremes',()=>{
+  for(const width of [265,320,390,768]){
+    for(const scale of [65,88,125]){
+      for(const position of [30,52,70]){
+        const fit=fittedPlacement(width,position,scale);
+        assert.ok(fit.effective_percent>=0&&fit.effective_percent<=100);
+        const center=fit.effective_percent/100*width;
+        const half=fit.object_width/2;
+        assert.ok(center-half>=-0.0001,'left edge clipped at '+width);
+        assert.ok(center+half<=width+0.0001,'right edge clipped at '+width);
+      }
+    }
+  }
+  assert.throws(()=>fittedPlacement(0,52,88),RangeError);
+});
+test('default design intent is compatible with design contract and is strictly synthetic',()=>{
+  const item=designIntentFor(normalizeReview({finish:'walnut',drawers:2,position:57,scale:94}));
+  assert.equal(item.schema_version,'ASSEMBL-LAB.DESIGN-INTENT.0.1');
+  assert.equal(item.category,'freestanding_nightstand');
+  assert.equal(item.requested_dimensions_mm.width,500);
+  assert.equal(item.requested_dimensions_mm.height,550);
+  assert.equal(item.requested_dimensions_mm.depth,350);
+  assert.equal(item.construction_preferences.nominal_thickness_mm,6);
+  assert.equal(item.appearance.finish,'walnut');
+  assert.equal(item.appearance.drawers,2);
+  assert.equal(item.placement_preview.horizontal_position_percent,57);
+  assert.equal(item.placement_preview.relative_scale,94);
+  assert.equal(item.appearance.notes,'');
+  assert.equal(item.photo_included,false);
+  assert.equal(item.engineering_approval,false);
+  assert.equal(item.manufacturing_approval,false);
+});
+test('intent conversion strips untrusted image, contact and free-text fields',()=>{
+  const source={...normalizeReview({sceneId:'SC-02'}),photo_url:'https://private.invalid',
+    customer_email:'private@example.invalid',notes:'PRIVATE NOTES',image_base64:'abcd'};
+  const text=JSON.stringify(designIntentFor(source));
+  assert.doesNotMatch(text,/private|photo_url|image_base64|PRIVATE NOTES|customer_email/);
+});
+test('visual-review UI provides accessible comparison and preference controls',()=>{
+  const html=readFileSync(new URL('./preview-lab.html',import.meta.url),'utf8');
+  const css=readFileSync(new URL('./preview-lab.css',import.meta.url),'utf8');
+  assert.match(html,/id="compare-view"[^>]*aria-pressed="false"/);
+  assert.match(html,/id="compare-split"[^>]*type="range"/);
+  assert.match(html,/id="save-preferred"/);
+  assert.match(html,/id="restore-preferred"/);
+  assert.match(html,/id="preferred-status"[^>]*aria-live="polite"/);
+  assert.match(css,/\.room\.compare \.room-after-layer\{clip-path:/);
+  assert.match(css,/prefers-reduced-motion:reduce/);
 });
