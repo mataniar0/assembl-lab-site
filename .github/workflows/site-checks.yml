@@ -77,6 +77,12 @@ jobs:
           set -euo pipefail
           python scripts/check_site.py --commit HEAD --browser "$ASSEMBLE_BROWSER" --report .qa-reports/ci/site-smoke.json 2>&1 | tee .qa-reports/ci/site-smoke.log
 
+      - name: Validate MEB-033 page contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tests/meb033_site_contract.py | tee .qa-reports/ci/meb033-site-contract.log
+
       - name: Validate eight chosen 3D products
         shell: bash
         run: |
