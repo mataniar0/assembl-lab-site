@@ -53,16 +53,11 @@ test('canonical rejects unsupported furniture',()=>{
 test('canonical rejects 8mm material for limited pilot',()=>{
   assert.throws(()=>canonicalSyntheticIntent({...syntheticFixture(),construction_preferences:{nominal_thickness_mm:8}}),/INVALID_SYNTHETIC_NIGHTSTAND/);
 });
-test('register uses Supabase Auth endpoint and never appends email to URL',async()=>{
-  const {cloud,calls}=mock({id:USER,access_token:null});
-  const result=await cloud.register('dev@example.test','a very long password');
-  assert.equal(result.confirmation_required,true);
-  assert.match(calls[0].url,/\/auth\/v1\/signup$/);
-  assert.equal(calls[0].body.email,'dev@example.test');
-  assert.equal(calls[0].request.headers.apikey,CONFIG.publishableKey);
-  assert.equal(calls[0].request.credentials,'omit');
-  assert.equal(calls[0].request.cache,'no-store');
-  assert.ok(!calls[0].url.includes('dev@example.test'));
+test('invite-only pilot client has no public sign-up workflow',()=>{
+  const cloud=createCloudClient({fetchImpl:async()=>{throw new Error('No network expected');}});
+  assert.equal(cloud.register,undefined);
+  const html=readFileSync(new URL('./cloud-dev.html',import.meta.url),'utf8');
+  assert.doesNotMatch(html,/<button[^>]+id="sign-up"/);
 });
 test('sign in yields ephemeral session from Auth response',async()=>{
   const {cloud,calls}=mock({access_token:token,user:{id:USER},expires_in:3600});
