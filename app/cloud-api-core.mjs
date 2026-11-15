@@ -98,6 +98,14 @@ export function createCloudClient({fetchImpl=fetch,endpoint=CONFIG.endpoint,publ
       const session={user:{id:data?.user?.id},access_token:data?.access_token,
         expires_at:Number.isFinite(data?.expires_at)?data.expires_at:Math.floor(Date.now()/1000)+(data?.expires_in||0)};
       assertSession(session);
+      // GoTrue verifies the password, but Auth identity alone does not authorize
+      // participation in this isolated development pilot. Only server-managed
+      // app_metadata is considered. user_metadata is deliberately ignored.
+      if(data?.user?.app_metadata?.assembl_lab_pilot!=='enabled'){
+        try{await request('/auth/v1/logout',{method:'POST',token:session.access_token});}
+        catch{/* Auth token remains inaccessible to the UI; DB RLS still denies access. */}
+        throw new CloudApiError(403,'PILOT_ACCESS_REQUIRED');
+      }
       return session;
     },
     async signOut(session){
