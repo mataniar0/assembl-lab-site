@@ -9,7 +9,7 @@ from pathlib import Path
 import threading
 from urllib.parse import urlparse
 
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, expect
 
 ROOT=Path(__file__).resolve().parents[1]
 PROVIDER="widfojfysblgbwswmigq.supabase.co"
@@ -86,16 +86,16 @@ def main(browser_path:str):
                     page.locator("#dev-email").fill("synthetic@example.test")
                     page.locator("#dev-password").fill("synthetic-strong-password")
                     page.locator("#sign-in").click()
-                    page.wait_for_function("!document.querySelector('#save-synthetic').disabled")
+                    expect(page.locator("#save-synthetic")).to_be_enabled(timeout=10000)
                     page.locator("#save-synthetic").click()
-                    page.wait_for_function("document.querySelector('#project-id').textContent !== '—'")
+                    expect(page.locator("#project-id")).to_have_text(PROJECT,timeout=10000)
                     assert page.locator("#project-id").inner_text()==PROJECT
                     page.locator("#create-job").click()
-                    page.wait_for_function("document.querySelector('#job-status').textContent === 'MOCK_READY'")
+                    expect(page.locator("#job-status")).to_have_text("MOCK_READY",timeout=10000)
                     assert page.locator("#job-id").inner_text()==JOB
                     page.on("dialog",lambda dialog:dialog.accept())
                     page.locator("#delete-project").click()
-                    page.wait_for_function("document.querySelector('#jobs-panel').hidden === true")
+                    expect(page.locator("#jobs-panel")).to_be_hidden(timeout=10000)
                     assert any(path=="/auth/v1/token" for _,path,_ in provider_calls)
                     assert any(path=="/rest/v1/al_app_visualization_jobs" for _,path,_ in provider_calls)
                     assert not errors, repr(errors)
