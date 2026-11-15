@@ -35,3 +35,6 @@ button:disabled{opacity:.5;cursor:not-allowed}
 .room[data-fixture="png"] .room-floor{display:none}
 .room[data-fixture="png"] .room-label{background:#fffdf5ee;max-width:80%}
 @media(max-width:480px){.room[data-fixture="png"]{height:auto;aspect-ratio:1/1}}
+
+/* Avoid broken-image alt boxes in temporary CSS fallback mode. */
+.room:not([data-fixture="png"]) .synthetic-room-image{display:none}
