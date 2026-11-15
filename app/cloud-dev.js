@@ -85,6 +85,7 @@ function credentials(){
 async function signIn(){
   await withBusy(async()=>{
     const {email,password}=credentials();
+    session=null;projectId=null; // Never retain a prior user's project on account change.
     session=await cloud.signIn(email,password);
     el('dev-password').value='';
     setStatus('auth-status','התחברת בהצלחה. הפרויקטים מבודדים באמצעות הרשאות המשתמש שלך.');
