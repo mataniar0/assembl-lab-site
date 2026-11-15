@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""AL-016/017: source-traceable viewer asset contract for six selected product pages."""
+"""AL-016/017: source-traceable viewer asset contract for seven selected product pages."""
 from __future__ import annotations
 import hashlib,json,struct,sys
 from pathlib import Path
@@ -10,7 +10,8 @@ ASSETS={
  "table/personal/":("personal-design-preview.glb",32,None),
  "shelf/kids/":("kids-shelf-700-design-only.glb",5,None),
  "driller_stand/":("driller-v365-design-only.glb",31,None),
- "shoe_rack/":("shoe-rack-v4-700-design-only.glb",36,"84fbf1bef9a264c399ac800333a899e818a1fdf68c956d6eabdb4a896fa49445")
+ "shoe_rack/":("shoe-rack-v4-700-design-only.glb",36,"84fbf1bef9a264c399ac800333a899e818a1fdf68c956d6eabdb4a896fa49445"),
+ "workbench/":("workbench-v58-design-only.glb",161,"a8ab0fb20818f6de0c46e69216177fb5a7b2182d5cec081eebe0bada4c503309")
 }
 # Color-fix contract: new whole-file Git blob IDs, exact original mesh buffer SHA256,
 # and warm-birch PBR color in every primitive. Other three models are untouched.
@@ -46,6 +47,11 @@ def run():
   if sha:assert hashlib.sha256(b).hexdigest()==sha,(route,"unapproved GLB version")
   header=json.loads(b[20:20+struct.unpack_from('<I',b,12)[0]])
   prims=[p for m in header["meshes"] for p in m["primitives"]]
+  if route=="workbench/":
+   box=[header["accessors"][p["attributes"]["POSITION"]] for p in prims]
+   farthest=max(max(a["max"]) for a in box)
+   assert 1.39<farthest<1.41,(route,"GLB not converted to metres",farthest)
+   assert len(header["nodes"])==162,(route,"wrong number of named CAD nodes")
   if route in WOOD_FIXES:
    spec=WOOD_FIXES[route]
    blob=hashlib.sha1(b"blob "+str(len(b)).encode()+bytes([0])+b).hexdigest()
@@ -75,7 +81,7 @@ def run():
   try:parse(bad)
   except Exception:pass
   else:raise AssertionError("negative-control corrupted GLB was accepted")
- assert len(info)==len(ASSETS)==6, ("wrong six-model coverage",len(info))
+ assert len(info)==len(ASSETS)==7, ("wrong seven-model coverage",len(info))
  print(json.dumps({"passed":len(info),"failed":0,"results":info,"real_posts":0},ensure_ascii=False,indent=2))
 if __name__=="__main__":
  try:run()
