@@ -34,6 +34,23 @@ jobs:
           node --check prototype/app-mvp-10/synthetic-edit-plan.mjs
           node --check prototype/app-mvp-10/evaluation.mjs
           node --test prototype/app-mvp-10/dry-run.test.mjs
+      - name: Capture safe synthetic-only dry-run summary
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .qa-reports/app-mvp-10
+          node prototype/app-mvp-10/run-dry-run.mjs SC-01 > .qa-reports/app-mvp-10/dry-run-SC-01.json
+          python3 -m json.tool .qa-reports/app-mvp-10/dry-run-SC-01.json > /dev/null
+          grep -F '"paid_calls": 0' .qa-reports/app-mvp-10/dry-run-SC-01.json
+          grep -F '"sent_to_provider": false' .qa-reports/app-mvp-10/dry-run-SC-01.json
+      - name: Upload sanitized evidence
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: mvp-10-a-offline-report-${{ github.run_id }}
+          path: .qa-reports/app-mvp-10/
+          if-no-files-found: warn
+          retention-days: 14
       - name: No live provider or credential transport in offline module
         shell: bash
         run: |
