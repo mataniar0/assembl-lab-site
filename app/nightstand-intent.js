@@ -122,6 +122,40 @@
     approvedSnapshot = snapshot ? structuredClone(snapshot) : null;
     const btn = $('download-intent');
     if (btn) btn.hidden = !approvedSnapshot;
+    const cloudLink = $('cloud-handoff');
+    if (cloudLink) cloudLink.hidden = !approvedSnapshot;
+  }
+  function handoffApproved() {
+    if (!approvedSnapshot) return;
+    // Never transfer the room image, free-text notes, name or photo metadata.
+    const snap = approvedSnapshot;
+    const safe = {
+      schema_version: 'ASSEMBL-LAB.DESIGN-INTENT.0.1',
+      category: 'freestanding_nightstand',
+      requested_dimensions_mm: {
+        width: snap.requested_dimensions_mm.width,
+        height: snap.requested_dimensions_mm.height,
+        depth: snap.requested_dimensions_mm.depth
+      },
+      dimension_confidence: snap.dimension_confidence,
+      appearance: {
+        finish: snap.appearance.finish,
+        drawers: snap.appearance.drawers,
+        lower_section: snap.appearance.lower_section,
+        notes: ''
+      },
+      placement_preview: snap.placement_preview,
+      construction_preferences: {
+        material: 'birch_plywood',
+        nominal_thickness_mm: snap.construction_preferences.nominal_thickness_mm,
+        construction_verified: false
+      },
+      engineering_approval: false,
+      manufacturing_approval: false,
+      photo_included: false
+    };
+    try { sessionStorage.setItem('assembl-lab-cloud-synthetic-intent-v1', JSON.stringify(safe)); }
+    catch { /* Cloud page falls back to synthetic fixture if storage is disabled. */ }
   }
   function exportApproved() {
     if (!approvedSnapshot) return;
@@ -162,6 +196,7 @@
     document.querySelectorAll('.quick-actions [data-change]').forEach(btn=>btn.addEventListener('click',captureVersion));
     $('confirm-approval').addEventListener('click',markApproved);
     $('download-intent').addEventListener('click',exportApproved);
+    $('cloud-handoff')?.addEventListener('click',handoffApproved);
     document.addEventListener('click',event=>{if (event.target?.id==='lang'){showStatus(); renderSnapshotDetails();}});
     showStatus();
   }
