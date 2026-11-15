@@ -148,6 +148,13 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 assert page.locator("#restore-preferred").is_disabled()
                 expect(page.locator("#preferred-status")).to_contain_text("טרם סומנה")
 
+                if width <= 390:
+                    # Mobile screenshots exposed an oversized flex-basis in the
+                    # preferred-action column. Keep controls touch-friendly, not gigantic.
+                    preferred_button = page.locator("#save-preferred").bounding_box()
+                    assert preferred_button and 44 <= preferred_button["height"] <= 70, (
+                        "Preferred button consumes too much mobile vertical space"
+                    )
                 if width in (390, 1440):
                     page.screenshot(
                         path=str(output_dir / f"mvp09-after-he-{width}.png"),
