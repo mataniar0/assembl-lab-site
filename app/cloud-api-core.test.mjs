@@ -1,6 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 import {CONFIG,canonicalSyntheticIntent,syntheticFixture,createCloudClient,CloudApiError} from './cloud-api-core.mjs';
 
 const USER='11111111-1111-4111-8111-111111111111';
@@ -159,7 +160,6 @@ test('service worker only writes index.html cache for main app, never cloud lab'
 test('main inline CSP hash and script are unchanged',()=>{
   const html=readFileSync(new URL('./index.html',import.meta.url),'utf8');
   const script=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
-  const {createHash}=await import('node:crypto');
   const base=createHash('sha256').update(script,'utf8').digest('base64');
   assert.equal(base,'GBnlKux09VbgrayAnLRJMrWvjFuJ9hF2QuT9vewZR6U=');
 });
