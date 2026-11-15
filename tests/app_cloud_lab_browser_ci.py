@@ -73,7 +73,8 @@ def main(browser_path:str):
                     route.fulfill(status=200,content_type="application/json",headers=headers,body=json.dumps(data))
                 page.route(f"https://{PROVIDER}/**",mock_supabase)
                 calls_before_page_load=len(provider_calls)
-                page.goto(base+"/app/cloud-dev.html",wait_until="networkidle")
+                page.goto(base+"/app/cloud-dev.html#access_token=FAKE_TEST_TOKEN&refresh_token=FAKE_TEST_REFRESH",wait_until="networkidle")
+                assert "access_token" not in page.url and "refresh_token" not in page.url
                 assert page.locator("h1").inner_text()=="חיבור ניסיוני לענן"
                 assert page.locator("#save-synthetic").is_disabled()
                 assert page.locator("#sign-up").is_enabled()
