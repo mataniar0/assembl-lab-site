@@ -35,6 +35,7 @@
         <div class="room-picture" aria-hidden="true"></div>
         <div class="room-plant" aria-hidden="true"><span class="leaves"></span><span class="pot"></span></div>
         <div class="room-floor" aria-hidden="true"></div>
+        <div class="room-after-layer" aria-hidden="true">
         <div class="stand-position" id="stand-position" aria-hidden="true">
           <div class="stand-shadow"></div>
           <div class="stand" id="stand">
@@ -47,11 +48,18 @@
             <div class="leg leg-left"></div><div class="leg leg-right"></div>
           </div>
         </div>
+        </div>
+        <div class="compare-divider" aria-hidden="true"></div>
         <div class="room-label" id="scene-label">SC-01 · קיר נייטרלי</div>
       </div>
       <div class="preview-actions">
         <button id="toggle-view" class="button secondary" type="button" aria-pressed="false" data-he="הצג את החדר לפני הוספת השידה" data-en="Show the room before">הצג את החדר לפני הוספת השידה</button>
+        <button id="compare-view" class="button outline" type="button" aria-pressed="false" data-he="השוואה לפני ואחרי" data-en="Compare before and after">השוואה לפני ואחרי</button>
         <button id="reset" class="button outline" type="button" data-he="איפוס ההמחשה" data-en="Reset preview">איפוס ההמחשה</button>
+      </div>
+      <div id="compare-control" hidden>
+        <label for="compare-split" data-he="גבול ההשוואה (לפני / אחרי)" data-en="Comparison split (before / after)">גבול ההשוואה (לפני / אחרי)</label>
+        <input id="compare-split" type="range" min="15" max="85" step="1" value="50" aria-label="גבול ההשוואה">
       </div>
       <p id="view-status" class="status" role="status" aria-live="polite"></p>
     </section>
@@ -80,6 +88,11 @@
       <label for="scale"><span data-he="קנה מידה להמחשה" data-en="Illustrative scale">קנה מידה להמחשה</span> · <output id="scale-value">88%</output></label>
       <input id="scale" type="range" min="65" max="125" value="88" step="1">
       <div class="details" id="details" aria-live="polite"></div>
+      <div class="preferred-actions">
+        <button id="save-preferred" type="button" class="button secondary" data-he="סמן את הגרסה כמועדפת" data-en="Mark this concept as preferred">סמן את הגרסה כמועדפת</button>
+        <button id="restore-preferred" type="button" class="button outline" disabled data-he="חזור לגרסה המועדפת" data-en="Restore preferred concept">חזור לגרסה המועדפת</button>
+      </div>
+      <p class="status" id="preferred-status" role="status" aria-live="polite" data-he="טרם סומנה גרסה מועדפת." data-en="No preferred concept selected yet.">טרם סומנה גרסה מועדפת.</p>
       <p class="legal" data-he="שידת לילה לדוגמה · לביד בירץ׳ 6 מ״מ. פרופורציות אינן תחליף למדידות, CAD או בדיקות יציבות ובטיחות." data-en="Example nightstand · 6 mm birch plywood. Proportions do not replace measurements, CAD, or safety/structural validation.">שידת לילה לדוגמה · לביד בירץ׳ 6 מ״מ. פרופורציות אינן תחליף למדידות, CAD או בדיקות יציבות ובטיחות.</p>
     </section>
   </div>
