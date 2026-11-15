@@ -26,7 +26,6 @@ function errorMessage(error){
 function render(){
   const loggedIn=!!session&&!busy;
   el('sign-in').disabled=busy;
-  el('sign-up').disabled=busy;
   el('sign-out').hidden=!session;
   el('sign-out').disabled=busy;
   el('save-synthetic').disabled=!loggedIn;
@@ -96,16 +95,6 @@ async function signIn(){
   },'auth-status');
   el('dev-password').value='';
 }
-async function signUp(){
-  await withBusy(async()=>{
-    const {email,password}=credentials();
-    const result=await cloud.register(email,password);
-    setStatus('auth-status',result.confirmation_required?
-      'בקשת ההרשמה התקבלה. בדוק את הדוא״ל לאישור החשבון, ואז התחבר כאן.':
-      'בקשת ההרשמה התקבלה. אפשר לנסות להתחבר.');
-  },'auth-status');
-  el('dev-password').value='';
-}
 async function signOut(){
   await withBusy(async()=>{
     await cloud.signOut(session);
@@ -168,7 +157,6 @@ function init(){
   clearUnsupportedAuthRedirectTokens();
   fromHandoff();describe();render();
   el('auth-form').addEventListener('submit',event=>{event.preventDefault();void signIn();});
-  el('sign-up').addEventListener('click',()=>void signUp());
   el('sign-out').addEventListener('click',()=>void signOut());
   el('save-synthetic').addEventListener('click',()=>void save());
   el('create-job').addEventListener('click',()=>void createJob());
