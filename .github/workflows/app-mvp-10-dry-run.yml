@@ -33,7 +33,9 @@ jobs:
           set -euo pipefail
           node --check prototype/app-mvp-10/synthetic-edit-plan.mjs
           node --check prototype/app-mvp-10/evaluation.mjs
-          node --test prototype/app-mvp-10/dry-run.test.mjs
+          node --check prototype/app-mvp-10/run-dry-run.mjs
+          node --check prototype/app-mvp-10/independent-qa.test.mjs
+          node --test prototype/app-mvp-10/dry-run.test.mjs prototype/app-mvp-10/independent-qa.test.mjs
       - name: Capture safe synthetic-only dry-run summary
         shell: bash
         run: |
