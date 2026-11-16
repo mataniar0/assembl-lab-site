@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {normalizeReview,sceneFor,viewFor,SCENES,fittedPlacement,designIntentFor,
-  captureConcept,reviewFromConcept,compareConcepts} from './preview-state.mjs';
+  captureConcept,reviewFromConcept,compareConcepts,selectedConceptPackage} from './preview-state.mjs';
 
 test('five recognized synthetic PNG-backed fixture scenarios only',()=>{
   assert.deepEqual(SCENES.map(s=>s.id),['SC-01','SC-02','SC-04','SC-07','SC-10']);
@@ -220,4 +220,60 @@ test('PWA navigation isolates index cache and precaches only public local previe
     assert.match(sw,new RegExp('\\.\\/preview-fixtures\\/SC-'+id+'\\.png'));
   }
   assert.doesNotMatch(sw,/cloud-dev\.html|customer|auth\/users|service_role|sb_secret_/i);
+});
+
+test('MVP-12 chosen concept exports exact synthesized intent without identity or photos',()=>{
+  const concept=captureConcept(normalizeReview({
+    sceneId:'SC-07',finish:'honey',drawers:2,position:61,scale:102
+  }));
+  const p=selectedConceptPackage('B',concept);
+  assert.equal(p.schema_version,'ASSEMBL-LAB.SELECTED-CONCEPT.0.1');
+  assert.equal(p.source_kind,'synthetic');
+  assert.equal(p.selected_slot,'B');
+  assert.equal(p.scene_id,'SC-07');
+  assert.deepEqual(p.review,{
+    scene_id:'SC-07',finish:'honey',drawers:2,
+    horizontal_position_percent:61,illustrative_scale_percent:102
+  });
+  assert.equal(p.design_intent.schema_version,'ASSEMBL-LAB.DESIGN-INTENT.0.1');
+  assert.deepEqual(p.design_intent.requested_dimensions_mm,{width:500,height:550,depth:350});
+  assert.equal(p.design_intent.construction_preferences.nominal_thickness_mm,6);
+  assert.equal(p.design_intent.appearance.finish,'honey');
+  assert.equal(p.design_intent.appearance.drawers,2);
+  assert.equal(p.design_intent.appearance.notes,'');
+  assert.equal(p.photo_included,false);
+  assert.equal(p.engineering_approval,false);
+  assert.equal(p.manufacturing_approval,false);
+  assert.ok(Object.isFrozen(p));
+  assert.ok(Object.isFrozen(p.review));
+  assert.equal(JSON.parse(JSON.stringify(p)).selected_slot,'B');
+});
+test('MVP-12 chosen concept cannot be forged or supplied with personal information',()=>{
+  const captured=captureConcept({
+    sceneId:'SC-02',drawers:1,finish:'walnut',position:45,scale:91,
+    notes:'secret',image_base64:'SECRET',customer_email:'private@example.invalid',
+    photo_url:'https://example.invalid/private'
+  });
+  assert.throws(()=>selectedConceptPackage('C',captured),/unknown_concept_slot/);
+  assert.throws(()=>selectedConceptPackage('A',{...captured}),/unknown_concept/);
+  const p=selectedConceptPackage('A',captured);
+  const body=JSON.stringify(p);
+  assert.doesNotMatch(body,/secret|private|image_base64|customer_email|photo_url|https?:\/\//i);
+  assert.deepEqual(Object.keys(p),[
+    'schema_version','source_kind','selected_slot','scene_id','review',
+    'design_intent','photo_included','engineering_approval','manufacturing_approval'
+  ]);
+});
+test('MVP-12 selection and JSON download controls are accessible and user-triggered',()=>{
+  const html=readFileSync(new URL('./preview-lab.html',import.meta.url),'utf8');
+  const script=readFileSync(new URL('./preview-lab.mjs',import.meta.url),'utf8');
+  for(const id of ['choose-a','choose-b','selected-status','download-selected']){
+    assert.match(html,new RegExp('id="'+id+'"'));
+  }
+  assert.match(html,/id="selected-status"[^>]*aria-live="polite"/);
+  assert.match(html,/id="download-selected"[^>]*disabled/);
+  assert.match(script,/addEventListener\('click',\(\)=>\{\s*if\(!chosenSlot/);
+  assert.match(script,/selectedConceptPackage\(chosenSlot,concepts\[chosenSlot\]\)/);
+  assert.match(script,/link\.download='assembl-lab-selected-concept-'/);
+  assert.doesNotMatch(script,/localStorage|sessionStorage|indexedDB|\bfetch\s*\(/);
 });
