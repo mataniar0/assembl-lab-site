@@ -187,3 +187,20 @@ test('offline module cannot emit a PASS or candidate decision',()=>{
  assert.doesNotMatch(source,/status\s*:\s*['"]REVIEW_CANDIDATE['"]/);
  assert.doesNotMatch(source,/status\s*:\s*['"]PASS['"]/);
 });
+
+test('ledger rejects a JSON-cloned plan and a forged lookalike, even when all fields match',()=>{
+ const ledger=createDryRunLedger();
+ const plan=planSyntheticEdit(input());
+ assert.throws(()=>ledger.accept(JSON.parse(JSON.stringify(plan))),/INVALID_OFFLINE_PLAN/);
+ assert.throws(()=>ledger.accept({...plan}),/INVALID_OFFLINE_PLAN/);
+ assert.throws(()=>ledger.accept({...plan,request_id:'new_request_0123456789'}),/INVALID_OFFLINE_PLAN/);
+ assert.deepEqual(ledger.accept(plan),{replayed:false,submitted:false,paid_calls:0});
+});
+test('plans are immutable, registered by the local planner and cannot be modified to claim payment',()=>{
+ const plan=planSyntheticEdit(input());
+ assert.ok(Object.isFrozen(plan));
+ assert.ok(Object.isFrozen(plan.fixture));
+ assert.throws(()=>{plan.paid_calls=7;},TypeError);
+ assert.throws(()=>{plan.fixture.sha256='0'.repeat(64);},TypeError);
+ assert.deepEqual(createDryRunLedger().accept(plan),{replayed:false,submitted:false,paid_calls:0});
+});
