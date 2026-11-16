@@ -77,6 +77,15 @@ jobs:
           set -euo pipefail
           python scripts/check_site.py --commit HEAD --browser "$ASSEMBLE_BROWSER" --report .qa-reports/ci/site-smoke.json 2>&1 | tee .qa-reports/ci/site-smoke.log
 
+      - name: Rebuild MEB-033 V3 model (candidate for inspection only)
+        shell: bash
+        env:
+          MEB033_EXPORT_BASE64: "1"
+        run: |
+          set -euo pipefail
+          python scripts/build_meb033_v3.py > .qa-reports/ci/meb033-v3-model.log
+          cat .qa-reports/ci/meb033-v3-model.log
+
       - name: Validate MEB-033 page contract
         shell: bash
         run: |
