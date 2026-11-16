@@ -20,3 +20,21 @@
 button:disabled{opacity:.5;cursor:not-allowed}
 #preferred-status{padding:10px 12px;background:#f2f4ee;border-radius:9px;min-height:46px}
 @media(max-width:480px){.stand-position{filter:drop-shadow(6px 9px 6px #4432204d)}.preferred-actions{flex-direction:column}.preferred-actions button{flex:0 0 auto;width:100%}}
+
+/* MVP-09-C — same deterministic PNG under before, after and the comparison.
+ * Full-square ratio retains room geometry and the floor baseline on mobile.
+ * All original CSS room props are hidden while an approved local PNG is shown.
+ */
+.room[data-fixture="png"]{aspect-ratio:1/1;height:auto;width:100%;max-width:550px;margin-inline:auto;background:#ede8dc}
+.room[data-fixture="png"]::after{display:none}
+.room[data-fixture="png"] .synthetic-room-image{position:absolute;display:block;inset:0;width:100%;height:100%;object-fit:contain;z-index:0}
+.room[data-fixture="png"] .room-corner,
+.room[data-fixture="png"] .room-window,
+.room[data-fixture="png"] .room-picture,
+.room[data-fixture="png"] .room-plant,
+.room[data-fixture="png"] .room-floor{display:none}
+.room[data-fixture="png"] .room-label{background:#fffdf5ee;max-width:80%}
+@media(max-width:480px){.room[data-fixture="png"]{height:auto;aspect-ratio:1/1}}
+
+/* Avoid broken-image alt boxes in temporary CSS fallback mode. */
+.room:not([data-fixture="png"]) .synthetic-room-image{display:none}
