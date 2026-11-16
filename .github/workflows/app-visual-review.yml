@@ -4,11 +4,17 @@ on:
   push:
     branches:
       - feature/app-mvp-09-synthetic-room-review
+      - feature/app-mvp-09-c-png-review
+      - feature/app-mvp-11-a-ab-compare
   pull_request:
     branches:
       - main
+      - feature/app-mvp-09-synthetic-room-review
+      - feature/app-mvp-09-c-png-review
     paths:
       - 'app/preview-*'
+      - 'app/preview-fixtures/**'
+      - 'tests/app_preview_browser_ci.py'
       - '.github/workflows/app-visual-review.yml'
 
 permissions:
@@ -34,7 +40,8 @@ jobs:
           set -euo pipefail
           node --check app/preview-state.mjs
           node --check app/preview-lab.mjs
-          node --test app/preview-state.test.mjs
+          node --check app/preview-fixtures/generate-fixtures.mjs
+          node --test app/preview-state.test.mjs app/preview-fixtures/fixtures.test.mjs
 
   visual-browser-qa:
     name: Mobile/Desktop Chromium synthetic review

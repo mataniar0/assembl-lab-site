@@ -1,13 +1,15 @@
 /* APP MVP-09-B: synthetic room visualization; no network, storage or photographs.
  * All concept versions live in page memory and disappear on refresh.
  */
-import {normalizeReview,sceneFor,viewFor,fittedPlacement,designIntentFor} from './preview-state.mjs';
+import {normalizeReview,sceneFor,viewFor,fittedPlacement,designIntentFor,
+  captureConcept,reviewFromConcept,compareConcepts} from './preview-state.mjs';
 
 const el=id=>document.getElementById(id);
 const lang=()=>document.documentElement.lang==='en'?'en':'he';
 const phrase=(he,en)=>lang()==='he'?he:en;
 let state=normalizeReview();
 let preferred=null;
+const concepts={A:null,B:null};
 
 function currentInput(){
   return normalizeReview({
@@ -38,15 +40,67 @@ function preferredMessage(){
       '. Restore it any time during this visit.'
   );
 }
+
+function conceptDescription(concept){
+  if(!concept)return phrase('טרם נשמרה חלופה.','No concept captured.');
+  const scene=sceneFor(concept.scene_id);
+  return (lang()==='he'?scene.he:scene.en)+' · '+
+    concept.drawers+' '+phrase('מגירות','drawer(s)')+' · '+
+    concept.finish+' · '+concept.position_percent+'% / '+concept.scale_percent+'%';
+}
+function renderConcepts(){
+  for(const key of ['A','B']){
+    const lower=key.toLowerCase();
+    el('concept-'+lower+'-status').textContent=conceptDescription(concepts[key]);
+    el('restore-'+lower).disabled=!concepts[key];
+    el('capture-'+lower).disabled=state.view==='before';
+  }
+  const diff=compareConcepts(concepts.A,concepts.B);
+  if(!diff.ready){
+    el('ab-summary').textContent=phrase(
+      'שמרו חלופה A וחלופה B כדי להשוות הבדלים.',
+      'Capture both A and B to see the differences.');
+    return;
+  }
+  if(diff.identical){
+    el('ab-summary').textContent=phrase(
+      'שתי החלופות זהות בכל חמשת מאפייני ההמחשה.',
+      'Both concepts match on all five visual settings.');
+    return;
+  }
+  const names={
+    scene:phrase('חדר','scene'),finish:phrase('גוון','finish'),
+    drawers:phrase('מגירות','drawers'),position:phrase('מיקום','position'),
+    scale:phrase('קנה מידה','scale')
+  };
+  el('ab-summary').textContent=phrase('הבדלים בין A ל־B: ','A/B differences: ')+
+    diff.changed.map(key=>names[key]).join(', ')+'.';
+}
+
 function refresh(){
   const visual=viewFor(state);
   const room=el('room');
   room.className='room '+visual.scene_kind+
     (state.view==='before'?' before':state.view==='compare'?' compare':'');
+  // Only approved, hard-coded local PNG fixture paths may be loaded. Never
+  // accept a camera photo, URL parameter or untrusted path as image src.
+  const fixture=sceneFor(state.scene_id);
+  const fixtureImage=el('synthetic-room-image');
+  if(fixtureImage.getAttribute('src')!==fixture.png){
+    fixtureImage.setAttribute('src',fixture.png);
+  }
+  // Render the vetted PNG only after the current source has decoded. If a
+  // fixture is missing/corrupt/offline, retain the existing schematic room
+  // rather than showing an empty frame. No network retry is performed.
+  const fixtureReady=fixtureImage.complete&&fixtureImage.naturalWidth===384&&
+    fixtureImage.naturalHeight===384;
+  const fixtureFailed=fixtureImage.complete&&!fixtureReady;
+  room.dataset.fixture=fixtureReady?'png':'css';
   room.style.setProperty('--compare-split',state.comparison_percent+'%');
-  const fit=fittedPlacement(room.clientWidth||400,state.position_percent,state.scale_percent);
+  const fit=fittedPlacement(room.clientWidth||400,state.position_percent,
+    state.scale_percent,room.clientHeight||400);
   el('stand-position').style.left=fit.effective_percent.toFixed(2)+'%';
-  el('stand-position').style.transform='translateX(-50%) scale('+visual.nightstand_scale+')';
+  el('stand-position').style.transform='translateX(-50%) scale('+fit.effective_scale.toFixed(3)+')';
   const stand=el('stand');
   stand.dataset.finish=visual.finish;
   stand.classList.toggle('two-drawers',visual.drawers===2);
@@ -70,7 +124,9 @@ function refresh(){
     phrase('גבול ההשוואה לפני ואחרי','Before and after comparison split'));
   el('view-status').textContent=mode+'. '+phrase('לא תמונת AI אמיתית.','Not a real AI image.')+
     (fit.was_fitted?phrase(' המיקום הותאם לגודל המסך כדי למנוע חיתוך.',
-      ' Placement was adjusted to keep the furniture inside the canvas.'):'');
+      ' Placement was adjusted to keep the furniture inside the canvas.'):'')+
+    (fixtureFailed?phrase(' תמונת החדר אינה זמינה; מוצגת המחשה חלופית.',
+      ' Room fixture unavailable; showing a schematic fallback.'):'');
   el('position-value').textContent=state.position_percent+'%';
   el('scale-value').textContent=state.scale_percent+'%';
   const intent=designIntentFor(state);
@@ -91,6 +147,7 @@ function refresh(){
   el('save-preferred').disabled=state.view==='before';
   el('restore-preferred').disabled=!preferred;
   el('preferred-status').textContent=preferredMessage();
+  renderConcepts();
 }
 function translate(){
   const english=lang()==='en';
@@ -121,7 +178,7 @@ el('compare-view').addEventListener('click',()=>{
     comparison:state.comparison_percent,view:state.view==='compare'?'after':'compare'});
   refresh();
 });
-el('reset').addEventListener('click',()=>{state=normalizeReview();preferred=null;syncInputs();refresh();});
+el('reset').addEventListener('click',()=>{state=normalizeReview();preferred=null;concepts.A=null;concepts.B=null;syncInputs();refresh();});
 el('save-preferred').addEventListener('click',()=>{
   if(state.view==='before')return;
   preferred=normalizeReview({sceneId:state.scene_id,position:state.position_percent,
@@ -133,10 +190,28 @@ el('restore-preferred').addEventListener('click',()=>{
   if(!preferred)return;
   state=preferred;syncInputs();refresh();
 });
+
+for(const [key,lower] of [['A','a'],['B','b']]){
+  el('capture-'+lower).addEventListener('click',()=>{
+    if(state.view==='before')return;
+    concepts[key]=captureConcept(state);
+    refresh();
+  });
+  el('restore-'+lower).addEventListener('click',()=>{
+    if(!concepts[key])return;
+    state=reviewFromConcept(concepts[key]);
+    syncInputs();
+    refresh();
+  });
+}
+
 el('lang').addEventListener('click',()=>{
   document.documentElement.lang=lang()==='he'?'en':'he';
   translate();
 });
+// Local fixture load or decode failure must update the fallback and status.
+el('synthetic-room-image').addEventListener('load',refresh);
+el('synthetic-room-image').addEventListener('error',refresh);
 // Window resizing can change the safe frame on Android rotation.
 window.addEventListener('resize',refresh,{passive:true});
 syncInputs();translate();

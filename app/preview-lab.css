@@ -20,3 +20,35 @@
 button:disabled{opacity:.5;cursor:not-allowed}
 #preferred-status{padding:10px 12px;background:#f2f4ee;border-radius:9px;min-height:46px}
 @media(max-width:480px){.stand-position{filter:drop-shadow(6px 9px 6px #4432204d)}.preferred-actions{flex-direction:column}.preferred-actions button{flex:0 0 auto;width:100%}}
+
+/* MVP-09-C — same deterministic PNG under before, after and the comparison.
+ * Full-square ratio retains room geometry and the floor baseline on mobile.
+ * All original CSS room props are hidden while an approved local PNG is shown.
+ */
+.room[data-fixture="png"]{aspect-ratio:1/1;height:auto;width:100%;max-width:550px;margin-inline:auto;background:#ede8dc}
+.room[data-fixture="png"]::after{display:none}
+.room[data-fixture="png"] .synthetic-room-image{position:absolute;display:block;inset:0;width:100%;height:100%;object-fit:contain;z-index:0}
+.room[data-fixture="png"] .room-corner,
+.room[data-fixture="png"] .room-window,
+.room[data-fixture="png"] .room-picture,
+.room[data-fixture="png"] .room-plant,
+.room[data-fixture="png"] .room-floor{display:none}
+.room[data-fixture="png"] .room-label{background:#fffdf5ee;max-width:80%}
+@media(max-width:480px){.room[data-fixture="png"]{height:auto;aspect-ratio:1/1}}
+
+/* Avoid broken-image alt boxes in temporary CSS fallback mode. */
+.room:not([data-fixture="png"]) .synthetic-room-image{display:none}
+
+
+/* MVP-11-A — local A/B concept capture and comparison. */
+.ab-panel{margin-top:18px;border-top:1px solid var(--line);padding-top:17px}
+.ab-panel h3{margin:0 0 4px;font-size:17px}
+.ab-intro{margin:0 0 14px;color:var(--muted);font-size:12px}
+.ab-slots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.ab-slot{border:1px solid var(--line);border-radius:10px;padding:12px;min-width:0;background:#fbfbf8}
+.ab-slot strong{font-size:14px}
+.ab-slot-status{min-height:51px;overflow-wrap:anywhere;font-size:12px;color:var(--muted);margin:6px 0 11px}
+.ab-actions{display:flex;flex-wrap:wrap;gap:7px}
+.ab-actions .button{flex:1 1 90px;min-width:0;min-height:44px;padding:8px 9px}
+.ab-summary{background:#f2f4ee;color:var(--ink);padding:12px;border-radius:9px;min-height:44px;margin:12px 0;font-size:13px}
+@media(max-width:480px){.ab-slots{grid-template-columns:1fr}.ab-slot-status{min-height:0}}

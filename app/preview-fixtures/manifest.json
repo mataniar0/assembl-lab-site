@@ -1,0 +1,80 @@
+{
+  "schema_version": "ASSEMBL-LAB.MVP-09-C-FIXTURES.1",
+  "generated_at": null,
+  "origin": "Original deterministic indexed PNG generator; test scenarios adapted from MVP-07 but binaries are not byte-identical to the MVP-07 export",
+  "source_generator": "app/preview-fixtures/generate-fixtures.mjs",
+  "license": "Project-created procedural illustration; no external assets",
+  "dimensions_px": {
+    "width": 384,
+    "height": 384
+  },
+  "png_color_type": "indexed_4bit",
+  "contains_exif": false,
+  "contains_customer_media": false,
+  "generated_by_ai": false,
+  "fixtures": [
+    {
+      "id": "SC-01",
+      "name_he": "קיר נייטרלי",
+      "name_en": "Neutral wall",
+      "sha256": "34f7ec60a039b70c36d9bad93ed53fb86686e0ab987f8f4b31868d89b6dbc7cf",
+      "features": [
+        "wall",
+        "floor"
+      ],
+      "file": "SC-01.png",
+      "bytes": 74245
+    },
+    {
+      "id": "SC-02",
+      "name_he": "חלון משמאל",
+      "name_en": "Left window",
+      "sha256": "11fb25ed318c6a756d747be975974a608747887fadc08d2a9e0e26bdacc44e09",
+      "features": [
+        "window",
+        "floor"
+      ],
+      "file": "SC-02.png",
+      "bytes": 74245
+    },
+    {
+      "id": "SC-04",
+      "name_he": "עציץ בפינה",
+      "name_en": "Corner plant",
+      "sha256": "c259d80c4b8567cde92e7e35692a429d90f1f95dd9433ee439724b21dd5ad605",
+      "features": [
+        "plant",
+        "floor"
+      ],
+      "file": "SC-04.png",
+      "bytes": 74245
+    },
+    {
+      "id": "SC-07",
+      "name_he": "קיר ירקרק ומנורה",
+      "name_en": "Olive wall and lamp",
+      "sha256": "925401fc92004e88c63fc269b084184f094c1e848507546940215862912cdaa0",
+      "features": [
+        "olive_wall",
+        "lamp",
+        "plant"
+      ],
+      "file": "SC-07.png",
+      "bytes": 74245
+    },
+    {
+      "id": "SC-10",
+      "name_he": "חלון וחפצים",
+      "name_en": "Window with objects",
+      "sha256": "af4b429596b922ff79a2dacf4c64181762d0e88f547354d7bf1e81d6d2c8fab1",
+      "features": [
+        "window",
+        "lamp",
+        "plant",
+        "cool_floor"
+      ],
+      "file": "SC-10.png",
+      "bytes": 74245
+    }
+  ]
+}
