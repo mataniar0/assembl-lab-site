@@ -204,3 +204,19 @@ test('plans are immutable, registered by the local planner and cannot be modifie
  assert.throws(()=>{plan.fixture.sha256='0'.repeat(64);},TypeError);
  assert.deepEqual(createDryRunLedger().accept(plan),{replayed:false,submitted:false,paid_calls:0});
 });
+
+test('non-enumerable fields, symbol keys and accessor getters are denied',()=>{
+ const hidden=input();
+ Object.defineProperty(hidden,'photo_url',{value:'private-photo',enumerable:false});
+ assert.throws(()=>planSyntheticEdit(hidden),/UNAPPROVED_REQUEST_FIELD/);
+ const symbolInput=input();
+ symbolInput[Symbol('secret')]='private';
+ assert.throws(()=>planSyntheticEdit(symbolInput),/UNAPPROVED_REQUEST_FIELD/);
+ const getter=input();
+ Object.defineProperty(getter,'sceneId',{get(){throw new Error('Getter invoked');},enumerable:true});
+ assert.throws(()=>planSyntheticEdit(getter),/ACCESSOR_NOT_ALLOWED/);
+ const nested=input();
+ const altered={...nested.review};
+ Object.defineProperty(altered,'notes',{value:'some private details',enumerable:false});
+ assert.throws(()=>planSyntheticEdit({...nested,review:altered}),/UNAPPROVED_REVIEW_FIELD/);
+});
