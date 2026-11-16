@@ -80,11 +80,18 @@ jobs:
       - name: Rebuild MEB-033 V3 model (candidate for inspection only)
         shell: bash
         env:
-          MEB033_EXPORT_BASE64: "1"
+          MEB033_EXPORT_BASE64: "0"
         run: |
           set -euo pipefail
           python scripts/build_meb033_v3.py > .qa-reports/ci/meb033-v3-model.log
           cat .qa-reports/ci/meb033-v3-model.log
+
+      - name: Render corrected MEB-033 V3 visual for independent QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          .venv-qa/bin/python scripts/export_meb033_v3_poster.py > .qa-reports/ci/meb033-v3-visual-export.log
+          cat .qa-reports/ci/meb033-v3-visual-export.log
 
       - name: Validate MEB-033 page contract
         shell: bash
