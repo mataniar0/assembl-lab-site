@@ -28,8 +28,9 @@ with site_server(ROOT) as base,sync_playwright() as pw:
     page.wait_for_timeout(600)
     img=viewer.screenshot(type="png")
     print("MEB033_V3_SCREENSHOT",json.dumps({"bytes":len(img),"sha256":hashlib.sha256(img).hexdigest()}),flush=True)
-    print("MEB033_V3_PNG_BASE64_BEGIN",flush=True)
-    enc=base64.b64encode(img).decode("ascii")
-    for i in range(0,len(enc),4096):print("MEB033_V3_PNG_CHUNK:"+enc[i:i+4096],flush=True)
-    print("MEB033_V3_PNG_BASE64_END",flush=True)
+    if os.environ.get("MEB033_EXPORT_PNG_BASE64")=="1":
+        print("MEB033_V3_PNG_BASE64_BEGIN",flush=True)
+        enc=base64.b64encode(img).decode("ascii")
+        for i in range(0,len(enc),4096):print("MEB033_V3_PNG_CHUNK:"+enc[i:i+4096],flush=True)
+        print("MEB033_V3_PNG_BASE64_END",flush=True)
     browser.close()

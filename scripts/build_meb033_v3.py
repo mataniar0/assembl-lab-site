@@ -53,6 +53,8 @@ out=struct.pack("<III",0x46546c67,2,total)
 out+=struct.pack("<II",len(j),0x4e4f534a)+j
 out+=struct.pack("<II",len(binary),0x004e4942)+binary
 assert len(out)==total
+if destination.exists():
+    assert destination.read_bytes()==out, "V3 GLB is stale; the committed binary differs from the deterministic generator"
 destination.write_bytes(out)
 print("MEB033_V3_GENERATED",json.dumps({"bytes":len(out),"translatedVertices":count,"meshCount":len(doc["meshes"]),"sha256":hashlib.sha256(out).hexdigest(),"railBoundingBoxMm":{"zMin":-42.5,"zMax":-38.5}}),flush=True)
 if os.environ.get("MEB033_EXPORT_BASE64")=="1":
