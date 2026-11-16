@@ -4,6 +4,7 @@
  */
 import {CONFIG} from '../app/cloud-api-core.mjs';
 import {fileURLToPath} from 'node:url';
+import {resolve} from 'node:path';
 
 export async function auditPublicAuthSettings({fetchImpl=fetch}={}){
   const response=await fetchImpl(CONFIG.endpoint+'/auth/v1/settings',{
@@ -17,7 +18,7 @@ export async function auditPublicAuthSettings({fetchImpl=fetch}={}){
   const signupDisabled=data.disable_signup===true;
   const emailEnabled=data.external.email===true;
   const emailConfirmationRequired=data.mailer_autoconfirm===false;
-  const anonDisabled=data.external.anonymous_users!==true;
+  const anonDisabled=data.external.anonymous_users===false;
   return Object.freeze({
     project:'assembl-lab-dev',
     scope:'PUBLIC_AUTH_SETTINGS_ONLY',
@@ -26,7 +27,7 @@ export async function auditPublicAuthSettings({fetchImpl=fetch}={}){
     signup:signupDisabled?'DISABLED':'ENABLED',
     email_auth:emailEnabled?'ENABLED':'DISABLED',
     email_confirmation:emailConfirmationRequired?'REQUIRED':'NOT_CONFIRMED_REQUIRED',
-    anonymous_signup:anonDisabled?'DISABLED':'ENABLED',
+    anonymous_signup:anonDisabled?'DISABLED':(data.external.anonymous_users===true?'ENABLED':'UNKNOWN'),
     user_accounts_tested:0,
     credentials_used:false,
     tokens_used:false,
@@ -35,7 +36,7 @@ export async function auditPublicAuthSettings({fetchImpl=fetch}={}){
   });
 }
 
-if(process.argv[1]&&fileURLToPath(import.meta.url)===process.argv[1]){
+if(process.argv[1]&&fileURLToPath(import.meta.url)===resolve(process.argv[1])){
   auditPublicAuthSettings()
     .then(result=>process.stdout.write(JSON.stringify(result,null,2)+'\n'))
     .catch(error=>{
