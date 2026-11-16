@@ -80,12 +80,14 @@ export function makeRestHarness({fetchImpl=fetch}={}){
     if(r.status!==200||!Array.isArray(r.data))stop('PROJECT_SELECT_FAILED_'+r.status);
     return r.data;
   }
-  async function createProject(s){
+  async function createProject(s,id){
+    if(!uuid.test(id))stop('MISSING_PREALLOCATED_TEST_PROJECT_ID');
     const r=await perform('/rest/v1/al_app_projects?select=id',{method:'POST',
       token:s.token,prefer:'return=representation',
-      body:{owner_id:s.id,source_kind:'synthetic',design_intent:syntheticFixture()}});
-    if(r.status!==201||!uuid.test(r.data?.[0]?.id||''))stop('CREATE_SYNTHETIC_PROJECT_FAILED_'+r.status);
-    return r.data[0].id;
+      body:{id,owner_id:s.id,source_kind:'synthetic',design_intent:syntheticFixture()}});
+    if(r.status!==201||r.data?.[0]?.id!==id)
+      stop('CREATE_SYNTHETIC_PROJECT_FAILED_'+r.status);
+    return id;
   }
   async function createMockJob(s,id){
     const r=await perform('/rest/v1/al_app_visualization_jobs?select=id,project_id,status,provider',{
@@ -99,7 +101,9 @@ export function makeRestHarness({fetchImpl=fetch}={}){
   async function deleteProject(s,id){
     const r=await perform('/rest/v1/al_app_projects?id=eq.'+id+'&select=id',{
       method:'DELETE',token:s.token,prefer:'return=representation'});
-    if(r.status!==200||r.data?.[0]?.id!==id)stop('CLEANUP_PROJECT_FAILED_'+r.status);
+    // Zero-row cleanup is valid if the timed-out INSERT never committed.
+    if(r.status!==200||!Array.isArray(r.data)||r.data.some(row=>row.id!==id))
+      stop('CLEANUP_PROJECT_FAILED_'+r.status);
   }
   async function logout(s){
     const r=await perform('/auth/v1/logout',{method:'POST',token:s.token});
@@ -130,7 +134,10 @@ export async function runRealAuthE2E({env=process.env,fetchImpl=fetch}={}){
     if(![401,403].includes(denied.status))stop('INVALID_JWT_WAS_ACCEPTED');
     record('INVALID_JWT_DENIED');
 
-    const aProject=await api.createProject(A);created.push({session:A,id:aProject});
+    // Preallocate and register IDs *before* sending POST, so even a timeout
+    // after a successful server-side insert can be reconciled and deleted.
+    const aProject=crypto.randomUUID();created.push({session:A,id:aProject});
+    await api.createProject(A,aProject);
     await api.createMockJob(A,aProject);
     if((await api.list(A.token,aProject)).length!==1)stop('OWNER_A_CANNOT_READ_OWN');
     record('OWNER_A_CREATE_READ_MOCK_JOB');
@@ -150,7 +157,8 @@ export async function runRealAuthE2E({env=process.env,fetchImpl=fetch}={}){
       if(![401,403].includes(attempt.status))stop('UNAPPROVED_OWNER_B_WRITE_ALLOWED');
       record('UNAPPROVED_OWNER_B_RLS_DENIED');
     }else{
-      const bProject=await api.createProject(B);created.push({session:B,id:bProject});
+      const bProject=crypto.randomUUID();created.push({session:B,id:bProject});
+      await api.createProject(B,bProject);
       await api.createMockJob(B,bProject);
       if((await api.list(B.token,bProject)).length!==1)stop('OWNER_B_CANNOT_READ_OWN');
       if((await api.list(A.token,bProject)).length!==0)stop('OWNER_A_READ_OWNER_B');
