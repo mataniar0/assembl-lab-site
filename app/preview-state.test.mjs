@@ -207,3 +207,17 @@ test('offline A/B accessibility, labels and touch targets remain wired',()=>{
   assert.match(script,/concepts\.A=null;concepts\.B=null/);
   assert.doesNotMatch(script,/localStorage|sessionStorage|indexedDB|\bfetch\s*\(/);
 });
+
+
+test('PWA navigation isolates index cache and precaches only public local preview assets',()=>{
+  const sw=readFileSync(new URL('./sw.js',import.meta.url),'utf8');
+  const index=readFileSync(new URL('./index.html',import.meta.url),'utf8');
+  assert.match(index,/href="\.\/preview-lab\.html"/);
+  assert.match(sw,/const isHome=url\.pathname===scopePath\|\|url\.pathname===scopePath\+'index\.html'/);
+  assert.match(sw,/if\(!isHome\)/);
+  assert.match(sw,/cache\.put\('\.\/index\.html',response\.clone\(\)\)/);
+  for(const id of ['01','02','04','07','10']){
+    assert.match(sw,new RegExp('\\.\\/preview-fixtures\\/SC-'+id+'\\.png'));
+  }
+  assert.doesNotMatch(sw,/cloud-dev\.html|customer|auth\/users|service_role|sb_secret_/i);
+});
