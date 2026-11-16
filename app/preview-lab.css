@@ -38,3 +38,17 @@ button:disabled{opacity:.5;cursor:not-allowed}
 
 /* Avoid broken-image alt boxes in temporary CSS fallback mode. */
 .room:not([data-fixture="png"]) .synthetic-room-image{display:none}
+
+
+/* MVP-11-A — local A/B concept capture and comparison. */
+.ab-panel{margin-top:18px;border-top:1px solid var(--line);padding-top:17px}
+.ab-panel h3{margin:0 0 4px;font-size:17px}
+.ab-intro{margin:0 0 14px;color:var(--muted);font-size:12px}
+.ab-slots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.ab-slot{border:1px solid var(--line);border-radius:10px;padding:12px;min-width:0;background:#fbfbf8}
+.ab-slot strong{font-size:14px}
+.ab-slot-status{min-height:51px;overflow-wrap:anywhere;font-size:12px;color:var(--muted);margin:6px 0 11px}
+.ab-actions{display:flex;flex-wrap:wrap;gap:7px}
+.ab-actions .button{flex:1 1 90px;min-width:0;min-height:44px;padding:8px 9px}
+.ab-summary{background:#f2f4ee;color:var(--ink);padding:12px;border-radius:9px;min-height:44px;margin:12px 0;font-size:13px}
+@media(max-width:480px){.ab-slots{grid-template-columns:1fr}.ab-slot-status{min-height:0}}
