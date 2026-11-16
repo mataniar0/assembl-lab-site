@@ -61,3 +61,6 @@ button:disabled{opacity:.5;cursor:not-allowed}
 .handoff .legal{margin:9px 0 0}
 #download-selected{width:100%;min-height:44px}
 @media(max-width:480px){.handoff .button{min-height:48px}}
+
+.handoff-3d-link{display:block;margin-top:10px;min-height:44px;padding:10px 12px;border:1px solid var(--green);border-radius:9px;color:var(--green);text-align:center;font-size:13px;font-weight:700;text-decoration:none}
+.handoff-3d-link:focus-visible{outline:3px solid var(--accent);outline-offset:3px}

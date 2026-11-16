@@ -6,6 +6,7 @@ on:
       - feature/app-mvp-09-synthetic-room-review
       - feature/app-mvp-09-c-png-review
       - feature/app-mvp-11-a-ab-compare
+      - feature/app-mvp-13-local-3d-preview
   pull_request:
     branches:
       - main
@@ -13,6 +14,10 @@ on:
       - feature/app-mvp-09-c-png-review
     paths:
       - 'app/preview-*'
+      - 'app/concept-*'
+      - 'app/sw.js'
+      - 'app/index.html'
+      - 'tests/app_concept3d_browser_ci.py'
       - 'app/preview-fixtures/**'
       - 'tests/app_preview_browser_ci.py'
       - '.github/workflows/app-visual-review.yml'
@@ -38,10 +43,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          node --check app/concept-geometry.mjs
+          node --check app/concept-3d.mjs
           node --check app/preview-state.mjs
           node --check app/preview-lab.mjs
           node --check app/preview-fixtures/generate-fixtures.mjs
-          node --test app/preview-state.test.mjs app/preview-fixtures/fixtures.test.mjs
+          node --test app/preview-state.test.mjs app/preview-fixtures/fixtures.test.mjs app/concept-geometry.test.mjs
 
   visual-browser-qa:
     name: Mobile/Desktop Chromium synthetic review
@@ -80,11 +87,16 @@ jobs:
           test -x "$browser_path"
           python tests/app_preview_browser_ci.py --browser "$browser_path" \
             --output .qa-reports/app-mvp-09 2>&1 | tee .qa-reports/app-mvp-09/browser.log
+          mkdir -p .qa-reports/app-mvp-13
+          python tests/app_concept3d_browser_ci.py --browser "$browser_path" \
+            --output .qa-reports/app-mvp-13 2>&1 | tee .qa-reports/app-mvp-13/browser.log
       - name: Retain safe synthetic screenshots and QA data
         if: always()
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: app-mvp-09-synthetic-browser-${{ github.run_id }}
-          path: .qa-reports/app-mvp-09/
+          path: |
+            .qa-reports/app-mvp-09/
+            .qa-reports/app-mvp-13/
           if-no-files-found: warn
           retention-days: 14

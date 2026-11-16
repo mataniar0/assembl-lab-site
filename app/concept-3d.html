@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fcfaf7">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<link rel="stylesheet" href="./concept-3d.css">
+<title>ASSEMBL LAB — שידת לילה בתלת־ממד להמחשה</title>
+</head>
+<body>
+<header class="header">
+  <span class="brand" dir="ltr"><span class="brand-mark">A.</span> ASSEMBL LAB</span>
+  <a href="./preview-lab.html" data-he="חזרה להשוואת חלופות" data-en="Back to concept comparison">חזרה להשוואת חלופות</a>
+</header>
+<main class="page">
+  <p class="eyebrow">APP MVP-13 · OFFLINE 3D CONCEPT</p>
+  <div class="heading">
+    <div>
+      <h1 data-he="מהאפיון להמחשה תלת־ממדית" data-en="From design intent to a 3D concept">מהאפיון להמחשה תלת־ממדית</h1>
+      <p data-he="פתחו את קובץ ה־JSON שהורדתם מהשוואת החלופות. אפשר גם לבחון שידה לדוגמה בלי לטעון קובץ." data-en="Open the JSON exported by concept comparison, or explore the sample nightstand without importing a file.">פתחו את קובץ ה־JSON שהורדתם מהשוואת החלופות. אפשר גם לבחון שידה לדוגמה בלי לטעון קובץ.</p>
+    </div>
+    <button id="lang" class="language" type="button" aria-label="החלף שפה">EN</button>
+  </div>
+  <div class="layout">
+    <section class="visual" aria-labelledby="view-title">
+      <div class="visual-head">
+        <h2 id="view-title" data-he="תצוגת תלת־ממד אינטראקטיבית" data-en="Interactive 3D concept">תצוגת תלת־ממד אינטראקטיבית</h2>
+        <span class="chip" data-he="המחשה בלבד" data-en="Concept only">המחשה בלבד</span>
+      </div>
+      <svg id="concept-view" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" tabindex="0" aria-label="שידת לילה תלת־ממדית להמחשה; השתמשו בחצים לסיבוב">
+        <title id="model-title">המחשת שידה תלת־ממדית</title>
+        <rect x="0" y="0" width="800" height="560" fill="#f6f3ec"/>
+        <g id="model-faces"></g>
+      </svg>
+      <p class="hint" data-he="סובבו עם גרירה או באמצעות המחוונים. חצי המקלדת מסובבים את המודל כאשר התצוגה ממוקדת. ניתן להשתמש גם בכפתורי הסיבוב." data-en="Drag to rotate, use the sliders, or use arrow keys when the model is focused. Rotation buttons work too.">סובבו עם גרירה או באמצעות המחוונים. חצי המקלדת מסובבים את המודל כאשר התצוגה ממוקדת. ניתן להשתמש גם בכפתורי הסיבוב.</p>
+      <div class="orbit-actions">
+        <button type="button" id="orbit-left" data-he="שמאלה" data-en="Left">שמאלה</button>
+        <button type="button" id="orbit-right" data-he="ימינה" data-en="Right">ימינה</button>
+        <button type="button" id="orbit-up" data-he="למעלה" data-en="Up">למעלה</button>
+        <button type="button" id="orbit-down" data-he="למטה" data-en="Down">למטה</button>
+        <button type="button" id="orbit-reset" data-he="אפס תצוגה" data-en="Reset view">אפס תצוגה</button>
+      </div>
+      <div class="ranges">
+        <label for="azimuth"><span data-he="סיבוב" data-en="Rotation">סיבוב</span> <output id="azimuth-out">32°</output></label>
+        <input id="azimuth" type="range" min="0" max="360" step="1" value="32">
+        <label for="elevation"><span data-he="זווית גובה" data-en="Elevation">זווית גובה</span> <output id="elevation-out">27°</output></label>
+        <input id="elevation" type="range" min="10" max="70" step="1" value="27">
+        <label for="zoom"><span data-he="הגדלה" data-en="Zoom">הגדלה</span> <output id="zoom-out">100%</output></label>
+        <input id="zoom" type="range" min="60" max="160" step="1" value="100">
+      </div>
+    </section>
+    <section class="controls" aria-labelledby="controls-title">
+      <h2 id="controls-title" data-he="בחירת אפיון" data-en="Design input">בחירת אפיון</h2>
+      <p class="small" data-he="הנתונים נשארים בזיכרון הדף. אין העלאה, התחברות או עיבוד AI." data-en="Data stays in page memory. No upload, sign-in or AI processing.">הנתונים נשארים בזיכרון הדף. אין העלאה, התחברות או עיבוד AI.</p>
+      <label for="concept-file" data-he="טען קובץ אפיון JSON מקומי (עד 16KB)" data-en="Import a local Design Intent JSON (up to 16KB)">טען קובץ אפיון JSON מקומי (עד 16KB)</label>
+      <input type="file" id="concept-file" accept=".json,application/json">
+      <div class="inline-actions"><button id="load-demo" type="button" data-he="הצג דגם לדוגמה" data-en="Show sample model">הצג דגם לדוגמה</button></div>
+      <p id="load-status" role="status" aria-live="polite"></p>
+      <h3 data-he="מידות תצוגה משוערות (מ״מ)" data-en="Provisional dimensions (mm)">מידות תצוגה משוערות (מ״מ)</h3>
+      <div class="dimensions">
+        <label for="width-mm" data-he="רוחב" data-en="Width">רוחב</label>
+        <input id="width-mm" type="number" inputmode="numeric" min="200" max="900" step="1" value="500">
+        <label for="height-mm" data-he="גובה" data-en="Height">גובה</label>
+        <input id="height-mm" type="number" inputmode="numeric" min="250" max="950" step="1" value="550">
+        <label for="depth-mm" data-he="עומק" data-en="Depth">עומק</label>
+        <input id="depth-mm" type="number" inputmode="numeric" min="200" max="600" step="1" value="350">
+      </div>
+      <p class="small" data-he="שינוי מידות משנה את ההמחשה בלבד ואינו משנה את קובץ המקור." data-en="Changing dimensions updates only the concept view and never edits the source file.">שינוי מידות משנה את ההמחשה בלבד ואינו משנה את קובץ המקור.</p>
+      <h3 data-he="סיכום מודל נגיש" data-en="Accessible model summary">סיכום מודל נגיש</h3>
+      <div id="model-summary" class="summary" role="status" aria-live="polite"></div>
+      <p class="warning" data-he="המודל הוא המחשת נפחים ללא מידול חיבורים, עומסים, מרווחי מגירות או אימות ייצור. לא ניתן להשתמש בו כקובץ CNC/לייזר." data-en="Schematic volume model only. No joint, load, drawer-clearance or manufacturing validation. Not a CNC/laser cutting file.">המודל הוא המחשת נפחים ללא מידול חיבורים, עומסים, מרווחי מגירות או אימות ייצור. לא ניתן להשתמש בו כקובץ CNC/לייזר.</p>
+    </section>
+  </div>
+</main>
+<footer>ASSEMBL LAB · LOCAL CONCEPT 3D · NO CLOUD / NO AI / NO MANUFACTURING APPROVAL</footer>
+<script type="module" src="./concept-3d.mjs"></script>
+</body>
+</html>
