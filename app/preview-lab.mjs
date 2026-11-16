@@ -2,7 +2,7 @@
  * All concept versions live in page memory and disappear on refresh.
  */
 import {normalizeReview,sceneFor,viewFor,fittedPlacement,designIntentFor,
-  captureConcept,reviewFromConcept,compareConcepts} from './preview-state.mjs';
+  captureConcept,reviewFromConcept,compareConcepts,selectedConceptPackage} from './preview-state.mjs';
 
 const el=id=>document.getElementById(id);
 const lang=()=>document.documentElement.lang==='en'?'en':'he';
@@ -10,6 +10,7 @@ const phrase=(he,en)=>lang()==='he'?he:en;
 let state=normalizeReview();
 let preferred=null;
 const concepts={A:null,B:null};
+let chosenSlot=null;
 
 function currentInput(){
   return normalizeReview({
@@ -54,7 +55,15 @@ function renderConcepts(){
     el('concept-'+lower+'-status').textContent=conceptDescription(concepts[key]);
     el('restore-'+lower).disabled=!concepts[key];
     el('capture-'+lower).disabled=state.view==='before';
+    el('choose-'+lower).disabled=!concepts[key];
+    el('choose-'+lower).setAttribute('aria-pressed',String(chosenSlot===key));
   }
+  el('download-selected').disabled=!chosenSlot;
+  el('selected-status').textContent=chosenSlot?
+    phrase('נבחרה חלופה ','Selected concept ')+chosenSlot+
+      phrase(' · אפשר להוריד אפיון מקומי ללא פרטים אישיים.',
+        ' · Download a local specification without personal data.'):
+    phrase('טרם נבחרה חלופה סופית.','No final concept selected yet.');
   const diff=compareConcepts(concepts.A,concepts.B);
   if(!diff.ready){
     el('ab-summary').textContent=phrase(
@@ -178,7 +187,7 @@ el('compare-view').addEventListener('click',()=>{
     comparison:state.comparison_percent,view:state.view==='compare'?'after':'compare'});
   refresh();
 });
-el('reset').addEventListener('click',()=>{state=normalizeReview();preferred=null;concepts.A=null;concepts.B=null;syncInputs();refresh();});
+el('reset').addEventListener('click',()=>{state=normalizeReview();preferred=null;concepts.A=null;concepts.B=null;chosenSlot=null;syncInputs();refresh();});
 el('save-preferred').addEventListener('click',()=>{
   if(state.view==='before')return;
   preferred=normalizeReview({sceneId:state.scene_id,position:state.position_percent,
@@ -195,6 +204,7 @@ for(const [key,lower] of [['A','a'],['B','b']]){
   el('capture-'+lower).addEventListener('click',()=>{
     if(state.view==='before')return;
     concepts[key]=captureConcept(state);
+    if(chosenSlot===key)chosenSlot=null;
     refresh();
   });
   el('restore-'+lower).addEventListener('click',()=>{
@@ -203,7 +213,31 @@ for(const [key,lower] of [['A','a'],['B','b']]){
     syncInputs();
     refresh();
   });
+  el('choose-'+lower).addEventListener('click',()=>{
+    if(!concepts[key])return;
+    chosenSlot=key;
+    state=reviewFromConcept(concepts[key]);
+    syncInputs();
+    refresh();
+  });
+
 }
+
+
+el('download-selected').addEventListener('click',()=>{
+  if(!chosenSlot||!concepts[chosenSlot])return;
+  const payload=selectedConceptPackage(chosenSlot,concepts[chosenSlot]);
+  const blob=new Blob([JSON.stringify(payload,null,2)+'\n'],{type:'application/json'});
+  const url=URL.createObjectURL(blob);
+  const link=document.createElement('a');
+  link.href=url;
+  link.download='assembl-lab-selected-concept-'+chosenSlot+'.json';
+  link.hidden=true;
+  document.body.append(link);
+  link.click();
+  link.remove();
+  window.setTimeout(()=>URL.revokeObjectURL(url),1000);
+});
 
 el('lang').addEventListener('click',()=>{
   document.documentElement.lang=lang()==='he'?'en':'he';

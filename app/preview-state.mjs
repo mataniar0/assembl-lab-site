@@ -147,3 +147,31 @@ export function compareConcepts(a,b){
   const changed=Object.freeze(names.filter(([,field])=>a[field]!==b[field]).map(([name])=>name));
   return Object.freeze({ready:true,changed,identical:changed.length===0});
 }
+
+
+/* MVP-12: only an explicitly captured synthetic concept can be handed off.
+ * This is design intent, not actual CAD, a rendered customer image or approval.
+ */
+export function selectedConceptPackage(slot,concept){
+  if(slot!=='A'&&slot!=='B')throw new RangeError('unknown_concept_slot');
+  const selected=reviewFromConcept(concept);
+  const review=Object.freeze({
+    scene_id:selected.scene_id,
+    finish:selected.finish,
+    drawers:selected.drawers,
+    horizontal_position_percent:selected.position_percent,
+    illustrative_scale_percent:selected.scale_percent
+  });
+  const intent=designIntentFor(selected);
+  return Object.freeze({
+    schema_version:'ASSEMBL-LAB.SELECTED-CONCEPT.0.1',
+    source_kind:'synthetic',
+    selected_slot:slot,
+    scene_id:selected.scene_id,
+    review,
+    design_intent:intent,
+    photo_included:false,
+    engineering_approval:false,
+    manufacturing_approval:false
+  });
+}
