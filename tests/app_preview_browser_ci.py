@@ -134,6 +134,30 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 expect(page.locator("#drawers")).to_have_value("2")
                 expect(page.locator("#finish")).to_have_value("walnut")
 
+                # MVP-11-A: two independent, session-only synthetic A/B concepts.
+                page.locator("#capture-a").click()
+                expect(page.locator("#restore-a")).to_be_enabled()
+                expect(page.locator("#concept-a-status")).to_contain_text("חלון משמאל")
+                page.locator("#scene").select_option("SC-04")
+                page.locator("#finish").select_option("natural")
+                page.locator("#drawers").select_option("1")
+                page.locator("#capture-b").click()
+                expect(page.locator("#restore-b")).to_be_enabled()
+                expect(page.locator("#concept-b-status")).to_contain_text("עציץ בפינה")
+                expect(page.locator("#ab-summary")).to_contain_text("הבדלים בין")
+                expect(page.locator("#ab-summary")).to_contain_text("מגירות")
+                page.locator("#restore-a").click()
+                expect(page.locator("#scene")).to_have_value("SC-02")
+                expect(page.locator("#finish")).to_have_value("walnut")
+                expect(page.locator("#drawers")).to_have_value("2")
+                page.locator("#lang").click()
+                expect(page.locator("#ab-summary")).to_contain_text("A/B differences")
+                page.locator("#lang").click()
+                page.locator("#toggle-view").click()
+                expect(page.locator("#capture-a")).to_be_disabled()
+                expect(page.locator("#capture-b")).to_be_disabled()
+                page.locator("#toggle-view").click()
+
                 # All newly added image scenes must have their own local pixels.
                 for id in ["SC-04", "SC-07", "SC-10"]:
                     page.locator("#scene").select_option(id)
@@ -177,6 +201,8 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 expect(page.locator("#scale")).to_have_value("88")
                 expect(page.locator("#position")).to_have_value("52")
                 assert page.locator("#restore-preferred").is_disabled()
+                assert page.locator("#restore-a").is_disabled()
+                assert page.locator("#restore-b").is_disabled()
                 expect(page.locator("#preferred-status")).to_contain_text("טרם סומנה")
 
                 if width <= 390:
@@ -206,6 +232,27 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 )
                 print("PASS", width, height, "scene/finish/drawers/compare/keyboard/preference/resize/language")
                 context.close()
+            # MVP-11-A: prove navigation does not poison the cached PWA home.
+            pwa_context = browser.new_context(viewport={"width": 390, "height": 844})
+            pwa = pwa_context.new_page()
+            pwa.goto(root + "/app/index.html", wait_until="networkidle")
+            expect(pwa.locator('a[href="./preview-lab.html"]')).to_be_visible()
+            pwa.evaluate("""async () => {
+                const registration = await navigator.serviceWorker.ready;
+                await registration.update();
+            }""")
+            pwa.goto(root + "/app/preview-lab.html", wait_until="networkidle")
+            expect(pwa.locator("#room")).to_have_attribute("data-fixture", "png")
+            pwa_context.set_offline(True)
+            pwa.goto(root + "/app/index.html", wait_until="domcontentloaded")
+            expect(pwa.locator("#intro-title")).to_be_visible()
+            assert pwa.locator("#ab-summary").count() == 0, (
+                "Offline home must not be replaced by preview page"
+            )
+            pwa.goto(root + "/app/preview-lab.html", wait_until="domcontentloaded")
+            expect(pwa.locator("#ab-summary")).to_be_visible()
+            pwa_context.close()
+
             # Failure injection: missing local PNG should never blank the room.
             fallback = browser.new_context(viewport={"width":390, "height":844})
             fallback_page = fallback.new_page()

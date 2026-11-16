@@ -1,7 +1,8 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {normalizeReview,sceneFor,viewFor,SCENES,fittedPlacement,designIntentFor} from './preview-state.mjs';
+import {normalizeReview,sceneFor,viewFor,SCENES,fittedPlacement,designIntentFor,
+  captureConcept,reviewFromConcept,compareConcepts} from './preview-state.mjs';
 
 test('five recognized synthetic PNG-backed fixture scenarios only',()=>{
   assert.deepEqual(SCENES.map(s=>s.id),['SC-01','SC-02','SC-04','SC-07','SC-10']);
@@ -157,4 +158,66 @@ test('height-aware furniture fitting prevents vertical cropping in square image 
       assert.ok(fit.effective_percent >= 0 && fit.effective_percent <=100);
     }
   }
+});
+
+test('A/B concepts are independent normalized in-memory snapshots',()=>{
+  const a=captureConcept(normalizeReview({sceneId:'SC-02',finish:'walnut',drawers:2,position:58,scale:96}));
+  const b=captureConcept(normalizeReview({sceneId:'SC-04',finish:'honey',drawers:1,position:40,scale:80}));
+  assert.ok(Object.isFrozen(a));
+  assert.equal(a.scene_id,'SC-02');
+  assert.equal(b.scene_id,'SC-04');
+  assert.deepEqual(compareConcepts(a,b).changed,['scene','finish','drawers','position','scale']);
+  const restored=reviewFromConcept(a);
+  assert.equal(restored.view,'after');
+  assert.equal(restored.finish,'walnut');
+  assert.equal(restored.drawers,2);
+  assert.equal(restored.position_percent,58);
+});
+test('A/B compares equal designs and supports an unset slot',()=>{
+  const a=captureConcept(normalizeReview());
+  const b=captureConcept(normalizeReview());
+  assert.equal(compareConcepts(a,b).identical,true);
+  assert.deepEqual(compareConcepts(a,null).changed,[]);
+  assert.equal(compareConcepts(a,null).ready,false);
+});
+test('concept snapshots reject the before view, invalid references and sensitive fields',()=>{
+  assert.throws(()=>captureConcept(normalizeReview({view:'before'})),/before_view_has_no_concept/);
+  assert.throws(()=>captureConcept(null),TypeError);
+  const a=captureConcept({
+    sceneId:'SC-07',finish:'walnut',drawers:2,position:53,scale:91,
+    photo:'customer private photo',notes:'sensitive',
+    customerEmail:'private@example.invalid',url:'https://private.invalid'
+  });
+  assert.equal(Object.keys(a).length,5);
+  assert.doesNotMatch(JSON.stringify(a),/customer|private|notes|photo|url/i);
+  const forged={...a};
+  assert.throws(()=>reviewFromConcept(forged),/unknown_concept/);
+  assert.throws(()=>compareConcepts(a,forged),/unknown_concept/);
+});
+test('offline A/B accessibility, labels and touch targets remain wired',()=>{
+  const html=readFileSync(new URL('./preview-lab.html',import.meta.url),'utf8');
+  const css=readFileSync(new URL('./preview-lab.css',import.meta.url),'utf8');
+  const script=readFileSync(new URL('./preview-lab.mjs',import.meta.url),'utf8');
+  for(const id of ['capture-a','capture-b','restore-a','restore-b','ab-summary']){
+    assert.match(html,new RegExp('id="'+id+'"'));
+  }
+  assert.match(html,/id="ab-summary"[^>]*aria-live="polite"/);
+  assert.match(html,/data-en="Compare concepts A \/ B"/);
+  assert.match(css,/\.ab-actions \.button\{[^}]*min-height:44px/);
+  assert.match(script,/concepts\.A=null;concepts\.B=null/);
+  assert.doesNotMatch(script,/localStorage|sessionStorage|indexedDB|\bfetch\s*\(/);
+});
+
+
+test('PWA navigation isolates index cache and precaches only public local preview assets',()=>{
+  const sw=readFileSync(new URL('./sw.js',import.meta.url),'utf8');
+  const index=readFileSync(new URL('./index.html',import.meta.url),'utf8');
+  assert.match(index,/href="\.\/preview-lab\.html"/);
+  assert.match(sw,/const isHome=url\.pathname===scopePath\|\|url\.pathname===scopePath\+'index\.html'/);
+  assert.match(sw,/if\(!isHome\)/);
+  assert.match(sw,/cache\.put\('\.\/index\.html',response\.clone\(\)\)/);
+  for(const id of ['01','02','04','07','10']){
+    assert.match(sw,new RegExp('\\.\\/preview-fixtures\\/SC-'+id+'\\.png'));
+  }
+  assert.doesNotMatch(sw,/cloud-dev\.html|customer|auth\/users|service_role|sb_secret_/i);
 });

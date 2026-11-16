@@ -103,3 +103,47 @@ export function designIntentFor(review){
     manufacturing_approval:false
   });
 }
+
+
+/* MVP-11-A: A/B concept snapshots are private in-memory value objects.
+ * Accept only normalized visual fields. No photos, URLs, notes, accounts or storage.
+ */
+const issuedConcepts=new WeakSet();
+export function captureConcept(review){
+  if(!review||typeof review!=='object'||Array.isArray(review))
+    throw new TypeError('concept_review_required');
+  if(review.view==='before')throw new RangeError('before_view_has_no_concept');
+  const n=normalizeReview({
+    sceneId:review.scene_id ?? review.sceneId,
+    position:review.position_percent ?? review.position,
+    scale:review.scale_percent ?? review.scale,
+    finish:review.finish,
+    drawers:review.drawers,
+    view:'after'
+  });
+  const concept=Object.freeze({
+    scene_id:n.scene_id,position_percent:n.position_percent,
+    scale_percent:n.scale_percent,finish:n.finish,drawers:n.drawers
+  });
+  issuedConcepts.add(concept);
+  return concept;
+}
+export function reviewFromConcept(concept){
+  if(!concept||!issuedConcepts.has(concept))throw new TypeError('unknown_concept');
+  return normalizeReview({
+    sceneId:concept.scene_id,position:concept.position_percent,
+    scale:concept.scale_percent,finish:concept.finish,drawers:concept.drawers,
+    view:'after'
+  });
+}
+export function compareConcepts(a,b){
+  if(!a||!b)return Object.freeze({ready:false,changed:Object.freeze([]),identical:false});
+  if(!issuedConcepts.has(a)||!issuedConcepts.has(b))
+    throw new TypeError('unknown_concept');
+  const names=Object.freeze([
+    ['scene','scene_id'],['finish','finish'],['drawers','drawers'],
+    ['position','position_percent'],['scale','scale_percent']
+  ]);
+  const changed=Object.freeze(names.filter(([,field])=>a[field]!==b[field]).map(([name])=>name));
+  return Object.freeze({ready:true,changed,identical:changed.length===0});
+}
