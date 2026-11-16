@@ -15,6 +15,9 @@ const manifest=JSON.parse(readFileSync(
 ));
 const ids=new Map(manifest.fixtures.map(x=>[x.id,Object.freeze({...x})]));
 const sha256=b=>createHash('sha256').update(b).digest('hex');
+// Unforgeable in-process provenance: summaries cannot be accepted merely because
+// a caller copied the public JSON fields of a previously issued plan.
+const issuedPlans=new WeakSet();
 
 function fail(code){throw new Error(code);}
 function plain(v){return v!==null&&typeof v==='object'&&!Array.isArray(v)&&Object.getPrototypeOf(v)===Object.prototype;}
@@ -76,7 +79,9 @@ export function planSyntheticEdit(input){
     manufacturing_approval:false,
     reason:'OFFLINE_ONLY_PENDING_SEPARATE_OWNER_APPROVAL'
   };
-  return Object.freeze(summary);
+  const issued=Object.freeze(summary);
+  issuedPlans.add(issued);
+  return issued;
 }
 
 
@@ -88,7 +93,8 @@ export function createDryRunLedger(){
   const seen=new Map();
   return Object.freeze({
     accept(plan){
-      if(!plain(plan)||plan.version!==PILOT_VERSION||plan.mode!=='DRY_RUN_ONLY'||
+      if(!plain(plan)||!issuedPlans.has(plan)||
+         plan.version!==PILOT_VERSION||plan.mode!=='DRY_RUN_ONLY'||
          typeof plan.request_id!=='string'||typeof plan.intent_sha256!=='string'||
          typeof plan.fixture?.sha256!=='string'||plan.sent_to_provider!==false||
          plan.paid_calls!==0||plan.network_calls!==0)
