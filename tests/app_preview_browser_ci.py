@@ -134,6 +134,30 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 expect(page.locator("#drawers")).to_have_value("2")
                 expect(page.locator("#finish")).to_have_value("walnut")
 
+                # MVP-11-A: two independent, session-only synthetic A/B concepts.
+                page.locator("#capture-a").click()
+                expect(page.locator("#restore-a")).to_be_enabled()
+                expect(page.locator("#concept-a-status")).to_contain_text("חלון משמאל")
+                page.locator("#scene").select_option("SC-04")
+                page.locator("#finish").select_option("natural")
+                page.locator("#drawers").select_option("1")
+                page.locator("#capture-b").click()
+                expect(page.locator("#restore-b")).to_be_enabled()
+                expect(page.locator("#concept-b-status")).to_contain_text("עציץ בפינה")
+                expect(page.locator("#ab-summary")).to_contain_text("הבדלים בין")
+                expect(page.locator("#ab-summary")).to_contain_text("מגירות")
+                page.locator("#restore-a").click()
+                expect(page.locator("#scene")).to_have_value("SC-02")
+                expect(page.locator("#finish")).to_have_value("walnut")
+                expect(page.locator("#drawers")).to_have_value("2")
+                page.locator("#lang").click()
+                expect(page.locator("#ab-summary")).to_contain_text("A/B differences")
+                page.locator("#lang").click()
+                page.locator("#toggle-view").click()
+                expect(page.locator("#capture-a")).to_be_disabled()
+                expect(page.locator("#capture-b")).to_be_disabled()
+                page.locator("#toggle-view").click()
+
                 # All newly added image scenes must have their own local pixels.
                 for id in ["SC-04", "SC-07", "SC-10"]:
                     page.locator("#scene").select_option(id)
@@ -177,6 +201,8 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 expect(page.locator("#scale")).to_have_value("88")
                 expect(page.locator("#position")).to_have_value("52")
                 assert page.locator("#restore-preferred").is_disabled()
+                assert page.locator("#restore-a").is_disabled()
+                assert page.locator("#restore-b").is_disabled()
                 expect(page.locator("#preferred-status")).to_contain_text("טרם סומנה")
 
                 if width <= 390:
