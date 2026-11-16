@@ -1,0 +1,64 @@
+name: APP MVP-08 live Auth public settings (read-only)
+
+on:
+  push:
+    branches:
+      - feature/app-mvp-08-supabase-auth-lab
+    paths:
+      - 'tests/app_auth_server_readiness*'
+      - '.github/workflows/app-auth-live-readiness.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tests/app_auth_server_readiness*'
+      - '.github/workflows/app-auth-live-readiness.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  read-only-auth:
+    name: Verify live public GoTrue flags (no user credentials)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - name: Checkout
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test public Auth settings reader
+        run: |
+          set -euo pipefail
+          node --check tests/app_auth_server_readiness.mjs
+          node --test tests/app_auth_server_readiness.test.mjs
+      - name: Read real Supabase public settings (GET only)
+        run: |
+          set -euo pipefail
+          mkdir -p .qa-reports/auth-public
+          node tests/app_auth_server_readiness.mjs > .qa-reports/auth-public/readiness.json
+          python3 -m json.tool .qa-reports/auth-public/readiness.json >/dev/null
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('.qa-reports/auth-public/readiness.json').read_text())
+          print('Auth signup:',r['signup'])
+          print('Email login:',r['email_auth'])
+          print('Email confirmation:',r['email_confirmation'])
+          print('Anonymous signup:',r['anonymous_signup'])
+          print('Release gate:',r['status'])
+          assert r['credentials_used']==False and r['tokens_used']==False
+          assert r['data_mutated']==False
+          PY
+      - name: Retain non-sensitive status only
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: auth-public-readiness-${{ github.run_id }}
+          path: .qa-reports/auth-public/readiness.json
+          if-no-files-found: warn
+          retention-days: 14
