@@ -96,6 +96,30 @@
         <button id="restore-preferred" type="button" class="button outline" disabled data-he="חזור לגרסה המועדפת" data-en="Restore preferred concept">חזור לגרסה המועדפת</button>
       </div>
       <p class="status" id="preferred-status" role="status" aria-live="polite" data-he="טרם סומנה גרסה מועדפת." data-en="No preferred concept selected yet.">טרם סומנה גרסה מועדפת.</p>
+
+      <section class="ab-panel" aria-labelledby="ab-title">
+        <h3 id="ab-title" data-he="השוואת חלופות A / B" data-en="Compare concepts A / B">השוואת חלופות A / B</h3>
+        <p class="ab-intro" data-he="שמרו שתי חלופות והשוו ביניהן. הבחירות נשמרות בזיכרון הדף בלבד." data-en="Capture two concepts and compare them. Choices stay in page memory only.">שמרו שתי חלופות והשוו ביניהן. הבחירות נשמרות בזיכרון הדף בלבד.</p>
+        <div class="ab-slots">
+          <div class="ab-slot">
+            <strong data-he="חלופה A" data-en="Concept A">חלופה A</strong>
+            <p id="concept-a-status" class="ab-slot-status"></p>
+            <div class="ab-actions">
+              <button id="capture-a" class="button secondary" type="button" data-he="שמור A" data-en="Capture A">שמור A</button>
+              <button id="restore-a" class="button outline" type="button" disabled data-he="הצג A" data-en="Show A">הצג A</button>
+            </div>
+          </div>
+          <div class="ab-slot">
+            <strong data-he="חלופה B" data-en="Concept B">חלופה B</strong>
+            <p id="concept-b-status" class="ab-slot-status"></p>
+            <div class="ab-actions">
+              <button id="capture-b" class="button secondary" type="button" data-he="שמור B" data-en="Capture B">שמור B</button>
+              <button id="restore-b" class="button outline" type="button" disabled data-he="הצג B" data-en="Show B">הצג B</button>
+            </div>
+          </div>
+        </div>
+        <p id="ab-summary" class="ab-summary" role="status" aria-live="polite"></p>
+      </section>
       <p class="legal" data-he="שידת לילה לדוגמה · לביד בירץ׳ 6 מ״מ. פרופורציות אינן תחליף למדידות, CAD או בדיקות יציבות ובטיחות." data-en="Example nightstand · 6 mm birch plywood. Proportions do not replace measurements, CAD, or safety/structural validation.">שידת לילה לדוגמה · לביד בירץ׳ 6 מ״מ. פרופורציות אינן תחליף למדידות, CAD או בדיקות יציבות ובטיחות.</p>
     </section>
   </div>
