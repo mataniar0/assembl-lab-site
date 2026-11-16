@@ -67,9 +67,9 @@ for key in ("OUTER_FASCIA_L","OUTER_FASCIA_R","FASCIA_HIDDEN_BACKER_L","FASCIA_H
     assert not covers_yz(key,75,36.5),(key,"hinge hole was filled")
 for key in ("OUTER_FASCIA_L","OUTER_FASCIA_R","FASCIA_HIDDEN_BACKER_L","FASCIA_HIDDEN_BACKER_R"):
     assert covers_yz(key,40,0),(key,"face mistakenly empty")
-assert 'data-model-src="media/meb033-assembly-v2.glb"' in page
-assert 'class="three-poster" src="media/meb033-assembly-v2-poster.svg"' in page
-assert "meb033-assembly-preview.glb" not in page
+assert 'data-model-src="media/meb033-assembly-v3.glb"' in page
+assert 'class="three-poster" src="media/meb033-assembly-v3-poster.png"' in page
+assert "meb033-assembly-preview.glb" not in page and 'data-model-src="media/meb033-assembly-v2.glb"' not in page
 for k in ("data-three-preview","data-three-open","data-three-close","three-preview.css","three-preview.js"):
     assert k in page
 for raw,keys in ((page,("three.title","three.design","three.alt","three.ready","three.error","status.meb033")),(home,("home.megillah.copy","catalog.megillah.status"))):
