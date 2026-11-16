@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {normalizeReview,sceneFor,viewFor,SCENES,fittedPlacement,designIntentFor} from './preview-state.mjs';
 
-test('three recognized synthetic fixture scenarios only',()=>{
-  assert.deepEqual(SCENES.map(s=>s.id),['SC-01','SC-02','SC-04']);
+test('five recognized synthetic PNG-backed fixture scenarios only',()=>{
+  assert.deepEqual(SCENES.map(s=>s.id),['SC-01','SC-02','SC-04','SC-07','SC-10']);
   assert.equal(sceneFor('SC-02').kind,'window');
   assert.equal(sceneFor('unknown').id,'SC-01');
 });
@@ -138,4 +138,23 @@ test('visual-review UI provides accessible comparison and preference controls',(
   assert.match(html,/id="preferred-status"[^>]*aria-live="polite"/);
   assert.match(css,/\.room\.compare \.room-after-layer\{clip-path:/);
   assert.match(css,/prefers-reduced-motion:reduce/);
+});
+
+test('fixture paths are locally whitelisted and cannot be altered by query or image URLs',()=>{
+  const expected=['SC-01','SC-02','SC-04','SC-07','SC-10'];
+  assert.deepEqual(SCENES.map(s=>s.png),expected.map(id=>'./preview-fixtures/'+id+'.png'));
+  assert.equal(sceneFor('https://outside.invalid/photo').id,'SC-01');
+  assert.equal(sceneFor('SC-07').png,'./preview-fixtures/SC-07.png');
+  assert.equal(sceneFor('SC-10').kind,'combined');
+});
+test('height-aware furniture fitting prevents vertical cropping in square image scenes',()=>{
+  for(const width of [255,300,360,550]){
+    for(const scale of [65,88,125]){
+      const fit=fittedPlacement(width,30,scale,width);
+      assert.ok(fit.effective_scale<=scale/100+0.00001);
+      assert.ok(208*fit.effective_scale <= width*0.77+0.0001);
+      assert.ok(fit.object_width <= width-10+0.0001);
+      assert.ok(fit.effective_percent >= 0 && fit.effective_percent <=100);
+    }
+  }
 });
