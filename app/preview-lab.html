@@ -107,6 +107,7 @@
             <div class="ab-actions">
               <button id="capture-a" class="button secondary" type="button" data-he="שמור A" data-en="Capture A">שמור A</button>
               <button id="restore-a" class="button outline" type="button" disabled data-he="הצג A" data-en="Show A">הצג A</button>
+              <button id="choose-a" class="button outline" type="button" aria-pressed="false" disabled data-he="בחר A" data-en="Choose A">בחר A</button>
             </div>
           </div>
           <div class="ab-slot">
@@ -115,10 +116,17 @@
             <div class="ab-actions">
               <button id="capture-b" class="button secondary" type="button" data-he="שמור B" data-en="Capture B">שמור B</button>
               <button id="restore-b" class="button outline" type="button" disabled data-he="הצג B" data-en="Show B">הצג B</button>
+              <button id="choose-b" class="button outline" type="button" aria-pressed="false" disabled data-he="בחר B" data-en="Choose B">בחר B</button>
             </div>
           </div>
         </div>
         <p id="ab-summary" class="ab-summary" role="status" aria-live="polite"></p>
+        <div class="handoff">
+          <h3 data-he="חלופה להעברה לתכנון" data-en="Selected design handoff">חלופה להעברה לתכנון</h3>
+          <p id="selected-status" class="ab-summary" role="status" aria-live="polite"></p>
+          <button id="download-selected" type="button" class="button secondary" disabled data-he="הורד קובץ אפיון JSON" data-en="Download design intent JSON">הורד קובץ אפיון JSON</button>
+          <p class="legal" data-he="קובץ מקומי בלבד. אינו CAD, מודל תלת־ממדי או אישור הנדסי. אין העלאת נתונים לענן." data-en="Local file only. Not CAD, a 3D model, or engineering approval. Nothing is uploaded.">קובץ מקומי בלבד. אינו CAD, מודל תלת־ממדי או אישור הנדסי. אין העלאת נתונים לענן.</p>
+        </div>
       </section>
       <p class="legal" data-he="שידת לילה לדוגמה · לביד בירץ׳ 6 מ״מ. פרופורציות אינן תחליף למדידות, CAD או בדיקות יציבות ובטיחות." data-en="Example nightstand · 6 mm birch plywood. Proportions do not replace measurements, CAD, or safety/structural validation.">שידת לילה לדוגמה · לביד בירץ׳ 6 מ״מ. פרופורציות אינן תחליף למדידות, CAD או בדיקות יציבות ובטיחות.</p>
     </section>
