@@ -232,6 +232,27 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 )
                 print("PASS", width, height, "scene/finish/drawers/compare/keyboard/preference/resize/language")
                 context.close()
+            # MVP-11-A: prove navigation does not poison the cached PWA home.
+            pwa_context = browser.new_context(viewport={"width": 390, "height": 844})
+            pwa = pwa_context.new_page()
+            pwa.goto(root + "/app/index.html", wait_until="networkidle")
+            expect(pwa.locator('a[href="./preview-lab.html"]')).to_be_visible()
+            pwa.evaluate("""async () => {
+                const registration = await navigator.serviceWorker.ready;
+                await registration.update();
+            }""")
+            pwa.goto(root + "/app/preview-lab.html", wait_until="networkidle")
+            expect(pwa.locator("#room")).to_have_attribute("data-fixture", "png")
+            pwa_context.set_offline(True)
+            pwa.goto(root + "/app/index.html", wait_until="domcontentloaded")
+            expect(pwa.locator("#intro-title")).to_be_visible()
+            assert pwa.locator("#ab-summary").count() == 0, (
+                "Offline home must not be replaced by preview page"
+            )
+            pwa.goto(root + "/app/preview-lab.html", wait_until="domcontentloaded")
+            expect(pwa.locator("#ab-summary")).to_be_visible()
+            pwa_context.close()
+
             # Failure injection: missing local PNG should never blank the room.
             fallback = browser.new_context(viewport={"width":390, "height":844})
             fallback_page = fallback.new_page()
