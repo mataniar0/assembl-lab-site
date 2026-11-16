@@ -38,11 +38,11 @@ self.addEventListener('fetch',event=>{
       event.respondWith(caches.match(request).then(cached=>cached||fetch(request)));
       return;
     }
-    event.respondWith(fetch(request).then(response=>{
+    event.respondWith(fetch(request).then(async response=>{
       if(response.ok){
-        const copy=response.clone();
         // Keep the index cache index-only: not any other navigation response.
-        event.waitUntil(caches.open(CACHE).then(cache=>cache.put('./index.html',copy)));
+        const cache=await caches.open(CACHE);
+        await cache.put('./index.html',response.clone());
       }
       return response;
     }).catch(()=>caches.match('./index.html')));
