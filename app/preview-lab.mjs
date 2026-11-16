@@ -1,13 +1,15 @@
 /* APP MVP-09-B: synthetic room visualization; no network, storage or photographs.
  * All concept versions live in page memory and disappear on refresh.
  */
-import {normalizeReview,sceneFor,viewFor,fittedPlacement,designIntentFor} from './preview-state.mjs';
+import {normalizeReview,sceneFor,viewFor,fittedPlacement,designIntentFor,
+  captureConcept,reviewFromConcept,compareConcepts} from './preview-state.mjs';
 
 const el=id=>document.getElementById(id);
 const lang=()=>document.documentElement.lang==='en'?'en':'he';
 const phrase=(he,en)=>lang()==='he'?he:en;
 let state=normalizeReview();
 let preferred=null;
+const concepts={A:null,B:null};
 
 function currentInput(){
   return normalizeReview({
@@ -38,6 +40,43 @@ function preferredMessage(){
       '. Restore it any time during this visit.'
   );
 }
+
+function conceptDescription(concept){
+  if(!concept)return phrase('טרם נשמרה חלופה.','No concept captured.');
+  const scene=sceneFor(concept.scene_id);
+  return (lang()==='he'?scene.he:scene.en)+' · '+
+    concept.drawers+' '+phrase('מגירות','drawer(s)')+' · '+
+    concept.finish+' · '+concept.position_percent+'% / '+concept.scale_percent+'%';
+}
+function renderConcepts(){
+  for(const key of ['A','B']){
+    const lower=key.toLowerCase();
+    el('concept-'+lower+'-status').textContent=conceptDescription(concepts[key]);
+    el('restore-'+lower).disabled=!concepts[key];
+    el('capture-'+lower).disabled=state.view==='before';
+  }
+  const diff=compareConcepts(concepts.A,concepts.B);
+  if(!diff.ready){
+    el('ab-summary').textContent=phrase(
+      'שמרו חלופה A וחלופה B כדי להשוות הבדלים.',
+      'Capture both A and B to see the differences.');
+    return;
+  }
+  if(diff.identical){
+    el('ab-summary').textContent=phrase(
+      'שתי החלופות זהות בכל חמשת מאפייני ההמחשה.',
+      'Both concepts match on all five visual settings.');
+    return;
+  }
+  const names={
+    scene:phrase('חדר','scene'),finish:phrase('גוון','finish'),
+    drawers:phrase('מגירות','drawers'),position:phrase('מיקום','position'),
+    scale:phrase('קנה מידה','scale')
+  };
+  el('ab-summary').textContent=phrase('הבדלים בין A ל־B: ','A/B differences: ')+
+    diff.changed.map(key=>names[key]).join(', ')+'.';
+}
+
 function refresh(){
   const visual=viewFor(state);
   const room=el('room');
@@ -108,6 +147,7 @@ function refresh(){
   el('save-preferred').disabled=state.view==='before';
   el('restore-preferred').disabled=!preferred;
   el('preferred-status').textContent=preferredMessage();
+  renderConcepts();
 }
 function translate(){
   const english=lang()==='en';
@@ -138,7 +178,7 @@ el('compare-view').addEventListener('click',()=>{
     comparison:state.comparison_percent,view:state.view==='compare'?'after':'compare'});
   refresh();
 });
-el('reset').addEventListener('click',()=>{state=normalizeReview();preferred=null;syncInputs();refresh();});
+el('reset').addEventListener('click',()=>{state=normalizeReview();preferred=null;concepts.A=null;concepts.B=null;syncInputs();refresh();});
 el('save-preferred').addEventListener('click',()=>{
   if(state.view==='before')return;
   preferred=normalizeReview({sceneId:state.scene_id,position:state.position_percent,
@@ -150,6 +190,21 @@ el('restore-preferred').addEventListener('click',()=>{
   if(!preferred)return;
   state=preferred;syncInputs();refresh();
 });
+
+for(const [key,lower] of [['A','a'],['B','b']]){
+  el('capture-'+lower).addEventListener('click',()=>{
+    if(state.view==='before')return;
+    concepts[key]=captureConcept(state);
+    refresh();
+  });
+  el('restore-'+lower).addEventListener('click',()=>{
+    if(!concepts[key])return;
+    state=reviewFromConcept(concepts[key]);
+    syncInputs();
+    refresh();
+  });
+}
+
 el('lang').addEventListener('click',()=>{
   document.documentElement.lang=lang()==='he'?'en':'he';
   translate();
