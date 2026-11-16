@@ -23,7 +23,14 @@ function fail(code){throw new Error(code);}
 function plain(v){return v!==null&&typeof v==='object'&&!Array.isArray(v)&&Object.getPrototypeOf(v)===Object.prototype;}
 function whitelist(v,allowed,code){
   if(!plain(v))fail(code);
-  for(const k of Object.keys(v))if(!allowed.includes(k))fail(code+':'+k);
+  // Reject hidden/non-enumerable properties, Symbols and accessor getters too.
+  // Silently ignoring them would make an input appear "whitelisted" while
+  // retaining unexpected fields for downstream code.
+  for(const k of Reflect.ownKeys(v)){
+    if(typeof k!=='string'||!allowed.includes(k))fail(code+':UNAPPROVED_KEY');
+    const d=Object.getOwnPropertyDescriptor(v,k);
+    if(!d||!Object.prototype.hasOwnProperty.call(d,'value'))fail(code+':ACCESSOR_NOT_ALLOWED');
+  }
 }
 function checkReview(r,sceneId){
   whitelist(r,['sceneId','position','scale','finish','drawers','view','comparison'],'UNAPPROVED_REVIEW_FIELD');
