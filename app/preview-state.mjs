@@ -2,9 +2,11 @@
  * No photos, external provider calls, SDK, personal data, or engineering approval.
  */
 export const SCENES=Object.freeze([
-  Object.freeze({id:'SC-01',he:'קיר נייטרלי',en:'Neutral wall',kind:'neutral'}),
-  Object.freeze({id:'SC-02',he:'חלון משמאל',en:'Left window',kind:'window'}),
-  Object.freeze({id:'SC-04',he:'עציץ בפינה',en:'Corner plant',kind:'plant'})
+  Object.freeze({id:'SC-01',he:'קיר נייטרלי',en:'Neutral wall',kind:'neutral',png:'./preview-fixtures/SC-01.png'}),
+  Object.freeze({id:'SC-02',he:'חלון משמאל',en:'Left window',kind:'window',png:'./preview-fixtures/SC-02.png'}),
+  Object.freeze({id:'SC-04',he:'עציץ בפינה',en:'Corner plant',kind:'plant',png:'./preview-fixtures/SC-04.png'}),
+  Object.freeze({id:'SC-07',he:'קיר ירקרק ומנורה',en:'Olive wall and lamp',kind:'lamp',png:'./preview-fixtures/SC-07.png'}),
+  Object.freeze({id:'SC-10',he:'חלון וחפצים',en:'Window with objects',kind:'combined',png:'./preview-fixtures/SC-10.png'})
 ]);
 export const FINISHES=Object.freeze(['natural','honey','walnut']);
 const sceneIds=new Set(SCENES.map(scene=>scene.id));
@@ -53,18 +55,26 @@ export function viewFor(state){
  * viewport. The effective position may be clamped on small screens; this
  * function never mutates the user's requested review values.
  */
-export function fittedPlacement(roomWidth,requestedPercent,scalePercent){
+export function fittedPlacement(roomWidth,requestedPercent,scalePercent,roomHeight=null){
   if(!Number.isFinite(roomWidth)||roomWidth<=0)throw new RangeError('room_width_invalid');
   const requested=clamp(requestedPercent,30,70,52);
-  const scale=clamp(scalePercent,65,125,88)/100;
-  const objectWidth=186*scale;
-  // The drop shadow is decorative, not part of the object's visible width.
+  const preferredScale=clamp(scalePercent,65,125,88)/100;
+  // Visual furniture is 186x208 CSS px. Keep the feet on the floor and the
+  // tabletop within the cropped viewport on narrow square PNG backgrounds.
+  const roomHeightValid=Number.isFinite(roomHeight)&&roomHeight>0;
+  const verticalLimit=roomHeightValid ? roomHeight*0.77/208 : preferredScale;
+  const horizontalLimit=(roomWidth-10)/186;
+  const effectiveScale=Math.max(0.25,Math.min(preferredScale,verticalLimit,horizontalLimit));
+  const objectWidth=186*effectiveScale;
   const safePadding=5;
   const half=Math.min(roomWidth/2,objectWidth/2+safePadding);
   const minPercent=100*half/roomWidth;
   const position=Math.max(minPercent,Math.min(100-minPercent,requested));
   return Object.freeze({requested_percent:requested,effective_percent:position,
-    was_fitted:Math.abs(position-requested)>0.05,object_width:objectWidth});
+    was_fitted:Math.abs(position-requested)>0.05||effectiveScale<preferredScale-0.005,
+    scale_was_fitted:effectiveScale<preferredScale-0.005,
+    effective_scale:effectiveScale,
+    object_width:objectWidth});
 }
 
 /* A safe in-memory projection of the established design-intent contract.
