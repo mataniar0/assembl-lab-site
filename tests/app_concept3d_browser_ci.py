@@ -207,7 +207,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
             offline.set_offline(True)
             page.goto(root + "/app/concept-3d.html", wait_until="domcontentloaded")
             expect(page.locator("#model-faces polygon").first).to_be_visible()
-            expect(page.locator("#load-status")).to_contain_text("דגם לדוגמה")
+            expect(page.locator("#load-status")).to_contain_text("מודל לדוגמה")
             offline.close()
             browser.close()
     finally:
