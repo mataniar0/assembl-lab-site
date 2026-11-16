@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fcfaf7">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://widfojfysblgbwswmigq.supabase.co; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="./cloud-dev.css">
+<title>ASSEMBL LAB — ניסוי ענן</title>
+</head>
+<body>
+<header class="app-header">
+  <a href="./" class="logo" aria-label="חזרה ל־ASSEMBL LAB"><span class="mark">A.</span> ASSEMBL LAB</a>
+  <a href="./" class="back">חזרה לאפליקציה</a>
+</header>
+<main>
+  <div class="eyebrow">MVP-08 / SUPABASE DEVELOPMENT</div>
+  <h1>חיבור ניסיוני לענן</h1>
+  <p class="lead">בדיקת התחברות ושמירת נתוני שידת לילה. <strong>לא נשלחים צילום החדר, הערות חופשיות או קובצי תמונה.</strong> לא נוצרת הדמיית AI ולא מופקת תוכנית הנדסית.</p>
+  <aside class="notice" role="note">
+    סביבת פיתוח בלבד — עד שלושה פרויקטים וחמש משימות מדומות לכל משתמש. חשבון הפיתוח נשמר ב־Supabase; אסימוני ההתחברות אינם נשמרים על ידי הדף לאחר סגירה או רענון. ייתכן שהדפדפן יציע לשמור סיסמה.
+  </aside>
+  <div class="layout">
+    <section class="panel" aria-labelledby="auth-heading">
+      <h2 id="auth-heading">1. התחברות לסביבת הפיתוח</h2>
+      <form id="auth-form" novalidate>
+        <label for="dev-email">דוא״ל</label>
+        <input id="dev-email" type="email" autocomplete="email" required maxlength="254" inputmode="email">
+        <label for="dev-password">סיסמה</label>
+        <input id="dev-password" type="password" autocomplete="current-password" required minlength="8" maxlength="128">
+        <div class="actions">
+          <button type="submit" id="sign-in" class="primary">התחברות</button>
+          <button type="button" id="sign-out" hidden>התנתקות</button>
+        </div>
+      </form>
+      <p class="muted">הגישה בשלב הפיילוט מיועדת לחשבונות בדיקה שהוגדרו מראש ב־Supabase. יצירת חשבונות חדשים מתבצעת בידי מנהל הפרויקט בלבד, מחוץ לדף הזה. אין לשתף סיסמאות או קודי אימות בצ׳אט.</p>
+      <p id="auth-status" class="status" role="status" aria-live="polite">לא מחובר.</p>
+    </section>
+    <section class="panel" aria-labelledby="design-heading">
+      <h2 id="design-heading">2. נתוני השידה לניסוי</h2>
+      <p class="muted">אם הגעת לכאן לאחר אישור עיצוב באפליקציה, ייטענו המידות והמאפיינים בלבד. אלה עשויים להיות המידות האמיתיות שהזנת. רק לחיצה על כפתור השמירה תשלח אותם לחשבון Supabase. צילום החדר והתיאור החופשי לא נשלחים. אחרת נעבוד עם דגם דוגמה סינתטי.</p>
+      <div id="design-summary" class="summary" role="status" aria-live="polite"></div>
+      <p class="muted">המידות מיועדות להמחשה בלבד. נדרש אישור הנדסי בנפרד.</p>
+      <button type="button" id="save-synthetic" class="primary" disabled>שמירת מידות ומאפייני שידה בענן (ללא תמונה)</button>
+      <p id="save-status" class="status" role="status" aria-live="polite">יש להתחבר כדי לשמור נתונים.</p>
+    </section>
+  </div>
+  <section class="panel" id="jobs-panel" aria-labelledby="jobs-heading" hidden>
+    <h2 id="jobs-heading">3. פרויקט ומשימת הדמיה</h2>
+    <p class="muted">המשימה תחזור במצב MOCK_READY בלבד. לא תיווצר תמונה ולא תופעל מערכת בתשלום.</p>
+    <dl class="details"><dt>Project ID</dt><dd id="project-id">—</dd><dt>Job ID</dt><dd id="job-id">—</dd><dt>סטטוס</dt><dd id="job-status">—</dd></dl>
+    <div class="actions">
+      <button type="button" id="create-job" class="secondary" disabled>יצירת משימת הדמיה מדומה</button>
+      <button type="button" id="delete-project" class="danger" disabled>מחיקת פרויקט הניסוי</button>
+    </div>
+    <p id="job-message" class="status" role="status" aria-live="polite"></p>
+  </section>
+</main>
+<footer>ASSEMBL LAB · נתוני פיתוח סינתטיים בלבד · Supabase Free · ללא יצירת AI</footer>
+<script type="module" src="./cloud-dev.js"></script>
+</body>
+</html>
