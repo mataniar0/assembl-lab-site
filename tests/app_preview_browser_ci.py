@@ -51,6 +51,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
                     viewport={"width": width, "height": height},
                     reduced_motion="reduce",
                     device_scale_factor=1,
+                    accept_downloads=True,
                 )
                 page = context.new_page()
                 requests = []
@@ -146,12 +147,34 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 expect(page.locator("#concept-b-status")).to_contain_text("עציץ בפינה")
                 expect(page.locator("#ab-summary")).to_contain_text("הבדלים בין")
                 expect(page.locator("#ab-summary")).to_contain_text("מגירות")
+                # MVP-12: explicit final selection emits a local, sanitized JSON intent.
+                expect(page.locator("#download-selected")).to_be_disabled()
+                page.locator("#choose-b").click()
+                expect(page.locator("#choose-b")).to_have_attribute("aria-pressed", "true")
+                expect(page.locator("#selected-status")).to_contain_text("חלופה B")
+                expect(page.locator("#download-selected")).to_be_enabled()
+                with page.expect_download() as download_info:
+                    page.locator("#download-selected").click()
+                download = download_info.value
+                assert download.suggested_filename == "assembl-lab-selected-concept-B.json"
+                payload = json.loads(Path(download.path()).read_text(encoding="utf8"))
+                assert payload["schema_version"] == "ASSEMBL-LAB.SELECTED-CONCEPT.0.1"
+                assert payload["selected_slot"] == "B"
+                assert payload["scene_id"] == "SC-04"
+                assert payload["review"]["drawers"] == 1
+                assert payload["design_intent"]["requested_dimensions_mm"] == {
+                    "width": 500, "height": 550, "depth": 350
+                }
+                assert payload["design_intent"]["engineering_approval"] is False
+                assert payload["photo_included"] is False
+                assert "image_base64" not in json.dumps(payload)
                 page.locator("#restore-a").click()
                 expect(page.locator("#scene")).to_have_value("SC-02")
                 expect(page.locator("#finish")).to_have_value("walnut")
                 expect(page.locator("#drawers")).to_have_value("2")
                 page.locator("#lang").click()
                 expect(page.locator("#ab-summary")).to_contain_text("A/B differences")
+                expect(page.locator("#selected-status")).to_contain_text("Selected concept B")
                 page.locator("#lang").click()
                 page.locator("#toggle-view").click()
                 expect(page.locator("#capture-a")).to_be_disabled()
@@ -203,6 +226,8 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 assert page.locator("#restore-preferred").is_disabled()
                 assert page.locator("#restore-a").is_disabled()
                 assert page.locator("#restore-b").is_disabled()
+                assert page.locator("#download-selected").is_disabled()
+                expect(page.locator("#selected-status")).to_contain_text("טרם נבחרה")
                 expect(page.locator("#preferred-status")).to_contain_text("טרם סומנה")
 
                 if width <= 390:
