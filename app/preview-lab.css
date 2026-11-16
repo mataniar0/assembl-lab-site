@@ -52,3 +52,12 @@ button:disabled{opacity:.5;cursor:not-allowed}
 .ab-actions .button{flex:1 1 90px;min-width:0;min-height:44px;padding:8px 9px}
 .ab-summary{background:#f2f4ee;color:var(--ink);padding:12px;border-radius:9px;min-height:44px;margin:12px 0;font-size:13px}
 @media(max-width:480px){.ab-slots{grid-template-columns:1fr}.ab-slot-status{min-height:0}}
+
+
+/* MVP-12: final visual concept selection and local handoff. */
+.ab-actions button[aria-pressed="true"]{background:var(--green);color:white;border-color:var(--green)}
+.handoff{margin-top:16px;padding-top:13px;border-top:1px solid var(--line)}
+.handoff h3{font-size:16px;margin:0 0 7px}
+.handoff .legal{margin:9px 0 0}
+#download-selected{width:100%;min-height:44px}
+@media(max-width:480px){.handoff .button{min-height:48px}}
