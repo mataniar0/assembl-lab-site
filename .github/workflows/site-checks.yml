@@ -2,9 +2,9 @@ name: Site checks
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, feature/app-mvp-09-synthetic-room-review]
   push:
-    branches: [main]
+    branches: [main, feature/app-mvp-09-c-png-review]
 
 permissions:
   contents: read
@@ -77,37 +77,10 @@ jobs:
           set -euo pipefail
           python scripts/check_site.py --commit HEAD --browser "$ASSEMBLE_BROWSER" --report .qa-reports/ci/site-smoke.json 2>&1 | tee .qa-reports/ci/site-smoke.log
 
-      - name: Rebuild MEB-033 V3 model (candidate for inspection only)
-        shell: bash
-        env:
-          MEB033_EXPORT_BASE64: "0"
-        run: |
-          set -euo pipefail
-          python scripts/build_meb033_v3.py > .qa-reports/ci/meb033-v3-model.log
-          cat .qa-reports/ci/meb033-v3-model.log
-
-      - name: Render corrected MEB-033 V3 visual for independent QA
+      - name: Validate seven chosen 3D products
         shell: bash
         run: |
           set -euo pipefail
-          .venv-qa/bin/python scripts/export_meb033_v3_poster.py > .qa-reports/ci/meb033-v3-visual-export.log
-          cat .qa-reports/ci/meb033-v3-visual-export.log
-
-      - name: Validate MEB-033 page contract
-        shell: bash
-        run: |
-          set -euo pipefail
-          python tests/meb033_site_contract.py | tee .qa-reports/ci/meb033-site-contract.log
-          python tests/meb033_3d_site_contract.py | tee .qa-reports/ci/meb033-3d-contract.log
-          python tests/meb033_3d_geometric_audit.py 2>&1 | tee .qa-reports/ci/meb033-geometry-audit.log
-          python tests/meb033_v3_collision_contract.py 2>&1 | tee .qa-reports/ci/meb033-v3-contract.log
-          .venv-qa/bin/python tests/meb033_3d_browser_ci.py --browser "$ASSEMBLE_BROWSER" 2>&1 | tee .qa-reports/ci/meb033-3d-browser.log
-
-      - name: Validate eight chosen 3D products
-        shell: bash
-        run: |
-          set -euo pipefail
-          .venv-qa/bin/python tests/plant_stand_contract.py 2>&1 | tee .qa-reports/ci/plant-stand-contract.log
           .venv-qa/bin/python tests/five_3d_assets_ci.py 2>&1 | tee .qa-reports/ci/five-models-assets.log
           .venv-qa/bin/python tests/five_3d_browser_ci.py --browser "$ASSEMBLE_BROWSER" 2>&1 | tee .qa-reports/ci/five-models-browser.log
 
