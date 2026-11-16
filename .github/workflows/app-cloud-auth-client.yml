@@ -8,6 +8,7 @@ on:
       - 'app/index.html'
       - 'app/nightstand-intent.js'
       - 'app/sw.js'
+      - 'tests/app_auth_*'
       - '.github/workflows/app-cloud-auth-client.yml'
   push:
     branches: [main]
@@ -16,6 +17,7 @@ on:
       - 'app/index.html'
       - 'app/nightstand-intent.js'
       - 'app/sw.js'
+      - 'tests/app_auth_*'
       - '.github/workflows/app-cloud-auth-client.yml'
 
 permissions:
@@ -43,7 +45,8 @@ jobs:
           node --check app/cloud-dev.js
           node --check app/nightstand-intent.js
           node --check app/sw.js
-          node --test app/cloud-api-core.test.mjs
+          node --check tests/app_auth_real_e2e.mjs
+          node --test app/cloud-api-core.test.mjs tests/app_auth_server_readiness.test.mjs tests/app_auth_real_e2e.test.mjs
       - name: Verify no service-role credentials were included
         shell: bash
         run: |
