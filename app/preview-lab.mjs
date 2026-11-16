@@ -227,7 +227,7 @@ for(const [key,lower] of [['A','a'],['B','b']]){
 el('download-selected').addEventListener('click',()=>{
   if(!chosenSlot||!concepts[chosenSlot])return;
   const payload=selectedConceptPackage(chosenSlot,concepts[chosenSlot]);
-  const blob=new Blob([JSON.stringify(payload,null,2)+'\\n'],{type:'application/json'});
+  const blob=new Blob([JSON.stringify(payload,null,2)+'\n'],{type:'application/json'});
   const url=URL.createObjectURL(blob);
   const link=document.createElement('a');
   link.href=url;
