@@ -47,7 +47,7 @@ old["remainingLimitations"]="Full fit not verified against maker photos or measu
 doc["asset"]["generator"]="ASSEMBL LAB corrected MEB-033 V3 - side lap rail collision removed"
 j=json.dumps(doc,ensure_ascii=True,separators=(",",":")).encode("utf8")
 j+=b" "*((-len(j))%4)
-while len(binary)%4:binary+=b"\\x00"
+while len(binary)%4:binary.append(0)
 total=12+8+len(j)+8+len(binary)
 out=struct.pack("<III",0x46546c67,2,total)
 out+=struct.pack("<II",len(j),0x4e4f534a)+j
