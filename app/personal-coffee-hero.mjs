@@ -1,7 +1,8 @@
-/* MVP-18: The existing, photographed ASSEMBL LAB Personal Coffee Table.
- * Both the image and the GLB are the exact assets on /table/personal/.
- * The GLB is an unverified digital design preview, not an accurate replica.
- * No remote providers, generated replacement geometry or customer content.
+/* MVP-19: approved edited sunlit showroom image of the Personal Coffee Table.
+ * The showroom image is illustrative (not an authentic product photo).
+ * Authentic photos remain in /table/personal/; its existing GLB is an
+ * unverified digital design preview, not an accurate replica.
+ * No external providers, runtime image synthesis or customer content.
  */
 const $=id=>document.getElementById(id);
 const host=$('personal-coffee-model');
@@ -15,8 +16,8 @@ const actualModel=new URL('../table/personal/media/personal-design-preview.glb',
 const wording={
   loading:['טוען את מודל התכנון התלת־ממדי של שולחן הקפה האישי…','Loading the existing Personal Coffee Table 3D design preview…'],
   ready:['מודל התכנון מוכן. גררו לסיבוב, צבטו לזום. אינו העתק מאומת של המוצר המצולם.','Design model ready. Drag to rotate or pinch to zoom. Not a verified replica of the photographed product.'],
-  unsupported:['במכשיר זה לא ניתן להציג מודל תלת־ממדי. צילום השולחן האמיתי ממשיך להיות זמין.','3D is unavailable on this device. The authentic product photograph is still available.'],
-  error:['מודל התכנון לא נטען. צילום השולחן האמיתי ממשיך להיות זמין.','The design model did not load. The authentic photograph remains available.']
+  unsupported:['במכשיר זה לא ניתן להציג מודל תלת־ממדי. תמונת הראווה נשארת זמינה, וצילומי המוצר האמיתיים נמצאים בעמוד המוצר.','3D is unavailable on this device. The showcase image is still available; real product photos are on the product page.'],
+  error:['מודל התכנון לא נטען. תמונת הראווה נשארת זמינה, וצילומי המוצר האמיתיים נמצאים בעמוד המוצר.','The design model did not load. The showcase image remains available.']
 };
 let viewer=null,viewerPromise=null,generation=0,showingModel=false,statusKey='',timeout=null;
 const isEnglish=()=>document.documentElement.lang==='en';
@@ -27,7 +28,7 @@ function speak(key){
 function updateAlt(){
   image.alt=isEnglish()?image.dataset.enAlt:image.dataset.heAlt;
   if(viewer)viewer.alt=isEnglish()?
-    'Unverified 3D design preview of Personal Coffee Table, not a replica of the real product':
+    'Unverified 3D design prototype of Personal Coffee Table, not an exact replica':
     'מודל תכנון תלת־ממדי לא מאומת של שולחן קפה אישי, אינו העתק של המוצר האמיתי';
 }
 function webGLAvailable(){

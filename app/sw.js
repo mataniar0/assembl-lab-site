@@ -1,14 +1,12 @@
 /* ASSEMBL LAB PWA shell — only public synthetic preview resources are cached.
  * Never cache private Auth/cloud pages or overwrite the home document on navigation.
  */
-const CACHE = 'assemble-lab-android-v0.9.0-authentic-personal-coffee';
+const CACHE = 'assemble-lab-android-v0.10.0-coffee-showcase';
 const SHELL = [
-  './','./index.html','./nightstand-intent.js','./return-3d.mjs','./return-3d.css','./showcase-glb.mjs','./realistic-glb.mjs','./personal-coffee-hero.mjs','./personal-coffee-hero.css','./manifest.webmanifest',
+  './','./index.html','./nightstand-intent.js','./return-3d.mjs','./return-3d.css','./showcase-glb.mjs','./realistic-glb.mjs','./personal-coffee-hero.mjs','./personal-coffee-hero.css','./media/personal-coffee-showcase-680.avif','./media/personal-coffee-showcase-680.webp','./manifest.webmanifest',
   './icons/icon-192.png','./icons/icon-512.png',
   './preview-lab.html','./preview-lab.css','./preview-lab.mjs','./preview-state.mjs',
   '../assets/vendor/model-viewer-4.1.0/model-viewer.min.js',
-  '../table/personal/media/01-hero-finished-angled-480.webp',
-  '../table/personal/media/01-hero-finished-angled-960.webp',
   '../table/personal/media/personal-design-preview.glb',
   './concept-3d.html','./concept-3d.css','./concept-3d.mjs','./concept-geometry.mjs','./concept-export.mjs',
   './preview-fixtures/SC-01.png','./preview-fixtures/SC-02.png',
@@ -38,8 +36,6 @@ self.addEventListener('fetch',event=>{
   // outside /app/. Only this exact same-origin vendor asset is cached offline.
   const vendorPath=new URL('../assets/vendor/model-viewer-4.1.0/model-viewer.min.js',self.registration.scope).pathname;
   const personalTableAssets=new Set([
-    '../table/personal/media/01-hero-finished-angled-480.webp',
-    '../table/personal/media/01-hero-finished-angled-960.webp',
     '../table/personal/media/personal-design-preview.glb'
   ].map(rel=>new URL(rel,self.registration.scope).pathname));
   if(!url.pathname.startsWith(scopePath)&&url.pathname!==vendorPath&&
