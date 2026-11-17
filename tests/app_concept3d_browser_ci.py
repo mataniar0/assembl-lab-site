@@ -260,6 +260,29 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 page.locator("#download-glb").click()
             assert Path(offline_glb.value.path()).read_bytes()[:4] == b"glTF"
             offline.close()
+
+            # MVP-14 marketing path: chosen A/B opens a validated 3D concept
+            # in one click. Hash fragments are never transmitted to the server.
+            journey = browser.new_context(viewport={"width": 390, "height": 844})
+            page = journey.new_page()
+            page.goto(root + "/app/preview-lab.html", wait_until="networkidle")
+            page.locator("#scene").select_option("SC-07")
+            page.locator("#finish").select_option("walnut")
+            page.locator("#drawers").select_option("2")
+            page.locator("#capture-b").click()
+            page.locator("#choose-b").click()
+            handoff = page.locator("#open-selected-3d").get_attribute("href")
+            assert handoff.startswith("./concept-3d.html#selected=")
+            assert "customer" not in handoff and "photo_url" not in handoff
+            page.locator("#open-selected-3d").click()
+            expect(page).to_have_url(
+                lambda url: "/app/concept-3d.html#selected=" in url
+            )
+            expect(page.locator("#model-summary")).to_contain_text("חלופה B")
+            expect(page.locator("#model-summary")).to_contain_text("2 מגירות")
+            expect(page.locator("#load-status")).to_contain_text("הועברה")
+            assert page.locator('[data-part="drawer-2"]').count() > 0
+            journey.close()
             browser.close()
     finally:
         server.shutdown()
