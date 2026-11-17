@@ -1,0 +1,63 @@
+name: APP MVP-20 3D source and model-to-hero build
+on:
+  push:
+    branches:
+      - feature/app-mvp-20-coffee-glb-hero-parity
+    paths:
+      - 'scripts/build_personal_showroom.py'
+      - 'scripts/render_personal_showroom.py'
+      - 'scripts/coffee-showroom-capture.html'
+      - '.github/workflows/app-mvp-20-coffee-parity.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065d # v5
+        with:
+          python-version: '3.12'
+      - name: Install offline visual generation dependencies
+        run: |
+          python -m pip install 'numpy==2.2.6' 'Pillow==11.3.0' 'trimesh==4.11.1' 'scipy==1.15.3' 'playwright==1.58.0'
+          python -m playwright install --with-deps chromium
+      - name: Generate source-provenance-checked GLB from photographed real table
+        run: python scripts/build_personal_showroom.py
+      - name: Produce matching showroom hero by rendering the exact GLB
+        run: python scripts/render_personal_showroom.py
+      - name: Verify both assets before commit
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          root=Path('app/assets')
+          data=json.loads((root/'personal-coffee-showroom-v2.json').read_text())
+          glb=(root/'personal-coffee-showroom-v2.glb').read_bytes()
+          poster=(root/'personal-coffee-showroom-v2.webp').read_bytes()
+          assert glb[:4]==b'glTF' and poster[:4]==b'RIFF' and poster[8:12]==b'WEBP'
+          assert data['poster_rendered_from_model_sha256']==hashlib.sha256(glb).hexdigest()
+          assert data['poster_webp_sha256']==hashlib.sha256(poster).hexdigest()
+          assert data['showroom_geometry_count']>=10
+          assert data['engineering_approval'] is False
+          print('ASSET_PARITY_AND_PROVENANCE_PASS')
+          PY
+      - name: Commit identical model and its generated hero on feature branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add app/assets/personal-coffee-showroom-v2.glb \
+                  app/assets/personal-coffee-showroom-v2.webp \
+                  app/assets/personal-coffee-showroom-v2.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'build(table): derive matching showroom poster from approved showcase GLB [skip ci]'
+            # The source branch can move while rendering. Rebase this artifact
+            # commit onto the most recent feature head; never force-push.
+            git fetch origin feature/app-mvp-20-coffee-glb-hero-parity
+            git rebase origin/feature/app-mvp-20-coffee-glb-hero-parity
+            git push origin HEAD:refs/heads/feature/app-mvp-20-coffee-glb-hero-parity
+          fi

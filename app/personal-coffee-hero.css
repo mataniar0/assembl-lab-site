@@ -1,11 +1,11 @@
-/* MVP-19: approved edited showroom visual, with separate source-site prototype GLB. */
+/* MVP-20: showroom poster and interactive GLB share exactly the same 3D geometry. */
 .personal-coffee-card{padding-bottom:14px;max-width:480px;transform:rotate(-.8deg)}
 .personal-coffee-card #intro-scene{display:none!important}
 .personal-coffee-hero{position:relative;margin-top:11px;height:clamp(290px,36vw,415px);min-height:290px;overflow:hidden;border-radius:7px;background:#e7e3da}
 #personal-coffee-photo{display:block;width:100%;height:100%}
 #personal-coffee-photo[hidden]{display:none!important}
 #personal-coffee-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;background:#e7e3da}
-.personal-coffee-model{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 18%,#fcfaf5,#e7e5de 72%,#d6d4cd)}
+.personal-coffee-model{position:absolute;inset:0;background:linear-gradient(179deg,#f0ebdf 0%,#e9e5db 56%,#d9d1c1 56.2%,#e0d5c4 100%)}
 .personal-coffee-model[hidden]{display:none!important}
 .personal-coffee-model model-viewer{display:block;width:100%;height:100%;background:transparent;touch-action:pan-y;--progress-bar-color:#476b59}
 .personal-coffee-model model-viewer:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}

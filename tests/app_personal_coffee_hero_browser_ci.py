@@ -1,4 +1,4 @@
-"""MVP-19: edited round coffee table showroom landing + original site GLB in app."""
+"""MVP-20: showroom still rendered from the exact same GLB shown in the app."""
 from __future__ import annotations
 
 import argparse
@@ -24,16 +24,15 @@ def check_photo(page):
     expect(page.locator("#personal-coffee-photo")).to_be_visible()
     photo = page.locator("#personal-coffee-photo img")
     expect(photo).to_be_visible()
-    assert photo.get_attribute("src") == "./media/personal-coffee-showcase-680.webp"
-    expect(page.locator('#personal-coffee-photo source[type="image/avif"]')).to_have_attribute(
-        "srcset", "./media/personal-coffee-showcase-680.avif"
+    assert photo.get_attribute("src") == "./assets/personal-coffee-showroom-v2.webp"
+    expect(page.locator('#personal-coffee-photo source[type="image/webp"]')).to_have_attribute(
+        "srcset", "./assets/personal-coffee-showroom-v2.webp"
     )
     # A srcset resource is density-corrected: naturalWidth may reflect the
     # browser's sizes calculation, not the 480/960 source file width.
     assert photo.evaluate("image=>image.complete&&image.naturalWidth>250") is True
     assert photo.evaluate("image=>image.currentSrc").endswith((
-        "/app/media/personal-coffee-showcase-680.avif",
-        "/app/media/personal-coffee-showcase-680.webp",
+        "/app/assets/personal-coffee-showroom-v2.webp",
     ))
     assert photo.evaluate("image=>getComputedStyle(image).objectFit") == "cover"
     expect(page.locator("#personal-coffee-show-photo")).to_have_attribute(
@@ -86,11 +85,11 @@ def run(browser_path: str, output: Path):
                 check_photo(page)
                 expect(page.locator("#personal-coffee-model")).to_be_hidden()
                 expect(page.locator(".personal-coffee-disclosure")).to_contain_text(
-                    "הדמיה חזותית ערוכה"
+                    "הדמיית הראווה נוצרה מאותו קובץ GLB"
                 )
                 assert page.locator("#personal-coffee-photo img").get_attribute(
                     "data-en-alt"
-                ).startswith("Illustrative showroom image")
+                ).startswith("Showroom render of the Personal Coffee Table")
                 page.screenshot(
                     path=str(output / f"personal-coffee-photo-{width}.png"),
                     full_page=False,
@@ -101,15 +100,27 @@ def run(browser_path: str, output: Path):
                 expect(page.locator("#personal-coffee-photo")).to_be_hidden()
                 expect(page.locator("#personal-coffee-model model-viewer")).to_be_visible()
                 expect(page.locator("#personal-coffee-model-status")).to_contain_text(
-                    "אינו העתק מאומת", timeout=45000
+                    "אותו שולחן כמו בתמונת הראווה", timeout=45000
                 )
                 view = page.locator("#personal-coffee-model model-viewer")
                 assert view.evaluate("e=>e.loaded") is True
                 assert view.evaluate("e=>new URL(e.src).pathname").endswith(
-                    "/table/personal/media/personal-design-preview.glb"
+                    "/app/assets/personal-coffee-showroom-v2.glb"
                 )
                 assert view.get_attribute("camera-controls") is not None
-                assert view.get_attribute("shadow-intensity") == "1"
+                assert view.get_attribute("shadow-intensity") == "1.4"
+                # Verify the actual model loaded into WebGL is the exact model
+                # recorded in the poster-rendering provenance (not just named
+                # similarly in the marketing copy).
+                hashes = page.evaluate("""async () => {
+                  const info=await (await fetch('./assets/personal-coffee-showroom-v2.json')).json();
+                  const bytes=await (await fetch(document.querySelector('#personal-coffee-model model-viewer').src)).arrayBuffer();
+                  const digest=await crypto.subtle.digest('SHA-256',bytes);
+                  const hex=Array.from(new Uint8Array(digest)).map(x=>x.toString(16).padStart(2,'0')).join('');
+                  return {hex,recorded:info.poster_rendered_from_model_sha256};
+                }""")
+                assert hashes["hex"] == hashes["recorded"], "3D differs from the rendered hero model"
+
                 assert page.locator("#personal-coffee-show-model").get_attribute(
                     "aria-pressed"
                 ) == "true"
@@ -120,10 +131,10 @@ def run(browser_path: str, output: Path):
                 page.locator("#lang").click()
                 expect(page.locator("html")).to_have_attribute("lang", "en")
                 expect(page.locator("#personal-coffee-model-status")).to_contain_text(
-                    "Not a verified replica"
+                    "The same table as the showroom image"
                 )
                 expect(page.locator(".personal-coffee-disclosure")).to_contain_text(
-                    "edited showroom visualization"
+                    "rendered from exactly the same GLB"
                 )
                 page.locator("#personal-coffee-show-photo").click()
                 check_photo(page)
@@ -143,7 +154,7 @@ def run(browser_path: str, output: Path):
                 assert not errors, f"JavaScript errors: {errors}"
                 assert not external, f"External requests: {external}"
                 results.append({"viewport": width, "showcase": "PASS",
-                                "original_glb_loaded": "PASS",
+                                "matched_glb_loaded": "PASS",
                                 "language": "PASS", "external_requests": 0})
                 print("PASS approved coffee table showroom image/GLB", width, height)
                 context.close()
@@ -157,9 +168,9 @@ def run(browser_path: str, output: Path):
             }""")
             page.reload(wait_until="networkidle")
             for asset in [
-                "./media/personal-coffee-showcase-680.avif",
-                "./media/personal-coffee-showcase-680.webp",
-                "../table/personal/media/personal-design-preview.glb",
+                "./assets/personal-coffee-showroom-v2.webp",
+                "./assets/personal-coffee-showroom-v2.glb",
+                "./assets/personal-coffee-showroom-v2.json",
                 "./personal-coffee-hero.mjs",
             ]:
                 available = page.evaluate(
@@ -172,10 +183,10 @@ def run(browser_path: str, output: Path):
             check_photo(page)
             page.locator("#personal-coffee-show-model").click()
             expect(page.locator("#personal-coffee-model-status")).to_contain_text(
-                "אינו העתק מאומת", timeout=45000
+                "אותו שולחן כמו בתמונת הראווה", timeout=45000
             )
             assert page.locator("model-viewer").evaluate("e=>e.loaded") is True
-            print("PASS offline approved showcase and original site GLB")
+            print("PASS offline hero and the exact same updated GLB")
             offline.close()
 
             # Lack of WebGL keeps the approved showcase still visible and usable.

@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[1]
 ASSETS={
  "geometric/":("geometric-v11-design-only.glb",15,"b3ee4944fee14901bafa2f50e52820d2e8394c13b41563ee627ba719bac9a1e9"),
  "table/flow/":("flow-v31-design-only.glb",19,"6194d110245a59289ba76bb5b5386648eaa8b0a679936c0e80602e679f42a8c3"),
- "table/personal/":("personal-design-preview.glb",32,None),
+ "table/personal/":("personal-coffee-showroom-v2.glb",11,None),
  "shelf/kids/":("kids-shelf-700-design-only.glb",5,None),
  "driller_stand/":("driller-v365-design-only.glb",31,None),
  "shoe_rack/":("shoe-rack-v4-700-design-only.glb",36,"84fbf1bef9a264c399ac800333a899e818a1fdf68c956d6eabdb4a896fa49445"),
@@ -41,9 +41,19 @@ def parse(data):
 def run():
  info=[]
  for route,(name,expected,sha) in ASSETS.items():
-  page=ROOT/route/"index.html"; model=ROOT/route/"media"/name
-  poster=ROOT/route/"media"/(name.replace(".glb","-poster.webp"))
-  if route=="table/personal/":poster=ROOT/route/"media/personal-design-preview-poster.webp"
+  page=ROOT/route/"index.html"
+  if route=="table/personal/":
+   model=ROOT/"app/assets/personal-coffee-showroom-v2.glb"
+   poster=ROOT/"app/assets/personal-coffee-showroom-v2.webp"
+   summary=json.loads((ROOT/"app/assets/personal-coffee-showroom-v2.json").read_text())
+   archived=ROOT/"table/personal/media/personal-design-preview.glb"
+   assert archived.is_file() and hashlib.sha256(archived.read_bytes()).hexdigest()==summary["source_model_sha256"],"original digital prototype changed"
+   assert summary["poster_rendered_from_model_sha256"]==hashlib.sha256(model.read_bytes()).hexdigest(), "hero not from published GLB"
+   assert summary["poster_webp_sha256"]==hashlib.sha256(poster.read_bytes()).hexdigest(), "wrong showroom poster"
+   assert summary["manufacturing_approval"] is False
+  else:
+   model=ROOT/route/"media"/name
+   poster=ROOT/route/"media"/(name.replace(".glb","-poster.webp"))
   assert model.is_file() and poster.is_file(),(route,"missing asset")
   b=model.read_bytes(); meshes=parse(b);assert meshes==expected,(route,meshes,expected)
   if sha:assert hashlib.sha256(b).hexdigest()==sha,(route,"unapproved GLB version")
@@ -79,8 +89,12 @@ def run():
   assert poster.read_bytes()[:4]==b"RIFF" and b"WEBP" in poster.read_bytes()[:16],(route,"not WebP")
   h=page.read_text(encoding="utf8")
   assert h.count("data-three-preview")==1 and 'data-state="idle"' in h,(route,"viewer not ready")
-  assert ('data-model-src="media/'+name+'"') in h,(route,"wrong route model")
-  assert ('src="media/'+poster.name+'"') in h,(route,"wrong poster")
+  if route=="table/personal/":
+   assert ('data-model-src="../../app/assets/'+name+'"') in h,(route,"wrong published model")
+   assert ('src="../../app/assets/'+poster.name+'"') in h,(route,"wrong published poster")
+  else:
+   assert ('data-model-src="media/'+name+'"') in h,(route,"wrong route model")
+   assert ('src="media/'+poster.name+'"') in h,(route,"wrong poster")
   for token in ('data-three-open','data-three-close','data-three-action="reset"','data-i18n="three.design"',"three-preview.js","three-preview.css"):
    assert token in h,(route,"missing",token)
   assert 'data-state="blocked"' not in h,(route,"unexpected blocked viewer")
