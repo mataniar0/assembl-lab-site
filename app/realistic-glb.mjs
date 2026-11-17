@@ -278,7 +278,7 @@ function cylinder(segments=24){
   for(let i=0;i<segments;i++){
     const a=i*2,b=a+1,c=a+2,d=a+3;
     // Cross-checked cylinder wall faces point outward.
-    g.index.push(a,b,c,b,d,c);
+    g.index.push(a,c,b,b,c,d);
   }
   for(const y of [-.5,.5]){
     const root=g.position.length/3;
