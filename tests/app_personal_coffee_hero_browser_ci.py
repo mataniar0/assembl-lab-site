@@ -183,7 +183,7 @@ def run(browser_path: str, output: Path):
             check_photo(page)
             page.locator("#personal-coffee-show-model").click()
             expect(page.locator("#personal-coffee-model-status")).to_contain_text(
-                "אינו העתק מאומת", timeout=45000
+                "אותו שולחן כמו בתמונת הראווה", timeout=45000
             )
             assert page.locator("model-viewer").evaluate("e=>e.loaded") is True
             print("PASS offline hero and the exact same updated GLB")
