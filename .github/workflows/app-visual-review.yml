@@ -76,7 +76,6 @@ jobs:
       # Source inspection package for independent comparison of photos to the
       # frozen design-preview GLB. Existing published public assets only.
       - name: Retain real Personal Coffee Table image and 3D source references
-        if: ${{ github.ref == 'refs/heads/feature/app-mvp-21-photo-grounded-coffee' }}
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: personal-coffee-source-${{ github.run_id }}
