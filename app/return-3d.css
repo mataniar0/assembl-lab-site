@@ -15,3 +15,20 @@
 .approved-3d-warning{font-size:12px!important;background:#fef2eb;color:#794b30!important;border:1px solid #e9cbba;border-radius:9px;padding:10px 12px;margin:10px 0 0!important}
 @media(max-width:500px){.approved-3d{padding:12px}.approved-3d-actions{grid-template-columns:1fr}.approved-3d-actions .btn{width:100%}}
 @media(prefers-reduced-motion:reduce){#approved-3d-view{scroll-behavior:auto}}
+
+/* GLB showcase: same local model-viewer as product pages, fallback remains visible. */
+.approved-3d-stage{position:relative;width:100%;aspect-ratio:800/560;min-height:220px;overflow:hidden;border:1px solid #dadfd6;border-radius:13px;background:radial-gradient(ellipse at 50% 20%,#fffdf8 0%,#eeeae1 75%,#e1dfd8 100%)}
+.approved-3d-stage #approved-3d-view{width:100%;height:100%;border:0;border-radius:0}
+.approved-3d-stage #approved-3d-view[hidden]{display:none!important}
+.approved-glb-host{position:absolute;inset:0;display:block;z-index:1;opacity:0;pointer-events:none;transition:opacity .2s ease}
+.approved-glb-host[hidden]{display:none!important}
+.approved-glb-host[data-state="ready"]{opacity:1;pointer-events:auto}
+.approved-glb-host model-viewer{display:block;width:100%;height:100%;background:transparent;touch-action:pan-y;--poster-color:transparent;--progress-bar-color:#56765b}
+.approved-glb-host model-viewer:focus-visible{outline:3px solid #b74e30;outline-offset:-3px}
+.approved-glb-status{text-align:center;font-size:12px!important;color:#425a4b!important;margin:8px 0 13px!important;min-height:24px}
+.approved-glb-host[data-state="ready"] + #approved-3d-view{display:none}
+@media(prefers-reduced-motion:reduce){.approved-glb-host{transition:none}}
+
+/* Explicit orbit and zoom controls, mirroring the product GLB viewer. */
+.approved-3d-actions{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:500px){.approved-3d-actions{grid-template-columns:repeat(2,minmax(0,1fr))}.approved-3d-actions #approved-3d-reset{grid-column:1/-1}}

@@ -48,7 +48,12 @@ def approve(page) -> None:
     page.locator("#confirm-approval").click()
     expect(page.locator("#approved")).to_be_visible()
     expect(page.locator("#approved-3d")).to_be_visible()
-    expect(page.locator("#approved-3d-faces polygon").first).to_be_visible()
+    expect(page.locator("#approved-glb-host")).to_have_attribute(
+        "data-state","ready",timeout=45000
+    )
+    expect(page.locator("#approved-glb-host model-viewer")).to_be_visible()
+    assert page.locator("model-viewer").evaluate("e=>e.loaded")
+    expect(page.locator("#approved-glb-status")).to_contain_text("GLB")
 
 
 def run(browser_exe: str, output_dir: Path) -> None:
@@ -63,7 +68,9 @@ def run(browser_exe: str, output_dir: Path) -> None:
     try:
         with sync_playwright() as engine:
             browser = engine.chromium.launch(
-                headless=True, executable_path=browser_exe
+                headless=True, executable_path=browser_exe,
+                args=["--enable-webgl","--use-angle=swiftshader",
+                      "--enable-unsafe-swiftshader"]
             )
             for width, height in [(320, 740), (390, 844), (768, 900), (1440, 900)]:
                 context = browser.new_context(
@@ -140,22 +147,43 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 assert "PRIVATE_NOTE" not in json.dumps(payloads)
                 assert "example.invalid" not in json.dumps(payloads)
                 expect(page.locator("#approval-record")).to_contain_text(
-                    "next_stage: LOCAL_CONCEPT_3D_READY"
+                    "next_stage: LOCAL_CONCEPT_GLB_READY"
                 )
 
-                first_polygon = page.locator(
-                    "#approved-3d-faces polygon"
-                ).first.get_attribute("points")
+                model_view = page.locator("#approved-glb-host model-viewer")
+                orbit_before = model_view.evaluate("e=>({...e.getCameraOrbit()})")
                 page.locator("#approved-3d-right").click()
-                assert page.locator("#approved-3d-faces polygon").first.get_attribute(
-                    "points"
-                ) != first_polygon
-                page.locator("#approved-3d-view").focus()
-                page.keyboard.press("ArrowRight")
+                orbit_after = model_view.evaluate("e=>({...e.getCameraOrbit()})")
+                assert abs(orbit_after["theta"]-orbit_before["theta"])>0.25
                 page.locator("#approved-3d-reset").click()
-                assert page.locator("#approved-3d-faces polygon").first.get_attribute(
-                    "points"
-                ) == first_polygon
+                orbit_reset = model_view.evaluate("e=>({...e.getCameraOrbit()})")
+                assert abs(orbit_reset["theta"]-orbit_before["theta"])<.05
+                page.locator("#approved-3d-zoom-in").click()
+                in_radius=model_view.evaluate("e=>e.getCameraOrbit().radius")
+                assert in_radius < orbit_reset["radius"], "GLB zoom-in failed"
+                page.locator("#approved-3d-zoom-out").click()
+                out_radius=model_view.evaluate("e=>e.getCameraOrbit().radius")
+                assert out_radius > in_radius, "GLB zoom-out failed"
+                page.locator("#approved-3d-reset").click()
+                assert model_view.evaluate("e=>e.src").startswith("blob:")
+                assert model_view.get_attribute("shadow-intensity") == "1"
+                gltf = page.evaluate("""async () => {
+                    const uri=document.querySelector('model-viewer').src;
+                    const bytes=new Uint8Array(await (await fetch(uri)).arrayBuffer());
+                    const v=new DataView(bytes.buffer);
+                    if(v.getUint32(0,true)!==0x46546c67)throw Error('Not GLB');
+                    const n=v.getUint32(12,true);
+                    return JSON.parse(new TextDecoder().decode(
+                      bytes.slice(20,20+n)).trim());
+                }""")
+                assert gltf["asset"]["version"] == "2.0"
+                assert gltf["extras"]["geometry_kind"] == "SHOWROOM_CONCEPT_GLB"
+                assert gltf["extras"]["source_version"] == "visual-v1"
+                assert gltf["extras"]["manufacturing_approval"] is False
+                assert gltf["nodes"][0]["scale"][1] == .004
+                assert any(n["name"]=="drawer-2-pull" for n in gltf["nodes"])
+                assert any(n["name"]=="lower-front" for n in gltf["nodes"])
+                assert len(gltf["materials"])>=8
 
                 page.locator("#lang").click()
                 expect(page.locator("html")).to_have_attribute("lang", "en")
@@ -167,6 +195,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 )
                 page.locator("#lang").click()
                 expect(page.locator("html")).to_have_attribute("lang", "he")
+                assert page.locator("model-viewer").evaluate("e=>e.loaded")
 
                 # Return to versions, make another choice, approve and replace
                 # the in-app model, not a downloaded file or stale V1 snapshot.
@@ -191,6 +220,15 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 expect(page.locator("#approved-3d-summary")).to_contain_text(
                     "6 mm"
                 )
+                gltf2 = page.evaluate("""async () => {
+                    const uri=document.querySelector('model-viewer').src;
+                    const a=new Uint8Array(await (await fetch(uri)).arrayBuffer());
+                    const n=new DataView(a.buffer).getUint32(12,true);
+                    return JSON.parse(new TextDecoder().decode(a.slice(20,20+n)).trim());
+                }""")
+                assert gltf2["extras"]["source_version"] == "visual-v2"
+                assert gltf2["nodes"][0]["scale"][1] == .006
+                assert not any(n["name"]=="drawer-2-pull" for n in gltf2["nodes"])
                 assert page.locator(
                     '#approved-3d-faces polygon[data-part="drawer-2"]'
                 ).count() == 0
@@ -251,7 +289,26 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 "500 × 550 × 350"
             )
             assert page.locator("#approved-3d-faces polygon").count() > 0
+            expect(page.locator("#approved-glb-host model-viewer")).to_be_visible()
             offline.close()
+            # Deterministic no-WebGL fallback, not a blank approval screen.
+            fallback = browser.new_context(viewport={"width":390,"height":844})
+            fallback.add_init_script(
+                "HTMLCanvasElement.prototype.getContext=function(){return null}"
+            )
+            page = fallback.new_page()
+            page.goto(root+"/app/",wait_until="networkidle")
+            flow_to_config(page)
+            set_design(page,"natural",1,"shelf",50,55,35,6)
+            page.locator("#generate").click()
+            page.locator("#open-approval").click()
+            page.locator("#confirm-approval").click()
+            expect(page.locator("#approved-3d")).to_be_visible()
+            expect(page.locator("#approved-3d-view")).to_be_visible()
+            expect(page.locator("#approved-glb-host")).to_be_hidden()
+            expect(page.locator("#approved-glb-status")).to_contain_text("WebGL")
+            assert page.locator("model-viewer").count() == 0
+            fallback.close()
             browser.close()
     finally:
         server.shutdown()
@@ -264,7 +321,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
             "results": results, "offline_approved_3d": "PASS"
         }, indent=2)+"\n", encoding="utf8"
     )
-    print("MVP-15 PASS: 4 viewports, selected-version and offline in-app 3D")
+    print("MVP-16 PASS: real in-app GLB, 4 viewports, history, offline and WebGL fallback")
 
 
 if __name__ == "__main__":

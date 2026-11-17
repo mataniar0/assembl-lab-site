@@ -12,7 +12,7 @@ const FACES=[
   {normal:[0,1,0],points:[[-.5,.5,.5],[.5,.5,.5],[.5,.5,-.5],[-.5,.5,-.5]]},
   {normal:[0,-1,0],points:[[-.5,-.5,-.5],[.5,-.5,-.5],[.5,-.5,.5],[-.5,-.5,.5]]}
 ];
-const MESH_KINDS=['top','side','back','shelf','drawer','leg'];
+const MESH_KINDS=['top','side','back','shelf','drawer','leg','front'];
 const FINISHES={
   natural:['#e0b988','#cba273','#9d754f'],
   honey:['#cb995f','#b77c44','#825533'],
@@ -22,10 +22,10 @@ const METER=0.001;
 function assertModel(model){
   if(!model||model.certified!==false||!Array.isArray(model.parts)||
      !FINISHES[model.finish]||model.material!=='birch_plywood'||
-     model.nominal_thickness_mm!==6||model.parts.length<10||model.parts.length>11)
+     ![4,6].includes(model.nominal_thickness_mm)||model.parts.length<10||model.parts.length>12)
     throw new TypeError('CONCEPT_ONLY_MODEL_REQUIRED');
   for(const p of model.parts){
-    if(!MESH_KINDS.includes(p.kind)||!(/^(top|left|right|back|shelf|drawer-[12]|leg-[lrfb]+)$/.test(p.id))||
+    if(!MESH_KINDS.includes(p.kind)||!(/^(top|left|right|back|shelf|lower-front|drawer-[12]|leg-[lrfb]+)$/.test(p.id))||
        ![p.x,p.y,p.z,p.width,p.height,p.depth].every(Number.isFinite)||
        [p.width,p.height,p.depth].some(v=>v<=0))
       throw new TypeError('INVALID_CONCEPT_PART');
@@ -55,7 +55,7 @@ function rgb(hex){
 }
 function materialColor(kind,finish){
   const [top,front,side]=FINISHES[finish];
-  return rgb(kind==='top'?top:kind==='drawer'?front:side);
+  return rgb(kind==='top'?top:(kind==='drawer'||kind==='front')?front:side);
 }
 function pad4(n){return (n+3)&~3;}
 function toGlb(gltf,bin){
@@ -98,7 +98,7 @@ export function conceptPartReport(concept,dimensions=concept?.dimensions_mm){
     source_slot:concept.selected_slot,
     source_scene:concept.scene_id,
     material:'birch_plywood',
-    nominal_thickness_mm:6,
+    nominal_thickness_mm:model.nominal_thickness_mm,
     glb_unit:'metre',
     source_unit:'millimetre',
     dimensions_mm:model.dimensions_mm,
