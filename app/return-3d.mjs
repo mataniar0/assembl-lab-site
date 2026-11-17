@@ -92,9 +92,16 @@ window.addEventListener('assembl:3d-model-ready',event=>{
   panel.hidden=false;
   error.hidden=true;
   error.textContent='';
-  document.querySelector('.progress-step[data-phase="1"]')?.classList.remove('active');
-  document.querySelector('.progress-step[data-phase="2"]')?.classList.add('active');
   render();
+  // The existing inline approval handler may run AFTER the intent handler.
+  // Defer progress/record decoration until both click handlers finish, so the
+  // main application's go('approved') cannot overwrite the correct stage.
+  queueMicrotask(()=>{
+    if(!approved||$('approved').hidden)return;
+    document.querySelector('.progress-step[data-phase="1"]')?.classList.remove('active');
+    document.querySelector('.progress-step[data-phase="2"]')?.classList.add('active');
+    setRecord();
+  });
 });
 $('approved-3d-left').addEventListener('click',()=>rotate(-15));
 $('approved-3d-right').addEventListener('click',()=>rotate(15));
