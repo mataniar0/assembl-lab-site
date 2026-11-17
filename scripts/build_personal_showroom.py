@@ -122,6 +122,10 @@ def build():
         brace.apply_translation([center*math.cos(a),center*math.sin(a),.219])
         brace.visual=TextureVisuals(material=black)
         add(scene,brace,f'ring_brace_{i+1}')
+    # glTF/model-viewer uses Y-up. Our construction coordinates are Z-up.
+    # Rotate the complete scene exactly once before export: tabletop must be
+    # horizontal, legs must meet the floor, not point sideways in the poster.
+    scene.apply_transform(trimesh.transformations.rotation_matrix(-math.pi/2,[1,0,0]))
     TARGET.parent.mkdir(parents=True,exist_ok=True)
     glb=trimesh.exchange.gltf.export_glb(scene)
     TARGET.write_bytes(glb)
