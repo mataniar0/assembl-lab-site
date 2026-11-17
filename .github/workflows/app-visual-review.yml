@@ -12,6 +12,7 @@ on:
       - feature/app-mvp-16-glb-quality-in-app
       - feature/app-mvp-17-realistic-nightstand
       - feature/app-mvp-18-real-personal-coffee
+      - feature/app-mvp-19-coffee-showcase-hero
   pull_request:
     branches:
       - main
@@ -24,6 +25,7 @@ on:
       - 'app/showcase-glb*'
       - 'app/realistic-glb*'
       - 'app/personal-coffee-hero*'
+      - 'app/media/personal-coffee-showcase-*'
       - 'tests/app_personal_coffee_hero_browser_ci.py'
       - 'app/nightstand-intent.js'
       - 'tests/app_return3d_browser_ci.py'
