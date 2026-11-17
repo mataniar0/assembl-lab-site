@@ -158,7 +158,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 page.locator("#approved-3d-reset").click()
                 orbit_reset = model_view.evaluate("e=>({...e.getCameraOrbit()})")
                 assert abs(orbit_reset["theta"]-orbit_before["theta"])<.05
-                assert model_view.get_attribute("src").startswith("blob:")
+                assert model_view.evaluate("e=>e.src").startswith("blob:")
                 assert model_view.get_attribute("shadow-intensity") == "1"
                 gltf = page.evaluate("""async () => {
                     const uri=document.querySelector('model-viewer').src;
