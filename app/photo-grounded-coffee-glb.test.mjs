@@ -65,7 +65,7 @@ test('preserves all source vertices, normals, triangle indices and transforms ex
     assert.equal(a.attributes.POSITION,b.attributes.POSITION);
     assert.equal(a.attributes.NORMAL,b.attributes.NORMAL);
     assert.ok(!('COLOR_0' in b.attributes),'original brown swatch replaced');
-    assert.equal(b.material,[27,28,29,30].includes(i)?0:
+    assert.equal(b.material,[29,30].includes(i)?4:[27,28].includes(i)?0:
       (i>=1&&i<=18?1:(i===31?2:3)));
     assert.equal(output.doc.nodes[i+1].extras.source_geometry_retained,true);
   }
@@ -75,7 +75,11 @@ test('preserves all source vertices, normals, triangle indices and transforms ex
 test('photo-informed finish actually uses timber-grain PBR and dark curved leg/ring materials',()=>{
   const {doc,bin}=parse(finishPersonalDesign(original));
   assert.equal(doc.images.length,2);
-  assert.equal(doc.materials.length,4);
+  assert.equal(doc.materials.length,5);
+  assert.match(doc.materials[4].name,/layered wooden drum rim/);
+  assert.ok(doc.materials[4].pbrMetallicRoughness.baseColorFactor[0]<
+    doc.materials[0].pbrMetallicRoughness.baseColorFactor[0]);
+  assert.deepEqual(doc.materials[4].pbrMetallicRoughness.baseColorTexture,{index:0});
   assert.equal(doc.materials[0].pbrMetallicRoughness.baseColorTexture.index,0);
   assert.equal(doc.materials[0].normalTexture.index,1);
   assert.ok(doc.materials[1].pbrMetallicRoughness.baseColorFactor[0]<.08);
@@ -92,6 +96,10 @@ test('photo-informed finish actually uses timber-grain PBR and dark curved leg/r
     assert.equal(uv.componentType,5126);
     assert.equal(uv.type,'VEC2');
   }
+  assert.equal(doc.meshes[29].primitives[0].material,4);
+  assert.equal(doc.meshes[30].primitives[0].material,4);
+  assert.equal(doc.nodes[30].extras.material_role,'WARM_WOOD_LAYERED_RIM');
+  assert.equal(doc.nodes[31].extras.material_role,'WARM_WOOD_LAYERED_RIM');
   assert.ok(doc.extras.source_part_identifiers.includes('P07R1'));
   assert.ok(doc.extras.source_part_identifiers.includes('P07R2'));
 });
