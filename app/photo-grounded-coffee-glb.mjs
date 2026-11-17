@@ -105,7 +105,7 @@ export function finishPersonalDesign(source){
   // All published source vertex indices, normal vectors and triangles are
   // retained byte-for-byte. Remove the original tan per-vertex swatch so that
   // physically based materials reflect the finished photographed color.
-  const textures=generateTextures('natural',.42);
+  const textures=generateTextures('natural',.50);
   const diffuse=append(textures.colour),normal=append(textures.normals);
   doc.images=[
     {name:'Illustrative warm timber grain',bufferView:diffuse,mimeType:'image/png'},
@@ -115,7 +115,7 @@ export function finishPersonalDesign(source){
   doc.textures=[{sampler:0,source:0},{sampler:0,source:1}];
   doc.materials=[
     {name:'Warm timber circular top – photos 01/06 reference',
-     pbrMetallicRoughness:{baseColorFactor:[1.15,1.12,1.04,1],
+     pbrMetallicRoughness:{baseColorFactor:[1.08,1.02,.87,1],
        baseColorTexture:{index:0},metallicFactor:0,roughnessFactor:.73},
      normalTexture:{index:1,scale:.09},doubleSided:true},
     {name:'Finished near-black laminated curved legs and pairing spacers',
@@ -126,18 +126,25 @@ export function finishPersonalDesign(source){
        metallicFactor:.03,roughnessFactor:.61},doubleSided:true},
     {name:'Dark support under top',
      pbrMetallicRoughness:{baseColorFactor:[.12,.10,.075,1],
-       metallicFactor:0,roughnessFactor:.72},doubleSided:true}
+       metallicFactor:0,roughnessFactor:.72},doubleSided:true},
+    // In finished photographs 01/06, the drum rim is visibly deeper/warmer
+    // than the flat top and highlights its actual segmented lamination. Keep
+    // original curved rim mesh (P07R1/P07R2); only its visual finish differs.
+    {name:'Warm layered wooden drum rim – photos 01/06 reference',
+     pbrMetallicRoughness:{baseColorFactor:[.92,.82,.66,1],
+       baseColorTexture:{index:0},metallicFactor:0,roughnessFactor:.82},
+     normalTexture:{index:1,scale:.075},doubleSided:true}
   ];
   const woodCount=WOOD_PARTS.size;
   for(let i=0;i<32;i++){
     const primitive=doc.meshes[i].primitives[0];
     delete primitive.attributes.COLOR_0;
-    primitive.material=WOOD_PARTS.has(i)?0:
+    primitive.material=(i===29||i===30)?4:WOOD_PARTS.has(i)?0:
       (LEG_PARTS.has(i)||(i>=1&&i<=18)?1:(i===RING_PART?2:3));
     doc.meshes[i].name='photo-finish-'+PART_NAMES[i];
     doc.nodes[i+1].name='photo-finish-node-'+PART_NAMES[i];
     doc.nodes[i+1].extras={source_part:PART_NAMES[i],
-      material_role:WOOD_PARTS.has(i)?'WARM_WOOD':
+      material_role:(i===29||i===30)?'WARM_WOOD_LAYERED_RIM':WOOD_PARTS.has(i)?'WARM_WOOD':
         (i>=1&&i<=18?'PAIRED_BLACK_CURVED_LEG':i===RING_PART?'BLACK_RING':'UNDER_TOP_SUPPORT'),
       source_geometry_retained:true,measured_from_photo:false,
       manufacturing_approval:false};
