@@ -37,8 +37,8 @@ function pattern(x,y){
   const rings1=Math.sin(Math.sqrt(((x-358)/1.6)**2+((y-95)/.68)**2)*.29)*k1;
   const rings2=Math.sin(Math.sqrt(((x-126)/1.6)**2+((y-204)/.68)**2)*.3)*k2;
   return {
-    value: .09*wide+.059*fine+.023*ultra+.035*(noise(x/8,y/5)-.5)-
-      .21*k1-.14*k2+.075*rings1+.05*rings2,
+    value: .16*wide+.09*fine+.043*ultra+.048*(noise(x/8,y/5)-.5)-
+      .24*k1-.19*k2+.09*rings1+.068*rings2,
     micro: Math.sin(yy*.74+noise(x/43,yy/10)*1.6)
   };
 }
