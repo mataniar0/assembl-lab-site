@@ -177,13 +177,25 @@ def run(browser_exe: str, output_dir: Path) -> None:
                       bytes.slice(20,20+n)).trim());
                 }""")
                 assert gltf["asset"]["version"] == "2.0"
-                assert gltf["extras"]["geometry_kind"] == "SHOWROOM_CONCEPT_GLB"
+                assert gltf["extras"]["geometry_kind"] == "REALISTIC_TEXTURED_SHOWROOM_CONCEPT"
+                assert gltf["extras"]["visual_quality"] == "bevelled-textured-pbr-v1"
+                assert gltf["extras"]["decorations_are_visual_only"] is True
+                assert len(gltf["images"]) == 2
+                assert all("bufferView" in img for img in gltf["images"])
+                assert any(m["pbrMetallicRoughness"].get("baseColorTexture")
+                    for m in gltf["materials"])
+                assert any(m.get("normalTexture") for m in gltf["materials"])
+                p=gltf["meshes"][gltf["nodes"][0]["mesh"]]["primitives"][0]
+                assert gltf["accessors"][p["attributes"]["POSITION"]]["count"] >= 300
+                assert "TEXCOORD_0" in p["attributes"]
+                assert any(n["name"]=="drawer-2-face-visual" for n in gltf["nodes"])
+                assert any(n["name"]=="lower-visual-face" for n in gltf["nodes"])
                 assert gltf["extras"]["source_version"] == "visual-v1"
                 assert gltf["extras"]["manufacturing_approval"] is False
                 assert gltf["nodes"][0]["scale"][1] == .004
                 assert any(n["name"]=="drawer-2-pull" for n in gltf["nodes"])
                 assert any(n["name"]=="lower-front" for n in gltf["nodes"])
-                assert len(gltf["materials"])>=8
+                assert len(gltf["materials"])>=7
 
                 page.locator("#lang").click()
                 expect(page.locator("html")).to_have_attribute("lang", "en")
@@ -227,8 +239,12 @@ def run(browser_exe: str, output_dir: Path) -> None:
                     return JSON.parse(new TextDecoder().decode(a.slice(20,20+n)).trim());
                 }""")
                 assert gltf2["extras"]["source_version"] == "visual-v2"
+                assert gltf2["extras"]["visual_quality"] == "bevelled-textured-pbr-v1"
+                assert gltf2["extras"]["finish"] == "natural"
+                assert len(gltf2["images"]) == 2
                 assert gltf2["nodes"][0]["scale"][1] == .006
                 assert not any(n["name"]=="drawer-2-pull" for n in gltf2["nodes"])
+                assert not any(n["name"]=="lower-visual-face" for n in gltf2["nodes"])
                 assert page.locator(
                     '#approved-3d-faces polygon[data-part="drawer-2"]'
                 ).count() == 0
@@ -290,6 +306,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
             )
             assert page.locator("#approved-3d-faces polygon").count() > 0
             expect(page.locator("#approved-glb-host model-viewer")).to_be_visible()
+            assert page.locator("model-viewer").evaluate("e=>e.loaded")
             offline.close()
             # Deterministic no-WebGL fallback, not a blank approval screen.
             fallback = browser.new_context(viewport={"width":390,"height":844})
@@ -321,7 +338,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
             "results": results, "offline_approved_3d": "PASS"
         }, indent=2)+"\n", encoding="utf8"
     )
-    print("MVP-16 PASS: real in-app GLB, 4 viewports, history, offline and WebGL fallback")
+    print("MVP-17 PASS: textured realistic GLB, 4 viewports, history, offline and WebGL fallback")
 
 
 if __name__ == "__main__":
