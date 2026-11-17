@@ -111,10 +111,15 @@
     summary.append(extra);
   }
   function captureVersion() {
-    const id = currentVersionId();
-    if (!Number.isInteger(id) || id < 1 || !within(dimensions(),'preview')) return;
-    snapshots.set(id, structuredClone(designIntent()));
-    renderSnapshotDetails();
+    // Legacy handlers may run after this submit/quick-action listener and
+    // create V2 before updating the selected-label DOM. Capture *after* the
+    // browser event finishes, or V2's geometry can be stored under V1.
+    window.setTimeout(()=>{
+      const id = currentVersionId();
+      if (!Number.isInteger(id) || id < 1 || !within(dimensions(),'preview')) return;
+      snapshots.set(id, structuredClone(designIntent()));
+      renderSnapshotDetails();
+    },0);
   }
   function markApproved() {
     const id = currentVersionId();
