@@ -1,9 +1,9 @@
 /* ASSEMBL LAB PWA shell — only public synthetic preview resources are cached.
  * Never cache private Auth/cloud pages or overwrite the home document on navigation.
  */
-const CACHE = 'assemble-lab-android-v0.5.0-glb';
+const CACHE = 'assemble-lab-android-v0.6.0-return-3d';
 const SHELL = [
-  './','./index.html','./nightstand-intent.js','./manifest.webmanifest',
+  './','./index.html','./nightstand-intent.js','./return-3d.mjs','./return-3d.css','./manifest.webmanifest',
   './icons/icon-192.png','./icons/icon-512.png',
   './preview-lab.html','./preview-lab.css','./preview-lab.mjs','./preview-state.mjs',
   './concept-3d.html','./concept-3d.css','./concept-3d.mjs','./concept-geometry.mjs','./concept-export.mjs',
