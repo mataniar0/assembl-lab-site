@@ -1,0 +1,17 @@
+/* MVP-15: the customer's 3D model is returned on the approved step of the main app. */
+.approved-card:has(.approved-3d:not([hidden])){max-width:890px}
+.approved-3d{margin:25px auto 20px;padding:clamp(15px,3vw,24px);background:#faf9f5;border:1px solid #d4e0d1;border-radius:16px;text-align:start}
+.approved-3d[hidden]{display:none}
+.approved-3d-heading{text-align:center}
+.approved-3d-heading h2{font-size:clamp(21px,3vw,29px);line-height:1.3;margin:10px 0}
+.approved-3d-heading p{font-size:13px;line-height:1.7;margin:8px auto 18px!important}
+.approved-3d-chip{display:inline-block;background:#e0efe4;color:#2b5d3c;border-radius:99px;padding:6px 12px;font-weight:800;font-size:12px}
+#approved-3d-view{display:block;width:100%;height:auto;aspect-ratio:800/560;border:1px solid #d9ddcf;border-radius:12px;touch-action:none;cursor:grab}
+#approved-3d-view:active{cursor:grabbing}
+#approved-3d-view:focus-visible{outline:3px solid #b74e30;outline-offset:3px}
+.approved-3d-summary{margin:13px 0!important;padding:10px 12px;border-radius:10px;background:white;font-size:13px;color:#364b3a!important;line-height:1.6;overflow-wrap:anywhere;text-align:center}
+.approved-3d-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:14px 0}
+.approved-3d-actions .btn{min-height:44px;padding:10px 5px;font-size:13px}
+.approved-3d-warning{font-size:12px!important;background:#fef2eb;color:#794b30!important;border:1px solid #e9cbba;border-radius:9px;padding:10px 12px;margin:10px 0 0!important}
+@media(max-width:500px){.approved-3d{padding:12px}.approved-3d-actions{grid-template-columns:1fr}.approved-3d-actions .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){#approved-3d-view{scroll-behavior:auto}}
