@@ -107,8 +107,12 @@ async function showModel(){
 photoButton.addEventListener('click',()=>showPhoto());
 modelButton.addEventListener('click',()=>{if(!showingModel)void showModel();});
 $('lang').addEventListener('click',()=>{
-  updateAlt();
-  speak(statusKey);
+  // The main app's language handler may run after this module's listener.
+  // Update UI after ALL handlers so status/alt follow the final document lang.
+  window.setTimeout(()=>{
+    updateAlt();
+    speak(statusKey);
+  },0);
 });
 window.addEventListener('pagehide',()=>showPhoto());
 updateAlt();
