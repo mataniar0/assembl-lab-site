@@ -93,7 +93,7 @@ test('PBR texture, normal map and photo snapshot come from the same local GLB pa
   assert.match(source,/matchingCoffeeTableGlb\(\)/);
   assert.match(source,/new Blob\(\[bytes\],\{type:'model\/gltf-binary'\}\)/);
   assert.match(source,/next\.toDataURL\('image\/png'\)/);
-  assert.match(source,/data-showcase-source/);
+  assert.match(source,/image\.dataset\.showcaseSource='exact-loaded-coffee-glb'/);
   assert.match(source,/data\.startsWith\('data:image\/png;base64,'\)/);
   assert.match(source,/URL\.revokeObjectURL\(blobUrl\)/);
   assert.match(html,/data-model-src="generated-visual-glb"/);
