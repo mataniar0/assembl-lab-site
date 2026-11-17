@@ -52,7 +52,7 @@ def approve(page) -> None:
         "data-state","ready",timeout=45000
     )
     expect(page.locator("#approved-glb-host model-viewer")).to_be_visible()
-    assert page.locator("model-viewer").evaluate("e=>e.loaded")
+    assert page.locator("#approved-glb-host model-viewer").evaluate("e=>e.loaded")
     expect(page.locator("#approved-glb-status")).to_contain_text("GLB")
 
 
@@ -168,7 +168,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 assert model_view.evaluate("e=>e.src").startswith("blob:")
                 assert model_view.get_attribute("shadow-intensity") == "1"
                 gltf = page.evaluate("""async () => {
-                    const uri=document.querySelector('model-viewer').src;
+                    const uri=document.querySelector('#approved-glb-host model-viewer').src;
                     const bytes=new Uint8Array(await (await fetch(uri)).arrayBuffer());
                     const v=new DataView(bytes.buffer);
                     if(v.getUint32(0,true)!==0x46546c67)throw Error('Not GLB');
@@ -207,7 +207,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 )
                 page.locator("#lang").click()
                 expect(page.locator("html")).to_have_attribute("lang", "he")
-                assert page.locator("model-viewer").evaluate("e=>e.loaded")
+                assert page.locator("#approved-glb-host model-viewer").evaluate("e=>e.loaded")
 
                 # Return to versions, make another choice, approve and replace
                 # the in-app model, not a downloaded file or stale V1 snapshot.
@@ -233,7 +233,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
                     "6 mm"
                 )
                 gltf2 = page.evaluate("""async () => {
-                    const uri=document.querySelector('model-viewer').src;
+                    const uri=document.querySelector('#approved-glb-host model-viewer').src;
                     const a=new Uint8Array(await (await fetch(uri)).arrayBuffer());
                     const n=new DataView(a.buffer).getUint32(12,true);
                     return JSON.parse(new TextDecoder().decode(a.slice(20,20+n)).trim());
@@ -306,7 +306,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
             )
             assert page.locator("#approved-3d-faces polygon").count() > 0
             expect(page.locator("#approved-glb-host model-viewer")).to_be_visible()
-            assert page.locator("model-viewer").evaluate("e=>e.loaded")
+            assert page.locator("#approved-glb-host model-viewer").evaluate("e=>e.loaded")
             offline.close()
             # Deterministic no-WebGL fallback, not a blank approval screen.
             fallback = browser.new_context(viewport={"width":390,"height":844})
@@ -324,7 +324,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
             expect(page.locator("#approved-3d-view")).to_be_visible()
             expect(page.locator("#approved-glb-host")).to_be_hidden()
             expect(page.locator("#approved-glb-status")).to_contain_text("WebGL")
-            assert page.locator("model-viewer").count() == 0
+            assert page.locator("#approved-glb-host model-viewer").count() == 0
             fallback.close()
             browser.close()
     finally:
