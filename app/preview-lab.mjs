@@ -59,6 +59,12 @@ function renderConcepts(){
     el('choose-'+lower).setAttribute('aria-pressed',String(chosenSlot===key));
   }
   el('download-selected').disabled=!chosenSlot;
+  // The URL fragment is local to the browser, never sent to GitHub Pages.
+  // Only the strict synthetic, bounded five-property selection is embedded.
+  el('open-selected-3d').href=chosenSlot&&concepts[chosenSlot]?
+    './concept-3d.html#selected='+
+      encodeURIComponent(JSON.stringify(selectedConceptPackage(chosenSlot,concepts[chosenSlot]))):
+    './concept-3d.html';
   el('selected-status').textContent=chosenSlot?
     phrase('נבחרה חלופה ','Selected concept ')+chosenSlot+
       phrase(' · אפשר להוריד אפיון מקומי ללא פרטים אישיים.',

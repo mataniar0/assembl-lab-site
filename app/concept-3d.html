@@ -56,7 +56,8 @@
       <p class="small" data-he="הנתונים נשארים בזיכרון הדף. אין העלאה, התחברות או עיבוד AI." data-en="Data stays in page memory. No upload, sign-in or AI processing.">הנתונים נשארים בזיכרון הדף. אין העלאה, התחברות או עיבוד AI.</p>
       <label for="concept-file" data-he="טען קובץ אפיון JSON מקומי (עד 16KB)" data-en="Import a local Design Intent JSON (up to 16KB)">טען קובץ אפיון JSON מקומי (עד 16KB)</label>
       <input type="file" id="concept-file" accept=".json,application/json">
-      <div class="inline-actions"><button id="load-demo" type="button" data-he="הצג דגם לדוגמה" data-en="Show sample model">הצג דגם לדוגמה</button></div>
+      <div class="inline-actions"><button id="load-demo" type="button" data-he="הצג דגם לדוגמה" data-en="Show sample model">הצג דגם לדוגמה</button>
+      <button id="showcase-demo" type="button" data-he="דמו מהיר לשיווק · אגוז, 2 מגירות" data-en="Quick marketing demo · walnut, 2 drawers">דמו מהיר לשיווק · אגוז, 2 מגירות</button></div>
       <p id="load-status" role="status" aria-live="polite"></p>
       <h3 data-he="מידות תצוגה משוערות (מ״מ)" data-en="Provisional dimensions (mm)">מידות תצוגה משוערות (מ״מ)</h3>
       <div class="dimensions">
@@ -70,6 +71,15 @@
       <p class="small" data-he="שינוי מידות משנה את ההמחשה בלבד ואינו משנה את קובץ המקור." data-en="Changing dimensions updates only the concept view and never edits the source file.">שינוי מידות משנה את ההמחשה בלבד ואינו משנה את קובץ המקור.</p>
       <h3 data-he="סיכום מודל נגיש" data-en="Accessible model summary">סיכום מודל נגיש</h3>
       <div id="model-summary" class="summary" role="status" aria-live="polite"></div>
+      <section class="export-panel" aria-labelledby="export-title">
+        <h3 id="export-title" data-he="קובצי הדגמה לשיתוף" data-en="Shareable demo exports">קובצי הדגמה לשיתוף</h3>
+        <p class="small" data-he="שני קבצים מקומיים לאותה גרסה: GLB תלת־ממדי ודוח חלקים JSON עם טביעת SHA-256 של ה־GLB. ללא העלאה או שרת." data-en="Two local files for the same variant: a 3D GLB and a JSON part report containing its GLB SHA-256. No upload or server.">שני קבצים מקומיים לאותה גרסה: GLB תלת־ממדי ודוח חלקים JSON עם טביעת SHA-256 של ה־GLB. ללא העלאה או שרת.</p>
+        <div class="export-actions">
+          <button id="download-glb" type="button" data-he="הורד מודל GLB להמחשה" data-en="Download concept GLB">הורד מודל GLB להמחשה</button>
+          <button id="download-report" type="button" data-he="הורד דוח חלקים JSON" data-en="Download JSON part report">הורד דוח חלקים JSON</button>
+        </div>
+        <p id="export-status" role="status" aria-live="polite"></p>
+      </section>
       <p class="warning" data-he="המודל הוא המחשת נפחים ללא מידול חיבורים, עומסים, מרווחי מגירות או אימות ייצור. לא ניתן להשתמש בו כקובץ CNC/לייזר." data-en="Schematic volume model only. No joint, load, drawer-clearance or manufacturing validation. Not a CNC/laser cutting file.">המודל הוא המחשת נפחים ללא מידול חיבורים, עומסים, מרווחי מגירות או אימות ייצור. לא ניתן להשתמש בו כקובץ CNC/לייזר.</p>
     </section>
   </div>

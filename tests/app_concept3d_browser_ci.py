@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
+import struct
 from functools import partial
 import http.server
 import json
@@ -80,6 +82,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
                     viewport={"width": width, "height": height},
                     reduced_motion="reduce",
                     device_scale_factor=1,
+                    accept_downloads=True,
                 )
                 page = ctx.new_page()
                 errors = []
@@ -142,6 +145,47 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 page.locator("#width-mm").press("Tab")
                 expect(page.locator("#width-mm")).to_have_value("650")
 
+                # MVP-14: download exact binary GLB and matching part-list SHA-256.
+                with page.expect_download() as glb_event:
+                    page.locator("#download-glb").click()
+                glb_download = glb_event.value
+                assert glb_download.suggested_filename == (
+                    "assembl-lab-concept-b-650x550x350.glb"
+                )
+                glb_bytes = Path(glb_download.path()).read_bytes()
+                magic, version, total = struct.unpack_from("<III", glb_bytes, 0)
+                assert magic == 0x46546C67 and version == 2
+                assert total == len(glb_bytes)
+                json_length, json_type = struct.unpack_from("<II", glb_bytes, 12)
+                assert json_type == 0x4E4F534A and json_length % 4 == 0
+                gltf = json.loads(glb_bytes[20:20+json_length].decode("utf8"))
+                assert gltf["asset"]["version"] == "2.0"
+                assert gltf["extras"]["engineering_approval"] is False
+                assert gltf["extras"]["manufacturing_approval"] is False
+                assert gltf["nodes"][0]["name"] == "top"
+                assert abs(gltf["nodes"][0]["scale"][0] - .65) < 1e-8
+                assert len(gltf["nodes"]) == 11
+                assert "uri" not in gltf["buffers"][0]
+                assert gltf["scenes"][0]["name"] == "UNVERIFIED_NIGHTSTAND"
+                with page.expect_download() as report_event:
+                    page.locator("#download-report").click()
+                parts_download = report_event.value
+                assert parts_download.suggested_filename == (
+                    "assembl-lab-concept-b-650x550x350-parts.json"
+                )
+                part_report = json.loads(Path(parts_download.path()).read_text("utf8"))
+                assert part_report["glb_sha256"] == hashlib.sha256(glb_bytes).hexdigest()
+                assert part_report["source_slot"] == "B"
+                assert part_report["part_count"] == 11
+                assert part_report["dimensions_mm"] == {
+                    "width": 650, "height": 550, "depth": 350
+                }
+                assert part_report["safety"]["engineering_approval"] is False
+                assert part_report["safety"]["collision_free_verified"] is False
+                expect(page.locator("#export-status")).to_contain_text(
+                    part_report["glb_sha256"]
+                )
+
                 attack = candidate()
                 attack["photo_url"] = "https://example.invalid/private"
                 put_json(page, attack, "unapproved.json")
@@ -171,6 +215,10 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 )
                 expect(page.locator("#width-mm")).to_have_value("500")
                 assert page.locator('[data-part="drawer-2"]').count() == 0
+                page.locator("#showcase-demo").click()
+                expect(page.locator("#model-summary")).to_contain_text("2 מגירות")
+                expect(page.locator("#load-status")).to_contain_text("דמו שיווקי")
+                assert page.locator('[data-part="drawer-2"]').count() > 0
                 page.reload(wait_until="networkidle")
                 expect(page.locator("#model-summary")).to_contain_text(
                     "דגם לדוגמה"
@@ -208,7 +256,31 @@ def run(browser_exe: str, output_dir: Path) -> None:
             page.goto(root + "/app/concept-3d.html", wait_until="domcontentloaded")
             expect(page.locator("#model-faces polygon").first).to_be_visible()
             expect(page.locator("#load-status")).to_contain_text("מודל לדוגמה")
+            with page.expect_download() as offline_glb:
+                page.locator("#download-glb").click()
+            assert Path(offline_glb.value.path()).read_bytes()[:4] == b"glTF"
             offline.close()
+
+            # MVP-14 marketing path: chosen A/B opens a validated 3D concept
+            # in one click. Hash fragments are never transmitted to the server.
+            journey = browser.new_context(viewport={"width": 390, "height": 844})
+            page = journey.new_page()
+            page.goto(root + "/app/preview-lab.html", wait_until="networkidle")
+            page.locator("#scene").select_option("SC-07")
+            page.locator("#finish").select_option("walnut")
+            page.locator("#drawers").select_option("2")
+            page.locator("#capture-b").click()
+            page.locator("#choose-b").click()
+            handoff = page.locator("#open-selected-3d").get_attribute("href")
+            assert handoff.startswith("./concept-3d.html#selected=")
+            assert "customer" not in handoff and "photo_url" not in handoff
+            page.locator("#open-selected-3d").click()
+            assert "/app/concept-3d.html#selected=" in page.url
+            expect(page.locator("#model-summary")).to_contain_text("חלופה B")
+            expect(page.locator("#model-summary")).to_contain_text("2 מגירות")
+            expect(page.locator("#load-status")).to_contain_text("הועברה")
+            assert page.locator('[data-part="drawer-2"]').count() > 0
+            journey.close()
             browser.close()
     finally:
         server.shutdown()

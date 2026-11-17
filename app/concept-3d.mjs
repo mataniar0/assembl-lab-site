@@ -1,5 +1,6 @@
 /* MVP-13 — local-only interactive 3D concept. Never sends or stores an imported file. */
 import {parseSelectedConcept,demoConcept,buildNightstand,projectNightstand,faceColor} from './concept-geometry.mjs';
+import {conceptExportBundle} from './concept-export.mjs';
 
 const el=id=>document.getElementById(id);
 const ns='http://www.w3.org/2000/svg';
@@ -82,6 +83,49 @@ el('load-demo').addEventListener('click',()=>{
   el('concept-file').value='';
   translate();
 });
+el('showcase-demo').addEventListener('click',()=>{
+  concept=Object.freeze({...demoConcept(),finish:'walnut',drawers:2});
+  dims={...concept.dimensions_mm};
+  syncDims();
+  el('concept-file').value='';
+  translate();
+  showStatus('דמו שיווקי סינתטי פעיל: שידת אגוז עם שתי מגירות.',
+    'Synthetic marketing demo: walnut nightstand with two drawers.');
+});
+let exporting=false;
+async function exportConcept(kind){
+  if(exporting)return;
+  exporting=true;
+  el('download-glb').disabled=true;
+  el('download-report').disabled=true;
+  try{
+    const bundle=await conceptExportBundle(concept,dims);
+    const slug='assembl-lab-concept-'+concept.selected_slot.toLowerCase()+
+      '-'+dims.width+'x'+dims.height+'x'+dims.depth;
+    const isGlb=kind==='glb';
+    const blob=new Blob([isGlb?bundle.glb:JSON.stringify(bundle.report,null,2)+'\n'],
+      {type:isGlb?'model/gltf-binary':'application/json'});
+    const url=URL.createObjectURL(blob);
+    const link=document.createElement('a');
+    link.href=url;
+    link.download=slug+(isGlb?'.glb':'-parts.json');
+    link.hidden=true;
+    document.body.append(link);
+    link.click();
+    link.remove();
+    window.setTimeout(()=>URL.revokeObjectURL(url),1500);
+    el('export-status').textContent=tr('הקובץ נוצר מקומית. חתימת SHA-256 ל־GLB: ',
+      'Local file created. GLB SHA-256: ')+bundle.report.glb_sha256;
+  }catch{
+    el('export-status').textContent=tr('שגיאה ביצירת קובץ ההמחשה.','Concept file export failed.');
+  }finally{
+    exporting=false;
+    el('download-glb').disabled=false;
+    el('download-report').disabled=false;
+  }
+}
+el('download-glb').addEventListener('click',()=>{void exportConcept('glb');});
+el('download-report').addEventListener('click',()=>{void exportConcept('report');});
 el('concept-file').addEventListener('change',async()=>{
   const file=el('concept-file').files?.[0];
   if(!file)return;
@@ -173,4 +217,25 @@ for(const name of ['pointerup','pointercancel','lostpointercapture']){
     if(pointer?.id===event.pointerId)pointer=null;
   });
 }
+
+function readSelectedFragment(){
+  const prefix='#selected=';
+  if(!window.location.hash.startsWith(prefix))return;
+  try{
+    const selected=decodeURIComponent(window.location.hash.slice(prefix.length));
+    const parsed=parseSelectedConcept(selected);
+    concept=parsed;
+    dims={...parsed.dimensions_mm};
+    syncDims();
+    translate();
+    showStatus('חלופה '+parsed.selected_slot+' הועברה מהשוואת A/B ללא העלאה.',
+      'Concept '+parsed.selected_slot+' carried over from A/B without upload.');
+  }catch{
+    // Never trust URL fragments: invalid or oversized payloads are ignored.
+    showStatus('קישור חלופה לא תקין; מוצגת הדגמה סינתטית.',
+      'Invalid concept link; showing the synthetic demo.');
+  }
+}
+
 syncDims();translate();
+readSelectedFragment();
