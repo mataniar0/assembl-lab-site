@@ -35,7 +35,7 @@ def check_photo(page):
     expect(page.locator("#personal-coffee-show-photo")).to_have_attribute(
         "aria-pressed", "true"
     )
-    expect(page.locator("#personal-coffee-product-link")).to_have_attribute(
+    expect(page.locator(".personal-coffee-product-link")).to_have_attribute(
         "href", "../table/personal/"
     )
     assert page.locator("#intro-scene").evaluate(
