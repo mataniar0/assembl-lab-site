@@ -1,4 +1,4 @@
-"""MVP-18: real round Personal Coffee Table photo + existing actual site GLB in app."""
+"""MVP-19: edited round coffee table showroom landing + original site GLB in app."""
 from __future__ import annotations
 
 import argparse
@@ -24,14 +24,18 @@ def check_photo(page):
     expect(page.locator("#personal-coffee-photo")).to_be_visible()
     photo = page.locator("#personal-coffee-photo img")
     expect(photo).to_be_visible()
-    assert "table/personal/media/01-hero-finished-angled-" in photo.get_attribute("src")
+    assert photo.get_attribute("src") == "./media/personal-coffee-showcase-680.webp"
+    expect(page.locator('#personal-coffee-photo source[type="image/avif"]')).to_have_attribute(
+        "srcset", "./media/personal-coffee-showcase-680.avif"
+    )
     # A srcset resource is density-corrected: naturalWidth may reflect the
     # browser's sizes calculation, not the 480/960 source file width.
     assert photo.evaluate("image=>image.complete&&image.naturalWidth>250") is True
     assert photo.evaluate("image=>image.currentSrc").endswith((
-        "/01-hero-finished-angled-480.webp",
-        "/01-hero-finished-angled-960.webp",
+        "/app/media/personal-coffee-showcase-680.avif",
+        "/app/media/personal-coffee-showcase-680.webp",
     ))
+    assert photo.evaluate("image=>getComputedStyle(image).objectFit") == "cover"
     expect(page.locator("#personal-coffee-show-photo")).to_have_attribute(
         "aria-pressed", "true"
     )
@@ -82,11 +86,11 @@ def run(browser_path: str, output: Path):
                 check_photo(page)
                 expect(page.locator("#personal-coffee-model")).to_be_hidden()
                 expect(page.locator(".personal-coffee-disclosure")).to_contain_text(
-                    "אינו העתק מאומת"
+                    "הדמיה חזותית ערוכה"
                 )
                 assert page.locator("#personal-coffee-photo img").get_attribute(
                     "data-en-alt"
-                ).startswith("Real ASSEMBL LAB Personal Coffee Table")
+                ).startswith("Illustrative showroom image")
                 page.screenshot(
                     path=str(output / f"personal-coffee-photo-{width}.png"),
                     full_page=False,
@@ -119,7 +123,7 @@ def run(browser_path: str, output: Path):
                     "Not a verified replica"
                 )
                 expect(page.locator(".personal-coffee-disclosure")).to_contain_text(
-                    "not a verified replica"
+                    "edited showroom visualization"
                 )
                 page.locator("#personal-coffee-show-photo").click()
                 check_photo(page)
@@ -138,10 +142,10 @@ def run(browser_path: str, output: Path):
                 assert page.locator("#drawers").count() == 1
                 assert not errors, f"JavaScript errors: {errors}"
                 assert not external, f"External requests: {external}"
-                results.append({"viewport": width, "photo": "PASS",
+                results.append({"viewport": width, "showcase": "PASS",
                                 "original_glb_loaded": "PASS",
                                 "language": "PASS", "external_requests": 0})
-                print("PASS authentic Personal Coffee Table photo/GLB", width, height)
+                print("PASS approved coffee table showroom image/GLB", width, height)
                 context.close()
 
             offline = browser.new_context(viewport={"width": 390, "height": 844})
@@ -153,8 +157,8 @@ def run(browser_path: str, output: Path):
             }""")
             page.reload(wait_until="networkidle")
             for asset in [
-                "../table/personal/media/01-hero-finished-angled-480.webp",
-                "../table/personal/media/01-hero-finished-angled-960.webp",
+                "./media/personal-coffee-showcase-680.avif",
+                "./media/personal-coffee-showcase-680.webp",
                 "../table/personal/media/personal-design-preview.glb",
                 "./personal-coffee-hero.mjs",
             ]:
@@ -171,10 +175,10 @@ def run(browser_path: str, output: Path):
                 "אינו העתק מאומת", timeout=45000
             )
             assert page.locator("model-viewer").evaluate("e=>e.loaded") is True
-            print("PASS offline real photo and existing GLB")
+            print("PASS offline approved showcase and original site GLB")
             offline.close()
 
-            # Lack of WebGL leaves the *real photograph* visible and usable.
+            # Lack of WebGL keeps the approved showcase still visible and usable.
             fallback = browser.new_context(viewport={"width": 390, "height": 844})
             fallback.add_init_script(
                 "HTMLCanvasElement.prototype.getContext=function(){return null}"
@@ -189,7 +193,7 @@ def run(browser_path: str, output: Path):
                 "לא ניתן להציג מודל תלת־ממדי"
             )
             assert page.locator("model-viewer").count() == 0
-            print("PASS fallback real photo on no-WebGL device")
+            print("PASS fallback showcase image on no-WebGL device")
             fallback.close()
             browser.close()
     finally:
@@ -197,9 +201,9 @@ def run(browser_path: str, output: Path):
         server.server_close()
 
     (output / "browser-qa.json").write_text(
-        json.dumps({"scope": "AUTHENTIC_PERSONAL_COFFEE_HERO",
+        json.dumps({"scope": "APPROVED_PERSONAL_COFFEE_SHOWCASE_HERO",
                     "results": results, "offline": "PASS",
-                    "no_webgl": "PHOTO_RETAINED"}, indent=2),
+                    "no_webgl": "SHOWCASE_RETAINED"}, indent=2),
         encoding="utf8",
     )
 
