@@ -97,14 +97,16 @@ function pngRgb(width,height,pixel){
   for(const p of segments){out.set(p,ptr);ptr+=p.length;}
   return out;
 }
-function generateTextures(finish){
+function generateTextures(finish,intensity=1){
   const palette=PALETTES[finish];
   if(!palette)throw new TypeError('INVALID_FINISH');
+  if(!Number.isFinite(intensity)||intensity<0||intensity>1)
+    throw new TypeError('INVALID_GRAIN_INTENSITY');
   // Albedo and a near-flat but directional normal map. No photographic inputs.
   const colour=pngRgb(TEXTURE_W,TEXTURE_H,(x,y)=>{
     const g=pattern(x,y);
     const random=(hash(x,y)-.5)*5;
-    const m=1+g.value;
+    const m=1+g.value*intensity;
     return palette.map((v,i)=>clamp(Math.round(v*m+random+(i===0?4:0)),0,255));
   });
   const normals=pngRgb(256,128,(x,y)=>{
