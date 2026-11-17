@@ -12,7 +12,7 @@ const ns='http://www.w3.org/2000/svg';
 const he=()=>document.documentElement.lang!=='en';
 const tr=(a,b)=>he()?a:b;
 const viewerLibrary=new URL('../assets/vendor/model-viewer-4.1.0/model-viewer.min.js',import.meta.url).href;
-let approved=null,azimuth=32,elevation=27,pointer=null;
+let approved=null,azimuth=32,elevation=27,zoomLevel=100,pointer=null;
 let viewer=null,blobUrl=null,loadGeneration=0,viewerPromise=null,loadTimeout=null;
 const host=$('approved-glb-host');
 const svg=$('approved-3d-view');
@@ -49,7 +49,7 @@ function setRecord(){
 function render(){
   if(!approved)return;
   const model=buildNightstand(approved,approved.dimensions_mm);
-  const view=projectNightstand(model,azimuth,elevation,100);
+  const view=projectNightstand(model,azimuth,elevation,zoomLevel);
   const fragment=document.createDocumentFragment();
   for(const face of view.faces){
     const polygon=document.createElementNS(ns,'polygon');
@@ -202,7 +202,7 @@ window.addEventListener('assembl:3d-model-ready',event=>{
       width:d.dimensions_mm.width,height:d.dimensions_mm.height,depth:d.dimensions_mm.depth
     })
   });
-  azimuth=32;elevation=27;
+  azimuth=32;elevation=27;zoomLevel=100;
   panel.hidden=false;
   error.hidden=true;
   error.textContent='';
@@ -217,10 +217,24 @@ window.addEventListener('assembl:3d-model-ready',event=>{
     setRecord();
   },0);
 });
+function zoom(factor){
+  if(viewer?.loaded&&host.dataset.state==='ready'){
+    const orbit=viewer.getCameraOrbit();
+    const radius=Math.max(.1,Math.min(10,orbit.radius*factor));
+    viewer.cameraOrbit=(orbit.theta*180/Math.PI)+'deg '+
+      (orbit.phi*180/Math.PI)+'deg '+radius+'m';
+    viewer.jumpCameraToGoal();
+    return;
+  }
+  zoomLevel=Math.max(60,Math.min(160,Math.round(zoomLevel/factor)));
+  render();
+}
 $('approved-3d-left').addEventListener('click',()=>rotate(-30));
 $('approved-3d-right').addEventListener('click',()=>rotate(30));
+$('approved-3d-zoom-in').addEventListener('click',()=>zoom(.8));
+$('approved-3d-zoom-out').addEventListener('click',()=>zoom(1.25));
 $('approved-3d-reset').addEventListener('click',()=>{
-  azimuth=32;elevation=27;
+  azimuth=32;elevation=27;zoomLevel=100;
   if(viewer?.loaded&&host.dataset.state==='ready'){
     viewer.cameraOrbit='35deg 70deg auto';
     viewer.fieldOfView='45deg';
