@@ -49,6 +49,8 @@ def read_model(page):
         indices:d.meshes.map(m=>m.primitives[0].indices),
         colors:d.meshes.map(m=>Object.hasOwn(m.primitives[0].attributes,'COLOR_0')),
         wood:d.meshes[28].primitives[0].material,
+        rim1:d.meshes[29].primitives[0].material,
+        rim2:d.meshes[30].primitives[0].material,
         ring:d.meshes[31].primitives[0].material,
         url:e.src};
     }""")
@@ -93,6 +95,8 @@ def run(browser_path,output):
                 assert glb['extras']['engineering_approval'] is False
                 assert glb['extras']['photo_exact_reconstruction'] is False
                 assert glb['wood']==0 and glb['ring']==2
+                assert glb['rim1']==4 and glb['rim2']==4
+                assert 'layered wooden drum rim' in glb['materials'][4]
                 assert all(c is False for c in glb['colors'])
                 assert glb['images']==2
                 assert len(glb['nodes'])==33
