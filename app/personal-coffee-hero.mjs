@@ -92,7 +92,7 @@ async function showModel(){
     next.setAttribute('interaction-prompt','none');
     next.setAttribute('loading','eager');
     next.setAttribute('camera-orbit','34deg 70deg auto');
-    next.setAttribute('field-of-view','35deg');
+    next.setAttribute('field-of-view','30deg');
     next.setAttribute('min-field-of-view','20deg');
     next.setAttribute('max-field-of-view','60deg');
     next.setAttribute('environment-image','neutral');
