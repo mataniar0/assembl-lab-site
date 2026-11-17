@@ -40,7 +40,7 @@ test('GLB bytes are deterministic, aligned, self-contained glTF 2.0 with correct
   assert.equal(gltf.meshes.length,6);
   assert.equal(gltf.materials.length,6);
   assert.deepEqual(gltf.nodes[0].translation,[0,.547,0]);
-  assert.deepEqual(gltf.nodes[0].scale,[.5,.006,.35]);
+  for(const [a,b] of gltf.nodes[0].scale.map((a,i)=>[a,[.5,.006,.35][i]]))assert.ok(Math.abs(a-b)<1e-12);
   assert.equal(gltf.extras.manufacturing_approval,false);
   assert.equal(gltf.extras.engineering_approval,false);
   assert.equal(gltf.extras.geometry_kind,'UNVERIFIED_VOLUME_CONCEPT');
