@@ -194,7 +194,7 @@ class GlbBuilder{
     for(const b of this.parts){bin.set(b,ptr);ptr+=b.length;}
     const json={
       asset:{version:'2.0',generator:'ASSEMBL LAB realistic showroom v0.1'},
-      scene:0,scenes:[{name:'SHOWROOM_NIGHTSTAND_VISUAL_ONLY',nodes:this.nodes.map((_,i)=>i)}],
+      scene:0,scenes:[{name:meta.geometry_kind==='MATCHED_COFFEE_TABLE_SHOWROOM'? 'MATCHED_COFFEE_TABLE_SHOWROOM_VISUAL_ONLY':'SHOWROOM_NIGHTSTAND_VISUAL_ONLY',nodes:this.nodes.map((_,i)=>i)}],
       nodes:this.nodes,meshes:this.meshes,materials:this.materials,
       textures:this.textures,images:this.images,
       samplers:[{magFilter:9729,minFilter:9987,wrapS:10497,wrapT:10497}],
@@ -467,3 +467,6 @@ export function realisticNightstandGlb(concept){
     load_verified:false,joinery_verified:false,collision_free_verified:false
   });
 }
+
+// Reuse the same vetted self-contained glTF/PNG machinery for the coffee-table showroom.
+export {GlbBuilder,generateTextures};

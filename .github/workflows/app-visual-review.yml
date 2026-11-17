@@ -13,6 +13,7 @@ on:
       - feature/app-mvp-17-realistic-nightstand
       - feature/app-mvp-18-real-personal-coffee
       - feature/app-mvp-19-coffee-showcase-hero
+      - feature/app-mvp-20-coffee-glb-hero-sync
   pull_request:
     branches:
       - main
@@ -25,6 +26,7 @@ on:
       - 'app/showcase-glb*'
       - 'app/realistic-glb*'
       - 'app/personal-coffee-hero*'
+      - 'app/coffee-showroom-glb*'
       - 'app/media/personal-coffee-showcase-*'
       - 'tests/app_personal_coffee_hero_browser_ci.py'
       - 'app/nightstand-intent.js'
@@ -57,6 +59,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          node --check app/coffee-showroom-glb.mjs
           node --check app/personal-coffee-hero.mjs
           node --check app/realistic-glb.mjs
           node --check app/showcase-glb.mjs
@@ -67,7 +70,7 @@ jobs:
           node --check app/preview-state.mjs
           node --check app/preview-lab.mjs
           node --check app/preview-fixtures/generate-fixtures.mjs
-          node --test app/preview-state.test.mjs app/preview-fixtures/fixtures.test.mjs app/concept-geometry.test.mjs app/concept-export.test.mjs app/return-3d.test.mjs app/showcase-glb.test.mjs app/personal-coffee-hero.test.mjs
+          node --test app/preview-state.test.mjs app/preview-fixtures/fixtures.test.mjs app/concept-geometry.test.mjs app/concept-export.test.mjs app/return-3d.test.mjs app/showcase-glb.test.mjs app/personal-coffee-hero.test.mjs app/coffee-showroom-glb.test.mjs
 
   visual-browser-qa:
     name: Mobile/Desktop Chromium synthetic review

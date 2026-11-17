@@ -19,3 +19,13 @@
 .personal-coffee-product-link{display:inline-block;margin:8px 0 4px;font-size:12px;font-weight:700;color:#28463e;text-decoration:underline;text-underline-offset:3px;min-height:28px}
 @media(max-width:700px){.personal-coffee-card{max-width:500px;transform:none}.personal-coffee-hero{height:clamp(300px,75vw,410px)}}
 @media(prefers-reduced-motion:reduce){.personal-coffee-model model-viewer{scroll-behavior:auto}}
+
+/* MVP-20: capture the exact 3D model while it renders under the hero.
+ * A hidden attribute would prevent WebGL layout, so preview uses opacity.
+ * Both views have identical geometry, camera origin and product appearance. */
+.personal-coffee-hero #personal-coffee-photo{position:absolute;inset:0;z-index:2}
+.personal-coffee-hero #personal-coffee-model{z-index:1;opacity:0;pointer-events:none}
+.personal-coffee-hero #personal-coffee-model[data-state="interactive"]{z-index:3;opacity:1;pointer-events:auto}
+.personal-coffee-hero #personal-coffee-model[hidden]{display:none!important}
+.personal-coffee-hero #personal-coffee-photo[hidden]{display:none!important}
+.personal-coffee-hero #personal-coffee-model model-viewer{background:transparent}

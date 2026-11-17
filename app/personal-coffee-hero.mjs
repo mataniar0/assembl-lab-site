@@ -1,119 +1,170 @@
-/* MVP-19: approved edited sunlit showroom image of the Personal Coffee Table.
- * The showroom image is illustrative (not an authentic product photo).
- * Authentic photos remain in /table/personal/; its existing GLB is an
- * unverified digital design preview, not an accurate replica.
- * No external providers, runtime image synthesis or customer content.
+/* MVP-20: one geometry source for BOTH the hero photo-like snapshot and 3D.
+ * We render the same self-contained visual GLB in the catalog's pinned local
+ * model-viewer, then snapshot that camera for the hero. No separate imagined
+ * image or external AI is used. The genuine built table's original photos and
+ * the 32-part DESIGN_ONLY CAD preview remain unchanged at /table/personal/.
  */
+import {matchingCoffeeTableGlb} from './coffee-showroom-glb.mjs';
+
 const $=id=>document.getElementById(id);
 const host=$('personal-coffee-model');
 const photo=$('personal-coffee-photo');
+const image=photo.querySelector('img');
 const photoButton=$('personal-coffee-show-photo');
 const modelButton=$('personal-coffee-show-model');
 const status=$('personal-coffee-model-status');
-const image=photo.querySelector('img');
 const viewerLibrary=new URL('../assets/vendor/model-viewer-4.1.0/model-viewer.min.js',import.meta.url).href;
-const actualModel=new URL('../table/personal/media/personal-design-preview.glb',import.meta.url).href;
-const wording={
-  loading:['טוען את מודל התכנון התלת־ממדי של שולחן הקפה האישי…','Loading the existing Personal Coffee Table 3D design preview…'],
-  ready:['מודל התכנון מוכן. גררו לסיבוב, צבטו לזום. אינו העתק מאומת של המוצר המצולם.','Design model ready. Drag to rotate or pinch to zoom. Not a verified replica of the photographed product.'],
-  unsupported:['במכשיר זה לא ניתן להציג מודל תלת־ממדי. תמונת הראווה נשארת זמינה, וצילומי המוצר האמיתיים נמצאים בעמוד המוצר.','3D is unavailable on this device. The showcase image is still available; real product photos are on the product page.'],
-  error:['מודל התכנון לא נטען. תמונת הראווה נשארת זמינה, וצילומי המוצר האמיתיים נמצאים בעמוד המוצר.','The design model did not load. The showcase image remains available.']
+const words={
+  loading:['טוען את הדמיית השולחן ומכין ממנה תמונת ראווה…','Loading the table model and making its matching hero…'],
+  ready:['תמונת הראווה נוצרה מאותו מודל GLB. ניתן לעבור לתלת־ממד ולסובב אותו.','This hero was captured from the same GLB. Switch to 3D to rotate the table.'],
+  interactive:['אותו שולחן כמו בתמונת הראווה — סובבו והגדילו את המודל.','The exact same table as the hero — rotate and zoom.'],
+  fallback:['לא ניתן לייצר תמונת ראווה מהמודל במכשיר זה; מוצגת תמונת המחשה חלופית שאינה תואמת בדיוק.','A matching GLB snapshot is unavailable on this device; the original conceptual fallback image is shown instead.'],
+  error:['מודל השולחן אינו זמין כרגע; מוצגת תמונת המחשה חלופית.','The table model is unavailable; showing the original fallback illustration.']
 };
-let viewer=null,viewerPromise=null,generation=0,showingModel=false,statusKey='',timeout=null;
-const isEnglish=()=>document.documentElement.lang==='en';
-function speak(key){
-  statusKey=key;
-  status.textContent=key?wording[key][isEnglish()?1:0]:'';
+const he=()=>document.documentElement.lang!=='en';
+let viewer=null,blobUrl=null,generation=0,state='loading',posterReady=false;
+let requestPromise=null,modulePromise=null,loadingTimer=null,desired='photo';
+function message(key){
+  state=key;
+  status.textContent=words[key][he()?0:1];
 }
-function updateAlt(){
-  image.alt=isEnglish()?image.dataset.enAlt:image.dataset.heAlt;
-  if(viewer)viewer.alt=isEnglish()?
-    'Unverified 3D design prototype of Personal Coffee Table, not an exact replica':
-    'מודל תכנון תלת־ממדי לא מאומת של שולחן קפה אישי, אינו העתק של המוצר האמיתי';
+function applyAlt(){
+  image.alt=posterReady?
+    (he()?'תמונת ראווה שנוצרה מאותו מודל תלת־ממדי של שולחן הקפה העגול':'Showcase capture from the exact round coffee table GLB'):
+    (he()?image.dataset.heAlt:image.dataset.enAlt);
+  if(viewer)viewer.alt=he()?'מודל תצוגה של שולחן קפה עגול מעץ עם שלוש רגליים שחורות, לא מאומת לייצור':
+    'Showroom round wood coffee table with three dark legs, not production verified';
 }
 function webGLAvailable(){
   try{
-    const context=document.createElement('canvas').getContext('webgl2')||
-      document.createElement('canvas').getContext('webgl');
-    if(!context)return false;
-    context.getExtension('WEBGL_lose_context')?.loseContext();
+    const c=document.createElement('canvas'),gl=c.getContext('webgl2')||c.getContext('webgl');
+    if(!gl)return false;
+    gl.getExtension('WEBGL_lose_context')?.loseContext();
     return true;
   }catch{return false;}
 }
-function clearViewer(){
-  if(timeout!==null){clearTimeout(timeout);timeout=null;}
-  viewer?.remove();
-  viewer=null;host.replaceChildren();
-  host.hidden=true;
+function setMode(mode){
+  desired=mode;
+  photoButton.setAttribute('aria-pressed',String(mode==='photo'));
+  modelButton.setAttribute('aria-pressed',String(mode==='model'));
+  if(!viewer || !viewer.loaded){
+    photo.hidden=false;
+    host.dataset.state='preview';
+    return;
+  }
+  const interactive=mode==='model';
+  if(interactive)viewer.setAttribute('camera-controls','');
+  else{
+    viewer.removeAttribute('camera-controls');
+    viewer.cameraOrbit='35deg 68deg 1.35m';
+    viewer.fieldOfView='37deg';
+    viewer.jumpCameraToGoal();
+  }
+  host.dataset.state=interactive?'interactive':'preview';
+  photo.hidden=interactive;
+  message(interactive?'interactive':posterReady?'ready':'fallback');
 }
-function showPhoto(key=''){
+function resetOnFailure(){
   generation++;
-  showingModel=false;
-  clearViewer();
+  if(loadingTimer!==null)clearTimeout(loadingTimer);
+  loadingTimer=null;
+  viewer?.remove();
+  viewer=null;
+  if(blobUrl)URL.revokeObjectURL(blobUrl);
+  blobUrl=null;
+  host.replaceChildren();
+  host.dataset.state='fallback';
+  host.hidden=true;
   photo.hidden=false;
   photoButton.setAttribute('aria-pressed','true');
   modelButton.setAttribute('aria-pressed','false');
-  speak(key);
+  desired='photo';
+  message('fallback');
 }
-async function showModel(){
-  const token=++generation;
-  showingModel=false;clearViewer();
-  speak('loading');
-  if(!webGLAvailable()){showPhoto('unsupported');return;}
-  modelButton.disabled=true;
+async function snapshotFromLoadedModel(next,attempt){
   try{
-    viewerPromise ||= import(viewerLibrary).catch(error=>{viewerPromise=null;throw error;});
-    await viewerPromise;
-    if(token!==generation)return;
-    if(!customElements.get('model-viewer'))throw new Error('NO_MODEL_VIEWER');
-    const next=document.createElement('model-viewer');
-    next.setAttribute('camera-controls','');
-    next.setAttribute('touch-action','pan-y');
-    next.setAttribute('loading','eager');
-    next.setAttribute('interaction-prompt','none');
-    next.setAttribute('camera-orbit','35deg 65deg auto');
-    next.setAttribute('field-of-view','45deg');
-    next.setAttribute('min-field-of-view','20deg');
-    next.setAttribute('max-field-of-view','60deg');
-    next.setAttribute('shadow-intensity','1');
-    next.setAttribute('shadow-softness','.8');
-    next.setAttribute('environment-image','neutral');
-    next.setAttribute('exposure','1.15');
-    next.tabIndex=0;
-    viewer=next;updateAlt();
-    next.addEventListener('load',()=>{
-      if(token!==generation)return;
-      if(timeout!==null){clearTimeout(timeout);timeout=null;}
-      showingModel=true;
-      speak('ready');
-    },{once:true});
-    next.addEventListener('error',()=>{
-      if(token===generation)showPhoto('error');
-    },{once:true});
-    host.replaceChildren(next);
-    host.hidden=false;
-    photo.hidden=true;
-    modelButton.setAttribute('aria-pressed','true');
-    photoButton.setAttribute('aria-pressed','false');
-    timeout=window.setTimeout(()=>{
-      if(token===generation&&!showingModel)showPhoto('error');
-    },30000);
-    next.src=actualModel;
+    // Give the renderer two paint cycles so its lighting/frame are settled.
+    await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+    if(generation!==attempt||next!==viewer)return;
+    const data=await next.toDataURL('image/png');
+    if(typeof data!=='string'||!data.startsWith('data:image/png;base64,')||data.length<5000)
+      throw new Error('NO_CANVAS_SNAPSHOT');
+    if(generation!==attempt||next!==viewer)return;
+    const sources=[...photo.querySelectorAll('source')];
+    sources.forEach(source=>source.remove());
+    image.src=data;image.removeAttribute('srcset');
+    image.dataset.showcaseSource='exact-loaded-coffee-glb';
+    posterReady=true;
+    applyAlt();
+    setMode(desired);
   }catch{
-    if(token===generation)showPhoto('error');
-  }finally{
-    modelButton.disabled=false;
+    if(generation===attempt){posterReady=false;setMode(desired);}
   }
 }
-photoButton.addEventListener('click',()=>showPhoto());
-modelButton.addEventListener('click',()=>{if(!showingModel)void showModel();});
-$('lang').addEventListener('click',()=>{
-  // The main app's language handler may run after this module's listener.
-  // Update UI after ALL handlers so status/alt follow the final document lang.
-  window.setTimeout(()=>{
-    updateAlt();
-    speak(statusKey);
-  },0);
+async function prepareHero(){
+  if(requestPromise)return requestPromise;
+  if(!webGLAvailable()){
+    message('fallback');
+    return;
+  }
+  const attempt=++generation;
+  message('loading');
+  requestPromise=(async()=>{
+    try{
+      modulePromise ||= import(viewerLibrary).catch(e=>{modulePromise=null;throw e;});
+      await modulePromise;
+      if(generation!==attempt)return;
+      if(!customElements.get('model-viewer'))throw new Error('UNREGISTERED_VIEWER');
+      const next=document.createElement('model-viewer');
+      next.setAttribute('loading','eager');
+      next.setAttribute('interaction-prompt','none');
+      next.setAttribute('touch-action','pan-y');
+      next.setAttribute('camera-orbit','35deg 68deg 1.35m');
+      next.setAttribute('camera-target','0m 0.225m 0m');
+      next.setAttribute('field-of-view','37deg');
+      next.setAttribute('environment-image','neutral');
+      next.setAttribute('exposure','1.08');
+      next.setAttribute('shadow-intensity','1');
+      next.setAttribute('shadow-softness','.85');
+      next.tabIndex=0;
+      viewer=next;applyAlt();
+      host.replaceChildren(next);
+      host.hidden=false;
+      host.dataset.state='preview'; // invisible, but still has layout for WebGL rendering
+      const bytes=matchingCoffeeTableGlb();
+      blobUrl=URL.createObjectURL(new Blob([bytes],{type:'model/gltf-binary'}));
+      next.addEventListener('load',()=>{
+        if(generation!==attempt)return;
+        if(loadingTimer!==null)clearTimeout(loadingTimer);
+        loadingTimer=null;
+        setMode(desired);
+        void snapshotFromLoadedModel(next,attempt);
+      },{once:true});
+      next.addEventListener('error',()=>{if(generation===attempt)resetOnFailure();},{once:true});
+      loadingTimer=setTimeout(()=>{if(generation===attempt&&!next.loaded)resetOnFailure();},30000);
+      next.src=blobUrl;
+    }catch{
+      if(generation===attempt)resetOnFailure();
+    }
+  })();
+  return requestPromise;
+}
+photoButton.addEventListener('click',()=>setMode('photo'));
+modelButton.addEventListener('click',()=>{
+  setMode('model');
+  if(!viewer)void prepareHero();
 });
-window.addEventListener('pagehide',()=>showPhoto());
-updateAlt();
+$('lang').addEventListener('click',()=>setTimeout(()=>{
+  applyAlt();
+  if(viewer&&viewer.loaded)message(desired==='model'?'interactive':posterReady?'ready':'fallback');
+  else if(state!=='loading')message(state);
+},0));
+window.addEventListener('pagehide',()=>{
+  generation++;
+  if(loadingTimer!==null)clearTimeout(loadingTimer);
+  viewer?.remove();
+  if(blobUrl)URL.revokeObjectURL(blobUrl);
+  viewer=null;blobUrl=null;
+});
+applyAlt();
+void prepareHero();
