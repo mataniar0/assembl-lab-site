@@ -3,6 +3,11 @@ on:
   push:
     branches:
       - feature/app-mvp-20-coffee-glb-hero-parity
+    paths:
+      - 'scripts/build_personal_showroom.py'
+      - 'scripts/render_personal_showroom.py'
+      - 'scripts/coffee-showroom-capture.html'
+      - '.github/workflows/app-mvp-20-coffee-parity.yml'
   workflow_dispatch:
 permissions:
   contents: write
