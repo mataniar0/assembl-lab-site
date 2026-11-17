@@ -67,6 +67,11 @@ function showPhoto(key='photo'){
 }
 async function showModel(){
   if(mode==='model'&&viewer?.loaded)return;
+  if(viewer?.loaded&&blobUrl){
+    mode='model';host.dataset.state='interactive';host.hidden=false;photo.hidden=true;
+    photoButton.setAttribute('aria-pressed','false');
+    modelButton.setAttribute('aria-pressed','true');tell('ready');return;
+  }
   if(mode==='loading')return;
   if(!webGLAvailable()){showPhoto('unavailable');return;}
   const token=++generation;mode='loading';tell('loading');
@@ -100,7 +105,7 @@ async function showModel(){
       if(token!==generation)return;
       if(timeout!==null){clearTimeout(timeout);timeout=null;}
       mode='model';modelButton.disabled=false;
-      host.hidden=false;photo.hidden=true;
+      host.dataset.state='interactive';host.hidden=false;photo.hidden=true;
       modelButton.setAttribute('aria-pressed','true');
       photoButton.setAttribute('aria-pressed','false');
       tell('ready');
