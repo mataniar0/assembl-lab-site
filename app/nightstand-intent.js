@@ -122,6 +122,24 @@
     approvedSnapshot = snapshot ? structuredClone(snapshot) : null;
     const btn = $('download-intent');
     if (btn) btn.hidden = !approvedSnapshot;
+    // The approved visual version (not the current unsaved form) is the sole
+    // source of the 3D model. Never pass notes, photo URLs or other user data.
+    const size = approvedSnapshot?.requested_dimensions_mm;
+    const ap = approvedSnapshot?.appearance;
+    const t = approvedSnapshot?.construction_preferences?.nominal_thickness_mm;
+    const valid = size && ap && [4,6].includes(t) &&
+      [ap.drawers].every(n=>n===1||n===2) &&
+      ['natural','honey','walnut'].includes(ap.finish) &&
+      ['shelf','closed'].includes(ap.lower_section) &&
+      Number.isInteger(size.width) && size.width>=200 && size.width<=900 &&
+      Number.isInteger(size.height) && size.height>=200 && size.height<=1000 &&
+      Number.isInteger(size.depth) && size.depth>=250 && size.depth<=600;
+    const handoff = valid ? Object.freeze({
+      version_id:'visual-v'+id,finish:ap.finish,drawers:ap.drawers,
+      lower_section:ap.lower_section,nominal_thickness_mm:t,
+      dimensions_mm:Object.freeze({width:size.width,height:size.height,depth:size.depth})
+    }) : null;
+    window.dispatchEvent(new CustomEvent('assembl:3d-model-ready',{detail:handoff}));
   }
   function exportApproved() {
     if (!approvedSnapshot) return;
