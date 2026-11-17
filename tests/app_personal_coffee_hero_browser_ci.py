@@ -1,6 +1,5 @@
-"""MVP-19: edited round coffee table showroom landing + original site GLB in app."""
+"""MVP-20: 3D coffee table and landing hero are ONE loaded GLB, not two products."""
 from __future__ import annotations
-
 import argparse
 from functools import partial
 import http.server
@@ -8,209 +7,145 @@ import json
 from pathlib import Path
 import threading
 from urllib.parse import urlparse
-
 from playwright.sync_api import expect, sync_playwright
 
-ROOT = Path(__file__).resolve().parents[1]
-
-
+ROOT=Path(__file__).resolve().parents[1]
 class QuietServer(http.server.SimpleHTTPRequestHandler):
-    def log_message(self, *args):
-        pass
+    def log_message(self,*args):pass
 
+def assert_matching_hero(page):
+    expect(page.locator('#intro')).to_be_visible()
+    image=page.locator('#personal-coffee-photo img')
+    expect(image).to_have_attribute('data-showcase-source','exact-loaded-coffee-glb',timeout=45000)
+    expect(page.locator('#personal-coffee-photo')).to_be_visible()
+    src=image.get_attribute('src')
+    assert src.startswith('data:image/png;base64,') and len(src)>5000
+    assert image.evaluate('e=>e.complete&&e.naturalWidth>200')
+    view=page.locator('#personal-coffee-model model-viewer')
+    assert view.evaluate('e=>e.loaded') is True
+    assert view.evaluate("e=>e.src.startsWith('blob:')") is True
+    assert page.locator('#personal-coffee-model').get_attribute('data-state')=='preview'
+    expect(page.locator('.personal-coffee-disclosure')).to_contain_text(
+        'אותו GLB'
+    )
+    return src
 
-def check_photo(page):
-    expect(page.locator("#intro")).to_be_visible()
-    expect(page.locator("#personal-coffee-photo")).to_be_visible()
-    photo = page.locator("#personal-coffee-photo img")
-    expect(photo).to_be_visible()
-    assert photo.get_attribute("src") == "./media/personal-coffee-showcase-680.webp"
-    expect(page.locator('#personal-coffee-photo source[type="image/avif"]')).to_have_attribute(
-        "srcset", "./media/personal-coffee-showcase-680.avif"
-    )
-    # A srcset resource is density-corrected: naturalWidth may reflect the
-    # browser's sizes calculation, not the 480/960 source file width.
-    assert photo.evaluate("image=>image.complete&&image.naturalWidth>250") is True
-    assert photo.evaluate("image=>image.currentSrc").endswith((
-        "/app/media/personal-coffee-showcase-680.avif",
-        "/app/media/personal-coffee-showcase-680.webp",
-    ))
-    assert photo.evaluate("image=>getComputedStyle(image).objectFit") == "cover"
-    expect(page.locator("#personal-coffee-show-photo")).to_have_attribute(
-        "aria-pressed", "true"
-    )
-    expect(page.locator(".personal-coffee-product-link")).to_have_attribute(
-        "href", "../table/personal/"
-    )
-    assert page.locator("#intro-scene").evaluate(
-        "e=>getComputedStyle(e).display"
-    ) == "none"
+def model_metadata(page):
+    return page.evaluate("""async () => {
+      const el=document.querySelector('#personal-coffee-model model-viewer');
+      const data=new Uint8Array(await (await fetch(el.src)).arrayBuffer());
+      const v=new DataView(data.buffer);
+      if(v.getUint32(0,true)!==0x46546c67)throw Error('not glTF');
+      const n=v.getUint32(12,true);
+      const json=JSON.parse(new TextDecoder().decode(data.slice(20,20+n)).trim());
+      return {extras:json.extras,nodeNames:json.nodes.map(x=>x.name),
+        materials:json.materials.length,images:json.images.length};
+    }""")
 
-
-def run(browser_path: str, output: Path):
-    output.mkdir(parents=True, exist_ok=True)
-    server = http.server.ThreadingHTTPServer(
-        ("127.0.0.1", 0), partial(QuietServer, directory=str(ROOT))
-    )
-    thread = threading.Thread(target=server.serve_forever, daemon=True)
-    thread.start()
-    url = f"http://127.0.0.1:{server.server_port}"
-    results = []
+def run(browser_path,output):
+    output.mkdir(parents=True,exist_ok=True)
+    server=http.server.ThreadingHTTPServer(
+        ('127.0.0.1',0),partial(QuietServer,directory=str(ROOT)))
+    t=threading.Thread(target=server.serve_forever,daemon=True);t.start()
+    base=f'http://127.0.0.1:{server.server_port}'
+    results=[]
     try:
         with sync_playwright() as p:
-            browser = p.chromium.launch(
-                headless=True, executable_path=browser_path,
-                args=["--enable-webgl", "--use-angle=swiftshader",
-                      "--enable-unsafe-swiftshader"],
-            )
-            for width, height in [(390, 844), (1440, 900)]:
-                context = browser.new_context(
-                    viewport={"width": width, "height": height},
-                    reduced_motion="reduce",
-                )
-                page = context.new_page()
-                external, errors = [], []
-
-                def filter_request(route):
-                    if urlparse(route.request.url).hostname not in (
-                        "127.0.0.1", "localhost"
-                    ):
-                        external.append(route.request.url)
-                        route.abort()
-                    else:
-                        route.continue_()
-
-                page.route("**/*", filter_request)
-                page.on("pageerror", lambda error: errors.append(str(error)))
-                page.goto(url + "/app/", wait_until="networkidle")
-                check_photo(page)
-                expect(page.locator("#personal-coffee-model")).to_be_hidden()
-                expect(page.locator(".personal-coffee-disclosure")).to_contain_text(
-                    "הדמיה חזותית ערוכה"
-                )
-                assert page.locator("#personal-coffee-photo img").get_attribute(
-                    "data-en-alt"
-                ).startswith("Illustrative showroom image")
-                page.screenshot(
-                    path=str(output / f"personal-coffee-photo-{width}.png"),
-                    full_page=False,
-                )
-
-                page.locator("#personal-coffee-show-model").click()
-                expect(page.locator("#personal-coffee-model")).to_be_visible()
-                expect(page.locator("#personal-coffee-photo")).to_be_hidden()
-                expect(page.locator("#personal-coffee-model model-viewer")).to_be_visible()
-                expect(page.locator("#personal-coffee-model-status")).to_contain_text(
-                    "אינו העתק מאומת", timeout=45000
-                )
-                view = page.locator("#personal-coffee-model model-viewer")
-                assert view.evaluate("e=>e.loaded") is True
-                assert view.evaluate("e=>new URL(e.src).pathname").endswith(
-                    "/table/personal/media/personal-design-preview.glb"
-                )
-                assert view.get_attribute("camera-controls") is not None
-                assert view.get_attribute("shadow-intensity") == "1"
-                assert page.locator("#personal-coffee-show-model").get_attribute(
-                    "aria-pressed"
-                ) == "true"
-                page.screenshot(
-                    path=str(output / f"personal-coffee-model-{width}.png"),
-                    full_page=False,
-                )
-                page.locator("#lang").click()
-                expect(page.locator("html")).to_have_attribute("lang", "en")
-                expect(page.locator("#personal-coffee-model-status")).to_contain_text(
-                    "Not a verified replica"
-                )
-                expect(page.locator(".personal-coffee-disclosure")).to_contain_text(
-                    "edited showroom visualization"
-                )
-                page.locator("#personal-coffee-show-photo").click()
-                check_photo(page)
-                expect(page.locator("#personal-coffee-model")).to_be_hidden()
-                expect(page.locator("#personal-coffee-show-model")).to_have_attribute(
-                    "aria-pressed", "false"
-                )
-                page.locator("#lang").click()
-                expect(page.locator("html")).to_have_attribute("lang", "he")
-
-                # Product showcase must not silently re-label the still-nightstand
-                # customer configuration flow as a coffee-table configurator.
-                page.locator("#start").click()
-                expect(page.locator("#capture")).to_be_visible()
-                expect(page.locator("#demo")).to_be_visible()
-                assert page.locator("#drawers").count() == 1
-                assert not errors, f"JavaScript errors: {errors}"
-                assert not external, f"External requests: {external}"
-                results.append({"viewport": width, "showcase": "PASS",
-                                "original_glb_loaded": "PASS",
-                                "language": "PASS", "external_requests": 0})
-                print("PASS approved coffee table showroom image/GLB", width, height)
+            browser=p.chromium.launch(headless=True,executable_path=browser_path,
+                args=['--enable-webgl','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
+            for width,height in [(390,844),(1440,900)]:
+                context=browser.new_context(viewport={'width':width,'height':height},reduced_motion='reduce')
+                page=context.new_page()
+                external=[];errors=[]
+                def check_request(route):
+                    if urlparse(route.request.url).hostname not in ('127.0.0.1','localhost'):
+                        external.append(route.request.url);route.abort()
+                    else:route.continue_()
+                page.route('**/*',check_request)
+                page.on('pageerror',lambda error:errors.append(str(error)))
+                page.goto(base+'/app/',wait_until='networkidle')
+                original_hero=assert_matching_hero(page)
+                page.screenshot(path=str(output/f'coffee-matched-hero-{width}.png'),full_page=False)
+                page.locator('#personal-coffee-show-model').click()
+                expect(page.locator('#personal-coffee-model')).to_have_attribute('data-state','interactive')
+                expect(page.locator('#personal-coffee-photo')).to_be_hidden()
+                view=page.locator('model-viewer')
+                assert view.get_attribute('camera-controls') is not None
+                meta=model_metadata(page)
+                assert meta['extras']['geometry_kind']=='MATCHED_COFFEE_TABLE_SHOWROOM'
+                assert meta['extras']['marketing_assets']=='hero snapshot captured directly from this GLB'
+                assert meta['extras']['verified_as_built'] is False
+                assert meta['nodeNames'].count('oak-round-tabletop')==1
+                assert len([n for n in meta['nodeNames'] if n.startswith('satin-black-tapered-leg-')])==3
+                assert meta['images']==2 and meta['materials']==3
+                orbit0=view.evaluate('e=>e.getCameraOrbit().theta')
+                view.evaluate("""e => {
+                    const o=e.getCameraOrbit();
+                    e.cameraOrbit=(o.theta*180/Math.PI+25)+'deg 68deg 1.35m';
+                    e.jumpCameraToGoal();
+                }""")
+                orbit1=view.evaluate('e=>e.getCameraOrbit().theta')
+                assert abs(orbit1-orbit0)>.25
+                page.screenshot(path=str(output/f'coffee-matched-3d-{width}.png'),full_page=False)
+                page.locator('#personal-coffee-show-photo').click()
+                assert_matching_hero(page)
+                assert page.locator('#personal-coffee-photo img').get_attribute('src')==original_hero
+                page.locator('#lang').click()
+                expect(page.locator('html')).to_have_attribute('lang','en')
+                expect(page.locator('.personal-coffee-disclosure')).to_contain_text('same GLB')
+                page.locator('#personal-coffee-show-model').click()
+                expect(page.locator('#personal-coffee-model')).to_have_attribute('data-state','interactive')
+                page.locator('#personal-coffee-show-photo').click()
+                page.locator('#lang').click()
+                expect(page.locator('html')).to_have_attribute('lang','he')
+                page.locator('#start').click()
+                expect(page.locator('#capture')).to_be_visible()
+                assert page.locator('#drawers').count()==1, 'Existing nightstand prototype flow must not mislabel coffee table'
+                assert not errors,f'page JS errors {errors}'
+                assert not external,f'unexpected external requests {external}'
+                results.append({'width':width,'hero_is_GLb_snapshot':True,'fidelity':'exact_model_geometry','external_requests':0})
+                print('PASS matching GLB and generated screenshot hero',width)
                 context.close()
 
-            offline = browser.new_context(viewport={"width": 390, "height": 844})
-            page = offline.new_page()
-            page.goto(url + "/app/", wait_until="networkidle")
+            offline=browser.new_context(viewport={'width':390,'height':844})
+            page=offline.new_page()
+            page.goto(base+'/app/',wait_until='networkidle')
             page.evaluate("""async () => {
-                const registration=await navigator.serviceWorker.ready;
-                await registration.update();
+               const reg=await navigator.serviceWorker.ready;await reg.update();
             }""")
-            page.reload(wait_until="networkidle")
-            for asset in [
-                "./media/personal-coffee-showcase-680.avif",
-                "./media/personal-coffee-showcase-680.webp",
-                "../table/personal/media/personal-design-preview.glb",
-                "./personal-coffee-hero.mjs",
-            ]:
-                available = page.evaluate(
-                    """async asset => !!(await caches.match(
-                        new URL(asset,location.href).href))""", asset
-                )
-                assert available, f"Offline PWA cache missing: {asset}"
+            page.reload(wait_until='networkidle')
+            for rel in ['./coffee-showroom-glb.mjs','./realistic-glb.mjs',
+                './personal-coffee-hero.mjs','../assets/vendor/model-viewer-4.1.0/model-viewer.min.js']:
+                assert page.evaluate("""async u=>!!(await caches.match(new URL(u,location.href).href))""",rel),rel
             offline.set_offline(True)
-            page.reload(wait_until="domcontentloaded")
-            check_photo(page)
-            page.locator("#personal-coffee-show-model").click()
-            expect(page.locator("#personal-coffee-model-status")).to_contain_text(
-                "אינו העתק מאומת", timeout=45000
-            )
-            assert page.locator("model-viewer").evaluate("e=>e.loaded") is True
-            print("PASS offline approved showcase and original site GLB")
+            page.reload(wait_until='domcontentloaded')
+            assert_matching_hero(page)
+            page.locator('#personal-coffee-show-model').click()
+            expect(page.locator('#personal-coffee-model')).to_have_attribute('data-state','interactive')
+            print('PASS offline screenshot from exact GLB')
             offline.close()
 
-            # Lack of WebGL keeps the approved showcase still visible and usable.
-            fallback = browser.new_context(viewport={"width": 390, "height": 844})
-            fallback.add_init_script(
-                "HTMLCanvasElement.prototype.getContext=function(){return null}"
-            )
-            page = fallback.new_page()
-            page.goto(url + "/app/", wait_until="networkidle")
-            check_photo(page)
-            page.locator("#personal-coffee-show-model").click()
-            expect(page.locator("#personal-coffee-photo")).to_be_visible()
-            expect(page.locator("#personal-coffee-model")).to_be_hidden()
-            expect(page.locator("#personal-coffee-model-status")).to_contain_text(
-                "לא ניתן להציג מודל תלת־ממדי"
-            )
-            assert page.locator("model-viewer").count() == 0
-            print("PASS fallback showcase image on no-WebGL device")
+            fallback=browser.new_context(viewport={'width':390,'height':844})
+            fallback.add_init_script('HTMLCanvasElement.prototype.getContext=function(){return null}')
+            page=fallback.new_page();page.goto(base+'/app/',wait_until='networkidle')
+            expect(page.locator('#personal-coffee-photo')).to_be_visible()
+            expect(page.locator('#personal-coffee-model')).to_be_hidden()
+            expect(page.locator('#personal-coffee-model-status')).to_contain_text(
+                'לא ניתן לייצר תמונת ראווה')
+            assert page.locator('model-viewer').count()==0
+            print('PASS no WebGL explicitly marked illustration fallback')
             fallback.close()
             browser.close()
     finally:
-        server.shutdown()
-        server.server_close()
+        server.shutdown();server.server_close()
+    (output/'browser-qa.json').write_text(json.dumps({
+        'scope':'APP_MVP_20_MATCHED_MODEL_AND_HERO',
+        'results':results,'offline':'PASS','no_webgl':'LABELED_FALLBACK'
+    },indent=2)+'\n',encoding='utf8')
 
-    (output / "browser-qa.json").write_text(
-        json.dumps({"scope": "APPROVED_PERSONAL_COFFEE_SHOWCASE_HERO",
-                    "results": results, "offline": "PASS",
-                    "no_webgl": "SHOWCASE_RETAINED"}, indent=2),
-        encoding="utf8",
-    )
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--browser", required=True)
-    parser.add_argument("--output", default=".qa-reports/app-mvp-18")
-    args = parser.parse_args()
-    run(args.browser, Path(args.output))
+if __name__=='__main__':
+    p=argparse.ArgumentParser()
+    p.add_argument('--browser',required=True)
+    p.add_argument('--output',default='.qa-reports/app-mvp-20')
+    a=p.parse_args()
+    run(a.browser,Path(a.output))
