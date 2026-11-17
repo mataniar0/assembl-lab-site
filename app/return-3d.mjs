@@ -94,14 +94,15 @@ window.addEventListener('assembl:3d-model-ready',event=>{
   error.textContent='';
   render();
   // The existing inline approval handler may run AFTER the intent handler.
-  // Defer progress/record decoration until both click handlers finish, so the
-  // main application's go('approved') cannot overwrite the correct stage.
-  queueMicrotask(()=>{
+  // Use a browser task, not a microtask: between separate event listeners the
+  // browser may run a microtask checkpoint. This runs after ALL click handlers,
+  // including the legacy main app go('approved'), and avoids stale progress.
+  window.setTimeout(()=>{
     if(!approved||$('approved').hidden)return;
     document.querySelector('.progress-step[data-phase="1"]')?.classList.remove('active');
     document.querySelector('.progress-step[data-phase="2"]')?.classList.add('active');
     setRecord();
-  });
+  },0);
 });
 $('approved-3d-left').addEventListener('click',()=>rotate(-15));
 $('approved-3d-right').addEventListener('click',()=>rotate(15));
