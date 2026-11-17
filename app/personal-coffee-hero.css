@@ -1,10 +1,10 @@
-/* MVP-19: approved edited showroom visual, with separate source-site prototype GLB. */
+/* MVP-21: real photographed Personal Coffee Table, with photo-grounded 32-part GLB. */
 .personal-coffee-card{padding-bottom:14px;max-width:480px;transform:rotate(-.8deg)}
 .personal-coffee-card #intro-scene{display:none!important}
 .personal-coffee-hero{position:relative;margin-top:11px;height:clamp(290px,36vw,415px);min-height:290px;overflow:hidden;border-radius:7px;background:#e7e3da}
 #personal-coffee-photo{display:block;width:100%;height:100%}
 #personal-coffee-photo[hidden]{display:none!important}
-#personal-coffee-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;background:#e7e3da}
+#personal-coffee-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 53%;filter:saturate(1.05) contrast(1.035) brightness(1.025);background:#e7e3da}
 .personal-coffee-model{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 18%,#fcfaf5,#e7e5de 72%,#d6d4cd)}
 .personal-coffee-model[hidden]{display:none!important}
 .personal-coffee-model model-viewer{display:block;width:100%;height:100%;background:transparent;touch-action:pan-y;--progress-bar-color:#476b59}
@@ -20,9 +20,7 @@
 @media(max-width:700px){.personal-coffee-card{max-width:500px;transform:none}.personal-coffee-hero{height:clamp(300px,75vw,410px)}}
 @media(prefers-reduced-motion:reduce){.personal-coffee-model model-viewer{scroll-behavior:auto}}
 
-/* MVP-20: capture the exact 3D model while it renders under the hero.
- * A hidden attribute would prevent WebGL layout, so preview uses opacity.
- * Both views have identical geometry, camera origin and product appearance. */
+/* MVP-21: preserve real photograph while the original design model loads. */
 .personal-coffee-hero #personal-coffee-photo{position:absolute;inset:0;z-index:2}
 .personal-coffee-hero #personal-coffee-model{z-index:1;opacity:0;pointer-events:none}
 .personal-coffee-hero #personal-coffee-model[data-state="interactive"]{z-index:3;opacity:1;pointer-events:auto}
