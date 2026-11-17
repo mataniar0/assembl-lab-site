@@ -275,9 +275,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
             assert handoff.startswith("./concept-3d.html#selected=")
             assert "customer" not in handoff and "photo_url" not in handoff
             page.locator("#open-selected-3d").click()
-            expect(page).to_have_url(
-                lambda url: "/app/concept-3d.html#selected=" in url
-            )
+            assert "/app/concept-3d.html#selected=" in page.url
             expect(page.locator("#model-summary")).to_contain_text("חלופה B")
             expect(page.locator("#model-summary")).to_contain_text("2 מגירות")
             expect(page.locator("#load-status")).to_contain_text("הועברה")
