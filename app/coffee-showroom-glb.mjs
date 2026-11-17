@@ -152,7 +152,7 @@ function underMount(angle){
 }
 export function matchingCoffeeTableGlb(){
   const builder=new GlbBuilder();
-  const oak=generateTextures('honey');
+  const oak=generateTextures('natural');
   const diffuse=builder.addBytes(oak.colour);
   const normals=builder.addBytes(oak.normals);
   builder.images.push({name:'Embedded warm-oak procedural grain',bufferView:diffuse,mimeType:'image/png'});
@@ -161,11 +161,11 @@ export function matchingCoffeeTableGlb(){
   const matWood=builder.materials.push({
     name:'Warm natural oak - illustrative wood with directional grain',
     pbrMetallicRoughness:{
-      baseColorFactor:[1.10,.97,.81,1],
+      baseColorFactor:[1.04,.98,.92,1],
       baseColorTexture:{index:0},
-      metallicFactor:0,roughnessFactor:.54
+      metallicFactor:0,roughnessFactor:.62
     },
-    normalTexture:{index:1,scale:.26},doubleSided:false
+    normalTexture:{index:1,scale:.12},doubleSided:false
   })-1;
   const matBlack=builder.materials.push({
     name:'Matte satin charcoal black - tapered supports',
