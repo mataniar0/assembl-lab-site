@@ -77,7 +77,7 @@ test('viewer references only pinned same-origin library and local blob with resi
   assert.match(html,/connect-src 'self' blob:/);
   assert.match(source,/vendor\/model-viewer-4\.1\.0\/model-viewer\.min\.js/);
   assert.match(source,/showcaseNightstandGlb\(approved\)/);
-  assert.match(source,/viewer\.src=blobUrl/);
+  assert.match(source,/next\.src=blobUrl/);
   assert.match(source,/URL\.revokeObjectURL/);
   assert.match(source,/webGLAvailable/);
   assert.match(source,/failGLB/);
