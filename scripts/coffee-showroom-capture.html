@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Personal Coffee Table — render from exact public GLB</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:960px;height:820px;overflow:hidden}
+#stage{position:relative;isolation:isolate;width:960px;height:820px;overflow:hidden;
+ background:linear-gradient(179deg,#f0ebdf 0%,#e9e5db 56%,#d9d1c1 56.2%,#e0d5c4 100%)}
+#stage:before{content:"";position:absolute;inset:-240px auto auto -160px;width:740px;height:650px;
+ border-radius:50%;background:radial-gradient(circle,#fff9ea99,transparent 70%);filter:blur(25px)}
+#stage:after{content:"";position:absolute;left:-160px;right:-160px;top:57%;height:80%;
+ background:radial-gradient(ellipse at 47% 45%,#fbf5e977,#ccbda02b 60%,#b4a78a1b 88%);
+ pointer-events:none}
+model-viewer{position:relative;z-index:2;display:block;width:100%;height:100%;
+ background:transparent;--poster-color:transparent;pointer-events:none}
+</style>
+<script type="module">
+import '../assets/vendor/model-viewer-4.1.0/model-viewer.min.js';
+</script>
+</head><body><div id="stage">
+<model-viewer id="model"
+ src="../app/assets/personal-coffee-showroom-v2.glb"
+ loading="eager" reveal="auto"
+ camera-controls interaction-prompt="none"
+ camera-orbit="28deg 65deg auto"
+ field-of-view="34deg" min-field-of-view="22deg" max-field-of-view="48deg"
+ camera-target="auto auto auto"
+ shadow-intensity="1.4" shadow-softness=".78"
+ exposure="1.2" environment-image="neutral"
+ alt="Visual-only digital Personal Coffee Table"></model-viewer>
+</div></body></html>
