@@ -51,8 +51,11 @@ test('uses checksum-pinned exact frozen 32-part CTB-01 design source, not invent
 test('preserves all source vertices, normals, triangle indices and transforms exactly',()=>{
   const src=parse(original),output=parse(finishPersonalDesign(original));
   const sourceBinLength=src.doc.buffers[0].byteLength;
-  assert.deepEqual(output.bin.subarray(0,sourceBinLength),
-    src.bin.subarray(0,sourceBinLength));
+  // Compare digests, not Buffer vs Uint8Array prototypes: both byte sequences
+  // must be exactly identical and giant test diff logs are unhelpful.
+  const digest=x=>createHash('sha256').update(x).digest('hex');
+  assert.equal(digest(output.bin.subarray(0,sourceBinLength)),
+    digest(src.bin.subarray(0,sourceBinLength)));
   assert.deepEqual(output.doc.nodes[0].matrix,src.doc.nodes[0].matrix);
   assert.deepEqual(output.doc.scenes[0].nodes,src.doc.scenes[0].nodes);
   for(let i=0;i<32;i++){
@@ -94,7 +97,8 @@ test('photo-informed finish actually uses timber-grain PBR and dark curved leg/r
 });
 test('the two model finishes are deterministic and no private/customer data is included',()=>{
   const a=finishPersonalDesign(original),b=finishPersonalDesign(original);
-  assert.deepEqual(a,b);
+  assert.equal(createHash('sha256').update(a).digest('hex'),
+    createHash('sha256').update(b).digest('hex'));
   const {doc}=parse(a);
   assert.doesNotMatch(JSON.stringify(doc),/https?:\/\/|customer_email|private_note|user_photo|base64,/i);
 });
