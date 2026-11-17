@@ -67,36 +67,16 @@ test('top meshes actually form a round bevelled 620mm tabletop and leg mounts',(
   }
   assert.equal(COFFEE_SHOWROOM.verified_as_built,false);
 });
-test('PBR texture, normal map and photo snapshot come from the same local GLB path',()=>{
-  const {json,bin}=parse();
-  for(const img of json.images){
-    assert.equal(img.mimeType,'image/png');
-    assert.ok(img.bufferView>=0);
-    const view=json.bufferViews[img.bufferView];
-    assert.deepEqual([...bin.slice(view.byteOffset,view.byteOffset+8)],
-      [137,80,78,71,13,10,26,10]);
-  }
-  const oak=json.materials[0];
-  assert.equal(oak.pbrMetallicRoughness.metallicFactor,0);
-  assert.deepEqual(oak.pbrMetallicRoughness.baseColorTexture,{index:0});
-  assert.equal(oak.normalTexture.index,1);
-  assert.ok(json.materials[1].pbrMetallicRoughness.baseColorFactor[0]<.1);
-  for(const mesh of json.meshes){
-    const p=mesh.primitives[0];
-    assert.ok(Number.isInteger(p.attributes.POSITION));
-    assert.ok(Number.isInteger(p.attributes.TEXCOORD_0));
-    assert.ok(Number.isInteger(p.attributes.NORMAL));
-  }
+test('legacy three-straight-leg proxy is retired from customer app; exact CTB-01 model is used',()=>{
   const source=readFileSync(new URL('./personal-coffee-hero.mjs',import.meta.url),'utf8');
   const html=readFileSync(new URL('./index.html',import.meta.url),'utf8');
   const sw=readFileSync(new URL('./sw.js',import.meta.url),'utf8');
-  assert.match(source,/matchingCoffeeTableGlb\(\)/);
-  assert.match(source,/new Blob\(\[bytes\],\{type:'model\/gltf-binary'\}\)/);
-  assert.match(source,/next\.toDataURL\('image\/png'\)/);
-  assert.match(source,/image\.dataset\.showcaseSource='exact-loaded-coffee-glb'/);
-  assert.match(source,/data\.startsWith\('data:image\/png;base64,'\)/);
-  assert.match(source,/URL\.revokeObjectURL\(blobUrl\)/);
-  assert.match(html,/data-model-src="generated-visual-glb"/);
-  assert.match(sw,/'\.\/coffee-showroom-glb\.mjs'/);
-  assert.doesNotMatch(source,/\bfetch\s*\(|XMLHttpRequest|indexedDB|supabase|openai|cdn\./i);
+  assert.doesNotMatch(source,/matchingCoffeeTableGlb\(\)/);
+  assert.doesNotMatch(source,/toDataURL\('image\/png'\)/);
+  assert.match(source,/finishPersonalDesign\(original\)/);
+  assert.match(source,/verifyPersonalSource\(original\)/);
+  assert.match(html,/01-hero-finished-angled-960\.webp/);
+  assert.match(html,/data-model-src="\.\.\/table\/personal\/media\/personal-design-preview\.glb"/);
+  assert.match(sw,/'\.\/photo-grounded-coffee-glb\.mjs'/);
+  assert.doesNotMatch(sw,/'\.\/coffee-showroom-glb\.mjs'/);
 });
