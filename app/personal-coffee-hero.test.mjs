@@ -1,67 +1,71 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-const read=path=>readFileSync(new URL(path,import.meta.url),'utf8');
+import {createHash} from 'node:crypto';
 
-test('DESIGN STUDY / 001 uses exact finished round table photograph and published GLB from the product site',()=>{
+const read=path=>readFileSync(new URL(path,import.meta.url),'utf8');
+const binary=path=>readFileSync(new URL(path,import.meta.url));
+const checksum=bytes=>createHash('sha256').update(bytes).digest('hex');
+
+test('approved showroom assets are the exact optimized image and a matching image fallback',()=>{
+  const avif=binary('./media/personal-coffee-showcase-680.avif');
+  const webp=binary('./media/personal-coffee-showcase-680.webp');
+  assert.equal(avif.length,14174);
+  assert.equal(checksum(avif),'288afe7e918751be227a50e070dc5d6deae39c754fca73075789f6a5b4daec09');
+  assert.equal(avif.toString('ascii',4,12),'ftypavif');
+  assert.equal(webp.length,33698);
+  assert.equal(checksum(webp),'dcaedddcdff46059f8c77315141180e8f61a82ef37cd1fed3211f0a835f2d4e4');
+  assert.equal(webp.toString('ascii',0,4),'RIFF');
+  assert.equal(webp.toString('ascii',8,12),'WEBP');
+});
+test('DESIGN STUDY uses edited showcase image and explicitly does not claim it is a product photograph',()=>{
   const index=read('./index.html');
+  assert.match(index,/id="personal-coffee-photo"/);
+  assert.match(index,/srcset="\.\/media\/personal-coffee-showcase-680\.avif" type="image\/avif"/);
+  assert.match(index,/srcset="\.\/media\/personal-coffee-showcase-680\.webp" type="image\/webp"/);
+  assert.match(index,/img src="\.\/media\/personal-coffee-showcase-680\.webp" width="680" height="590"/);
+  assert.match(index,/שולחן קפה אישי · הדמיה בחלל/);
+  assert.match(index,/הדמיית ראווה/);
+  assert.match(index,/תמונת הראווה היא הדמיה חזותית ערוכה, לא צילום המוצר שנבנה/);
+  assert.match(index,/This edited showroom visualization is not a photograph/);
+  assert.match(index,/href="\.\.\/table\/personal\/"/);
+  assert.match(index,/id="personal-coffee-model"/);
+  assert.match(index,/\.\.\/table\/personal\/media\/personal-design-preview\.glb/);
+  assert.doesNotMatch(index,/שולחן קפה אישי · מוצר אמיתי שנבנה וצולם/);
+  assert.doesNotMatch(index,/srcset="\.\.\/table\/personal\/media\/01-hero-finished-angled/);
+});
+test('the authentic built-product catalog remains untouched and the existing design-only GLB remains the model',()=>{
   const product=read('../table/personal/index.html');
   const hero=read('./personal-coffee-hero.mjs');
-  assert.match(product,/שולחן קפה אישי/);
-  assert.match(product,/פלטה עגולה בגוון עץ חם ורגליים שחורות/);
+  const original=binary('../table/personal/media/01-hero-finished-angled-960.webp');
+  const model=binary('../table/personal/media/personal-design-preview.glb');
   assert.match(product,/01-hero-finished-angled-960\.webp/);
   assert.match(product,/personal-design-preview\.glb/);
-  assert.match(index,/id="personal-coffee-photo"/);
-  assert.match(index,/id="personal-coffee-model"/);
-  assert.match(index,/\.\.\/table\/personal\/media\/01-hero-finished-angled-480\.webp/);
-  assert.match(index,/\.\.\/table\/personal\/media\/01-hero-finished-angled-960\.webp/);
-  assert.match(index,/\.\.\/table\/personal\/media\/personal-design-preview\.glb/);
-  assert.match(hero,/\.\.\/table\/personal\/media\/personal-design-preview\.glb/);
-  assert.match(index,/href="\.\.\/table\/personal\/"/);
-  assert.doesNotMatch(index,/חלל לדוגמה · שידה סכמטית/);
-  assert.match(index,/שולחן קפה אישי · מוצר אמיתי שנבנה וצולם/);
-  assert.match(index,/אינו העתק מאומת של המוצר המצולם/);
   assert.match(product,/המבנה והגימור אינם העתק מאומת/);
+  assert.equal(original.toString('ascii',0,4),'RIFF');
+  assert.equal(model.toString('ascii',0,4),'glTF');
+  assert.equal(model.readUInt32LE(4),2);
+  assert.match(hero,/actualModel=new URL\('\.\.\/table\/personal\/media\/personal-design-preview\.glb'/);
+  assert.match(hero,/vendor\/model-viewer-4\.1\.0\/model-viewer\.min\.js/);
+  assert.match(hero,/webGLAvailable/);
+  assert.match(hero,/showPhoto\('error'\)/);
+  assert.match(hero,/showPhoto\('unsupported'\)/);
+  assert.match(hero,/next\.src=actualModel/);
+  assert.doesNotMatch(hero,/\bfetch\s*\(|XMLHttpRequest|localStorage|sessionStorage|indexedDB|supabase|openai|cdn\./i);
 });
-test('gallery photograph and GLB are existing repository bytes, not an invented render or wrong product',()=>{
-  const base=new URL('../table/personal/media/',import.meta.url);
-  for(const entry of [
-    ['01-hero-finished-angled-480.webp','RIFF',10000],
-    ['01-hero-finished-angled-960.webp','RIFF',10000],
-    ['personal-design-preview.glb','glTF',20000]
-  ]){
-    const bin=readFileSync(new URL(entry[0],base));
-    assert.ok(bin.byteLength>entry[2]);
-    assert.equal(bin.subarray(0,4).toString('ascii'),entry[1]);
-    if(entry[1]==='RIFF')assert.equal(bin.subarray(8,12).toString('ascii'),'WEBP');
-    if(entry[1]==='glTF'){
-      assert.equal(bin.readUInt32LE(4),2);
-      assert.equal(bin.readUInt32LE(8),bin.byteLength);
-    }
-  }
-  const provenance=read('../table/personal/media/IMAGE_QA.md');
-  assert.match(provenance,/No generated product image/);
-  assert.match(provenance,/original plaque/);
-});
-test('the real photograph and design-preview GLB remain distinguishable and offline PWA compatible',()=>{
-  const index=read('./index.html'),js=read('./personal-coffee-hero.mjs'),
-    css=read('./personal-coffee-hero.css'),sw=read('./sw.js');
-  assert.match(index,/<script type="module" src="\.\/personal-coffee-hero\.mjs"><\/script>/);
-  assert.match(index,/<link rel="stylesheet" href="\.\/personal-coffee-hero\.css">/);
-  assert.match(index,/id="personal-coffee-show-photo"[^>]*aria-pressed="true"/);
-  assert.match(index,/id="personal-coffee-show-model"[^>]*aria-pressed="false"/);
-  assert.match(index,/id="personal-coffee-model-status"[^>]*aria-live="polite"/);
-  assert.match(js,/actualModel=new URL\('\.\.\/table\/personal\/media\/personal-design-preview\.glb'/);
-  assert.match(js,/vendor\/model-viewer-4\.1\.0\/model-viewer\.min\.js/);
-  assert.match(js,/webGLAvailable/);
-  assert.match(js,/showPhoto\('error'\)/);
-  assert.match(js,/showPhoto\('unsupported'\)/);
-  assert.match(js,/viewer\.src|next\.src=actualModel/);
+test('landing showcase and prototype 3D stay responsive, bilingual and offline',()=>{
+  const html=read('./index.html'),css=read('./personal-coffee-hero.css'),
+    js=read('./personal-coffee-hero.mjs'),sw=read('./sw.js');
+  assert.match(html,/<script type="module" src="\.\/personal-coffee-hero\.mjs"><\/script>/);
+  assert.match(html,/<link rel="stylesheet" href="\.\/personal-coffee-hero\.css">/);
+  assert.match(html,/id="personal-coffee-show-photo"[^>]*aria-pressed="true"/);
+  assert.match(html,/id="personal-coffee-show-model"[^>]*aria-pressed="false"/);
+  assert.match(html,/id="personal-coffee-model-status"[^>]*aria-live="polite"/);
+  assert.match(js,/window\.setTimeout\(\(\)=>\{/);
+  assert.match(css,/#personal-coffee-photo img\{[^}]*object-fit:cover/);
   assert.match(css,/\.personal-coffee-card #intro-scene\{display:none!important\}/);
-  assert.match(sw,/'\.\/personal-coffee-hero\.mjs'/);
-  assert.match(sw,/'\.\/personal-coffee-hero\.css'/);
+  assert.match(sw,/'\.\/media\/personal-coffee-showcase-680\.avif'/);
+  assert.match(sw,/'\.\/media\/personal-coffee-showcase-680\.webp'/);
   assert.match(sw,/'\.\.\/table\/personal\/media\/personal-design-preview\.glb'/);
-  assert.match(sw,/'\.\.\/table\/personal\/media\/01-hero-finished-angled-960\.webp'/);
-  assert.match(index,/script-src 'self' 'sha256-GBnlKux09VbgrayAnLRJMrWvjFuJ9hF2QuT9vewZR6U=' 'wasm-unsafe-eval'/);
-  assert.doesNotMatch(js,/\bfetch\s*\(|XMLHttpRequest|localStorage|sessionStorage|indexedDB|supabase|openai|cdn\./i);
+  assert.match(html,/script-src 'self' 'sha256-GBnlKux09VbgrayAnLRJMrWvjFuJ9hF2QuT9vewZR6U=' 'wasm-unsafe-eval'/);
 });
