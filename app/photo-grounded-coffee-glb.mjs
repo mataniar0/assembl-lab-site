@@ -105,7 +105,7 @@ export function finishPersonalDesign(source){
   // All published source vertex indices, normal vectors and triangles are
   // retained byte-for-byte. Remove the original tan per-vertex swatch so that
   // physically based materials reflect the finished photographed color.
-  const textures=generateTextures('honey');
+  const textures=generateTextures('natural',.42);
   const diffuse=append(textures.colour),normal=append(textures.normals);
   doc.images=[
     {name:'Illustrative warm timber grain',bufferView:diffuse,mimeType:'image/png'},
@@ -115,9 +115,9 @@ export function finishPersonalDesign(source){
   doc.textures=[{sampler:0,source:0},{sampler:0,source:1}];
   doc.materials=[
     {name:'Warm timber circular top – photos 01/06 reference',
-     pbrMetallicRoughness:{baseColorFactor:[1.17,1.13,1.08,1],
+     pbrMetallicRoughness:{baseColorFactor:[1.15,1.12,1.04,1],
        baseColorTexture:{index:0},metallicFactor:0,roughnessFactor:.73},
-     normalTexture:{index:1,scale:.14},doubleSided:true},
+     normalTexture:{index:1,scale:.09},doubleSided:true},
     {name:'Finished near-black laminated curved legs and pairing spacers',
      pbrMetallicRoughness:{baseColorFactor:[.035,.038,.041,1],
        metallicFactor:.035,roughnessFactor:.59},doubleSided:true},
