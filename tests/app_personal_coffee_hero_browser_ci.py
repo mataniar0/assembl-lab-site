@@ -25,8 +25,13 @@ def check_photo(page):
     photo = page.locator("#personal-coffee-photo img")
     expect(photo).to_be_visible()
     assert "table/personal/media/01-hero-finished-angled-" in photo.get_attribute("src")
-    expect(photo).to_have_js_property("naturalWidth", 960)
-    assert photo.evaluate("image=>image.complete") is True
+    # A srcset resource is density-corrected: naturalWidth may reflect the
+    # browser's sizes calculation, not the 480/960 source file width.
+    assert photo.evaluate("image=>image.complete&&image.naturalWidth>250") is True
+    assert photo.evaluate("image=>image.currentSrc").endswith((
+        "/01-hero-finished-angled-480.webp",
+        "/01-hero-finished-angled-960.webp",
+    ))
     expect(page.locator("#personal-coffee-show-photo")).to_have_attribute(
         "aria-pressed", "true"
     )
