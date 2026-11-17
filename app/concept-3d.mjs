@@ -217,4 +217,25 @@ for(const name of ['pointerup','pointercancel','lostpointercapture']){
     if(pointer?.id===event.pointerId)pointer=null;
   });
 }
+
+function readSelectedFragment(){
+  const prefix='#selected=';
+  if(!window.location.hash.startsWith(prefix))return;
+  try{
+    const selected=decodeURIComponent(window.location.hash.slice(prefix.length));
+    const parsed=parseSelectedConcept(selected);
+    concept=parsed;
+    dims={...parsed.dimensions_mm};
+    syncDims();
+    translate();
+    showStatus('חלופה '+parsed.selected_slot+' הועברה מהשוואת A/B ללא העלאה.',
+      'Concept '+parsed.selected_slot+' carried over from A/B without upload.');
+  }catch{
+    // Never trust URL fragments: invalid or oversized payloads are ignored.
+    showStatus('קישור חלופה לא תקין; מוצגת הדגמה סינתטית.',
+      'Invalid concept link; showing the synthetic demo.');
+  }
+}
+
 syncDims();translate();
+readSelectedFragment();
