@@ -173,17 +173,17 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 assert parts_download.suggested_filename == (
                     "assembl-lab-concept-b-650x550x350-parts.json"
                 )
-                report = json.loads(Path(parts_download.path()).read_text("utf8"))
-                assert report["glb_sha256"] == hashlib.sha256(glb_bytes).hexdigest()
-                assert report["source_slot"] == "B"
-                assert report["part_count"] == 11
-                assert report["dimensions_mm"] == {
+                part_report = json.loads(Path(parts_download.path()).read_text("utf8"))
+                assert part_report["glb_sha256"] == hashlib.sha256(glb_bytes).hexdigest()
+                assert part_report["source_slot"] == "B"
+                assert part_report["part_count"] == 11
+                assert part_report["dimensions_mm"] == {
                     "width": 650, "height": 550, "depth": 350
                 }
-                assert report["safety"]["engineering_approval"] is False
-                assert report["safety"]["collision_free_verified"] is False
+                assert part_report["safety"]["engineering_approval"] is False
+                assert part_report["safety"]["collision_free_verified"] is False
                 expect(page.locator("#export-status")).to_contain_text(
-                    report["glb_sha256"]
+                    part_report["glb_sha256"]
                 )
 
                 attack = candidate()
