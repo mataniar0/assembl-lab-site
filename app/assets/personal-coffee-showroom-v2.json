@@ -2,19 +2,19 @@
   "kind": "SHOWROOM_VISUAL_ONLY",
   "product": "personal-coffee-table",
   "source_model_sha256": "17da2aafb7f17182b940804c22cb2be8dc0430cad26f20c76ca78e08ae9b8841",
-  "showroom_model_sha256": "3e0adfc2cd681538272d0199cc9549394b7ad966d7ede390582e761ba046101e",
+  "showroom_model_sha256": "f86e8d7af603cb16817b23b010b7feb10b2f5526109be83382792d6594f44390",
   "source_model_geometry_count": 32,
   "showroom_geometry_count": 11,
   "showroom_bounds_m": [
     [
       -0.297,
-      -0.297,
-      0.012
+      0.01199999999999999,
+      -0.302
     ],
     [
       0.297,
-      0.302,
-      0.51
+      0.51,
+      0.29700000000000004
     ]
   ],
   "visual_dimensions_estimate_m": {
@@ -31,8 +31,8 @@
   "engineering_approval": false,
   "manufacturing_approval": false,
   "note": "Visual estimate from product photo and original GLB; unverified dimensions and joinery.",
-  "poster_webp_sha256": "db5738523347aff268f3fc5c95633a5c7b8553e60362f5211c516e4e9e48f8be",
-  "poster_rendered_from_model_sha256": "3e0adfc2cd681538272d0199cc9549394b7ad966d7ede390582e761ba046101e",
+  "poster_webp_sha256": "31e24557e6327c0c8ec44814072de9870feb0821ac5d561badb9c148d9bcbb8d",
+  "poster_rendered_from_model_sha256": "f86e8d7af603cb16817b23b010b7feb10b2f5526109be83382792d6594f44390",
   "poster_pixels": [
     960,
     820
