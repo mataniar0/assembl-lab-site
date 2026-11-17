@@ -39,7 +39,7 @@ def render():
         page.goto(endpoint+'/scripts/coffee-showroom-capture.html',wait_until='networkidle')
         page.wait_for_function("document.getElementById('model').loaded === true",timeout=45000)
         assert page.locator('#model').evaluate(
-           "m=>new URL(m.src).pathname.endsWith('/app/assets/personal-coffee-showroom-v2.glb')"
+           "m=>new URL(m.getAttribute('src'),location.href).pathname.endsWith('/app/assets/personal-coffee-showroom-v2.glb')"
         )
         assert not errors,(errors[:3])
         assert not external,external
