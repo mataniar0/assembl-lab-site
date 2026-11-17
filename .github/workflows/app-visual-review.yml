@@ -28,6 +28,7 @@ on:
       - 'app/realistic-glb*'
       - 'app/personal-coffee-hero*'
       - 'app/coffee-showroom-glb*'
+      - 'app/photo-grounded-coffee-glb*'
       - 'app/media/personal-coffee-showcase-*'
       - 'tests/app_personal_coffee_hero_browser_ci.py'
       - 'app/nightstand-intent.js'
@@ -60,6 +61,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          node --check app/photo-grounded-coffee-glb.mjs
           node --check app/coffee-showroom-glb.mjs
           node --check app/personal-coffee-hero.mjs
           node --check app/realistic-glb.mjs
@@ -71,22 +73,8 @@ jobs:
           node --check app/preview-state.mjs
           node --check app/preview-lab.mjs
           node --check app/preview-fixtures/generate-fixtures.mjs
-          node --test app/preview-state.test.mjs app/preview-fixtures/fixtures.test.mjs app/concept-geometry.test.mjs app/concept-export.test.mjs app/return-3d.test.mjs app/showcase-glb.test.mjs app/personal-coffee-hero.test.mjs app/coffee-showroom-glb.test.mjs
+          node --test app/preview-state.test.mjs app/preview-fixtures/fixtures.test.mjs app/concept-geometry.test.mjs app/concept-export.test.mjs app/return-3d.test.mjs app/showcase-glb.test.mjs app/personal-coffee-hero.test.mjs app/coffee-showroom-glb.test.mjs app/photo-grounded-coffee-glb.test.mjs
 
-      # Source inspection package for independent comparison of photos to the
-      # frozen design-preview GLB. Existing published public assets only.
-      - name: Retain real Personal Coffee Table image and 3D source references
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
-        with:
-          name: personal-coffee-source-${{ github.run_id }}
-          path: |
-            table/personal/media/01-hero-finished-angled-960.webp
-            table/personal/media/06-leg-structure-960.webp
-            table/personal/media/05-underside-structure-960.webp
-            table/personal/media/03-prototype-before-finish-768.webp
-            table/personal/media/personal-design-preview.glb
-            docs/3d/personal-export.json
-          retention-days: 2
   visual-browser-qa:
     name: Mobile/Desktop Chromium synthetic review
     runs-on: ubuntu-24.04
@@ -130,9 +118,9 @@ jobs:
           mkdir -p .qa-reports/app-mvp-15
           python tests/app_return3d_browser_ci.py --browser "$browser_path" \
             --output .qa-reports/app-mvp-15 2>&1 | tee .qa-reports/app-mvp-15/browser.log
-          mkdir -p .qa-reports/app-mvp-18
+          mkdir -p .qa-reports/app-mvp-21
           python tests/app_personal_coffee_hero_browser_ci.py --browser "$browser_path" \
-            --output .qa-reports/app-mvp-18 2>&1 | tee .qa-reports/app-mvp-18/browser.log
+            --output .qa-reports/app-mvp-21 2>&1 | tee .qa-reports/app-mvp-21/browser.log
       - name: Retain safe synthetic screenshots and QA data
         if: always()
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
@@ -142,6 +130,6 @@ jobs:
             .qa-reports/app-mvp-09/
             .qa-reports/app-mvp-13/
             .qa-reports/app-mvp-15/
-            .qa-reports/app-mvp-18/
+            .qa-reports/app-mvp-21/
           if-no-files-found: warn
           retention-days: 14
