@@ -48,9 +48,8 @@ def approve(page) -> None:
     page.locator("#confirm-approval").click()
     expect(page.locator("#approved")).to_be_visible()
     expect(page.locator("#approved-3d")).to_be_visible()
-    page.wait_for_function(
-        "document.querySelector('#approved-glb-host')?.dataset.state==='ready'",
-        timeout=45000
+    expect(page.locator("#approved-glb-host")).to_have_attribute(
+        "data-state","ready",timeout=45000
     )
     expect(page.locator("#approved-glb-host model-viewer")).to_be_visible()
     assert page.locator("model-viewer").evaluate("e=>e.loaded")
