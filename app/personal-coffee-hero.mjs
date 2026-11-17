@@ -123,7 +123,7 @@ async function prepareHero(){
       next.setAttribute('camera-target','0m 0.225m 0m');
       next.setAttribute('field-of-view','37deg');
       next.setAttribute('environment-image','neutral');
-      next.setAttribute('exposure','1.22');
+      next.setAttribute('exposure','1.08');
       next.setAttribute('shadow-intensity','1');
       next.setAttribute('shadow-softness','.85');
       next.tabIndex=0;
