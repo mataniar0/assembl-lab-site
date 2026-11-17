@@ -10,6 +10,7 @@ on:
       - feature/app-mvp-14-concept-glb-report
       - feature/app-mvp-15-return-3d-in-main-pwa
       - feature/app-mvp-16-glb-quality-in-app
+      - feature/app-mvp-17-realistic-nightstand
   pull_request:
     branches:
       - main
@@ -19,6 +20,8 @@ on:
       - 'app/preview-*'
       - 'app/concept-*'
       - 'app/return-3d*'
+      - 'app/showcase-glb*'
+      - 'app/realistic-glb*'
       - 'app/nightstand-intent.js'
       - 'tests/app_return3d_browser_ci.py'
       - 'app/sw.js'
@@ -49,6 +52,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          node --check app/realistic-glb.mjs
           node --check app/showcase-glb.mjs
           node --check app/return-3d.mjs
           node --check app/concept-export.mjs
