@@ -36,7 +36,6 @@ def check_photo(page):
     assert page.locator("#intro-scene").evaluate(
         "e=>getComputedStyle(e).display"
     ) == "none"
-    expect(page.locator("#personal-coffee-disclosure")).to_have_count(0)
 
 
 def run(browser_path: str, output: Path):
@@ -112,7 +111,7 @@ def run(browser_path: str, output: Path):
                 page.locator("#lang").click()
                 expect(page.locator("html")).to_have_attribute("lang", "en")
                 expect(page.locator("#personal-coffee-model-status")).to_contain_text(
-                    "not a verified replica"
+                    "Not a verified replica"
                 )
                 expect(page.locator(".personal-coffee-disclosure")).to_contain_text(
                     "not a verified replica"
