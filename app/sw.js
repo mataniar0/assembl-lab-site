@@ -1,13 +1,12 @@
 /* ASSEMBL LAB PWA shell — only public synthetic preview resources are cached.
  * Never cache private Auth/cloud pages or overwrite the home document on navigation.
  */
-const CACHE = 'assemble-lab-android-v0.10.0-coffee-showcase';
+const CACHE = 'assemble-lab-android-v0.11.0-coffee-hero-glb-parity';
 const SHELL = [
-  './','./index.html','./nightstand-intent.js','./return-3d.mjs','./return-3d.css','./showcase-glb.mjs','./realistic-glb.mjs','./personal-coffee-hero.mjs','./personal-coffee-hero.css','./media/personal-coffee-showcase-680.avif','./media/personal-coffee-showcase-680.webp','./manifest.webmanifest',
+  './','./index.html','./nightstand-intent.js','./return-3d.mjs','./return-3d.css','./showcase-glb.mjs','./realistic-glb.mjs','./personal-coffee-hero.mjs','./personal-coffee-hero.css','./assets/personal-coffee-showroom-v2.webp','./assets/personal-coffee-showroom-v2.glb','./assets/personal-coffee-showroom-v2.json','./manifest.webmanifest',
   './icons/icon-192.png','./icons/icon-512.png',
   './preview-lab.html','./preview-lab.css','./preview-lab.mjs','./preview-state.mjs',
   '../assets/vendor/model-viewer-4.1.0/model-viewer.min.js',
-  '../table/personal/media/personal-design-preview.glb',
   './concept-3d.html','./concept-3d.css','./concept-3d.mjs','./concept-geometry.mjs','./concept-export.mjs',
   './preview-fixtures/SC-01.png','./preview-fixtures/SC-02.png',
   './preview-fixtures/SC-04.png','./preview-fixtures/SC-07.png',
