@@ -55,5 +55,9 @@ jobs:
                   app/assets/personal-coffee-showroom-v2.json
           if ! git diff --cached --quiet; then
             git commit -m 'build(table): derive matching showroom poster from approved showcase GLB [skip ci]'
+            # The source branch can move while rendering. Rebase this artifact
+            # commit onto the most recent feature head; never force-push.
+            git fetch origin feature/app-mvp-20-coffee-glb-hero-parity
+            git rebase origin/feature/app-mvp-20-coffee-glb-hero-parity
             git push origin HEAD:refs/heads/feature/app-mvp-20-coffee-glb-hero-parity
           fi
