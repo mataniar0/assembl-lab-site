@@ -76,6 +76,10 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 context = browser.new_context(
                     viewport={"width": width, "height": height},
                     reduced_motion="reduce",
+                    # Online customer-flow cases do not need a Service Worker;
+                    # block it to avoid first-install controllerchange reload
+                    # racing version snapshot assertions. Offline is tested below.
+                    service_workers="block",
                     device_scale_factor=1
                 )
                 page = context.new_page()
