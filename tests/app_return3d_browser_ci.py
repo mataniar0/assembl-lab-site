@@ -158,6 +158,13 @@ def run(browser_exe: str, output_dir: Path) -> None:
                 page.locator("#approved-3d-reset").click()
                 orbit_reset = model_view.evaluate("e=>({...e.getCameraOrbit()})")
                 assert abs(orbit_reset["theta"]-orbit_before["theta"])<.05
+                page.locator("#approved-3d-zoom-in").click()
+                in_radius=model_view.evaluate("e=>e.getCameraOrbit().radius")
+                assert in_radius < orbit_reset["radius"], "GLB zoom-in failed"
+                page.locator("#approved-3d-zoom-out").click()
+                out_radius=model_view.evaluate("e=>e.getCameraOrbit().radius")
+                assert out_radius > in_radius, "GLB zoom-out failed"
+                page.locator("#approved-3d-reset").click()
                 assert model_view.evaluate("e=>e.src").startswith("blob:")
                 assert model_view.get_attribute("shadow-intensity") == "1"
                 gltf = page.evaluate("""async () => {
