@@ -91,7 +91,9 @@ async function showModel(){
     next.setAttribute('touch-action','pan-y');
     next.setAttribute('interaction-prompt','none');
     next.setAttribute('loading','eager');
-    next.setAttribute('camera-orbit','34deg 70deg auto');
+    // Front view aligned to the actual finished photographs: both curved outer
+    // legs frame the central ring, rather than overlapping as in a 3/4 view.
+    next.setAttribute('camera-orbit','270deg 68deg 1.12m');
     next.setAttribute('field-of-view','30deg');
     next.setAttribute('min-field-of-view','20deg');
     next.setAttribute('max-field-of-view','60deg');
