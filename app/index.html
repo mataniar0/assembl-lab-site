@@ -8,6 +8,7 @@
 <meta name="application-name" content="ASSEMBL LAB">
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="stylesheet" href="./return-3d.css">
+<link rel="stylesheet" href="./personal-coffee-hero.css">
 <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
 <meta name="description" content="ASSEMBL LAB — אב טיפוס מקומי לשלב צילום חלל והדמיית רהיט">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' blob: data:; script-src 'self' 'sha256-GBnlKux09VbgrayAnLRJMrWvjFuJ9hF2QuT9vewZR6U=' 'wasm-unsafe-eval'; style-src 'self' 'sha256-89Sc5Gf+7JqCtzias9Yo+4XLau6VOtWxNhx/QN80yyI='; img-src 'self' blob: data:; connect-src 'self' blob:; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
@@ -51,7 +52,33 @@
         <div class="install-zone"><button id="install-app" class="btn secondary" type="button" hidden data-he="התקן את ASSEMBL LAB" data-en="Install ASSEMBL LAB">התקן את ASSEMBL LAB</button><p class="small-note" id="install-help" data-he="באנדרואיד: פתחו ב־Chrome, לחצו על ⋮ ובחרו 'התקנה' או 'הוספה למסך הבית'." data-en="On Android: in Chrome open ⋮ and choose 'Install app' or 'Add to Home screen'.">באנדרואיד: פתחו ב־Chrome, לחצו על ⋮ ובחרו 'התקנה' או 'הוספה למסך הבית'.</p></div>
         <p class="muted compact" data-he="בפיילוט: שידת לילה קטנה. אין העלאת תמונות לשרת, ואין יצירת AI אמיתית." data-en="Pilot: small nightstand. Photos stay on this device; no real AI generation.">בפיילוט: שידת לילה קטנה. אין העלאת תמונות לשרת, ואין יצירת AI אמיתית.</p>
       </div>
-      <div class="hero-visual"><div class="hero-card"><div class="eyebrow">DESIGN STUDY / 001</div><div class="mini-scene" id="intro-scene"></div><p data-he="חלל לדוגמה · שידה סכמטית" data-en="Sample room · schematic nightstand">חלל לדוגמה · שידה סכמטית</p></div></div>
+      <div class="hero-visual"><div class="hero-card personal-coffee-card">
+        <div class="eyebrow">DESIGN STUDY / 001</div>
+        <div class="mini-scene" id="intro-scene" aria-hidden="true"></div>
+        <div class="personal-coffee-hero" id="personal-coffee-hero">
+          <picture id="personal-coffee-photo">
+            <source srcset="../table/personal/media/01-hero-finished-angled-480.webp 480w, ../table/personal/media/01-hero-finished-angled-960.webp 960w" sizes="(max-width:800px) 85vw, 440px" type="image/webp">
+            <img src="../table/personal/media/01-hero-finished-angled-960.webp" width="960" height="1248"
+              loading="eager" decoding="async" fetchpriority="high"
+              alt="שולחן קפה אישי אמיתי של ASSEMBL LAB: פלטה עגולה בגוון עץ חם ורגליים שחורות"
+              data-he-alt="שולחן קפה אישי אמיתי של ASSEMBL LAB: פלטה עגולה בגוון עץ חם ורגליים שחורות"
+              data-en-alt="Real ASSEMBL LAB Personal Coffee Table: round warm wooden top and black legs">
+          </picture>
+          <div id="personal-coffee-model" class="personal-coffee-model" hidden
+            data-model-src="../table/personal/media/personal-design-preview.glb"
+            aria-label="תצוגת תכנון תלת־ממדית של שולחן קפה אישי"></div>
+        </div>
+        <div class="personal-coffee-tabs" role="group" aria-label="בחרו צילום או תלת־ממד">
+          <button id="personal-coffee-show-photo" class="personal-coffee-tab" type="button"
+            aria-pressed="true" data-he="צילום המוצר" data-en="Real photo">צילום המוצר</button>
+          <button id="personal-coffee-show-model" class="personal-coffee-tab" type="button"
+            aria-pressed="false" data-he="מודל תלת־ממד" data-en="3D model">מודל תלת־ממד</button>
+        </div>
+        <p class="personal-coffee-label" data-he="שולחן קפה אישי · מוצר אמיתי שנבנה וצולם" data-en="Personal Coffee Table · real built and photographed product">שולחן קפה אישי · מוצר אמיתי שנבנה וצולם</p>
+        <p id="personal-coffee-model-status" class="personal-coffee-status" aria-live="polite"></p>
+        <p class="personal-coffee-disclosure" data-he="צילום המוצר אמיתי; מודל התלת־ממד הוא אב־טיפוס דיגיטלי ואינו העתק מאומת של המוצר המצולם." data-en="The product photograph is real; the 3D model is an unverified digital prototype, not a verified replica of the photographed table.">צילום המוצר אמיתי; מודל התלת־ממד הוא אב־טיפוס דיגיטלי ואינו העתק מאומת של המוצר המצולם.</p>
+        <a class="personal-coffee-product-link" href="../table/personal/" data-he="פרטי השולחן המקורי באתר" data-en="View the original product">פרטי השולחן המקורי באתר</a>
+      </div></div>
     </div>
   </section>
   <section class="screen" id="capture" hidden aria-labelledby="capture-title">
@@ -301,4 +328,5 @@
 </script>
 <script src="./nightstand-intent.js" defer></script>
 <script type="module" src="./return-3d.mjs"></script>
+<script type="module" src="./personal-coffee-hero.mjs"></script>
 </body></html>
