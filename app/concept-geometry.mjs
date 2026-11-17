@@ -97,7 +97,9 @@ function part(id,kind,x,y,z,w,h,d){
   return Object.freeze({id,kind,x,y,z,width:w,height:h,depth:d});
 }
 export function buildNightstand(concept,dimensions=concept?.dimensions_mm){
-  if(!concept||!FINISHES.includes(concept.finish)||![1,2].includes(concept.drawers))
+  if(!concept||!FINISHES.includes(concept.finish)||![1,2].includes(concept.drawers)||
+     ![4,6].includes(concept.nominal_thickness_mm??6)||
+     !['shelf','closed'].includes(concept.lower_section??'shelf'))
     throw new TypeError('CONCEPT_INVALID');
   if(!dimensions||Object.getPrototypeOf(dimensions)!==Object.prototype)
     throw new TypeError('DIMENSIONS_INVALID');
@@ -105,9 +107,9 @@ export function buildNightstand(concept,dimensions=concept?.dimensions_mm){
      !['width','height','depth'].every(k=>Object.hasOwn(dimensions,k)))
     throw new TypeError('DIMENSIONS_INVALID');
   const W=integer(dimensions.width,200,900,'WIDTH_INVALID');
-  const H=integer(dimensions.height,250,950,'HEIGHT_INVALID');
+  const H=integer(dimensions.height,200,1000,'HEIGHT_INVALID');
   const D=integer(dimensions.depth,200,600,'DEPTH_INVALID');
-  const T=6,L=Math.min(82,Math.round(H*0.16)),cabinetH=H-L-T;
+  const T=concept.nominal_thickness_mm??6,L=Math.min(82,Math.round(H*0.16)),cabinetH=H-L-T;
   const result=[
     part('top','top',0,H-T/2,0,W,T,D),
     part('left','side',-W/2+T/2,L+cabinetH/2,0,T,cabinetH,D-2*T),
@@ -122,6 +124,14 @@ export function buildNightstand(concept,dimensions=concept?.dimensions_mm){
     const yc=frontTop-fHeight/2-i*(fHeight+8);
     result.push(part('drawer-'+(i+1),'drawer',0,yc,frontZ,W-2*T-12,fHeight,T));
   }
+  if(concept.lower_section==='closed'){
+    const lowerStart=L+T*2;
+    const lowerEnd=H-T-concept.drawers*(fHeight+8)-20;
+    if(lowerEnd>lowerStart+10){
+      result.push(part('lower-front','front',0,(lowerStart+lowerEnd)/2,
+        frontZ,W-2*T-12,lowerEnd-lowerStart,T));
+    }
+  }
   for(const x of [-W/2+24,W/2-24]){
     for(const z of [-D/2+24,D/2-24]){
       result.push(part('leg-'+(x<0?'l':'r')+(z<0?'b':'f'),'leg',x,L/2,z,24,L,24));
@@ -135,7 +145,8 @@ export function buildNightstand(concept,dimensions=concept?.dimensions_mm){
       throw new RangeError('PART_EXCEEDS_ENVELOPE');
   }
   return Object.freeze({parts,dimensions_mm:Object.freeze({width:W,height:H,depth:D}),
-    finish:concept.finish,drawers:concept.drawers,material:'birch_plywood',
+    finish:concept.finish,drawers:concept.drawers,
+    lower_section:concept.lower_section??'shelf',material:'birch_plywood',
     nominal_thickness_mm:T,certified:false});
 }
 const FACE_DEFS=Object.freeze([
