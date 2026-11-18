@@ -1,9 +1,9 @@
 /* ASSEMBL LAB PWA shell — only public synthetic preview resources are cached.
  * Never cache private Auth/cloud pages or overwrite the home document on navigation.
  */
-const CACHE = 'assemble-lab-android-v0.14.0-geometric-personal-dual-glb';
+const CACHE = 'assemble-lab-android-v0.14.1-geometric-cache-isolation';
 const SHELL = [
-  './','./index.html','./nightstand-intent.js','./return-3d.mjs','./return-3d.css','./showcase-glb.mjs','./realistic-glb.mjs','./personal-coffee-hero.mjs','./photo-grounded-coffee-glb.mjs','./personal-coffee-hero.css','./manifest.webmanifest',
+  './','./index.html','./nightstand-intent.js?v=mvp25-20261118','./return-3d.mjs?v=mvp25-20261118','./return-3d.css?v=mvp25-20261118','./showcase-glb.mjs','./realistic-glb.mjs','./personal-coffee-hero.mjs?v=mvp25-20261118','./photo-grounded-coffee-glb.mjs','./photo-grounded-coffee-glb.mjs?v=mvp25-20261118','./personal-coffee-hero.css?v=mvp25-20261118','./manifest.webmanifest',
   './icons/icon-192.png','./icons/icon-512.png',
   './preview-lab.html','./preview-lab.css','./preview-lab.mjs','./preview-state.mjs',
   '../assets/vendor/model-viewer-4.1.0/model-viewer.min.js',
