@@ -9,6 +9,8 @@ from functools import partial
 import json
 from pathlib import Path
 import threading
+import time
+from playwright.sync_api import Error as PlaywrightError
 from urllib.parse import urlparse
 from playwright.sync_api import expect,sync_playwright
 
@@ -77,10 +79,21 @@ def run(browser_path:str,output:Path)->None:
                 assert page.locator('#personal-coffee-model').get_attribute('data-model-src')==(
                   '../geometric/media/geometric-v11-design-only.glb')
                 # The marketing PWA must work offline without changing the live PWA.
-                page.evaluate("""async()=>{
-                  const reg=await navigator.serviceWorker.ready;
-                  await reg.update();
-                }""")
+                # Installation claims the client and reloads it once. Avoid
+                # racing an evaluation with service-worker controllerchange.
+                deadline=time.monotonic()+25
+                while time.monotonic()<deadline:
+                    try:
+                        controlled=page.evaluate(
+                            "()=>Boolean(navigator.serviceWorker.controller)")
+                        if controlled:break
+                    except PlaywrightError as e:
+                        if 'Execution context was destroyed' not in str(e):
+                            raise
+                    time.sleep(.25)
+                else:
+                    raise AssertionError('Marketing V1 PWA never controlled the page')
+                page.wait_for_load_state('networkidle')
                 scope=page.evaluate("()=>navigator.serviceWorker.controller?.scriptURL||''")
                 assert scope.endswith('/marketing/v1/app/sw.js'),scope
                 ctx.set_offline(True)
