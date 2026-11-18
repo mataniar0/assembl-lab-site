@@ -47,7 +47,7 @@ test('intro Geometric image is different from approved Personal Coffee Table ref
 });
 test('explicit PWA allowlist and shell retain both exact models and fallback photographs',()=>{
   const sw=read('./sw.js'),html=read('./index.html'),intro=read('./personal-coffee-hero.mjs');
-  assert.match(sw,/v0\.14\.3-photo-real-room/);
+  assert.match(sw,/v0\.14\.4-mode-selection/);
   for(const path of [
     '../assets/geometric-engineering-object-clean.webp',
     '../geometric/media/geometric-v11-design-only.glb',
@@ -83,7 +83,7 @@ test('MVP-25 release URLs prevent mixed Geometric markup with stale round Person
   }
   assert.match(return3d,/photo-grounded-coffee-glb\.mjs\?v=mvp27-20261118/);
   assert.ok(sw.includes("'./photo-grounded-coffee-glb.mjs"+suffix+"'"));
-  assert.match(sw,/assemble-lab-android-v0\.14\.3-photo-real-room/);
+  assert.match(sw,/assemble-lab-android-v0\.14\.4-mode-selection/);
   assert.match(html,/data-model-src="\.\.\/geometric\/media\/geometric-v11-design-only\.glb"/);
   assert.match(read('./personal-coffee-hero.mjs'),/next\.src=sourceGlb/);
 });

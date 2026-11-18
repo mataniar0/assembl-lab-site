@@ -1,0 +1,9 @@
+{
+  "name": "ASSEMBL LAB Marketing Demo V1",
+  "source_branch": "release/marketing-demo-2026-11-18",
+  "source_commit": "d05830451a918f00dc484acf985c794443dc36f9",
+  "frozen": true,
+  "real_inquiries": false,
+  "entry": "./app/",
+  "description": "Snapshot assets independent of live /app development; only PWA cache namespace is adjusted"
+}

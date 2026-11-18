@@ -80,7 +80,7 @@ def run(browser_path,output):
                     else:route.continue_()
                 page.route('**/*',guard)
                 page.on('pageerror',lambda e:errors.append(str(e)))
-                page.goto(root+'/app/',wait_until='networkidle')
+                page.goto(root+'/app/?mode=development',wait_until='networkidle')
                 verify_geometric_photo(page)
                 page.screenshot(path=str(output/f'geometric-intro-photo-{w}.png'),full_page=False)
                 page.locator('#personal-coffee-show-model').click()
@@ -123,7 +123,7 @@ def run(browser_path,output):
             page=stale.new_page()
             stale_errors=[]
             page.on('pageerror',lambda e:stale_errors.append(str(e)))
-            page.goto(root+'/app/',wait_until='networkidle')
+            page.goto(root+'/app/?mode=development',wait_until='networkidle')
             page.evaluate('async ()=>{await navigator.serviceWorker.ready}')
             page.reload(wait_until='networkidle')
             page.evaluate("""async ()=>{
@@ -166,7 +166,7 @@ def run(browser_path,output):
 
             offline=browser.new_context(viewport={'width':390,'height':844})
             page=offline.new_page()
-            page.goto(root+'/app/',wait_until='networkidle')
+            page.goto(root+'/app/?mode=development',wait_until='networkidle')
             page.evaluate("""async ()=>{
               const reg=await navigator.serviceWorker.ready;
               await reg.update();
@@ -192,7 +192,7 @@ def run(browser_path,output):
             fallback.add_init_script(
                 'HTMLCanvasElement.prototype.getContext=function(){return null}')
             page=fallback.new_page()
-            page.goto(root+'/app/',wait_until='networkidle')
+            page.goto(root+'/app/?mode=development',wait_until='networkidle')
             verify_geometric_photo(page)
             page.locator('#personal-coffee-show-model').click()
             expect(page.locator('#personal-coffee-photo')).to_be_visible()

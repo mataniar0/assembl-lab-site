@@ -1,0 +1,327 @@
+{
+  "snapshot": "Marketing Demo V1",
+  "source_commit": "d05830451a918f00dc484acf985c794443dc36f9",
+  "frozen_at": "2026-11-18",
+  "files": [
+    {
+      "path": "app/assets/coffee-empty-room.webp",
+      "blob": "2f6035ecd166e1719dc67142a7e7a6ea171c62e2",
+      "size": 2194
+    },
+    {
+      "path": "app/assets/coffee-reference-room.webp",
+      "blob": "25c02048c561f9580db6000ca5104af720625196",
+      "size": 1950
+    },
+    {
+      "path": "app/coffee-showroom-glb.mjs",
+      "blob": "044d0274d9b31400b49d039093ccdd11108838eb",
+      "size": 8136
+    },
+    {
+      "path": "app/concept-3d.css",
+      "blob": "f1a8a1ef4862ad0d3bf5dbf21dd5e8f993ce39fd",
+      "size": 5265
+    },
+    {
+      "path": "app/concept-3d.html",
+      "blob": "b08482999087ae610a77fc51b25bf5e967447df6",
+      "size": 8953
+    },
+    {
+      "path": "app/concept-3d.mjs",
+      "blob": "94171c38f361ebfa7fc7bd63a30bcf5372e0cc79",
+      "size": 9959
+    },
+    {
+      "path": "app/concept-export.mjs",
+      "blob": "7a68e8a640d80b36289aefdf771a454e75cd211c",
+      "size": 7091
+    },
+    {
+      "path": "app/concept-geometry.mjs",
+      "blob": "5c5b6f2a69de9861dd0e02f2264e661e887b1345",
+      "size": 11230
+    },
+    {
+      "path": "app/demo-room.css",
+      "blob": "a0d87942cecb32fce651b0c35bf18f26c0b71b7b",
+      "size": 1457
+    },
+    {
+      "path": "app/design-studio.js",
+      "blob": "50b688e5c37880da5a39d61c92f7f47285ddbc19",
+      "size": 19960
+    },
+    {
+      "path": "app/icons/icon-192.png",
+      "blob": "676ed3a771da8bfb09f6fb2f4c54ef4c9c2327d8",
+      "size": 1285
+    },
+    {
+      "path": "app/icons/icon-512.png",
+      "blob": "24e5eb795203c20840049c4d13afa28cff0d7e13",
+      "size": 2148
+    },
+    {
+      "path": "app/index.html",
+      "blob": "584b8b37d3cc20525bca9769bb2461f4636070cf",
+      "size": 42340
+    },
+    {
+      "path": "app/manifest.webmanifest",
+      "blob": "d40591b9511b3d0526a04be6f9c47feae5808f2a",
+      "size": 646
+    },
+    {
+      "path": "app/media/personal-coffee-front-showcase-960.webp",
+      "blob": "473191fec57c138acbe2033d9dda1001f29f0246",
+      "size": 43304
+    },
+    {
+      "path": "app/media/personal-coffee-showcase-680.avif",
+      "blob": "7d39f7c578b5ed3751f8a0c8f50a97f69302fbcd",
+      "size": 14174
+    },
+    {
+      "path": "app/media/personal-coffee-showcase-680.webp",
+      "blob": "14781aa4b79a1ef801a62af4e9682b70562c4b0c",
+      "size": 33698
+    },
+    {
+      "path": "app/nightstand-intent.js",
+      "blob": "b7bfaf2727c23f3e7a7c77c1941db375ca0e0654",
+      "size": 7219
+    },
+    {
+      "path": "app/personal-coffee-hero.css",
+      "blob": "354024d5e4a63901372dfa3c3c0e66de4b9b5b6c",
+      "size": 2817
+    },
+    {
+      "path": "app/personal-coffee-hero.mjs",
+      "blob": "74f18f5b60e5da83723206d9eb94a8fd013c671b",
+      "size": 5644
+    },
+    {
+      "path": "app/photo-grounded-coffee-glb.mjs",
+      "blob": "0b096ecfce3dcbda38a50d4c8fdaf721c3506207",
+      "size": 9680
+    },
+    {
+      "path": "app/preview-fixtures/SC-01.png",
+      "blob": "a636e91fd44272ef6106e1cdfe0600c41255b144",
+      "size": 74245
+    },
+    {
+      "path": "app/preview-fixtures/SC-02.png",
+      "blob": "1e3d9ea3141ba768252557bcf61bb4d291b345d2",
+      "size": 74245
+    },
+    {
+      "path": "app/preview-fixtures/SC-04.png",
+      "blob": "fe3ed1927329ff7c9bbe2d2507f22e063ae514ff",
+      "size": 74245
+    },
+    {
+      "path": "app/preview-fixtures/SC-07.png",
+      "blob": "ef961e6e7d6ff2af75f977d8b540fb6bccffc118",
+      "size": 74245
+    },
+    {
+      "path": "app/preview-fixtures/SC-10.png",
+      "blob": "4444a1fe023b70b5696f6b26f50087e4f14212cd",
+      "size": 74245
+    },
+    {
+      "path": "app/preview-lab.css",
+      "blob": "9b02cbaa475ff75f83c01dcc2e372e5d5eed472b",
+      "size": 11528
+    },
+    {
+      "path": "app/preview-lab.html",
+      "blob": "f0f37077bc2d0a90619a6f8103108d43d5c63a80",
+      "size": 12411
+    },
+    {
+      "path": "app/preview-lab.mjs",
+      "blob": "339f5dec4da2054e94304678af872cb1f7c22418",
+      "size": 12185
+    },
+    {
+      "path": "app/preview-state.mjs",
+      "blob": "100d5c349419679186c0ef213da06cab5d9dcb75",
+      "size": 8047
+    },
+    {
+      "path": "app/realistic-glb.mjs",
+      "blob": "988690763e560ba5de3c24a21c359d82e9e555b4",
+      "size": 20268
+    },
+    {
+      "path": "app/return-3d.css",
+      "blob": "06bd2abc6df8527c207ba1157603466139b6572c",
+      "size": 3817
+    },
+    {
+      "path": "app/return-3d.mjs",
+      "blob": "76f7653dba3f59c8a9bceb996a1b5bb028792adc",
+      "size": 10185
+    },
+    {
+      "path": "app/showcase-glb.mjs",
+      "blob": "f4ad9178716259e18519c46965b09243ec37587a",
+      "size": 326
+    },
+    {
+      "path": "app/sw.js",
+      "blob": "d6628adbbf0add2fbbba72636e0c348757536600",
+      "size": 3767
+    },
+    {
+      "path": "assets/geometric-engineering-object-clean.webp",
+      "blob": "e4af83969c45aa47c630ea6a1874cb341b95fac4",
+      "size": 46360
+    },
+    {
+      "path": "assets/geometric-hero.webp",
+      "blob": "4a58dea6dbba93f8f0160216c7439e691b4490d9",
+      "size": 190362
+    },
+    {
+      "path": "assets/language.css",
+      "blob": "446a7885bea3415df1407bddef83300534219dee",
+      "size": 2268
+    },
+    {
+      "path": "assets/language.js",
+      "blob": "94779dd7c9278b87a3f9db24e2246c7b06867915",
+      "size": 6827
+    },
+    {
+      "path": "assets/media-loading.js",
+      "blob": "3d74121e1c24330a1895ce1a9774b60ec2354173",
+      "size": 552
+    },
+    {
+      "path": "assets/product-light.css",
+      "blob": "f68b2fa0e987dd22fcd1b0d65f7f7d6f9f4eaf2b",
+      "size": 4477
+    },
+    {
+      "path": "assets/three-preview.css",
+      "blob": "6e759a860dda8cc24cc5f7e6e60d82ec4ed8b960",
+      "size": 1354
+    },
+    {
+      "path": "assets/three-preview.js",
+      "blob": "01d29b69db1a18ee6f5cfa28dfedbf46626c6b38",
+      "size": 5360
+    },
+    {
+      "path": "assets/vendor/model-viewer-4.1.0/LICENSE",
+      "blob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "size": 11358
+    },
+    {
+      "path": "assets/vendor/model-viewer-4.1.0/model-viewer.min.js",
+      "blob": "3f84fc16b5454ae1f27191f9c8409e48940b4966",
+      "size": 979139
+    },
+    {
+      "path": "demo-version.json",
+      "blob": "c928a469ac3788c38976be275ee4f8d8d1c4bbde",
+      "size": 342
+    },
+    {
+      "path": "geometric/index.html",
+      "blob": "86553b48a75d83613a79a10251dd38cc68c122d2",
+      "size": 35621
+    },
+    {
+      "path": "geometric/media/01_plan.jpg",
+      "blob": "8cb627db015f3579e235c40cdda6cbc18436b61c",
+      "size": 208193
+    },
+    {
+      "path": "geometric/media/02_laser_cut.jpg",
+      "blob": "8cb627db015f3579e235c40cdda6cbc18436b61c",
+      "size": 208193
+    },
+    {
+      "path": "geometric/media/03_components.jpg",
+      "blob": "23c40582c10e51b814a972e7e32ced34734cdad0",
+      "size": 175269
+    },
+    {
+      "path": "geometric/media/04_assemble.jpg",
+      "blob": "eb58bcee289ac274525cde8d70e651b03aa89121",
+      "size": 235250
+    },
+    {
+      "path": "geometric/media/05_finish.jpg",
+      "blob": "8abadfbdf7733de647c57ce048b46b29baad61e0",
+      "size": 213388
+    },
+    {
+      "path": "geometric/media/embedded-stage-2.jpg",
+      "blob": "23c40582c10e51b814a972e7e32ced34734cdad0",
+      "size": 175269
+    },
+    {
+      "path": "geometric/media/embedded-stage-3.jpg",
+      "blob": "eb58bcee289ac274525cde8d70e651b03aa89121",
+      "size": 235250
+    },
+    {
+      "path": "geometric/media/embedded-stage-4.jpg",
+      "blob": "8abadfbdf7733de647c57ce048b46b29baad61e0",
+      "size": 213388
+    },
+    {
+      "path": "geometric/media/geometric-v11-design-only-poster.webp",
+      "blob": "6a5564a67457ab81fbfdaf5b6825e279b6ef66c9",
+      "size": 15638
+    },
+    {
+      "path": "geometric/media/geometric-v11-design-only.glb",
+      "blob": "3642e76748183afed6bb8dc209e2785094322cba",
+      "size": 58312
+    },
+    {
+      "path": "geometric/media/planning-clean.webp",
+      "blob": "7ee1cb3c9a7b4ee8763883e8833a228d1dbcfb37",
+      "size": 202524
+    },
+    {
+      "path": "index.html",
+      "blob": "6a378bf114627e94d5ecd599958b63a0a9e4683b",
+      "size": 343
+    },
+    {
+      "path": "inquiry/index.html",
+      "blob": "8dee61f6408fa9ed173417695ff4ca04c128a40a",
+      "size": 599
+    },
+    {
+      "path": "table/flow/index.html",
+      "blob": "04a1f730a50183acebd8c2240abc4d3f307263cf",
+      "size": 599
+    },
+    {
+      "path": "table/index.html",
+      "blob": "3d97c5e09f2b8fcccc27ac5a2de216dfa57eca69",
+      "size": 608
+    },
+    {
+      "path": "table/personal/media/01-hero-finished-angled-960.webp",
+      "blob": "c33850fce68dd53ec1241548eda0ce3aa7cc50df",
+      "size": 122958
+    },
+    {
+      "path": "table/personal/media/personal-design-preview.glb",
+      "blob": "245f3a57a132c57c0a2c2d1ee7a807c460268cd3",
+      "size": 1700936
+    }
+  ]
+}

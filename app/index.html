@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="./return-3d.css?v=mvp27-20261118">
 <link rel="stylesheet" href="./personal-coffee-hero.css?v=mvp27-20261118">
 <link rel="stylesheet" href="./demo-room.css?v=mvp27-20261118">
+<link rel="stylesheet" href="./mode-chooser.css?v=mvp28-20261118">
 <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
 <meta name="description" content="ASSEMBL LAB — אב טיפוס מקומי לשלב צילום חלל והדמיית רהיט">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' blob: data:; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'sha256-89Sc5Gf+7JqCtzias9Yo+4XLau6VOtWxNhx/QN80yyI=' 'sha256-yhlpZVZMy2vXExwTGihUWVSrOxyhMuvj+Ygg7pyBWek='; img-src 'self' blob: data:; connect-src 'self' blob:; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
@@ -31,9 +32,32 @@
 
 </head>
 <body>
+<section id="app-mode-chooser" class="mode-gate" role="dialog" aria-modal="true" aria-labelledby="mode-title" aria-describedby="mode-intro">
+  <div class="mode-gate-panel">
+    <div class="mode-gate-top"><span class="mode-gate-brand">ASSEMBL LAB / DESIGN STUDIO</span><button id="mode-lang" class="mode-gate-lang" type="button" aria-label="Switch language">EN</button></div>
+    <p class="mode-gate-kicker">SELECT EXPERIENCE / 01</p>
+    <h1 id="mode-title" data-he="באיזו גרסה נמשיך?" data-en="Choose your experience">באיזו גרסה נמשיך?</h1>
+    <p id="mode-intro" class="mode-gate-intro" data-he="בחרו את גרסת ההדגמה היציבה למשווק, או את סביבת הפיתוח שבה אנחנו ממשיכים לבצע שינויים." data-en="Open the stable marketer presentation or continue to the live development experience.">בחרו את גרסת ההדגמה היציבה למשווק, או את סביבת הפיתוח שבה אנחנו ממשיכים לבצע שינויים.</p>
+    <div class="mode-gate-grid">
+      <a id="mode-marketing-link" class="mode-gate-card" href="../marketing/v1/app/" aria-describedby="mode-marketing-description">
+        <span class="mode-gate-icon" aria-hidden="true">◈</span>
+        <strong data-he="גרסה שיווקית" data-en="Marketing version">גרסה שיווקית</strong>
+        <small id="mode-marketing-description" data-he="הצגה יציבה של Geometric, שולחן הקפה והדמיית החדר. קובצי התצוגה קפואים ואינם משתנים עם הפיתוח." data-en="Stable Geometric and Coffee Table presentation. A frozen copy stays unchanged as development progresses.">הצגה יציבה של Geometric, שולחן הקפה והדמיית החדר. קובצי התצוגה קפואים ואינם משתנים עם הפיתוח.</small>
+        <span class="mode-gate-version">MARKETING DEMO V1 · 18.11.2026</span>
+      </a>
+      <button id="mode-enter-development" class="mode-gate-card" type="button" aria-describedby="mode-development-description">
+        <span class="mode-gate-icon" aria-hidden="true">⌘</span>
+        <strong data-he="גרסת פיתוח" data-en="Development version">גרסת פיתוח</strong>
+        <small id="mode-development-description" data-he="האפליקציה המתעדכנת: בדיקות, שינויים ושיפורים. זו אינה גרסת ההדגמה הקפואה." data-en="The actively developed app, with new experiments, tests and updates. This is not the frozen presentation.">האפליקציה המתעדכנת: בדיקות, שינויים ושיפורים. זו אינה גרסת ההדגמה הקפואה.</small>
+        <span class="mode-gate-version">DEVELOPMENT · CURRENT</span>
+      </button>
+    </div>
+    <p class="mode-gate-disclosure" data-he="שתי הגרסאות הן הדגמות בלבד. אין יצירת AI אמיתית, התאמה הנדסית למידות או שליחת בקשות תשלום. הגרסה השיווקית נשמרת בנתיב נפרד באתר זה." data-en="Both options are demonstrations only: no real AI-generated output, manufacturing-ready dimension matching or payment requests. The marketing release uses an independent path on this site.">שתי הגרסאות הן הדגמות בלבד. אין יצירת AI אמיתית, התאמה הנדסית למידות או שליחת בקשות תשלום. הגרסה השיווקית נשמרת בנתיב נפרד באתר זה.</p>
+  </div>
+</section>
 <header class="app-header">
   <div class="logo"><span class="logo-mark">A<span class="logo-dot">.</span></span><span><b>ASSEMBL LAB</b><small>VISION TO ENGINEERING</small></span></div>
-  <div class="header-actions"><span class="draft-label" data-he="אב־טיפוס · ללא AI או שרת" data-en="Prototype · no AI or server">אב־טיפוס · ללא AI או שרת</span><button id="lang" class="lang" type="button" aria-label="Switch language">EN</button></div>
+  <div class="header-actions"><button id="mode-switch" class="mode-switch" type="button" hidden data-he="בחירת גרסה" data-en="Switch version">בחירת גרסה</button><span class="draft-label" data-he="אב־טיפוס · ללא AI או שרת" data-en="Prototype · no AI or server">אב־טיפוס · ללא AI או שרת</span><button id="lang" class="lang" type="button" aria-label="Switch language">EN</button></div>
 </header>
 <div class="progress" aria-label="שלבי האפליקציה">
   <div class="progress-step active" data-phase="1"><span class="step-number">01</span><span data-he="הדמיה בחלל" data-en="Room preview">הדמיה בחלל</span></div>
@@ -160,4 +184,5 @@
 <script src="./nightstand-intent.js?v=mvp27-20261118" defer></script>
 <script type="module" src="./return-3d.mjs?v=mvp27-20261118"></script>
 <script type="module" src="./personal-coffee-hero.mjs?v=mvp27-20261118"></script>
+<script src="./mode-chooser.js?v=mvp28-20261118"></script>
 </body></html>

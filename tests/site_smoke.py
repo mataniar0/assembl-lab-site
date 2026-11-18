@@ -301,6 +301,13 @@ def app_smoke(browser, base, path, locale, viewport):
         require(page.locator('link[rel="manifest"]').get_attribute("href") == "./manifest.webmanifest",
                 "Missing relative PWA manifest")
         require(page.locator("#intro").is_visible(), "PWA introduction missing")
+        # APP MVP-28: the shared app starts with marketing/development selection.
+        chooser=page.locator("#app-mode-chooser")
+        require(chooser.is_visible(), "Missing app marketing/development choice")
+        require(page.locator('#mode-marketing-link').get_attribute('href')=='../marketing/v1/app/',
+                "Marketing choice must point to immutable V1 path")
+        page.locator('#mode-enter-development').click()
+        require(chooser.is_hidden(), "Development choice did not unlock the app")
         require(page.locator("#live-camera").count() == 1, "Live-camera control missing")
         require(page.locator("#gallery").count() == 1, "Gallery fallback missing")
         if locale == "en":
