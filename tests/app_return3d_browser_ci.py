@@ -24,6 +24,26 @@ def flow_to_config(page):
     expect(page.locator('#configure')).to_be_visible()
     expect(page.locator('#configure')).to_contain_text(
         'שולחן קפה עגול — פיילוט')
+    # Approved reference rendering on the untouched design-preset.
+    scene=page.locator('#config-scene')
+    expect(scene).to_have_attribute('data-room-kind','demo')
+    expect(scene).to_have_attribute('data-reference-photo','true')
+    expect(scene.locator('.furniture-mount')).to_be_hidden()
+    assert 'coffee-reference-room.webp' in scene.evaluate(
+        "e=>getComputedStyle(e,'::before').backgroundImage")
+    assert 'coffee-empty-room.webp' in page.locator('#capture-scene').evaluate(
+        "e=>getComputedStyle(e,'::before').backgroundImage")
+    assert page.evaluate("""async ()=>{
+      const names=['coffee-reference-room.webp','coffee-empty-room.webp'];
+      for(const name of names){
+        const response=await fetch('./assets/'+name);
+        if(!response.ok||!(response.headers.get('content-type')||'').includes('image'))
+          return false;
+        const bitmap=await createImageBitmap(await response.blob());
+        if(bitmap.width<300||bitmap.height<250)return false;
+      }
+      return true;
+    }"""),'both local photographic demo assets must decode'
 
 def set_design(page,finish,base,diameter,height,thickness):
     page.locator('#finish').select_option(finish)
@@ -32,6 +52,10 @@ def set_design(page,finish,base,diameter,height,thickness):
     page.locator('#height-cm').fill(str(height))
     page.locator('#top-thickness-mm').select_option(str(thickness))
     expect(page.locator('#config-scene svg[data-furniture="round-coffee-table"]')).to_be_visible()
+    scene=page.locator('#config-scene')
+    expect(scene).to_have_attribute('data-reference-photo','false')
+    assert 'coffee-empty-room.webp' in scene.evaluate(
+        "e=>getComputedStyle(e,'::before').backgroundImage")
 
 
 def approve(page):
@@ -107,6 +131,9 @@ def run(browser_path,output):
                     e=>window.approvedSelections.push(e.detail));
                 }""")
                 flow_to_config(page)
+                if w in (390,1440):
+                    page.locator('#config-scene').screenshot(
+                        path=str(output/f'coffee-photorealistic-preset-{w}.png'))
                 # Reject off-range coffee dimensions before creating a version.
                 page.locator('#diameter-cm').fill('39')
                 page.locator('#generate').click()
@@ -217,6 +244,14 @@ def run(browser_path,output):
             offline.set_offline(True)
             page.reload(wait_until='domcontentloaded')
             flow_to_config(page)
+            expect(page.locator('#config-scene')).to_have_attribute(
+                'data-reference-photo','true')
+            assert page.evaluate("""async ()=>{
+              const assets=['./assets/coffee-reference-room.webp',
+                './assets/coffee-empty-room.webp'];
+              return (await Promise.all(assets.map(async url=>
+                !!(await caches.match(url))))).every(Boolean);
+            }"""),'photo background assets cached for offline use'
             set_design(page,'honey','curved-ring',68,46,30)
             page.locator('#generate').click()
             approve(page)

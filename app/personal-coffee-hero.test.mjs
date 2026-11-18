@@ -47,7 +47,7 @@ test('intro Geometric image is different from approved Personal Coffee Table ref
 });
 test('explicit PWA allowlist and shell retain both exact models and fallback photographs',()=>{
   const sw=read('./sw.js'),html=read('./index.html'),intro=read('./personal-coffee-hero.mjs');
-  assert.match(sw,/v0\.14\.2-round-coffee-intent/);
+  assert.match(sw,/v0\.14\.3-photo-real-room/);
   for(const path of [
     '../assets/geometric-engineering-object-clean.webp',
     '../geometric/media/geometric-v11-design-only.glb',
@@ -55,6 +55,8 @@ test('explicit PWA allowlist and shell retain both exact models and fallback pho
     '../table/personal/media/01-hero-finished-angled-960.webp'
   ])assert.ok(sw.includes("'"+path+"'"));
   assert.match(sw,/sharedShowcaseAssets\.has\(url\.pathname\)/);
+  for(const asset of ['./assets/coffee-reference-room.webp','./assets/coffee-empty-room.webp'])
+    assert.ok(sw.includes("'"+asset+"'"),'photo asset must work offline: '+asset);
   assert.match(intro,/vendor\/model-viewer-4\.1\.0\/model-viewer\.min\.js/);
   assert.match(intro,/supportsWebGL/);
   assert.match(intro,/showPhoto\('unavailable'\)/);
@@ -69,19 +71,19 @@ test('MVP-25 release URLs prevent mixed Geometric markup with stale round Person
   const html=read('./index.html');
   const sw=read('./sw.js');
   const return3d=read('./return-3d.mjs');
-  const suffix='?v=mvp26-20261118';
+  const suffix='?v=mvp27-20261118';
   for(const path of [
     './personal-coffee-hero.mjs','./personal-coffee-hero.css',
-    './return-3d.mjs','./return-3d.css','./nightstand-intent.js','./design-studio.js'
+    './return-3d.mjs','./return-3d.css','./nightstand-intent.js','./design-studio.js','./demo-room.css'
   ]){
     const suffixUrl=path+suffix;
     assert.ok(html.includes('="'+suffixUrl+'"'),'HTML must pin '+path);
     assert.ok(sw.includes("'"+suffixUrl+"'"),'SW must precache '+path);
     assert.ok(!html.includes('="'+path+'"'),'unversioned entry would match old cache: '+path);
   }
-  assert.match(return3d,/photo-grounded-coffee-glb\.mjs\?v=mvp26-20261118/);
+  assert.match(return3d,/photo-grounded-coffee-glb\.mjs\?v=mvp27-20261118/);
   assert.ok(sw.includes("'./photo-grounded-coffee-glb.mjs"+suffix+"'"));
-  assert.match(sw,/assemble-lab-android-v0\.14\.2-round-coffee-intent/);
+  assert.match(sw,/assemble-lab-android-v0\.14\.3-photo-real-room/);
   assert.match(html,/data-model-src="\.\.\/geometric\/media\/geometric-v11-design-only\.glb"/);
   assert.match(read('./personal-coffee-hero.mjs'),/next\.src=sourceGlb/);
 });

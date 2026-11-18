@@ -8,7 +8,7 @@
     honey: { top:'#d09b58',front:'#bc8042',side:'#965e30',edge:'#78451f',line:'#664122' },
     walnut: { top:'#8d6249',front:'#6c4432',side:'#523428',edge:'#3b241e',line:'#36231b' }
   };
-  const i18n = {"he":{"needImage":"בחרו תמונת חלל או חלל הדגמה כדי להמשיך.","invalidImage":"יש לבחור קובץ תמונה תקין עד 10MB.","invalidDimensions":"הזינו קוטר 40–90 ס״מ וגובה 30–70 ס״מ.","v":"גרסה","comparePrev":"גרסה קודמת","compareCurrent":"גרסה נבחרת","compareNone":"אין עדיין גרסה נוספת להשוואה.","summary":"פרטי גרסה","diameter":"קוטר","height":"גובה","base":"סוג בסיס","topThickness":"עובי פלטה","finish":"גוון","dimensions":"מידות רצויות","confidence":"סטטוס מידות","note":"הערה","noNote":"אין","measured":"נמדדו","estimated":"משוערות","unknown":"לא ידועות","curved-ring":"רגליים מעוקלות עם טבעת","curved-open":"רגליים מעוקלות ללא טבעת","natural":"בירץ טבעי","honey":"דבש","walnut":"אגוז","approved":"אושרה גרסה","approveDialog":"לאשר את גרסה","confirm":"גרסה","modified":"יצירת גרסה חדשה תדרוש אישור מחודש.","noEarlier":"אין גרסה קודמת להשוואה.","photo":"התמונה שבחרתם","demo":"חלל הדגמה מאויר"},"en":{"needImage":"Choose a room photo or demo room.","invalidImage":"Choose a valid image file smaller than 10 MB.","invalidDimensions":"Use diameter 40–90 cm and height 30–70 cm.","v":"Version","comparePrev":"Previous version","compareCurrent":"Selected version","compareNone":"No earlier version to compare.","summary":"Version summary","diameter":"Diameter","height":"Height","base":"Base style","topThickness":"Tabletop thickness","finish":"Finish","dimensions":"Requested size","confidence":"Measurement status","note":"Note","noNote":"None","measured":"Measured","estimated":"Estimated","unknown":"Unknown","curved-ring":"Curved legs with ring","curved-open":"Curved legs without ring","natural":"Natural birch","honey":"Honey","walnut":"Walnut","approved":"Approved version","approveDialog":"Approve version","confirm":"Version","modified":"Making a new version requires fresh approval.","noEarlier":"No earlier version to compare.","photo":"Your photo","demo":"Illustrated demo room"}};
+  const i18n = {"he":{"needImage":"בחרו תמונת חלל או חלל הדגמה כדי להמשיך.","invalidImage":"יש לבחור קובץ תמונה תקין עד 10MB.","invalidDimensions":"הזינו קוטר 40–90 ס״מ וגובה 30–70 ס״מ.","v":"גרסה","comparePrev":"גרסה קודמת","compareCurrent":"גרסה נבחרת","compareNone":"אין עדיין גרסה נוספת להשוואה.","summary":"פרטי גרסה","diameter":"קוטר","height":"גובה","base":"סוג בסיס","topThickness":"עובי פלטה","finish":"גוון","dimensions":"מידות רצויות","confidence":"סטטוס מידות","note":"הערה","noNote":"אין","measured":"נמדדו","estimated":"משוערות","unknown":"לא ידועות","curved-ring":"רגליים מעוקלות עם טבעת","curved-open":"רגליים מעוקלות ללא טבעת","natural":"בירץ טבעי","honey":"דבש","walnut":"אגוז","approved":"אושרה גרסה","approveDialog":"לאשר את גרסה","confirm":"גרסה","modified":"יצירת גרסה חדשה תדרוש אישור מחודש.","noEarlier":"אין גרסה קודמת להשוואה.","photo":"התמונה שבחרתם","demo":"חלל הדגמה ריאליסטי","demoReference":"צילום להמחשה · דגם קבוע","demoSchematic":"המחשה סכמטית לפי בחירה"},"en":{"needImage":"Choose a room photo or demo room.","invalidImage":"Choose a valid image file smaller than 10 MB.","invalidDimensions":"Use diameter 40–90 cm and height 30–70 cm.","v":"Version","comparePrev":"Previous version","compareCurrent":"Selected version","compareNone":"No earlier version to compare.","summary":"Version summary","diameter":"Diameter","height":"Height","base":"Base style","topThickness":"Tabletop thickness","finish":"Finish","dimensions":"Requested size","confidence":"Measurement status","note":"Note","noNote":"None","measured":"Measured","estimated":"Estimated","unknown":"Unknown","curved-ring":"Curved legs with ring","curved-open":"Curved legs without ring","natural":"Natural birch","honey":"Honey","walnut":"Walnut","approved":"Approved version","approveDialog":"Approve version","confirm":"Version","modified":"Making a new version requires fresh approval.","noEarlier":"No earlier version to compare.","photo":"Your photo","demo":"Photographic demo room","demoReference":"Reference photo · fixed example","demoSchematic":"Schematic · selected options"}};
 
   let lang='he', stage='intro', roomKind=null, roomUrl=null, versions=[], selected=0, approved=null, cameraStream=null, installPrompt=null, waitingWorker=null;
   const t=key=>i18n[lang][key] || key;
@@ -58,7 +58,7 @@
   function setLanguage(next){lang=next; document.documentElement.lang=next;document.documentElement.dir=next==='he'?'rtl':'ltr';
     document.querySelectorAll('[data-he][data-en]').forEach(n=>{n.textContent=n.dataset[next]});
     $('lang').textContent=next==='he'?'EN':'עברית';$('photo').setAttribute('aria-label',next==='he'?'צילום חלל במצלמה':'Take room photo');$('gallery').setAttribute('aria-label',next==='he'?'העלאת תמונה מהגלריה':'Upload room image');
-    if(stage==='review')renderReview();if(stage==='approved')renderApproved();
+    if(stage==='capture')renderRoom('capture-scene');if(stage==='configure')renderRoom('config-scene',readInputs());if(stage==='review')renderReview();if(stage==='approved')renderApproved();
   }
   function go(next){if(stage==='capture'&&next!=='capture')stopCamera();stage=next;screens.forEach(id=>$(id).hidden=id!==next);
     document.querySelectorAll('.progress-step').forEach(el=>{el.classList.toggle('active',el.dataset.phase==='1')});
@@ -116,10 +116,39 @@
     $('comparison').hidden=true;go('review');
     if(oldApproved) $('design-summary').setAttribute('title',t('modified'));
   }
-  function renderRoom(targetId,design){const root=$(targetId);if(!root)return;
-    const photo=root.querySelector('.room-photo'); if(photo){photo.hidden=roomKind!=='photo';if(roomKind==='photo'&&roomUrl)photo.src=roomUrl;else photo.removeAttribute('src');}
-    const mount=root.querySelector('.furniture-mount');if(mount){mount.hidden=!design;if(design){mount.innerHTML=coffeeTableSvg(design);mount.style.left=`${design.position}%`;mount.style.width=`${Math.round(design.scale*.50)}%`;}}
-    const label=root.querySelector('.scene-corner-label');if(label&&roomKind)label.textContent=roomKind==='photo'?t('photo'):t('demo');
+  function usesReferencePhoto(d){
+    // A photographic example is displayed only for the unchanged default
+    // round-table preset. Every edited option returns to the live SVG schematic.
+    return d && d.finish==='natural' && d.baseStyle==='curved-ring' &&
+      d.diameter===62 && d.height===45 && d.topThickness===30 &&
+      d.scale===88 && d.position===52;
+  }
+  function paintRoom(root,design){
+    const reference=roomKind==='demo'&&usesReferencePhoto(design);
+    root.dataset.roomKind=roomKind||'none';
+    root.dataset.referencePhoto=String(!!reference);
+    const photo=root.querySelector('.room-photo');
+    if(photo){
+      photo.hidden=roomKind!=='photo';
+      if(roomKind==='photo'&&roomUrl)photo.src=roomUrl;
+      else photo.removeAttribute('src');
+    }
+    const mount=root.querySelector('.furniture-mount');
+    if(mount){
+      mount.hidden=!design||reference;
+      if(design){
+        mount.innerHTML=coffeeTableSvg(design);
+        mount.style.left=`${design.position}%`;
+        mount.style.width=`${Math.round(design.scale*.50)}%`;
+      }
+    }
+    const label=root.querySelector('.scene-corner-label');
+    if(label&&roomKind)
+      label.textContent=roomKind==='photo'?t('photo'):
+        reference?t('demoReference'):design?t('demoSchematic'):t('demo');
+  }
+  function renderRoom(targetId,design){
+    const root=$(targetId);if(root)paintRoom(root,design);
   }
   function coffeeTableSvg(d){
   const p=palettes[d.finish]||palettes.natural;
@@ -143,8 +172,7 @@
     const current=versions[selected],prior=versions[selected===0?1:selected-1];[[prior,t('comparePrev')],[current,t('compareCurrent')]].forEach(([v,title])=>{
       const box=document.createElement('div');const heading=document.createElement('strong');heading.textContent=`${title} · V${v.id}`;box.append(heading);
       const scene=document.createElement('div');scene.className='scene scene-demo';scene.innerHTML='<div class="wall-corner"></div><div class="floor-line"></div><img class="room-photo" alt="" hidden><div class="furniture-mount"></div>';
-      const photo=scene.querySelector('img');if(roomKind==='photo'&&roomUrl){photo.src=roomUrl;photo.hidden=false;}
-      const mount=scene.querySelector('.furniture-mount');mount.innerHTML=coffeeTableSvg(v.design);mount.style.left=v.design.position+'%';mount.style.width=Math.round(v.design.scale*.5)+'%';box.append(scene);cmp.append(box);
+      paintRoom(scene,v.design);box.append(scene);cmp.append(box);
     });
   }
   function renderApproved(){if(!approved)return;$('approved-detail').textContent=`${t('approved')} V${approved.id}`;

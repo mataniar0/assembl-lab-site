@@ -58,7 +58,7 @@ test('MVP-26 round coffee approval returns fixed, verified Personal Coffee Table
   assert.match(html,/data-he="מודל שולחן הקפה האישי לצפייה"/);
   assert.match(html,/שאינו מותאם למידות/);
   assert.match(html,/שולחן קפה עגול — פיילוט/);
-  assert.match(html,/<script type="module" src="\.\/return-3d\.mjs\?v=mvp26-20261118"><\/script>/);
+  assert.match(html,/<script type="module" src="\.\/return-3d\.mjs\?v=mvp27-20261118"><\/script>/);
   assert.match(html,/script-src 'self' 'wasm-unsafe-eval'/);
   assert.match(snapshot,/assembl:3d-model-ready/);
   assert.match(snapshot,/approvedSnapshot\?\.requested_dimensions_mm/);
@@ -80,6 +80,20 @@ test('MVP-26 round coffee approval returns fixed, verified Personal Coffee Table
   const studio=readFileSync(new URL('./design-studio.js',import.meta.url),'utf8');
   assert.match(studio,/data-furniture="round-coffee-table"/);
   assert.match(studio,/function coffeeTableSvg/);
+  assert.match(studio,/function usesReferencePhoto/);
+  assert.match(studio,/root\.dataset\.referencePhoto/);
+  assert.match(studio,/paintRoom\(scene,v\.design\)/);
+  assert.match(html,/demo-room\.css\?v=mvp27-20261118/);
+  const demoCSS=readFileSync(new URL('./demo-room.css',import.meta.url),'utf8');
+  assert.match(demoCSS,/coffee-reference-room\.webp/);
+  assert.match(demoCSS,/coffee-empty-room\.webp/);
+  for(const name of ['coffee-reference-room.webp','coffee-empty-room.webp']){
+    const image=readFileSync(new URL('./assets/'+name,import.meta.url));
+    assert.equal(image.toString('ascii',0,4),'RIFF',name);
+    assert.equal(image.toString('ascii',8,12),'WEBP',name);
+    assert.ok(image.byteLength<5000,name+' asset budget');
+    assert.ok(sw.includes("'./assets/"+name+"'"),name+' cached offline');
+  }
   assert.doesNotMatch(studio,/nightstandSvg|drawers|lower_section|id="bottom"/);
   assert.match(snapshot,/category:'round_coffee_table'/);
   assert.match(snapshot,/requested_dimensions_mm:\{diameter:/);
@@ -91,6 +105,6 @@ test('MVP-26 round coffee approval returns fixed, verified Personal Coffee Table
     assert.match(html,new RegExp('id="'+selector+'"'));
   for(const obsolete of ['drawers','bottom','width-cm','depth-cm','plywood-thickness'])
     assert.doesNotMatch(html,new RegExp('id="'+obsolete+'"'));
-  assert.match(html,/design-studio\.js\?v=mvp26-20261118/);
-  assert.match(sw,/design-studio\.js\?v=mvp26-20261118/);
+  assert.match(html,/design-studio\.js\?v=mvp27-20261118/);
+  assert.match(sw,/design-studio\.js\?v=mvp27-20261118/);
 });

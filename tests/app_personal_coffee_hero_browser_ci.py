@@ -152,10 +152,11 @@ def run(browser_path,output):
                 'script[src^="./personal-coffee-hero.mjs"]',
                 'script[src^="./return-3d.mjs"]',
                 'script[src^="./nightstand-intent.js"]',
+                'link[href^="./demo-room.css"]',
                 'script[src^="./design-studio.js"]'
             ]:
                 assert page.locator(selector).get_attribute('href' if selector.startswith('link') else 'src').endswith(
-                    '?v=mvp26-20261118')
+                    '?v=mvp27-20261118')
             page.locator('#personal-coffee-show-model').click()
             verify_geometric_glb(page)
             assert not stale_errors,stale_errors
