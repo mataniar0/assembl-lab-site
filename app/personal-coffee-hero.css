@@ -1,10 +1,10 @@
-/* MVP-23: approved front-facing showcase artwork, with photo-grounded 32-part GLB. */
+/* MVP-24: Geometric catalog product image with frame-only V1.1 design GLB. */
 .personal-coffee-card{padding-bottom:14px;max-width:480px;transform:rotate(-.8deg)}
 .personal-coffee-card #intro-scene{display:none!important}
 .personal-coffee-hero{position:relative;margin-top:11px;height:clamp(290px,36vw,415px);min-height:290px;overflow:hidden;border-radius:7px;background:#e7e3da}
 #personal-coffee-photo{display:block;width:100%;height:100%}
 #personal-coffee-photo[hidden]{display:none!important}
-#personal-coffee-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center center;background:#e7e3da}
+#personal-coffee-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center center;background:#e7e3da}
 .personal-coffee-model{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 18%,#fcfaf5,#e7e5de 72%,#d6d4cd)}
 .personal-coffee-model[hidden]{display:none!important}
 .personal-coffee-model model-viewer{display:block;width:100%;height:100%;background:transparent;touch-action:pan-y;--progress-bar-color:#476b59}
@@ -20,7 +20,7 @@
 @media(max-width:700px){.personal-coffee-card{max-width:500px;transform:none}.personal-coffee-hero{height:clamp(300px,75vw,410px)}}
 @media(prefers-reduced-motion:reduce){.personal-coffee-model model-viewer{scroll-behavior:auto}}
 
-/* MVP-23: preserve approved showcase image while the original design model loads. */
+/* MVP-24: preserve Geometric product photo while the frame-only model loads. */
 .personal-coffee-hero #personal-coffee-photo{position:absolute;inset:0;z-index:2}
 .personal-coffee-hero #personal-coffee-model{z-index:1;opacity:0;pointer-events:none}
 .personal-coffee-hero #personal-coffee-model[data-state="interactive"]{z-index:3;opacity:1;pointer-events:auto}

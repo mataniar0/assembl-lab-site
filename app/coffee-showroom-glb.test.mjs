@@ -67,17 +67,19 @@ test('top meshes actually form a round bevelled 620mm tabletop and leg mounts',(
   }
   assert.equal(COFFEE_SHOWROOM.verified_as_built,false);
 });
-test('legacy three-straight-leg proxy is retired from customer app; exact CTB-01 model is used',()=>{
-  const source=readFileSync(new URL('./personal-coffee-hero.mjs',import.meta.url),'utf8');
+test('unused three-straight-leg demo stays retired; live intro is Geometric, return is original Personal Coffee GLB',()=>{
+  const intro=readFileSync(new URL('./personal-coffee-hero.mjs',import.meta.url),'utf8');
+  const returned=readFileSync(new URL('./return-3d.mjs',import.meta.url),'utf8');
   const html=readFileSync(new URL('./index.html',import.meta.url),'utf8');
   const sw=readFileSync(new URL('./sw.js',import.meta.url),'utf8');
-  assert.doesNotMatch(source,/matchingCoffeeTableGlb\(\)/);
-  assert.doesNotMatch(source,/toDataURL\('image\/png'\)/);
-  assert.match(source,/finishPersonalDesign\(original\)/);
-  assert.match(source,/verifyPersonalSource\(original\)/);
-  assert.match(html,/media\/personal-coffee-front-showcase-960\.webp/);
-  assert.match(html,/תמונת הראווה היא הדמיה ערוכה/);
-  assert.match(html,/data-model-src="\.\.\/table\/personal\/media\/personal-design-preview\.glb"/);
+  assert.doesNotMatch(intro,/matchingCoffeeTableGlb\(\)/);
+  assert.doesNotMatch(returned,/matchingCoffeeTableGlb\(\)/);
+  assert.doesNotMatch(returned,/showcaseNightstandGlb\(\)/);
+  assert.match(intro,/geometric-v11-design-only\.glb/);
+  assert.match(returned,/finishPersonalDesign\(source\)/);
+  assert.match(returned,/verifyPersonalSource\(source\)/);
+  assert.match(html,/geometric-engineering-object-clean\.webp/);
+  assert.match(html,/data-model-src="\.\.\/geometric\/media\/geometric-v11-design-only\.glb"/);
   assert.match(sw,/'\.\/photo-grounded-coffee-glb\.mjs'/);
   assert.doesNotMatch(sw,/'\.\/coffee-showroom-glb\.mjs'/);
 });
