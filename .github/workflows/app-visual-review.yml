@@ -15,6 +15,7 @@ on:
       - feature/app-mvp-19-coffee-showcase-hero
       - feature/app-mvp-20-coffee-glb-hero-sync
       - feature/app-mvp-21-photo-grounded-coffee
+      - feature/app-mvp-23-approved-front-hero
   pull_request:
     branches:
       - main
@@ -30,6 +31,7 @@ on:
       - 'app/coffee-showroom-glb*'
       - 'app/photo-grounded-coffee-glb*'
       - 'app/media/personal-coffee-showcase-*'
+      - 'app/media/personal-coffee-front-showcase-*'
       - 'tests/app_personal_coffee_hero_browser_ci.py'
       - 'app/nightstand-intent.js'
       - 'tests/app_return3d_browser_ci.py'

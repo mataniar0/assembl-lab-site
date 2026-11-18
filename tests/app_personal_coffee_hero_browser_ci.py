@@ -1,7 +1,8 @@
-"""APP MVP-21: actual photographed coffee table hero; source-CAD-grounded 32-part GLB.
+"""APP MVP-23: approved edited front-facing coffee hero + unchanged source 3D.
 
-Visual QA confirms the photo and source-model both represent the curved paired-leg
-and ring design, not the previous three straight-leg 620mm invented showcase.
+Visual QA verifies the intended edited WebP replaces the app-only landing
+photo, while the catalog's authentic built-product images and 32-part source
+design-based GLB remain unchanged and clearly distinguishable.
 """
 from __future__ import annotations
 import argparse
@@ -17,21 +18,22 @@ ROOT=Path(__file__).resolve().parents[1]
 class QuietServer(http.server.SimpleHTTPRequestHandler):
     def log_message(self,*args):pass
 
-def check_real_photo(page):
+def check_showcase_image(page):
     expect(page.locator('#intro')).to_be_visible()
     expect(page.locator('#personal-coffee-photo')).to_be_visible()
     image=page.locator('#personal-coffee-photo img')
     expect(image).to_be_visible()
-    assert image.evaluate('e=>e.complete&&e.naturalWidth>300')
+    assert image.evaluate('e=>e.complete&&e.naturalWidth>=900')
     current=image.evaluate('e=>e.currentSrc')
-    assert any(current.endswith('/'+name) for name in [
-       '01-hero-finished-angled-480.webp','01-hero-finished-angled-960.webp'])
+    assert current.endswith('/app/media/personal-coffee-front-showcase-960.webp')
     assert 'data:image' not in current
     expect(page.locator('.personal-coffee-disclosure')).to_contain_text(
-        'צילום השולחן שנבנה בפועל')
+        'תמונת הראווה היא הדמיה ערוכה')
     expect(page.locator('#personal-coffee-show-photo')).to_have_attribute(
         'aria-pressed','true')
     expect(page.locator('#personal-coffee-model')).to_be_hidden()
+    expect(page.locator('#personal-coffee-model-status')).to_contain_text(
+        'הדמיית ראווה ערוכה')
 
 def read_model(page):
     return page.evaluate("""async () => {
@@ -78,8 +80,8 @@ def run(browser_path,output):
                 page.route('**/*',route_req)
                 page.on('pageerror',lambda e:errors.append(str(e)))
                 page.goto(url+'/app/',wait_until='networkidle')
-                check_real_photo(page)
-                page.screenshot(path=str(output/f'coffee-built-photo-{w}.png'),full_page=False)
+                check_showcase_image(page)
+                page.screenshot(path=str(output/f'coffee-front-showcase-{w}.png'),full_page=False)
                 page.locator('#personal-coffee-show-model').click()
                 expect(page.locator('#personal-coffee-model model-viewer')).to_be_visible(timeout=45000)
                 expect(page.locator('#personal-coffee-model-status')).to_contain_text(
@@ -115,11 +117,11 @@ def run(browser_path,output):
                 assert abs(view.evaluate('e=>e.getCameraOrbit().theta')-camera)>.25
                 page.screenshot(path=str(output/f'coffee-real-structure-3d-{w}.png'),full_page=False)
                 page.locator('#personal-coffee-show-photo').click()
-                check_real_photo(page)
+                check_showcase_image(page)
                 page.locator('#lang').click()
                 expect(page.locator('html')).to_have_attribute('lang','en')
                 expect(page.locator('.personal-coffee-disclosure')).to_contain_text(
-                    'real photograph of the built table')
+                    'edited visualization, not a documentary product photo')
                 page.locator('#personal-coffee-show-model').click()
                 expect(page.locator('#personal-coffee-model-status')).to_contain_text(
                     'paired curved legs',timeout=45000)
@@ -132,11 +134,11 @@ def run(browser_path,output):
                 assert page.locator('#drawers').count()==1,'Prior nightstand flow must remain intact'
                 assert not errors,'JS errors: '+str(errors)
                 assert not external,'External network requests: '+str(external)
-                results.append({'viewport':w,'hero':'REAL_FINISHED_PRODUCT_PHOTO',
+                results.append({'viewport':w,'hero':'APPROVED_EDITED_FRONT_SHOWCASE',
                     'source_geometry':'FROZEN_32_PART_CTB01',
                     'three_paired_curved_legs':True,'dark_ring':True,
                     'original_built_dimensions_verified':False})
-                print('PASS source-photo + correct curved-leg/ring GLB',w,h)
+                print('PASS edited front-angle hero + preserved curved-leg/ring GLB',w,h)
                 context.close()
 
             offline=browser.new_context(viewport={'width':390,'height':844})
@@ -151,40 +153,39 @@ def run(browser_path,output):
               './photo-grounded-coffee-glb.mjs',
               './realistic-glb.mjs',
               '../table/personal/media/personal-design-preview.glb',
-              '../table/personal/media/01-hero-finished-angled-480.webp',
-              '../table/personal/media/01-hero-finished-angled-960.webp',
+              './media/personal-coffee-front-showcase-960.webp',
               '../assets/vendor/model-viewer-4.1.0/model-viewer.min.js'
             ]:
                 assert page.evaluate("""async r=>
                   !!(await caches.match(new URL(r,location.href).href))""",rel),rel
             offline.set_offline(True)
             page.reload(wait_until='domcontentloaded')
-            check_real_photo(page)
+            check_showcase_image(page)
             page.locator('#personal-coffee-show-model').click()
             expect(page.locator('#personal-coffee-model-status')).to_contain_text(
                'רגליים מעוקלות בזוגות',timeout=45000)
             assert page.locator('#personal-coffee-model model-viewer').evaluate('e=>e.loaded')
-            print('PASS offline real product photo + source-based 32-part GLB')
+            print('PASS offline approved showroom WebP + source-based 32-part GLB')
             offline.close()
 
             fallback=browser.new_context(viewport={'width':390,'height':844})
             fallback.add_init_script('HTMLCanvasElement.prototype.getContext=function(){return null}')
             page=fallback.new_page();page.goto(url+'/app/',wait_until='networkidle')
-            check_real_photo(page)
+            check_showcase_image(page)
             page.locator('#personal-coffee-show-model').click()
             expect(page.locator('#personal-coffee-model-status')).to_contain_text(
                 'תלת־ממד אינו זמין במכשיר זה')
             expect(page.locator('#personal-coffee-photo')).to_be_visible()
             assert page.locator('model-viewer').count()==0
-            print('PASS no-WebGL real photo remains visible')
+            print('PASS no-WebGL edited showroom image remains visible')
             fallback.close()
             browser.close()
     finally:
         server.shutdown();server.server_close()
 
     (output/'browser-qa.json').write_text(json.dumps({
-        'scope':'APP_MVP_21_SOURCE_CTB01_PHOTO_GROUNDED',
-        'results':results,'offline':'PASS','no_webgl':'REAL_PHOTO_RETAINED'
+        'scope':'APP_MVP_23_APPROVED_FRONT_SHOWCASE_CTB01_DESIGN_3D',
+        'results':results,'offline':'PASS','no_webgl':'EDITED_SHOWCASE_RETAINED'
     },indent=2)+'\n',encoding='utf8')
 
 if __name__=='__main__':

@@ -75,7 +75,8 @@ test('legacy three-straight-leg proxy is retired from customer app; exact CTB-01
   assert.doesNotMatch(source,/toDataURL\('image\/png'\)/);
   assert.match(source,/finishPersonalDesign\(original\)/);
   assert.match(source,/verifyPersonalSource\(original\)/);
-  assert.match(html,/01-hero-finished-angled-960\.webp/);
+  assert.match(html,/media\/personal-coffee-front-showcase-960\.webp/);
+  assert.match(html,/תמונת הראווה היא הדמיה ערוכה/);
   assert.match(html,/data-model-src="\.\.\/table\/personal\/media\/personal-design-preview\.glb"/);
   assert.match(sw,/'\.\/photo-grounded-coffee-glb\.mjs'/);
   assert.doesNotMatch(sw,/'\.\/coffee-showroom-glb\.mjs'/);
