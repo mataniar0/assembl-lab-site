@@ -1,10 +1,9 @@
-"""APP MVP-23: approved edited front-facing coffee hero + unchanged source 3D.
-
-Visual QA verifies the intended edited WebP replaces the app-only landing
-photo, while the catalog's authentic built-product images and 32-part source
-design-based GLB remain unchanged and clearly distinguishable.
+"""MVP-24: ASSEMBL LAB Geometric landing product photograph + design-only
+15-part frame GLB. On the original catalog page the 3D model is explicitly
+unverified and has NO tabletop; we retain that limitation in the app.
 """
 from __future__ import annotations
+
 import argparse
 from functools import partial
 import http.server
@@ -15,182 +14,156 @@ from urllib.parse import urlparse
 from playwright.sync_api import expect, sync_playwright
 
 ROOT=Path(__file__).resolve().parents[1]
+
 class QuietServer(http.server.SimpleHTTPRequestHandler):
     def log_message(self,*args):pass
 
-def check_showcase_image(page):
+def verify_geometric_photo(page):
     expect(page.locator('#intro')).to_be_visible()
-    expect(page.locator('#personal-coffee-photo')).to_be_visible()
     image=page.locator('#personal-coffee-photo img')
     expect(image).to_be_visible()
-    assert image.evaluate('e=>e.complete&&e.naturalWidth>=900')
-    current=image.evaluate('e=>e.currentSrc')
-    assert current.endswith('/app/media/personal-coffee-front-showcase-960.webp')
-    assert 'data:image' not in current
+    assert image.evaluate('e=>e.complete && e.naturalWidth>500')
+    assert image.evaluate('e=>new URL(e.currentSrc).pathname').endswith(
+        '/assets/geometric-engineering-object-clean.webp')
     expect(page.locator('.personal-coffee-disclosure')).to_contain_text(
-        'תמונת הראווה היא הדמיה ערוכה')
+        'שלדה בת 15 חלקים ללא פלטה עליונה')
     expect(page.locator('#personal-coffee-show-photo')).to_have_attribute(
         'aria-pressed','true')
     expect(page.locator('#personal-coffee-model')).to_be_hidden()
-    expect(page.locator('#personal-coffee-model-status')).to_contain_text(
-        'הדמיית ראווה ערוכה')
 
-def read_model(page):
-    return page.evaluate("""async () => {
-      const e=document.querySelector('#personal-coffee-model model-viewer');
+def verify_geometric_glb(page):
+    host=page.locator('#personal-coffee-model')
+    expect(host).to_be_visible(timeout=45000)
+    expect(host).to_have_attribute('data-state','interactive',timeout=45000)
+    expect(page.locator('#personal-coffee-model-status')).to_contain_text(
+        'שלדה בת 15 חלקים',timeout=45000)
+    viewer=page.locator('#personal-coffee-model model-viewer')
+    expect(viewer).to_be_visible()
+    assert viewer.evaluate('e=>e.loaded')
+    assert viewer.evaluate('e=>new URL(e.src).pathname').endswith(
+        '/geometric/media/geometric-v11-design-only.glb')
+    metadata=viewer.evaluate("""async e=>{
       const bytes=new Uint8Array(await (await fetch(e.src)).arrayBuffer());
       const dv=new DataView(bytes.buffer);
-      if(dv.getUint32(0,true)!==0x46546c67)throw Error('NOT_GLB');
-      const n=dv.getUint32(12,true);
-      const d=JSON.parse(new TextDecoder().decode(bytes.slice(20,20+n)).trim());
-      return {extras:d.extras,nodes:d.nodes.map(x=>x.name),
-        meshes:d.meshes.map(m=>m.name),
-        materials:d.materials.map(m=>m.name),
-        images:d.images.length,
-        vertexCounts:d.meshes.map(m=>d.accessors[m.primitives[0].attributes.POSITION].count),
-        indices:d.meshes.map(m=>m.primitives[0].indices),
-        colors:d.meshes.map(m=>Object.hasOwn(m.primitives[0].attributes,'COLOR_0')),
-        wood:d.meshes[28].primitives[0].material,
-        rim1:d.meshes[29].primitives[0].material,
-        rim2:d.meshes[30].primitives[0].material,
-        ring:d.meshes[31].primitives[0].material,
-        url:e.src};
+      if(dv.getUint32(0,true)!==0x46546c67 ||
+         dv.getUint32(4,true)!==2)throw Error('BAD_GLB');
+      const length=dv.getUint32(12,true);
+      const meta=JSON.parse(new TextDecoder().decode(bytes.slice(20,20+length)).trim());
+      return {version:meta.asset.version,meshes:meta.meshes?.length||0,
+        bytes:bytes.length,url:e.src};
     }""")
+    assert metadata['version']=='2.0'
+    assert metadata['meshes']>=1
+    assert metadata['bytes']==58312
+    return viewer
 
 def run(browser_path,output):
     output.mkdir(parents=True,exist_ok=True)
-    server=http.server.ThreadingHTTPServer(('127.0.0.1',0),
-        partial(QuietServer,directory=str(ROOT)))
-    thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
-    url=f'http://127.0.0.1:{server.server_port}'
+    server=http.server.ThreadingHTTPServer(
+        ('127.0.0.1',0),partial(QuietServer,directory=str(ROOT)))
+    thread=threading.Thread(target=server.serve_forever,daemon=True)
+    thread.start()
+    root=f'http://127.0.0.1:{server.server_port}'
     results=[]
     try:
-        with sync_playwright() as pw:
-            browser=pw.chromium.launch(headless=True,executable_path=browser_path,
-              args=['--enable-webgl','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
+        with sync_playwright() as p:
+            browser=p.chromium.launch(headless=True,executable_path=browser_path,
+                args=['--enable-webgl','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
             for w,h in [(390,844),(1440,900)]:
                 context=browser.new_context(viewport={'width':w,'height':h},
                     reduced_motion='reduce',service_workers='block')
                 page=context.new_page()
                 external=[];errors=[]
-                def route_req(route):
+                def guard(route):
                     if urlparse(route.request.url).hostname not in ('127.0.0.1','localhost',''):
                         external.append(route.request.url);route.abort()
                     else:route.continue_()
-                page.route('**/*',route_req)
+                page.route('**/*',guard)
                 page.on('pageerror',lambda e:errors.append(str(e)))
-                page.goto(url+'/app/',wait_until='networkidle')
-                check_showcase_image(page)
-                page.screenshot(path=str(output/f'coffee-front-showcase-{w}.png'),full_page=False)
+                page.goto(root+'/app/',wait_until='networkidle')
+                verify_geometric_photo(page)
+                page.screenshot(path=str(output/f'geometric-intro-photo-{w}.png'),full_page=False)
                 page.locator('#personal-coffee-show-model').click()
-                expect(page.locator('#personal-coffee-model model-viewer')).to_be_visible(timeout=45000)
-                expect(page.locator('#personal-coffee-model-status')).to_contain_text(
-                    'רגליים מעוקלות בזוגות',timeout=45000)
-                view=page.locator('#personal-coffee-model model-viewer')
-                assert view.evaluate('e=>e.loaded') is True
-                glb=read_model(page)
-                assert glb['extras']['geometry_kind']=='CTB01_PHOTO_GROUNDED_DESIGN_PREVIEW'
-                assert glb['extras']['preserved_geometry'] is True
-                assert glb['extras']['source_mesh_count']==32
-                assert glb['extras']['paired_curved_legs']==3
-                assert glb['extras']['paired_leg_plates']==6
-                assert glb['extras']['engineering_approval'] is False
-                assert glb['extras']['photo_exact_reconstruction'] is False
-                assert glb['wood']==0 and glb['ring']==2
-                assert glb['rim1']==4 and glb['rim2']==4
-                assert 'layered wooden drum rim' in glb['materials'][4]
-                assert all(c is False for c in glb['colors'])
-                assert glb['images']==2
-                assert len(glb['nodes'])==33
-                assert glb['nodes'].count('photo-finish-node-P06_BONDED')==1
-                assert sum('photo-finish-node-L' in x and '_P01_' in x
-                           for x in glb['nodes'])==6
-                assert 'photo-finish-P07T' in glb['meshes']
-                assert glb['url'].startswith('blob:')
-                assert glb['vertexCounts'][28]>1000
-                camera=view.evaluate('e=>e.getCameraOrbit().theta')
-                view.evaluate("""e => {
-                    const orbit=e.getCameraOrbit();
-                    e.cameraOrbit=(orbit.theta*180/Math.PI+30)+'deg 70deg auto';
+                viewer=verify_geometric_glb(page)
+                orbit=viewer.evaluate('e=>e.getCameraOrbit().theta')
+                viewer.evaluate("""e=>{
+                    const o=e.getCameraOrbit();
+                    e.cameraOrbit=(o.theta*180/Math.PI+30)+'deg 70deg auto';
                     e.jumpCameraToGoal();
                 }""")
-                assert abs(view.evaluate('e=>e.getCameraOrbit().theta')-camera)>.25
-                page.screenshot(path=str(output/f'coffee-real-structure-3d-{w}.png'),full_page=False)
+                assert abs(viewer.evaluate('e=>e.getCameraOrbit().theta')-orbit)>.25
+                page.screenshot(path=str(output/f'geometric-frame-only-3d-{w}.png'),full_page=False)
                 page.locator('#personal-coffee-show-photo').click()
-                check_showcase_image(page)
+                verify_geometric_photo(page)
                 page.locator('#lang').click()
                 expect(page.locator('html')).to_have_attribute('lang','en')
                 expect(page.locator('.personal-coffee-disclosure')).to_contain_text(
-                    'edited visualization, not a documentary product photo')
+                    '15-part frame without the tabletop')
                 page.locator('#personal-coffee-show-model').click()
                 expect(page.locator('#personal-coffee-model-status')).to_contain_text(
-                    'paired curved legs',timeout=45000)
-                assert view.evaluate('e=>e.loaded')
+                    '15-part frame',timeout=45000)
                 page.locator('#personal-coffee-show-photo').click()
                 page.locator('#lang').click()
                 expect(page.locator('html')).to_have_attribute('lang','he')
                 page.locator('#start').click()
                 expect(page.locator('#capture')).to_be_visible()
-                assert page.locator('#drawers').count()==1,'Prior nightstand flow must remain intact'
-                assert not errors,'JS errors: '+str(errors)
-                assert not external,'External network requests: '+str(external)
-                results.append({'viewport':w,'hero':'APPROVED_EDITED_FRONT_SHOWCASE',
-                    'source_geometry':'FROZEN_32_PART_CTB01',
-                    'three_paired_curved_legs':True,'dark_ring':True,
-                    'original_built_dimensions_verified':False})
-                print('PASS edited front-angle hero + preserved curved-leg/ring GLB',w,h)
+                assert not errors,errors
+                assert not external,external
+                results.append({'viewport':w,'intro':'GEOMETRIC_TRUE_PHOTO',
+                    'preview':'GEOMETRIC_V11_FRAME_ONLY_15_PART_NO_TOP',
+                    'external_requests':0})
+                print('PASS Geometric hero + design-only 3D',w,h)
                 context.close()
 
             offline=browser.new_context(viewport={'width':390,'height':844})
             page=offline.new_page()
-            page.goto(url+'/app/',wait_until='networkidle')
-            page.evaluate("""async () => {
-              const sw=await navigator.serviceWorker.ready;
-              await sw.update();
+            page.goto(root+'/app/',wait_until='networkidle')
+            page.evaluate("""async ()=>{
+              const reg=await navigator.serviceWorker.ready;
+              await reg.update();
             }""")
             page.reload(wait_until='networkidle')
             for rel in [
-              './photo-grounded-coffee-glb.mjs',
-              './realistic-glb.mjs',
-              '../table/personal/media/personal-design-preview.glb',
-              './media/personal-coffee-front-showcase-960.webp',
-              '../assets/vendor/model-viewer-4.1.0/model-viewer.min.js'
-            ]:
-                assert page.evaluate("""async r=>
-                  !!(await caches.match(new URL(r,location.href).href))""",rel),rel
+                '../assets/geometric-engineering-object-clean.webp',
+                '../geometric/media/geometric-v11-design-only.glb',
+                '../table/personal/media/personal-design-preview.glb',
+                '../table/personal/media/01-hero-finished-angled-960.webp',
+                '../assets/vendor/model-viewer-4.1.0/model-viewer.min.js']:
+                assert page.evaluate("""async rel=>
+                  !!(await caches.match(new URL(rel,location.href).href))""",rel),rel
             offline.set_offline(True)
             page.reload(wait_until='domcontentloaded')
-            check_showcase_image(page)
+            verify_geometric_photo(page)
             page.locator('#personal-coffee-show-model').click()
-            expect(page.locator('#personal-coffee-model-status')).to_contain_text(
-               'רגליים מעוקלות בזוגות',timeout=45000)
-            assert page.locator('#personal-coffee-model model-viewer').evaluate('e=>e.loaded')
-            print('PASS offline approved showroom WebP + source-based 32-part GLB')
+            verify_geometric_glb(page)
+            print('PASS offline Geometric photo and frame-only GLB')
             offline.close()
 
             fallback=browser.new_context(viewport={'width':390,'height':844})
-            fallback.add_init_script('HTMLCanvasElement.prototype.getContext=function(){return null}')
-            page=fallback.new_page();page.goto(url+'/app/',wait_until='networkidle')
-            check_showcase_image(page)
+            fallback.add_init_script(
+                'HTMLCanvasElement.prototype.getContext=function(){return null}')
+            page=fallback.new_page()
+            page.goto(root+'/app/',wait_until='networkidle')
+            verify_geometric_photo(page)
             page.locator('#personal-coffee-show-model').click()
-            expect(page.locator('#personal-coffee-model-status')).to_contain_text(
-                'תלת־ממד אינו זמין במכשיר זה')
             expect(page.locator('#personal-coffee-photo')).to_be_visible()
-            assert page.locator('model-viewer').count()==0
-            print('PASS no-WebGL edited showroom image remains visible')
+            expect(page.locator('#personal-coffee-model')).to_be_hidden()
+            expect(page.locator('#personal-coffee-model-status')).to_contain_text(
+                'לא ניתן להציג תלת־ממד')
+            assert page.locator('#personal-coffee-model model-viewer').count()==0
+            print('PASS Geometric real photo remains on no-WebGL')
             fallback.close()
             browser.close()
     finally:
         server.shutdown();server.server_close()
-
     (output/'browser-qa.json').write_text(json.dumps({
-        'scope':'APP_MVP_23_APPROVED_FRONT_SHOWCASE_CTB01_DESIGN_3D',
-        'results':results,'offline':'PASS','no_webgl':'EDITED_SHOWCASE_RETAINED'
+        'scope':'APP_MVP_24_GEOMETRIC_INTRO_FRAME_ONLY_GLB',
+        'results':results,'offline':'PASS','no_webgl':'PHOTO_RETAINED'
     },indent=2)+'\n',encoding='utf8')
 
 if __name__=='__main__':
     p=argparse.ArgumentParser()
     p.add_argument('--browser',required=True)
-    p.add_argument('--output',default='.qa-reports/app-mvp-21')
-    args=p.parse_args()
-    run(args.browser,Path(args.output))
+    p.add_argument('--output',default='.qa-reports/app-mvp-24-geometric')
+    a=p.parse_args()
+    run(a.browser,Path(a.output))
