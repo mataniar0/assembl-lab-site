@@ -162,7 +162,9 @@ test('viewer connects only pinned site library and blob data; app and offline se
   assert.match(html,/id="approved-3d-view"/);
   assert.match(html,/connect-src 'self' blob:/);
   assert.match(source,/vendor\/model-viewer-4\.1\.0\/model-viewer\.min\.js/);
-  assert.match(source,/showcaseNightstandGlb\(approved\)/);
+  assert.match(source,/verifyPersonalSource\(source\)/);
+  assert.match(source,/finishPersonalDesign\(source\)/);
+  assert.doesNotMatch(source,/showcaseNightstandGlb\(approved\)/);
   assert.match(source,/next\.src=blobUrl/);
   assert.match(source,/URL\.revokeObjectURL/);
   assert.match(source,/webGLAvailable/);
