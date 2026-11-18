@@ -1,14 +1,16 @@
 /* ASSEMBL LAB PWA shell — only public synthetic preview resources are cached.
  * Never cache private Auth/cloud pages or overwrite the home document on navigation.
  */
-const CACHE = 'assemble-lab-android-v0.13.0-front-showcase-hero';
+const CACHE = 'assemble-lab-android-v0.14.0-geometric-personal-dual-glb';
 const SHELL = [
   './','./index.html','./nightstand-intent.js','./return-3d.mjs','./return-3d.css','./showcase-glb.mjs','./realistic-glb.mjs','./personal-coffee-hero.mjs','./photo-grounded-coffee-glb.mjs','./personal-coffee-hero.css','./manifest.webmanifest',
   './icons/icon-192.png','./icons/icon-512.png',
   './preview-lab.html','./preview-lab.css','./preview-lab.mjs','./preview-state.mjs',
   '../assets/vendor/model-viewer-4.1.0/model-viewer.min.js',
   '../table/personal/media/personal-design-preview.glb',
-  './media/personal-coffee-front-showcase-960.webp',
+  '../table/personal/media/01-hero-finished-angled-960.webp',
+  '../assets/geometric-engineering-object-clean.webp',
+  '../geometric/media/geometric-v11-design-only.glb',
   './concept-3d.html','./concept-3d.css','./concept-3d.mjs','./concept-geometry.mjs','./concept-export.mjs',
   './preview-fixtures/SC-01.png','./preview-fixtures/SC-02.png',
   './preview-fixtures/SC-04.png','./preview-fixtures/SC-07.png',
@@ -36,13 +38,14 @@ self.addEventListener('fetch',event=>{
   // A controlled app page may fetch the site's shared, pinned model-viewer
   // outside /app/. Only this exact same-origin vendor asset is cached offline.
   const vendorPath=new URL('../assets/vendor/model-viewer-4.1.0/model-viewer.min.js',self.registration.scope).pathname;
-  const personalTableAssets=new Set([
+  const sharedShowcaseAssets=new Set([
     '../table/personal/media/personal-design-preview.glb',
-    // Authentic finished-product photographs remain accessible via the catalog
-    // link, but are not part of the app's edited-showcase offline cache.
+    '../table/personal/media/01-hero-finished-angled-960.webp',
+    '../assets/geometric-engineering-object-clean.webp',
+    '../geometric/media/geometric-v11-design-only.glb'
   ].map(rel=>new URL(rel,self.registration.scope).pathname));
   if(!url.pathname.startsWith(scopePath)&&url.pathname!==vendorPath&&
-     !personalTableAssets.has(url.pathname))return;
+     !sharedShowcaseAssets.has(url.pathname))return;
   if(request.mode==='navigate'){
     const isHome=url.pathname===scopePath||url.pathname===scopePath+'index.html';
     if(!isHome){
