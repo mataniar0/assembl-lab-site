@@ -1,11 +1,11 @@
-/* MVP-24: return the site's ORIGINAL Personal Coffee Table design GLB inside
+/* MVP-26: return the site's ORIGINAL Personal Coffee Table design GLB inside
  * the main app after a visual-approval event. This is a FIXED demonstration
- * reference, NOT a per-customer parametric coffee-table adaptation; the legacy
- * pilot input values are retained for the request, not applied to this GLB.
+ * reference, NOT a per-customer parametric coffee-table adaptation; the round
+ * coffee intent choices are retained for the request, not applied to this GLB.
  * The source design is SHA-256 verified and gets local photo-based materials.
  * No cloud, external AI or manufacture approval.
  */
-import {finishPersonalDesign,verifyPersonalSource} from './photo-grounded-coffee-glb.mjs?v=mvp25-20261118';
+import {finishPersonalDesign,verifyPersonalSource} from './photo-grounded-coffee-glb.mjs?v=mvp26-20261118';
 
 const $=id=>document.getElementById(id);
 const he=()=>document.documentElement.lang!=='en';
@@ -22,12 +22,11 @@ function valid(d){
   if(!d||typeof d!=='object')return false;
   if(!/^visual-v[1-9]\d*$/.test(d.version_id)||
      !['natural','honey','walnut'].includes(d.finish)||
-     ![1,2].includes(d.drawers)||
-     !['shelf','closed'].includes(d.lower_section)||
-     ![4,6].includes(d.nominal_thickness_mm))return false;
+     !['curved-ring','curved-open'].includes(d.base_style)||
+     ![20,30,40].includes(d.tabletop_thickness_mm))return false;
   const size=d.dimensions_mm;
   if(!size||typeof size!=='object')return false;
-  return [['width',200,900],['height',200,1000],['depth',250,600]].every(
+  return [['diameter',400,900],['height',300,700]].every(
     ([key,min,max])=>Number.isInteger(size[key])&&size[key]>=min&&size[key]<=max);
 }
 function alt(){
@@ -51,9 +50,11 @@ function render(){
     approved.version_id+' · '+
     tr('מודל הדגמה: שולחן קפה אישי · תכנון קבוע בן 32 חלקים. ', 'Demo: Personal Coffee Table · fixed 32-part reference. ')+
     tr('נתוני הבקשה שלא יושמו במודל: ', 'Request inputs NOT applied to model: ')+
-    d.width+' × '+d.height+' × '+d.depth+' mm · '+
+    tr('קוטר ','Diameter ')+d.diameter+' mm · '+
+    tr('גובה ','Height ')+d.height+' mm · '+
     tr('גוון מבוקש: ','Requested finish: ')+approved.finish+' · '+
-    tr('מגירות (בפיילוט הישן): ','Drawers (legacy pilot): ')+approved.drawers+' · '+
+    tr('בסיס: ','Base: ')+approved.base_style+' · '+
+    tr('עובי פלטה: ','Tabletop thickness: ')+approved.tabletop_thickness_mm+' mm · '+
     tr('ללא אישור ייצור','Not manufacturing approved');
   const fallbackAlt=he()?fallbackPhoto.dataset.heAlt:fallbackPhoto.dataset.enAlt;
   fallbackPhoto.alt=fallbackAlt;
@@ -182,11 +183,10 @@ window.addEventListener('assembl:3d-model-ready',event=>{
   const d=event.detail;
   approved=Object.freeze({
     version_id:d.version_id,
-    finish:d.finish,drawers:d.drawers,
-    lower_section:d.lower_section,
-    nominal_thickness_mm:d.nominal_thickness_mm,
+    finish:d.finish,base_style:d.base_style,
+    tabletop_thickness_mm:d.tabletop_thickness_mm,
     dimensions_mm:Object.freeze({
-      width:d.dimensions_mm.width,height:d.dimensions_mm.height,depth:d.dimensions_mm.depth
+      diameter:d.dimensions_mm.diameter,height:d.dimensions_mm.height
     })
   });
   panel.hidden=false;
