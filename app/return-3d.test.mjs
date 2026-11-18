@@ -58,7 +58,7 @@ test('MVP-24 main approval returns fixed, verified Personal Coffee Table GLB not
   assert.match(html,/data-he="מודל שולחן הקפה האישי לצפייה"/);
   assert.match(html,/אינו מותאם עדיין למידות/);
   assert.match(html,/טופס הפיילוט עדיין מגדיר שידת לילה/);
-  assert.match(html,/<script type="module" src="\.\/return-3d\.mjs"><\/script>/);
+  assert.match(html,/<script type="module" src="\.\/return-3d\.mjs\?v=mvp25-20261118"><\/script>/);
   assert.match(html,/script-src 'self' 'sha256-GBnlKux09VbgrayAnLRJMrWvjFuJ9hF2QuT9vewZR6U='/);
   assert.match(snapshot,/assembl:3d-model-ready/);
   assert.match(snapshot,/approvedSnapshot\?\.requested_dimensions_mm/);
