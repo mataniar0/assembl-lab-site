@@ -1,0 +1,64 @@
+name: Marketing Demo V1 static export
+
+on:
+  push:
+    branches:
+      - deploy/marketing-demo-2026-11-18
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-frozen-demo:
+    name: Build and verify curated static demo
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Check out frozen source and packaging branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Verify application assets still exactly match frozen V1
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --exit-code d05830451a918f00dc484acf985c794443dc36f9 HEAD -- app/ assets/ geometric/ table/personal/media/
+      - name: Build isolated Cloudflare Pages output
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 scripts/build_marketing_demo.py
+      - name: Assert fixed-version, privacy, and core product assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('dist')
+          meta=json.loads((root/'demo-version.json').read_text(encoding='utf-8'))
+          assert meta['source_revision']=='d05830451a918f00dc484acf985c794443dc36f9'
+          assert meta['live_inquiries_enabled'] is False
+          assert (root/'app/index.html').is_file()
+          assert (root/'geometric/index.html').is_file()
+          assert (root/'app/assets/coffee-reference-room.webp').is_file()
+          assert (root/'app/assets/coffee-empty-room.webp').is_file()
+          assert (root/'table/personal/media/personal-design-preview.glb').is_file()
+          assert (root/'geometric/media/geometric-v11-design-only.glb').is_file()
+          assert (root/'assets/vendor/model-viewer-4.1.0/model-viewer.min.js').is_file()
+          assert (root/'inquiry/index.html').is_file()
+          assert 'אין ביצוע פניות' in (root/'inquiry/index.html').read_text(encoding='utf-8')
+          assert not list(root.rglob('*.test.mjs'))
+          assert not any((root/name).exists() for name in ('.github','.git','docs','tests'))
+          print('PASS Marketing Demo V1 frozen source, no live forms, no private tooling')
+          PY
+      - name: Retain deployment bundle for audit
+        if: success()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: assembl-lab-marketing-demo-v1-${{ github.run_id }}
+          path: dist/
+          retention-days: 30
+          if-no-files-found: error
