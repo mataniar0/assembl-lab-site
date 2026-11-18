@@ -1,8 +1,8 @@
-/* APP MVP-21: real-product photograph is the hero. The 3D viewer adapts the
+/* APP MVP-23: approved edited front-angle showroom image is the hero. The 3D viewer adapts the
  * archived 32-part CTB-01 digital prototype to the finish visible in actual
  * photographs 01/06 (warm timber drum rim, three PAIRS of curved black legs,
  * connecting black ring). No invented straight-leg proxy and no duplicate
- * hero screenshot from the model.
+ * hero screenshot from the model. The real built-product photos remain in /table/personal/.
  *
  * This is a source-CAD-grounded VISUAL DESIGN preview, not a measured digital
  * twin or a fabrication model. Everything stays local/same-origin and offline.
@@ -21,15 +21,15 @@ const status=$('personal-coffee-model-status');
 const vendor=new URL('../assets/vendor/model-viewer-4.1.0/model-viewer.min.js',import.meta.url).href;
 const source3d=new URL('../table/personal/media/personal-design-preview.glb',import.meta.url).href;
 const words={
-  photo:['צילום השולחן המוגמר כפי שנבנה.','Photograph of the actual finished coffee table.'],
+  photo:['הדמיית ראווה ערוכה של שולחן הקפה העגול.','Edited showroom visualization of the round coffee table.'],
   loading:['טוען את מודל התכנון המקורי ומשווה את גימורו לתצלומי המוצר…',
     'Loading the original design model with a finish based on real product photos…'],
   ready:['מודל תכנון הכולל רגליים מעוקלות בזוגות, טבעת חיבור ופלטת עץ. המבנה לא אומת מול המוצר בפועל.',
     'Design preview with paired curved legs, connecting ring and warm wood top. Exact built-product geometry is unverified.'],
-  unavailable:['תלת־ממד אינו זמין במכשיר זה; צילום המוצר האמיתי נשאר זמין.',
-    '3D is unavailable on this device; the actual product photograph remains visible.'],
-  error:['המודל לא נטען. צילום המוצר האמיתי נשאר זמין.',
-    'The 3D preview could not load; the authentic product photo remains visible.']
+  unavailable:['תלת־ממד אינו זמין במכשיר זה; הדמיית הראווה נשארת זמינה.',
+    '3D is unavailable on this device; the edited showcase image remains visible.'],
+  error:['המודל לא נטען. הדמיית הראווה נשארת זמינה.',
+    'The 3D preview could not load; the edited showcase image remains visible.']
 };
 const he=()=>document.documentElement.lang!=='en';
 let viewer=null,blobUrl=null,loadingPromise=null,viewerPromise=null;
