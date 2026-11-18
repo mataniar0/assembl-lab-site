@@ -172,5 +172,6 @@ test('viewer connects only pinned site library and blob data; app and offline se
   assert.match(sw,/assets\/vendor\/model-viewer-4\.1\.0\/model-viewer\.min\.js/);
   assert.match(sw,/'\.\/showcase-glb\.mjs'/);
   assert.match(sw,/'\.\/realistic-glb\.mjs'/);
-  assert.doesNotMatch(source,/\bfetch\s*\(|XMLHttpRequest|localStorage|sessionStorage|indexedDB|supabase|openai/gi);
+  assert.match(source,/fetch\(sourceGlb\)/); // same-origin frozen reference GLB
+  assert.doesNotMatch(source,/XMLHttpRequest|localStorage|sessionStorage|indexedDB|supabase|openai|cdn\./gi);
 });
