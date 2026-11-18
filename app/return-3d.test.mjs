@@ -68,6 +68,7 @@ test('MVP-24 main approval returns fixed, verified Personal Coffee Table GLB not
   assert.match(renderer,/finishPersonalDesign\(source\)/);
   assert.match(renderer,/FIXED_PERSONAL_COFFEE_REFERENCE_GLB/);
   assert.match(renderer,/fallbackPhoto\.hidden=false/);
+  assert.match(renderer,/svg\.setAttribute\('hidden',''\)/);
   assert.match(renderer,/fallbackPhoto\.hidden=true/);
   assert.match(renderer,/URL\.revokeObjectURL/);
   assert.match(sw,/'\.\.\/table\/personal\/media\/personal-design-preview\.glb'/);
