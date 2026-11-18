@@ -1,9 +1,10 @@
 /* ASSEMBL LAB PWA shell — only public synthetic preview resources are cached.
  * Never cache private Auth/cloud pages or overwrite the home document on navigation.
  */
-const CACHE = 'assemble-lab-android-v0.14.2-round-coffee-intent';
+const CACHE = 'assemble-lab-android-v0.14.3-photo-real-room';
 const SHELL = [
-  './','./index.html','./design-studio.js?v=mvp26-20261118','./nightstand-intent.js?v=mvp26-20261118','./return-3d.mjs?v=mvp26-20261118','./return-3d.css?v=mvp26-20261118','./showcase-glb.mjs','./realistic-glb.mjs','./personal-coffee-hero.mjs?v=mvp26-20261118','./photo-grounded-coffee-glb.mjs','./photo-grounded-coffee-glb.mjs?v=mvp26-20261118','./personal-coffee-hero.css?v=mvp26-20261118','./manifest.webmanifest',
+  './','./index.html','./design-studio.js?v=mvp27-20261118','./nightstand-intent.js?v=mvp27-20261118','./return-3d.mjs?v=mvp27-20261118','./return-3d.css?v=mvp27-20261118','./showcase-glb.mjs','./realistic-glb.mjs','./personal-coffee-hero.mjs?v=mvp27-20261118','./photo-grounded-coffee-glb.mjs','./photo-grounded-coffee-glb.mjs?v=mvp27-20261118','./personal-coffee-hero.css?v=mvp27-20261118','./demo-room.css?v=mvp27-20261118',
+  './assets/coffee-reference-room.webp','./assets/coffee-empty-room.webp','./manifest.webmanifest',
   './icons/icon-192.png','./icons/icon-512.png',
   './preview-lab.html','./preview-lab.css','./preview-lab.mjs','./preview-state.mjs',
   '../assets/vendor/model-viewer-4.1.0/model-viewer.min.js',
