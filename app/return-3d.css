@@ -37,3 +37,7 @@
    when the fixed reference GLB cannot be rendered (never a nightstand SVG). */
 #approved-coffee-fallback{display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:#f5f1e8}
 #approved-coffee-fallback[hidden]{display:none!important}
+
+/* MVP-24: retire the legacy nightstand schematic completely. The approved
+   fallback is the actual Personal Coffee Table photograph, never a dresser. */
+#approved-3d-view{display:none!important}
