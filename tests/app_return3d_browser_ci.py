@@ -153,7 +153,7 @@ def run(browser_path,output):
                 assert glb2['hash']==original_hash,'fixed reference should not falsely change with customer choices'
                 expect(summary).to_contain_text('visual-v2')
                 expect(summary).to_contain_text('500 × 550 × 350')
-                expect(summary).to_contain_text('1 מגירות')
+                expect(summary).to_contain_text('מגירות (בפיילוט הישן): 1')
                 page.locator('#approved-back').click()
                 page.locator('#versions button').filter(has_text='V1').click()
                 approve(page)
