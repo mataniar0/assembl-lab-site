@@ -45,25 +45,35 @@ test('MVP-15 rejects unsupported or nonfinite main app inputs safely',()=>{
   for(const height of [199,1001,Number.NaN,Infinity])assert.throws(
     ()=>buildNightstand(demoConcept(),{width:500,height,depth:350}),/HEIGHT_INVALID/);
 });
-test('MVP-15 main approval screen links to local 3D module without changing inline JS hash',()=>{
+test('MVP-24 main approval returns fixed, verified Personal Coffee Table GLB not nightstand geometry',()=>{
   const html=readFileSync(new URL('./index.html',import.meta.url),'utf8');
   const css=readFileSync(new URL('./return-3d.css',import.meta.url),'utf8');
   const renderer=readFileSync(new URL('./return-3d.mjs',import.meta.url),'utf8');
   const snapshot=readFileSync(new URL('./nightstand-intent.js',import.meta.url),'utf8');
   const sw=readFileSync(new URL('./sw.js',import.meta.url),'utf8');
   assert.match(html,/id="approved-3d"/);
-  assert.match(html,/id="approved-3d-view"/);
+  assert.match(html,/id="approved-coffee-fallback"/);
+  assert.match(html,/id="approved-glb-host"/);
   assert.match(html,/id="approved-3d-summary"[^>]+aria-live="polite"/);
+  assert.match(html,/data-he="מודל שולחן הקפה האישי לצפייה"/);
+  assert.match(html,/לא מותאם עדיין למידות/);
+  assert.match(html,/טופס הפיילוט עדיין מגדיר שידת לילה/);
   assert.match(html,/<script type="module" src="\.\/return-3d\.mjs"><\/script>/);
-  assert.match(html,/style-src 'self' 'sha256-/);
   assert.match(html,/script-src 'self' 'sha256-GBnlKux09VbgrayAnLRJMrWvjFuJ9hF2QuT9vewZR6U='/);
   assert.match(snapshot,/assembl:3d-model-ready/);
   assert.match(snapshot,/approvedSnapshot\?\.requested_dimensions_mm/);
   assert.match(renderer,/addEventListener\('assembl:3d-model-ready'/);
-  assert.match(renderer,/buildNightstand\(approved,approved\.dimensions_mm\)/);
-  assert.match(sw,/'\.\/return-3d\.mjs'/);
-  assert.match(sw,/'\.\/return-3d\.css'/);
-  assert.match(css,/#approved-3d-view/);
-  assert.doesNotMatch(renderer,/\bfetch\s*\(|localStorage|sessionStorage|XMLHttpRequest|WebSocket|sendBeacon|indexedDB/i);
+  assert.match(renderer,/fetch\(sourceGlb\)/);
+  assert.match(renderer,/verifyPersonalSource\(source\)/);
+  assert.match(renderer,/finishPersonalDesign\(source\)/);
+  assert.match(renderer,/FIXED_PERSONAL_COFFEE_REFERENCE_GLB/);
+  assert.match(renderer,/fallbackPhoto\.hidden=false/);
+  assert.match(renderer,/fallbackPhoto\.hidden=true/);
+  assert.match(renderer,/URL\.revokeObjectURL/);
+  assert.match(sw,/'\.\.\/table\/personal\/media\/personal-design-preview\.glb'/);
+  assert.match(sw,/'\.\.\/table\/personal\/media\/01-hero-finished-angled-960\.webp'/);
+  assert.match(css,/#approved-coffee-fallback/);
+  assert.doesNotMatch(renderer,/buildNightstand\(|showcaseNightstandGlb\(/);
+  assert.doesNotMatch(renderer,/localStorage|sessionStorage|XMLHttpRequest|WebSocket|sendBeacon|indexedDB/i);
   assert.doesNotMatch(snapshot,/detail:approvedSnapshot|detail:designIntent\(/);
 });
