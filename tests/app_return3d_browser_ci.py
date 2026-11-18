@@ -1,6 +1,6 @@
-"""MVP-24: after legacy pilot approval, show the existing fixed Personal Coffee
-Table 32-part source-verified GLB in the main app. Do NOT claim that nightstand
-form fields are applied to its mesh. All content stays same-origin and offline.
+"""MVP-26: round coffee table schematic and fixed Personal Coffee 32-part
+source-verified GLB after approval. User dimensions and choices are recorded
+but NOT applied to the immutable GLB. Same-origin/offline/no private uploads.
 """
 from __future__ import annotations
 import argparse
@@ -23,16 +23,16 @@ def flow_to_config(page):
     page.locator('#capture-next').click()
     expect(page.locator('#configure')).to_be_visible()
     expect(page.locator('#configure')).to_contain_text(
-        'טופס הפיילוט עדיין מגדיר שידת לילה')
+        'שולחן קפה עגול — פיילוט')
 
-def set_design(page,finish,drawers,lower,width,height,depth,thickness):
+def set_design(page,finish,base,diameter,height,thickness):
     page.locator('#finish').select_option(finish)
-    page.locator('#drawers').select_option(str(drawers))
-    page.locator('#bottom').select_option(lower)
-    page.locator('#width-cm').fill(str(width))
+    page.locator('#base-style').select_option(base)
+    page.locator('#diameter-cm').fill(str(diameter))
     page.locator('#height-cm').fill(str(height))
-    page.locator('#depth-cm').fill(str(depth))
-    page.locator('#plywood-thickness').select_option(str(thickness))
+    page.locator('#top-thickness-mm').select_option(str(thickness))
+    expect(page.locator('#config-scene svg[data-furniture="round-coffee-table"]')).to_be_visible()
+
 
 def approve(page):
     expect(page.locator('#review')).to_be_visible()
@@ -107,15 +107,29 @@ def run(browser_path,output):
                     e=>window.approvedSelections.push(e.detail));
                 }""")
                 flow_to_config(page)
-                set_design(page,'walnut',2,'closed',65,95,50,4)
+                # Reject off-range coffee dimensions before creating a version.
+                page.locator('#diameter-cm').fill('39')
+                page.locator('#generate').click()
+                expect(page.locator('#design-error')).to_be_visible()
+                expect(page.locator('#configure')).to_be_visible()
+                set_design(page,'walnut','curved-open',78,60,40)
                 page.locator('#description').fill(
                     'PRIVATE_NOTE_NOT_FOR_GLB customer@example.invalid')
                 page.locator('#generate').click()
                 expect(page.locator('#current-label')).to_have_text('V1')
+                expect(page.locator('#result-scene svg[data-furniture="round-coffee-table"]')).to_be_visible()
+                assert page.locator('#result-scene svg').get_attribute('data-base-style')=='curved-open'
+                assert page.locator('#drawers').count()==0
+                assert page.locator('#bottom').count()==0
+                expect(page.locator('#design-summary')).to_contain_text('קוטר 78 cm')
+                expect(page.locator('#design-summary')).to_contain_text('גובה 60 cm')
                 viewer=approve(page)
                 summary=page.locator('#approved-3d-summary')
                 expect(summary).to_contain_text('visual-v1')
-                expect(summary).to_contain_text('650 × 950 × 500')
+                expect(summary).to_contain_text('780 mm')
+                expect(summary).to_contain_text('600 mm')
+                expect(summary).to_contain_text('curved-open')
+                expect(summary).to_contain_text('40 mm')
                 expect(summary).to_contain_text('תכנון קבוע בן 32 חלקים')
                 expect(summary).to_contain_text('נתוני הבקשה שלא יושמו במודל')
                 expect(page.locator('#approval-record')).to_contain_text(
@@ -143,7 +157,7 @@ def run(browser_path,output):
                 page.locator('#approved-back').click()
                 page.locator('#return-config').click()
                 expect(page.locator('#configure')).to_be_visible()
-                set_design(page,'natural',1,'shelf',50,55,35,6)
+                set_design(page,'natural','curved-ring',62,45,20)
                 page.locator('#description').fill('')
                 page.locator('#generate').click()
                 expect(page.locator('#current-label')).to_have_text('V2')
@@ -152,16 +166,25 @@ def run(browser_path,output):
                 validate_original_coffee_model(glb2)
                 assert glb2['hash']==original_hash,'fixed reference should not falsely change with customer choices'
                 expect(summary).to_contain_text('visual-v2')
-                expect(summary).to_contain_text('500 × 550 × 350')
-                expect(summary).to_contain_text('מגירות (בפיילוט הישן): 1')
+                expect(summary).to_contain_text('620 mm')
+                expect(summary).to_contain_text('450 mm')
+                expect(summary).to_contain_text('curved-ring')
                 page.locator('#approved-back').click()
                 page.locator('#versions button').filter(has_text='V1').click()
+                expect(page.locator('#diameter-cm')).to_have_value('78')
+                expect(page.locator('#height-cm')).to_have_value('60')
+                expect(page.locator('#base-style')).to_have_value('curved-open')
+                expect(page.locator('#top-thickness-mm')).to_have_value('40')
                 approve(page)
                 assert get_glb(page)['hash']==original_hash
                 expect(summary).to_contain_text('visual-v1')
                 selections=page.evaluate('window.approvedSelections')
                 assert [v['version_id'] for v in selections]==[
                     'visual-v1','visual-v2','visual-v1']
+                assert all(set(v)=={'version_id','finish','base_style',
+                    'tabletop_thickness_mm','dimensions_mm'} for v in selections)
+                assert selections[0]['dimensions_mm']=={'diameter':780,'height':600}
+                assert selections[1]['dimensions_mm']=={'diameter':620,'height':450}
                 assert 'PRIVATE_NOTE' not in json.dumps(selections)
                 assert 'example.invalid' not in json.dumps(selections)
                 assert not external,external
@@ -170,6 +193,13 @@ def run(browser_path,output):
                 if w in (390,1440):
                     page.screenshot(path=str(output/f'approved-personal-coffee-glb-{w}.png'),
                                     full_page=True)
+                # Quick actions are coffee-specific and generate a distinct round version.
+                page.locator('#approved-back').click()
+                page.locator('.quick-actions [data-change="baseStyle"]').click()
+                expect(page.locator('#current-label')).to_have_text('V3')
+                expect(page.locator('#result-scene svg[data-furniture="round-coffee-table"]')).to_be_visible()
+                assert page.locator('#result-scene svg').get_attribute('data-base-style')=='curved-ring'
+                expect(page.locator('#design-summary')).to_contain_text('רגליים מעוקלות עם טבעת')
                 results.append({'viewport':w,'approved_versions':3,
                     'reference_glb_sha256':original_hash,
                     'customer_fields_altered_geometry':False})
@@ -187,7 +217,7 @@ def run(browser_path,output):
             offline.set_offline(True)
             page.reload(wait_until='domcontentloaded')
             flow_to_config(page)
-            set_design(page,'honey',2,'shelf',50,55,35,6)
+            set_design(page,'honey','curved-ring',68,46,30)
             page.locator('#generate').click()
             approve(page)
             validate_original_coffee_model(get_glb(page))
@@ -200,7 +230,7 @@ def run(browser_path,output):
             page=fallback.new_page()
             page.goto(root+'/app/',wait_until='networkidle')
             flow_to_config(page)
-            set_design(page,'natural',1,'shelf',50,55,35,6)
+            set_design(page,'natural','curved-ring',62,45,20)
             page.locator('#generate').click()
             page.locator('#open-approval').click()
             page.locator('#confirm-approval').click()

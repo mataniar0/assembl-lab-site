@@ -261,7 +261,10 @@ def run(browser_exe: str, output_dir: Path) -> None:
             pwa_context = browser.new_context(viewport={"width": 390, "height": 844})
             pwa = pwa_context.new_page()
             pwa.goto(root + "/app/index.html", wait_until="networkidle")
-            expect(pwa.locator('a[href="./preview-lab.html"]')).to_be_visible()
+            # The main app now configures a round coffee table; archived preview-lab
+            # remains independently available via its URL and SW shell.
+            expect(pwa.locator('#intro-title')).to_be_visible()
+            assert pwa.locator('a[href="./preview-lab.html"]').count()==0
             pwa.evaluate("""async () => {
                 const registration = await navigator.serviceWorker.ready;
                 await registration.update();

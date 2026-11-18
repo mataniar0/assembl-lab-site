@@ -130,7 +130,7 @@ def run(browser_path,output):
               const old=await caches.open('qa-old-unversioned-entry-assets');
               for(const path of [
                 './personal-coffee-hero.mjs','./return-3d.mjs',
-                './nightstand-intent.js','./personal-coffee-hero.css',
+                './nightstand-intent.js','./design-studio.js','./personal-coffee-hero.css',
                 './return-3d.css'
               ]){
                 const css=path.endsWith('.css');
@@ -151,10 +151,11 @@ def run(browser_path,output):
                 'link[href^="./return-3d.css"]',
                 'script[src^="./personal-coffee-hero.mjs"]',
                 'script[src^="./return-3d.mjs"]',
-                'script[src^="./nightstand-intent.js"]'
+                'script[src^="./nightstand-intent.js"]',
+                'script[src^="./design-studio.js"]'
             ]:
                 assert page.locator(selector).get_attribute('href' if selector.startswith('link') else 'src').endswith(
-                    '?v=mvp25-20261118')
+                    '?v=mvp26-20261118')
             page.locator('#personal-coffee-show-model').click()
             verify_geometric_glb(page)
             assert not stale_errors,stale_errors
