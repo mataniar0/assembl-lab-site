@@ -63,7 +63,7 @@ function render(){
   setRecord();
 }
 function resetFallback(){
-  svg.hidden=true;
+  svg.setAttribute('hidden','');
   fallbackPhoto.hidden=false;
   host.hidden=true;
   host.dataset.state='fallback';
@@ -139,7 +139,7 @@ async function loadQualityGLB(){
       if(request!==loadGeneration)return;
       if(loadTimeout!==null){clearTimeout(loadTimeout);loadTimeout=null;}
       host.dataset.state='ready';
-      svg.hidden=true;fallbackPhoto.hidden=true;
+      svg.setAttribute('hidden','');fallbackPhoto.hidden=true;
       status('מודל שולחן הקפה האישי מוכן. זהו דגם תכנון קבוע, לא ייצור לפי הגדרותיכם.',
         'Personal Coffee Table GLB ready. This fixed design is not customized to your selections.');
     };
