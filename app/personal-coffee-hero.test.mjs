@@ -47,7 +47,7 @@ test('intro Geometric image is different from approved Personal Coffee Table ref
 });
 test('explicit PWA allowlist and shell retain both exact models and fallback photographs',()=>{
   const sw=read('./sw.js'),html=read('./index.html'),intro=read('./personal-coffee-hero.mjs');
-  assert.match(sw,/v0\.14\.0-geometric-personal-dual-glb/);
+  assert.match(sw,/v0\.14\.1-geometric-cache-isolation/);
   for(const path of [
     '../assets/geometric-engineering-object-clean.webp',
     '../geometric/media/geometric-v11-design-only.glb',
@@ -61,4 +61,27 @@ test('explicit PWA allowlist and shell retain both exact models and fallback pho
   assert.match(intro,/url\.origin===self\.location\.origin|new URL\('\.\.\/geometric\/media\//);
   assert.match(html,/script-src 'self' 'sha256-GBnlKux09VbgrayAnLRJMrWvjFuJ9hF2QuT9vewZR6U=' 'wasm-unsafe-eval'/);
   assert.doesNotMatch(intro,/\bfetch\s*\(|XMLHttpRequest|localStorage|sessionStorage|indexedDB|supabase|openai|cdn\./i);
+});
+
+// Regression: /app/ HTML is fetched network-first by the older PWA controller,
+// but its cache-first JS/CSS must NEVER match legacy unversioned cache entries.
+test('MVP-25 release URLs prevent mixed Geometric markup with stale round Personal Coffee 3D',()=>{
+  const html=read('./index.html');
+  const sw=read('./sw.js');
+  const return3d=read('./return-3d.mjs');
+  const suffix='?v=mvp25-20261118';
+  for(const path of [
+    './personal-coffee-hero.mjs','./personal-coffee-hero.css',
+    './return-3d.mjs','./return-3d.css','./nightstand-intent.js'
+  ]){
+    const suffixUrl=path+suffix;
+    assert.ok(html.includes('="'+suffixUrl+'"'),'HTML must pin '+path);
+    assert.ok(sw.includes("'"+suffixUrl+"'"),'SW must precache '+path);
+    assert.ok(!html.includes('="'+path+'"'),'unversioned entry would match old cache: '+path);
+  }
+  assert.match(return3d,/photo-grounded-coffee-glb\.mjs\?v=mvp25-20261118/);
+  assert.ok(sw.includes("'./photo-grounded-coffee-glb.mjs"+suffix+"'"));
+  assert.match(sw,/assemble-lab-android-v0\.14\.1-geometric-cache-isolation/);
+  assert.match(html,/data-model-src="\.\.\/geometric\/media\/geometric-v11-design-only\.glb"/);
+  assert.match(read('./personal-coffee-hero.mjs'),/next\.src=sourceGlb/);
 });

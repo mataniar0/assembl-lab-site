@@ -115,6 +115,53 @@ def run(browser_path,output):
                 print('PASS Geometric hero + design-only 3D',w,h)
                 context.close()
 
+            # MVP-25 regression: a new network-first HTML page may still be
+            # controlled by an old cache-first PWA worker. Legacy unversioned
+            # JS and CSS must not affect Geometric photo or frame-only GLB.
+            stale=browser.new_context(viewport={'width':390,'height':844},
+                reduced_motion='reduce')
+            page=stale.new_page()
+            stale_errors=[]
+            page.on('pageerror',lambda e:stale_errors.append(str(e)))
+            page.goto(root+'/app/',wait_until='networkidle')
+            page.evaluate('async ()=>{await navigator.serviceWorker.ready}')
+            page.reload(wait_until='networkidle')
+            page.evaluate("""async ()=>{
+              const old=await caches.open('qa-old-unversioned-entry-assets');
+              for(const path of [
+                './personal-coffee-hero.mjs','./return-3d.mjs',
+                './nightstand-intent.js','./personal-coffee-hero.css',
+                './return-3d.css'
+              ]){
+                const css=path.endsWith('.css');
+                const body=css?'#personal-coffee-hero {display:none !important}':
+                  'throw new Error("STALE_COFFEE_APP_SCRIPT_USED")';
+                await old.put(new URL(path,location.href),
+                  new Response(body,{headers:{'Content-Type':
+                    css?'text/css':'text/javascript'}}));
+              }
+            }""")
+            # If unversioned entry paths are loaded from the old cache here,
+            # they would crash the page or hide the Geometric photo.
+            page.reload(wait_until='networkidle')
+            verify_geometric_photo(page)
+            assert page.locator('#personal-coffee-hero').is_visible()
+            for selector in [
+                'link[href^="./personal-coffee-hero.css"]',
+                'link[href^="./return-3d.css"]',
+                'script[src^="./personal-coffee-hero.mjs"]',
+                'script[src^="./return-3d.mjs"]',
+                'script[src^="./nightstand-intent.js"]'
+            ]:
+                assert page.locator(selector).get_attribute('href' if selector.startswith('link') else 'src').endswith(
+                    '?v=mvp25-20261118')
+            page.locator('#personal-coffee-show-model').click()
+            verify_geometric_glb(page)
+            assert not stale_errors,stale_errors
+            page.screenshot(path=str(output/'geometric-upgrade-old-cache-390.png'),full_page=False)
+            print('PASS Geometric intro with stale unversioned PWA assets preseeded')
+            stale.close()
+
             offline=browser.new_context(viewport={'width':390,'height':844})
             page=offline.new_page()
             page.goto(root+'/app/',wait_until='networkidle')
@@ -158,7 +205,8 @@ def run(browser_path,output):
         server.shutdown();server.server_close()
     (output/'browser-qa.json').write_text(json.dumps({
         'scope':'APP_MVP_24_GEOMETRIC_INTRO_FRAME_ONLY_GLB',
-        'results':results,'offline':'PASS','no_webgl':'PHOTO_RETAINED'
+        'results':results,'offline':'PASS','no_webgl':'PHOTO_RETAINED',
+        'stale_pwa_cache_upgrade':'PASS'
     },indent=2)+'\n',encoding='utf8')
 
 if __name__=='__main__':
