@@ -212,7 +212,11 @@ test('offline A/B accessibility, labels and touch targets remain wired',()=>{
 test('PWA navigation isolates index cache and precaches only public local preview assets',()=>{
   const sw=readFileSync(new URL('./sw.js',import.meta.url),'utf8');
   const index=readFileSync(new URL('./index.html',import.meta.url),'utf8');
-  assert.match(index,/href="\.\/preview-lab\.html"/);
+  // Main studio now uses the round coffee flow; independent archival preview-lab
+  // stays directly accessible and cached but is not linked as the live configurator.
+  assert.match(index,/design-studio\.js\?v=mvp26-20261118/);
+  assert.match(index,/שולחן קפה עגול — פיילוט/);
+  assert.match(sw,/'\.\/preview-lab\.html'/);
   assert.match(sw,/const isHome=url\.pathname===scopePath\|\|url\.pathname===scopePath\+'index\.html'/);
   assert.match(sw,/if\(!isHome\)/);
   assert.match(sw,/cache\.put\('\.\/index\.html',response\.clone\(\)\)/);
