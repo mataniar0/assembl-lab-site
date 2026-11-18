@@ -1,0 +1,47 @@
+/* MVP-27 — photo-grade LOCAL demo room, with an honest schematic fallback.
+   Generated reference render never represents user-selected dimensions.
+   The two WebP assets are public, small (<3 kB each), local and PWA-cached. */
+.scene[data-room-kind="demo"]{
+  background:#d0c1ab;
+  box-shadow:inset 0 0 28px #3b27161a,0 14px 28px #30231511;
+}
+.scene[data-room-kind="demo"]::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:#d0c1ab url("./assets/coffee-empty-room.webp") center center/cover no-repeat;
+  pointer-events:none;
+}
+.scene[data-room-kind="demo"][data-reference-photo="true"]::before{
+  background-image:url("./assets/coffee-reference-room.webp");
+}
+.scene[data-room-kind="demo"]::after,
+.scene[data-room-kind="demo"] .floor-line,
+.scene[data-room-kind="demo"] .wall-corner{
+  display:none;
+}
+.scene[data-room-kind="demo"] .furniture-mount{
+  top:69%;
+  height:62%;
+  filter:drop-shadow(7px 17px 12px #1b1a1955);
+}
+.scene[data-room-kind="demo"][data-reference-photo="true"] .furniture-mount{
+  display:none;
+}
+.scene[data-room-kind="demo"] .scene-corner-label{
+  background:rgba(252,250,247,.94);
+  color:#27332e;
+  font-weight:700;
+  text-shadow:none;
+  box-shadow:0 2px 8px #251e101c;
+}
+.scene[data-room-kind="demo"] .furniture-mount svg{
+  overflow:visible;
+  filter:saturate(.85) contrast(1.12);
+}
+@media(max-width:520px){
+  .scene[data-room-kind="demo"]::before{
+    background-position:center center;
+  }
+}
