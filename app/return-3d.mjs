@@ -5,7 +5,7 @@
  * The source design is SHA-256 verified and gets local photo-based materials.
  * No cloud, external AI or manufacture approval.
  */
-import {finishPersonalDesign,verifyPersonalSource} from './photo-grounded-coffee-glb.mjs?v=mvp26-20261118';
+import {finishPersonalDesign,verifyPersonalSource} from './photo-grounded-coffee-glb.mjs?v=mvp27-20261118';
 
 const $=id=>document.getElementById(id);
 const he=()=>document.documentElement.lang!=='en';
