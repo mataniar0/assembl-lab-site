@@ -45,7 +45,7 @@ test('MVP-15 rejects unsupported or nonfinite main app inputs safely',()=>{
   for(const height of [199,1001,Number.NaN,Infinity])assert.throws(
     ()=>buildNightstand(demoConcept(),{width:500,height,depth:350}),/HEIGHT_INVALID/);
 });
-test('MVP-24 main approval returns fixed, verified Personal Coffee Table GLB not nightstand geometry',()=>{
+test('MVP-26 round coffee approval returns fixed, verified Personal Coffee Table GLB',()=>{
   const html=readFileSync(new URL('./index.html',import.meta.url),'utf8');
   const css=readFileSync(new URL('./return-3d.css',import.meta.url),'utf8');
   const renderer=readFileSync(new URL('./return-3d.mjs',import.meta.url),'utf8');
@@ -56,10 +56,10 @@ test('MVP-24 main approval returns fixed, verified Personal Coffee Table GLB not
   assert.match(html,/id="approved-glb-host"/);
   assert.match(html,/id="approved-3d-summary"[^>]+aria-live="polite"/);
   assert.match(html,/data-he="מודל שולחן הקפה האישי לצפייה"/);
-  assert.match(html,/אינו מותאם עדיין למידות/);
-  assert.match(html,/טופס הפיילוט עדיין מגדיר שידת לילה/);
-  assert.match(html,/<script type="module" src="\.\/return-3d\.mjs\?v=mvp25-20261118"><\/script>/);
-  assert.match(html,/script-src 'self' 'sha256-GBnlKux09VbgrayAnLRJMrWvjFuJ9hF2QuT9vewZR6U='/);
+  assert.match(html,/שאינו מותאם למידות/);
+  assert.match(html,/שולחן קפה עגול — פיילוט/);
+  assert.match(html,/<script type="module" src="\.\/return-3d\.mjs\?v=mvp26-20261118"><\/script>/);
+  assert.match(html,/script-src 'self' 'wasm-unsafe-eval'/);
   assert.match(snapshot,/assembl:3d-model-ready/);
   assert.match(snapshot,/approvedSnapshot\?\.requested_dimensions_mm/);
   assert.match(renderer,/addEventListener\('assembl:3d-model-ready'/);
@@ -77,4 +77,20 @@ test('MVP-24 main approval returns fixed, verified Personal Coffee Table GLB not
   assert.doesNotMatch(renderer,/buildNightstand\(|showcaseNightstandGlb\(/);
   assert.doesNotMatch(renderer,/localStorage|sessionStorage|XMLHttpRequest|WebSocket|sendBeacon|indexedDB/i);
   assert.doesNotMatch(snapshot,/detail:approvedSnapshot|detail:designIntent\(/);
+  const studio=readFileSync(new URL('./design-studio.js',import.meta.url),'utf8');
+  assert.match(studio,/data-furniture="round-coffee-table"/);
+  assert.match(studio,/function coffeeTableSvg/);
+  assert.doesNotMatch(studio,/nightstandSvg|drawers|lower_section|id="bottom"/);
+  assert.match(snapshot,/category:'round_coffee_table'/);
+  assert.match(snapshot,/requested_dimensions_mm:\{diameter:/);
+  assert.match(snapshot,/tabletop_thickness_mm/);
+  assert.match(renderer,/base_style:d.base_style/);
+  assert.match(renderer,/diameter:d.dimensions_mm.diameter/);
+  assert.doesNotMatch(renderer,/\bdrawers\b|\blower_section\b/);
+  for(const selector of ['diameter-cm','height-cm','base-style','top-thickness-mm'])
+    assert.match(html,new RegExp('id="'+selector+'"'));
+  for(const obsolete of ['drawers','bottom','width-cm','depth-cm','plywood-thickness'])
+    assert.doesNotMatch(html,new RegExp('id="'+obsolete+'"'));
+  assert.match(html,/design-studio\.js\?v=mvp26-20261118/);
+  assert.match(sw,/design-studio\.js\?v=mvp26-20261118/);
 });
