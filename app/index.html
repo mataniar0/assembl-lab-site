@@ -7,8 +7,9 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="application-name" content="ASSEMBL LAB">
 <link rel="manifest" href="./manifest.webmanifest">
-<link rel="stylesheet" href="./return-3d.css?v=mvp26-20261118">
-<link rel="stylesheet" href="./personal-coffee-hero.css?v=mvp26-20261118">
+<link rel="stylesheet" href="./return-3d.css?v=mvp27-20261118">
+<link rel="stylesheet" href="./personal-coffee-hero.css?v=mvp27-20261118">
+<link rel="stylesheet" href="./demo-room.css?v=mvp27-20261118">
 <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
 <meta name="description" content="ASSEMBL LAB — אב טיפוס מקומי לשלב צילום חלל והדמיית רהיט">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' blob: data:; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'sha256-89Sc5Gf+7JqCtzias9Yo+4XLau6VOtWxNhx/QN80yyI=' 'sha256-yhlpZVZMy2vXExwTGihUWVSrOxyhMuvj+Ygg7pyBWek='; img-src 'self' blob: data:; connect-src 'self' blob:; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
@@ -82,8 +83,8 @@
   </section>
   <section class="screen" id="capture" hidden aria-labelledby="capture-title">
     <div class="head-row"><div><div class="eyebrow">01 / CAPTURE</div><h1 id="capture-title" data-he="נתחיל מהחלל שלכם" data-en="Start with your space">נתחיל מהחלל שלכם</h1><p data-he="צלמו נישה או העלו תמונה. וודאו שהקיר והרצפה נראים היטב." data-en="Photograph a niche or upload a room photo. Include the wall and floor.">צלמו נישה או העלו תמונה. וודאו שהקיר והרצפה נראים היטב.</p></div></div>
-    <div class="content-grid"><div class="photo-surface"><div id="capture-scene" class="scene scene-demo"><div class="wall-corner"></div><div class="floor-line"></div><img class="room-photo" alt="" hidden><div class="scene-corner-label" data-he="חלל הדגמה מאויר" data-en="Illustrated demo room">חלל הדגמה מאויר</div></div></div>
-      <div class="form-panel"><div class="form-icon">↗</div><h2 data-he="בחירת תמונה" data-en="Select a photo">בחירת תמונה</h2><p data-he="אפשר להעלות צילום מהמכשיר או להשתמש בחלל הדגמה מאויר, לצורך התנסות." data-en="Upload a photo or use an illustrated demo room for testing.">אפשר להעלות צילום מהמכשיר או להשתמש בחלל הדגמה מאויר, לצורך התנסות.</p>
+    <div class="content-grid"><div class="photo-surface"><div id="capture-scene" class="scene scene-demo"><div class="wall-corner"></div><div class="floor-line"></div><img class="room-photo" alt="" hidden><div class="scene-corner-label" data-he="חלל הדגמה ריאליסטי" data-en="Photographic demo room">חלל הדגמה ריאליסטי</div></div></div>
+      <div class="form-panel"><div class="form-icon">↗</div><h2 data-he="בחירת תמונה" data-en="Select a photo">בחירת תמונה</h2><p data-he="אפשר להעלות צילום מהמכשיר או להשתמש בחלל הדגמה ריאליסטי, לצורך התנסות." data-en="Upload a photo or use an illustrated demo room for testing.">אפשר להעלות צילום מהמכשיר או להשתמש בחלל הדגמה ריאליסטי, לצורך התנסות.</p>
       <button class="btn secondary" id="live-camera" type="button" data-he="פתח מצלמה חיה" data-en="Open live camera">פתח מצלמה חיה</button>
       <div id="live-camera-panel" hidden><video id="camera-preview" autoplay playsinline muted aria-label="תצוגת מצלמה"></video><div class="button-row"><button class="btn primary" id="take-shot" type="button" data-he="צלם תמונה" data-en="Take photo">צלם תמונה</button><button class="btn ghost" id="close-camera" type="button" data-he="סגור מצלמה" data-en="Close camera">סגור מצלמה</button></div></div>
       <label class="upload btn secondary" for="photo" data-he="צלם באמצעות המכשיר" data-en="Use device camera">צלם באמצעות המכשיר</label><input id="photo" type="file" accept="image/*" capture="environment" aria-label="צילום החלל במצלמה">
@@ -95,7 +96,7 @@
   </section>
   <section class="screen" id="configure" hidden aria-labelledby="configure-title">
     <div class="head-row"><div class="eyebrow">01 / DESIGN INTENT</div><h1 id="configure-title" data-he="איזה שולחן קפה ניצור?" data-en="Which coffee table shall we design?">איזה שולחן קפה ניצור?</h1><p data-he="הגדירו שולחן קפה עגול: קוטר, גובה, גוון, בסיס ועובי פלטה. ההמחשה משתנה לפי בחירותיכם; לאחר האישור יוצג GLB קיים של שולחן הקפה האישי כדגם דוגמה קבוע, שאינו מותאם למידות." data-en="Configure a round coffee table: diameter, height, finish, base and tabletop thickness. The schematic responds to your choices; after approval an existing Personal Coffee Table GLB is shown as a fixed reference, not a dimension-customized model.">הגדירו שולחן קפה עגול: קוטר, גובה, גוון, בסיס ועובי פלטה. ההמחשה משתנה לפי בחירותיכם; לאחר האישור יוצג GLB קיים של שולחן הקפה האישי כדגם דוגמה קבוע, שאינו מותאם למידות.</p></div>
-    <div class="content-grid"><div class="preview-column"><div id="config-scene" class="scene scene-demo"><div class="wall-corner"></div><div class="floor-line"></div><img class="room-photo" alt="" hidden><div class="furniture-mount"></div><span class="scene-corner-label" data-he="המחשה סכמטית בלבד" data-en="Schematic preview only">המחשה סכמטית בלבד</span></div><p class="muted compact" data-he="זו אינה הדמיית AI. מיקום וגודל חזותיים אינם מדידה של החלל." data-en="Not AI. Visual size and position are not physical measurements.">זו אינה הדמיית AI. מיקום וגודל חזותיים אינם מדידה של החלל.</p></div>
+    <div class="content-grid"><div class="preview-column"><div id="config-scene" class="scene scene-demo"><div class="wall-corner"></div><div class="floor-line"></div><img class="room-photo" alt="" hidden><div class="furniture-mount"></div><span class="scene-corner-label" data-he="דוגמת שולחן קפה — לא תכנון הנדסי" data-en="Coffee table reference — not an engineered design">דוגמת שולחן קפה — לא תכנון הנדסי</span></div><p class="muted compact" data-he="החלל וצילום השולחן הם דוגמאות מוכנות להמחשה. כשמשנים אפשרויות מוצג איור משתנה על רקע מצולם; אין הדמיית AI מותאמת או מדידת חלל." data-en="The room and table photo are preset visual references. Changing options shows an adjustable schematic on a photographic background, not custom AI rendering or a room measurement.">החלל וצילום השולחן הם דוגמאות מוכנות להמחשה. כשמשנים אפשרויות מוצג איור משתנה על רקע מצולם; אין הדמיית AI מותאמת או מדידת חלל.</p></div>
     <div class="form-panel"><form id="design-form" novalidate>
       <label class="field"><span data-he="סוג הרהיט" data-en="Furniture type">סוג הרהיט</span><select disabled><option data-he="שולחן קפה עגול — פיילוט" data-en="Round coffee table — pilot">שולחן קפה עגול — פיילוט</option></select></label>
       <div class="fields-inline"><label class="field"><span data-he="גוון העץ" data-en="Wood finish">גוון העץ</span><select id="finish"><option value="natural" data-he="בירץ טבעי" data-en="Natural birch">בירץ טבעי</option><option value="honey" data-he="דבש חם" data-en="Honey">דבש חם</option><option value="walnut" data-he="אגוז כהה" data-en="Walnut">אגוז כהה</option></select></label>
@@ -113,7 +114,7 @@
   </section>
   <section class="screen" id="review" hidden aria-labelledby="review-title">
     <div class="head-row"><div class="eyebrow">01 / VISUAL REVIEW</div><h1 id="review-title" data-he="זה הכיוון שהתכוונתם אליו?" data-en="Is this what you had in mind?">זה הכיוון שהתכוונתם אליו?</h1><p data-he="שמרו גרסאות, שנו פרטים והשוו — רק לאחר מכן אשרו את העיצוב." data-en="Keep versions, refine details and compare before approval.">שמרו גרסאות, שנו פרטים והשוו — רק לאחר מכן אשרו את העיצוב.</p></div>
-    <div class="content-grid review-grid"><div class="preview-column"><div id="result-scene" class="scene scene-demo scene-large"><div class="wall-corner"></div><div class="floor-line"></div><img class="room-photo" alt="" hidden><div class="furniture-mount"></div><span class="scene-corner-label" data-he="הדמיה סכמטית · לא AI" data-en="Schematic preview · not AI">הדמיה סכמטית · לא AI</span></div>
+    <div class="content-grid review-grid"><div class="preview-column"><div id="result-scene" class="scene scene-demo scene-large"><div class="wall-corner"></div><div class="floor-line"></div><img class="room-photo" alt="" hidden><div class="furniture-mount"></div><span class="scene-corner-label" data-he="הדמיה לשם המחשה — לא תוכנית ייצור" data-en="Visual reference — not for manufacture">הדמיה לשם המחשה — לא תוכנית ייצור</span></div>
       <div class="version-head"><span data-he="גרסאות שנוצרו" data-en="Created versions">גרסאות שנוצרו</span><span id="current-label" class="tag">V1</span></div><div id="versions" class="versions" role="group" aria-label="בחירת גרסת עיצוב"></div>
       <div class="button-row"><button class="btn secondary" id="compare" type="button" data-he="השווה מול גרסה קודמת" data-en="Compare with previous">השווה מול גרסה קודמת</button><button class="btn ghost" id="return-config" type="button" data-he="שנה פרטים" data-en="Edit design">שנה פרטים</button></div>
       <div id="comparison" class="comparison" hidden></div>
@@ -155,8 +156,8 @@
 <div id="update-banner" hidden role="status"><span data-he="גרסה חדשה זמינה" data-en="Update available">גרסה חדשה זמינה</span><button type="button" id="apply-update" data-he="עדכן כעת" data-en="Update now">עדכן כעת</button></div>
 <dialog id="approval-dialog" aria-labelledby="dialog-title"><div class="dialog-content"><div class="eyebrow">GATE 1</div><h2 id="dialog-title" data-he="לאשר את ההדמיה?" data-en="Approve this preview?">לאשר את ההדמיה?</h2><p id="dialog-version"></p><p data-he="אישור זה מתייחס למראה בלבד, ולא למידות, לעמידות או למוכנות לייצור." data-en="This approves appearance only, not dimensions, durability or manufacturing readiness.">אישור זה מתייחס למראה בלבד, ולא למידות, לעמידות או למוכנות לייצור.</p><div class="button-row"><button id="cancel-approval" class="btn ghost" type="button" data-he="חזור" data-en="Back">חזור</button><button id="confirm-approval" class="btn primary" type="button" data-he="מאשר את המראה" data-en="Approve appearance">מאשר את המראה</button></div></div></dialog>
 <footer><span>ASSEMBL LAB — UX STUDY / 2026</span><span data-he="כל הנתונים בדפדפן בלבד · אין שליחה לשרת" data-en="Local browser only · no data uploaded">כל הנתונים בדפדפן בלבד · אין שליחה לשרת</span></footer>
-<script src="./design-studio.js?v=mvp26-20261118"></script>
-<script src="./nightstand-intent.js?v=mvp26-20261118" defer></script>
-<script type="module" src="./return-3d.mjs?v=mvp26-20261118"></script>
-<script type="module" src="./personal-coffee-hero.mjs?v=mvp26-20261118"></script>
+<script src="./design-studio.js?v=mvp27-20261118"></script>
+<script src="./nightstand-intent.js?v=mvp27-20261118" defer></script>
+<script type="module" src="./return-3d.mjs?v=mvp27-20261118"></script>
+<script type="module" src="./personal-coffee-hero.mjs?v=mvp27-20261118"></script>
 </body></html>
