@@ -107,6 +107,11 @@ def run(browser_path,output):
                     e=>window.approvedSelections.push(e.detail));
                 }""")
                 flow_to_config(page)
+                # Reject off-range coffee dimensions before creating a version.
+                page.locator('#diameter-cm').fill('39')
+                page.locator('#generate').click()
+                expect(page.locator('#design-error')).to_be_visible()
+                expect(page.locator('#configure')).to_be_visible()
                 set_design(page,'walnut','curved-open',78,60,40)
                 page.locator('#description').fill(
                     'PRIVATE_NOTE_NOT_FOR_GLB customer@example.invalid')
@@ -188,6 +193,13 @@ def run(browser_path,output):
                 if w in (390,1440):
                     page.screenshot(path=str(output/f'approved-personal-coffee-glb-{w}.png'),
                                     full_page=True)
+                # Quick actions are coffee-specific and generate a distinct round version.
+                page.locator('#approved-back').click()
+                page.locator('.quick-actions [data-change="baseStyle"]').click()
+                expect(page.locator('#current-label')).to_have_text('V3')
+                expect(page.locator('#result-scene svg[data-furniture="round-coffee-table"]')).to_be_visible()
+                assert page.locator('#result-scene svg').get_attribute('data-base-style')=='curved-ring'
+                expect(page.locator('#design-summary')).to_contain_text('רגליים מעוקלות עם טבעת')
                 results.append({'viewport':w,'approved_versions':3,
                     'reference_glb_sha256':original_hash,
                     'customer_fields_altered_geometry':False})
