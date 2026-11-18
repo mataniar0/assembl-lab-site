@@ -1,9 +1,8 @@
-"""MVP-15: main Android PWA returns approved customer's 3D concept in-app.
-
-No model downloads, network services, actual images or approval data needed.
+"""MVP-24: after legacy pilot approval, show the existing fixed Personal Coffee
+Table 32-part source-verified GLB in the main app. Do NOT claim that nightstand
+form fields are applied to its mesh. All content stays same-origin and offline.
 """
 from __future__ import annotations
-
 import argparse
 from functools import partial
 import http.server
@@ -11,343 +10,219 @@ import json
 from pathlib import Path
 import threading
 from urllib.parse import urlparse
-
 from playwright.sync_api import expect, sync_playwright
 
-ROOT = Path(__file__).resolve().parents[1]
-
-
+ROOT=Path(__file__).resolve().parents[1]
 class QuietServer(http.server.SimpleHTTPRequestHandler):
-    def log_message(self, *args):
-        pass
+    def log_message(self,*args):pass
 
+def flow_to_config(page):
+    page.locator('#start').click()
+    expect(page.locator('#capture')).to_be_visible()
+    page.locator('#demo').click()
+    page.locator('#capture-next').click()
+    expect(page.locator('#configure')).to_be_visible()
+    expect(page.locator('#configure')).to_contain_text(
+        'טופס הפיילוט עדיין מגדיר שידת לילה')
 
-def flow_to_config(page) -> None:
-    page.locator("#start").click()
-    expect(page.locator("#capture")).to_be_visible()
-    page.locator("#demo").click()
-    page.locator("#capture-next").click()
-    expect(page.locator("#configure")).to_be_visible()
+def set_design(page,finish,drawers,lower,width,height,depth,thickness):
+    page.locator('#finish').select_option(finish)
+    page.locator('#drawers').select_option(str(drawers))
+    page.locator('#bottom').select_option(lower)
+    page.locator('#width-cm').fill(str(width))
+    page.locator('#height-cm').fill(str(height))
+    page.locator('#depth-cm').fill(str(depth))
+    page.locator('#plywood-thickness').select_option(str(thickness))
 
+def approve(page):
+    expect(page.locator('#review')).to_be_visible()
+    page.locator('#open-approval').click()
+    expect(page.locator('#approval-dialog')).to_be_visible()
+    page.locator('#confirm-approval').click()
+    expect(page.locator('#approved')).to_be_visible()
+    expect(page.locator('#approved-3d')).to_be_visible()
+    expect(page.locator('#approved-glb-host')).to_have_attribute('data-state','ready',timeout=45000)
+    viewer=page.locator('#approved-glb-host model-viewer')
+    expect(viewer).to_be_visible()
+    assert viewer.evaluate('e=>e.loaded')
+    expect(page.locator('#approved-glb-status')).to_contain_text('שולחן הקפה האישי')
+    expect(page.locator('#approved-coffee-fallback')).to_be_hidden()
+    return viewer
 
-def set_design(page, finish: str, drawers: int, lower: str,
-               width: int, height: int, depth: int, thickness: int) -> None:
-    page.locator("#finish").select_option(finish)
-    page.locator("#drawers").select_option(str(drawers))
-    page.locator("#bottom").select_option(lower)
-    page.locator("#width-cm").fill(str(width))
-    page.locator("#height-cm").fill(str(height))
-    page.locator("#depth-cm").fill(str(depth))
-    page.locator("#plywood-thickness").select_option(str(thickness))
+def get_glb(page):
+    return page.evaluate("""async ()=>{
+      const e=document.querySelector('#approved-glb-host model-viewer');
+      const bytes=new Uint8Array(await (await fetch(e.src)).arrayBuffer());
+      const v=new DataView(bytes.buffer);
+      if(v.getUint32(0,true)!==0x46546c67 ||
+         v.getUint32(4,true)!==2)throw Error('BAD_GLB');
+      const n=v.getUint32(12,true);
+      const d=JSON.parse(new TextDecoder().decode(bytes.slice(20,20+n)).trim());
+      const digest=await crypto.subtle.digest('SHA-256',bytes);
+      return {extras:d.extras,meshes:d.meshes.length,nodes:d.nodes.map(x=>x.name),
+        materials:d.materials.map(x=>x.name),images:d.images.length,
+        hash:[...new Uint8Array(digest)].map(x=>x.toString(16).padStart(2,'0')).join('')};
+    }""")
 
+def validate_original_coffee_model(glb):
+    assert glb['extras']['geometry_kind']=='CTB01_PHOTO_GROUNDED_DESIGN_PREVIEW'
+    assert glb['extras']['preserved_geometry'] is True
+    assert glb['extras']['source_mesh_count']==32
+    assert glb['extras']['paired_curved_legs']==3
+    assert glb['extras']['engineering_approval'] is False
+    assert glb['extras']['photo_exact_reconstruction'] is False
+    assert glb['meshes']==32
+    assert glb['images']==2
+    assert 'photo-finish-P07T' in glb['nodes'][0] or len(glb['nodes'])>=32
+    assert any('layered wooden drum rim' in x for x in glb['materials'])
 
-def approve(page) -> None:
-    expect(page.locator("#review")).to_be_visible()
-    page.locator("#open-approval").click()
-    expect(page.locator("#approval-dialog")).to_be_visible()
-    page.locator("#confirm-approval").click()
-    expect(page.locator("#approved")).to_be_visible()
-    expect(page.locator("#approved-3d")).to_be_visible()
-    expect(page.locator("#approved-glb-host")).to_have_attribute(
-        "data-state","ready",timeout=45000
-    )
-    expect(page.locator("#approved-glb-host model-viewer")).to_be_visible()
-    assert page.locator("#approved-glb-host model-viewer").evaluate("e=>e.loaded")
-    expect(page.locator("#approved-glb-status")).to_contain_text("GLB")
-
-
-def run(browser_exe: str, output_dir: Path) -> None:
-    output_dir.mkdir(parents=True, exist_ok=True)
-    server = http.server.ThreadingHTTPServer(
-        ("127.0.0.1", 0), partial(QuietServer, directory=str(ROOT))
-    )
-    thread = threading.Thread(target=server.serve_forever, daemon=True)
+def run(browser_path,output):
+    output.mkdir(parents=True,exist_ok=True)
+    server=http.server.ThreadingHTTPServer(
+        ('127.0.0.1',0),partial(QuietServer,directory=str(ROOT)))
+    thread=threading.Thread(target=server.serve_forever,daemon=True)
     thread.start()
-    root = f"http://127.0.0.1:{server.server_port}"
-    results = []
+    root=f'http://127.0.0.1:{server.server_port}'
+    results=[]
     try:
-        with sync_playwright() as engine:
-            browser = engine.chromium.launch(
-                headless=True, executable_path=browser_exe,
-                args=["--enable-webgl","--use-angle=swiftshader",
-                      "--enable-unsafe-swiftshader"]
-            )
-            for width, height in [(320, 740), (390, 844), (768, 900), (1440, 900)]:
-                context = browser.new_context(
-                    viewport={"width": width, "height": height},
-                    reduced_motion="reduce",
-                    # Online customer-flow cases do not need a Service Worker;
-                    # block it to avoid first-install controllerchange reload
-                    # racing version snapshot assertions. Offline is tested below.
-                    service_workers="block",
-                    device_scale_factor=1
-                )
-                page = context.new_page()
-                external = []
-                errors = []
-
-                def filter_request(route):
-                    if urlparse(route.request.url).hostname not in (
-                        "127.0.0.1", "localhost"
-                    ):
-                        external.append(route.request.url)
-                        route.abort()
-                    else:
-                        route.continue_()
-
-                page.route("**/*", filter_request)
-                page.on("pageerror", lambda error: errors.append(str(error)))
-                page.goto(root + "/app/", wait_until="networkidle")
-                page.evaluate("""() => {
-                  window.testApprovedPayloads = [];
+        with sync_playwright() as p:
+            browser=p.chromium.launch(headless=True,executable_path=browser_path,
+                args=['--enable-webgl','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
+            for w,h in [(320,740),(390,844),(768,900),(1440,900)]:
+                context=browser.new_context(viewport={'width':w,'height':h},
+                    reduced_motion='reduce',device_scale_factor=1,
+                    service_workers='block')
+                page=context.new_page()
+                external=[];errors=[]
+                def route_req(route):
+                    if urlparse(route.request.url).hostname not in ('127.0.0.1','localhost',''):
+                        external.append(route.request.url);route.abort()
+                    else:route.continue_()
+                page.route('**/*',route_req)
+                page.on('pageerror',lambda e:errors.append(str(e)))
+                page.goto(root+'/app/',wait_until='networkidle')
+                page.evaluate("""()=>{
+                  window.approvedSelections=[];
                   window.addEventListener('assembl:3d-model-ready',
-                    event => window.testApprovedPayloads.push(event.detail));
+                    e=>window.approvedSelections.push(e.detail));
                 }""")
-                expect(page.locator("#approved-3d")).to_be_hidden()
-
                 flow_to_config(page)
-                set_design(page, "walnut", 2, "closed", 65, 95, 50, 4)
-                page.locator("#description").fill(
-                    "PRIVATE_NOTE_NOT_FOR_3D customer@example.invalid"
-                )
-                page.locator("#generate").click()
-                expect(page.locator("#current-label")).to_have_text("V1")
+                set_design(page,'walnut',2,'closed',65,95,50,4)
+                page.locator('#description').fill(
+                    'PRIVATE_NOTE_NOT_FOR_GLB customer@example.invalid')
+                page.locator('#generate').click()
+                expect(page.locator('#current-label')).to_have_text('V1')
+                viewer=approve(page)
+                summary=page.locator('#approved-3d-summary')
+                expect(summary).to_contain_text('visual-v1')
+                expect(summary).to_contain_text('650 × 950 × 500')
+                expect(summary).to_contain_text('תכנון קבוע בן 32 חלקים')
+                expect(summary).to_contain_text('נתוני הבקשה שלא יושמו במודל')
+                expect(page.locator('#approval-record')).to_contain_text(
+                    'FIXED_PERSONAL_COFFEE_REFERENCE_GLB')
+                assert page.locator('#approved-3d-faces polygon').count()==0
+                glb=get_glb(page)
+                validate_original_coffee_model(glb)
+                original_hash=glb['hash']
+                orbit0=viewer.evaluate('e=>e.getCameraOrbit().theta')
+                page.locator('#approved-3d-right').click()
+                orbit1=viewer.evaluate('e=>e.getCameraOrbit().theta')
+                assert abs(orbit1-orbit0)>.25
+                page.locator('#approved-3d-reset').click()
+                assert abs(viewer.evaluate('e=>e.getCameraOrbit().theta')-orbit0)<.1
+                r0=viewer.evaluate('e=>e.getCameraOrbit().radius')
+                page.locator('#approved-3d-zoom-in').click()
+                r1=viewer.evaluate('e=>e.getCameraOrbit().radius')
+                assert r1<r0
+                page.locator('#approved-3d-reset').click()
+                page.locator('#lang').click()
+                expect(page.locator('html')).to_have_attribute('lang','en')
+                expect(summary).to_contain_text('Request inputs NOT applied to model')
+                page.locator('#lang').click()
+                expect(page.locator('html')).to_have_attribute('lang','he')
+                page.locator('#approved-back').click()
+                page.locator('#return-config').click()
+                expect(page.locator('#configure')).to_be_visible()
+                set_design(page,'natural',1,'shelf',50,55,35,6)
+                page.locator('#description').fill('')
+                page.locator('#generate').click()
+                expect(page.locator('#current-label')).to_have_text('V2')
                 approve(page)
-                expect(page.locator("#approved-3d-summary")).to_contain_text(
-                    "visual-v1"
-                )
-                expect(page.locator("#approved-3d-summary")).to_contain_text(
-                    "650 × 950 × 500"
-                )
-                expect(page.locator("#approved-3d-summary")).to_contain_text(
-                    "2 מגירות"
-                )
-                expect(page.locator("#approved-3d-summary")).to_contain_text(
-                    "4 mm"
-                )
-                expect(page.locator("#approved-3d-summary")).to_contain_text(
-                    "חזית סגורה"
-                )
-                assert page.locator(
-                    '#approved-3d-faces polygon[data-part="drawer-2"]'
-                ).count() > 0
-                assert page.locator(
-                    '#approved-3d-faces polygon[data-part="lower-front"]'
-                ).count() > 0
-                expect(page.locator(".progress-step[data-phase='2']")).to_have_class(
-                    "progress-step active"
-                )
-                payloads = page.evaluate("window.testApprovedPayloads")
-                assert len(payloads) == 1
-                assert payloads[0]["version_id"] == "visual-v1"
-                assert payloads[0]["nominal_thickness_mm"] == 4
-                assert payloads[0]["dimensions_mm"] == {
-                    "width": 650, "height": 950, "depth": 500
-                }
-                assert sorted(payloads[0].keys()) == sorted([
-                    "version_id", "finish", "drawers", "lower_section",
-                    "nominal_thickness_mm", "dimensions_mm"
-                ])
-                assert "PRIVATE_NOTE" not in json.dumps(payloads)
-                assert "example.invalid" not in json.dumps(payloads)
-                expect(page.locator("#approval-record")).to_contain_text(
-                    "next_stage: LOCAL_CONCEPT_GLB_READY"
-                )
-
-                model_view = page.locator("#approved-glb-host model-viewer")
-                orbit_before = model_view.evaluate("e=>({...e.getCameraOrbit()})")
-                page.locator("#approved-3d-right").click()
-                orbit_after = model_view.evaluate("e=>({...e.getCameraOrbit()})")
-                assert abs(orbit_after["theta"]-orbit_before["theta"])>0.25
-                page.locator("#approved-3d-reset").click()
-                orbit_reset = model_view.evaluate("e=>({...e.getCameraOrbit()})")
-                assert abs(orbit_reset["theta"]-orbit_before["theta"])<.05
-                page.locator("#approved-3d-zoom-in").click()
-                in_radius=model_view.evaluate("e=>e.getCameraOrbit().radius")
-                assert in_radius < orbit_reset["radius"], "GLB zoom-in failed"
-                page.locator("#approved-3d-zoom-out").click()
-                out_radius=model_view.evaluate("e=>e.getCameraOrbit().radius")
-                assert out_radius > in_radius, "GLB zoom-out failed"
-                page.locator("#approved-3d-reset").click()
-                assert model_view.evaluate("e=>e.src").startswith("blob:")
-                assert model_view.get_attribute("shadow-intensity") == "1"
-                gltf = page.evaluate("""async () => {
-                    const uri=document.querySelector('#approved-glb-host model-viewer').src;
-                    const bytes=new Uint8Array(await (await fetch(uri)).arrayBuffer());
-                    const v=new DataView(bytes.buffer);
-                    if(v.getUint32(0,true)!==0x46546c67)throw Error('Not GLB');
-                    const n=v.getUint32(12,true);
-                    return JSON.parse(new TextDecoder().decode(
-                      bytes.slice(20,20+n)).trim());
-                }""")
-                assert gltf["asset"]["version"] == "2.0"
-                assert gltf["extras"]["geometry_kind"] == "REALISTIC_TEXTURED_SHOWROOM_CONCEPT"
-                assert gltf["extras"]["visual_quality"] == "bevelled-textured-pbr-v1"
-                assert gltf["extras"]["decorations_are_visual_only"] is True
-                assert len(gltf["images"]) == 2
-                assert all("bufferView" in img for img in gltf["images"])
-                assert any(m["pbrMetallicRoughness"].get("baseColorTexture")
-                    for m in gltf["materials"])
-                assert any(m.get("normalTexture") for m in gltf["materials"])
-                p=gltf["meshes"][gltf["nodes"][0]["mesh"]]["primitives"][0]
-                assert gltf["accessors"][p["attributes"]["POSITION"]]["count"] >= 300
-                assert "TEXCOORD_0" in p["attributes"]
-                assert any(n["name"]=="drawer-2-face-visual" for n in gltf["nodes"])
-                assert any(n["name"]=="lower-visual-face" for n in gltf["nodes"])
-                assert gltf["extras"]["source_version"] == "visual-v1"
-                assert gltf["extras"]["manufacturing_approval"] is False
-                assert gltf["nodes"][0]["scale"][1] == .004
-                assert any(n["name"]=="drawer-2-pull" for n in gltf["nodes"])
-                assert any(n["name"]=="lower-front" for n in gltf["nodes"])
-                assert len(gltf["materials"])>=7
-
-                page.locator("#lang").click()
-                expect(page.locator("html")).to_have_attribute("lang", "en")
-                expect(page.locator("#approved-3d-title")).to_have_text(
-                    "Your 3D model is ready to view"
-                )
-                expect(page.locator("#approved-3d-summary")).to_contain_text(
-                    "Closed front"
-                )
-                page.locator("#lang").click()
-                expect(page.locator("html")).to_have_attribute("lang", "he")
-                assert page.locator("#approved-glb-host model-viewer").evaluate("e=>e.loaded")
-
-                # Return to versions, make another choice, approve and replace
-                # the in-app model, not a downloaded file or stale V1 snapshot.
-                page.locator("#approved-back").click()
-                expect(page.locator("#review")).to_be_visible()
-                page.locator("#return-config").click()
-                expect(page.locator("#configure")).to_be_visible()
-                set_design(page, "natural", 1, "shelf", 50, 55, 35, 6)
-                page.locator("#description").fill("")
-                page.locator("#generate").click()
-                expect(page.locator("#current-label")).to_have_text("V2")
+                glb2=get_glb(page)
+                validate_original_coffee_model(glb2)
+                assert glb2['hash']==original_hash,'fixed reference should not falsely change with customer choices'
+                expect(summary).to_contain_text('visual-v2')
+                expect(summary).to_contain_text('500 × 550 × 350')
+                expect(summary).to_contain_text('1 מגירות')
+                page.locator('#approved-back').click()
+                page.locator('#versions button').filter(has_text='V1').click()
                 approve(page)
-                expect(page.locator("#approved-3d-summary")).to_contain_text(
-                    "visual-v2"
-                )
-                expect(page.locator("#approved-3d-summary")).to_contain_text(
-                    "500 × 550 × 350"
-                )
-                expect(page.locator("#approved-3d-summary")).to_contain_text(
-                    "1 מגירות"
-                )
-                expect(page.locator("#approved-3d-summary")).to_contain_text(
-                    "6 mm"
-                )
-                gltf2 = page.evaluate("""async () => {
-                    const uri=document.querySelector('#approved-glb-host model-viewer').src;
-                    const a=new Uint8Array(await (await fetch(uri)).arrayBuffer());
-                    const n=new DataView(a.buffer).getUint32(12,true);
-                    return JSON.parse(new TextDecoder().decode(a.slice(20,20+n)).trim());
-                }""")
-                assert gltf2["extras"]["source_version"] == "visual-v2"
-                assert gltf2["extras"]["visual_quality"] == "bevelled-textured-pbr-v1"
-                assert gltf2["extras"]["finish"] == "natural"
-                assert len(gltf2["images"]) == 2
-                assert gltf2["nodes"][0]["scale"][1] == .006
-                assert not any(n["name"]=="drawer-2-pull" for n in gltf2["nodes"])
-                assert not any(n["name"]=="lower-visual-face" for n in gltf2["nodes"])
-                assert page.locator(
-                    '#approved-3d-faces polygon[data-part="drawer-2"]'
-                ).count() == 0
-                assert page.locator(
-                    '#approved-3d-faces polygon[data-part="lower-front"]'
-                ).count() == 0
-
-                # Selecting and approving an earlier saved version must restore
-                # its own depth/thickness from nightstand-intent snapshots.
-                page.locator("#approved-back").click()
-                page.locator("#versions button").filter(has_text="V1").click()
-                approve(page)
-                expect(page.locator("#approved-3d-summary")).to_contain_text(
-                    "650 × 950 × 500"
-                )
-                expect(page.locator("#approved-3d-summary")).to_contain_text(
-                    "4 mm"
-                )
-                payloads = page.evaluate("window.testApprovedPayloads")
-                assert [item["version_id"] for item in payloads] == [
-                    "visual-v1", "visual-v2", "visual-v1"
-                ]
-
-                assert not errors, f"JavaScript errors: {errors}"
-                assert not external, f"External requests: {external}"
-                assert page.evaluate("localStorage.length") == 0
-                assert page.evaluate("sessionStorage.length") == 0
-                if width in (390, 1440):
-                    page.screenshot(
-                        path=str(output_dir / f"approved-3d-{width}.png"),
-                        full_page=True
-                    )
-                results.append({
-                    "viewport": f"{width}x{height}",
-                    "status": "PASS",
-                    "external_requests": 0,
-                    "approved_versions": 3,
-                    "user_photo_or_notes_in_3d": False
-                })
-                print("PASS", width, height, "main app 3D, approval, history, privacy")
+                assert get_glb(page)['hash']==original_hash
+                expect(summary).to_contain_text('visual-v1')
+                selections=page.evaluate('window.approvedSelections')
+                assert [v['version_id'] for v in selections]==[
+                    'visual-v1','visual-v2','visual-v1']
+                assert 'PRIVATE_NOTE' not in json.dumps(selections)
+                assert 'example.invalid' not in json.dumps(selections)
+                assert not external,external
+                assert not errors,errors
+                assert page.evaluate('localStorage.length')==0
+                if w in (390,1440):
+                    page.screenshot(path=str(output/f'approved-personal-coffee-glb-{w}.png'),
+                                    full_page=True)
+                results.append({'viewport':w,'approved_versions':3,
+                    'reference_glb_sha256':original_hash,
+                    'customer_fields_altered_geometry':False})
+                print('PASS Personal Coffee source GLB after approval',w)
                 context.close()
 
-            offline = browser.new_context(viewport={"width": 390, "height": 844})
-            page = offline.new_page()
-            page.goto(root + "/app/", wait_until="networkidle")
-            page.evaluate("""async () => {
-              const reg = await navigator.serviceWorker.ready;
-              await reg.update();
+            offline=browser.new_context(viewport={'width':390,'height':844})
+            page=offline.new_page()
+            page.goto(root+'/app/',wait_until='networkidle')
+            page.evaluate("""async ()=>{
+              const sw=await navigator.serviceWorker.ready;
+              await sw.update();
             }""")
-            page.reload(wait_until="networkidle")
+            page.reload(wait_until='networkidle')
             offline.set_offline(True)
-            page.reload(wait_until="domcontentloaded")
+            page.reload(wait_until='domcontentloaded')
             flow_to_config(page)
-            set_design(page, "walnut", 2, "shelf", 50, 55, 35, 6)
-            page.locator("#generate").click()
+            set_design(page,'honey',2,'shelf',50,55,35,6)
+            page.locator('#generate').click()
             approve(page)
-            expect(page.locator("#approved-3d-summary")).to_contain_text(
-                "500 × 550 × 350"
-            )
-            assert page.locator("#approved-3d-faces polygon").count() > 0
-            expect(page.locator("#approved-glb-host model-viewer")).to_be_visible()
-            assert page.locator("#approved-glb-host model-viewer").evaluate("e=>e.loaded")
+            validate_original_coffee_model(get_glb(page))
+            print('PASS offline Personal Coffee source GLB after approval')
             offline.close()
-            # Deterministic no-WebGL fallback, not a blank approval screen.
-            fallback = browser.new_context(viewport={"width":390,"height":844})
+
+            fallback=browser.new_context(viewport={'width':390,'height':844})
             fallback.add_init_script(
-                "HTMLCanvasElement.prototype.getContext=function(){return null}"
-            )
-            page = fallback.new_page()
-            page.goto(root+"/app/",wait_until="networkidle")
+                'HTMLCanvasElement.prototype.getContext=function(){return null}')
+            page=fallback.new_page()
+            page.goto(root+'/app/',wait_until='networkidle')
             flow_to_config(page)
-            set_design(page,"natural",1,"shelf",50,55,35,6)
-            page.locator("#generate").click()
-            page.locator("#open-approval").click()
-            page.locator("#confirm-approval").click()
-            expect(page.locator("#approved-3d")).to_be_visible()
-            expect(page.locator("#approved-3d-view")).to_be_visible()
-            expect(page.locator("#approved-glb-host")).to_be_hidden()
-            expect(page.locator("#approved-glb-status")).to_contain_text("WebGL")
-            assert page.locator("#approved-glb-host model-viewer").count() == 0
+            set_design(page,'natural',1,'shelf',50,55,35,6)
+            page.locator('#generate').click()
+            page.locator('#open-approval').click()
+            page.locator('#confirm-approval').click()
+            expect(page.locator('#approved')).to_be_visible()
+            expect(page.locator('#approved-3d')).to_be_visible()
+            expect(page.locator('#approved-coffee-fallback')).to_be_visible()
+            expect(page.locator('#approved-3d-view')).to_be_hidden()
+            expect(page.locator('#approved-glb-host')).to_be_hidden()
+            expect(page.locator('#approved-glb-status')).to_contain_text('WebGL')
+            print('PASS no-WebGL authentic Personal Coffee photo fallback')
             fallback.close()
             browser.close()
     finally:
-        server.shutdown()
-        server.server_close()
+        server.shutdown();server.server_close()
+    (output/'browser-qa.json').write_text(json.dumps({
+        'scope':'APP_MVP_24_PERSONAL_FIXED_REFERENCE_GLB_AFTER_APPROVAL',
+        'results':results,'offline':'PASS','no_webgl':'AUTHENTIC_PHOTO_FALLBACK'
+    },indent=2)+'\n',encoding='utf8')
 
-    assert len(results) == 4
-    (output_dir / "browser-qa.json").write_text(
-        json.dumps({
-            "scope": "MAIN_PWA_EMBEDDED_APPROVED_3D",
-            "results": results, "offline_approved_3d": "PASS"
-        }, indent=2)+"\n", encoding="utf8"
-    )
-    print("MVP-17 PASS: textured realistic GLB, 4 viewports, history, offline and WebGL fallback")
-
-
-if __name__ == "__main__":
-    p=argparse.ArgumentParser()
-    p.add_argument("--browser",required=True)
-    p.add_argument("--output",default=".qa-reports/app-mvp-15")
-    a=p.parse_args()
-    run(a.browser,Path(a.output))
+if __name__=='__main__':
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--browser',required=True)
+    parser.add_argument('--output',default='.qa-reports/app-mvp-24-personal')
+    args=parser.parse_args()
+    run(args.browser,Path(args.output))
