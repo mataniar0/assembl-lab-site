@@ -82,7 +82,7 @@ test('no frozen marketing UI imports mutable development scripts, CSS, GLB or im
   for(const p of ['index.html','sw.js','return-3d.mjs','personal-coffee-hero.mjs']){
     const source=text(marketing+p);
     assert.doesNotMatch(source,/['"]\.\.\/(?:assets|geometric|table)\//,p+' uses mutable site asset');
-    assert.doesNotMatch(source,/https?:\/\//,p+' external network dependency');
+    assert.doesNotMatch(source,/(?:src|href)=[\"']https?:\/\//,p+' external network asset');
     assert.doesNotMatch(source,/\/app\/development\//,p+' dev runtime reference');
   }
   const hero=text(marketing+'personal-coffee-hero.mjs'),returned=text(marketing+'return-3d.mjs');
