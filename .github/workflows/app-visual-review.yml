@@ -37,6 +37,10 @@ on:
       - 'tests/app_return3d_browser_ci.py'
       - 'app/sw.js'
       - 'app/index.html'
+      - 'app/development/**'
+      - 'app/marketing/**'
+      - 'app/mode-selector*'
+      - 'tests/app_dual_mode_browser_ci.py'
       - 'tests/app_concept3d_browser_ci.py'
       - 'app/preview-fixtures/**'
       - 'tests/app_preview_browser_ci.py'
@@ -69,18 +73,21 @@ jobs:
           node --check app/realistic-glb.mjs
           node --check app/showcase-glb.mjs
           node --check app/return-3d.mjs
+          node --check app/mode-selector.js
+          node --check app/development/sw.js
+          node --check app/marketing/v1/sw.js
           node --check app/concept-export.mjs
           node --check app/concept-geometry.mjs
           node --check app/concept-3d.mjs
           node --check app/preview-state.mjs
           node --check app/preview-lab.mjs
           node --check app/preview-fixtures/generate-fixtures.mjs
-          node --test app/preview-state.test.mjs app/preview-fixtures/fixtures.test.mjs app/concept-geometry.test.mjs app/concept-export.test.mjs app/return-3d.test.mjs app/showcase-glb.test.mjs app/personal-coffee-hero.test.mjs app/coffee-showroom-glb.test.mjs app/photo-grounded-coffee-glb.test.mjs
+          node --test app/preview-state.test.mjs app/preview-fixtures/fixtures.test.mjs app/concept-geometry.test.mjs app/concept-export.test.mjs app/return-3d.test.mjs app/showcase-glb.test.mjs app/personal-coffee-hero.test.mjs app/coffee-showroom-glb.test.mjs app/photo-grounded-coffee-glb.test.mjs app/mode-selector.test.mjs
 
   visual-browser-qa:
     name: Mobile/Desktop Chromium synthetic review
     runs-on: ubuntu-24.04
-    timeout-minutes: 14
+    timeout-minutes: 18
     env:
       PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.qa-browsers
       PYTHONUNBUFFERED: "1"
@@ -123,6 +130,9 @@ jobs:
           mkdir -p .qa-reports/app-mvp-21
           python tests/app_personal_coffee_hero_browser_ci.py --browser "$browser_path" \
             --output .qa-reports/app-mvp-21 2>&1 | tee .qa-reports/app-mvp-21/browser.log
+          mkdir -p .qa-reports/app-mvp-28
+          python tests/app_dual_mode_browser_ci.py --browser "$browser_path" \
+            --output .qa-reports/app-mvp-28 2>&1 | tee .qa-reports/app-mvp-28/browser.log
       - name: Retain safe synthetic screenshots and QA data
         if: always()
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
@@ -133,5 +143,6 @@ jobs:
             .qa-reports/app-mvp-13/
             .qa-reports/app-mvp-15/
             .qa-reports/app-mvp-21/
+            .qa-reports/app-mvp-28/
           if-no-files-found: warn
           retention-days: 14

@@ -263,8 +263,8 @@ def run(browser_exe: str, output_dir: Path) -> None:
             pwa.goto(root + "/app/index.html", wait_until="networkidle")
             # The main app now configures a round coffee table; archived preview-lab
             # remains independently available via its URL and SW shell.
-            expect(pwa.locator('#intro-title')).to_be_visible()
-            assert pwa.locator('a[href="./preview-lab.html"]').count()==0
+            expect(pwa.locator('main h1')).to_be_visible()
+            assert pwa.locator('a[href="./marketing/v1/"]').count()==1
             pwa.evaluate("""async () => {
                 const registration = await navigator.serviceWorker.ready;
                 await registration.update();
@@ -273,7 +273,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
             expect(pwa.locator("#room")).to_have_attribute("data-fixture", "png")
             pwa_context.set_offline(True)
             pwa.goto(root + "/app/index.html", wait_until="domcontentloaded")
-            expect(pwa.locator("#intro-title")).to_be_visible()
+            expect(pwa.locator("main h1")).to_be_visible()
             assert pwa.locator("#ab-summary").count() == 0, (
                 "Offline home must not be replaced by preview page"
             )

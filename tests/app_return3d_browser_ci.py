@@ -36,7 +36,8 @@ def flow_to_config(page):
     assert page.evaluate("""async ()=>{
       const names=['coffee-reference-room.webp','coffee-empty-room.webp'];
       for(const name of names){
-        const response=await fetch('./assets/'+name);
+        const assetPrefix=location.pathname.includes('/marketing/v1/')?'./assets/':'../assets/';
+         const response=await fetch(assetPrefix+name);
         if(!response.ok||!(response.headers.get('content-type')||'').includes('image'))
           return false;
         const bitmap=await createImageBitmap(await response.blob());
@@ -124,7 +125,7 @@ def run(browser_path,output):
                     else:route.continue_()
                 page.route('**/*',route_req)
                 page.on('pageerror',lambda e:errors.append(str(e)))
-                page.goto(root+'/app/',wait_until='networkidle')
+                page.goto(root+'/app/development/',wait_until='networkidle')
                 page.evaluate("""()=>{
                   window.approvedSelections=[];
                   window.addEventListener('assembl:3d-model-ready',
@@ -235,7 +236,7 @@ def run(browser_path,output):
 
             offline=browser.new_context(viewport={'width':390,'height':844})
             page=offline.new_page()
-            page.goto(root+'/app/',wait_until='networkidle')
+            page.goto(root+'/app/development/',wait_until='networkidle')
             page.evaluate("""async ()=>{
               const sw=await navigator.serviceWorker.ready;
               await sw.update();
@@ -247,8 +248,8 @@ def run(browser_path,output):
             expect(page.locator('#config-scene')).to_have_attribute(
                 'data-reference-photo','true')
             assert page.evaluate("""async ()=>{
-              const assets=['./assets/coffee-reference-room.webp',
-                './assets/coffee-empty-room.webp'];
+              const assets=['../assets/coffee-reference-room.webp',
+                '../assets/coffee-empty-room.webp'];
               return (await Promise.all(assets.map(async url=>
                 !!(await caches.match(url))))).every(Boolean);
             }"""),'photo background assets cached for offline use'
@@ -263,7 +264,7 @@ def run(browser_path,output):
             fallback.add_init_script(
                 'HTMLCanvasElement.prototype.getContext=function(){return null}')
             page=fallback.new_page()
-            page.goto(root+'/app/',wait_until='networkidle')
+            page.goto(root+'/app/development/',wait_until='networkidle')
             flow_to_config(page)
             set_design(page,'natural','curved-ring',62,45,20)
             page.locator('#generate').click()
