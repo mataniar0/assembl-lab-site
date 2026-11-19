@@ -155,9 +155,9 @@ test('every approved finish, drawer layout and thickness preserve actual size no
   assert.ok(new Set([...textureHashes.values()]).size>=2);
 });
 test('viewer connects only pinned site library and blob data; app and offline service worker retain fallback',()=>{
-  const html=readFileSync(new URL('./index.html',import.meta.url),'utf8');
+  const html=readFileSync(new URL('./development/index.html',import.meta.url),'utf8');
   const source=readFileSync(new URL('./return-3d.mjs',import.meta.url),'utf8');
-  const sw=readFileSync(new URL('./sw.js',import.meta.url),'utf8');
+  const sw=readFileSync(new URL('./development/sw.js',import.meta.url),'utf8');
   assert.match(html,/id="approved-glb-host"/);
   assert.match(html,/id="approved-3d-view"/);
   assert.match(html,/connect-src 'self' blob:/);
@@ -170,8 +170,8 @@ test('viewer connects only pinned site library and blob data; app and offline se
   assert.match(source,/webGLAvailable/);
   assert.match(source,/failGLB/);
   assert.match(sw,/assets\/vendor\/model-viewer-4\.1\.0\/model-viewer\.min\.js/);
-  assert.match(sw,/'\.\/showcase-glb\.mjs'/);
-  assert.match(sw,/'\.\/realistic-glb\.mjs'/);
+  assert.match(sw,/'\.\.\/showcase-glb\.mjs'/);
+  assert.match(sw,/'\.\.\/realistic-glb\.mjs'/);
   assert.match(source,/fetch\(sourceGlb\)/); // same-origin frozen reference GLB
   assert.doesNotMatch(source,/XMLHttpRequest|localStorage|sessionStorage|indexedDB|supabase|openai|cdn\./gi);
 });
