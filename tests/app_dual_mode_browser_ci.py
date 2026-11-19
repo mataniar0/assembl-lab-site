@@ -85,11 +85,38 @@ def run(executable,output):
             escaped=[url for url in urls if url.startswith('/app/') and
                      not (url.startswith('/app/marketing/v1/') or url in ('/app/',))]
             assert not escaped,'Marketing fetched a mutable app asset: '+repr(escaped)
-            assert '/app/marketing/v1/_snapshot/table/personal/media/personal-design-preview.glb' in urls
+            # A controlled PWA may satisfy the model fetch from CacheStorage,
+            # so Playwright's network-route list alone is not a complete request audit.
+            source_path='/app/marketing/v1/_snapshot/table/personal/media/personal-design-preview.glb'
+            resources=page.evaluate("""()=>performance.getEntriesByType('resource').map(
+              e=>new URL(e.name).pathname)""")
+            cached=page.evaluate("""async()=>{
+              const url=new URL('./_snapshot/table/personal/media/personal-design-preview.glb',location.href);
+              const response=await caches.match(url);
+              if(!response)return false;
+              const bytes=new Uint8Array(await response.arrayBuffer());
+              return bytes.length===1700936&&
+                new TextDecoder().decode(bytes.slice(0,4))==='glTF';
+            }""")
+            assert source_path in resources or cached,{
+                'source_model_not_loaded_or_cached':source_path,'resources':resources[-30:]}
+            audit_resources=[url for url in resources if url.startswith('/app/')]
+            leaked=[url for url in audit_resources if not url.startswith('/app/marketing/v1/')]
+            assert not leaked,'Marketing resource timings include mutable app assets: '+repr(leaked)
             page.screenshot(path=str(output/'marketing-v1-approved-390.png'),full_page=False)
             report['marketing']={'asset_requests':len(urls),'external':len(external),
                 'model':'PERSONAL_COFFEE_FIXED','escape_paths':escaped}
             print('PASS Marketing V1: Geometric intro, round table, fixed Personal Coffee GLB, isolated assets')
+            # The frozen Geometric catalogue link must return to Marketing V1;
+            # the inactive contact link must not open the live inquiry form.
+            page.goto(host+'/app/marketing/v1/_snapshot/geometric/',wait_until='networkidle')
+            expect(page.locator('a[href="../inquiry/?product=geometric"]')).to_have_count(1)
+            page.locator('a[href="../inquiry/?product=geometric"]').click()
+            assert '/app/marketing/v1/_snapshot/inquiry/' in page.url,page.url
+            assert page.locator('#inquiry-form').count()==0
+            page.goto(host+'/app/marketing/v1/_snapshot/geometric/',wait_until='networkidle')
+            page.locator('a[href="../../"]').first.click()
+            expect(page.locator('html')).to_have_attribute('data-app-mode','marketing')
             page.goto(host+'/app/',wait_until='networkidle')
             page.locator('a[href="./development/"]').click()
             expect(page.locator('html')).to_have_attribute('data-app-mode','development')
