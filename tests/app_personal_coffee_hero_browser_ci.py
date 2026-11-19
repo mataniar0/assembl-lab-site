@@ -80,7 +80,7 @@ def run(browser_path,output):
                     else:route.continue_()
                 page.route('**/*',guard)
                 page.on('pageerror',lambda e:errors.append(str(e)))
-                page.goto(root+'/app/',wait_until='networkidle')
+                page.goto(root+'/app/development/',wait_until='networkidle')
                 verify_geometric_photo(page)
                 page.screenshot(path=str(output/f'geometric-intro-photo-{w}.png'),full_page=False)
                 page.locator('#personal-coffee-show-model').click()
@@ -123,15 +123,15 @@ def run(browser_path,output):
             page=stale.new_page()
             stale_errors=[]
             page.on('pageerror',lambda e:stale_errors.append(str(e)))
-            page.goto(root+'/app/',wait_until='networkidle')
+            page.goto(root+'/app/development/',wait_until='networkidle')
             page.evaluate('async ()=>{await navigator.serviceWorker.ready}')
             page.reload(wait_until='networkidle')
             page.evaluate("""async ()=>{
               const old=await caches.open('qa-old-unversioned-entry-assets');
               for(const path of [
-                './personal-coffee-hero.mjs','./return-3d.mjs',
-                './nightstand-intent.js','./design-studio.js','./personal-coffee-hero.css',
-                './return-3d.css'
+                '../personal-coffee-hero.mjs','../return-3d.mjs',
+                '../nightstand-intent.js','../design-studio.js','../personal-coffee-hero.css',
+                '../return-3d.css'
               ]){
                 const css=path.endsWith('.css');
                 const body=css?'#personal-coffee-hero {display:none !important}':
@@ -147,13 +147,13 @@ def run(browser_path,output):
             verify_geometric_photo(page)
             assert page.locator('#personal-coffee-hero').is_visible()
             for selector in [
-                'link[href^="./personal-coffee-hero.css"]',
-                'link[href^="./return-3d.css"]',
-                'script[src^="./personal-coffee-hero.mjs"]',
-                'script[src^="./return-3d.mjs"]',
-                'script[src^="./nightstand-intent.js"]',
-                'link[href^="./demo-room.css"]',
-                'script[src^="./design-studio.js"]'
+                'link[href^="../personal-coffee-hero.css"]',
+                'link[href^="../return-3d.css"]',
+                'script[src^="../personal-coffee-hero.mjs"]',
+                'script[src^="../return-3d.mjs"]',
+                'script[src^="../nightstand-intent.js"]',
+                'link[href^="../demo-room.css"]',
+                'script[src^="../design-studio.js"]'
             ]:
                 assert page.locator(selector).get_attribute('href' if selector.startswith('link') else 'src').endswith(
                     '?v=mvp27-20261118')
@@ -166,7 +166,7 @@ def run(browser_path,output):
 
             offline=browser.new_context(viewport={'width':390,'height':844})
             page=offline.new_page()
-            page.goto(root+'/app/',wait_until='networkidle')
+            page.goto(root+'/app/development/',wait_until='networkidle')
             page.evaluate("""async ()=>{
               const reg=await navigator.serviceWorker.ready;
               await reg.update();
@@ -192,7 +192,7 @@ def run(browser_path,output):
             fallback.add_init_script(
                 'HTMLCanvasElement.prototype.getContext=function(){return null}')
             page=fallback.new_page()
-            page.goto(root+'/app/',wait_until='networkidle')
+            page.goto(root+'/app/development/',wait_until='networkidle')
             verify_geometric_photo(page)
             page.locator('#personal-coffee-show-model').click()
             expect(page.locator('#personal-coffee-photo')).to_be_visible()
