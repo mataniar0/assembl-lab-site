@@ -36,7 +36,8 @@ def flow_to_config(page):
     assert page.evaluate("""async ()=>{
       const names=['coffee-reference-room.webp','coffee-empty-room.webp'];
       for(const name of names){
-        const response=await fetch('./assets/'+name);
+        const assetPrefix=location.pathname.includes('/marketing/v1/')?'./assets/':'../assets/';
+         const response=await fetch(assetPrefix+name);
         if(!response.ok||!(response.headers.get('content-type')||'').includes('image'))
           return false;
         const bitmap=await createImageBitmap(await response.blob());
