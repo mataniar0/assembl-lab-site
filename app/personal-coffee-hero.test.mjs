@@ -7,9 +7,9 @@ const binary=path=>readFileSync(new URL(path,import.meta.url));
 const sha256=bytes=>createHash('sha256').update(bytes).digest('hex');
 
 test('intro uses the exact existing Geometric clean product image and separate frame-only GLB',()=>{
-  const image=binary('../../assets/geometric-engineering-object-clean.webp');
-  const model=binary('../../geometric/media/geometric-v11-design-only.glb');
-  const sourcePage=read('../../geometric/index.html');
+  const image=binary('../assets/geometric-engineering-object-clean.webp');
+  const model=binary('../geometric/media/geometric-v11-design-only.glb');
+  const sourcePage=read('../geometric/index.html');
   const html=read('./development/index.html');
   const js=read('./personal-coffee-hero.mjs');
   assert.equal(image.length,46360);
@@ -33,7 +33,7 @@ test('intro uses the exact existing Geometric clean product image and separate f
 test('intro Geometric image is different from approved Personal Coffee Table reference',()=>{
   const html=read('./development/index.html');
   const return3d=read('./return-3d.mjs');
-  const coffee=binary('../../table/personal/media/personal-design-preview.glb');
+  const coffee=binary('../table/personal/media/personal-design-preview.glb');
   assert.equal(coffee.length,1700936);
   assert.equal(sha256(coffee),'17da2aafb7f17182b940804c22cb2be8dc0430cad26f20c76ca78e08ae9b8841');
   assert.match(return3d,/new URL\('\.\.\/table\/personal\/media\/personal-design-preview\.glb'/);
@@ -83,7 +83,7 @@ test('MVP-25 release URLs prevent mixed Geometric markup with stale round Person
   }
   assert.match(return3d,/photo-grounded-coffee-glb\.mjs\?v=mvp27-20261118/);
   assert.ok(sw.includes("'../photo-grounded-coffee-glb.mjs"+suffix+"'"));
-  assert.match(sw,/assemble-lab-android-development-v1-mvp28/);
+  assert.match(sw,/assemble-lab-development-v1-mvp28/);
   assert.match(html,/data-model-src="\.\.\/\.\.\/geometric\/media\/geometric-v11-design-only\.glb"/);
   assert.match(read('./personal-coffee-hero.mjs'),/next\.src=sourceGlb/);
 });
