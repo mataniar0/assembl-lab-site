@@ -291,6 +291,33 @@ def carousel_smoke(page):
 
 
 
+def selector_smoke(browser, base, path, locale, viewport):
+    """Mode selector has bilingual local controls, but not the catalogue i18n library."""
+    session = Session(browser, base, viewport, locale=None)
+    try:
+        page = session.page
+        response = page.goto(urljoin(base, path), wait_until="load")
+        require(response and response.status == 200, "Dual-mode selector did not load")
+        require(page.locator('html').get_attribute('data-app-mode') == 'selector',
+                "Home route must be the mode selector")
+        require(page.locator('a[href="./marketing/v1/"]').is_visible(), "Marketing V1 choice missing")
+        require(page.locator('a[href="./development/"]').is_visible(), "Development choice missing")
+        require(page.locator('h1').is_visible(), "Mode selector heading missing")
+        if locale == "en":
+            page.locator('#lang').click()
+        require(page.locator('html').get_attribute('lang') == locale, "Mode selector language mismatch")
+        require(page.locator('html').get_attribute('dir') == ("rtl" if locale == "he" else "ltr"),
+                "Mode selector direction mismatch")
+        overflow = page.evaluate("Math.max(document.body.scrollWidth,document.documentElement.scrollWidth)-innerWidth")
+        require(overflow <= 2, f"Mode selector horizontal overflow: {overflow}")
+        require(not page.evaluate(RESOURCE_CHECK), "Mode selector resource failed to load")
+        session.healthy()
+        return {"page": path, "language": locale, "viewport": list(viewport),
+                "modes": ["marketing/v1", "development"], "no_live_submission": True}
+    finally:
+        session.close()
+
+
 def app_smoke(browser, base, path, locale, viewport):
     """PWA-specific smoke: the app intentionally has its own i18n/CSP."""
     session = Session(browser, base, viewport, locale=None)
@@ -330,7 +357,9 @@ def app_smoke(browser, base, path, locale, viewport):
 
 
 def page_smoke(browser, base, path, locale, viewport):
-    if path.startswith("app/"):
+    if path == "app/":
+        return selector_smoke(browser, base, path, locale, viewport)
+    if path in ("app/development/", "app/marketing/v1/"):
         return app_smoke(browser, base, path, locale, viewport)
     session = Session(browser, base, viewport, locale)
     try:
@@ -495,14 +524,20 @@ def main():
         from playwright.sync_api import sync_playwright
         documents = discover(root)
         run("local files and internal link targets", lambda: check_references(root, documents))
-        graph, quotes = navigation_cases(root, documents)
+        # _snapshot pages are frozen runtime dependencies and localized demo stubs.
+        # They must pass link/asset checks but are not normal catalogue product
+        # pages and must never be chosen as the live inquiry-form test target.
+        smoke_pages = {p: d for p, d in documents.items()
+                       if not ("app" in p.relative_to(root).parts
+                               and "_snapshot" in p.relative_to(root).parts)}
+        graph, quotes = navigation_cases(root, smoke_pages)
         with site_server(root) as base, sync_playwright() as playwright:
             executable = choose_browser(playwright, args.browser)
             browser = playwright.chromium.launch(executable_path=executable, args=["--no-sandbox"])
             try:
                 for locale in ("he", "en"):
                     for viewport in VIEWPORTS:
-                        for path in documents:
+                        for path in smoke_pages:
                             route = route_name(root, path)
                             run(f"page {route or '/'} {locale} {viewport[0]}x{viewport[1]}",
                                 lambda route=route, locale=locale, viewport=viewport:
