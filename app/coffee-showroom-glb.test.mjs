@@ -79,7 +79,7 @@ test('unused three-straight-leg demo stays retired; live intro is Geometric, ret
   assert.match(returned,/finishPersonalDesign\(source\)/);
   assert.match(returned,/verifyPersonalSource\(source\)/);
   assert.match(html,/geometric-engineering-object-clean\.webp/);
-  assert.match(html,/data-model-src="\.\.\/geometric\/media\/geometric-v11-design-only\.glb"/);
+  assert.match(html,/data-model-src="\.\.\/\.\.\/geometric\/media\/geometric-v11-design-only\.glb"/);
   assert.match(sw,/'\.\.\/photo-grounded-coffee-glb\.mjs'/);
   assert.doesNotMatch(sw,/'\.\/coffee-showroom-glb\.mjs'/);
 });
