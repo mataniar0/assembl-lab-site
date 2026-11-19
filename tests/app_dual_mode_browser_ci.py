@@ -65,6 +65,8 @@ def run(executable,output):
                     route.continue_()
             page.route('**/*',guard)
             page.goto(host+'/app/',wait_until='networkidle')
+            # Ignore expected selector assets; audit requests starting at Marketing navigation.
+            all_requests.clear()
             page.locator('a[href="./marketing/v1/"]').click()
             expect(page.locator('html')).to_have_attribute('data-app-mode','marketing')
             assert page.url.endswith('/app/marketing/v1/')
