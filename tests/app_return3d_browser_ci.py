@@ -124,7 +124,7 @@ def run(browser_path,output):
                     else:route.continue_()
                 page.route('**/*',route_req)
                 page.on('pageerror',lambda e:errors.append(str(e)))
-                page.goto(root+'/app/',wait_until='networkidle')
+                page.goto(root+'/app/development/',wait_until='networkidle')
                 page.evaluate("""()=>{
                   window.approvedSelections=[];
                   window.addEventListener('assembl:3d-model-ready',
@@ -235,7 +235,7 @@ def run(browser_path,output):
 
             offline=browser.new_context(viewport={'width':390,'height':844})
             page=offline.new_page()
-            page.goto(root+'/app/',wait_until='networkidle')
+            page.goto(root+'/app/development/',wait_until='networkidle')
             page.evaluate("""async ()=>{
               const sw=await navigator.serviceWorker.ready;
               await sw.update();
@@ -263,7 +263,7 @@ def run(browser_path,output):
             fallback.add_init_script(
                 'HTMLCanvasElement.prototype.getContext=function(){return null}')
             page=fallback.new_page()
-            page.goto(root+'/app/',wait_until='networkidle')
+            page.goto(root+'/app/development/',wait_until='networkidle')
             flow_to_config(page)
             set_design(page,'natural','curved-ring',62,45,20)
             page.locator('#generate').click()
