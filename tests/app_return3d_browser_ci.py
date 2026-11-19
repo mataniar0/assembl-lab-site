@@ -248,8 +248,8 @@ def run(browser_path,output):
             expect(page.locator('#config-scene')).to_have_attribute(
                 'data-reference-photo','true')
             assert page.evaluate("""async ()=>{
-              const assets=['./assets/coffee-reference-room.webp',
-                './assets/coffee-empty-room.webp'];
+              const assets=['../assets/coffee-reference-room.webp',
+                '../assets/coffee-empty-room.webp'];
               return (await Promise.all(assets.map(async url=>
                 !!(await caches.match(url))))).every(Boolean);
             }"""),'photo background assets cached for offline use'
