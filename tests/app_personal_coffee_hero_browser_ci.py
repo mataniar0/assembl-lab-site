@@ -173,11 +173,11 @@ def run(browser_path,output):
             }""")
             page.reload(wait_until='networkidle')
             for rel in [
-                '../assets/geometric-engineering-object-clean.webp',
-                '../geometric/media/geometric-v11-design-only.glb',
-                '../table/personal/media/personal-design-preview.glb',
-                '../table/personal/media/01-hero-finished-angled-960.webp',
-                '../assets/vendor/model-viewer-4.1.0/model-viewer.min.js']:
+                '../../assets/geometric-engineering-object-clean.webp',
+                '../../geometric/media/geometric-v11-design-only.glb',
+                '../../table/personal/media/personal-design-preview.glb',
+                '../../table/personal/media/01-hero-finished-angled-960.webp',
+                '../../assets/vendor/model-viewer-4.1.0/model-viewer.min.js']:
                 assert page.evaluate("""async rel=>
                   !!(await caches.match(new URL(rel,location.href).href))""",rel),rel
             offline.set_offline(True)
