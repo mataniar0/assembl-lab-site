@@ -273,7 +273,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
             expect(pwa.locator("#room")).to_have_attribute("data-fixture", "png")
             pwa_context.set_offline(True)
             pwa.goto(root + "/app/index.html", wait_until="domcontentloaded")
-            expect(pwa.locator("#intro-title")).to_be_visible()
+            expect(pwa.locator("main h1")).to_be_visible()
             assert pwa.locator("#ab-summary").count() == 0, (
                 "Offline home must not be replaced by preview page"
             )
