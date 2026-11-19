@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fcfaf7">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; frame-ancestors 'none'">
+<link rel="stylesheet" href="./preview-lab.css">
+<title>ASSEMBL LAB — בדיקת הדמיה סינתטית</title>
+</head>
+<body>
+<header class="header">
+  <span class="brand" dir="ltr"><span class="brand-mark">A.</span> ASSEMBL LAB</span>
+  <a href="./" class="back" data-he="חזרה לאפליקציה" data-en="Back to app">חזרה לאפליקציה</a>
+</header>
+<main class="main">
+  <div class="eyebrow">APP MVP-09 · LOCAL VISUAL REVIEW</div>
+  <div class="title-row">
+    <div>
+      <h1 data-he="איך השידה תיראה בחדר?" data-en="How would the nightstand look?">איך השידה תיראה בחדר?</h1>
+      <p class="lead" data-he="המחשה אינטראקטיבית על רקע תמונות חדר מאוירות וסינתטיות. השידה היא שכבת איור — לא עריכת צילום, אישור הנדסי או יצירת AI." data-en="Interactive preview with procedural illustrated room images. The furniture is a schematic overlay, not an edited photo, AI output or engineering approval.">המחשה אינטראקטיבית על רקע תמונות חדר מאוירות וסינתטיות. השידה היא שכבת איור — לא עריכת צילום, אישור הנדסי או יצירת AI.</p>
+    </div>
+    <button id="lang" type="button" class="language" aria-label="Switch language">EN</button>
+  </div>
+  <div class="workspace">
+    <section class="preview-panel" aria-labelledby="preview-title">
+      <div class="preview-head">
+        <h2 id="preview-title" data-he="הדמיית חדר סינתטית" data-en="Synthetic room preview">הדמיית חדר סינתטית</h2>
+        <span class="chip" data-he="תמונות חדר סינתטיות · ללא צילום לקוח" data-en="Synthetic room illustrations · no customer photos">תמונות חדר סינתטיות · ללא צילום לקוח</span>
+      </div>
+      <div class="room neutral" id="room" role="img" aria-label="חדר דוגמה סינתטי עם המחשת שידת לילה">
+        <img id="synthetic-room-image" class="synthetic-room-image" src="./preview-fixtures/SC-01.png" alt="" aria-hidden="true" loading="eager" decoding="async">
+        <div class="room-corner"></div>
+        <div class="room-window" aria-hidden="true"><span></span></div>
+        <div class="room-picture" aria-hidden="true"></div>
+        <div class="room-plant" aria-hidden="true"><span class="leaves"></span><span class="pot"></span></div>
+        <div class="room-floor" aria-hidden="true"></div>
+        <div class="room-after-layer" aria-hidden="true">
+        <div class="stand-position" id="stand-position" aria-hidden="true">
+          <div class="stand-shadow"></div>
+          <div class="stand" id="stand">
+            <div class="stand-top"></div>
+            <div class="stand-body">
+              <span class="drawer"></span>
+              <span class="drawer second" id="drawer-two"></span>
+              <span class="stand-shelf"></span>
+            </div>
+            <div class="leg leg-left"></div><div class="leg leg-right"></div>
+          </div>
+        </div>
+        </div>
+        <div class="compare-divider" aria-hidden="true"></div>
+        <div class="room-label" id="scene-label">SC-01 · קיר נייטרלי</div>
+      </div>
+      <div class="preview-actions">
+        <button id="toggle-view" class="button secondary" type="button" aria-pressed="false" data-he="הצג את החדר לפני הוספת השידה" data-en="Show the room before">הצג את החדר לפני הוספת השידה</button>
+        <button id="compare-view" class="button outline" type="button" aria-pressed="false" data-he="השוואה לפני ואחרי" data-en="Compare before and after">השוואה לפני ואחרי</button>
+        <button id="reset" class="button outline" type="button" data-he="איפוס ההמחשה" data-en="Reset preview">איפוס ההמחשה</button>
+      </div>
+      <div id="compare-control" hidden>
+        <label for="compare-split" data-he="גבול ההשוואה (לפני / אחרי)" data-en="Comparison split (before / after)">גבול ההשוואה (לפני / אחרי)</label>
+        <input id="compare-split" type="range" min="15" max="85" step="1" value="50" aria-label="גבול ההשוואה">
+      </div>
+      <p id="view-status" class="status" role="status" aria-live="polite"></p>
+    </section>
+    <section class="controls" aria-labelledby="controls-title">
+      <h2 id="controls-title" data-he="התאמת ההמחשה" data-en="Adjust the preview">התאמת ההמחשה</h2>
+      <p class="subtle" data-he="שינויים נשמרים בזיכרון הדף בלבד. לא נוצרים פרויקט בענן או קובצי תמונה." data-en="Changes stay in page memory. No cloud project or image files are created.">שינויים נשמרים בזיכרון הדף בלבד. לא נוצרים פרויקט בענן או קובצי תמונה.</p>
+      <label for="scene" data-he="חדר לדוגמה" data-en="Example room">חדר לדוגמה</label>
+      <select id="scene">
+        <option value="SC-01" data-he="SC-01 · קיר נייטרלי" data-en="SC-01 · Neutral wall">SC-01 · קיר נייטרלי</option>
+        <option value="SC-02" data-he="SC-02 · חלון משמאל" data-en="SC-02 · Left window">SC-02 · חלון משמאל</option>
+        <option value="SC-04" data-he="SC-04 · עציץ בפינה" data-en="SC-04 · Corner plant">SC-04 · עציץ בפינה</option>
+        <option value="SC-07" data-he="SC-07 · קיר ירקרק ומנורה" data-en="SC-07 · Olive wall and lamp">SC-07 · קיר ירקרק ומנורה</option>
+        <option value="SC-10" data-he="SC-10 · חלון וחפצים" data-en="SC-10 · Window with objects">SC-10 · חלון וחפצים</option>
+      </select>
+      <label for="finish" data-he="גוון שידה" data-en="Nightstand finish">גוון שידה</label>
+      <select id="finish">
+        <option value="natural" data-he="בירץ׳ טבעי" data-en="Natural birch">בירץ׳ טבעי</option>
+        <option value="honey" data-he="דבש" data-en="Honey">דבש</option>
+        <option value="walnut" data-he="אגוז" data-en="Walnut">אגוז</option>
+      </select>
+      <label for="drawers" data-he="מספר מגירות" data-en="Drawer count">מספר מגירות</label>
+      <select id="drawers">
+        <option value="1" data-he="מגירה אחת" data-en="One drawer">מגירה אחת</option>
+        <option value="2" data-he="שתי מגירות" data-en="Two drawers">שתי מגירות</option>
+      </select>
+      <label for="position"><span data-he="מיקום אופקי" data-en="Horizontal position">מיקום אופקי</span> · <output id="position-value">52%</output></label>
+      <input id="position" type="range" min="30" max="70" value="52" step="1">
+      <label for="scale"><span data-he="קנה מידה להמחשה" data-en="Illustrative scale">קנה מידה להמחשה</span> · <output id="scale-value">88%</output></label>
+      <input id="scale" type="range" min="65" max="125" value="88" step="1">
+      <div class="details" id="details" aria-live="polite"></div>
+      <div class="preferred-actions">
+        <button id="save-preferred" type="button" class="button secondary" data-he="סמן את הגרסה כמועדפת" data-en="Mark this concept as preferred">סמן את הגרסה כמועדפת</button>
+        <button id="restore-preferred" type="button" class="button outline" disabled data-he="חזור לגרסה המועדפת" data-en="Restore preferred concept">חזור לגרסה המועדפת</button>
+      </div>
+      <p class="status" id="preferred-status" role="status" aria-live="polite" data-he="טרם סומנה גרסה מועדפת." data-en="No preferred concept selected yet.">טרם סומנה גרסה מועדפת.</p>
+
+      <section class="ab-panel" aria-labelledby="ab-title">
+        <h3 id="ab-title" data-he="השוואת חלופות A / B" data-en="Compare concepts A / B">השוואת חלופות A / B</h3>
+        <p class="ab-intro" data-he="שמרו שתי חלופות והשוו ביניהן. הבחירות נשמרות בזיכרון הדף בלבד." data-en="Capture two concepts and compare them. Choices stay in page memory only.">שמרו שתי חלופות והשוו ביניהן. הבחירות נשמרות בזיכרון הדף בלבד.</p>
+        <div class="ab-slots">
+          <div class="ab-slot">
+            <strong data-he="חלופה A" data-en="Concept A">חלופה A</strong>
+            <p id="concept-a-status" class="ab-slot-status"></p>
+            <div class="ab-actions">
+              <button id="capture-a" class="button secondary" type="button" data-he="שמור A" data-en="Capture A">שמור A</button>
+              <button id="restore-a" class="button outline" type="button" disabled data-he="הצג A" data-en="Show A">הצג A</button>
+              <button id="choose-a" class="button outline" type="button" aria-pressed="false" disabled data-he="בחר A" data-en="Choose A">בחר A</button>
+            </div>
+          </div>
+          <div class="ab-slot">
+            <strong data-he="חלופה B" data-en="Concept B">חלופה B</strong>
+            <p id="concept-b-status" class="ab-slot-status"></p>
+            <div class="ab-actions">
+              <button id="capture-b" class="button secondary" type="button" data-he="שמור B" data-en="Capture B">שמור B</button>
+              <button id="restore-b" class="button outline" type="button" disabled data-he="הצג B" data-en="Show B">הצג B</button>
+              <button id="choose-b" class="button outline" type="button" aria-pressed="false" disabled data-he="בחר B" data-en="Choose B">בחר B</button>
+            </div>
+          </div>
+        </div>
+        <p id="ab-summary" class="ab-summary" role="status" aria-live="polite"></p>
+        <div class="handoff">
+          <h3 data-he="חלופה להעברה לתכנון" data-en="Selected design handoff">חלופה להעברה לתכנון</h3>
+          <p id="selected-status" class="ab-summary" role="status" aria-live="polite"></p>
+          <button id="download-selected" type="button" class="button secondary" disabled data-he="הורד קובץ אפיון JSON" data-en="Download design intent JSON">הורד קובץ אפיון JSON</button>
+          <a id="open-selected-3d" class="handoff-3d-link" href="./concept-3d.html" data-he="פתח תלת־ממד של החלופה שנבחרה (ללא העלאת קובץ)" data-en="Open selected concept in 3D (no file upload)">פתח תלת־ממד של החלופה שנבחרה (ללא העלאת קובץ)</a>
+          <p class="legal" data-he="קובץ מקומי בלבד. אינו CAD, מודל תלת־ממדי או אישור הנדסי. אין העלאת נתונים לענן." data-en="Local file only. Not CAD, a 3D model, or engineering approval. Nothing is uploaded.">קובץ מקומי בלבד. אינו CAD, מודל תלת־ממדי או אישור הנדסי. אין העלאת נתונים לענן.</p>
+        </div>
+      </section>
+      <p class="legal" data-he="שידת לילה לדוגמה · לביד בירץ׳ 6 מ״מ. פרופורציות אינן תחליף למדידות, CAD או בדיקות יציבות ובטיחות." data-en="Example nightstand · 6 mm birch plywood. Proportions do not replace measurements, CAD, or safety/structural validation.">שידת לילה לדוגמה · לביד בירץ׳ 6 מ״מ. פרופורציות אינן תחליף למדידות, CAD או בדיקות יציבות ובטיחות.</p>
+    </section>
+  </div>
+</main>
+<footer>ASSEMBL LAB · SYNTHETIC ONLY · NO AI / NO CLOUD / NO CUSTOMER DATA</footer>
+<script type="module" src="./preview-lab.mjs"></script>
+</body>
+</html>

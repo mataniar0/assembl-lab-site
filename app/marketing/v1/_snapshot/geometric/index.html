@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" data-i18n-content="meta.description" content="Geometric — שולחן קפה מתוכנן הנדסית של ASSEMBLE LAB. תכנון, אובייקט ופרטי מבנה.">
+<meta property="og:title" content="GEOMETRIC — ASSEMBLE LAB">
+<meta property="og:description" data-i18n-content="meta.social" content="הנדסה, מבנה והרכבה כחלק מהעיצוב.">
+<meta property="og:image" content="https://mataniar0.github.io/assembl-lab-site/assets/geometric-hero.webp">
+<title>GEOMETRIC — ASSEMBLE LAB</title>
+<script type="application/json" id="page-translations">{
+  "custom.label": {
+    "he": "לפי מידה / מידות מותאמות",
+    "en": "MADE TO SIZE / CUSTOM DIMENSIONS"
+  },
+  "custom.description": {
+    "he": "המידות המוצגות הן גרסת הבסיס. ניתן להתאים את מידות הדגם לחלל ולשימוש, תוך תכנון מחדש של המבנה והחיבורים ובהתאם לחומר ולאילוצי הייצור.",
+    "en": "The dimensions shown are the base design. The model can be adapted to your space and use by reworking its structure and joints, subject to material and fabrication constraints."
+  },
+  "quote.accessible": {
+    "he": "בקשת הצעת מחיר עבור שולחן הקפה Geometric",
+    "en": "Request a quote for the Geometric coffee table"
+  },
+  "build.footer": {
+    "he": "ASSEMBLE LAB / עיצוב · הנדסה · ייצור",
+    "en": "ASSEMBLE LAB / DESIGN · ENGINEERING · FABRICATION"
+  },
+  "meta.description": {
+    "he": "Geometric — שולחן קפה מתוכנן הנדסית של ASSEMBLE LAB. תכנון, אובייקט ופרטי מבנה.",
+    "en": "Geometric — an engineered coffee table by ASSEMBLE LAB. Explore its design, structure, assembly and custom dimensions."
+  },
+  "meta.social": {
+    "he": "הנדסה, מבנה והרכבה כחלק מהעיצוב.",
+    "en": "Engineering, structure and assembly as design."
+  },
+  "hero.kicker": {
+    "he": "ASSEMBLE LAB / אובייקט 01",
+    "en": "ASSEMBLE LAB / OBJECT 01"
+  },
+  "hero.description": {
+    "he": "שולחן קפה שבו הצורה, המבנה וההרכבה מתוכננים כמערכת אחת. החיבורים והגאומטריה אינם מוסתרים — הם חלק מהשפה של האובייקט.",
+    "en": "A coffee table whose form, structure and assembly are designed as one system. Its exposed joints and geometry form part of the object’s visual language."
+  },
+  "specs.base": {
+    "he": "דגם בסיס",
+    "en": "BASE DESIGN"
+  },
+  "specs.cad": {
+    "he": "תכנון CAD",
+    "en": "CAD DESIGNED"
+  },
+  "specs.laser": {
+    "he": "חיתוך בלייזר",
+    "en": "LASER CUT"
+  },
+  "specs.geometry": {
+    "he": "גאומטריה מבנית",
+    "en": "STRUCTURAL GEOMETRY"
+  },
+  "story.kicker": {
+    "he": "תהליך הבנייה / שולחן GEOMETRIC",
+    "en": "BUILD STORY / GEOMETRIC TABLE"
+  },
+  "story.title": {
+    "he": "מהקובץ<br>אל הסלון.",
+    "en": "From file<br>to living room."
+  },
+  "story.description": {
+    "he": "שישה שלבים חושפים את הדרך מהתכנון למוצר — קבצים, חיתוך, חלקים, הרכבה, גימור והשולחן בחלל.",
+    "en": "Six stages reveal the journey from design to object: files, cutting, components, assembly, finishing and the table in its setting."
+  },
+  "principle.title": {
+    "he": "הרכבה<br>כחלק מהעיצוב.",
+    "en": "Assembly<br>as design."
+  },
+  "principle.description": {
+    "he": "ב־ASSEMBLE LAB ההרכבה אינה שלב שמגיע אחרי העיצוב. עובי החומר, מיקום החיבור, יכולת החיתוך והדרך שבה החלקים נפגשים נכנסים למודל מראש — כך שהמוצר הסופי הוא תוצאה ישירה של ההנדסה שלו.",
+    "en": "At ASSEMBLE LAB, assembly is part of the design from the start. Material thickness, joint positions, cutting constraints and the way parts meet are built into the model, so the finished object follows directly from its engineering."
+  },
+  "footer.back": {
+    "he": "חזרה למוצרים ↑",
+    "en": "BACK TO PRODUCTS ↑"
+  },
+  "image.1": {
+    "he": "Geometric — תכנון והדמיות לצד תצלומי תהליך",
+    "en": "Geometric — planning and renderings alongside process photographs"
+  },
+  "image.2": {
+    "he": "Geometric — חיתוך בלייזר",
+    "en": "Geometric — laser cutting"
+  },
+  "image.3": {
+    "he": "Geometric — חלקים",
+    "en": "Geometric — components"
+  },
+  "image.4": {
+    "he": "Geometric — הרכבה",
+    "en": "Geometric — assembly"
+  },
+  "image.5": {
+    "he": "Geometric — גימור, האובייקט המלא",
+    "en": "Geometric — finishing, the complete structure"
+  },
+  "image.6": {
+    "he": "Geometric — המוצר הסופי",
+    "en": "Geometric — the finished coffee table"
+  },
+  "build.description.1": {
+    "he": "גליון התכנון משלב הדמיות ומידות עם תצלומי תיעוד. הוא מציג מבטים כלליים, מבט מלמטה, מידות השלדה ופרטי הרגליים והחיבורים. סימוני A ו־B מציינים את שני חלקי הרגל.",
+    "en": "The planning sheet combines renderings and dimensions with documentary photographs. It shows overall and underside views, frame dimensions, and leg and joint details. A and B identify the two parts of each leg."
+  },
+  "build.label.1": {
+    "he": "01 / תכנון והדמיות",
+    "en": "01 / Planning and renderings"
+  },
+  "build.description.2": {
+    "he": "הגאומטריה עוברת ישירות ללוח. כל קו, חריץ וחיבור נחתכים מתוך אותו קובץ תכנון.",
+    "en": "The geometry moves directly onto the sheet. Every line, slot and joint is cut from the same design file."
+  },
+  "build.label.2": {
+    "he": "02 / חיתוך בלייזר",
+    "en": "02 / Laser cutting"
+  },
+  "build.description.3": {
+    "he": "החלקים יוצאים שטוחים מהמכונה — כולל הרגליים והחיבורים שמגדירים את האופי של השולחן.",
+    "en": "The parts emerge flat from the machine, including the legs and joints that define the table’s character."
+  },
+  "build.label.3": {
+    "he": "03 / חלקים",
+    "en": "03 / Components"
+  },
+  "build.description.4": {
+    "he": "השלדה מתחילה לקבל נפח. החיבורים הגלויים הופכים את פעולת ההרכבה לחלק מהעיצוב עצמו.",
+    "en": "The frame begins to take shape. Exposed joints make the assembly process part of the design itself."
+  },
+  "build.label.4": {
+    "he": "04 / הרכבה",
+    "en": "04 / Assembly"
+  },
+  "build.description.5": {
+    "he": "לאחר בדיקת ההתאמה והיציבות, השלדה מקבלת גימור שחור שמחדד את הגאומטריה והקווים.",
+    "en": "After fit and stability checks, the frame receives a black finish that sharpens its geometry and lines."
+  },
+  "build.label.5": {
+    "he": "05 / גימור",
+    "en": "05 / Finishing"
+  },
+  "build.description.6": {
+    "he": "הפלטה העליונה מונחת על השלדה המוגמרת — הרעיון הדיגיטלי הופך לשולחן פיזי בחלל אמיתי.",
+    "en": "The tabletop is placed on the finished frame, turning a digital idea into a physical table in a real space."
+  },
+  "build.label.6": {
+    "he": "06 / המוצר הסופי",
+    "en": "06 / The finished object"
+  },
+  "build.object.title": {
+    "he": "המוצר הסופי",
+    "en": "The finished object"
+  },
+  "nav.tables": {
+    "he": "← לכל דגמי השולחנות",
+    "en": "← All table models"
+  },
+  "model.other": {
+    "he": "הכירו גם את דגם Flow ←",
+    "en": "Explore the Flow model →"
+  },
+  "batch.specs": {
+    "he": "מידות ומפרט",
+    "en": "Dimensions and specifications"
+  },
+  "batch.build": {
+    "he": "תכנון והרכבה",
+    "en": "Design and assembly"
+  },
+  "batch.more": {
+    "he": "פרטים והתאמת מידות",
+    "en": "Details and custom dimensions"
+  },
+  "batch.process": {
+    "he": "איך מתקדמים להזמנה?",
+    "en": "How does ordering work?"
+  },
+  "batch.optional": {
+    "he": "מידות והערה — אופציונלי",
+    "en": "Dimensions and note — optional"
+  },
+  "batch.intro": {
+    "he": "שולחן קפה עם גאומטריה וחיבורים גלויים.",
+    "en": "A coffee table with exposed geometry and joints."
+  },
+  "batch.name": {
+    "he": "Geometric",
+    "en": "Geometric"
+  },
+  "disclosure.productCustom": {
+    "he": "על הדגם והתאמת מידות",
+    "en": "About the model and custom dimensions"
+  },
+  "disclosure.stages": {
+    "he": "שלבי התכנון והבנייה",
+    "en": "Design and build stages"
+  },
+  "disclosure.principle": {
+    "he": "עקרון ההרכבה",
+    "en": "Assembly principle"
+  },
+  "catalog.status": {
+    "he": "נבנה בפועל",
+    "en": "Built"
+  },
+  "catalog.media": {
+    "he": "צילום המוצר",
+    "en": "Product photograph"
+  },
+  "stage.plan": {
+    "he": "תכנון והדמיות",
+    "en": "Planning and renderings"
+  },
+  "three.title": {
+    "he": "תצוגת תלת־ממד",
+    "en": "3D preview"
+  },
+  "three.open": {
+    "he": "צפה בתלת־ממד",
+    "en": "View in 3D"
+  },
+  "three.blocked": {
+    "he": "תצוגת תלת־ממד עדיין אינה זמינה לדגם זה: חסר תכנון מלא ומאומת. התוכן הקיים בעמוד נשאר זמין.",
+    "en": "3D is not available for this model yet: a complete verified design is missing. The existing page content remains available."
+  },
+  "three.design": {"he":"הדמיית תכנון CAD של שלדת Geometric V1.1 בלבד (15 חלקים). חריצי שתי משפחות קורות שונו ביחס לקובצי המקור. הפלטה העליונה אינה כלולה; התאמה למוצר המצולם, הרכבה פיזית וחוזק לא אומתו.","en":"CAD design preview of the Geometric V1.1 frame only (15 parts). Slot patterns on two rail families differ from the source cutting files. No tabletop is included. Photographed build, physical fit and strength are not verified."},
+  "three.help": {
+    "he": "גררו אופקית לסיבוב, צבטו לזום או השתמשו בכפתורים. גרירה אנכית גוללת את העמוד. Esc לחזרה לתמונות.",
+    "en": "Drag horizontally to orbit, pinch to zoom, or use the buttons. Vertical gestures scroll the page. Escape returns to photos."
+  },
+  "three.loading": {
+    "he": "טוען תצוגת תלת־ממד… אפשר לחזור לתמונות בכל עת.",
+    "en": "Loading 3D preview… you can return to photos at any time."
+  },
+  "three.error": {
+    "he": "לא ניתן לפתוח תלת־ממד כרגע. התמונות זמינות; ניתן לנסות שוב.",
+    "en": "3D could not be opened. Photos remain available; you can try again."
+  },
+  "three.ready": {
+    "he": "תצוגת התכנון מוכנה. ניתן לסובב, להגדיל ולאפס.",
+    "en": "Design preview ready. Orbit, zoom or reset the view."
+  },
+  "three.alt": {"he":"הדמיית תכנון תלת־ממדית של שלדת שולחן Geometric V1.1 ללא פלטה","en":"3D CAD design preview of the Geometric V1.1 coffee table frame without a tabletop"},
+  "three.left": {
+    "he": "סיבוב שמאלה",
+    "en": "Orbit left"
+  },
+  "three.right": {
+    "he": "סיבוב ימינה",
+    "en": "Orbit right"
+  },
+  "three.up": {
+    "he": "מבט גבוה יותר",
+    "en": "Orbit up"
+  },
+  "three.down": {
+    "he": "מבט תחתון",
+    "en": "Orbit down"
+  },
+  "three.in": {
+    "he": "הגדלה",
+    "en": "Zoom in"
+  },
+  "three.out": {
+    "he": "הקטנה",
+    "en": "Zoom out"
+  },
+  "three.reset": {
+    "he": "איפוס תצוגה",
+    "en": "Reset view"
+  },
+  "three.close": {
+    "he": "חזרה לתמונות",
+    "en": "Back to photos"
+  }
+}
+</script>
+<script src="../assets/language.js"></script>
+<style>
+:root{--paper:#f3f1eb;--ink:#111311;--muted:#6d7069;--line:rgba(17,19,17,.18);--signal:#ff5a36}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}
+.header{position:sticky;top:0;z-index:20;height:72px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;background:rgba(243,241,235,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);direction:ltr}
+.logo{display:flex;align-items:center;gap:11px}.mark{width:38px;height:38px;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-weight:800;font-size:12px}.logo b{font-size:12px;letter-spacing:.12em}.back{font-size:10px;letter-spacing:.12em;font-weight:800;border-bottom:1px solid var(--ink);padding-bottom:3px}
+.hero{padding:70px 4vw 48px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:5vw;align-items:end;border-bottom:1px solid var(--line)}
+.kicker{direction:ltr;font-size:9px;letter-spacing:.16em;color:var(--muted);margin:0 0 14px}.hero h1{direction:ltr;font-size:clamp(56px,8vw,126px);line-height:.82;letter-spacing:-.06em;margin:0}.hero h1 span{display:block;color:var(--signal)}.hero-copy{max-width:560px;font-size:19px;line-height:1.65;margin:0}.specs{direction:ltr;display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}.specs span{border:1px solid var(--line);padding:7px 9px;font-size:9px;letter-spacing:.1em}
+.story{max-width:1500px;margin:auto;padding:56px 4vw 86px}.story-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:24px}.story-head h2{font-size:clamp(34px,5vw,72px);line-height:.95;margin:0}.story-head p{max-width:460px;color:var(--muted);margin:0}
+.gallery{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.65fr);border:1px solid var(--line);background:#e8e5dd;direction:ltr;min-width:0}.viewer{position:relative;aspect-ratio:4/3;overflow:hidden;background:#d8d5ce;touch-action:pan-y}.slide{position:absolute;inset:0;opacity:0;transition:opacity .35s ease;display:grid;place-items:center}.slide.active{opacity:1}.slide img{width:100%;height:100%;min-width:0;min-height:0;object-fit:contain;object-position:center;background:#d8d5ce}.slide.drawing{background:#f8f7f2;padding:8%}.slide.drawing img{object-fit:contain}.badge{position:absolute;top:18px;left:18px;z-index:3;background:var(--paper);border:1px solid var(--ink);padding:9px 11px;font-size:9px;font-weight:800;letter-spacing:.13em}.progress{position:absolute;left:18px;bottom:18px;z-index:3;background:rgba(243,241,235,.94);padding:7px 9px;font-size:10px;font-weight:800;letter-spacing:.12em}.arrows{position:absolute;right:18px;bottom:18px;z-index:4;display:flex;gap:8px}.arrow{width:46px;height:46px;border:1px solid var(--ink);background:rgba(243,241,235,.96);display:grid;place-items:center;font-size:19px;font-weight:800;cursor:pointer;touch-action:manipulation}.arrow:active{background:var(--ink);color:var(--paper)}.arrow:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.panel{display:flex;flex-direction:column;min-width:0;background:var(--paper);border-left:1px solid var(--line)}.copy{padding:34px 28px 26px;direction:rtl}.index{direction:ltr;font-size:9px;letter-spacing:.14em;color:var(--signal);font-weight:800}.copy h3{font-size:40px;line-height:1;margin:10px 0 14px}.copy p{margin:0;color:var(--muted);line-height:1.7}.nav{margin-top:auto;border-top:1px solid var(--line)}.step{width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;text-align:left;direction:ltr}.step:last-child{border-bottom:0}.step small{font-size:8px;letter-spacing:.12em;color:var(--muted)}.step b{display:block;margin-top:3px;font-size:12px}.step.active{background:var(--ink);color:var(--paper)}.step.active small{color:#bbb}.num{font-size:23px;font-weight:800;color:var(--signal)}
+.principle{padding:74px 4vw;border-top:1px solid var(--line);display:grid;grid-template-columns:.7fr 1.3fr;gap:5vw}.principle h2{font-size:clamp(36px,5vw,72px);line-height:1;margin:0}.principle p{max-width:720px;font-size:19px;line-height:1.7;margin:0}.footer{border-top:1px solid var(--line);padding:25px 4vw;display:flex;justify-content:space-between;gap:20px;direction:ltr;font-size:9px;letter-spacing:.1em;color:var(--muted)}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:50px}.gallery{grid-template-columns:1fr}.panel{border-left:0;border-top:1px solid var(--line)}.nav{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch}.step{min-width:185px;border-bottom:0;border-left:1px solid var(--line)}.principle{grid-template-columns:1fr}.story-head{display:grid;align-items:start}}
+@media(max-width:640px){.header{height:64px;padding:0 16px}.logo b{font-size:10px}.hero{padding:38px 16px 40px;gap:28px}.hero h1{font-size:clamp(50px,17vw,76px)}.hero-copy{font-size:16px}.story{padding:44px 16px 64px}.story-head h2{font-size:40px}.story-head p{font-size:14px}.viewer{aspect-ratio:4/3}.badge{top:11px;left:11px}.progress{left:11px;bottom:11px}.arrows{right:11px;bottom:11px}.arrow{width:46px;height:46px}.copy{padding:24px 18px 20px}.copy h3{font-size:34px}.principle{padding:54px 16px}.principle p{font-size:16px}.footer{padding:22px 16px;flex-direction:column}.back{font-size:9px}}
+
+/* Mobile per-slide aspect QA — maximize each image without cropping */
+@media(max-width:640px){
+  .viewer.layout-portrait{aspect-ratio:3/4}
+  .viewer.layout-wide{aspect-ratio:3/2}
+  .viewer.layout-cinematic{aspect-ratio:16/9}
+}
+
+.custom-size{margin-top:18px;border:1px solid var(--ink);display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:15px 16px;background:rgba(255,255,255,.34)}.custom-size-copy{min-width:0}.custom-size-label{direction:ltr;font-size:9px;font-weight:900;letter-spacing:.14em;color:var(--signal);margin-bottom:5px}.custom-size p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}.adapt-link{direction:rtl;display:inline-block;white-space:nowrap;background:var(--ink);color:var(--paper);padding:12px 14px;text-decoration:none;font-size:13px;font-weight:900;letter-spacing:0}.adapt-link:hover{background:var(--signal);color:var(--ink)}.adapt-link:focus-visible{outline:3px solid var(--ink);outline-offset:3px}@media(max-width:560px){.custom-size{grid-template-columns:1fr;align-items:start}.adapt-link{justify-self:start}}
+
+/* Keep navigation links easy to activate on touch screens. */
+.header a,.top a,.footer a,.adapt-link{display:inline-flex;align-items:center;min-width:44px;min-height:44px}
+.header .back,.top .back,.footer a{border-bottom:0;text-decoration:underline;text-underline-offset:4px}
+
+/* Keep photographed build stages and arrow order stable while localizing copy. */
+.gallery,.gallery .nav,.arrows,.carousel-arrows{direction:ltr}
+.gallery .copy,.gallery .panel,.gallery .step{text-align:start}
+html[lang="he"] .gallery .copy,html[lang="he"] .gallery .panel,html[lang="he"] .gallery .step{direction:rtl}
+html[lang="en"] .gallery .copy,html[lang="en"] .gallery .panel,html[lang="en"] .gallery .step{direction:ltr}
+.gallery .badge,.gallery .index,.gallery .step small{direction:inherit;letter-spacing:0;font-size:11px}
+.gallery .badge,.gallery .progress{max-width:calc(100% - 24px)}
+.gallery .index,.kicker{text-align:start}
+.gallery .step:focus-visible{outline:3px solid var(--ink);outline-offset:-3px}
+html[lang="he"] .kicker,html[lang="he"] .specs small,html[lang="he"] .specs span,html[lang="he"] .custom-size-label{direction:rtl;letter-spacing:0}
+html[lang="en"] .kicker,html[lang="en"] .specs small,html[lang="en"] .specs span,html[lang="en"] .custom-size-label,html[lang="en"] .adapt-link{direction:ltr}
+.specs small,.specs span,.custom-size-label,.kicker{font-size:11px}
+.specs b[data-language-fixed]{display:block;direction:ltr;text-align:start}
+html[lang="he"] h1[data-i18n-html]{direction:rtl;letter-spacing:-.035em;line-height:1.02}
+html[lang="en"] .story-head h2,html[lang="en"] .original h2,html[lang="en"] .principle h2{direction:ltr}
+html[lang="he"] .story-head h2,html[lang="he"] .original h2,html[lang="he"] .principle h2{direction:rtl}
+@media(max-width:640px){.hero h1[data-i18n-html]{font-size:clamp(42px,13.8vw,72px);overflow-wrap:normal}}
+</style>
+<link rel="stylesheet" href="../assets/language.css">
+<link rel="stylesheet" href="../assets/product-light.css">
+<script src="../assets/media-loading.js"></script>
+<link rel="stylesheet" href="../assets/three-preview.css"><script src="../assets/three-preview.js" defer></script></head>
+<body>
+<header class="header"><a class="logo" href="../"><span class="mark">A/L</span><b>ASSEMBLE LAB</b></a><a class="back" data-i18n="nav.tables" href="../table/">← לכל המוצרים</a><div class="language-switch" role="group" aria-label="בחירת שפה"><button type="button" data-language="he" lang="he" dir="rtl" aria-pressed="true" disabled>עברית</button><button type="button" data-language="en" lang="en" dir="ltr" aria-pressed="false" disabled>English</button></div></header>
+<main>
+<section class="hero"><div class="product-opening-copy"><h1 data-i18n="batch.name">Geometric</h1><p class="status" data-i18n="catalog.status">נבנה בפועל</p><p class="opening-intro" data-i18n="batch.intro">שולחן קפה עם גאומטריה וחיבורים גלויים.</p><p class="status" data-i18n="catalog.media">צילום המוצר</p><a class="adapt-link" href="../inquiry/?product=geometric" data-i18n="cta.quote" data-i18n-aria-label="quote.accessible" aria-label="בקשת הצעת מחיר עבור שולחן הקפה Geometric">בקשת הצעת מחיר</a></div><div><p class="kicker" data-i18n="hero.kicker">ASSEMBLE LAB / אובייקט 01</p></div><div></div><figure class="hero-media"><a class="product-open-image" href="../assets/geometric-hero.webp" target="_blank" rel="noopener" aria-label="פתיחת התמונה בגודל מלא" data-i18n-aria-label="image.open"><img src="../assets/geometric-hero.webp" alt="Geometric" width="1672" height="941" loading="eager" decoding="async" fetchpriority="high"></a></figure></section>
+<details class="product-details"><summary data-i18n="batch.specs">מידות ומפרט</summary><div class="specs"><span data-i18n="specs.base">דגם בסיס</span><span data-i18n="specs.cad">תכנון CAD</span><span data-i18n="specs.laser">חיתוך בלייזר</span><span data-i18n="specs.geometry">גאומטריה מבנית</span></div></details><details class="product-details"><summary data-i18n="disclosure.productCustom">על הדגם והתאמת מידות</summary><p class="hero-copy" data-i18n="hero.description">שולחן קפה שבו הצורה, המבנה וההרכבה מתוכננים כמערכת אחת. החיבורים והגאומטריה אינם מוסתרים — הם חלק מהשפה של האובייקט.</p><div class="custom-size-copy"><div class="custom-size-label" data-i18n="custom.label">לפי מידה / מידות מותאמות</div><p data-i18n="custom.description">המידות המוצגות הן גרסת הבסיס. ניתן להתאים את מידות הדגם לחלל ולשימוש, תוך תכנון מחדש של המבנה והחיבורים ובהתאם לחומר ולאילוצי הייצור.</p></div></details><section class="story"><details class="product-details"><summary data-i18n="disclosure.stages">שלבי התכנון והבנייה</summary><div class="story-head"><div><p class="kicker" data-i18n="story.kicker">תהליך הבנייה / שולחן GEOMETRIC</p><h2 data-i18n-html="story.title">מהקובץ<br>אל הסלון.</h2></div><p data-i18n="story.description">שישה שלבים חושפים את הדרך מהתכנון למוצר — קבצים, חיתוך, חלקים, הרכבה, גימור והשולחן בחלל.</p></div>
+</details><div class="gallery" tabindex="0" role="region" data-i18n-aria-label="carousel.label" aria-label="שלבי תכנון וייצור">
+<div class="viewer layout-portrait">
+  <div class="slide active"><img data-src="media/planning-clean.webp" data-i18n-alt="image.1" alt="Geometric — תכנון והדמיות לצד תצלומי תהליך" width="1122" height="1402" loading="lazy" decoding="async"></div>
+  <div class="slide"><img loading="lazy" data-src="media/embedded-stage-2.jpg" data-i18n-alt="image.2" alt="Geometric — חיתוך בלייזר" width="1125" height="1500" decoding="async"></div>
+  <div class="slide"><img loading="lazy" data-src="media/embedded-stage-3.jpg" data-i18n-alt="image.3" alt="Geometric — חלקים" width="1125" height="1500" decoding="async"></div>
+  <div class="slide"><img loading="lazy" data-src="media/embedded-stage-4.jpg" data-i18n-alt="image.4" alt="Geometric — הרכבה" width="1125" height="1500" decoding="async"></div>
+  <div class="slide finish-slide"><img loading="lazy" data-src="../assets/geometric-engineering-object-clean.webp" data-i18n-alt="image.5" alt="Geometric — גימור, האובייקט המלא" width="981" height="655" decoding="async"></div>
+  <div class="slide"><img loading="lazy" data-src="../assets/geometric-hero.webp" data-i18n-alt="image.6" alt="Geometric — המוצר הסופי" width="1672" height="941" decoding="async"></div>
+  <div class="badge">01 / PLAN</div><div class="progress"><span>01</span> / 06</div>
+  <div class="arrows"><button class="arrow prev" type="button" data-i18n-aria-label="carousel.previous" aria-label="התמונה הקודמת">←</button><button class="arrow next" type="button" data-i18n-aria-label="carousel.next" aria-label="התמונה הבאה">→</button></div>
+</div>
+<div class="panel"><div class="copy" aria-live="polite" aria-atomic="true"><div class="index">01 / תכנון והדמיות</div><h3>תכנון והדמיות</h3><p>גליון התכנון משלב הדמיות ומידות עם תצלומי תיעוד. הוא מציג מבטים כלליים, מבט מלמטה, מידות השלדה ופרטי הרגליים והחיבורים. סימוני A ו־B מציינים את שני חלקי הרגל.</p></div><div class="nav">
+<button class="step active" data-layout="portrait" data-code="PLAN" data-title="תכנון והדמיות" data-desc="גליון התכנון משלב הדמיות ומידות עם תצלומי תיעוד. הוא מציג מבטים כלליים, מבט מלמטה, מידות השלדה ופרטי הרגליים והחיבורים. סימוני A ו־B מציינים את שני חלקי הרגל." data-title-key="stage.plan" data-desc-key="build.description.1" data-code-key="stage.plan"><span><small data-i18n="build.label.1">01 / תכנון והדמיות</small><b data-i18n="stage.plan">תכנון והדמיות</b></span><span class="num">01</span></button>
+<button class="step" data-layout="portrait" data-code="LASER CUT" data-title="חיתוך" data-desc="הגאומטריה עוברת ישירות ללוח. כל קו, חריץ וחיבור נחתכים מתוך אותו קובץ תכנון." data-title-key="stage.laser" data-desc-key="build.description.2" data-code-key="stage.laser"><span><small data-i18n="build.label.2">02 / חיתוך בלייזר</small><b data-i18n="stage.laser">חיתוך בלייזר</b></span><span class="num">02</span></button>
+<button class="step" data-layout="portrait" data-code="COMPONENTS" data-title="חלקים" data-desc="החלקים יוצאים שטוחים מהמכונה — כולל הרגליים והחיבורים שמגדירים את האופי של השולחן." data-title-key="stage.components" data-desc-key="build.description.3" data-code-key="stage.components"><span><small data-i18n="build.label.3">03 / חלקים</small><b data-i18n="stage.components">חלקים</b></span><span class="num">03</span></button>
+<button class="step" data-layout="portrait" data-code="ASSEMBLE" data-title="הרכבה" data-desc="השלדה מתחילה לקבל נפח. החיבורים הגלויים הופכים את פעולת ההרכבה לחלק מהעיצוב עצמו." data-title-key="stage.assemble" data-desc-key="build.description.4" data-code-key="stage.assemble"><span><small data-i18n="build.label.4">04 / הרכבה</small><b data-i18n="stage.assemble">הרכבה</b></span><span class="num">04</span></button>
+<button class="step" data-layout="wide" data-code="FINISH" data-title="גימור" data-desc="לאחר בדיקת ההתאמה והיציבות, השלדה מקבלת גימור שחור שמחדד את הגאומטריה והקווים." data-title-key="stage.finish" data-desc-key="build.description.5" data-code-key="stage.finish"><span><small data-i18n="build.label.5">05 / גימור</small><b data-i18n="stage.finish">גימור</b></span><span class="num">05</span></button>
+<button class="step" data-layout="cinematic" data-code="OBJECT" data-title="המוצר הסופי" data-desc="הפלטה העליונה מונחת על השלדה המוגמרת — הרעיון הדיגיטלי הופך לשולחן פיזי בחלל אמיתי." data-title-key="build.object.title" data-desc-key="build.description.6" data-code-key="build.object.title"><span><small data-i18n="build.label.6">06 / המוצר הסופי</small><b data-i18n="build.object.title">המוצר הסופי</b></span><span class="num">06</span></button>
+</div></div></div></section>
+<details class="product-details"><summary data-i18n="disclosure.principle">עקרון ההרכבה</summary><section class="principle"><h2 data-i18n-html="principle.title">הרכבה<br>כחלק מהעיצוב.</h2><p data-i18n="principle.description">ב־ASSEMBLE LAB ההרכבה אינה שלב שמגיע אחרי העיצוב. עובי החומר, מיקום החיבור, יכולת החיתוך והדרך שבה החלקים נפגשים נכנסים למודל מראש — כך שהמוצר הסופי הוא תוצאה ישירה של ההנדסה שלו.</p></section>
+</details><section class="model-navigation"><a class="back" href="../table/flow/" data-i18n="model.other">הכירו גם את דגם Flow ←</a></section>
+<section class="three-preview" data-three-preview data-state="idle" data-model-src="media/geometric-v11-design-only.glb" aria-labelledby="three-title"><h2 id="three-title" data-i18n="three.title">תצוגת תלת־ממד</h2><p data-i18n="three.design">הדמיית תכנון CAD של שלדת Geometric V1.1 בלבד (15 חלקים). חריצי שתי משפחות קורות שונו ביחס לקובצי המקור. הפלטה העליונה אינה כלולה; התאמה למוצר המצולם, הרכבה פיזית וחוזק לא אומתו.</p><img class="three-poster" src="media/geometric-v11-design-only-poster.webp" width="900" height="900" alt="הדמיית תכנון תלת־ממדית של שלדת שולחן Geometric V1.1 ללא פלטה" data-i18n-alt="three.alt" loading="lazy" decoding="async"><button type="button" data-three-open disabled aria-expanded="false" aria-controls="three-stage" data-i18n="three.open">צפה בתלת־ממד</button><p id="three-help" data-i18n="three.help">גררו אופקית לסיבוב, צבטו לזום או השתמשו בכפתורים. גרירה אנכית גוללת את העמוד. Esc לחזרה לתמונות.</p><p class="three-status" role="status" aria-live="polite"></p><div class="three-stage" id="three-stage" aria-describedby="three-help" hidden></div><div class="three-toolbar" hidden><button type="button" data-three-action="left" data-i18n="three.left">סיבוב שמאלה</button><button type="button" data-three-action="right" data-i18n="three.right">סיבוב ימינה</button><button type="button" data-three-action="up" data-i18n="three.up">מבט גבוה יותר</button><button type="button" data-three-action="down" data-i18n="three.down">מבט תחתון</button><button type="button" data-three-action="in" data-i18n="three.in">הגדלה</button><button type="button" data-three-action="out" data-i18n="three.out">הקטנה</button><button type="button" data-three-action="reset" data-i18n="three.reset">איפוס תצוגה</button><button type="button" data-three-close data-i18n="three.close">חזרה לתמונות</button></div><noscript><p data-i18n="three.blocked">נדרש JavaScript לתצוגת תלת־ממד. התמונות זמינות כרגיל.</p></noscript></section></main>
+
+
+
+<footer class="footer"><span data-i18n="build.footer">ASSEMBLE LAB / עיצוב · הנדסה · ייצור</span><a href="../" data-i18n="footer.back">חזרה למוצרים ↑</a></footer>
+<script>
+const slides=[...document.querySelectorAll('.slide')],steps=[...document.querySelectorAll('.step')],badge=document.querySelector('.badge'),progress=document.querySelector('.progress span'),index=document.querySelector('.index'),title=document.querySelector('.copy h3'),desc=document.querySelector('.copy p'),viewer=document.querySelector('.viewer'),nav=document.querySelector('.nav');let active=0;
+function show(i){active=(i+slides.length)%slides.length;slides.forEach((s,j)=>{s.classList.toggle('active',j===active);s.setAttribute('aria-hidden',j===active?'false':'true')});steps.forEach((s,j)=>{s.classList.toggle('active',j===active);s.setAttribute('aria-pressed',j===active?'true':'false')});window.ASSEMBLE_MEDIA.load(slides[active]);const st=steps[active],no=String(active+1).padStart(2,'0');viewer.classList.remove('layout-portrait','layout-wide','layout-cinematic');viewer.classList.add('layout-'+st.dataset.layout);badge.textContent=no+' / '+window.ASSEMBLE_I18N.t(st.dataset.codeKey);progress.textContent=no;index.textContent=no+' / '+window.ASSEMBLE_I18N.t(st.dataset.codeKey);title.textContent=window.ASSEMBLE_I18N.t(st.dataset.titleKey);desc.textContent=window.ASSEMBLE_I18N.t(st.dataset.descKey);if(innerWidth<=900){const stepRect=st.getBoundingClientRect(),navRect=nav.getBoundingClientRect();nav.scrollBy({left:stepRect.left-navRect.left-(nav.clientWidth-stepRect.width)/2,behavior:'smooth'})}}
+steps.forEach((s,i)=>s.addEventListener('click',()=>show(i)));document.querySelector('.prev').addEventListener('click',()=>show(active-1));document.querySelector('.next').addEventListener('click',()=>show(active+1));document.querySelector('.gallery').addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();show(active-1)}if(e.key==='ArrowRight'){e.preventDefault();show(active+1)}});let tx=0,ty=0;viewer.addEventListener('touchstart',e=>{if(e.changedTouches.length){tx=e.changedTouches[0].clientX;ty=e.changedTouches[0].clientY}},{passive:true});viewer.addEventListener('touchend',e=>{if(!e.changedTouches.length)return;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.15)show(active+(dx<0?1:-1))},{passive:true});
+document.addEventListener('assemble:languagechange',()=>show(active));
+show(active);
+</script>
+<script>window.ASSEMBLE_I18N.translate();</script></body></html>
