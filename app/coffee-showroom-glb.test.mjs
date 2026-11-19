@@ -70,8 +70,8 @@ test('top meshes actually form a round bevelled 620mm tabletop and leg mounts',(
 test('unused three-straight-leg demo stays retired; live intro is Geometric, return is original Personal Coffee GLB',()=>{
   const intro=readFileSync(new URL('./personal-coffee-hero.mjs',import.meta.url),'utf8');
   const returned=readFileSync(new URL('./return-3d.mjs',import.meta.url),'utf8');
-  const html=readFileSync(new URL('./index.html',import.meta.url),'utf8');
-  const sw=readFileSync(new URL('./sw.js',import.meta.url),'utf8');
+  const html=readFileSync(new URL('./development/index.html',import.meta.url),'utf8');
+  const sw=readFileSync(new URL('./development/sw.js',import.meta.url),'utf8');
   assert.doesNotMatch(intro,/matchingCoffeeTableGlb\(\)/);
   assert.doesNotMatch(returned,/matchingCoffeeTableGlb\(\)/);
   assert.doesNotMatch(returned,/showcaseNightstandGlb\(\)/);
@@ -80,6 +80,6 @@ test('unused three-straight-leg demo stays retired; live intro is Geometric, ret
   assert.match(returned,/verifyPersonalSource\(source\)/);
   assert.match(html,/geometric-engineering-object-clean\.webp/);
   assert.match(html,/data-model-src="\.\.\/geometric\/media\/geometric-v11-design-only\.glb"/);
-  assert.match(sw,/'\.\/photo-grounded-coffee-glb\.mjs'/);
+  assert.match(sw,/'\.\.\/photo-grounded-coffee-glb\.mjs'/);
   assert.doesNotMatch(sw,/'\.\/coffee-showroom-glb\.mjs'/);
 });
