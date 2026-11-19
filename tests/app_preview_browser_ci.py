@@ -263,7 +263,7 @@ def run(browser_exe: str, output_dir: Path) -> None:
             pwa.goto(root + "/app/index.html", wait_until="networkidle")
             # The main app now configures a round coffee table; archived preview-lab
             # remains independently available via its URL and SW shell.
-            expect(pwa.locator('#main h1')).to_be_visible()
+            expect(pwa.locator('main h1')).to_be_visible()
             assert pwa.locator('a[href="./marketing/v1/"]').count()==1
             pwa.evaluate("""async () => {
                 const registration = await navigator.serviceWorker.ready;
