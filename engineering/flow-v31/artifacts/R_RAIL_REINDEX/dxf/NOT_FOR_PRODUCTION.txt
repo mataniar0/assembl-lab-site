@@ -1,0 +1,2 @@
+V3.1 CANDIDATE / DESIGN_ONLY / NO PRODUCTION CUT APPROVAL
+Nominal6mm. No kerf or physical fit validation. Use only as coherent option set for PM research review.

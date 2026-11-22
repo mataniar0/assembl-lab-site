@@ -1,0 +1,10 @@
+Cannot create cache home directory: '/home/agent/.cache/ezdxf', cache files will not be saved.
+See also issue https://github.com/mozman/ezdxf/issues/923.
+Traceback (most recent call last):
+  File "/workspace/assembl-lab-site/engineering/flow-v31/diagrams.py", line 42, in <module>
+    aa,bb=foot(a,shift,0),foot(b,shift,1);draw(ax,aa,'#397fc0',.5);draw(ax,bb,'#e48d3a',.5);draw(ax,translate(base,xoff=offset[0],yoff=offset[1]),'#30946d',.35);draw(ax,aa.intersection(bb),'#cf3447',.9)
+                                                                                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/assembl-lab-site/engineering/flow-v31/diagrams.py", line 16, in draw
+    for q in p.geoms:draw(ax,q,color,alpha,edge)
+             ^^^^^^^
+AttributeError: 'LineString' object has no attribute 'geoms'. Did you mean: '_geom'?

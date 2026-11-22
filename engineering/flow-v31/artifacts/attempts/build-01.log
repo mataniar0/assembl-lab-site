@@ -1,0 +1,14 @@
+Cannot create cache home directory: '/home/agent/.cache/ezdxf', cache files will not be saved.
+See also issue https://github.com/mozman/ezdxf/issues/923.
+R_RAIL_REINDEX corner True [('L_south', 'W_west', 0.0, 636.0), ('L_south', 'SW_LEG_A', 0.0, 1156.367), ('L_south', 'SW_LEG_B', 0.0, 0.0), ('L_south', 'SW_BASE', 0.0, 0.0), ('W_west', 'SW_LEG_A', 0.0, 0.0), ('W_west', 'SW_LEG_B', 0.0, 1119.666), ('W_west', 'SW_BASE', 0.0, 0.0), ('SW_LEG_A', 'SW_LEG_B', 0.0, 2928.0), ('SW_LEG_A', 'SW_BASE', 0.0, 165.0), ('SW_LEG_B', 'SW_BASE', 0.0, 165.0)]
+Traceback (most recent call last):
+  File "/workspace/assembl-lab-site/engineering/flow-v31/build.py", line 27, in <module>
+    pairs,joints=pairs_and_joints(world,rows);passed=all(p['status']=='PASS' for p in pairs) and all(j['status']=='PASS' for j in joints)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/assembl-lab-site/engineering/flow-v31/model.py", line 134, in pairs_and_joints
+    pairs=[];cache={};normal_flip=np.diag([1.,1.,-1.,1.]);normal_flip[2,3]=6
+
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/cadquery/occ_impl/shapes.py", line 1444, in distance
+    dist_calc = BRepExtrema_DistShapeShape(self.wrapped, other.wrapped)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

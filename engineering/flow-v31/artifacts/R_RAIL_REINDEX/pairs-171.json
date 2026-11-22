@@ -1,0 +1,2527 @@
+[
+  {
+    "a": "L_south",
+    "b": "L_north",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 468.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "W_west",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 636.0,
+    "contact_components_mm2": {
+      "X": 179.99999999999994,
+      "Y": 240.0,
+      "Z": 216.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "W_east",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 636.0,
+    "contact_components_mm2": {
+      "X": 179.99999999999994,
+      "Y": 240.0,
+      "Z": 216.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "LC",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 231.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "C_1",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 758.0930748217909,
+    "contact_components_mm2": {
+      "X": 432.0,
+      "Y": 182.09307482179088,
+      "Z": 144.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "C_2",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 758.0088311982345,
+    "contact_components_mm2": {
+      "X": 432.0,
+      "Y": 182.00883119823447,
+      "Z": 144.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "SW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 1156.3665147420531,
+    "contact_components_mm2": {
+      "X": 280.3665147420532,
+      "Y": 0.0,
+      "Z": 875.9999999999999
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "SW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "SW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 374.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "SE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 1152.5307299579233,
+    "contact_components_mm2": {
+      "X": 276.5307299579235,
+      "Y": 0.0,
+      "Z": 875.9999999999999
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "SE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "SE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 374.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "NW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 468.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "NW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 318.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "NW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 587.0538731666796,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "NE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 468.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "NE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 318.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 587.0538731666796,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "W_west",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 636.0,
+    "contact_components_mm2": {
+      "X": 179.99999999999994,
+      "Y": 240.0,
+      "Z": 216.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "W_east",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 636.0,
+    "contact_components_mm2": {
+      "X": 179.99999999999994,
+      "Y": 240.0,
+      "Z": 216.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "LC",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 231.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "C_1",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 758.0930748217909,
+    "contact_components_mm2": {
+      "X": 432.0,
+      "Y": 182.09307482179088,
+      "Z": 144.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "C_2",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 758.0088311982345,
+    "contact_components_mm2": {
+      "X": 432.0,
+      "Y": 182.00883119823447,
+      "Z": 144.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "SW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 468.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "SW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 318.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "SW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 587.0538731666796,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "SE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 468.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "SE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 318.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "SE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 587.0538731666796,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "NW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 1156.3665147420531,
+    "contact_components_mm2": {
+      "X": 280.3665147420532,
+      "Y": 0.0,
+      "Z": 875.9999999999999
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "NW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "NW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 374.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "NE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 1152.5307299579233,
+    "contact_components_mm2": {
+      "X": 276.5307299579235,
+      "Y": 0.0,
+      "Z": 875.9999999999999
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "NE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 374.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "W_east",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 848.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "LC",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 756.0284623081775,
+    "contact_components_mm2": {
+      "X": 180.02846230817744,
+      "Y": 432.0,
+      "Z": 144.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "C_1",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 277.666667,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "C_2",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 564.333333,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "SW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "SW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 1119.6656460179377,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 279.6656460179377,
+      "Z": 839.9999999999999
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "SW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 374.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "SE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 698.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "SE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 848.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "SE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 912.6512203465243,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "NW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "NW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 1115.2440939266444,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 275.24409392664444,
+      "Z": 839.9999999999999
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "NW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 374.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "NE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 698.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "NE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 848.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 912.6512203465243,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "LC",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 756.0284623081775,
+    "contact_components_mm2": {
+      "X": 180.02846230817744,
+      "Y": 432.0,
+      "Z": 144.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "C_1",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 564.333333,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "C_2",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 277.66666699999996,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "SW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 698.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "SW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 848.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "SW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 912.6512203465243,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "SE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "SE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 1119.6656460179377,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 279.6656460179377,
+      "Z": 839.9999999999999
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "SE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 374.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "NW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 698.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "NW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 848.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "NW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 912.6512203465243,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "NE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "NE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 1115.2440939266444,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 275.24409392664444,
+      "Z": 839.9999999999999
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 374.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "C_1",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 876.0,
+    "contact_components_mm2": {
+      "X": 420.0,
+      "Y": 420.0,
+      "Z": 36.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "C_2",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 876.0,
+    "contact_components_mm2": {
+      "X": 420.0,
+      "Y": 420.0,
+      "Z": 36.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "SW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 231.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "SW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 81.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "SW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 431.6436609056132,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "SE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 231.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "SE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 81.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "SE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 431.6436609056132,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "NW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 231.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "NW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 81.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "NW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 431.6436609056132,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "NE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 231.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "NE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 81.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 431.6436609056132,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_1",
+    "b": "C_2",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 280.666666,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_1",
+    "b": "SW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 127.66666700000002,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_1",
+    "b": "SW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 277.666667,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_1",
+    "b": "SW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 456.73554852440475,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_1",
+    "b": "SE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 414.333333,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_1",
+    "b": "SE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 564.333333,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_1",
+    "b": "SE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 664.1491002868926,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_1",
+    "b": "NW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 127.66666700000002,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_1",
+    "b": "NW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 277.666667,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_1",
+    "b": "NW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 456.73554852440475,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_1",
+    "b": "NE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 414.333333,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_1",
+    "b": "NE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 564.333333,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_1",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 664.1491002868926,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_2",
+    "b": "SW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 414.33333300000004,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_2",
+    "b": "SW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 564.333333,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_2",
+    "b": "SW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 664.1491002868926,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_2",
+    "b": "SE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 127.66666699999996,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_2",
+    "b": "SE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 277.66666699999996,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_2",
+    "b": "SE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 456.73554852440475,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_2",
+    "b": "NW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 414.33333300000004,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_2",
+    "b": "NW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 564.333333,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_2",
+    "b": "NW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 664.1491002868926,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_2",
+    "b": "NE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 127.66666699999996,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_2",
+    "b": "NE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 277.66666699999996,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "C_2",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 456.73554852440475,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_A",
+    "b": "SW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 2928.0,
+    "contact_components_mm2": {
+      "X": 1079.9999999999998,
+      "Y": 1200.0,
+      "Z": 648.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_A",
+    "b": "SW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 165.0,
+    "contact_components_mm2": {
+      "X": 72.0,
+      "Y": 56.99999999999999,
+      "Z": 36.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_A",
+    "b": "SE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 548.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_A",
+    "b": "SE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 698.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_A",
+    "b": "SE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 682.5,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_A",
+    "b": "NW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 468.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_A",
+    "b": "NW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 318.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_A",
+    "b": "NW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 452.5,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_A",
+    "b": "NE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 720.6441562935205,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_A",
+    "b": "NE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 767.0254233074677,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_A",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 818.8788066618894,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_B",
+    "b": "SW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 165.0,
+    "contact_components_mm2": {
+      "X": 56.99999999999999,
+      "Y": 72.0,
+      "Z": 36.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_B",
+    "b": "SE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 698.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_B",
+    "b": "SE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 848.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_B",
+    "b": "SE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 832.5,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_B",
+    "b": "NW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 318.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_B",
+    "b": "NW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 168.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_B",
+    "b": "NW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 302.5,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_B",
+    "b": "NE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 767.0254233074677,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_B",
+    "b": "NE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 864.4813473985428,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_B",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 885.755327390132,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_BASE",
+    "b": "SE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 682.5,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_BASE",
+    "b": "SE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 832.5,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_BASE",
+    "b": "SE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 817.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_BASE",
+    "b": "NW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 452.5,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_BASE",
+    "b": "NW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 302.5,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_BASE",
+    "b": "NW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 437.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_BASE",
+    "b": "NE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 818.8788066618894,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_BASE",
+    "b": "NE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 885.755327390132,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SW_BASE",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 926.5300858579823,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_A",
+    "b": "SE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 2928.0,
+    "contact_components_mm2": {
+      "X": 1079.9999999999998,
+      "Y": 1200.0,
+      "Z": 648.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_A",
+    "b": "SE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 165.0,
+    "contact_components_mm2": {
+      "X": 72.0,
+      "Y": 56.99999999999999,
+      "Z": 36.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_A",
+    "b": "NW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 720.6441562935205,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_A",
+    "b": "NW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 767.0254233074677,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_A",
+    "b": "NW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 818.8788066618894,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_A",
+    "b": "NE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 468.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_A",
+    "b": "NE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 318.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_A",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 452.5,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_B",
+    "b": "SE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 165.0,
+    "contact_components_mm2": {
+      "X": 56.99999999999999,
+      "Y": 72.0,
+      "Z": 36.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_B",
+    "b": "NW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 767.0254233074677,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_B",
+    "b": "NW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 864.4813473985428,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_B",
+    "b": "NW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 885.755327390132,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_B",
+    "b": "NE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 318.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_B",
+    "b": "NE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 168.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_B",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 302.5,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_BASE",
+    "b": "NW_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 818.8788066618894,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_BASE",
+    "b": "NW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 885.755327390132,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_BASE",
+    "b": "NW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 926.5300858579823,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_BASE",
+    "b": "NE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 452.5,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_BASE",
+    "b": "NE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 302.5,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "SE_BASE",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 437.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "NW_LEG_A",
+    "b": "NW_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 2928.0,
+    "contact_components_mm2": {
+      "X": 1079.9999999999998,
+      "Y": 1200.0,
+      "Z": 648.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "NW_LEG_A",
+    "b": "NW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 165.0,
+    "contact_components_mm2": {
+      "X": 72.0,
+      "Y": 56.99999999999999,
+      "Z": 36.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "NW_LEG_A",
+    "b": "NE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 548.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "NW_LEG_A",
+    "b": "NE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 698.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "NW_LEG_A",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 682.5,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "NW_LEG_B",
+    "b": "NW_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 165.0,
+    "contact_components_mm2": {
+      "X": 56.99999999999999,
+      "Y": 72.0,
+      "Z": 36.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "NW_LEG_B",
+    "b": "NE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 698.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "NW_LEG_B",
+    "b": "NE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 848.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "NW_LEG_B",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 832.5,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "NW_BASE",
+    "b": "NE_LEG_A",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 682.5,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "NW_BASE",
+    "b": "NE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 832.5,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "NW_BASE",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": null,
+    "bbox_distance_lower_bound_mm": 817.0,
+    "face_contact_mm2": 0.0,
+    "contact_components_mm2": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "proof": "DISJOINT_AABB",
+    "status": "PASS"
+  },
+  {
+    "a": "NE_LEG_A",
+    "b": "NE_LEG_B",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 2928.0,
+    "contact_components_mm2": {
+      "X": 1079.9999999999998,
+      "Y": 1200.0,
+      "Z": 648.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "NE_LEG_A",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 165.0,
+    "contact_components_mm2": {
+      "X": 72.0,
+      "Y": 56.99999999999999,
+      "Z": 36.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  },
+  {
+    "a": "NE_LEG_B",
+    "b": "NE_BASE",
+    "overlap_mm3": 0.0,
+    "distance_mm": 0.0,
+    "face_contact_mm2": 165.0,
+    "contact_components_mm2": {
+      "X": 56.99999999999999,
+      "Y": 72.0,
+      "Z": 36.0
+    },
+    "proof": "OCCT_COMMON_AND_FACE_AREAS",
+    "status": "PASS"
+  }
+]

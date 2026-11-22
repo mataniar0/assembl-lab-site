@@ -1,0 +1,3 @@
+const fs=require('fs'),path=require('path');
+const validator=require(process.env.FLOW_GLB_VALIDATOR||'/workspace/work/flow-v31/browser/node_modules/gltf-validator');
+(async()=>{for(const option of ['R_RAIL_REINDEX','L_LEG_BASE']){const base=path.join(__dirname,'artifacts',option,'FLOW_V31_CANDIDATE_FULL_19_DESIGN_ONLY');const report=await validator.validateBytes(new Uint8Array(fs.readFileSync(base+'.glb')),{uri:option+'.glb'});fs.writeFileSync(path.join(__dirname,'artifacts',option,'gltf-validation.json'),JSON.stringify(report,null,2)+'\n');console.log(option,JSON.stringify({errors:report.issues.numErrors,warnings:report.issues.numWarnings,hints:report.issues.numHints}));if(report.issues.numErrors||report.issues.numWarnings)process.exitCode=1;}})();

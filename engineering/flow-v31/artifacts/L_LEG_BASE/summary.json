@@ -1,0 +1,29 @@
+{
+  "option": "L_LEG_BASE",
+  "status": "CAD_COMPUTED_PASS",
+  "reference_corner": "PASS",
+  "instances": 19,
+  "pairs": 171,
+  "collision_failures": 0,
+  "required_joints": 32,
+  "joint_failures": 0,
+  "bounds_mm": [
+    860.0,
+    480.0,
+    450.0
+  ],
+  "frame_height_mm": 380,
+  "step_roundtrip_solids": 19,
+  "changed_patterns": 5,
+  "changed_physical_pieces": 12,
+  "physical_profile_delta_mm2": 20247.164402870032,
+  "base_area_mm2": 142.8709789317006,
+  "original_base_area_mm2": 260.6620796492085,
+  "negative_control_overlap_mm3": 1079.9999999999998,
+  "clearance_mm": 0,
+  "kerf_compensated": false,
+  "production_authorized": false,
+  "physical_validation": "NOT_PERFORMED",
+  "connected_components": 1,
+  "glb_bytes": 248484
+}
