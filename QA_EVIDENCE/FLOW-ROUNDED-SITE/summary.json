@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "branch": "feature/flow-rounded-site-models",
+  "site_base_sha": "41b87fd7d196ab42296e74f50af85a14bc4f22a4",
+  "engineering_source_sha": "b4c5797865627b78fc3182a6e89b33a8182b85f2",
+  "source_glb_byte_identical": true,
+  "geometry_changes": 0,
+  "model_parts": 19,
+  "asset_contract": {
+    "passed": 9,
+    "failed": 0
+  },
+  "browser": {
+    "passed": 92,
+    "failed": 0,
+    "products": 9,
+    "languages": [
+      "he",
+      "en"
+    ],
+    "widths": [
+      320,
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "actual_model_load_widths": [
+      390,
+      1440
+    ],
+    "missing_glb_fallback": "PASS",
+    "no_webgl_fallback": "PASS",
+    "software_webgl": true,
+    "physical_devices_tested": false
+  },
+  "site_smoke": {
+    "passed": 82,
+    "failed": 0,
+    "real_posts": 0,
+    "exact_outgoing_commit_checked_by": "Normal pre-push; exact-head result supplied in PR handoff"
+  },
+  "table_journeys": {
+    "passed": 6,
+    "failed": 0,
+    "download_and_inquiry_preserved": true
+  },
+  "frozen_marketing_tests": {
+    "passed": 5,
+    "failed": 0
+  },
+  "gltf": {
+    "errors": 0,
+    "warnings": 0,
+    "hints": 37
+  },
+  "original_v3_and_legacy_dxf_unchanged": true,
+  "other_model_assets_unchanged": true,
+  "frozen_app_unchanged": true,
+  "manufacturing_approved": false,
+  "merge_performed": false,
+  "deploy_performed": false
+}

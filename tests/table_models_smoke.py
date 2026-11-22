@@ -28,6 +28,11 @@ def main():
                         page.wait_for_url(urljoin(base, 'table/'))
                         for path in ('table/', 'table/flow/'):
                             page.goto(urljoin(base, path))
+                            # Below-fold lazy posters/cards are not broken just
+                            # because the browser has not requested them yet.
+                            for image in page.locator('img').all():
+                                image.scroll_into_view_if_needed()
+                                image.evaluate('async img => { await img.decode(); }')
                             assert not page.evaluate(LAYOUT_CHECK)
                             assert not page.evaluate(LOCALE_CHECK, locale)
                             assert not page.evaluate(IMAGE_CHECK)

@@ -1,0 +1,40 @@
+{
+  "candidate": "R_ROUNDED_SHOULDERS",
+  "public_route": "table/flow/",
+  "source_repository": "mataniar0/assembl-lab-site",
+  "source_commit": "b4c5797865627b78fc3182a6e89b33a8182b85f2",
+  "engineering_merge_commit": "0433c7ba121eb65ad9d18289099b6914ef8a9857",
+  "source_path": "engineering/flow-v31/artifacts/R_ROUNDED_SHOULDERS/FLOW_V31_CANDIDATE_FULL_19_DESIGN_ONLY.glb",
+  "export_path": "table/flow/media/flow-v31-rounded-design-only.glb",
+  "export_sha256": "71d99b4253e43c097f1451f8c3253c11b76d280147d974b737e3ed09da394e3d",
+  "export_bytes": 324932,
+  "source_and_export_byte_identical": true,
+  "geometry_modified_for_site": false,
+  "mesh_nodes": 19,
+  "dimensions_m": {
+    "x": 0.86,
+    "y": 0.45,
+    "z": 0.48
+  },
+  "tabletop": false,
+  "opening_camera_orbit": "35deg 55deg auto",
+  "poster": {
+    "path": "table/flow/media/flow-v31-rounded-design-only-poster.webp",
+    "sha256": "160da3b5fd6ff1be05a047b8990feaebd4597f99e5ca1f48f6078655813cef60",
+    "bytes": 22196,
+    "width": 900,
+    "height": 900,
+    "method": "Actual local model-viewer render, WebP screenshot API; no geometry or material changes",
+    "script": "scripts/export_flow_rounded_poster.py"
+  },
+  "legacy_public_glb": "table/flow/media/flow-v31-design-only.glb",
+  "legacy_archive": {
+    "path": "table/flow/FLOW_OPTION2_TRI_BASE_REV2_DXF.zip",
+    "sha256": "d43d16be3bd879e8204ea91cdeed05d29f4c44eff7bc118e45d1c05cf5c87dba",
+    "unchanged": true,
+    "matches_displayed_v31": false
+  },
+  "manufacturing_approved": false,
+  "physical_fit_validated": false,
+  "site_base_sha": "41b87fd7d196ab42296e74f50af85a14bc4f22a4"
+}

@@ -7,6 +7,7 @@
   for (const box of document.querySelectorAll('[data-three-preview][data-model-src]')) {
     const open = box.querySelector('[data-three-open]'), stage = box.querySelector('.three-stage'),
       poster = box.querySelector('.three-poster'), toolbar = box.querySelector('.three-toolbar'), status = box.querySelector('.three-status');
+    const defaultOrbit = box.dataset.cameraOrbit || '35deg 70deg auto';
     let viewer = null, generation = 0, statusKey = '';
     function message(key) { statusKey = key; status.textContent = key ? t(key) : ''; }
     function restore(state, key, focus = false) {
@@ -36,7 +37,7 @@
         if (attempt !== generation) return;
         viewer = document.createElement('model-viewer');
         viewer.setAttribute('camera-controls', ''); viewer.setAttribute('touch-action', 'pan-y'); viewer.setAttribute('loading', 'eager');
-        viewer.setAttribute('interaction-prompt', 'none'); viewer.setAttribute('camera-orbit', '35deg 70deg auto');
+        viewer.setAttribute('interaction-prompt', 'none'); viewer.setAttribute('camera-orbit', defaultOrbit);
         viewer.setAttribute('min-camera-orbit', 'auto 5deg 0.1m'); viewer.setAttribute('max-camera-orbit', 'auto 175deg 10m');
         viewer.setAttribute('min-field-of-view', '20deg'); viewer.setAttribute('max-field-of-view', '60deg');
         viewer.setAttribute('field-of-view', '45deg'); viewer.setAttribute('alt', t('alt'));
@@ -59,7 +60,7 @@
       if (!viewer?.loaded) return;
       const action = button.dataset.threeAction, orbit = viewer.getCameraOrbit();
       let theta = orbit.theta * 180 / Math.PI, phi = orbit.phi * 180 / Math.PI, radius = orbit.radius;
-      if (action === 'reset') { viewer.cameraOrbit = '35deg 70deg auto'; viewer.fieldOfView = '45deg'; viewer.cameraTarget = 'auto auto auto'; }
+      if (action === 'reset') { viewer.cameraOrbit = defaultOrbit; viewer.fieldOfView = '45deg'; viewer.cameraTarget = 'auto auto auto'; }
       else {
         if (action === 'left') theta -= 30;
         if (action === 'right') theta += 30;

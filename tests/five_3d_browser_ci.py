@@ -1,29 +1,34 @@
 #!/usr/bin/env python3
 """AL-016/017 nine-product WebGL/browser regression; requires local Chromium + Playwright."""
 from __future__ import annotations
-import argparse,json,os,sys,traceback
+import argparse,json,os,sys,traceback,hashlib
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from site_smoke import site_server,Session,toggle
 ROOT=Path(__file__).resolve().parents[1]
 ROUTES=("geometric/","table/flow/","table/personal/","shelf/kids/","driller_stand/","shoe_rack/","workbench/","plant_stand/","etrog_box/")
-ap=argparse.ArgumentParser();ap.add_argument("--browser",default=os.environ.get("ASSEMBLE_BROWSER","/usr/bin/chromium"));args=ap.parse_args()
+ap=argparse.ArgumentParser();ap.add_argument("--browser",default=os.environ.get("ASSEMBLE_BROWSER","/usr/bin/chromium"))
+ap.add_argument('--route',action='append',choices=ROUTES,help='Limit browser QA to selected changed products')
+ap.add_argument('--screenshots',type=Path,help='Optional directory for actual loaded-model screenshots')
+args=ap.parse_args();selected=args.route or ROUTES
+if args.screenshots:args.screenshots.mkdir(parents=True,exist_ok=True)
 results=[]
 def check(label,fn):
  try: r=fn();results.append({"name":label,"status":"PASS","details":r});print("PASS",label,flush=True)
  except Exception as error: results.append({"name":label,"status":"FAIL","error":str(error),"trace":traceback.format_exc()});print("FAIL",label,str(error),flush=True)
 with site_server(ROOT) as base,sync_playwright() as pw:
  browser=pw.chromium.launch(executable_path=args.browser,headless=True,args=["--enable-webgl","--use-angle=swiftshader","--enable-unsafe-swiftshader"])
- for route in ROUTES:
+ for route in selected:
   for lang in ("he","en"):
    for width in (320,390,768,1024,1440):
     def run(route=route,lang=lang,width=width):
      session=Session(browser,base,(width,844 if width<600 else 900),lang)
      page=session.page
-     network_posts=[];errors=[]
+     network_posts=[];errors=[];models=[]
      page.on("request",lambda req:network_posts.append(req.method+" "+req.url) if req.method not in ("GET","HEAD") else None)
      page.on("pageerror",lambda err:errors.append(str(err)))
+     page.on('response',lambda response:models.append(response) if response.url.endswith('.glb') else None)
      page.goto(base+route,wait_until="networkidle")
      box=page.locator("[data-three-preview]")
      assert box.count()==1 and box.get_attribute("data-state")=="idle"
@@ -47,7 +52,15 @@ with site_server(ROOT) as base,sync_playwright() as pw:
       })""")
       assert state=="ready", (route,lang,width,diagnostics,errors)
       model=page.locator("model-viewer");assert model.count()==1
+      source=box.get_attribute('data-model-src')
+      assert len(models)==1 and models[0].url.endswith(source)
+      assert hashlib.sha256(models[0].body()).hexdigest()==hashlib.sha256((ROOT/route/source).read_bytes()).hexdigest(), 'HTTP model differs from pinned local asset'
+      if route=='table/flow/':
+       dimensions=model.evaluate('e=>({...e.getDimensions()})')
+       assert all(abs(dimensions[k]-v)<1e-6 for k,v in dict(x=.86,y=.45,z=.48).items()),dimensions
       before=model.evaluate("e=>({...e.getCameraOrbit()})")
+      expected_phi=55 if route=='table/flow/' else 70
+      assert abs(before['phi']*180/3.141592653589793-expected_phi)<.05, 'incorrect model-specific opening angle'
       page.locator("[data-three-action=right]").click()
       after=model.evaluate("e=>({...e.getCameraOrbit()})")
       assert abs(after["theta"]-before["theta"])>0.2,"orbit did not update"
@@ -56,8 +69,12 @@ with site_server(ROOT) as base,sync_playwright() as pw:
       page.locator("[data-three-action=reset]").click()
       reset=model.evaluate("e=>({...e.getCameraOrbit()})")
       assert abs(reset["theta"]-before["theta"])<0.05,"reset failed"
+      assert abs(reset['phi']-before['phi'])<.001,'reset did not restore model-specific opening angle'
       toggle(page,"en" if lang=="he" else "he");toggle(page,lang)
       assert page.locator("model-viewer").count()==1,"locale transition destroyed viewer"
+      if args.screenshots:
+       model.scroll_into_view_if_needed();page.wait_for_timeout(150)
+       page.screenshot(path=str(args.screenshots/(route.strip('/').replace('/','-')+'-'+lang+'-'+str(width)+'.png')))
       page.locator("[data-three-close]").click()
       assert page.locator("model-viewer").count()==0
       assert box.get_attribute("data-state")=="idle"
@@ -75,13 +92,13 @@ with site_server(ROOT) as base,sync_playwright() as pw:
    def guard(route):
     if route.request.method not in ("GET","HEAD"):
      writes.append(route.request.url);return route.abort()
-    if failure=="missing-asset" and route.request.url.endswith("geometric-v11-design-only.glb"):
+    if failure=="missing-asset" and route.request.url.endswith('.glb'):
      return route.fulfill(status=404,body="deliberately missing GLB")
     route.continue_()
    ctx.route("**/*",guard)
    if failure=="no-webgl":
     ctx.add_init_script("HTMLCanvasElement.prototype.getContext=function(){return null}")
-   page=ctx.new_page();page.goto(base+"geometric/",wait_until="networkidle")
+   page=ctx.new_page();page.goto(base+selected[0],wait_until="networkidle")
    page.locator("[data-three-open]").click()
    page.wait_for_function("document.querySelector('[data-three-preview]').dataset.state==='error'",timeout=60000)
    assert page.locator(".three-poster").is_visible()
