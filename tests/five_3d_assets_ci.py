@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 ASSETS={
  "geometric/":("geometric-v11-design-only.glb",15,"b3ee4944fee14901bafa2f50e52820d2e8394c13b41563ee627ba719bac9a1e9"),
- "table/flow/":("flow-v31-design-only.glb",19,"6194d110245a59289ba76bb5b5386648eaa8b0a679936c0e80602e679f42a8c3"),
+ "table/flow/":("flow-v31-rounded-design-only.glb",19,"71d99b4253e43c097f1451f8c3253c11b76d280147d974b737e3ed09da394e3d"),
  "table/personal/":("personal-design-preview.glb",32,None),
  "shelf/kids/":("kids-shelf-700-design-only.glb",5,None),
  "driller_stand/":("driller-v365-design-only.glb",31,None),
@@ -49,6 +49,17 @@ def run():
   if sha:assert hashlib.sha256(b).hexdigest()==sha,(route,"unapproved GLB version")
   header=json.loads(b[20:20+struct.unpack_from('<I',b,12)[0]])
   prims=[p for m in header["meshes"] for p in m["primitives"]]
+  if route=="table/flow/":
+   # Byte-pinned to the independently replayed CAD candidate, never the old R
+   # or an incompatible tabletop/legacy REV2 model with the same body count.
+   meta=header['scenes'][0]['extras']
+   assert meta['option']=='R_ROUNDED_SHOULDERS' and meta['status']=='CAD_COMPUTED_PASS'
+   assert meta['tabletop'] is False and meta['production_authorized'] is False
+   assert meta['physical_fit_validated'] is False
+   expected={'L_south','L_north','W_west','W_east','LC','C_1','C_2'}
+   expected|={f'{corner}_{part}' for corner in ('SW','SE','NW','NE') for part in ('LEG_A','LEG_B','BASE')}
+   assert {n['name'] for n in header['nodes'] if 'mesh' in n}==expected
+   assert all('uri' not in b for b in header['buffers']) and not header.get('images')
   if route=="etrog_box/":
    # C13 is a 114-part, metres-scaled source model with its lid fixed open at 120 degrees.
    assert len(header["nodes"])==115,(route,"incorrect named-node count")

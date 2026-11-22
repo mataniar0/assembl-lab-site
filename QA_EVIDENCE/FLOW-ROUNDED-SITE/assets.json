@@ -1,0 +1,52 @@
+{
+  "passed": 9,
+  "failed": 0,
+  "results": [
+    {
+      "route": "geometric/",
+      "meshes": 15,
+      "bytes": 58312
+    },
+    {
+      "route": "table/flow/",
+      "meshes": 19,
+      "bytes": 324932
+    },
+    {
+      "route": "table/personal/",
+      "meshes": 32,
+      "bytes": 1700936
+    },
+    {
+      "route": "shelf/kids/",
+      "meshes": 5,
+      "bytes": 123048
+    },
+    {
+      "route": "driller_stand/",
+      "meshes": 31,
+      "bytes": 170644
+    },
+    {
+      "route": "shoe_rack/",
+      "meshes": 36,
+      "bytes": 66272
+    },
+    {
+      "route": "plant_stand/",
+      "meshes": 22,
+      "bytes": 552016
+    },
+    {
+      "route": "etrog_box/",
+      "meshes": 114,
+      "bytes": 541988
+    },
+    {
+      "route": "workbench/",
+      "meshes": 161,
+      "bytes": 576400
+    }
+  ],
+  "real_posts": 0
+}
