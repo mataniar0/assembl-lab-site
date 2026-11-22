@@ -1,5 +1,9 @@
 # Flow V3.1 — מסירה לביקורת / Issue #36
 
+**עדכון כתף מעוגלת:** לבקשת בעל התכנון נוספה חלופה נפרדת **R_ROUNDED_SHOULDERS**, המבוססת על R ושומרת את מיקומי החיבורים. [מסירת העדכון, הבדיקות והוראות השחזור](ROUNDING.md). שתי החלופות המקוריות להלן נשמרות כראיות היסטוריות; השינוי החזותי אינו מחליף או מאשר קובצי V3.
+
+- מעודכן: [GLB](artifacts/R_ROUNDED_SHOULDERS/FLOW_V31_CANDIDATE_FULL_19_DESIGN_ONLY.glb) · [STEP](artifacts/R_ROUNDED_SHOULDERS/FLOW_V31_CANDIDATE_FULL_19_DESIGN_ONLY.step) · [DXF](artifacts/R_ROUNDED_SHOULDERS/dxf/) · [תקריב](artifacts/R_ROUNDED_SHOULDERS/detail.png) · [דוח PASS/FAIL וסבבים](ROUNDING.md).
+
 **שתי החלופות עברו אימות CAD ממוחשב מלא. ההמלצה לביקורת מנהל הפרויקט היא R_RAIL_REINDEX.** אלו מועמדי תכנון ללא פלטה; אין אישור חיתוך לייצור, התאמה פיזית, עומסים, Merge או Deploy.
 
 לכל חלופה הופקו19 גופים,171 בדיקות זוגות ללא התנגשות,32 חיבורים עם מגע חיובי, STEP שנפתח מחדש, GLB תקין, קובציDXF נפרדים המסומניםV31_CANDIDATE וארבע הדמיות. קובציV3 המקוריים וראיות הכשל נשמרו ללא שינוי.

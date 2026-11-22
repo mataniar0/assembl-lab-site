@@ -1,6 +1,6 @@
 """Independent serialized-DXF/STEP/GLB replay; no option generator imported."""
 from pathlib import Path
-import json,hashlib,itertools,math
+import json,hashlib,itertools,math,sys
 import numpy as np,ezdxf,cadquery as cq,trimesh
 from OCP.gp import gp_Trsf
 from shapely.geometry import Polygon,LineString
@@ -28,7 +28,7 @@ def roof_area(s,rect,z):
 def feature_face(lo,hi,v):
  return cq.Face.makeFromWires(cq.Wire.makePolygon([cq.Vector(x,v,t) for x,t in [(lo,0),(hi,0),(hi,6),(lo,6)]],close=True))
 reports=[]
-for option in ['R_RAIL_REINDEX','L_LEG_BASE']:
+for option in (sys.argv[1:] or ['R_RAIL_REINDEX','L_LEG_BASE']):
  folder=OUT/option;bom=json.loads((folder/'bom-and-delta.json').read_text());meta=json.loads((folder/'transforms.json').read_text());rows=meta['instances'];polys={};solids={};world={}
  for r in bom:polys[r['profile']],solids[r['profile']]=load(folder/r['dxf'])
  for r in rows:
@@ -88,7 +88,7 @@ for option in ['R_RAIL_REINDEX','L_LEG_BASE']:
    length+=sum(overlap_length(ai) for a,b in bi if abs(a-6)<EPS or abs(b)<EPS)
    assert min(abs(length),abs(length-6))<EPS
    area+=length*(hi-lo)
-  expected=2280 if option=='R_RAIL_REINDEX' else 2244
+  expected=2244 if option=='L_LEG_BASE' else 2280
   assert abs(area-expected)<1e-5,(option,c,area,expected)
   spine.append(dict(corner=c,vertical_spine_contact_mm2=area,expected_mm2=expected,method='Independent piecewise planar-section integration; horizontal contact excluded'))
  name='FLOW_V31_CANDIDATE_FULL_19_DESIGN_ONLY';rt=cq.importers.importStep(str(folder/(name+'.step'))).val();assert rt.isValid() and len(rt.Solids())==19
@@ -98,7 +98,9 @@ for option in ['R_RAIL_REINDEX','L_LEG_BASE']:
  for mesh in scene.geometry.values():assert mesh.is_watertight and mesh.is_winding_consistent and mesh.volume>0 and np.isfinite(mesh.vertices).all() and mesh.faces.max()<len(mesh.vertices)
  assert np.allclose(scene.extents,[.86,.45,.48],atol=1e-7) and (folder/(name+'.glb')).stat().st_size<3_000_000
  result=dict(option=option,status='PASS_INDEPENDENT_SERIALIZED_REPLAY',pairs=171,collision_failures=0,upper_tabs=32,lower_receivers=8,bases=4,step_valid_solids=19,glb_mesh_nodes=19,glb_bytes=(folder/(name+'.glb')).stat().st_size,bounds_mm=bounds,upper_checks=upper,lower_checks=lower,base_centre_checks=basefits,spine_checks=spine,pair_checks=pairs,production_authorized=False)
+ inputs=[folder/r['dxf'] for r in bom]+[folder/'transforms.json',folder/(name+'.step'),folder/(name+'.glb')]
+ result['input_sha256']={f.relative_to(folder).as_posix():hashlib.sha256(f.read_bytes()).hexdigest() for f in inputs}
  (folder/'independent-qc.json').write_text(json.dumps(result,indent=2)+'\n');reports.append({k:v for k,v in result.items() if not isinstance(v,list)})
  print(option,'PASS independent DXF ->19 solids ->171 pairs ->32 top tabs ->8 foot slots ->19 STEP/GLB bodies',flush=True)
 for f,sha in json.loads((ROOT/'engineering/flow-v3/artifacts/source-hashes.json').read_text()).items():assert hashlib.sha256((ROOT/f).read_bytes()).hexdigest()==sha
-(OUT/'independent-qc.json').write_text(json.dumps(dict(status='PASS',source_v3_hashes='UNCHANGED',options=reports),indent=2)+'\n')
+if not sys.argv[1:]:(OUT/'independent-qc.json').write_text(json.dumps(dict(status='PASS',source_v3_hashes='UNCHANGED',options=reports),indent=2)+'\n')

@@ -1,0 +1,254 @@
+[
+  {
+    "profile": "CROSS_BEAM_C",
+    "source_class": "CROSS_BEAM_C",
+    "quantity": 2,
+    "changed": false,
+    "source_area_mm2": 32982.0,
+    "area_mm2": 32982.0,
+    "added_mm2": 0.0,
+    "removed_mm2": 0.0,
+    "symmetric_delta_mm2": 0.0,
+    "hausdorff_mm": 0.0,
+    "source_bbox_mm": [
+      10.0,
+      10.0,
+      490.0,
+      80.0
+    ],
+    "candidate_bbox_mm": [
+      10.0,
+      10.0,
+      490.0,
+      80.0
+    ],
+    "dxf": "dxf/CROSS_BEAM_C_x2_t6_V31_CANDIDATE_R_ROUNDED_SHOULDERS.dxf",
+    "clearance_mm": 0,
+    "kerf_compensated": false,
+    "production_authorized": false
+  },
+  {
+    "profile": "LENGTH_CENTER_LC",
+    "source_class": "LENGTH_CENTER_LC",
+    "quantity": 1,
+    "changed": false,
+    "source_area_mm2": 59372.0,
+    "area_mm2": 59372.0,
+    "added_mm2": 0.0,
+    "removed_mm2": 0.0,
+    "symmetric_delta_mm2": 0.0,
+    "hausdorff_mm": 0.0,
+    "source_bbox_mm": [
+      10.0,
+      10.0,
+      870.0,
+      80.0
+    ],
+    "candidate_bbox_mm": [
+      10.0,
+      10.0,
+      870.0,
+      80.0
+    ],
+    "dxf": "dxf/LENGTH_CENTER_LC_x1_t6_V31_CANDIDATE_R_ROUNDED_SHOULDERS.dxf",
+    "clearance_mm": 0,
+    "kerf_compensated": false,
+    "production_authorized": false
+  },
+  {
+    "profile": "LENGTH_OUTER_L",
+    "source_class": "LENGTH_OUTER_L",
+    "quantity": 2,
+    "changed": true,
+    "source_area_mm2": 56376.336669716475,
+    "area_mm2": 56392.89735433025,
+    "added_mm2": 408.0,
+    "removed_mm2": 391.4393153862382,
+    "symmetric_delta_mm2": 799.4393153862381,
+    "hausdorff_mm": 6.0,
+    "source_bbox_mm": [
+      10.0,
+      10.0,
+      870.0,
+      80.0
+    ],
+    "candidate_bbox_mm": [
+      10.0,
+      10.0,
+      870.0,
+      80.0
+    ],
+    "dxf": "dxf/LENGTH_OUTER_L_x2_t6_V31_CANDIDATE_R_ROUNDED_SHOULDERS.dxf",
+    "clearance_mm": 0,
+    "kerf_compensated": false,
+    "production_authorized": false
+  },
+  {
+    "profile": "TRI_BASE_ROUNDED",
+    "source_class": "TRI_BASE_ROUNDED",
+    "quantity": 4,
+    "changed": false,
+    "source_area_mm2": 260.6620796492085,
+    "area_mm2": 260.6620796492085,
+    "added_mm2": 0.0,
+    "removed_mm2": 0.0,
+    "symmetric_delta_mm2": 0.0,
+    "hausdorff_mm": 0.0,
+    "source_bbox_mm": [
+      -6.0,
+      -6.0,
+      15.5,
+      15.5
+    ],
+    "candidate_bbox_mm": [
+      -6.0,
+      -6.0,
+      15.5,
+      15.5
+    ],
+    "dxf": "dxf/TRI_BASE_ROUNDED_x4_t6_V31_CANDIDATE_R_ROUNDED_SHOULDERS.dxf",
+    "clearance_mm": 0,
+    "kerf_compensated": false,
+    "production_authorized": false
+  },
+  {
+    "profile": "WIDTH_OUTER_W",
+    "source_class": "WIDTH_OUTER_W",
+    "quantity": 2,
+    "changed": true,
+    "source_area_mm2": 31269.272513585784,
+    "area_mm2": 31287.27296574403,
+    "added_mm2": 408.0,
+    "removed_mm2": 389.99954784177834,
+    "symmetric_delta_mm2": 797.9995478417783,
+    "hausdorff_mm": 6.0,
+    "source_bbox_mm": [
+      10.0,
+      10.0,
+      490.0,
+      80.0
+    ],
+    "candidate_bbox_mm": [
+      10.0,
+      10.0,
+      490.0,
+      80.0
+    ],
+    "dxf": "dxf/WIDTH_OUTER_W_x2_t6_V31_CANDIDATE_R_ROUNDED_SHOULDERS.dxf",
+    "clearance_mm": 0,
+    "kerf_compensated": false,
+    "production_authorized": false
+  },
+  {
+    "profile": "LEG_A_NEAR_ROUNDED",
+    "source_class": "LEG_A",
+    "quantity": 2,
+    "changed": true,
+    "source_area_mm2": 25427.47790759071,
+    "area_mm2": 25443.431314281006,
+    "added_mm2": 16.711250668166276,
+    "removed_mm2": 0.7578439778797382,
+    "symmetric_delta_mm2": 17.469094646046013,
+    "hausdorff_mm": 2.214294869491482,
+    "source_bbox_mm": [
+      10.0,
+      10.0,
+      166.0,
+      396.0
+    ],
+    "candidate_bbox_mm": [
+      10.0,
+      10.0,
+      165.2307000204612,
+      396.0
+    ],
+    "dxf": "dxf/LEG_A_NEAR_ROUNDED_x2_t6_V31_CANDIDATE_R_ROUNDED_SHOULDERS.dxf",
+    "clearance_mm": 0,
+    "kerf_compensated": false,
+    "production_authorized": false
+  },
+  {
+    "profile": "LEG_B_NEAR_ROUNDED",
+    "source_class": "LEG_B",
+    "quantity": 2,
+    "changed": true,
+    "source_area_mm2": 25307.477907590717,
+    "area_mm2": 25325.183387114786,
+    "added_mm2": 18.534941605679386,
+    "removed_mm2": 0.8294620816086686,
+    "symmetric_delta_mm2": 19.364403687288053,
+    "hausdorff_mm": 2.4694331145468595,
+    "source_bbox_mm": [
+      10.0,
+      10.0,
+      166.0,
+      396.0
+    ],
+    "candidate_bbox_mm": [
+      10.0,
+      10.0,
+      165.2307000204612,
+      396.0
+    ],
+    "dxf": "dxf/LEG_B_NEAR_ROUNDED_x2_t6_V31_CANDIDATE_R_ROUNDED_SHOULDERS.dxf",
+    "clearance_mm": 0,
+    "kerf_compensated": false,
+    "production_authorized": false
+  },
+  {
+    "profile": "LEG_A_FAR_ROUNDED",
+    "source_class": "LEG_A",
+    "quantity": 2,
+    "changed": true,
+    "source_area_mm2": 25427.47790759071,
+    "area_mm2": 25447.72899340692,
+    "added_mm2": 21.095517109807407,
+    "removed_mm2": 0.8444312936055784,
+    "symmetric_delta_mm2": 21.939948403412984,
+    "hausdorff_mm": 2.5971103118051815,
+    "source_bbox_mm": [
+      10.0,
+      10.0,
+      166.0,
+      396.0
+    ],
+    "candidate_bbox_mm": [
+      10.0,
+      10.0,
+      165.2307000204612,
+      396.0
+    ],
+    "dxf": "dxf/LEG_A_FAR_ROUNDED_x2_t6_V31_CANDIDATE_R_ROUNDED_SHOULDERS.dxf",
+    "clearance_mm": 0,
+    "kerf_compensated": false,
+    "production_authorized": false
+  },
+  {
+    "profile": "LEG_B_FAR_ROUNDED",
+    "source_class": "LEG_B",
+    "quantity": 2,
+    "changed": true,
+    "source_area_mm2": 25307.477907590717,
+    "area_mm2": 25330.038585658775,
+    "added_mm2": 23.474684743290982,
+    "removed_mm2": 0.9140066752324976,
+    "symmetric_delta_mm2": 24.38869141852348,
+    "hausdorff_mm": 2.8861842847754815,
+    "source_bbox_mm": [
+      10.0,
+      10.0,
+      166.0,
+      396.0
+    ],
+    "candidate_bbox_mm": [
+      10.0,
+      10.0,
+      165.2307000204612,
+      396.0
+    ],
+    "dxf": "dxf/LEG_B_FAR_ROUNDED_x2_t6_V31_CANDIDATE_R_ROUNDED_SHOULDERS.dxf",
+    "clearance_mm": 0,
+    "kerf_compensated": false,
+    "production_authorized": false
+  }
+]

@@ -1,5 +1,7 @@
 # Flow V3.1 — two engineering candidates, Issue #36
 
+**Subsequent owner-requested refinement:** [R_ROUNDED_SHOULDERS](ROUNDING.md) adds a separate rounded shoulder version of R. The original two-option comparison and artifacts below remain preserved. Prefer the rounded version for the requested appearance, with its explicit additional four handed leg patterns/eight replacement legs; original R remains the minimum-pattern option.
+
 **Recommendation: R_RAIL_REINDEX for independent PM review. Both R and L achieve CAD-computed PASS; neither is physically approved or authorized for production cutting.** No tabletop. Original V3 remains frozen, and #33/#34 acceptance is not changed by this proposal.
 
 Baseline: `7b5af4725fdd4eccd4ae623fb031cc5a796b6df1`. Branch: `feature/al-016-flow-v31-options`. The preceding source-constrained search is retained at `engineering/flow-v3/SEARCH_REPORT.md`. Issue #36's earlier comment reports an uncommitted Library-based rail candidate. R independently reproduces its +6/-11 strategy from the **pinned repository DXFs**; this study does not import that ZIP or assert Library/repository byte equality. L is a distinct, separately built strategy.

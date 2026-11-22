@@ -1,6 +1,6 @@
 """Reproducible prototype studies; outputs are never production-cut approvals."""
 from collections import Counter
-import json,hashlib,itertools,shutil
+import json,hashlib,itertools,shutil,sys
 import numpy as np,trimesh,ezdxf,cadquery as cq
 from shapely.geometry import Polygon,box
 from shapely.ops import unary_union
@@ -8,7 +8,7 @@ from model import *
 OUT=HERE/'artifacts';OUT.mkdir(exist_ok=True)
 DISPLAY=np.array([[.001,0,0,0],[0,0,.001,0],[0,-.001,0,0],[0,0,0,1]])
 results=[]
-for option in ['R_RAIL_REINDEX','L_LEG_BASE']:
+for option in (sys.argv[1:] or ['R_RAIL_REINDEX','L_LEG_BASE']):
  folder=OUT/option;folder.mkdir(exist_ok=True);dxfs=folder/'dxf';dxfs.mkdir(exist_ok=True)
  orig,profiles,origin=option_profiles(option);rows=instances(option);qty=Counter(r['profile'] for r in rows)
  solids={k:solid(p) for k,p in profiles.items()};world={r['name']:moved(solids[r['profile']],np.array(r['matrix'])) for r in rows}
@@ -20,7 +20,7 @@ for option in ['R_RAIL_REINDEX','L_LEG_BASE']:
  required=[('L_south','W_west'),('L_south','SW_LEG_A'),('W_west','SW_LEG_B'),('SW_LEG_A','SW_LEG_B'),('SW_LEG_A','SW_BASE'),('SW_LEG_B','SW_BASE')]
  cp={frozenset((p['a'],p['b'])):p for p in cornerpairs}
  corner_pass=all(p['overlap_mm3']<VTOL for p in cornerpairs) and all(cp[frozenset(x)]['face_contact_mm2']>1e-4 for x in required)
- sp=cp[frozenset(('SW_LEG_A','SW_LEG_B'))];expected_vertical=2280 if option=='R_RAIL_REINDEX' else 2244;corner_pass=corner_pass and abs(sp['contact_components_mm2']['X']+sp['contact_components_mm2']['Y']-expected_vertical)<1e-5
+ sp=cp[frozenset(('SW_LEG_A','SW_LEG_B'))];expected_vertical=2244 if option=='L_LEG_BASE' else 2280;corner_pass=corner_pass and abs(sp['contact_components_mm2']['X']+sp['contact_components_mm2']['Y']-expected_vertical)<1e-5
  write(folder/'corner.json',dict(status='PASS' if corner_pass else 'FAIL',pairs=cornerpairs,required_mates=required))
  print(option,'corner',corner_pass,[(p['a'],p['b'],round(p['overlap_mm3'],6),round(p['face_contact_mm2'],3)) for p in cornerpairs],flush=True)
  if not corner_pass:
@@ -31,7 +31,7 @@ for option in ['R_RAIL_REINDEX','L_LEG_BASE']:
  bom=[]
  for k,p in profiles.items():
   old=orig[origin[k]];delta=p.symmetric_difference(old);aold=old.area
-  if option=='R_RAIL_REINDEX' and k in ['LENGTH_OUTER_L','WIDTH_OUTER_W']:
+  if option in ['R_RAIL_REINDEX','R_ROUNDED_SHOULDERS'] and k in ['LENGTH_OUTER_L','WIDTH_OUTER_W']:
    regions=[]
    for group,shift in zip(FEATURES[k]['upper_leg_receivers'],[6,-11]):
     for lo,hi in group:regions.extend([box(lo,10,hi,16),box(lo+shift,10,hi+shift,16)])
@@ -59,5 +59,5 @@ for option in ['R_RAIL_REINDEX','L_LEG_BASE']:
  neg=world['SW_LEG_A'].translate((-1,0,0)).intersect(world['SW_LEG_B']);bad=neg.Volume() if neg.Solids() else 0.;assert bad>VTOL
  summary=dict(option=option,status='CAD_COMPUTED_PASS' if passed else 'FAIL',reference_corner='PASS',instances=19,pairs=171,collision_failures=sum(p['status']=='FAIL' for p in pairs),required_joints=32,joint_failures=sum(j['status']=='FAIL' for j in joints),bounds_mm=bounds,frame_height_mm=380,step_roundtrip_solids=19,changed_patterns=sum(b['changed'] for b in bom),changed_physical_pieces=sum(b['quantity'] for b in bom if b['changed']),physical_profile_delta_mm2=sum(b['quantity']*b['symmetric_delta_mm2'] for b in bom),base_area_mm2=profiles['TRI_BASE_ROUNDED'].area,original_base_area_mm2=orig['TRI_BASE_ROUNDED'].area,negative_control_overlap_mm3=bad,clearance_mm=0,kerf_compensated=False,production_authorized=False,physical_validation='NOT_PERFORMED')
  write(folder/'summary.json',summary);results.append(summary)
-write(OUT/'summary.json',results)
+if not sys.argv[1:]:write(OUT/'summary.json',results)
 print(json.dumps(results,indent=2))

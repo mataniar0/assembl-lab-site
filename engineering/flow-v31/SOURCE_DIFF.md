@@ -1,5 +1,7 @@
 # Flow V3 → V3.1 candidate source changes
 
+**Rounded refinement:** [ROUNDING.md](ROUNDING.md) documents the later separate `R_ROUNDED_SHOULDERS` candidate. Its four rounded A/B NEAR/FAR leg patterns add a strictly local shoulder edit to R; R's rails, all base/inner-frame geometry and every placement matrix stay identical. The original R/L deltas below are retained, not recomputed or overwritten.
+
 **Immutable baseline:** `7b5af4725fdd4eccd4ae623fb031cc5a796b6df1`. All seven original `flowgen/*V3*.dxf` hashes are verified before building and after independent replay. No file under `engineering/flow-v3/` or `flowgen/` is changed. The entire proposal is isolated under `engineering/flow-v31/`.
 
 Candidate DXFs are separate modernR2013 files with millimetre units, closed LWPOLYLINE outlines, layer `V31_CANDIDATE_CUT`, and `V31_CANDIDATE` filenames. Their byte hashes differ even for copied geometry because headers, units and entity ordering are explicit. Geometric reuse is measured by polygon symmetric difference, not byte equality. Every candidate DXF is reread and checked against its intended polygon. These are nominal study profiles, not approved manufacturing files.

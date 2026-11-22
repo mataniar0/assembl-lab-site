@@ -79,6 +79,11 @@ def compact_base(radius=9.5,tongue_start=0):
  assert out.is_valid and out.geom_type=='Polygon';return out
 
 def option_profiles(option):
+ if option=='R_ROUNDED_SHOULDERS':
+  from shoulder import candidate
+  orig,profiles,_=option_profiles('R_RAIL_REINDEX')
+  profiles,origin,_,_=candidate(orig,profiles,instances('R_RAIL_REINDEX'),FEATURES)
+  return orig,profiles,origin
  orig=source();profiles=dict(orig);origin={k:k for k in profiles}
  if option=='R_RAIL_REINDEX':
   for k in ['LENGTH_OUTER_L','WIDTH_OUTER_W']:profiles[k]=rail_reindex(orig[k],k)
@@ -91,6 +96,10 @@ def option_profiles(option):
  return orig,profiles,origin
 
 def instances(option):
+ if option=='R_ROUNDED_SHOULDERS':
+  from shoulder import candidate
+  orig,profiles,_=option_profiles('R_RAIL_REINDEX')
+  return candidate(orig,profiles,instances('R_RAIL_REINDEX'),FEATURES)[2]
  frame=json.loads((BASE/'artifacts/transforms.json').read_text())['instances'];rows=[]
  for r in frame:
   m=np.array(r['matrix']);m[2,3]+=380;rows.append(dict(name=r['name'],profile=r['part'],matrix=m.tolist(),role='frame'))
@@ -161,6 +170,7 @@ def pairs_and_joints(world,rows):
  for c in ['SW','SE','NW','NE']:
   a,b=c+'_LEG_A',c+'_LEG_B';expected.extend([(a,byname[a]['mating_rail'],'upper'),(b,byname[b]['mating_rail'],'upper'),(a,b,'spine'),(a,c+'_BASE','lower'),(b,c+'_BASE','lower')])
  for a,b,kind in expected:
-  p=pd[frozenset((a,b))];vertical=p['contact_components_mm2']['X']+p['contact_components_mm2']['Y'];required_vertical=(2244 if '_NEAR' in byname.get(a,{}).get('profile','') or '_FAR' in byname.get(a,{}).get('profile','') else 2280) if kind=='spine' else 0;mate_ok=abs(vertical-required_vertical)<1e-4 if kind=='spine' else True;joints.append(dict(a=a,b=b,kind=kind,contact_mm2=p['face_contact_mm2'],vertical_contact_mm2=vertical,required_vertical_contact_mm2=required_vertical,overlap_mm3=p['overlap_mm3'],status='PASS' if p['overlap_mm3']<VTOL and p['face_contact_mm2']>1e-4 and mate_ok else 'FAIL'))
+  profile=byname.get(a,{}).get('profile','');trimmed=('_NEAR' in profile or '_FAR' in profile) and not profile.endswith('_ROUNDED')
+  p=pd[frozenset((a,b))];vertical=p['contact_components_mm2']['X']+p['contact_components_mm2']['Y'];required_vertical=(2244 if trimmed else 2280) if kind=='spine' else 0;mate_ok=abs(vertical-required_vertical)<1e-4 if kind=='spine' else True;joints.append(dict(a=a,b=b,kind=kind,contact_mm2=p['face_contact_mm2'],vertical_contact_mm2=vertical,required_vertical_contact_mm2=required_vertical,overlap_mm3=p['overlap_mm3'],status='PASS' if p['overlap_mm3']<VTOL and p['face_contact_mm2']>1e-4 and mate_ok else 'FAIL'))
  assert len(pairs)==171 and len(joints)==32
  return pairs,joints
