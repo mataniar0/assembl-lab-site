@@ -1,0 +1,11 @@
+{
+  "status": "PASS_RENDER_OF_REJECTED_DIAGNOSTIC",
+  "meshes": 5,
+  "errors": [],
+  "views": [
+    "front",
+    "side",
+    "underside"
+  ],
+  "assembly_acceptance": "FAIL"
+}

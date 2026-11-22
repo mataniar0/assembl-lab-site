@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "views": [
+    {
+      "option": "R_ROUNDED_SHOULDERS",
+      "view": "front",
+      "status": "PASS",
+      "mesh_nodes": 19,
+      "max_projected_extent": 0.8600621929267197
+    },
+    {
+      "option": "R_ROUNDED_SHOULDERS",
+      "view": "side",
+      "status": "PASS",
+      "mesh_nodes": 19,
+      "max_projected_extent": 0.8456299599595517
+    },
+    {
+      "option": "R_ROUNDED_SHOULDERS",
+      "view": "underside",
+      "status": "PASS",
+      "mesh_nodes": 19,
+      "max_projected_extent": 0.8712393079941124
+    },
+    {
+      "option": "R_ROUNDED_SHOULDERS",
+      "view": "top",
+      "status": "PASS",
+      "mesh_nodes": 19,
+      "max_projected_extent": 0.8600147257517519
+    },
+    {
+      "option": "R_ROUNDED_SHOULDERS",
+      "view": "detail",
+      "status": "PASS",
+      "mesh_nodes": 19,
+      "max_projected_extent": 0.5316151659284176
+    },
+    {
+      "option": "R_RAIL_REINDEX",
+      "view": "detail",
+      "status": "PASS",
+      "mesh_nodes": 19,
+      "max_projected_extent": 0.5316151659284176
+    }
+  ],
+  "page_errors": [],
+  "browser": "Chromium software WebGL",
+  "physical_device_test": false
+}

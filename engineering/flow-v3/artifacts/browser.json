@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "browser": "Chromium software WebGL",
+  "meshes": 7,
+  "errors": [],
+  "views": [
+    "front",
+    "side",
+    "underside"
+  ],
+  "scope": "Partial frame only; full intended table comparison BLOCKED"
+}

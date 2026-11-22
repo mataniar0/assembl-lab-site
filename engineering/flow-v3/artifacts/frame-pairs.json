@@ -1,0 +1,149 @@
+[
+  {
+    "a": "L_south",
+    "b": "L_north",
+    "intersection_mm3": 0,
+    "distance_mm": 468.0,
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "W_west",
+    "intersection_mm3": 0,
+    "distance_mm": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "W_east",
+    "intersection_mm3": 0,
+    "distance_mm": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "LC",
+    "intersection_mm3": 0,
+    "distance_mm": 231.0,
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "C_1",
+    "intersection_mm3": 0,
+    "distance_mm": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "C_2",
+    "intersection_mm3": 0,
+    "distance_mm": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "W_west",
+    "intersection_mm3": 0,
+    "distance_mm": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "W_east",
+    "intersection_mm3": 0,
+    "distance_mm": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "LC",
+    "intersection_mm3": 0,
+    "distance_mm": 231.0,
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "C_1",
+    "intersection_mm3": 0,
+    "distance_mm": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "C_2",
+    "intersection_mm3": 0,
+    "distance_mm": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "W_east",
+    "intersection_mm3": 0,
+    "distance_mm": 848.0,
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "LC",
+    "intersection_mm3": 0,
+    "distance_mm": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "C_1",
+    "intersection_mm3": 0,
+    "distance_mm": 277.666667,
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "C_2",
+    "intersection_mm3": 0,
+    "distance_mm": 564.333333,
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "LC",
+    "intersection_mm3": 0,
+    "distance_mm": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "C_1",
+    "intersection_mm3": 0,
+    "distance_mm": 564.333333,
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "C_2",
+    "intersection_mm3": 0,
+    "distance_mm": 277.66666699999996,
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "C_1",
+    "intersection_mm3": 0,
+    "distance_mm": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "C_2",
+    "intersection_mm3": 0,
+    "distance_mm": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "C_1",
+    "b": "C_2",
+    "intersection_mm3": 0,
+    "distance_mm": 280.666666,
+    "status": "PASS"
+  }
+]

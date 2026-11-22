@@ -1,0 +1,68 @@
+{
+  "Flow_V3_PARTIAL_FRAME_DESIGN_ONLY": {
+    "status": "PASS",
+    "step_solids": 7,
+    "glb_nodes": 7,
+    "glb_unique_meshes": 7,
+    "glb_mesh_instances": 7,
+    "bounds_metres": [
+      [
+        0.0,
+        0.0,
+        -0.47999998927116394
+      ],
+      [
+        0.8600000143051147,
+        0.07000000029802322,
+        0.0
+      ]
+    ],
+    "bytes": 51656,
+    "finite": true,
+    "watertight": true
+  },
+  "Flow_V3_PART_LIBRARY_NOT_ASSEMBLED": {
+    "status": "PASS",
+    "step_solids": 7,
+    "glb_nodes": 7,
+    "glb_unique_meshes": 7,
+    "glb_mesh_instances": 7,
+    "bounds_metres": [
+      [
+        0.009999999776482582,
+        0.0,
+        -1.4299999475479126
+      ],
+      [
+        1.8200000524520874,
+        0.006000000052154064,
+        -0.009999999776482582
+      ]
+    ],
+    "bytes": 104464,
+    "finite": true,
+    "watertight": true
+  },
+  "search/REJECTED_SW_CORNER_DESIGN_ONLY": {
+    "status": "PASS",
+    "step_solids": 5,
+    "glb_nodes": 5,
+    "glb_unique_meshes": 5,
+    "glb_mesh_instances": 5,
+    "bounds_metres": [
+      [
+        -0.006000000052154064,
+        0.0,
+        -0.47999998927116394
+      ],
+      [
+        0.8600000143051147,
+        0.44999998807907104,
+        0.006000000052154064
+      ]
+    ],
+    "bytes": 111532,
+    "finite": true,
+    "watertight": true
+  }
+}

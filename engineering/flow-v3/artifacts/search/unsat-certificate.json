@@ -1,0 +1,180 @@
+{
+  "status": "UNSAT_SOURCE_CONTACT_CONTRACT",
+  "scope": "Original profiles, specified full-face interfaces, level frame, all feet/base on one floor, orthogonal nominal6mm assembly. Not an unrestricted proof for altered joint topology or redesigned parts.",
+  "assumptions": [
+    {
+      "id": "C1",
+      "constraint": "All four source20x6 upper tabs fully engage matching four rail notches; same6mm thickness slab",
+      "source": "features.json; upper-pose-enumeration.json"
+    },
+    {
+      "id": "C2",
+      "constraint": "Original leg6x6 lower notch is the base-tongue receiver; v=10 floor datum; no part profile change",
+      "source": "V3 DXFs and inherited verification report; features.json"
+    },
+    {
+      "id": "C3",
+      "constraint": "Both original base6x6 tongues engage both foot slots simultaneously; base horizontal, lower faceZ0",
+      "source": "V3 tri-base DXF; features.json"
+    },
+    {
+      "id": "C4",
+      "constraint": "A/B at each corner connect adjacent L/W rails; all19 parts and indicated interface topology",
+      "source": "V3 verification report connection summary"
+    },
+    {
+      "id": "C5",
+      "constraint": "One level frame with coplanar rails and all four corner feet on the floor",
+      "source": "Rigid seven-body frame, V3 floor and corner statements"
+    }
+  ],
+  "unsat_core": [
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "fixed_base_centre_vector_mm": [
+    -12,
+    12
+  ],
+  "fixed_base_centre_distance_mm": 16.97056274847714,
+  "all_required_slot_centre_distances_mm": [
+    1.414213562,
+    6.08276253,
+    8.485281374,
+    138.003623141,
+    138.130373199,
+    143.003496461,
+    143.125818775,
+    195.161471607,
+    198.728457952,
+    202.232539419
+  ],
+  "min_distance_invariant_residual_mm": 8.48528137423857,
+  "continuous_base_translation_minimax_axis_residual_mm": 3.0,
+  "axis_face_tolerance_mm": 1e-06,
+  "canonical_SW_example": {
+    "id": "SW_lu0_wu0_lv0_wv0_LEG_A_u1_u1",
+    "corner": "SW",
+    "rails": [
+      "L_south_u0_v0",
+      "W_west_u0_v0"
+    ],
+    "leg_poses": [
+      "L_south_u0_v0_end0_LEG_A_u1_du0_dn0",
+      "W_west_u0_v0_end0_LEG_B_u1_du0_dn0"
+    ],
+    "leg_classes": [
+      "LEG_A",
+      "LEG_B"
+    ],
+    "leg_matrices": [
+      [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -16.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          6.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      [
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          -0.0,
+          -16.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    ],
+    "floor_slot_centres_mm": [
+      [
+        9.0,
+        3.0
+      ],
+      [
+        3.0,
+        9.0
+      ]
+    ],
+    "required_tongue_centre_distance_mm": 8.48528137423857,
+    "source_tongue_centre_distance_mm": 16.97056274847714,
+    "distance_invariant_residual_mm": 8.48528137423857,
+    "leg_leg_overlap_mm3": 13679.99999999998,
+    "frame_height_residual_mm": 0.0,
+    "own_rail_overlap_mm3": [
+      0.0,
+      0.0
+    ],
+    "best_base_candidate": "SW_lu0_wu0_lv0_wv0_LEG_A_u1_u1_base0_order1",
+    "best_base_axis_residual_mm": 6.0,
+    "base_fit_count": 0,
+    "status": "REJECTED"
+  },
+  "additional_failures": {
+    "all512_leg_pairs_overlap": true,
+    "minimum_overlap_mm3": 0.24524339149322352,
+    "vertical_rail_inversion": "Upper tab faces can coincide but own-rail body clashes; mixed rail vertical flips demand frame Z316 and380 simultaneously"
+  },
+  "coverage": {
+    "upper_interface_candidates": 1152,
+    "exact_upper_surface_candidates": 128,
+    "corner_pairs": 512,
+    "base_orientation_correspondences": 8192,
+    "all_receiver_subsets_per_rail_class": 70,
+    "compatible_receiver_groups": 2,
+    "proper_panel_rotations": 24,
+    "prismatic_mirror_equivalence": true,
+    "external_rail_UV_configs": 256,
+    "height_consistent_frame_configs": 32
+  },
+  "minimal_owner_input": {
+    "drawing": "One dimensioned named-corner plan plus vertical section, or native assembly with original-profile revision identity",
+    "must_resolve": [
+      "Which L/W rail notch group receives each four-tab set and whether full6mm coplanar engagement is intended",
+      "Signed A/B material-thickness planes and coordinate of each lower6x6 receiver centre in that same frame",
+      "Which6x6 base tongue mates which receiver; source tongue-centre difference is12mm along each axis",
+      "Floor-to-frame datum and how the reference corner is oriented at all four corners"
+    ],
+    "tabletop_requested": false,
+    "if_same_contract_confirmed": "PM-authorized design revision is necessary to resolve the incompatible source interfaces; do not edit source DXFs silently"
+  },
+  "full19_gate": "BLOCKED_NOT_RUN_NO_FEASIBLE_CORNER",
+  "source_geometry_changes": 0
+}

@@ -1,0 +1,9 @@
+{
+  "authority": "Owner clarification in this conversation",
+  "instruction_he": "התכנון הוא ללא פלטה",
+  "tabletop_required": false,
+  "required_part_types": 7,
+  "required_instances": 19,
+  "supersedes": "Prior tabletop requirement and missing-tabletop blocker in Issue33 and first PR34 handoff",
+  "remaining_gate": "Leg/tri-base reference placements and whole-assembly mating/collision validation"
+}

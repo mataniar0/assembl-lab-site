@@ -1,0 +1,3 @@
+verify_shoulder.py: assert max(abs(g) for g in gaps) < 2e-4
+AssertionError
+SW_LEG_B and SE_LEG_B maximum gap: 0.00024556916139317764 mm

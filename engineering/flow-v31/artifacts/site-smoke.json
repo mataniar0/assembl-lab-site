@@ -1,0 +1,7 @@
+{
+  "passed": 66,
+  "failed": 0,
+  "real_posts": 0,
+  "report_sha256": "2212417bf463e9934dab5f2295f4e01d3e0c5ff86a0cf148ab750248ee2342c9",
+  "scope": "Software smoke only; normal pre-push checks exact committed candidate"
+}

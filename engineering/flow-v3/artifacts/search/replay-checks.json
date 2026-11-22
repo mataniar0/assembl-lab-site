@@ -1,0 +1,4472 @@
+{
+  "status": "PASS_REPLAY_OF_UNSAT_SEARCH",
+  "source_hashes": "PASS",
+  "candidate_count": "PASS",
+  "rigid_distance_certificate": "PASS",
+  "min_distance_residual_mm": 8.48528137423857,
+  "min_continuous_axis_residual_mm": 3,
+  "controls": [
+    {
+      "name": "known_valid_base_only",
+      "min_axis_residual_mm": 0.0
+    },
+    {
+      "name": "rail_aligned_base_reject",
+      "min_axis_residual_mm": 6.0
+    }
+  ],
+  "frame_configurations": 32,
+  "frame_pair_checks": 672,
+  "occt_unique_frame_pair_calls": 67,
+  "configurations": [
+    {
+      "vertical_flip": 0,
+      "rail_u_flips": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "frame_bottom_z_mm": 380,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 0,
+      "rail_u_flips": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "frame_bottom_z_mm": 380,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 0,
+      "rail_u_flips": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "frame_bottom_z_mm": 380,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 0,
+      "rail_u_flips": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "frame_bottom_z_mm": 380,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 0,
+      "rail_u_flips": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "frame_bottom_z_mm": 380,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 0,
+      "rail_u_flips": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "frame_bottom_z_mm": 380,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 0,
+      "rail_u_flips": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "frame_bottom_z_mm": 380,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 0,
+      "rail_u_flips": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "frame_bottom_z_mm": 380,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 0,
+      "rail_u_flips": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "frame_bottom_z_mm": 380,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 0,
+      "rail_u_flips": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "frame_bottom_z_mm": 380,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 0,
+      "rail_u_flips": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "frame_bottom_z_mm": 380,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 0,
+      "rail_u_flips": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "frame_bottom_z_mm": 380,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 0,
+      "rail_u_flips": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "frame_bottom_z_mm": 380,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 0,
+      "rail_u_flips": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "frame_bottom_z_mm": 380,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 0,
+      "rail_u_flips": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "frame_bottom_z_mm": 380,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 0,
+      "rail_u_flips": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "frame_bottom_z_mm": 380,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 1,
+      "rail_u_flips": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "frame_bottom_z_mm": 316,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 1,
+      "rail_u_flips": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "frame_bottom_z_mm": 316,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 1,
+      "rail_u_flips": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "frame_bottom_z_mm": 316,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 1,
+      "rail_u_flips": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "frame_bottom_z_mm": 316,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 1,
+      "rail_u_flips": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "frame_bottom_z_mm": 316,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 1,
+      "rail_u_flips": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "frame_bottom_z_mm": 316,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 1,
+      "rail_u_flips": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "frame_bottom_z_mm": 316,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 1,
+      "rail_u_flips": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "frame_bottom_z_mm": 316,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 1,
+      "rail_u_flips": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "frame_bottom_z_mm": 316,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 1,
+      "rail_u_flips": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "frame_bottom_z_mm": 316,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 1,
+      "rail_u_flips": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "frame_bottom_z_mm": 316,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 1,
+      "rail_u_flips": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "frame_bottom_z_mm": 316,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 1,
+      "rail_u_flips": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "frame_bottom_z_mm": 316,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 1,
+      "rail_u_flips": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "frame_bottom_z_mm": 316,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 1,
+      "rail_u_flips": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "frame_bottom_z_mm": 316,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    },
+    {
+      "vertical_flip": 1,
+      "rail_u_flips": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "frame_bottom_z_mm": 316,
+      "status": "PASS",
+      "pairs": [
+        {
+          "a": "L_south",
+          "b": "L_north",
+          "intersection_mm3": 0.0,
+          "distance_mm": 468.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_south",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_west",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 231.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "L_north",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "W_east",
+          "intersection_mm3": 0.0,
+          "distance_mm": 848.0
+        },
+        {
+          "a": "W_west",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_west",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.666667
+        },
+        {
+          "a": "W_west",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "LC",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "W_east",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 564.333333
+        },
+        {
+          "a": "W_east",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 277.66666699999996
+        },
+        {
+          "a": "LC",
+          "b": "C_1",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "LC",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 0.0
+        },
+        {
+          "a": "C_1",
+          "b": "C_2",
+          "intersection_mm3": 0.0,
+          "distance_mm": 280.666666
+        }
+      ]
+    }
+  ],
+  "physical_scope": "Original orthogonal source-contact contract, not a manufactured-article approval"
+}

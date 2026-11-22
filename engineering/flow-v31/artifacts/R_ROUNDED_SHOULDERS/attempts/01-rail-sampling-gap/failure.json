@@ -1,0 +1,137 @@
+{
+  "status": "FAIL",
+  "changes": [
+    {
+      "part": "SW_LEG_A",
+      "profile": "LEG_A_NEAR_ROUNDED",
+      "status": "PASS",
+      "added_mm2": 16.71117066029381,
+      "removed_mm2": 0.7578439778797382,
+      "previous_gap_at_u166_mm": 2.3736943046004058,
+      "rail_follow_u_mm": [
+        156,
+        164
+      ],
+      "max_sampled_follow_gap_mm": 0.00014536439863377382,
+      "sample_count": 161,
+      "holes_tabs_spine_lower_receiver_unchanged": true
+    },
+    {
+      "part": "SW_LEG_B",
+      "profile": "LEG_B_NEAR_ROUNDED",
+      "status": "FAIL",
+      "added_mm2": 18.53482641329132,
+      "removed_mm2": 0.8294620816086686,
+      "previous_gap_at_u166_mm": 2.645688297727588,
+      "rail_follow_u_mm": [
+        156,
+        164
+      ],
+      "max_sampled_follow_gap_mm": 0.00024556916139317764,
+      "sample_count": 161,
+      "holes_tabs_spine_lower_receiver_unchanged": true
+    },
+    {
+      "part": "SE_LEG_A",
+      "profile": "LEG_A_FAR_ROUNDED",
+      "status": "PASS",
+      "added_mm2": 21.095475276056717,
+      "removed_mm2": 0.8444312936055784,
+      "previous_gap_at_u166_mm": 2.72033999539741,
+      "rail_follow_u_mm": [
+        156,
+        164
+      ],
+      "max_sampled_follow_gap_mm": 9.422175105555652e-05,
+      "sample_count": 161,
+      "holes_tabs_spine_lower_receiver_unchanged": true
+    },
+    {
+      "part": "SE_LEG_B",
+      "profile": "LEG_B_NEAR_ROUNDED",
+      "status": "FAIL",
+      "added_mm2": 18.53482641329132,
+      "removed_mm2": 0.8294620816086686,
+      "previous_gap_at_u166_mm": 2.645688297727588,
+      "rail_follow_u_mm": [
+        156,
+        164
+      ],
+      "max_sampled_follow_gap_mm": 0.00024556916139317764,
+      "sample_count": 161,
+      "holes_tabs_spine_lower_receiver_unchanged": true
+    },
+    {
+      "part": "NW_LEG_A",
+      "profile": "LEG_A_NEAR_ROUNDED",
+      "status": "PASS",
+      "added_mm2": 16.71117066029381,
+      "removed_mm2": 0.7578439778797382,
+      "previous_gap_at_u166_mm": 2.3736943046004058,
+      "rail_follow_u_mm": [
+        156,
+        164
+      ],
+      "max_sampled_follow_gap_mm": 0.00014536439863377382,
+      "sample_count": 161,
+      "holes_tabs_spine_lower_receiver_unchanged": true
+    },
+    {
+      "part": "NW_LEG_B",
+      "profile": "LEG_B_FAR_ROUNDED",
+      "status": "PASS",
+      "added_mm2": 23.47461299697189,
+      "removed_mm2": 0.9140066752324976,
+      "previous_gap_at_u166_mm": 3.013361634398791,
+      "rail_follow_u_mm": [
+        156,
+        164
+      ],
+      "max_sampled_follow_gap_mm": 0.00015482304240777012,
+      "sample_count": 161,
+      "holes_tabs_spine_lower_receiver_unchanged": true
+    },
+    {
+      "part": "NE_LEG_A",
+      "profile": "LEG_A_FAR_ROUNDED",
+      "status": "PASS",
+      "added_mm2": 21.095475276056717,
+      "removed_mm2": 0.8444312936055784,
+      "previous_gap_at_u166_mm": 2.72033999539741,
+      "rail_follow_u_mm": [
+        156,
+        164
+      ],
+      "max_sampled_follow_gap_mm": 9.422175105555652e-05,
+      "sample_count": 161,
+      "holes_tabs_spine_lower_receiver_unchanged": true
+    },
+    {
+      "part": "NE_LEG_B",
+      "profile": "LEG_B_FAR_ROUNDED",
+      "status": "PASS",
+      "added_mm2": 23.47461299697189,
+      "removed_mm2": 0.9140066752324976,
+      "previous_gap_at_u166_mm": 3.013361634398791,
+      "rail_follow_u_mm": [
+        156,
+        164
+      ],
+      "max_sampled_follow_gap_mm": 0.00015482304240777012,
+      "sample_count": 161,
+      "holes_tabs_spine_lower_receiver_unchanged": true
+    }
+  ],
+  "unchanged_matrices": 19,
+  "unchanged_frame_base_pieces": 11,
+  "connected_components": 1,
+  "source_v3_hashes": "UNCHANGED",
+  "production_authorized": false,
+  "criterion": "Maximum sampled nominal rail-follow gap < 0.0002 mm",
+  "failed_parts": [
+    "SW_LEG_B",
+    "SE_LEG_B"
+  ],
+  "cause": "Uniform stations bridged original faceted rail vertices",
+  "correction": "Include every source rail U vertex in shoulder-follow stations; no tolerance relaxation"
+}
