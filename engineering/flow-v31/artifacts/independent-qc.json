@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "source_v3_hashes": "UNCHANGED",
+  "options": [
+    {
+      "option": "R_RAIL_REINDEX",
+      "status": "PASS_INDEPENDENT_SERIALIZED_REPLAY",
+      "pairs": 171,
+      "collision_failures": 0,
+      "upper_tabs": 32,
+      "lower_receivers": 8,
+      "bases": 4,
+      "step_valid_solids": 19,
+      "glb_mesh_nodes": 19,
+      "glb_bytes": 193452,
+      "production_authorized": false
+    },
+    {
+      "option": "L_LEG_BASE",
+      "status": "PASS_INDEPENDENT_SERIALIZED_REPLAY",
+      "pairs": 171,
+      "collision_failures": 0,
+      "upper_tabs": 32,
+      "lower_receivers": 8,
+      "bases": 4,
+      "step_valid_solids": 19,
+      "glb_mesh_nodes": 19,
+      "glb_bytes": 248484,
+      "production_authorized": false
+    }
+  ]
+}

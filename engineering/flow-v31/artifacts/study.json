@@ -1,0 +1,135 @@
+{
+  "issue": 36,
+  "baseline_sha": "7b5af4725fdd4eccd4ae623fb031cc5a796b6df1",
+  "branch": "feature/al-016-flow-v31-options",
+  "study_date": "2026-11-22",
+  "source_dxfs": [
+    {
+      "part": "CROSS_BEAM_C",
+      "file": "flowgen/Flow_CROSS_BEAM_C_x2_t6_V3.dxf",
+      "sha256": "c395a5cff6989a3624c36621dcf9cb191f68738a24efd80060f2bcfd5f89e240",
+      "quantity": 2
+    },
+    {
+      "part": "LEG_A",
+      "file": "flowgen/Flow_LEG_A_x4_t6_V3_TRIBASE.dxf",
+      "sha256": "55e15f9d2470b3ff0da84b9b3ec66193527abf0325ccbbae90622f8eca3d4db5",
+      "quantity": 4
+    },
+    {
+      "part": "LEG_B",
+      "file": "flowgen/Flow_LEG_B_x4_t6_V3_TRIBASE.dxf",
+      "sha256": "bc6ca44ed8825bc5c46a410ac6969d1e4d4453c4828b0c978bc2ae6ef096c825",
+      "quantity": 4
+    },
+    {
+      "part": "LENGTH_CENTER_LC",
+      "file": "flowgen/Flow_LENGTH_CENTER_LC_x1_t6_V3.dxf",
+      "sha256": "4aea167a098bd2ea89ffc629a55484b73c1848fbb1aab78acf77aac1e721c63a",
+      "quantity": 1
+    },
+    {
+      "part": "LENGTH_OUTER_L",
+      "file": "flowgen/Flow_LENGTH_OUTER_L_x2_t6_V3.dxf",
+      "sha256": "0e00929fc3ce4f3f8e127df3e842b78f8d2bdc5035640a72e15de1d0a1f7a257",
+      "quantity": 2
+    },
+    {
+      "part": "TRI_BASE_ROUNDED",
+      "file": "flowgen/Flow_TRI_BASE_ROUNDED_x4_t6_V3.dxf",
+      "sha256": "c52bd16c20ba9129b7d9fc2f5cbf964e13164cb2a05effc094184d5ebbfd4982",
+      "quantity": 4
+    },
+    {
+      "part": "WIDTH_OUTER_W",
+      "file": "flowgen/Flow_WIDTH_OUTER_W_x2_t6_V3.dxf",
+      "sha256": "583fd78a61216d00e95c6e3d925d199a9dbf667c932a6ddaaa45c4d904f879a7",
+      "quantity": 2
+    }
+  ],
+  "recommended": "R_RAIL_REINDEX",
+  "scope": "Two separate V3.1 research candidates; no tabletop; nominal6mm; original V3 frozen",
+  "production_cut_authorized": false,
+  "physical_approval": false,
+  "merge_authorized": false,
+  "deploy_authorized": false,
+  "geometry_initial_iterations_per_option": 1,
+  "geometry_correction_cycles": 0,
+  "script_repair_cycles": 2,
+  "script_repairs": [
+    {
+      "id": 1,
+      "issue": "G gap control initially expected no face contact; actual horizontal steps touch450mm\u00b2 despite zero vertical interlock",
+      "repair": "Separate vertical X/Y contact from horizontal Z contact; reject zero vertical joint",
+      "log": "attempts/script-failure-01-gap-control.log"
+    },
+    {
+      "id": 2,
+      "issue": "Drawing helper attempted polygon recursion on zero-area LineString contact",
+      "repair": "Ignore zero-area intersections for penetration fill; preserve actual contact in CAD QC",
+      "log": "attempts/script-failure-02-empty-area.log"
+    }
+  ],
+  "performance_iterations": 1,
+  "performance_note": "Initial R-positive reference run stopped during slow full scan; added disjoint-box proofs and exact through-cut prism symmetry caching. No geometry change.",
+  "options": [
+    {
+      "option": "R_RAIL_REINDEX",
+      "status": "CAD_COMPUTED_PASS",
+      "reference_corner": "PASS",
+      "instances": 19,
+      "pairs": 171,
+      "collision_failures": 0,
+      "required_joints": 32,
+      "joint_failures": 0,
+      "bounds_mm": [
+        860.0,
+        480.0,
+        450.0
+      ],
+      "frame_height_mm": 380,
+      "step_roundtrip_solids": 19,
+      "changed_patterns": 2,
+      "changed_physical_pieces": 4,
+      "physical_profile_delta_mm2": 3194.877726456033,
+      "base_area_mm2": 260.6620796492085,
+      "original_base_area_mm2": 260.6620796492085,
+      "negative_control_overlap_mm3": 1080.0,
+      "clearance_mm": 0,
+      "kerf_compensated": false,
+      "production_authorized": false,
+      "physical_validation": "NOT_PERFORMED",
+      "connected_components": 1,
+      "glb_bytes": 193452
+    },
+    {
+      "option": "L_LEG_BASE",
+      "status": "CAD_COMPUTED_PASS",
+      "reference_corner": "PASS",
+      "instances": 19,
+      "pairs": 171,
+      "collision_failures": 0,
+      "required_joints": 32,
+      "joint_failures": 0,
+      "bounds_mm": [
+        860.0,
+        480.0,
+        450.0
+      ],
+      "frame_height_mm": 380,
+      "step_roundtrip_solids": 19,
+      "changed_patterns": 5,
+      "changed_physical_pieces": 12,
+      "physical_profile_delta_mm2": 20247.164402870032,
+      "base_area_mm2": 142.8709789317006,
+      "original_base_area_mm2": 260.6620796492085,
+      "negative_control_overlap_mm3": 1079.9999999999998,
+      "clearance_mm": 0,
+      "kerf_compensated": false,
+      "production_authorized": false,
+      "physical_validation": "NOT_PERFORMED",
+      "connected_components": 1,
+      "glb_bytes": 248484
+    }
+  ]
+}

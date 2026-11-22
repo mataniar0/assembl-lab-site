@@ -1,0 +1,304 @@
+{
+  "status": "CAD_COMPUTED_PASS",
+  "option": "R_ROUNDED_SHOULDERS",
+  "parent_design_sha": "d252377e9a929578f75d8ae121e2d21bbd029c05",
+  "baseline_v3_sha": "7b5af4725fdd4eccd4ae623fb031cc5a796b6df1",
+  "user_request": "Implement the displayed rounded upper-leg shoulder proposal",
+  "branch": "feature/al-016-flow-v31-options",
+  "tabletop": false,
+  "geometry_design_revision_cycles": 1,
+  "geometry_failure_correction_cycles": 1,
+  "script_repair_cycles": 0,
+  "inherited_study_script_repairs": 2,
+  "source_v3_hashes": "UNCHANGED",
+  "earlier_R_L_artifacts": "PRESERVED",
+  "nominal_thickness_mm": 6,
+  "designed_clearance_mm": 0,
+  "kerf_compensated": false,
+  "manufacturing_approval": false,
+  "physical_validation": "NOT_PERFORMED",
+  "method": "Rail-following local addition and sampled tangent cubic transition; not a constant-radius fillet",
+  "shoulder_patch_local_uv_mm": [
+    156,
+    386,
+    220,
+    410
+  ],
+  "correction": {
+    "cause": "Uniform shoulder stations bridged source rail facets; 0.000245569 mm gap exceeded 0.0002 mm criterion",
+    "fix": "Include every original rail vertex station; keep original threshold",
+    "evidence": "attempts/01-rail-sampling-gap/failure.json"
+  },
+  "detail_parameters": [
+    {
+      "part": "SW_LEG_A",
+      "profile": "LEG_A_NEAR_ROUNDED",
+      "control_points_mm": [
+        [
+          164.0,
+          392.20537644022636
+        ],
+        [
+          166.5,
+          392.43027369644346
+        ],
+        [
+          164.61668258585084,
+          388.4029518030935
+        ],
+        [
+          163.3854950972815,
+          386.0
+        ]
+      ],
+      "rail_follow_u_mm": [
+        156.0,
+        164.0
+      ],
+      "transition_segments": 100,
+      "old_gap_at_u166_mm": 2.3736943046004058,
+      "added_mm2": 16.711250668166276,
+      "removed_mm2": 0.7578439778797382
+    },
+    {
+      "part": "SW_LEG_B",
+      "profile": "LEG_B_NEAR_ROUNDED",
+      "control_points_mm": [
+        [
+          164.0,
+          392.45869804109947
+        ],
+        [
+          166.5,
+          392.7129635515664
+        ],
+        [
+          164.61668258585084,
+          388.4029518030935
+        ],
+        [
+          163.3854950972815,
+          386.0
+        ]
+      ],
+      "rail_follow_u_mm": [
+        156.0,
+        164.0
+      ],
+      "transition_segments": 100,
+      "old_gap_at_u166_mm": 2.645688297727588,
+      "added_mm2": 18.534941605679386,
+      "removed_mm2": 0.8294620816086686
+    },
+    {
+      "part": "SE_LEG_A",
+      "profile": "LEG_A_FAR_ROUNDED",
+      "control_points_mm": [
+        [
+          164.0,
+          392.59237623551667
+        ],
+        [
+          166.5,
+          392.76094451316067
+        ],
+        [
+          164.61668258585084,
+          388.4029518030935
+        ],
+        [
+          163.3854950972815,
+          386.0
+        ]
+      ],
+      "rail_follow_u_mm": [
+        156.0,
+        164.0
+      ],
+      "transition_segments": 100,
+      "old_gap_at_u166_mm": 2.72033999539741,
+      "added_mm2": 21.095517109807407,
+      "removed_mm2": 0.8444312936055784
+    },
+    {
+      "part": "SE_LEG_B",
+      "profile": "LEG_B_NEAR_ROUNDED",
+      "control_points_mm": [
+        [
+          164.0,
+          392.45869804109947
+        ],
+        [
+          166.5,
+          392.7129635515664
+        ],
+        [
+          164.61668258585084,
+          388.4029518030935
+        ],
+        [
+          163.3854950972815,
+          386.0
+        ]
+      ],
+      "rail_follow_u_mm": [
+        156.0,
+        164.0
+      ],
+      "transition_segments": 100,
+      "old_gap_at_u166_mm": 2.645688297727588,
+      "added_mm2": 18.534941605679386,
+      "removed_mm2": 0.8294620816086686
+    },
+    {
+      "part": "NW_LEG_A",
+      "profile": "LEG_A_NEAR_ROUNDED",
+      "control_points_mm": [
+        [
+          164.0,
+          392.20537644022636
+        ],
+        [
+          166.5,
+          392.43027369644346
+        ],
+        [
+          164.61668258585084,
+          388.4029518030935
+        ],
+        [
+          163.3854950972815,
+          386.0
+        ]
+      ],
+      "rail_follow_u_mm": [
+        156.0,
+        164.0
+      ],
+      "transition_segments": 100,
+      "old_gap_at_u166_mm": 2.3736943046004058,
+      "added_mm2": 16.711250668166276,
+      "removed_mm2": 0.7578439778797382
+    },
+    {
+      "part": "NW_LEG_B",
+      "profile": "LEG_B_FAR_ROUNDED",
+      "control_points_mm": [
+        [
+          164.0,
+          392.8816012148173
+        ],
+        [
+          166.5,
+          393.0534916506791
+        ],
+        [
+          164.61668258585084,
+          388.4029518030935
+        ],
+        [
+          163.3854950972815,
+          386.0
+        ]
+      ],
+      "rail_follow_u_mm": [
+        156.0,
+        164.0
+      ],
+      "transition_segments": 100,
+      "old_gap_at_u166_mm": 3.013361634398791,
+      "added_mm2": 23.474684743290982,
+      "removed_mm2": 0.9140066752324976
+    },
+    {
+      "part": "NE_LEG_A",
+      "profile": "LEG_A_FAR_ROUNDED",
+      "control_points_mm": [
+        [
+          164.0,
+          392.59237623551667
+        ],
+        [
+          166.5,
+          392.76094451316067
+        ],
+        [
+          164.61668258585084,
+          388.4029518030935
+        ],
+        [
+          163.3854950972815,
+          386.0
+        ]
+      ],
+      "rail_follow_u_mm": [
+        156.0,
+        164.0
+      ],
+      "transition_segments": 100,
+      "old_gap_at_u166_mm": 2.72033999539741,
+      "added_mm2": 21.095517109807407,
+      "removed_mm2": 0.8444312936055784
+    },
+    {
+      "part": "NE_LEG_B",
+      "profile": "LEG_B_FAR_ROUNDED",
+      "control_points_mm": [
+        [
+          164.0,
+          392.8816012148173
+        ],
+        [
+          166.5,
+          393.0534916506791
+        ],
+        [
+          164.61668258585084,
+          388.4029518030935
+        ],
+        [
+          163.3854950972815,
+          386.0
+        ]
+      ],
+      "rail_follow_u_mm": [
+        156.0,
+        164.0
+      ],
+      "transition_segments": 100,
+      "old_gap_at_u166_mm": 3.013361634398791,
+      "added_mm2": 23.474684743290982,
+      "removed_mm2": 0.9140066752324976
+    }
+  ],
+  "summary": {
+    "option": "R_ROUNDED_SHOULDERS",
+    "status": "CAD_COMPUTED_PASS",
+    "reference_corner": "PASS",
+    "instances": 19,
+    "pairs": 171,
+    "collision_failures": 0,
+    "required_joints": 32,
+    "joint_failures": 0,
+    "bounds_mm": [
+      860.0,
+      480.0,
+      450.0
+    ],
+    "frame_height_mm": 380,
+    "step_roundtrip_solids": 19,
+    "changed_patterns": 6,
+    "changed_physical_pieces": 12,
+    "physical_profile_delta_mm2": 3361.202002766574,
+    "base_area_mm2": 260.6620796492085,
+    "original_base_area_mm2": 260.6620796492085,
+    "negative_control_overlap_mm3": 1079.9999999999998,
+    "clearance_mm": 0,
+    "kerf_compensated": false,
+    "production_authorized": false,
+    "physical_validation": "NOT_PERFORMED",
+    "connected_components": 1,
+    "glb_bytes": 324932,
+    "shoulder_refinement": "PASS"
+  }
+}

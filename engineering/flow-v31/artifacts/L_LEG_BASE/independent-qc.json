@@ -1,0 +1,1506 @@
+{
+  "option": "L_LEG_BASE",
+  "status": "PASS_INDEPENDENT_SERIALIZED_REPLAY",
+  "pairs": 171,
+  "collision_failures": 0,
+  "upper_tabs": 32,
+  "lower_receivers": 8,
+  "bases": 4,
+  "step_valid_solids": 19,
+  "glb_mesh_nodes": 19,
+  "glb_bytes": 248484,
+  "bounds_mm": [
+    860.0,
+    480.0,
+    450.0
+  ],
+  "upper_checks": [
+    {
+      "leg": "SW_LEG_A",
+      "tab_u_mm": [
+        31.0,
+        51.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "SW_LEG_A",
+      "tab_u_mm": [
+        66.0,
+        86.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "SW_LEG_A",
+      "tab_u_mm": [
+        101.0,
+        121.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "SW_LEG_A",
+      "tab_u_mm": [
+        136.0,
+        156.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "SW_LEG_B",
+      "tab_u_mm": [
+        31.0,
+        51.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "SW_LEG_B",
+      "tab_u_mm": [
+        66.0,
+        86.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "SW_LEG_B",
+      "tab_u_mm": [
+        101.0,
+        121.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "SW_LEG_B",
+      "tab_u_mm": [
+        136.0,
+        156.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "SE_LEG_A",
+      "tab_u_mm": [
+        26.0,
+        46.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "SE_LEG_A",
+      "tab_u_mm": [
+        61.0,
+        81.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "SE_LEG_A",
+      "tab_u_mm": [
+        96.0,
+        116.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "SE_LEG_A",
+      "tab_u_mm": [
+        131.0,
+        151.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "SE_LEG_B",
+      "tab_u_mm": [
+        31.0,
+        51.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "SE_LEG_B",
+      "tab_u_mm": [
+        66.0,
+        86.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "SE_LEG_B",
+      "tab_u_mm": [
+        101.0,
+        121.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "SE_LEG_B",
+      "tab_u_mm": [
+        136.0,
+        156.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "NW_LEG_A",
+      "tab_u_mm": [
+        31.0,
+        51.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "NW_LEG_A",
+      "tab_u_mm": [
+        66.0,
+        86.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "NW_LEG_A",
+      "tab_u_mm": [
+        101.0,
+        121.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "NW_LEG_A",
+      "tab_u_mm": [
+        136.0,
+        156.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "NW_LEG_B",
+      "tab_u_mm": [
+        26.0,
+        46.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "NW_LEG_B",
+      "tab_u_mm": [
+        61.0,
+        81.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "NW_LEG_B",
+      "tab_u_mm": [
+        96.0,
+        116.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "NW_LEG_B",
+      "tab_u_mm": [
+        131.0,
+        151.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "NE_LEG_A",
+      "tab_u_mm": [
+        26.0,
+        46.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "NE_LEG_A",
+      "tab_u_mm": [
+        61.0,
+        81.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "NE_LEG_A",
+      "tab_u_mm": [
+        96.0,
+        116.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "NE_LEG_A",
+      "tab_u_mm": [
+        131.0,
+        151.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "NE_LEG_B",
+      "tab_u_mm": [
+        26.0,
+        46.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "NE_LEG_B",
+      "tab_u_mm": [
+        61.0,
+        81.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "NE_LEG_B",
+      "tab_u_mm": [
+        96.0,
+        116.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    },
+    {
+      "leg": "NE_LEG_B",
+      "tab_u_mm": [
+        131.0,
+        151.0
+      ],
+      "tab_volume_mm3": 719.9999999999999,
+      "roof_contact_mm2": 120.0,
+      "overlap_with_rail_mm3": 0.0
+    }
+  ],
+  "lower_checks": [
+    {
+      "leg": "SW_LEG_A",
+      "tongue_occupation_mm3": 216.0,
+      "receiver_void_overlap_mm3": 0.0,
+      "roof_contact_mm2": 36.0,
+      "receiver_centre_mm": [
+        9.0,
+        3.0,
+        3.0
+      ]
+    },
+    {
+      "leg": "SW_LEG_B",
+      "tongue_occupation_mm3": 216.0,
+      "receiver_void_overlap_mm3": 0.0,
+      "roof_contact_mm2": 36.0,
+      "receiver_centre_mm": [
+        3.0,
+        9.0,
+        3.0
+      ]
+    },
+    {
+      "leg": "SE_LEG_A",
+      "tongue_occupation_mm3": 216.0,
+      "receiver_void_overlap_mm3": 0.0,
+      "roof_contact_mm2": 36.0,
+      "receiver_centre_mm": [
+        851.0,
+        3.0,
+        3.0
+      ]
+    },
+    {
+      "leg": "SE_LEG_B",
+      "tongue_occupation_mm3": 216.0,
+      "receiver_void_overlap_mm3": 0.0,
+      "roof_contact_mm2": 36.0,
+      "receiver_centre_mm": [
+        857.0,
+        9.0,
+        3.0
+      ]
+    },
+    {
+      "leg": "NW_LEG_A",
+      "tongue_occupation_mm3": 216.0,
+      "receiver_void_overlap_mm3": 0.0,
+      "roof_contact_mm2": 36.0,
+      "receiver_centre_mm": [
+        9.0,
+        477.0,
+        3.0
+      ]
+    },
+    {
+      "leg": "NW_LEG_B",
+      "tongue_occupation_mm3": 216.0,
+      "receiver_void_overlap_mm3": 0.0,
+      "roof_contact_mm2": 36.0,
+      "receiver_centre_mm": [
+        3.0,
+        471.0,
+        3.0
+      ]
+    },
+    {
+      "leg": "NE_LEG_A",
+      "tongue_occupation_mm3": 216.0,
+      "receiver_void_overlap_mm3": 0.0,
+      "roof_contact_mm2": 36.0,
+      "receiver_centre_mm": [
+        851.0,
+        477.0,
+        3.0
+      ]
+    },
+    {
+      "leg": "NE_LEG_B",
+      "tongue_occupation_mm3": 216.0,
+      "receiver_void_overlap_mm3": 0.0,
+      "roof_contact_mm2": 36.0,
+      "receiver_centre_mm": [
+        857.0,
+        471.0,
+        3.0
+      ]
+    }
+  ],
+  "base_centre_checks": [
+    {
+      "corner": "SW",
+      "centre_residual_mm": 0.0,
+      "centre_distance_mm": 8.48528137423857
+    },
+    {
+      "corner": "SE",
+      "centre_residual_mm": 0.0,
+      "centre_distance_mm": 8.48528137423857
+    },
+    {
+      "corner": "NW",
+      "centre_residual_mm": 0.0,
+      "centre_distance_mm": 8.48528137423857
+    },
+    {
+      "corner": "NE",
+      "centre_residual_mm": 0.0,
+      "centre_distance_mm": 8.48528137423857
+    }
+  ],
+  "spine_checks": [
+    {
+      "corner": "SW",
+      "vertical_spine_contact_mm2": 2243.999999999998,
+      "expected_mm2": 2244,
+      "method": "Independent piecewise planar-section integration; horizontal contact excluded"
+    },
+    {
+      "corner": "SE",
+      "vertical_spine_contact_mm2": 2243.999999999998,
+      "expected_mm2": 2244,
+      "method": "Independent piecewise planar-section integration; horizontal contact excluded"
+    },
+    {
+      "corner": "NW",
+      "vertical_spine_contact_mm2": 2243.999999999998,
+      "expected_mm2": 2244,
+      "method": "Independent piecewise planar-section integration; horizontal contact excluded"
+    },
+    {
+      "corner": "NE",
+      "vertical_spine_contact_mm2": 2243.999999999998,
+      "expected_mm2": 2244,
+      "method": "Independent piecewise planar-section integration; horizontal contact excluded"
+    }
+  ],
+  "pair_checks": [
+    {
+      "a": "L_south",
+      "b": "L_north",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_south",
+      "b": "W_west",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "L_south",
+      "b": "W_east",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "L_south",
+      "b": "LC",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_south",
+      "b": "C_1",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "L_south",
+      "b": "C_2",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "L_south",
+      "b": "SW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "L_south",
+      "b": "SW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "L_south",
+      "b": "SW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_south",
+      "b": "SE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "L_south",
+      "b": "SE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "L_south",
+      "b": "SE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_south",
+      "b": "NW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_south",
+      "b": "NW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_south",
+      "b": "NW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_south",
+      "b": "NE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_south",
+      "b": "NE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_south",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_north",
+      "b": "W_west",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "L_north",
+      "b": "W_east",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "L_north",
+      "b": "LC",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_north",
+      "b": "C_1",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "L_north",
+      "b": "C_2",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "L_north",
+      "b": "SW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_north",
+      "b": "SW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_north",
+      "b": "SW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_north",
+      "b": "SE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_north",
+      "b": "SE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_north",
+      "b": "SE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_north",
+      "b": "NW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "L_north",
+      "b": "NW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "L_north",
+      "b": "NW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "L_north",
+      "b": "NE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "L_north",
+      "b": "NE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "L_north",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_west",
+      "b": "W_east",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_west",
+      "b": "LC",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "W_west",
+      "b": "C_1",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_west",
+      "b": "C_2",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_west",
+      "b": "SW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "W_west",
+      "b": "SW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "W_west",
+      "b": "SW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_west",
+      "b": "SE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_west",
+      "b": "SE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_west",
+      "b": "SE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_west",
+      "b": "NW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "W_west",
+      "b": "NW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "W_west",
+      "b": "NW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_west",
+      "b": "NE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_west",
+      "b": "NE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_west",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_east",
+      "b": "LC",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "W_east",
+      "b": "C_1",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_east",
+      "b": "C_2",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_east",
+      "b": "SW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_east",
+      "b": "SW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_east",
+      "b": "SW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_east",
+      "b": "SE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "W_east",
+      "b": "SE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "W_east",
+      "b": "SE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_east",
+      "b": "NW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_east",
+      "b": "NW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_east",
+      "b": "NW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "W_east",
+      "b": "NE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "W_east",
+      "b": "NE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "W_east",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "LC",
+      "b": "C_1",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "LC",
+      "b": "C_2",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "LC",
+      "b": "SW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "LC",
+      "b": "SW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "LC",
+      "b": "SW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "LC",
+      "b": "SE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "LC",
+      "b": "SE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "LC",
+      "b": "SE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "LC",
+      "b": "NW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "LC",
+      "b": "NW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "LC",
+      "b": "NW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "LC",
+      "b": "NE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "LC",
+      "b": "NE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "LC",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_1",
+      "b": "C_2",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_1",
+      "b": "SW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_1",
+      "b": "SW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_1",
+      "b": "SW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_1",
+      "b": "SE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_1",
+      "b": "SE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_1",
+      "b": "SE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_1",
+      "b": "NW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_1",
+      "b": "NW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_1",
+      "b": "NW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_1",
+      "b": "NE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_1",
+      "b": "NE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_1",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_2",
+      "b": "SW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_2",
+      "b": "SW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_2",
+      "b": "SW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_2",
+      "b": "SE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_2",
+      "b": "SE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_2",
+      "b": "SE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_2",
+      "b": "NW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_2",
+      "b": "NW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_2",
+      "b": "NW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_2",
+      "b": "NE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_2",
+      "b": "NE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "C_2",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_A",
+      "b": "SW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "SW_LEG_A",
+      "b": "SW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "SW_LEG_A",
+      "b": "SE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_A",
+      "b": "SE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_A",
+      "b": "SE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_A",
+      "b": "NW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_A",
+      "b": "NW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_A",
+      "b": "NW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_A",
+      "b": "NE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_A",
+      "b": "NE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_A",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_B",
+      "b": "SW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "SW_LEG_B",
+      "b": "SE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_B",
+      "b": "SE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_B",
+      "b": "SE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_B",
+      "b": "NW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_B",
+      "b": "NW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_B",
+      "b": "NW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_B",
+      "b": "NE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_B",
+      "b": "NE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_LEG_B",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_BASE",
+      "b": "SE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_BASE",
+      "b": "SE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_BASE",
+      "b": "SE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_BASE",
+      "b": "NW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_BASE",
+      "b": "NW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_BASE",
+      "b": "NW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_BASE",
+      "b": "NE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_BASE",
+      "b": "NE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SW_BASE",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_LEG_A",
+      "b": "SE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "SE_LEG_A",
+      "b": "SE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "SE_LEG_A",
+      "b": "NW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_LEG_A",
+      "b": "NW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_LEG_A",
+      "b": "NW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_LEG_A",
+      "b": "NE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_LEG_A",
+      "b": "NE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_LEG_A",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_LEG_B",
+      "b": "SE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "SE_LEG_B",
+      "b": "NW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_LEG_B",
+      "b": "NW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_LEG_B",
+      "b": "NW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_LEG_B",
+      "b": "NE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_LEG_B",
+      "b": "NE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_LEG_B",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_BASE",
+      "b": "NW_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_BASE",
+      "b": "NW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_BASE",
+      "b": "NW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_BASE",
+      "b": "NE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_BASE",
+      "b": "NE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "SE_BASE",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "NW_LEG_A",
+      "b": "NW_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "NW_LEG_A",
+      "b": "NW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "NW_LEG_A",
+      "b": "NE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "NW_LEG_A",
+      "b": "NE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "NW_LEG_A",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "NW_LEG_B",
+      "b": "NW_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "NW_LEG_B",
+      "b": "NE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "NW_LEG_B",
+      "b": "NE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "NW_LEG_B",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "NW_BASE",
+      "b": "NE_LEG_A",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "NW_BASE",
+      "b": "NE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "NW_BASE",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "DISJOINT_REBUILT_DXF_BOUNDS"
+    },
+    {
+      "a": "NE_LEG_A",
+      "b": "NE_LEG_B",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "NE_LEG_A",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    },
+    {
+      "a": "NE_LEG_B",
+      "b": "NE_BASE",
+      "overlap_mm3": 0.0,
+      "proof": "REBUILT_DXF_OCCT_COMMON"
+    }
+  ],
+  "production_authorized": false
+}

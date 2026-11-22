@@ -1,0 +1,2 @@
+# Generated CAD is reviewed in a CAD reader; retain raw bytes without line diffs.
+artifacts/**/*.step -diff

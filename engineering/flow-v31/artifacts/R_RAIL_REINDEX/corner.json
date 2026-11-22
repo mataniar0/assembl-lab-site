@@ -1,0 +1,151 @@
+{
+  "status": "PASS",
+  "pairs": [
+    {
+      "a": "L_south",
+      "b": "W_west",
+      "overlap_mm3": 0.0,
+      "distance_mm": 0.0,
+      "face_contact_mm2": 636.0,
+      "contact_components_mm2": {
+        "X": 179.99999999999994,
+        "Y": 240.0,
+        "Z": 216.0
+      }
+    },
+    {
+      "a": "L_south",
+      "b": "SW_LEG_A",
+      "overlap_mm3": 0.0,
+      "distance_mm": 0.0,
+      "face_contact_mm2": 1156.3665147420531,
+      "contact_components_mm2": {
+        "X": 280.3665147420532,
+        "Y": 0.0,
+        "Z": 875.9999999999999
+      }
+    },
+    {
+      "a": "L_south",
+      "b": "SW_LEG_B",
+      "overlap_mm3": 0.0,
+      "distance_mm": 0.0,
+      "face_contact_mm2": 0.0,
+      "contact_components_mm2": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    },
+    {
+      "a": "L_south",
+      "b": "SW_BASE",
+      "overlap_mm3": 0.0,
+      "distance_mm": 374.0,
+      "face_contact_mm2": 0.0,
+      "contact_components_mm2": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    },
+    {
+      "a": "W_west",
+      "b": "SW_LEG_A",
+      "overlap_mm3": 0.0,
+      "distance_mm": 0.0,
+      "face_contact_mm2": 0.0,
+      "contact_components_mm2": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    },
+    {
+      "a": "W_west",
+      "b": "SW_LEG_B",
+      "overlap_mm3": 0.0,
+      "distance_mm": 0.0,
+      "face_contact_mm2": 1119.6656460179377,
+      "contact_components_mm2": {
+        "X": 0.0,
+        "Y": 279.6656460179377,
+        "Z": 839.9999999999999
+      }
+    },
+    {
+      "a": "W_west",
+      "b": "SW_BASE",
+      "overlap_mm3": 0.0,
+      "distance_mm": 374.0,
+      "face_contact_mm2": 0.0,
+      "contact_components_mm2": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    },
+    {
+      "a": "SW_LEG_A",
+      "b": "SW_LEG_B",
+      "overlap_mm3": 0.0,
+      "distance_mm": 0.0,
+      "face_contact_mm2": 2928.0,
+      "contact_components_mm2": {
+        "X": 1079.9999999999998,
+        "Y": 1200.0,
+        "Z": 648.0
+      }
+    },
+    {
+      "a": "SW_LEG_A",
+      "b": "SW_BASE",
+      "overlap_mm3": 0.0,
+      "distance_mm": 0.0,
+      "face_contact_mm2": 165.0,
+      "contact_components_mm2": {
+        "X": 72.0,
+        "Y": 56.99999999999999,
+        "Z": 36.0
+      }
+    },
+    {
+      "a": "SW_LEG_B",
+      "b": "SW_BASE",
+      "overlap_mm3": 0.0,
+      "distance_mm": 0.0,
+      "face_contact_mm2": 165.0,
+      "contact_components_mm2": {
+        "X": 56.99999999999999,
+        "Y": 72.0,
+        "Z": 36.0
+      }
+    }
+  ],
+  "required_mates": [
+    [
+      "L_south",
+      "W_west"
+    ],
+    [
+      "L_south",
+      "SW_LEG_A"
+    ],
+    [
+      "W_west",
+      "SW_LEG_B"
+    ],
+    [
+      "SW_LEG_A",
+      "SW_LEG_B"
+    ],
+    [
+      "SW_LEG_A",
+      "SW_BASE"
+    ],
+    [
+      "SW_LEG_B",
+      "SW_BASE"
+    ]
+  ]
+}

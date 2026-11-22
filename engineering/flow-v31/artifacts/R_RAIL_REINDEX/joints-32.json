@@ -1,0 +1,322 @@
+[
+  {
+    "a": "L_south",
+    "b": "W_west",
+    "kind": "frame",
+    "contact_mm2": 636.0,
+    "vertical_contact_mm2": 419.99999999999994,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "W_east",
+    "kind": "frame",
+    "contact_mm2": 636.0,
+    "vertical_contact_mm2": 419.99999999999994,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "C_1",
+    "kind": "frame",
+    "contact_mm2": 758.0930748217909,
+    "vertical_contact_mm2": 614.0930748217909,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "L_south",
+    "b": "C_2",
+    "kind": "frame",
+    "contact_mm2": 758.0088311982345,
+    "vertical_contact_mm2": 614.0088311982345,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "W_west",
+    "kind": "frame",
+    "contact_mm2": 636.0,
+    "vertical_contact_mm2": 419.99999999999994,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "W_east",
+    "kind": "frame",
+    "contact_mm2": 636.0,
+    "vertical_contact_mm2": 419.99999999999994,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "C_1",
+    "kind": "frame",
+    "contact_mm2": 758.0930748217909,
+    "vertical_contact_mm2": 614.0930748217909,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "L_north",
+    "b": "C_2",
+    "kind": "frame",
+    "contact_mm2": 758.0088311982345,
+    "vertical_contact_mm2": 614.0088311982345,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "W_west",
+    "b": "LC",
+    "kind": "frame",
+    "contact_mm2": 756.0284623081775,
+    "vertical_contact_mm2": 612.0284623081775,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "W_east",
+    "b": "LC",
+    "kind": "frame",
+    "contact_mm2": 756.0284623081775,
+    "vertical_contact_mm2": 612.0284623081775,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "C_1",
+    "kind": "frame",
+    "contact_mm2": 876.0,
+    "vertical_contact_mm2": 840.0,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "LC",
+    "b": "C_2",
+    "kind": "frame",
+    "contact_mm2": 876.0,
+    "vertical_contact_mm2": 840.0,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_A",
+    "b": "L_south",
+    "kind": "upper",
+    "contact_mm2": 1156.3665147420531,
+    "vertical_contact_mm2": 280.3665147420532,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_B",
+    "b": "W_west",
+    "kind": "upper",
+    "contact_mm2": 1119.6656460179377,
+    "vertical_contact_mm2": 279.6656460179377,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_A",
+    "b": "SW_LEG_B",
+    "kind": "spine",
+    "contact_mm2": 2928.0,
+    "vertical_contact_mm2": 2280.0,
+    "required_vertical_contact_mm2": 2280,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_A",
+    "b": "SW_BASE",
+    "kind": "lower",
+    "contact_mm2": 165.0,
+    "vertical_contact_mm2": 129.0,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "SW_LEG_B",
+    "b": "SW_BASE",
+    "kind": "lower",
+    "contact_mm2": 165.0,
+    "vertical_contact_mm2": 129.0,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_A",
+    "b": "L_south",
+    "kind": "upper",
+    "contact_mm2": 1152.5307299579233,
+    "vertical_contact_mm2": 276.5307299579235,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_B",
+    "b": "W_east",
+    "kind": "upper",
+    "contact_mm2": 1119.6656460179377,
+    "vertical_contact_mm2": 279.6656460179377,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_A",
+    "b": "SE_LEG_B",
+    "kind": "spine",
+    "contact_mm2": 2928.0,
+    "vertical_contact_mm2": 2280.0,
+    "required_vertical_contact_mm2": 2280,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_A",
+    "b": "SE_BASE",
+    "kind": "lower",
+    "contact_mm2": 165.0,
+    "vertical_contact_mm2": 129.0,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "SE_LEG_B",
+    "b": "SE_BASE",
+    "kind": "lower",
+    "contact_mm2": 165.0,
+    "vertical_contact_mm2": 129.0,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "NW_LEG_A",
+    "b": "L_north",
+    "kind": "upper",
+    "contact_mm2": 1156.3665147420531,
+    "vertical_contact_mm2": 280.3665147420532,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "NW_LEG_B",
+    "b": "W_west",
+    "kind": "upper",
+    "contact_mm2": 1115.2440939266444,
+    "vertical_contact_mm2": 275.24409392664444,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "NW_LEG_A",
+    "b": "NW_LEG_B",
+    "kind": "spine",
+    "contact_mm2": 2928.0,
+    "vertical_contact_mm2": 2280.0,
+    "required_vertical_contact_mm2": 2280,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "NW_LEG_A",
+    "b": "NW_BASE",
+    "kind": "lower",
+    "contact_mm2": 165.0,
+    "vertical_contact_mm2": 129.0,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "NW_LEG_B",
+    "b": "NW_BASE",
+    "kind": "lower",
+    "contact_mm2": 165.0,
+    "vertical_contact_mm2": 129.0,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "NE_LEG_A",
+    "b": "L_north",
+    "kind": "upper",
+    "contact_mm2": 1152.5307299579233,
+    "vertical_contact_mm2": 276.5307299579235,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "NE_LEG_B",
+    "b": "W_east",
+    "kind": "upper",
+    "contact_mm2": 1115.2440939266444,
+    "vertical_contact_mm2": 275.24409392664444,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "NE_LEG_A",
+    "b": "NE_LEG_B",
+    "kind": "spine",
+    "contact_mm2": 2928.0,
+    "vertical_contact_mm2": 2280.0,
+    "required_vertical_contact_mm2": 2280,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "NE_LEG_A",
+    "b": "NE_BASE",
+    "kind": "lower",
+    "contact_mm2": 165.0,
+    "vertical_contact_mm2": 129.0,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  },
+  {
+    "a": "NE_LEG_B",
+    "b": "NE_BASE",
+    "kind": "lower",
+    "contact_mm2": 165.0,
+    "vertical_contact_mm2": 129.0,
+    "required_vertical_contact_mm2": 0,
+    "overlap_mm3": 0.0,
+    "status": "PASS"
+  }
+]
